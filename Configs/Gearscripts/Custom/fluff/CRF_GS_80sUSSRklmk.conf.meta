@@ -1,5 +1,7 @@
 MetaFileClass {
- Name "{74CE6917EBE78518}Terrains/Common/WeatherPresets/StateMachine/WeatherStatesOPDrew.conf"
+<<<<<<<< HEAD:Configs/Gearscripts/fluff/CRF_GS_80sUSSRklmk.conf.meta
+ Name "{E22DAC2682656C91}Configs/Gearscripts/fluff/CRF_GS_80sUSSRklmk.conf"
+========
  Configurations {
   CONFResourceClass PC {
   }
