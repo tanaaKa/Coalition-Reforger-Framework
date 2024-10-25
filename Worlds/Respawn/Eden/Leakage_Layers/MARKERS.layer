@@ -1,10 +1,38 @@
-PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
- coords 5814.842 7.936 9733.363
- angleY 0
- m_MarkerColor 0 0 0 1
- m_sDescription "FACTORY"
- m_bVisibleForEmptyFaction 1
- m_bShowForAnyFaction 1
+$grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ {
+  coords 5023.386 26.513 9971.519
+  angleY 0
+  m_MarkerColor 0 0 0 1
+  m_fWorldSize 180
+  m_sDescription "SECURE FARM"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4608.717 18.656 10661.8
+  angleY 0
+  m_MarkerColor 0 0 0 1
+  m_fWorldSize 120
+  m_sDescription "FUEL DEPOT"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 5310.982 44.156 10520.382
+  angleY 0
+  m_MarkerColor 0.502 0 0 1
+  m_fWorldSize 120
+  m_sDescription "ARMORY"
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4651.801 27.844 11181.528
+  angleY 0
+  m_MarkerColor 0 0.125 0.502 1
+  m_fWorldSize 120
+  m_sDescription "VEHICLE DEPOT"
+  m_bShowForAnyFaction 1
+ }
 }
 $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
  {
@@ -44,7 +72,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 4138.337 -0 9326.606
+  coords 4138.337 0 9326.606
   angleY 0
  }
  {
@@ -96,7 +124,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 5807.195 -0 11185.381
+  coords 5807.195 0 11185.381
   angleY 0
  }
  {
@@ -108,7 +136,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 5457.665 -0 11887.889
+  coords 5457.665 0 11887.889
   angleY 0
  }
  {
@@ -120,7 +148,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 4986.612 -0 12400.656
+  coords 4986.612 0 12400.656
   angleY 0
  }
  {
@@ -148,11 +176,11 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 3772.258 -0 11725.511
+  coords 3772.258 0 11725.511
   angleY 0
  }
  {
-  coords 3691.483 -0 11578.091
+  coords 3691.483 0 11578.091
   angleY 0
  }
  {
@@ -160,7 +188,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 3548.905 -0 11211.452
+  coords 3548.905 0 11211.452
   angleY 0
  }
  {
@@ -184,7 +212,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 3604.688 -0 9848.393
+  coords 3604.688 0 9848.393
   angleY 0
  }
  {
@@ -208,13 +236,13 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
   angleY 0
  }
  {
-  coords 6074.442 -0 9149.212
+  coords 6074.442 0 9149.212
   angleY 0
  }
 }
 PS_Objective : "{DC02A6E23541A99B}PrefabsEditable/MissionDescription/Objective.et" {
- coords 5830.718 6.188 9713.78
- m_sTitle "Secure Factory"
+ coords 5012.101 15.675 9948.45
+ m_sTitle "Secure Farm"
  m_sTextData "Survive"
  m_bShowForAnyFaction 1
 }

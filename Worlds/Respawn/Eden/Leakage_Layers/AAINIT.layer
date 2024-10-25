@@ -28,6 +28,10 @@ PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/Per
  coords 5281.027 35.027 10684.09
 }
 SCR_GameModeEditor GameMode_Editor1 : "{D2DE7F43D48A3667}Prefabs/MP/Modes/Editor/GameMode_Editor.et" {
+ components {
+  CRF_AdminMenuGameComponent "{62B3338D5ED189E4}" {
+  }
+ }
  coords 5248.692 34.305 10697.497
  m_bAutoInitEditor 0
  m_GameMasterTarget NOBODY
@@ -51,4 +55,11 @@ SCR_GameModeEditor GameMode_Editor1 : "{D2DE7F43D48A3667}Prefabs/MP/Modes/Editor
 }
 SCR_MPDestructionManager : "{9BB369F2803C6F71}Prefabs/MP/MPDestructionManager.et" {
  coords 5299.391 35.939 10681.735
+}
+SCR_SpawnPoint : "{F26BA0860D54B7DF}Prefabs/MP/Spawning/SpawnPoint_CIV.et" {
+ coords 4451.023 12.869 10734.323
+ m_fSpawnRadius 5
+ m_bShowInDeployMapOnly 1
+ m_bTimedSpawnPoint 1
+ m_fRespawnTime 10
 }
