@@ -9,73 +9,122 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
  }
  coords 4763.106 27.844 11239.638
  {
-  GenericEntity : "{0B0C600941B2A6A8}Prefabs/Props/Military/Sandbags/Sandbag_01_short_high_plastic.et" {
-   ID "62B0F34BF46807E6"
-   coords -2.235 0 -3.981
-  }
   $grp GenericEntity : "{35F2A674E602198F}Prefabs/Props/Military/Sandbags/Sandbag_01_end_high_plastic.et" {
    {
-    ID "62B0F34BF46807FA"
-    coords -3.507 0 -3.977
-    angleY 179.205
+    ID "62B30A7104981812"
+    components {
+     Hierarchy "{569E7A0A13CD6D92}" {
+      Enabled 1
+     }
+    }
+    coords -3.436 0 3.756
+    angleY 0.014
    }
    {
-    ID "62B0F34BF4689DA6"
-    coords -1.448 0 -3.948
+    ID "62B30A7104981813"
+    components {
+     Hierarchy "{569E7A0A13D399D3}" {
+      Enabled 1
+     }
+    }
+    coords -4.022 0 3.216
+    angleY 88.319
+   }
+   {
+    ID "62B30A710499AD01"
+    components {
+     Hierarchy "{569E7A0A13D0632D}" {
+      Enabled 1
+     }
+    }
+    coords -0.604 0 3.236
+    angleY 91.384
+   }
+   {
+    ID "62B30A710499AD06"
+    components {
+     Hierarchy "{569E7A0A13C8FA46}" {
+      Enabled 1
+     }
+    }
+    coords -1.104 0 3.753
+    angleY 179.713
    }
   }
-  GenericEntity : "{5EF52FAE299A831A}Prefabs/Props/Military/Sandbags/Sandbag_01_short_base.et" {
-   ID "62B0F34BF469F3DD"
-   coords -2.332 0 3.665
-   angleY 90.66
+  GenericEntity : "{6762F7C5C3A2419B}Prefabs/Props/Military/Sandbags/Sandbag_01_short_plastic.et" {
+   ID "62B30A710499AD04"
+   components {
+    Hierarchy "{569E7A0A13E1570E}" {
+     Enabled 1
+    }
+   }
+   coords -2.313 0 3.706
+   angleY -90.287
   }
   Turret : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
-   ID "62B0F34BF4689DA4"
+   ID "62B30A71049BF9DE"
    coords -2.328 0.7 3.635
   }
   GenericEntity : "{76167BEC292DCF79}Prefabs/Structures/Signs/Military/SignRectangle_01_140x100/Sign_Warzone_US_01.et" {
-   ID "62B0F34BF46F617E"
+   ID "62B30A71049A6B1E"
    components {
     Hierarchy "{5CB0D9910F7995D5}" {
      Enabled 1
     }
    }
-   coords -2.573 0.77 -3.971
-   angleY -180
+   coords -2.574 0.77 -4.019
+   angleY -178.947
+  }
+  $grp GenericEntity : "{86BA5E5CD528D5BC}Prefabs/Props/Military/Sandbags/Sandbag_01_end_plastic.et" {
+   {
+    ID "62B30A7104982FED"
+    components {
+     Hierarchy "{5CCCBEF31CD7BE34}" {
+      Enabled 1
+     }
+    }
+    coords -0.66 0 2.096
+    angleY 87.796
+   }
+   {
+    ID "62B30A710499AD00"
+    components {
+     Hierarchy "{5CCCBEF31CD7BE34}" {
+      Enabled 1
+     }
+    }
+    coords -3.96 0 1.969
+    angleY 87.796
+   }
   }
   $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification/CzechHedgehog_01_painted.et" {
    {
-    ID "62B0F34BF4689DAF"
-    coords 5.27 -0 -3.671
-   }
-   {
-    ID "62B0F34BF468D030"
-    coords -4.83 -0 4.669
+    ID "62B30A7104993BEE"
+    coords -4.83 0 4.669
     angleY 49.71
    }
    {
-    ID "62B0F34BF468D031"
-    coords 5.348 -0 4.263
-    angleY 4.173
-   }
-   {
-    ID "62B0F34BF46F6141"
-    coords 0.39 -0 4.477
-    angleY 36.185
-   }
-   {
-    ID "62B0F34BF46F6142"
-    coords 0.064 -0 -3.975
+    ID "62B30A71049A6B14"
+    coords 0.064 0 -3.975
     angleY 32.012
    }
-  }
-  GenericEntity : "{BB6E3F9C566319BA}Prefabs/Props/Military/Sandbags/Sandbag_01_end_base.et" {
-   ID "62B0F34BF46984F9"
-   coords -4.04 0 2.073
-   angleY 89.04
+   {
+    ID "62B30A71049A6B15"
+    coords 5.27 0 -3.671
+   }
+   {
+    ID "62B30A71049AD1F9"
+    coords 0.497 0 4.554
+    angleY 14.377
+   }
+   {
+    ID "62B30A71049AD1FA"
+    coords 5.348 0 4.263
+    angleY 4.173
+   }
   }
   GenericEntity : "{C1977A326F2AA011}Prefabs/Structures/Signs/Military/SignCheckpoint_01_stop.et" {
-   ID "62B0F34BF46F6178"
+   ID "62B30A7104993BEA"
    components {
     Hierarchy "{5CCCBEF31B20446E}" {
      Enabled 1
@@ -86,36 +135,25 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   }
   $grp GenericEntity : "{DDF59362051B28BC}Prefabs/Props/Military/Fortification/BarbedTape_KnifeRest.et" {
    {
-    ID "62B0F34BF468D034"
+    ID "62B30A7104993BF4"
     coords -3.268 -0.474 4.675
     angleY 90.254
    }
    {
-    ID "62B0F34BF468DA4A"
+    ID "62B30A710499AD0A"
     coords -1.724 -0.474 4.668
     angleY 90.254
    }
   }
   $grp GenericEntity : "{E840D82CE1F92BBD}Prefabs/Props/Military/Sandbags/Sandbag_01_end_high_base.et" {
    {
-    ID "62B0F34BF46807E0"
-    coords -0.677 0 3.249
-    angleY 91.613
+    ID "62B30A710498826C"
+    coords -1.509 0 -3.983
    }
    {
-    ID "62B0F34BF4682215"
-    coords -1.124 0 3.75
-    angleY -179.251
-   }
-   {
-    ID "62B0F34BF46984FB"
-    coords -4.07 0 3.351
-    angleY 90.155
-   }
-   {
-    ID "62B0F34BF469F3D1"
-    coords -3.493 0 3.879
-    angleY 0.063
+    ID "62B30A710499AD03"
+    coords -3.435 0 -3.99
+    angleY 179.863
    }
   }
  }
