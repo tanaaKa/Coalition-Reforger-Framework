@@ -17,6 +17,11 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
  coords 6399.973 160.699 6462.215
 }
 SCR_GameModeEditor GameMode_Editor1 : "{D2DE7F43D48A3667}Prefabs/MP/Modes/Editor/GameMode_Editor.et" {
+ components {
+  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
+   Enabled 0
+  }
+ }
  coords 5248.692 34.305 10697.497
  m_bAutoInitEditor 0
  m_GameMasterTarget NOBODY
