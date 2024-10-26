@@ -1,0 +1,10 @@
+GenericEntity COAL_SandbagPos_S_Green_03 : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
+ components {
+  FactionAffiliationComponent "{62B361967A3A5560}" {
+   "faction affiliation" "US"
+  }
+  Hierarchy "{62B3619675900E38}" {
+  }
+ }
+ coords 4762.495 27.852 11250.689
+}
