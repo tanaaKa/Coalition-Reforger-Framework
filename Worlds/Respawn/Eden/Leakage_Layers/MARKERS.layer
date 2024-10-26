@@ -1,249 +1,248 @@
-SCR_SpawnPoint : "{45225582B358C31A}PrefabsEditable/SpawnPoints/E_SpawnPoint_USSR.et" {
- coords 5281.843 37.157 11392.276
- m_bShowInDeployMapOnly 1
+$grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
  {
-  PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.et" {
-   coords -949.338 -8.555 -1426.767
-   angleY 89.994
-   m_sDescription "US Spawn"
-   m_aVisibleForFactions {
-    "US"
-   }
-  }
+  coords 5023.386 26.513 9971.519
+  angleY 0
+  m_MarkerColor 0 0 0 1
+  m_fWorldSize 180
+  m_sDescription "SECURE FARM"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4608.717 18.656 10661.8
+  angleY 0
+  m_MarkerColor 0 0 0 1
+  m_fWorldSize 120
+  m_sDescription "FUEL DEPOT"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 5310.982 44.156 10520.382
+  angleY 0
+  m_MarkerColor 0.502 0 0 1
+  m_fWorldSize 120
+  m_sDescription "ARMORY"
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4651.801 27.844 11181.528
+  angleY 0
+  m_MarkerColor 0 0.125 0.502 1
+  m_fWorldSize 120
+  m_sDescription "VEHICLE DEPOT"
+  m_bShowForAnyFaction 1
  }
 }
-PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
- coords 5814.842 7.936 9733.363
- angleY 0
- m_MarkerColor 0 0 0 1
- m_sDescription "FACTORY"
- m_bVisibleForEmptyFaction 1
- m_bShowForAnyFaction 1
-}
-PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
- coords 5597.416 16.892 8998.335
- angleY 0
+$grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
  {
-  $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
-   {
-    coords -261.76 -2.096 -23.03
-    angleY 0
-   }
-   {
-    coords -441.837 22.647 -36.604
-    angleY 0
-   }
-   {
-    coords -578.415 28.827 -39.778
-    angleY 0
-   }
-   {
-    coords -698.115 52.43 -49.586
-    angleY 0
-   }
-   {
-    coords -866.077 21.94 16.125
-    angleY 0
-   }
-   {
-    coords -947.064 32.637 98.287
-    angleY 0
-   }
-   {
-    coords -1134.207 -2.217 206.738
-    angleY 0
-   }
-   {
-    coords -1321.702 -11.699 287.425
-    angleY 0
-   }
-   {
-    coords -1459.079 -16.892 328.272
-    angleY 0
-   }
-   {
-    coords -1704.881 -16.892 407.629
-    angleY 0
-   }
-   {
-    coords 523.446 -16.892 463.622
-    angleY 0
-   }
-   {
-    coords 691.24 -16.892 437.454
-    angleY 0
-   }
-   {
-    coords 909.512 -16.892 392.367
-    angleY 0
-   }
-   {
-    coords 1129.733 -16.892 407.635
-    angleY 0
-   }
-   {
-    coords 1243.724 -16.892 566.771
-    angleY 0
-   }
-   {
-    coords 1024.726 -16.892 1040.58
-    angleY 0
-   }
-   {
-    coords 731.978 -16.892 1217.068
-    angleY 0
-   }
-   {
-    coords 620.688 -16.892 1344.264
-    angleY 0
-   }
-   {
-    coords 554.957 -16.458 1599.997
-    angleY 0
-   }
-   {
-    coords 413.667 -16.892 1796.452
-    angleY 0
-   }
-   {
-    coords 299.945 -16.892 2000.864
-    angleY 0
-   }
-   {
-    coords 209.779 -16.892 2187.046
-    angleY 0
-   }
-   {
-    coords 140.461 -16.892 2446.968
-    angleY 0
-   }
-   {
-    coords 22.412 -16.892 2640.752
-    angleY 0
-   }
-   {
-    coords -139.751 -16.892 2889.554
-    angleY 0
-   }
-   {
-    coords -264.867 -16.892 3086.472
-    angleY 0
-   }
-   {
-    coords -427.365 -3.707 3292.218
-    angleY 0
-   }
-   {
-    coords -610.804 -16.892 3402.322
-    angleY 0
-   }
-   {
-    coords -818.702 -16.892 3415.035
-    angleY 0
-   }
-   {
-    coords -988.206 -10.434 3441.287
-    angleY 0
-   }
-   {
-    coords -1329.792 -16.892 3413.085
-    angleY 0
-   }
-   {
-    coords -1488.159 -16.892 3304.683
-    angleY 0
-   }
-   {
-    coords -1657.751 -16.892 3014.23
-    angleY 0
-   }
-   {
-    coords -1767.08 -16.892 2893.621
-    angleY 0
-   }
-   {
-    coords -1825.158 -16.892 2727.176
-    angleY 0
-   }
-   {
-    coords -1905.933 -16.892 2579.756
-    angleY 0
-   }
-   {
-    coords -1984.341 -16.892 2414.341
-    angleY 0
-   }
-   {
-    coords -2048.511 -16.892 2213.117
-    angleY 0
-   }
-   {
-    coords -2026.09 -16.892 1957.935
-    angleY 0
-   }
-   {
-    coords -2045.006 -16.892 1666.314
-    angleY 0
-   }
-   {
-    coords -2064.02 -16.892 1463.374
-    angleY 0
-   }
-   {
-    coords -2037.54 -16.892 1207.658
-    angleY 0
-   }
-   {
-    coords -2051.763 -16.892 1051.546
-    angleY 0
-   }
-   {
-    coords -1992.728 -16.892 850.058
-    angleY 0
-   }
-   {
-    coords -1871.629 -16.892 567.943
-    angleY 0
-   }
-   {
-    coords -1781.329 -16.892 434.84
-    angleY 0
-   }
-   {
-    coords -1540.715 -16.892 391.251
-    angleY 0
-   }
-   {
-    coords 365.236 -16.892 21.655
-    angleY 0
-   }
-   {
-    coords 536.914 -16.892 245.975
-    angleY 0
-   }
-   {
-    coords 477.026 -16.892 150.877
-    angleY 0
-   }
-  }
+  coords 5597.416 16.892 8998.335
+  angleY 0
  }
-}
-SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
- coords 4332.167 28.539 9964.15
  {
-  PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et" {
-   coords 950.453 8.617 1427.485
-   angleY 91.903
-   m_sDescription "USSR Spawn"
-   m_aVisibleForFactions {
-    "USSR"
-   }
-  }
+  coords 5335.656 14.796 8975.305
+  angleY 0
+ }
+ {
+  coords 5155.579 39.539 8961.731
+  angleY 0
+ }
+ {
+  coords 5019.001 45.719 8958.557
+  angleY 0
+ }
+ {
+  coords 4899.301 69.322 8948.749
+  angleY 0
+ }
+ {
+  coords 4731.339 38.832 9014.46
+  angleY 0
+ }
+ {
+  coords 4650.352 49.529 9096.622
+  angleY 0
+ }
+ {
+  coords 4463.209 14.675 9205.073
+  angleY 0
+ }
+ {
+  coords 4275.714 5.193 9285.76
+  angleY 0
+ }
+ {
+  coords 4138.337 0 9326.606
+  angleY 0
+ }
+ {
+  coords 3892.535 0 9405.964
+  angleY 0
+ }
+ {
+  coords 6120.862 0 9461.957
+  angleY 0
+ }
+ {
+  coords 6288.656 0 9435.789
+  angleY 0
+ }
+ {
+  coords 6506.928 0 9390.702
+  angleY 0
+ }
+ {
+  coords 6727.149 0 9405.97
+  angleY 0
+ }
+ {
+  coords 6841.14 0 9565.106
+  angleY 0
+ }
+ {
+  coords 6622.142 0 10038.915
+  angleY 0
+ }
+ {
+  coords 6329.394 0 10215.403
+  angleY 0
+ }
+ {
+  coords 6218.104 0 10342.599
+  angleY 0
+ }
+ {
+  coords 6152.373 0.434 10598.332
+  angleY 0
+ }
+ {
+  coords 6011.083 0 10794.787
+  angleY 0
+ }
+ {
+  coords 5897.361 0 10999.198
+  angleY 0
+ }
+ {
+  coords 5807.195 0 11185.381
+  angleY 0
+ }
+ {
+  coords 5737.877 0 11445.303
+  angleY 0
+ }
+ {
+  coords 5619.828 0 11639.087
+  angleY 0
+ }
+ {
+  coords 5457.665 0 11887.889
+  angleY 0
+ }
+ {
+  coords 5332.549 0 12084.808
+  angleY 0
+ }
+ {
+  coords 5170.051 13.185 12290.552
+  angleY 0
+ }
+ {
+  coords 4986.612 0 12400.656
+  angleY 0
+ }
+ {
+  coords 4778.714 0 12413.369
+  angleY 0
+ }
+ {
+  coords 4609.21 6.458 12439.621
+  angleY 0
+ }
+ {
+  coords 4267.624 0 12411.419
+  angleY 0
+ }
+ {
+  coords 4109.257 0 12303.017
+  angleY 0
+ }
+ {
+  coords 3939.665 0 12012.565
+  angleY 0
+ }
+ {
+  coords 3830.336 0 11891.956
+  angleY 0
+ }
+ {
+  coords 3772.258 0 11725.511
+  angleY 0
+ }
+ {
+  coords 3691.483 0 11578.091
+  angleY 0
+ }
+ {
+  coords 3613.075 0 11412.676
+  angleY 0
+ }
+ {
+  coords 3548.905 0 11211.452
+  angleY 0
+ }
+ {
+  coords 3571.326 0 10956.27
+  angleY 0
+ }
+ {
+  coords 3552.41 0 10664.648
+  angleY 0
+ }
+ {
+  coords 3533.396 0 10461.709
+  angleY 0
+ }
+ {
+  coords 3559.876 0 10205.993
+  angleY 0
+ }
+ {
+  coords 3545.653 0 10049.881
+  angleY 0
+ }
+ {
+  coords 3604.688 0 9848.393
+  angleY 0
+ }
+ {
+  coords 3725.787 0 9566.278
+  angleY 0
+ }
+ {
+  coords 3816.087 0 9433.175
+  angleY 0
+ }
+ {
+  coords 4056.701 0 9389.586
+  angleY 0
+ }
+ {
+  coords 5962.652 0 9019.99
+  angleY 0
+ }
+ {
+  coords 6134.33 0 9244.31
+  angleY 0
+ }
+ {
+  coords 6074.442 0 9149.212
+  angleY 0
  }
 }
 PS_Objective : "{DC02A6E23541A99B}PrefabsEditable/MissionDescription/Objective.et" {
- coords 5830.718 6.188 9713.78
- m_sTitle "Secure Factory"
+ coords 5012.101 15.675 9948.45
+ m_sTitle "Secure Farm"
  m_sTextData "Survive"
  m_bShowForAnyFaction 1
 }
