@@ -4,7 +4,7 @@ $grp GenericEntity : "{0B31DF40DF62F895}Prefabs/Structures/Infrastructure/Naval/
   angleY 27.572
  }
  {
-  coords 4779.29 -0 6810.586
+  coords 4779.29 0 6810.586
   angleY -26.923
  }
  {
@@ -52,7 +52,7 @@ $grp GenericEntity : "{0B31DF40DF62F895}Prefabs/Structures/Infrastructure/Naval/
   angleY -26.923
  }
  {
-  coords 4832.397 -0 6837.555
+  coords 4832.397 0 6837.555
   angleY -26.923
  }
  {
