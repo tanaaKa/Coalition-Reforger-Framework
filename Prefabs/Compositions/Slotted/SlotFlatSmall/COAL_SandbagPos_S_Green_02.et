@@ -7,7 +7,7 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   Hierarchy "{62B3619675900E38}" {
   }
  }
- coords 4762.496 27.852 11205.814
+ coords 0 0 0
  {
   $grp StaticModelEntity : "{18822FB3F0D2ED00}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Long.et" {
    {
