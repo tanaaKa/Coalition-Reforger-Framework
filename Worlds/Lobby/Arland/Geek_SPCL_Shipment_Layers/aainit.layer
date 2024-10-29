@@ -12,6 +12,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    }
   }
   CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   Enabled 0
    m_iTimeLimitMinutes 10
   }
  }
