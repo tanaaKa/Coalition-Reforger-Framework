@@ -45,6 +45,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
        SCR_CallsignInfo "{62A21A91437AAACB}" {
         m_sCallsign "Humvee 2"
        }
+       SCR_CallsignInfo "{62BA26176CDD7073}" {
+        m_sCallsign "Mortar Team"
+       }
       }
      }
     }

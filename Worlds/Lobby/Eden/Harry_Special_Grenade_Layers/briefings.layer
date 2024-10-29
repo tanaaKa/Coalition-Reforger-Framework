@@ -1,8 +1,19 @@
 SCR_BaseTriggerEntity GameStartMessage {
  coords 4758.314 184.318 6991.18
- EOnInit ""\
+ userScript "	void WaitTillGameStart(IEntity entity)"\
+ "	{"\
+ "		if(!GetGame().GetWorld())"\
+ "		{"\
+ "			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 100, false, entity);"\
+ "			return;"\
+ "		}"\
+ "		"\
  "		SCR_PopUpNotification.GetInstance().PopupMsg(\"Capture the church!\", 30);"\
+ "	}"
+ EOnInit ""\
+ "		GetGame().GetCallqueue().CallLater(WaitTillGameStart, 100, false, owner);"\
  "	"
+ UpdatePeriod 15
 }
 PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
  coords 4780.591 212.58 7014.728

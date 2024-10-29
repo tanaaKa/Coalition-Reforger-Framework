@@ -1,8 +1,8 @@
 $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
  {
-  coords 4377.961 1.594 11157.564
+  coords 5424.842 1.594 10597.044
   angleY 90.026
-  m_MarkerColor 0 0 0.223 1
+  m_MarkerColor 0 0 0 1
   m_sDescription "Objective 2"
   m_bVisibleForEmptyFaction 1
   m_bShowForAnyFaction 1
@@ -10,8 +10,15 @@ $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarke
  {
   coords 5803.012 4.562 9792.993
   angleY 89.959
-  m_MarkerColor 0 0 0.223 1
+  m_MarkerColor 0 0 0 1
   m_sDescription "Objective 1"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 4864.687 35.938 9146.676
+  m_MarkerColor 0 0 0.738 1
+  m_sDescription "Blufor Mortar"
   m_bVisibleForEmptyFaction 1
   m_bShowForAnyFaction 1
  }
