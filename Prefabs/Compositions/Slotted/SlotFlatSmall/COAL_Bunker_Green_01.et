@@ -94,13 +94,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
    ID "62B8D48769AA7FCE"
    coords 3.389 -0.192 -0.569
    angleY 92.884
-   {
-    GenericEntity {
-     ID "5CD2AC4C61D435D6"
-     coords -0.022 0.16 0.629
-     angleY -118.006
-    }
-   }
   }
   GenericEntity : "{78AB783E28EDEBD4}Prefabs/Props/Military/Sandbags/Sandbag_01_long_plastic.et" {
    ID "62B8D48769AA7FC8"
