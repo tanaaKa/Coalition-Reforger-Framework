@@ -13,6 +13,7 @@ PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/We
       PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
        coords -6.054 -0.134 3.049
        m_sTextData "US Forces attempt to dislodge Taliban troops from two locations - a mosque and an abandoned factory - in an attempt to recover two radio transmitters captured by their enemies."
+       m_iOrder 3
        {
         PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/Assets.et" {
          coords 0.903 0.122 18.876
