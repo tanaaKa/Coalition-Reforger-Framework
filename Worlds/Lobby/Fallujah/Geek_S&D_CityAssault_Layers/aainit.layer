@@ -20,7 +20,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
   }
   CRF_SearchAndDestroyGameModeComponent "{6274A01606909A61}" {
    attackingSide "BLUFOR"
-   defendingSide "OPFOR"
+   defendingSide "INDFOR"
   }
   SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
    m_iStartingHours 11
