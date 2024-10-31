@@ -14,7 +14,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    }
   }
   CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
-   m_iTimeLimitMinutes 50
+   m_iTimeLimitMinutes 40
   }
   CRF_SearchAndDestroyGameModeComponent "{62BED5D1E8D0A071}" {
    attackingSide "BLUFOR"
@@ -23,7 +23,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
  }
  coords 2541.453 22.444 1320.171
  {
-  SCR_FactionManager {
+  SCR_FactionManager "62BF282BBA5EAC78" {
    ID "61BCFEC02D38B83E"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
