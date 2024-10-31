@@ -1,0 +1,158 @@
+$grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
+ {
+  coords 2376.746 13.921 992.867
+  angleY 0
+ }
+ {
+  coords 2453.659 12.989 1009.052
+  angleY 0
+ }
+ {
+  coords 2549.595 19.704 1034.292
+  angleY 0
+ }
+ {
+  coords 2617.459 19.997 1049.624
+  angleY 0
+ }
+ {
+  coords 2660.622 16.763 1054.758
+  angleY 0
+ }
+ {
+  coords 2699.467 20.951 1069.163
+  angleY 0
+ }
+ {
+  coords 2778.228 15.468 1095.437
+  angleY 0
+ }
+ {
+  coords 2840.046 22.913 1160.849
+  angleY 0
+ }
+ {
+  coords 2885.941 13.479 1245.626
+  angleY 0
+ }
+ {
+  coords 2886.859 10.576 1361.118
+  angleY 0
+ }
+ {
+  coords 2884.303 8.156 1440.432
+  angleY 0
+ }
+ {
+  coords 2864.031 8.157 1510.562
+  angleY 0
+ }
+ {
+  coords 2857.734 8.157 1593.974
+  angleY 0
+ }
+ {
+  coords 2876.61 10.395 1757.872
+  angleY 0
+ }
+ {
+  coords 2862.705 8.156 1869.067
+  angleY 0
+ }
+ {
+  coords 2830.859 8.156 1992.38
+  angleY 0
+ }
+ {
+  coords 2800.865 8.156 2075.779
+  angleY 0
+ }
+ {
+  coords 2700.79 11.401 2070.301
+  angleY 0
+ }
+ {
+  coords 2582.747 23.187 2044.756
+  angleY 0
+ }
+ {
+  coords 2522.437 8.156 2025.386
+  angleY 0
+ }
+ {
+  coords 2446.68 8.297 1992.415
+  angleY 0
+ }
+ {
+  coords 2346.585 8.156 1987.815
+  angleY 0
+ }
+ {
+  coords 2229.458 8.284 1978.144
+  angleY 0
+ }
+ {
+  coords 2155.5 28.31 1953.234
+  angleY 0
+ }
+ {
+  coords 2084.05 8.156 1955.063
+  angleY 0
+ }
+ {
+  coords 2046.228 8.156 1887.67
+  angleY 0
+ }
+ {
+  coords 2052.278 12.201 1825.174
+  angleY 0
+ }
+ {
+  coords 2067.052 8.156 1741.792
+  angleY 0
+ }
+ {
+  coords 2069.552 8.912 1660.606
+  angleY 0
+ }
+ {
+  coords 2043.103 9.985 1579.455
+  angleY 0
+ }
+ {
+  coords 2046.763 8.156 1483.054
+  angleY 0
+ }
+ {
+  coords 2024.526 11.887 1412.96
+  angleY 0
+ }
+ {
+  coords 2007.985 8.156 1337.138
+  angleY 0
+ }
+ {
+  coords 1998.002 8.157 1246.054
+  angleY 0
+ }
+ {
+  coords 1996.323 8.156 1162.665
+  angleY 0
+ }
+ {
+  coords 2015.036 10.329 1084.925
+  angleY 0
+ }
+ {
+  coords 2099.869 9.487 1043.231
+  angleY 0
+ }
+ {
+  coords 2218.126 9.427 1028.06
+  angleY 0
+ }
+ {
+  coords 2360.493 14.658 1031.963
+  angleY 0
+ }
+}
