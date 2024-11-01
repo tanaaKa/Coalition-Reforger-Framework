@@ -1,0 +1,87 @@
+$grp SCR_BaseTriggerEntity {
+ TH1 {
+  coords 3197.568 11.177 765.232
+ }
+ TH2 {
+  coords 3232.837 11.177 765.232
+ }
+ blutransport1 {
+  coords 3315.261 10.376 741.916
+  angleY -120
+ }
+ blutransport2 {
+  coords 3306.382 10.376 736.721
+  angleY -33.89
+ }
+ blutransport3 {
+  coords 3296.146 10.376 734.283
+  angleY -35.452
+ }
+ blutransport4 {
+  coords 3288.144 10.376 740.691
+  angleY -37.344
+ }
+ blutransport5 {
+  coords 3283.041 10.376 749.563
+  angleY -38.181
+ }
+ blutransport6 {
+  coords 3322.561 10.376 746.595
+  angleY -138.425
+ }
+ blutransport7 {
+  coords 3328.955 10.375 757.006
+  angleY -120
+ }
+ blutransport8 {
+  coords 3268.559 10.376 765.573
+  angleY -120
+ }
+ blutransport9 {
+  coords 3276.7 10.856 756.08
+  angleY 69.825
+ }
+ bambo1 {
+  coords 3294.491 10.777 722.715
+ }
+}
+$grp SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Platoon_p.et" {
+ {
+  coords 3257.758 10.376 794.754
+  angleY -29.996
+  {
+   $grp SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+    {
+     coords -2.927 -0.001 0
+    }
+    {
+     coords -2.796 -0.001 3.54
+     m_sCustomNameSet "2nd Squad"
+    }
+    {
+     coords -2.842 -0.001 -2.416
+     m_sCustomNameSet "3rd Squad"
+    }
+   }
+  }
+ }
+ {
+  coords 3273.084 10.376 787.871
+  angleY -29.996
+  {
+   $grp SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+    {
+     coords -2.927 -0.001 0
+    }
+    {
+     coords -2.796 -0.001 3.54
+     m_sCustomNameSet "2nd Squad"
+    }
+    {
+     coords -2.842 -0.001 -2.416
+     m_sCustomNameSet "3rd Squad"
+    }
+   }
+  }
+ }
+}
