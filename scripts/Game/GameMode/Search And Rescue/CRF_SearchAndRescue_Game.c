@@ -92,7 +92,7 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 		if (SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() && Replication.IsServer()) 
 		{
 			
-			m_sPilotPos = GetGame().GetWorld().FindEntityByName(m_searchForUnit).GetOrigin();
+			m_sPilotPos = m_ePilotEntity.GetOrigin();
 			
 			Replication.BumpMe();
 			updatePilotPos();
