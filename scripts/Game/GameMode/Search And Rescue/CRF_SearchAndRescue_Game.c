@@ -14,19 +14,17 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("transponder", "auto", "The entity that being tracked.")]
 	string m_searchForUnit;
 	
-	[Attribute("Transponder Signal", "auto", "The entity that being searched for.")]
+	[Attribute("Transponder Signal", "auto", "The text of the marker on the map.")]
 	string m_markerText;
 	
 	[Attribute("BLUFOR", "auto", "Faction key for the searching side.")]
 	string m_searcherFactionKey;
 	
-	[Attribute("{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et", "auto", "The object to spawn as a bomb")]
+	[Attribute("{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et", "auto", "The visual prefab of the transponder. Must be moveable by the player.")]
 	string pilotPrefab;
 	
 	CRF_SafestartGameModeComponent m_safestart;
-	
-	SCR_FactionManager factionManager;
-	
+		
 	[RplProp(onRplName: "updatePilotPos")]
 	vector m_sPilotPos;
 	vector m_sStoredPilotPos;
@@ -80,7 +78,10 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 		if (!m_safestart.GetSafestartStatus())
 		{	
 			GetGame().GetCallqueue().Remove(WaitTillSafeStartEnds);
-			GetGame().GetCallqueue().CallLater(transponderInit, 1000, true); // Change this to game timer
+			if (Replication.IsServer())
+			{
+				GetGame().GetCallqueue().CallLater(transponderInit, 1000, true);
+			}
 		}
 		return;
 
@@ -89,7 +90,7 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 	void transponderInit()
 	{
 		// Update the transponder position to the entity being searched for across all the clients
-		if (SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() && Replication.IsServer()) 
+		if (SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning()) 
 		{
 			
 			m_sPilotPos = m_ePilotEntity.GetOrigin();
@@ -106,19 +107,29 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 			if (m_sPilotPos == m_sStoredPilotPos)
 			return;
 	
-			IEntity transponder = GetGame().GetWorld().FindEntityByName("transponder");	
+			IEntity transponder = GetGame().GetWorld().FindEntityByName(m_searchForUnit);	
 			// Update tranponder location on the client
 			transponder.SetOrigin(m_sPilotPos);
 				
 			m_sStoredPilotPos = m_sPilotPos;
 		
-			// Create marker on transponder entity
+			// Create marker on transponder entity if in the search faction
 			CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
 			if (!gameModePlayerComponent) 
 				return;
-		
-			gameModePlayerComponent.AddScriptedMarker("transponder", "0 0 0", m_timeBetweenPings, m_markerText, "{428583D4284BC412}UI/Textures/Editor/EditableEntities/Waypoints/EditableEntity_Waypoint_SearchAndDestroy.edds", 50, ARGB(255, 0, 0, 225));
-    
+			
+			SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
+			if (!factionManager)
+			return;
+			
+			Faction faction = factionManager.GetPlayerFaction(SCR_PlayerController.GetLocalPlayerId());
+			if (!faction)
+			return;
+	        
+	        if (faction.GetFactionKey() == m_searcherFactionKey)  
+			{
+				gameModePlayerComponent.AddScriptedMarker(m_searchForUnit, "0 0 0", m_timeBetweenPings, m_markerText, "{428583D4284BC412}UI/Textures/Editor/EditableEntities/Waypoints/EditableEntity_Waypoint_SearchAndDestroy.edds", 50, ARGB(255, 0, 0, 225));
+			}    
 	};
 	
 }
