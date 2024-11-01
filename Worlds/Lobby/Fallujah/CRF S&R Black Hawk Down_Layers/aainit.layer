@@ -11,6 +11,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     m_rGearScript "{2D140B13588E56B8}Configs/Gearscripts/Standard/GWOT/CRF_GS_Taliban.conf"
    }
   }
+  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   m_iTimeLimitMinutes 60
+  }
   CRF_SearchAndRescueGameModeComponent "{62BF31216E17CEEF}" {
    m_setUnconcious 1
   }
@@ -41,6 +44,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     SCR_Faction "{628B22E9B4056C88}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
       m_aSquadNames {
+       SCR_CallsignInfo "{62C217DB865A852B}" {
+        m_sCallsign "COY"
+       }
        SCR_CallsignInfo "{62BF3123512B1323}" {
         m_sCallsign "2PLT"
        }

@@ -25,18 +25,18 @@ SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDF
  {
   $grp SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
    {
-    coords 1.925 -0.001 11.227
+    coords 20.42 -0.001 12.846
    }
    {
-    coords 1.997 -0 8.649
+    coords 20.624 0 8.803
     m_sCustomNameSet "2nd Squad"
    }
    {
-    coords 1.626 -0 6.168
+    coords 21.043 0 4.569
     m_sCustomNameSet "3rd Squad"
    }
    {
-    coords 1.988 0.001 2.837
+    coords 21.202 0.002 0.05
     m_sCustomNameSet "3rd Squad"
    }
   }

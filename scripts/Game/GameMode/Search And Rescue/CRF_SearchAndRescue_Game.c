@@ -63,7 +63,7 @@ class CRF_SearchAndRescueGameModeComponent: SCR_BaseGameModeComponent
 			{	
 				SCR_CharacterControllerComponent characterController = SCR_CharacterControllerComponent.Cast(m_ePilotEntity.FindComponent(SCR_CharacterControllerComponent));
 				characterController.SetUnconscious(true);
-				SCR_DamageManagerComponent damangeMangerController = SCR_DamageManagerComponent.Cast(m_ePilotEntity.FindComponent(SCR_DamageManagerComponent));
+				SCR_CharacterDamageManagerComponent damangeMangerController = SCR_CharacterDamageManagerComponent.Cast(m_ePilotEntity.FindComponent(SCR_CharacterDamageManagerComponent));
 				damangeMangerController.EnableDamageHandling(false)
 				
 			}

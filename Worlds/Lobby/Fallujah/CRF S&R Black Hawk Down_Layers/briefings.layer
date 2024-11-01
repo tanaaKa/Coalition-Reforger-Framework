@@ -9,7 +9,7 @@ PS_MissionDescription : "{5D890E2198A25341}PrefabsEditable/MissionDescription/Ga
 PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescription/OPF_Brief.et" {
  coords 1301.421 4.755 2049.199
  m_sTitle "INDFOR Brief"
- m_sTextData "Locals have told us about a helicopter that was downed by our aa in the center of town. We captched one of their pilots and we must hold him till we can get him back to our hideout. We must not the enemy QRF extract them without a fight."\
+ m_sTextData "Locals have told us about a helicopter that was downed by our aa in the center of town. We captured one of their pilots and we must hold him till we can get him back to our hideout. We must not the enemy QRF extract them without a fight."\
  ""\
  "You cannot leave the game barrier on the map, even after safe start."
  m_aVisibleForFactions {
