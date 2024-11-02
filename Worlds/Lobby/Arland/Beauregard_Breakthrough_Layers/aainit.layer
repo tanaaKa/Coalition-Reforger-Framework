@@ -19,7 +19,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
         m_sCallsign "AT"
        }
        SCR_CallsignInfo "{61BD5AEC6A0473D5}" {
-        m_sCallsign "MEDIC"
+        m_sCallsign "MMG"
        }
       }
       m_sCallsignCharacterFormat "%1 %2 %3 %4"
@@ -44,9 +44,6 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
        SCR_CallsignInfo "{61BD5AEC283FBB46}" {
         m_sCallsign "1-3"
        }
-       SCR_CallsignInfo "{61BD5AEC27CC0BBC}" {
-        m_sCallsign "1-4"
-       }
        SCR_CallsignInfo "{61BD5AEC1DDEF712}" {
         m_sCallsign "2PLT"
        }
@@ -61,9 +58,6 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
        }
        SCR_CallsignInfo "{61BD5AEC125F4AB9}" {
         m_sCallsign "MMG"
-       }
-       SCR_CallsignInfo "{61BD5AEC11E48AA9}" {
-        m_sCallsign "MEDIC"
        }
        SCR_CallsignInfo "{61BD5AEC1103B4F7}" {
         m_sCallsign "ARMOR 1"
