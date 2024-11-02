@@ -15,11 +15,4 @@ $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarke
   m_bVisibleForEmptyFaction 1
   m_bShowForAnyFaction 1
  }
- {
-  coords 4864.687 35.938 9146.676
-  m_MarkerColor 0 0 0.738 1
-  m_sDescription "Blufor Mortar"
-  m_bVisibleForEmptyFaction 1
-  m_bShowForAnyFaction 1
- }
 }

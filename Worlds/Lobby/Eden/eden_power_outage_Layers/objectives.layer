@@ -1,6 +1,8 @@
 SCR_BaseFactionTriggerEntity CountTrigger {
  coords 5785.224 56.45 9862.971
- userScript "	static int countAlivePlayers(string filter)"\
+ userScript "		bool m_countCheck = false;"\
+ "	"\
+ "		static int countAlivePlayers(string filter)"\
  "	{"\
  "		int players = 0;"\
  "		array<int> outPlayers = {};"\
@@ -22,14 +24,23 @@ SCR_BaseFactionTriggerEntity CountTrigger {
  OnQueryFinished ""\
  "		int bluforCount = countAlivePlayers(\"BLUFOR\");"\
  "		"\
- "		"\
- "		"\
  "		if (bluforCount < 4 && GetGame().GetWorld())"\
  "		{"\
+ "			if (m_countCheck)"\
+ "			{"\
  "				SCR_PopUpNotification.GetInstance().PopupMsg(\"Indfor has decimated Blufor!\", 10);"\
  "				IEntity countTrigger = GetGame().GetWorld().FindEntityByName(\"CountTrigger\");"\
  "				delete countTrigger;"\
+ "			}"\
+ "			m_countCheck = true;"\
+ ""\
  "		}"\
+ "		"\
+ "		if (bluforCount >3)"\
+ "		{"\
+ "			m_countCheck = false;"\
+ "		}"\
+ ""\
  ""\
  "	"
  m_sOwnerFactionKey "BLUFOR"

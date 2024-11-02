@@ -10,14 +10,12 @@ $grp SCR_BaseTriggerEntity {
   userScript "	"\
   "	"\
   "	string humArm = \"{E84466B9B64D5C3F}Prefabs/M1025/kiok_m1025_armed_M2_guncover_wd.et\";"\
-  "	string mortar = \"{2A473C531D075905}Mortars/82/Podnosnew.et\";"\
-  "	IEntity spawnHumArm, spawnHumArm2, spawnMortar;"\
+  "	IEntity spawnHumArm, spawnHumArm2;"\
   "	"\
   "	void spawnthings()"\
   "	{"\
   "		spawnHumArm = GetGame().GetWorld().FindEntityByName(\"spawnHumArm\");"\
   "		spawnHumArm2 = GetGame().GetWorld().FindEntityByName(\"spawnHumArm2\");"\
-  "		spawnMortar = GetGame().GetWorld().FindEntityByName(\"spawnMortar\");"\
   "		"\
   "		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
   "		spawnParams.TransformMode = ETransformMode.WORLD;"\
@@ -26,17 +24,11 @@ $grp SCR_BaseTriggerEntity {
   "		GetGame().SpawnEntityPrefab(Resource.Load(humArm),GetGame().GetWorld(),spawnParams);"\
   "		spawnParams.Transform[3] = spawnHumArm2.GetOrigin();"\
   "		GetGame().SpawnEntityPrefab(Resource.Load(humArm),GetGame().GetWorld(),spawnParams);"\
-  "		spawnParams.Transform[3] = spawnMortar.GetOrigin();"\
-  "		GetGame().SpawnEntityPrefab(Resource.Load(mortar),GetGame().GetWorld(),spawnParams);"\
   "		"\
   "	}"
   EOnInit ""\
   "		super.EOnInit(owner);"\
   "		GetGame().GetCallqueue().CallLater(spawnthings, 3000, false);"\
   "	"
- }
- spawnMortar {
-  coords 4858.643 35.648 9148.904
-  angleY 51.457
  }
 }
