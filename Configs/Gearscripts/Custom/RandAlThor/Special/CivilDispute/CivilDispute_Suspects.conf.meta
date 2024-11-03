@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{330ED813CE0D8964}Configs/Gearscripts/Custom/RandAlThor/Special/CivilDispute/CivilDispute_Suspects.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+  CONFResourceClass Xbox : PC {
+  }
+ }
+}

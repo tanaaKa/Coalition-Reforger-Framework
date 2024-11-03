@@ -1,4 +1,4 @@
-$grp SCR_AIGroup : "{770661B4BD84AEEB}Prefabs/Groups/BLUFOR/1980s/Specials/Special_HeliBattle_Blufor_Crew.et" {
+$grp SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
  {
   coords 9767.446 196.065 384.497
   angleY 45
@@ -12,13 +12,13 @@ $grp SCR_AIGroup : "{770661B4BD84AEEB}Prefabs/Groups/BLUFOR/1980s/Specials/Speci
   m_bPlayable 1
  }
  {
-  coords 9713.693 196.051 438.252
+  coords 9713.692 196.051 438.252
   angleY 45
   m_bSnapToTerrain 0
   m_bPlayable 1
  }
  {
-  coords 9689.316 196.044 462.623
+  coords 9689.315 196.044 462.623
   angleY 45
   m_bSnapToTerrain 0
   m_bPlayable 1

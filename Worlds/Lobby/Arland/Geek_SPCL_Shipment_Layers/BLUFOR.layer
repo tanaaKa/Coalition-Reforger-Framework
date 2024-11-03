@@ -1,33 +1,47 @@
-SCR_AIGroup : "{D98805C88CAB8AE2}Prefabs/Groups/BLUFOR/RHS_USAF_USMC/Specials/CRF_USMC_RiflemanOnlySquad.et" {
- coords 989.678 39 2659.202
- angleY -105.479
- m_sCustomNameSet ""
+$grp SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
  {
-  SCR_AIGroup : "{D98805C88CAB8AE2}Prefabs/Groups/BLUFOR/RHS_USAF_USMC/Specials/CRF_USMC_RiflemanOnlySquad.et" {
-   coords -0.026 0 -6.385
-   angleY -0.66
-   m_sCustomNameSet ""
-   {
-    SCR_AIGroup : "{D98805C88CAB8AE2}Prefabs/Groups/BLUFOR/RHS_USAF_USMC/Specials/CRF_USMC_RiflemanOnlySquad.et" {
-     coords -0.025 0 -5.927
-     angleY -0.106
-     m_sCustomNameSet ""
-     {
-      SCR_AIGroup : "{D98805C88CAB8AE2}Prefabs/Groups/BLUFOR/RHS_USAF_USMC/Specials/CRF_USMC_RiflemanOnlySquad.et" {
-       coords -0.217 0 -5.877
-       angleY -0.465
-       m_sCustomNameSet ""
-       {
-        SCR_AIGroup : "{D98805C88CAB8AE2}Prefabs/Groups/BLUFOR/RHS_USAF_USMC/Specials/CRF_USMC_RiflemanOnlySquad.et" {
-         coords -0.343 0 -7.334
-         angleY 1.137
-         m_sCustomNameSet ""
-        }
-       }
-      }
-     }
-    }
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Column"
    }
   }
+  coords 906.451 39.005 2626.023
+  angleY 73.969
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Column"
+   }
+  }
+  coords 904.868 39.005 2631.53
+  angleY 73.969
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Column"
+   }
+  }
+  coords 902.982 39.005 2638.098
+  angleY 73.969
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Column"
+   }
+  }
+  coords 900.892 39.005 2645.369
+  angleY 73.969
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Column"
+   }
+  }
+  coords 899.579 39.005 2649.94
+  angleY 73.969
  }
 }
