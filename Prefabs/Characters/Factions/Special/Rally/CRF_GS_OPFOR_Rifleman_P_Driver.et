@@ -23,7 +23,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
    DefaultWeaponIndex 0
   }
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
-   "faction affiliation" "BLUFOR"
+   "faction affiliation" "OPFOR"
   }
   PS_PlayableComponent "{5EFCC1946F475F15}" {
    m_name "Driver"
