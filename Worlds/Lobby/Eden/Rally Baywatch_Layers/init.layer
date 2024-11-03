@@ -79,7 +79,6 @@ SCR_BaseTriggerEntity Finish_Trigger {
  "        "\
  "        GetGame().GetCallqueue().Remove(WaitTillGameStart);"\
  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Welcome to COALITION Rally: Baywatch\", 10, \"Racists should all board their vehicles now.\");"\
- "        GetGame().GetCallqueue().CallLater(DoAThing, 10000, false);"\
  "    "
  TriggerShapeType Sphere
  SphereRadius 50
