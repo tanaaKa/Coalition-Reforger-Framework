@@ -26,8 +26,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("BLUFOR", "auto", "Faction key for the searching side.")]
 	string m_searcherFactionKey;
 	
-
-	[Attribute("{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et", "auto", "The visual prefab of the transponder. Must be moveable by the player.")]
+	[Attribute("{42A502E3BB727CEB}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_HeliPilot.et", "auto", "The visual prefab of the transponder. Must be moveable by the player.",uiwidget: "resourcePickerThumbnail", params: "et")]
 	ResourceName m_hvtPrefab;
 	
 	[Attribute("0 0 0", "auto", "The rotation of the prefab")]
@@ -66,7 +65,10 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 			
 			m_eHvtEntity = GetGame().SpawnEntityPrefab(Resource.Load(m_hvtPrefab),GetGame().GetWorld(),spawnParams);
 			
-			m_eHvtEntity.SetYawPitchRoll(m_hvtPrefabYaw);
+			if (Replication.IsServer())
+			{
+				m_eHvtEntity.SetYawPitchRoll(m_hvtPrefabYaw);
+			}
 			
 			// Knock the entity uncon if needed
 			if (m_setUnconcious && Replication.IsServer()) 
