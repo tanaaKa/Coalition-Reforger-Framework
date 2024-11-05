@@ -11,12 +11,14 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     m_rGearScript "{2D140B13588E56B8}Configs/Gearscripts/Standard/GWOT/CRF_GS_Taliban.conf"
    }
   }
+  CRF_HighValueTargetGameModeComponent "{62C704801389D763}" {
+   m_timeBetweenPings 1
+   m_disableDamage 1
+   m_hvtPrefab "{9DECC859EF1155F2}Prefabs/Weapons/Grenades/Grenade_PhoneDetonator.et"
+   m_hvtPrefabYaw 0 90 0
+  }
   CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
    m_iTimeLimitMinutes 60
-  }
-  CRF_SearchAndRescueGameModeComponent "{62BF31216E17CEEF}" {
-   m_timeBetweenPings 30
-   m_setUnconcious 1
   }
  }
  coords 3299.365 15.426 774.95
