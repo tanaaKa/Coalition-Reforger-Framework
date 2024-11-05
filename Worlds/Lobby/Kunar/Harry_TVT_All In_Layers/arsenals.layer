@@ -64,6 +64,7 @@ SCR_BaseTriggerEntity UpdateGain {
  "		GetGame().GetCallqueue().CallLater(WaitTillGameStart, 10000, false, owner);"\
  "	"
  _WB_OnDelete ""\
+ "		super._WB_OnDelete(src);"\
  "		m_isDestroying = true;"\
  "		GetGame().GetCallqueue().Remove(WaitTillGameStart);"\
  "	"
