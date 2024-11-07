@@ -109,3 +109,17 @@ Vehicle UAZ452_ambulance_base1 : "{1247D68D2A76907D}Prefabs/Vehicles/Wheeled/UAZ
  angleX -4.743
  angleZ 2.101
 }
+$grp Vehicle : "{F649585ABB3706C4}Prefabs/Vehicles/Wheeled/M151A2/M151A2.et" {
+ M151A1 {
+  coords 2662.524 8 3082.568
+  angleY -145.959
+ }
+ M151A2 {
+  coords 2664.866 8 3086.035
+  angleY -145.959
+ }
+ M151A3 {
+  coords 2667.082 8 3089.315
+  angleY -145.959
+ }
+}

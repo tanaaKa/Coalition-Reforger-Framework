@@ -4,13 +4,9 @@ PS_MissionDescription : "{5D890E2198A25341}PrefabsEditable/MissionDescription/Ga
 PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescription/OPF_Brief.et" {
  coords 2018.335 233.591 1228.068
  m_sTitle "INDFOR Brief"
- m_sTextData "Defend your two main stockpiles of weapons at Babyol, and Ali Abad. These are your main objectives."\
+ m_sTextData "Defend your two main stockpiles of weapons at Babyol, and Ali Abad. "\
  ""\
- "There also exists smaller caches that can hold less supply at various bases and towns around the AO. These are not critical to defend."\
- ""\
- "Over time, you will receive a flow of supply starting when safe start ends."\
- ""\
- "Caches are weak to explosives, so keep that in mind during your defence."
+ "There are some additional mounted PKMs that you have prepared around the AO, these are marked on your map."
  m_aVisibleForFactions {
   "INDFOR"
  }
@@ -21,11 +17,12 @@ PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/As
  "1x UH1H"\
  "3x APC"\
  "2x Stryker"\
- "1x Crew Served Mortar"\
+ "2x Crew Served Mortar"\
  ""\
  "Indfor"\
  "1x HMG Team"\
  "1x Crew Served Mortar"\
+ "3x Mounted PKMs"\
  "3x Imbedded AA, and MAT"
 }
 PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
@@ -34,24 +31,19 @@ PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/We
 PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
  coords 2011.822 237.978 1256.477
  m_sTitle "Win Conditions"
- m_sTextData "Objective 1: Cache A is destroyed or defended."\
+ m_sTextData "Objective 1: Bomb site A is destroyed or defended."\
  ""\
- "Objective 2: Cache B is destroyed or defended."\
- ""\
- "The other smaller caches are not scored objectives."
+ "Objective 2: Bomb site B is destroyed or defended."\
+ ""
 }
 PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BLU_Brief.et" {
  coords 2007.366 238.378 1247.497
- m_sTextData "Search through Babyol and Ali Abad for two large main caches, and destroy them by planting bombs on the bomb site. These are the main objectives."\
- ""\
- "There are smaller caches in the surrounding bases and towns that you can find and destroy with demo charges to deprive the enemy of resources. However, these are not critical objectives."\
- ""\
- "As time passes, the enemy will receive more supply."
+ m_sTextData "Search through Babyol and Ali Abad for two large main caches, and destroy them by planting bombs on the bomb site. You don't have specific locations, so the towns will have to be searched for each site."
  m_aVisibleForFactions {
   "BLUFOR"
  }
 }
 PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
  coords 2024.258 231.389 1232.517
- m_sTextData "Local informants have reported to the Americans that there are significant caches of arms in Babyol and Ali Abad. Taliban fighters have been using these, and the surrounding areas to stage weapons for an upcoming attack. Blufor intends to nip this in the bud by sweeping through those villages, and destroying the caches. "
+ m_sTextData "Local informants have reported to the Americans that there are significant caches of arms in Babyol and Ali Abad. Taliban fighters have been using these villages to stage weapons for an upcoming attack. Blufor intends to nip this in the bud by sweeping through those villages, and destroying the caches. "
 }

@@ -61,7 +61,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
         m_sCallsign "1-2"
        }
        SCR_CallsignInfo "{62C93198EB4DF9FA}" {
-        m_sCallsign "Stryker 1"
+        m_sCallsign "1-3"
        }
        SCR_CallsignInfo "{62C93198FD648380}" {
         m_sCallsign "2nd Platoon"
@@ -71,6 +71,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
        }
        SCR_CallsignInfo "{62C93198C56CED81}" {
         m_sCallsign "2-2"
+       }
+       SCR_CallsignInfo "{62CF18604AB98362}" {
+        m_sCallsign "Stryker 1"
        }
        SCR_CallsignInfo "{62C93198C9A93C65}" {
         m_sCallsign "Stryker 2"

@@ -1,371 +1,169 @@
-SCR_BaseTriggerEntity UpdateGain {
- coords 1910.832 205.791 1343.34
- userScript "	float m_ResourceGain = 1.0;"\
- "	bool m_safeStartStatus = true;"\
- "	bool m_isDestroying = false;"\
- "	"\
- "	void WaitTillGameStart(IEntity entity)"\
- "	{"\
- "		if (m_isDestroying || !GetGame() || !entity) return;"\
- "		"\
- "		PS_GameModeCoop gameLobby = PS_GameModeCoop.Cast(GetGame().GetWorld().FindEntityByName(\"CRF_GameMode_Lobby_1\"));"\
- "		if (!gameLobby) return;"\
- "		CRF_SafestartGameModeComponent safeStart = CRF_SafestartGameModeComponent.Cast(gameLobby.FindComponent(CRF_SafestartGameModeComponent));"\
- "		m_safeStartStatus = safeStart.GetSafestartStatus();"\
- "		if (!safeStart) return;"\
- "		if(m_safeStartStatus)"\
- "		{"\
- "			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 500, false, entity);"\
- "			return;"\
- "		}"\
- "		"\
- "		GenericEntity smallSupply1 = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"SmallSupply1\"));"\
- "		SCR_ResourceComponent smallComponent1 = SCR_ResourceComponent.Cast(smallSupply1.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> smallContainer1 = smallComponent1.GetContainers();"\
- "		smallContainer1[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "		"\
- "		GenericEntity smallSupply2 = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"SmallSupply2\"));"\
- "		SCR_ResourceComponent smallComponent2 = SCR_ResourceComponent.Cast(smallSupply2.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> smallContainer2 = smallComponent2.GetContainers();"\
- "		smallContainer2[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "		"\
- "		GenericEntity smallSupply3 = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"SmallSupply3\"));"\
- "		SCR_ResourceComponent smallComponent3 = SCR_ResourceComponent.Cast(smallSupply3.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> smallContainer3 = smallComponent3.GetContainers();"\
- "		smallContainer3[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "		"\
- "		GenericEntity smallSupply4 = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"SmallSupply4\"));"\
- "		SCR_ResourceComponent smallComponent4 = SCR_ResourceComponent.Cast(smallSupply4.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> smallContainer4 = smallComponent4.GetContainers();"\
- "		smallContainer4[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "		"\
- "		GenericEntity mainCacheA = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"MainCacheA\"));"\
- "		SCR_ResourceComponent mainComponentA = SCR_ResourceComponent.Cast(mainCacheA.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> mainContainerA = mainComponentA.GetContainers();"\
- "		mainContainerA[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "		"\
- "		GenericEntity mainCacheB = GenericEntity.Cast(GetGame().GetWorld().FindEntityByName(\"MainCacheB\"));"\
- "		SCR_ResourceComponent mainComponentB = SCR_ResourceComponent.Cast(mainCacheB.FindComponent(SCR_ResourceComponent));"\
- "		array<SCR_ResourceContainer> mainContainerB = mainComponentB.GetContainers();"\
- "		mainContainerB[0].SetResourceGain(m_ResourceGain, true);"\
- ""\
- "	}"
- destructor ""\
- "		m_isDestroying = true;"\
- "		GetGame().GetCallqueue().Remove(WaitTillGameStart);"\
- "	"
- EOnInit ""\
- "		super.EOnInit(owner);"\
- "		GetGame().GetCallqueue().CallLater(WaitTillGameStart, 10000, false, owner);"\
- "	"
- _WB_OnDelete ""\
- "		super._WB_OnDelete(src);"\
- "		m_isDestroying = true;"\
- "		GetGame().GetCallqueue().Remove(WaitTillGameStart);"\
- "	"
-}
-$grp GenericEntity : "{EDAD1E516C1E553E}Prefabs/Props/Military/SupplyBox/SupplyCrate/SupplyCrate_Base.et" {
- SmallSupply1 {
-  components {
-   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
-    Enabled 1
-   }
-   SCR_ResourceComponent "{5D247A59598D71AE}" {
-    m_aContainers {
-     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-      m_fResourceValueMax 10
-      m_bEnableResourceGain 1
-      m_fResourceGain 0
-      m_fResourceGainTickrate 60
-      m_eOnEmptyBehavior NONE
-     }
-    }
-   }
-  }
-  coords 1910.76 205.379 1338.796
-  angleY -47.352
+$grp Turret : "{723870DBB19D30B0}Prefabs/Weapons/Tripods/Tripod_6T5_PKM.et" {
+ {
+  coords 1925.605 209.257 1337.061
+  angleY 64.202
   {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199C093426F}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.047 0.311 -0.029
-    angleY -1.147
+   GenericEntity : "{31A455F7FD8DCE84}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_plastic.et" {
+    coords 0.067 -1.283 0.515
+    angleY -11.202
    }
    PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
-    coords -0.03 0.05 0.859
-    angleY 137.352
+    coords 0.95 -5.022 -3.57
+    angleY 25.798
     m_MarkerColor 0 0 0 1
     m_fWorldSize 45
-    m_sDescription "Small cache 1"
+    m_sDescription "Mounted PKM"
     m_aVisibleForFactions {
      "INDFOR"
     }
-   }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes AMMUNITION
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93198249BC381}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.037 0.039 0.406
-    angleY 0.626
    }
   }
  }
- SmallSupply2 {
-  components {
-   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
-    Enabled 1
-   }
-   SCR_ResourceComponent "{5D247A59598D71AE}" {
-    m_aContainers {
-     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-      m_fResourceValueMax 10
-      m_bEnableResourceGain 1
-      m_fResourceGain 0
-      m_fResourceGainTickrate 60
-      m_eOnEmptyBehavior NONE
-     }
-    }
-   }
-  }
-  coords 2350.441 162.985 1860.107
-  angleY 2.629
+ {
+  coords 2715.125 102.835 1981.974
+  angleY 26.086
   {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199CED05B8A}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.047 0.311 -0.029
-    angleY -1.147
+   GenericEntity : "{31A455F7FD8DCE84}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_plastic.et" {
+    coords -0.181 -1.29 0.253
+    angleY 4.914
    }
    PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
-    coords -0.386 -0.03 0.894
+    coords 4.068 0.616 -16.276
+    angleY 65.812
     m_MarkerColor 0 0 0 1
     m_fWorldSize 45
-    m_sDescription "Small cache 2"
+    m_sDescription "Mounted PKM"
     m_aVisibleForFactions {
      "INDFOR"
     }
-   }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes AMMUNITION
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C9319829A30A61}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.037 0.039 0.406
-    angleY 0.626
    }
   }
  }
- SmallSupply3 {
-  components {
-   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
-    Enabled 1
-   }
-   SCR_ResourceComponent "{5D247A59598D71AE}" {
-    m_aContainers {
-     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-      m_fResourceValueMax 10
-      m_bEnableResourceGain 1
-      m_fResourceGain 0
-      m_fResourceGainTickrate 60
-      m_eOnEmptyBehavior NONE
-     }
-    }
-   }
-  }
-  coords 2720.391 102.554 1966.564
-  angleY 140.618
+ {
+  coords 2488.024 188.023 1417.585
+  angleY -23.4
   {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199D37078B8}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
+   GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+    coords 1.294 -1.783 0.727
+    angleY -14.372
+    {
+     GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+      coords -0.85 0 0.72
+      angleY -168.044
+      {
+       GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+        coords 1.363 0 0.289
+        angleY 29.895
+        {
+         GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+          coords 0.434 0 1.522
+          angleY -60.555
+          {
+           GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+            coords -3.607 0.23 2.227
+            angleY 59.357
+            {
+             GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+              coords 2.233 -0.486 -0.451
+              angleY -59.357
+              {
+               GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                coords 1.319 0 -0.446
+                {
+                 GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                  coords 1.539 0 0.37
+                  {
+                   GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                    coords -3.607 0.23 2.227
+                    angleY 59.357
+                    {
+                     GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                      coords 1.118 -0.23 -0.459
+                      {
+                       GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                        coords 1.114 0.722 0.008
+                        angleY -59.357
+                        {
+                         GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                          coords 1.319 0 -0.446
+                          {
+                           GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                            coords -2.069 0.23 2.597
+                            angleY -19.232
+                            {
+                             GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                              coords 2.673 -0.23 -3.291
+                              angleY 88.151
+                              {
+                               GenericEntity : "{19DA1F395962511D}Prefabs/Vegetation/Cuttings/Pinus_sylvestris_medium_01.et" {
+                                coords -2.196 0 -2.832
+                                angleY -65.899
+                               }
+                              }
+                             }
+                            }
+                           }
+                          }
+                         }
+                        }
+                       }
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
         }
        }
       }
-      m_eArsenalSaveType SAVING_DISABLED
      }
     }
-    coords -0.047 0.311 -0.029
-    angleY -1.147
    }
    PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
-    coords 0.079 -0.172 1.111
-    angleY -50.618
+    coords -0.424 -2.187 -0.312
+    angleY 113.4
     m_MarkerColor 0 0 0 1
     m_fWorldSize 45
-    m_sDescription "Small cache 3"
+    m_sDescription "Mounted PKM and Platform"
     m_aVisibleForFactions {
      "INDFOR"
     }
    }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes AMMUNITION
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C931982EEB154C}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
+   GenericEntity : "{BB6E3F9C566319BA}Prefabs/Props/Military/Sandbags/Sandbag_01_end_base.et" {
+    coords -0.959 -0.502 -0.185
+    angleY -0.47
+    {
+     GenericEntity : "{BB6E3F9C566319BA}Prefabs/Props/Military/Sandbags/Sandbag_01_end_base.et" {
+      coords 1.941 0 0.01
+      angleY -179.901
+      {
+       GenericEntity : "{3E4C223A92230572}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_base.et" {
+        coords 1.286 -1.153 -0.036
+        angleY 179.241
+        {
+         GenericEntity : "{53EB8BF116A99F3B}Prefabs/Props/Military/Sandbags/Sandbag_01_short_high_base.et" {
+          coords 0.339 0.341 0.543
+          angleY -0.636
+          {
+           GenericEntity : "{3E4C223A92230572}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_base.et" {
+            coords 0.344 -0.341 -0.548
+            angleY 0.636
+           }
+          }
+         }
         }
        }
       }
-      m_eArsenalSaveType SAVING_DISABLED
      }
     }
-    coords -0.037 -0.067 0.406
-    angleY 0.626
-   }
-  }
- }
- SmallSupply4 {
-  components {
-   SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
-    Enabled 1
-   }
-   SCR_ResourceComponent "{5D247A59598D71AE}" {
-    m_aContainers {
-     SCR_ResourceContainer "{5D3CDAE74F1A6127}" {
-      m_fResourceValueMax 10
-      m_bEnableResourceGain 1
-      m_fResourceGain 0
-      m_fResourceGainTickrate 60
-      m_eOnEmptyBehavior NONE
-     }
-    }
-   }
-  }
-  coords 2682.611 152.468 1452.189
-  angleY 139.211
-  {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199D561AFF9}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.047 0.311 -0.029
-    angleY -1.147
-   }
-   PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
-    coords -0.06 -0.001 1.188
-    angleY -49.211
-    m_MarkerColor 0 0 0 1
-    m_fWorldSize 45
-    m_sDescription "Small cache 4"
-    m_aVisibleForFactions {
-     "INDFOR"
-    }
-   }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes AMMUNITION
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93198339FA218}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-    }
-    coords -0.037 0.039 0.406
-    angleY 0.626
    }
   }
  }
@@ -403,121 +201,6 @@ $grp GenericEntity : "{F3ABB031881418BC}Prefabs/Props/Military/SupplyBox/SupplyS
   }
   coords 2253.721 126.633 1556.703
   angleY 112.297
-  {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C9319C22412131}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords -3.077 -0.001 -4.371
-    angleY 43.752
-   }
-   GenericEntity : "{584CEDC2E56BAEBF}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Explosives_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes 62
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C9319D20E835DA}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319D70FB6927}" {
-         m_eItemType NON_LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 1
-         m_ItemResourceName "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319D28E6B096}" {
-         m_eItemType LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 3
-         m_ItemResourceName "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319DBC8E408E}" {
-         m_eItemType LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 5
-         m_ItemResourceName "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords -1.748 -0.037 -4.384
-    angleY -7.851
-   }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupplyCostType GADGET_ARSENAL
-      m_eSupportedArsenalItemModes 48
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199ACB04DCA}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords -2.787 -0.029 -3.176
-    angleY 135.634
-   }
-  }
  }
  MainCacheB {
   components {
@@ -551,119 +234,5 @@ $grp GenericEntity : "{F3ABB031881418BC}Prefabs/Props/Military/SupplyBox/SupplyS
   }
   coords 2134.7 139.857 1433.385
   angleY -95.477
-  {
-   GenericEntity : "{10F9EE0FB9EC0E4E}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Ammunition_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199EAD43AA2}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319C215D1DFF}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 1
-         m_ItemResourceName "{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319CF2F8F0A6}" {
-         m_eItemMode AMMUNITION
-         m_iSupplyCost 2
-         m_ItemResourceName "{E5E9C5897CF47F44}Prefabs/Weapons/Magazines/Box_762x54_PK_100rnd_4Ball_1Tracer.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords 0.203 0.425 -2.246
-    angleY 145.696
-   }
-   GenericEntity : "{584CEDC2E56BAEBF}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Explosives_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes 62
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93199DE7D62C4}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C9319D70FB6927}" {
-         m_eItemType NON_LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 1
-         m_ItemResourceName "{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319D28E6B096}" {
-         m_eItemType LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 3
-         m_ItemResourceName "{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et"
-        }
-        SCR_ArsenalItemStandalone "{62C9319DBC8E408E}" {
-         m_eItemType LETHAL_THROWABLE
-         m_eItemMode CONSUMABLE
-         m_iSupplyCost 5
-         m_ItemResourceName "{D6EF54367CECE1D9}Prefabs/Weapons/Explosives/Mine_TM62M/Mine_TM62M.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords 0.75 0.42 -1.877
-    angleY -46.974
-   }
-   GenericEntity : "{8DCF642905449796}Prefabs/Props/Military/Arsenal/AmmoBoxes/FIA/AmmoBoxArsenal_Launcher_FIA.et" {
-    components {
-     SCR_ArsenalComponent "{589F01C9C8D4A475}" {
-      m_eSupportedArsenalItemModes 48
-      m_eEditableAttributeGroups AMMUNITION_MODE
-      m_OverwriteArsenalConfig SCR_ArsenalItemListConfig "{62C93198275C3DF1}" {
-       m_aArsenalItems {
-        SCR_ArsenalItemStandalone "{62C93199B3AD3C67}" {
-         m_eItemType ROCKET_LAUNCHER
-         m_eItemMode AMMUNITION
-         m_ItemResourceName "{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et"
-        }
-       }
-      }
-      m_eArsenalSaveType SAVING_DISABLED
-     }
-     SCR_DestructionMultiPhaseComponent "{58F89684469E44B1}" {
-      Enabled 1
-      "Additional hit zones" {
-       SCR_HitZone Default {
-        "Collision multiplier" 0
-        "Melee multiplier" 0
-        "Kinetic multiplier" 0
-        "Fragmentation multiplier" 0
-       }
-      }
-      m_fBaseHealth 1
-     }
-    }
-    coords -0.581 0.421 -2.826
-    angleY 161.52
-   }
-  }
  }
 }
