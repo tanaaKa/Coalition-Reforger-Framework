@@ -883,7 +883,7 @@ $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker
 }
 PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
  coords 2865.116 269.784 9704.421
- angleY 0
+ angleY 90.7
  m_MarkerColor 0.502 0 0 1
  m_fWorldSize 150
  m_sDescription "ChDKZ Spawn"
@@ -892,8 +892,8 @@ PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.e
  }
 }
 PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.et" {
- coords 4696.661 339.125 9605.125
- angleY 0
+ coords 4696.661 339.125 9605.124
+ angleY 90.125
  m_fWorldSize 150
  m_sDescription "CDF Spawn"
 }
