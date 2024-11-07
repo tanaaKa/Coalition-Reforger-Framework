@@ -1,0 +1,8 @@
+$grp Tank : "{45727E50E27698C2}Prefabs/Vehicles/Tracked/BMP2/BMP2M.et" {
+ BMP2M1 {
+  coords 11752.295 17.704 12851.584
+ }
+ BMP2M2 {
+  coords 11710.132 14.264 12848.886
+ }
+}
