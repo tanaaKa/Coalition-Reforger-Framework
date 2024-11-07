@@ -12,7 +12,7 @@ ParticleEffectEntity {
  EffectPath "{4325B2EB1B7E9A45}Particles/Logistics/Fire/Ammunition_Fire/Ammunition_Fire_Large.ptc"
 }
 SCR_BaseTriggerEntity transponder {
- coords 1994.629 8.157 2029.207
+ coords 1994.068 8.278 2029.938
 }
 $grp PS_Objective : "{DC02A6E23541A99B}PrefabsEditable/MissionDescription/Objective.et" {
  {
