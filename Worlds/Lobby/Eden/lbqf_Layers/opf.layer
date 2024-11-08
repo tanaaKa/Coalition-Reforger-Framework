@@ -1,6 +1,7 @@
 $grp SCR_AIGroup : "{10ADE105A7E8EDE4}Prefabs/Groups/Special/LBQF/CRF_OPF_PILOTS.et" {
  {
   coords 4759.784 23.776 12029.167
+  m_faction "OPFOR"
  }
  {
   coords 4789.098 23.689 12029.88
@@ -8,9 +9,11 @@ $grp SCR_AIGroup : "{10ADE105A7E8EDE4}Prefabs/Groups/Special/LBQF/CRF_OPF_PILOTS
  }
  {
   coords 4825.304 24.024 12029.081
+  m_faction "OPFOR"
  }
  {
   coords 4856.697 25.731 12029.641
+  m_faction "OPFOR"
  }
 }
 $grp Vehicle : "{823CA4130CE90077}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT.et" {
