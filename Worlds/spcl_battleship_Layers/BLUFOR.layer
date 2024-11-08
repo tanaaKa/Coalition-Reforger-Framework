@@ -1,0 +1,190 @@
+SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+ coords 4822.352 27.477 11685.414
+ m_aUnitPrefabSlots {
+  "{DB031845041CAC20}Prefabs/Characters/Factions/Special/CRF_GS_BLUFOR_Demo_P_Drone.et" "{DB031845041CAC20}Prefabs/Characters/Factions/Special/CRF_GS_BLUFOR_Demo_P_Drone.et" "{DB031845041CAC20}Prefabs/Characters/Factions/Special/CRF_GS_BLUFOR_Demo_P_Drone.et" "{DB031845041CAC20}Prefabs/Characters/Factions/Special/CRF_GS_BLUFOR_Demo_P_Drone.et"
+ }
+ {
+  $grp SCR_AIGroup : "{3CF105AFDCEA45A3}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_IndirectTeam_p.et" {
+   {
+    coords -29.976 0.826 -12.78
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.977 0.826 16.131
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.977 0.826 45.464
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.977 0.826 78.229
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.977 0.826 108.853
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.641 0.826 16.131
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 45.464
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 78.229
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 108.853
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.64 0.826 -12.78
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.712 0.826 16.131
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 45.464
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 78.229
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 108.853
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.711 0.826 -12.78
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 31.031
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.712 0.826 -31.066
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 61.654
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.711 0.826 -59.977
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 31.031
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.977 0.826 -59.977
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 61.654
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -72.713 0.826 -1.733
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.64 0.826 -59.977
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.641 0.826 -31.066
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.978 0.826 31.031
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.978 0.826 61.654
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.978 0.826 -1.733
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -29.978 0.826 -31.066
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+   {
+    coords -50.642 0.826 -1.733
+    m_aUnitPrefabSlots {
+     "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et" "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"
+    }
+   }
+  }
+ }
+}
