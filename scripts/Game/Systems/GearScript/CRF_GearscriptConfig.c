@@ -230,7 +230,7 @@ class CRF_Squad_Level_Custom_Gear
 [BaseContainerProps(), SCR_BaseContainerCustomTitleFields({"m_sRoleToOverride"}, "%1")]
 class CRF_Infantry_Specialties_Custom_Gear
 {
-	[Attribute("", uiwidget: UIWidgets.ComboBox, enums: {ParamEnum("", ""), ParamEnum("Heavy AntiTank", "Heavy AntiTank"), ParamEnum("Assistant Heavy AntiTank", "Assistant Heavy AntiTank"), ParamEnum("Medium AntiTank", "Medium AntiTank"), ParamEnum("Assistant Medium AntiTank", "Assistant Medium AntiTank"), ParamEnum("Heavy MachineGun", "Heavy MachineGun"), ParamEnum("Assistant Heavy MachineGun", "Assistant Heavy MachineGun"), ParamEnum("Medium MachineGun", "Medium MachineGun"), ParamEnum("Assistant Medium MachineGun", "Assistant Medium MachineGun"), ParamEnum("Anit-Air", "Anit-Air"), ParamEnum("Assistant Anit-Air", "Assistant Anit-Air"), ParamEnum("Sniper", "Sniper"), ParamEnum("Spotter", "Spotter")})]
+	[Attribute("", uiwidget: UIWidgets.ComboBox, enums: {ParamEnum("", ""), ParamEnum("Heavy AntiTank", "Heavy AntiTank"), ParamEnum("Assistant Heavy AntiTank", "Assistant Heavy AntiTank"), ParamEnum("Medium AntiTank", "Medium AntiTank"), ParamEnum("Assistant Medium AntiTank", "Assistant Medium AntiTank"), ParamEnum("Heavy MachineGun", "Heavy MachineGun"), ParamEnum("Assistant Heavy MachineGun", "Assistant Heavy MachineGun"), ParamEnum("Medium MachineGun", "Medium MachineGun"), ParamEnum("Assistant Medium MachineGun", "Assistant Medium MachineGun"), ParamEnum("Anit-Air", "Anit-Air"), ParamEnum("Assistant Anit-Air", "Assistant Anit-Air"), ParamEnum("Sniper", "Sniper"), ParamEnum("Spotter", "Spotter"), ParamEnum("Drone Operator", "Drone Operator")})]
 	string m_sRoleToOverride;
 	
 	[Attribute()]
