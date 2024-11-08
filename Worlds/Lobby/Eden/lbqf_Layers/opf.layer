@@ -4,6 +4,7 @@ $grp SCR_AIGroup : "{10ADE105A7E8EDE4}Prefabs/Groups/Special/LBQF/CRF_OPF_PILOTS
  }
  {
   coords 4789.098 23.689 12029.88
+  m_faction "OPFOR"
  }
  {
   coords 4825.304 24.024 12029.081
