@@ -1,0 +1,4852 @@
+SCR_BaseTriggerEntity weaponSpawnTrigger {
+ components {
+  Hierarchy "{62D3177CC2520D16}" {
+  }
+ }
+ coords 1296.182 164.342 2741.423
+ userScript "	string g1 = \"{E8F00BF730225B00}Prefabs/Weapons/Grenades/Grenade_M67.et\";"\
+ "	string g2 = \"{645C73791ECA1698}Prefabs/Weapons/Grenades/Grenade_RGD5.et\";"\
+ "	string sg1 = \"{9DB69176CEF0EE97}Prefabs/Weapons/Grenades/Smoke_ANM8HC.et\";"\
+ "	string sg2 = \"{77EAE5E07DC4678A}Prefabs/Weapons/Grenades/Smoke_RDG2.et\";"\
+ "	string h1 = \"{1353C6EAD1DCFE43}Prefabs/Weapons/Handguns/M9/Handgun_M9.et\";"\
+ "	string h2 = \"{C0F7DD85A86B2900}Prefabs/Weapons/Handguns/PM/Handgun_PM.et\";"\
+ "	string l1 = \"{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et\";"\
+ "	string l2 = \"{7A82FE978603F137}Prefabs/Weapons/Launchers/RPG7/Launcher_RPG7.et\";"\
+ "	string m1 = \"{D2B48DEBEF38D7D7}Prefabs/Weapons/MachineGuns/M249/MG_M249.et\";"\
+ "	string m2 = \"{D182DCDD72BF7E34}Prefabs/Weapons/MachineGuns/M60/MG_M60.et\";"\
+ "	string m3 = \"{A89BC9D55FFB4CD8}Prefabs/Weapons/MachineGuns/PKM/MG_PKM.et\";"\
+ "	string m4 = \"{A7AF84C6C58BA3E8}Prefabs/Weapons/MachineGuns/RPK74/MG_RPK74.et\";"\
+ "	string m5 = \"{026CE108BFB3EC03}Prefabs/Weapons/MachineGuns/UK59/MG_UK59.et\";"\
+ "	string r1 = \"{FA5C25BF66A53DCF}Prefabs/Weapons/Rifles/AK74/Rifle_AK74.et\";"\
+ "	string r2 = \"{BFEA719491610A45}Prefabs/Weapons/Rifles/AKS74U/Rifle_AKS74U.et\";"\
+ "	string r3 = \"{B31929F65F0D0279}Prefabs/Weapons/Rifles/M14/Rifle_M21.et\";"\
+ "	string r4 = \"{3E413771E1834D2F}Prefabs/Weapons/Rifles/M16/Rifle_M16A2.et\";"\
+ "	string r5 = \"{3EB02CDAD5F23C82}Prefabs/Weapons/Rifles/SVD/Rifle_SVD.et\";"\
+ "	string r6 = \"{6415B7923DE28C1B}Prefabs/Weapons/Rifles/SVD/Rifle_SVD_PSO.et\";"\
+ "	string r7 = \"{81EB948E6414BD6F}Prefabs/Weapons/Rifles/M14/Rifle_M21_ARTII.et\";"\
+ "	string r8 = \"{C19BFAF8A6334FD5}Prefabs/Weapons/Rifles/VZ58/Rifle_VZ58_base.et\";"\
+ "	string r9 = \"{63E8322E2ADD4AA7}Prefabs/Weapons/Rifles/AK74/Rifle_AK74_GP25.et\";"\
+ "	string r10 = \"{C417FBA57578B2E1}Prefabs/Weapons/Rifles/M16/Variants/Rifle_M16A2_carbine_M203_OliveGreen_Sand_Stripes.et\";"\
+ "	string a1 = \"{0A84AA5A3884176F}Prefabs/Weapons/Magazines/Magazine_545x39_AK_30rnd_Last_5Tracer.et\";"\
+ "	string a2 = \"{D8F2CA92583B23D3}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_Last_5Tracer.et\";"\
+ "	string a3 = \"{8B853CDD11BA916E}Prefabs/Weapons/Magazines/Magazine_9x18_PM_8rnd_Ball.et\";"\
+ "	string a4 = \"{9C05543A503DB80E}Prefabs/Weapons/Magazines/Magazine_9x19_M9_15rnd_Ball.et\";"\
+ "	string a5 = \"{9CCB46C6EE632C1A}Prefabs/Weapons/Magazines/Magazine_762x54_SVD_10rnd_Sniper.et\";"\
+ "	string a6 = \"{627255315038152A}Prefabs/Weapons/Magazines/Magazine_762x51_M14_20rnd_SpecialBall.et\";"\
+ "	string a7 = \"{D78C667F59829717}Prefabs/Weapons/Magazines/Magazine_545x39_RPK_45rnd_4Ball_1Tracer.et\";"\
+ "	string a8 = \"{32E12D322E107F1C}Prefabs/Weapons/Ammo/Ammo_Rocket_PG7VM.et\";"\
+ "	string b1 = \"{98C79F5FAE12F9B6}Prefabs/Weapons/Attachments/Bayonets/Bayonet_6Kh4.et\";"\
+ "	string b2 = \"{558117556F3880A8}Prefabs/Weapons/Attachments/Bayonets/Bayonet_M9.et\";"\
+ "	string bolt = \"{24FFA508861139C9}Prefabs/Weapons/Rifles/L42A1/Rifle_L8.et\";"\
+ "	"\
+ "	ref array< ref array<int>> numberRanges = {};"\
+ "	ref array<string> values = {};"\
+ "	"\
+ "	"\
+ "	void PopulateRanges()"\
+ "	{"\
+ "		numberRanges.Insert({15, 29});"\
+ "		values.Insert(bolt);"\
+ "		numberRanges.Insert({30, 41});"\
+ "		values.Insert(r1);"\
+ "		numberRanges.Insert({42, 53});"\
+ "		values.Insert(r2);"\
+ "		numberRanges.Insert({54, 56});"\
+ "		values.Insert(b1);"\
+ "		numberRanges.Insert({57, 59});"\
+ "		values.Insert(b2);"\
+ "		numberRanges.Insert({60, 61});"\
+ "		values.Insert(g1);"\
+ "		numberRanges.Insert({62, 63});"\
+ "		values.Insert(g2);"\
+ "		numberRanges.Insert({64, 64});"\
+ "		values.Insert(sg1);"\
+ "		numberRanges.Insert({65, 65});"\
+ "		values.Insert(sg2);"\
+ "		numberRanges.Insert({66, 66});"\
+ "		values.Insert(h1);"\
+ "		numberRanges.Insert({67, 67});"\
+ "		values.Insert(h2);"\
+ "		numberRanges.Insert({68, 68});"\
+ "		values.Insert(l1);"\
+ "		numberRanges.Insert({69, 70});"\
+ "		values.Insert(l2);"\
+ "		numberRanges.Insert({71, 71});"\
+ "		values.Insert(m1);"\
+ "		numberRanges.Insert({72, 72});"\
+ "		values.Insert(m2);"\
+ "		numberRanges.Insert({73, 73});"\
+ "		values.Insert(m3);"\
+ "		numberRanges.Insert({74, 74});"\
+ "		values.Insert(m4);"\
+ "		numberRanges.Insert({75, 75});"\
+ "		values.Insert(m5);"\
+ "		numberRanges.Insert({76, 76});"\
+ "		values.Insert(r3);"\
+ "		numberRanges.Insert({77, 77});"\
+ "		values.Insert(r4);"\
+ "		numberRanges.Insert({78, 78});"\
+ "		values.Insert(r5);"\
+ "		numberRanges.Insert({79, 79});"\
+ "		values.Insert(r6);"\
+ "		numberRanges.Insert({80, 80});"\
+ "		values.Insert(r7);"\
+ "		numberRanges.Insert({81, 81});"\
+ "		values.Insert(r8);"\
+ "		numberRanges.Insert({82, 82});"\
+ "		values.Insert(r9);"\
+ "		numberRanges.Insert({83, 83});"\
+ "		values.Insert(r10);"\
+ "		numberRanges.Insert({84, 85});"\
+ "		values.Insert(a1);"\
+ "		numberRanges.Insert({86, 87});"\
+ "		values.Insert(a2);"\
+ "		numberRanges.Insert({88, 89});"\
+ "		values.Insert(a3);"\
+ "		numberRanges.Insert({90, 91});"\
+ "		values.Insert(a4);"\
+ "		numberRanges.Insert({92, 93});"\
+ "		values.Insert(a5);"\
+ "		numberRanges.Insert({94, 95});"\
+ "		values.Insert(a6);"\
+ "		numberRanges.Insert({96, 97});"\
+ "		values.Insert(a7);"\
+ "		numberRanges.Insert({98, 98});"\
+ "		values.Insert(a8);"\
+ "		numberRanges.Insert({99, 99});"\
+ "		values.Insert(l2);"\
+ "	}"\
+ "	"\
+ "	string GetValue() "\
+ "	{"\
+ "    	int randomNumber = Math.RandomInt(0, 200); "\
+ ""\
+ "    	// Iterate through ranges to find a match"\
+ "    	for (int i = 0; i < numberRanges.Count(); i++) "\
+ "		{"\
+ "        	int start = numberRanges[i][0];"\
+ "        	int end = numberRanges[i][1];"\
+ "			"\
+ "        	if (randomNumber >= start && randomNumber <= end) "\
+ "			{"\
+ "            	return values[i]; // Return the associated value"\
+ "        	}"\
+ "    	}"\
+ ""\
+ "    	return \"fail\";"\
+ "	}"\
+ "	"\
+ "	void SpawnThings()"\
+ "	{"\
+ "		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
+ "		spawnParams.TransformMode = ETransformMode.WORLD;"\
+ "		"\
+ "		for (int i = 1; i <= 585; i++)"\
+ "		{"\
+ "			string childName = \"weaponSpawn\" + i.ToString();"\
+ "			IEntity child = GetGame().GetWorld().FindEntityByName(childName);"\
+ "			spawnParams.Transform[3] = child.GetOrigin();"\
+ "			"\
+ "			string item = GetValue();"\
+ "			Print(item);"\
+ "			if (item != \"fail\")"\
+ "			{"\
+ "				GetGame().SpawnEntityPrefab(Resource.Load(item),GetGame().GetWorld(),spawnParams);"\
+ "			}"\
+ "			"\
+ ""\
+ "		}"\
+ "	}"
+ EOnInit ""\
+ "		super.EOnInit(owner);"\
+ "		"\
+ "		PopulateRanges();"\
+ "		"\
+ "		GetGame().GetCallqueue().CallLater(SpawnThings, 100, false);"\
+ ""\
+ "	"
+ {
+  $grp SCR_BaseTriggerEntity {
+   weaponSpawn1 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -111.456 -124.842 -2.723
+    angleY -15.364
+   }
+   weaponSpawn2 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -110.131 -124.842 -7.545
+    angleY -15.364
+   }
+   weaponSpawn3 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -108.806 -124.842 -12.366
+    angleY -15.364
+   }
+   weaponSpawn4 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -107.481 -124.842 -17.187
+    angleY -15.364
+   }
+   weaponSpawn5 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -106.156 -124.842 -22.008
+    angleY -15.364
+   }
+   weaponSpawn6 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -104.831 -124.842 -26.829
+    angleY -15.364
+   }
+   weaponSpawn7 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -103.506 -124.842 -31.65
+    angleY -15.364
+   }
+   weaponSpawn8 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -102.181 -124.842 -36.471
+    angleY -15.364
+   }
+   weaponSpawn9 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -100.856 -124.842 -41.292
+    angleY -15.364
+   }
+   weaponSpawn10 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -99.531 -124.853 -46.113
+    angleY -15.364
+   }
+   weaponSpawn11 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -98.206 -124.897 -50.934
+    angleY -15.364
+   }
+   weaponSpawn12 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -96.881 -124.941 -55.755
+    angleY -15.364
+   }
+   weaponSpawn13 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -87.238 -124.899 -53.105
+    angleY -15.364
+   }
+   weaponSpawn14 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -88.563 -124.861 -48.285
+    angleY -15.364
+   }
+   weaponSpawn15 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -89.888 -124.842 -43.464
+    angleY -15.364
+   }
+   weaponSpawn16 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -91.213 -124.842 -38.642
+    angleY -15.364
+   }
+   weaponSpawn17 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -92.538 -124.842 -33.822
+    angleY -15.364
+   }
+   weaponSpawn18 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -93.864 -124.842 -29.001
+    angleY -15.364
+   }
+   weaponSpawn19 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -95.188 -124.842 -24.18
+    angleY -15.364
+   }
+   weaponSpawn20 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -96.513 -124.842 -19.359
+    angleY -15.364
+   }
+   weaponSpawn21 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -99.163 -124.842 -9.716
+    angleY -15.364
+   }
+   weaponSpawn22 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -97.838 -124.842 -14.538
+    angleY -15.364
+   }
+   weaponSpawn23 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -100.488 -124.842 -4.895
+    angleY -15.364
+   }
+   weaponSpawn24 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -101.814 -124.842 -0.074
+    angleY -15.364
+   }
+   weaponSpawn25 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -77.595 -124.842 -50.455
+    angleY -15.364
+   }
+   weaponSpawn26 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -78.92 -124.842 -45.635
+    angleY -15.364
+   }
+   weaponSpawn27 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -80.245 -124.842 -40.815
+    angleY -15.364
+   }
+   weaponSpawn28 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -81.57 -124.842 -35.993
+    angleY -15.364
+   }
+   weaponSpawn29 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -82.895 -124.842 -31.173
+    angleY -15.364
+   }
+   weaponSpawn30 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -84.221 -124.842 -26.352
+    angleY -15.364
+   }
+   weaponSpawn31 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -85.545 -124.842 -21.531
+    angleY -15.364
+   }
+   weaponSpawn32 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -86.87 -124.842 -16.71
+    angleY -15.364
+   }
+   weaponSpawn33 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -89.52 -124.842 -7.067
+    angleY -15.364
+   }
+   weaponSpawn34 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -88.195 -124.842 -11.889
+    angleY -15.364
+   }
+   weaponSpawn35 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -90.845 -124.842 -2.246
+    angleY -15.364
+   }
+   weaponSpawn36 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -92.171 -124.842 2.576
+    angleY -15.364
+   }
+   weaponSpawn37 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -67.953 -124.842 -47.806
+    angleY -15.364
+   }
+   weaponSpawn38 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -69.277 -124.842 -42.985
+    angleY -15.364
+   }
+   weaponSpawn39 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -70.602 -124.842 -38.165
+    angleY -15.364
+   }
+   weaponSpawn40 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -71.927 -124.842 -33.344
+    angleY -15.364
+   }
+   weaponSpawn41 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -73.253 -124.842 -28.524
+    angleY -15.364
+   }
+   weaponSpawn42 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -74.578 -124.842 -23.703
+    angleY -15.364
+   }
+   weaponSpawn43 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -75.902 -124.842 -18.881
+    angleY -15.364
+   }
+   weaponSpawn44 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -77.227 -124.842 -14.061
+    angleY -15.364
+   }
+   weaponSpawn45 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -79.877 -124.842 -4.417
+    angleY -15.364
+   }
+   weaponSpawn46 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -78.552 -124.842 -9.24
+    angleY -15.364
+   }
+   weaponSpawn47 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -81.202 -124.842 0.404
+    angleY -15.364
+   }
+   weaponSpawn48 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -82.528 -124.842 5.225
+    angleY -15.364
+   }
+   weaponSpawn49 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -58.31 -124.842 -45.156
+    angleY -15.364
+   }
+   weaponSpawn50 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -59.634 -124.842 -40.336
+    angleY -15.364
+   }
+   weaponSpawn51 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -60.959 -124.842 -35.516
+    angleY -15.364
+   }
+   weaponSpawn52 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -62.284 -124.842 -30.694
+    angleY -15.364
+   }
+   weaponSpawn53 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -63.61 -124.842 -25.874
+    angleY -15.364
+   }
+   weaponSpawn54 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -64.935 -124.842 -21.054
+    angleY -15.364
+   }
+   weaponSpawn55 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -66.26 -124.842 -16.232
+    angleY -15.364
+   }
+   weaponSpawn56 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -67.584 -124.842 -11.412
+    angleY -15.364
+   }
+   weaponSpawn57 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -70.234 -124.842 -1.767
+    angleY -15.364
+   }
+   weaponSpawn58 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -68.909 -124.842 -6.59
+    angleY -15.364
+   }
+   weaponSpawn59 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -71.559 -124.842 3.054
+    angleY -15.364
+   }
+   weaponSpawn60 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -72.885 -124.842 7.875
+    angleY -15.364
+   }
+   weaponSpawn61 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -48.667 -124.842 -42.506
+    angleY -15.364
+   }
+   weaponSpawn62 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -49.991 -124.841 -37.686
+    angleY -15.364
+   }
+   weaponSpawn63 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -51.316 -124.842 -32.867
+    angleY -15.364
+   }
+   weaponSpawn64 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -52.641 -124.842 -28.045
+    angleY -15.364
+   }
+   weaponSpawn65 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -53.968 -124.842 -23.225
+    angleY -15.364
+   }
+   weaponSpawn66 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -55.292 -124.842 -18.404
+    angleY -15.364
+   }
+   weaponSpawn67 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -56.617 -124.842 -13.582
+    angleY -15.364
+   }
+   weaponSpawn68 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -57.941 -124.842 -8.763
+    angleY -15.364
+   }
+   weaponSpawn69 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -60.591 -124.842 0.883
+    angleY -15.364
+   }
+   weaponSpawn70 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -59.266 -124.842 -3.941
+    angleY -15.364
+   }
+   weaponSpawn71 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -61.916 -124.842 5.703
+    angleY -15.364
+   }
+   weaponSpawn72 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -63.243 -124.842 10.525
+    angleY -15.364
+   }
+   weaponSpawn73 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -39.024 -124.842 -39.857
+    angleY -15.364
+   }
+   weaponSpawn74 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -40.349 -124.842 -35.037
+    angleY -15.364
+   }
+   weaponSpawn75 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -41.673 -124.842 -30.217
+    angleY -15.364
+   }
+   weaponSpawn76 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -42.998 -124.842 -25.395
+    angleY -15.364
+   }
+   weaponSpawn77 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -44.325 -124.842 -20.575
+    angleY -15.364
+   }
+   weaponSpawn78 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -45.649 -124.842 -15.755
+    angleY -15.364
+   }
+   weaponSpawn79 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -46.974 -124.842 -10.933
+    angleY -15.364
+   }
+   weaponSpawn80 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -48.298 -124.842 -6.113
+    angleY -15.364
+   }
+   weaponSpawn81 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -50.948 -124.842 3.533
+    angleY -15.364
+   }
+   weaponSpawn82 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -49.623 -124.842 -1.292
+    angleY -15.364
+   }
+   weaponSpawn83 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -52.273 -124.842 8.353
+    angleY -15.364
+   }
+   weaponSpawn84 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -53.6 -124.842 13.174
+    angleY -15.364
+   }
+   weaponSpawn85 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -29.381 -124.831 -37.207
+    angleY -15.364
+   }
+   weaponSpawn86 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -30.706 -124.832 -32.387
+    angleY -15.364
+   }
+   weaponSpawn87 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -32.03 -124.842 -27.568
+    angleY -15.364
+   }
+   weaponSpawn88 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -33.355 -124.842 -22.746
+    angleY -15.364
+   }
+   weaponSpawn89 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -34.682 -124.842 -17.925
+    angleY -15.364
+   }
+   weaponSpawn90 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -36.006 -124.842 -13.105
+    angleY -15.364
+   }
+   weaponSpawn91 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -37.331 -124.842 -8.284
+    angleY -15.364
+   }
+   weaponSpawn92 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -38.655 -124.842 -3.464
+    angleY -15.364
+   }
+   weaponSpawn93 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -41.305 -124.842 6.182
+    angleY -15.364
+   }
+   weaponSpawn94 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -39.98 -124.842 1.358
+    angleY -15.364
+   }
+   weaponSpawn95 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -42.63 -124.842 11.003
+    angleY -15.364
+   }
+   weaponSpawn96 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -43.958 -124.842 15.824
+    angleY -15.364
+   }
+   weaponSpawn97 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -19.738 -124.842 -34.558
+    angleY -15.364
+   }
+   weaponSpawn98 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -21.063 -124.842 -29.737
+    angleY -15.364
+   }
+   weaponSpawn99 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -22.387 -124.842 -24.919
+    angleY -15.364
+   }
+   weaponSpawn100 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.712 -124.842 -20.096
+    angleY -15.364
+   }
+   weaponSpawn101 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -25.039 -124.842 -15.276
+    angleY -15.364
+   }
+   weaponSpawn102 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -26.364 -124.842 -10.455
+    angleY -15.364
+   }
+   weaponSpawn103 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -27.688 -124.842 -5.634
+    angleY -15.364
+   }
+   weaponSpawn104 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -29.012 -124.842 -0.815
+    angleY -15.364
+   }
+   weaponSpawn105 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -31.662 -124.842 8.831
+    angleY -15.364
+   }
+   weaponSpawn106 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -30.338 -124.842 4.007
+    angleY -15.364
+   }
+   weaponSpawn107 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -32.987 -124.842 13.652
+    angleY -15.364
+   }
+   weaponSpawn108 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -34.315 -124.842 18.473
+    angleY -15.364
+   }
+   weaponSpawn109 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -10.095 -124.842 -31.909
+    angleY -15.364
+   }
+   weaponSpawn110 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -11.42 -124.831 -27.087
+    angleY -15.364
+   }
+   weaponSpawn111 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -12.744 -124.842 -22.27
+    angleY -15.364
+   }
+   weaponSpawn112 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -14.069 -124.842 -17.446
+    angleY -15.364
+   }
+   weaponSpawn113 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -15.396 -124.813 -12.626
+    angleY -15.364
+   }
+   weaponSpawn114 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -16.721 -124.842 -7.806
+    angleY -15.364
+   }
+   weaponSpawn115 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -18.045 -124.842 -2.985
+    angleY -15.364
+   }
+   weaponSpawn116 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -19.369 -124.842 1.835
+    angleY -15.364
+   }
+   weaponSpawn117 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -22.019 -124.842 11.48
+    angleY -15.364
+   }
+   weaponSpawn118 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -20.695 -124.842 6.656
+    angleY -15.364
+   }
+   weaponSpawn119 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.344 -124.842 16.301
+    angleY -15.364
+   }
+   weaponSpawn120 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -24.672 -124.842 21.123
+    angleY -15.364
+   }
+   weaponSpawn121 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -0.453 -124.842 -29.26
+    angleY -15.364
+   }
+   weaponSpawn122 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -1.777 -124.842 -24.437
+    angleY -15.364
+   }
+   weaponSpawn123 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -3.101 -124.842 -19.621
+    angleY -15.364
+   }
+   weaponSpawn124 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -4.426 -124.832 -14.797
+    angleY -15.364
+   }
+   weaponSpawn125 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -5.754 -124.842 -9.976
+    angleY -15.364
+   }
+   weaponSpawn126 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -7.078 -124.842 -5.156
+    angleY -15.364
+   }
+   weaponSpawn127 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -8.402 -124.842 -0.336
+    angleY -15.364
+   }
+   weaponSpawn128 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -9.726 -124.842 4.484
+    angleY -15.364
+   }
+   weaponSpawn129 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -12.376 -124.842 14.129
+    angleY -15.364
+   }
+   weaponSpawn130 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -11.052 -124.842 9.306
+    angleY -15.364
+   }
+   weaponSpawn131 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -13.701 -124.842 18.95
+    angleY -15.364
+   }
+   weaponSpawn132 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -15.029 -124.842 23.773
+    angleY -15.364
+   }
+   weaponSpawn133 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 9.19 -124.842 -26.61
+    angleY -15.364
+   }
+   weaponSpawn134 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 7.866 -124.842 -21.788
+    angleY -15.364
+   }
+   weaponSpawn135 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 6.542 -124.842 -16.972
+    angleY -15.364
+   }
+   weaponSpawn136 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 5.217 -124.832 -12.147
+    angleY -15.364
+   }
+   weaponSpawn137 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 3.889 -124.842 -7.327
+    angleY -15.364
+   }
+   weaponSpawn138 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 2.565 -124.785 -2.506
+    angleY -15.364
+   }
+   weaponSpawn139 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 1.24 -124.842 2.314
+    angleY -15.364
+   }
+   weaponSpawn140 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -0.083 -124.842 7.133
+    angleY -15.364
+   }
+   weaponSpawn141 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -2.733 -124.842 16.778
+    angleY -15.364
+   }
+   weaponSpawn142 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -1.409 -124.842 11.955
+    angleY -15.364
+   }
+   weaponSpawn143 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -4.058 -124.842 21.599
+    angleY -15.364
+   }
+   weaponSpawn144 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -5.386 -124.842 26.423
+    angleY -15.364
+   }
+   weaponSpawn145 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 18.833 -124.842 -23.961
+    angleY -15.364
+   }
+   weaponSpawn146 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 17.509 -124.842 -19.139
+    angleY -15.364
+   }
+   weaponSpawn147 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 16.185 -124.842 -14.323
+    angleY -15.364
+   }
+   weaponSpawn148 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 14.86 -124.832 -9.497
+    angleY -15.364
+   }
+   weaponSpawn149 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 13.532 -124.842 -4.677
+    angleY -15.364
+   }
+   weaponSpawn150 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 12.208 -124.842 0.143
+    angleY -15.364
+   }
+   weaponSpawn151 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 10.883 -124.842 4.963
+    angleY -15.364
+   }
+   weaponSpawn152 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 9.56 -124.842 9.783
+    angleY -15.364
+   }
+   weaponSpawn153 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 6.91 -124.842 19.427
+    angleY -15.364
+   }
+   weaponSpawn154 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 8.234 -124.842 14.605
+    angleY -15.364
+   }
+   weaponSpawn155 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 5.585 -124.842 24.248
+    angleY -15.364
+   }
+   weaponSpawn156 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 4.256 -124.842 29.073
+    angleY -15.364
+   }
+   weaponSpawn157 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 28.476 -124.842 -21.312
+    angleY -15.364
+   }
+   weaponSpawn158 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 27.151 -124.842 -16.49
+    angleY -15.364
+   }
+   weaponSpawn159 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 25.828 -124.842 -11.673
+    angleY -15.364
+   }
+   weaponSpawn160 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 24.503 -124.842 -6.848
+    angleY -15.364
+   }
+   weaponSpawn161 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 23.175 -124.842 -2.027
+    angleY -15.364
+   }
+   weaponSpawn162 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 21.851 -124.842 2.793
+    angleY -15.364
+   }
+   weaponSpawn163 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 20.526 -124.842 7.613
+    angleY -15.364
+   }
+   weaponSpawn164 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 19.203 -124.842 12.432
+    angleY -15.364
+   }
+   weaponSpawn165 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 16.552 -124.842 22.077
+    angleY -15.364
+   }
+   weaponSpawn166 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 17.877 -124.842 17.254
+    angleY -15.364
+   }
+   weaponSpawn167 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 15.228 -124.842 26.898
+    angleY -15.364
+   }
+   weaponSpawn168 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 13.899 -124.842 31.723
+    angleY -15.364
+   }
+   weaponSpawn169 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 38.119 -124.842 -18.663
+    angleY -15.364
+   }
+   weaponSpawn170 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 36.794 -124.842 -13.841
+    angleY -15.364
+   }
+   weaponSpawn171 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 35.471 -124.842 -9.024
+    angleY -15.364
+   }
+   weaponSpawn172 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 34.146 -124.842 -4.199
+    angleY -15.364
+   }
+   weaponSpawn173 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 32.818 -124.842 0.623
+    angleY -15.364
+   }
+   weaponSpawn174 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 31.494 -124.842 5.442
+    angleY -15.364
+   }
+   weaponSpawn175 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 30.169 -124.842 10.263
+    angleY -15.364
+   }
+   weaponSpawn176 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 28.846 -124.842 15.081
+    angleY -15.364
+   }
+   weaponSpawn177 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 26.195 -124.842 24.726
+    angleY -15.364
+   }
+   weaponSpawn178 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 27.52 -124.842 19.904
+    angleY -15.364
+   }
+   weaponSpawn179 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 24.871 -124.842 29.547
+    angleY -15.364
+   }
+   weaponSpawn180 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 23.542 -124.842 34.373
+    angleY -15.364
+   }
+   weaponSpawn181 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 47.762 -124.842 -16.014
+    angleY -15.364
+   }
+   weaponSpawn182 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 46.437 -124.842 -11.192
+    angleY -15.364
+   }
+   weaponSpawn183 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 45.114 -124.842 -6.374
+    angleY -15.364
+   }
+   weaponSpawn184 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 43.789 -124.842 -1.55
+    angleY -15.364
+   }
+   weaponSpawn185 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 42.461 -124.842 3.273
+    angleY -15.364
+   }
+   weaponSpawn186 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 41.136 -124.842 8.091
+    angleY -15.364
+   }
+   weaponSpawn187 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 39.812 -124.842 12.913
+    angleY -15.364
+   }
+   weaponSpawn188 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 38.489 -124.842 17.73
+    angleY -15.364
+   }
+   weaponSpawn189 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 35.838 -124.842 27.376
+    angleY -15.364
+   }
+   weaponSpawn190 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 37.162 -124.842 22.554
+    angleY -15.364
+   }
+   weaponSpawn191 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 34.514 -124.842 32.196
+    angleY -15.364
+   }
+   weaponSpawn192 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 33.185 -124.842 37.023
+    angleY -15.364
+   }
+   weaponSpawn193 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 57.405 -124.842 -13.365
+    angleY -15.364
+   }
+   weaponSpawn194 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 56.08 -124.842 -8.543
+    angleY -15.364
+   }
+   weaponSpawn195 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 54.756 -124.842 -3.725
+    angleY -15.364
+   }
+   weaponSpawn196 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 53.432 -124.842 1.099
+    angleY -15.364
+   }
+   weaponSpawn197 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 52.104 -124.833 5.923
+    angleY -15.364
+   }
+   weaponSpawn198 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 50.779 -124.842 10.74
+    angleY -15.364
+   }
+   weaponSpawn199 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 49.455 -124.842 15.563
+    angleY -15.364
+   }
+   weaponSpawn200 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 48.131 -124.842 20.379
+    angleY -15.364
+   }
+   weaponSpawn201 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 45.481 -124.842 30.025
+    angleY -15.364
+   }
+   weaponSpawn202 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 46.805 -124.842 25.203
+    angleY -15.364
+   }
+   weaponSpawn203 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 44.157 -124.842 34.846
+    angleY -15.364
+   }
+   weaponSpawn204 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 42.828 -124.842 39.672
+    angleY -15.364
+   }
+   weaponSpawn205 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 67.047 -124.841 -10.715
+    angleY -15.364
+   }
+   weaponSpawn206 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 65.723 -124.842 -5.893
+    angleY -15.364
+   }
+   weaponSpawn207 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 64.399 -124.842 -1.075
+    angleY -15.364
+   }
+   weaponSpawn208 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 63.075 -124.842 3.748
+    angleY -15.364
+   }
+   weaponSpawn209 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 61.746 -124.842 8.573
+    angleY -15.364
+   }
+   weaponSpawn210 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 60.422 -124.842 13.39
+    angleY -15.364
+   }
+   weaponSpawn211 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 59.098 -124.842 18.212
+    angleY -15.364
+   }
+   weaponSpawn212 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 57.774 -124.842 23.028
+    angleY -15.364
+   }
+   weaponSpawn213 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 55.124 -124.842 32.674
+    angleY -15.364
+   }
+   weaponSpawn214 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 56.448 -124.842 27.853
+    angleY -15.364
+   }
+   weaponSpawn215 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 53.8 -124.842 37.495
+    angleY -15.364
+   }
+   weaponSpawn216 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 52.471 -124.842 42.321
+    angleY -15.364
+   }
+   weaponSpawn217 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 76.69 -124.842 -8.066
+    angleY -15.364
+   }
+   weaponSpawn218 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 75.366 -124.842 -3.244
+    angleY -15.364
+   }
+   weaponSpawn219 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 74.042 -124.842 1.575
+    angleY -15.364
+   }
+   weaponSpawn220 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 72.718 -124.842 6.398
+    angleY -15.364
+   }
+   weaponSpawn221 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 71.389 -124.842 11.223
+    angleY -15.364
+   }
+   weaponSpawn222 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 70.065 -124.842 16.039
+    angleY -15.364
+   }
+   weaponSpawn223 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 68.74 -124.842 20.861
+    angleY -15.364
+   }
+   weaponSpawn224 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 67.417 -124.842 25.677
+    angleY -15.364
+   }
+   weaponSpawn225 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 64.767 -124.842 35.324
+    angleY -15.364
+   }
+   weaponSpawn226 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 66.091 -124.842 30.503
+    angleY -15.364
+   }
+   weaponSpawn227 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 63.443 -124.842 40.144
+    angleY -15.364
+   }
+   weaponSpawn228 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 62.114 -124.842 44.97
+    angleY -15.364
+   }
+   weaponSpawn229 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 86.333 -124.842 -5.416
+    angleY -15.364
+   }
+   weaponSpawn230 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 85.009 -124.842 -0.594
+    angleY -15.364
+   }
+   weaponSpawn231 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 83.685 -124.842 4.224
+    angleY -15.364
+   }
+   weaponSpawn232 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 82.361 -124.842 9.047
+    angleY -15.364
+   }
+   weaponSpawn233 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 81.032 -124.842 13.873
+    angleY -15.364
+   }
+   weaponSpawn234 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 79.708 -124.842 18.688
+    angleY -15.364
+   }
+   weaponSpawn235 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 78.383 -124.842 23.51
+    angleY -15.364
+   }
+   weaponSpawn236 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 77.06 -124.842 28.327
+    angleY -15.364
+   }
+   weaponSpawn237 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 74.41 -124.842 37.973
+    angleY -15.364
+   }
+   weaponSpawn238 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 75.734 -124.842 33.152
+    angleY -15.364
+   }
+   weaponSpawn239 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 73.086 -124.842 42.794
+    angleY -15.364
+   }
+   weaponSpawn240 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 71.756 -124.842 47.619
+    angleY -15.364
+   }
+   weaponSpawn241 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 95.976 -124.842 -2.767
+    angleY -15.364
+   }
+   weaponSpawn242 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 94.651 -124.842 2.056
+    angleY -15.364
+   }
+   weaponSpawn243 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 93.328 -124.842 6.874
+    angleY -15.364
+   }
+   weaponSpawn244 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 92.004 -124.842 11.696
+    angleY -15.364
+   }
+   weaponSpawn245 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 90.675 -124.842 16.523
+    angleY -15.364
+   }
+   weaponSpawn246 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 89.351 -124.842 21.337
+    angleY -15.364
+   }
+   weaponSpawn247 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 88.026 -124.842 26.159
+    angleY -15.364
+   }
+   weaponSpawn248 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 86.703 -124.842 30.976
+    angleY -15.364
+   }
+   weaponSpawn249 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 84.052 -124.842 40.623
+    angleY -15.364
+   }
+   weaponSpawn250 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 85.377 -124.842 35.801
+    angleY -15.364
+   }
+   weaponSpawn251 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 82.729 -124.842 45.443
+    angleY -15.364
+   }
+   weaponSpawn252 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 81.399 -124.842 50.268
+    angleY -15.364
+   }
+   weaponSpawn253 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 105.619 -124.842 -0.117
+    angleY -15.364
+   }
+   weaponSpawn254 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 104.294 -124.842 4.705
+    angleY -15.364
+   }
+   weaponSpawn255 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 102.971 -124.842 9.524
+    angleY -15.364
+   }
+   weaponSpawn256 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 101.646 -124.842 14.346
+    angleY -15.364
+   }
+   weaponSpawn257 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 100.318 -124.842 19.172
+    angleY -15.364
+   }
+   weaponSpawn258 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 98.994 -124.842 23.986
+    angleY -15.364
+   }
+   weaponSpawn259 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 97.669 -124.842 28.808
+    angleY -15.364
+   }
+   weaponSpawn260 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 96.346 -124.842 33.626
+    angleY -15.364
+   }
+   weaponSpawn261 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 93.695 -124.842 43.273
+    angleY -15.364
+   }
+   weaponSpawn262 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 95.02 -124.842 38.45
+    angleY -15.364
+   }
+   weaponSpawn263 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 92.372 -124.842 48.093
+    angleY -15.364
+   }
+   weaponSpawn264 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 91.042 -124.842 52.918
+    angleY -15.364
+   }
+   weaponSpawn265 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.262 -124.842 2.533
+    angleY -15.364
+   }
+   weaponSpawn266 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 113.937 -124.842 7.355
+    angleY -15.364
+   }
+   weaponSpawn267 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 112.614 -124.842 12.173
+    angleY -15.364
+   }
+   weaponSpawn268 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 111.289 -124.842 16.995
+    angleY -15.364
+   }
+   weaponSpawn269 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 109.961 -124.842 21.821
+    angleY -15.364
+   }
+   weaponSpawn270 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 108.636 -124.842 26.635
+    angleY -15.364
+   }
+   weaponSpawn271 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 107.312 -124.842 31.457
+    angleY -15.364
+   }
+   weaponSpawn272 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 105.989 -124.842 36.275
+    angleY -15.364
+   }
+   weaponSpawn273 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 103.338 -124.842 45.923
+    angleY -15.364
+   }
+   weaponSpawn274 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 104.662 -124.842 41.099
+    angleY -15.364
+   }
+   weaponSpawn275 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 102.015 -124.842 50.743
+    angleY -15.364
+   }
+   weaponSpawn276 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 100.685 -124.842 55.567
+    angleY -15.364
+   }
+   weaponSpawn277 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 124.905 -124.842 5.182
+    angleY -15.364
+   }
+   weaponSpawn278 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 123.58 -124.842 10.004
+    angleY -15.364
+   }
+   weaponSpawn279 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 122.256 -124.842 14.823
+    angleY -15.364
+   }
+   weaponSpawn280 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 120.932 -124.842 19.644
+    angleY -15.364
+   }
+   weaponSpawn281 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 119.604 -124.842 24.47
+    angleY -15.364
+   }
+   weaponSpawn282 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 118.279 -124.842 29.285
+    angleY -15.364
+   }
+   weaponSpawn283 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 116.955 -124.842 34.107
+    angleY -15.364
+   }
+   weaponSpawn284 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.631 -124.842 38.925
+    angleY -15.364
+   }
+   weaponSpawn285 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 112.981 -124.842 48.573
+    angleY -15.364
+   }
+   weaponSpawn286 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 114.305 -124.842 43.748
+    angleY -15.364
+   }
+   weaponSpawn287 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 111.657 -124.842 53.393
+    angleY -15.364
+   }
+   weaponSpawn288 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 110.328 -124.842 58.216
+    angleY -15.364
+   }
+   weaponSpawn289 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 134.547 -124.842 7.831
+    angleY -15.364
+   }
+   weaponSpawn290 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 133.223 -124.842 12.653
+    angleY -15.364
+   }
+   weaponSpawn291 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 131.899 -124.842 17.473
+    angleY -15.364
+   }
+   weaponSpawn292 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 130.575 -124.842 22.294
+    angleY -15.364
+   }
+   weaponSpawn293 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 129.246 -124.842 27.119
+    angleY -15.364
+   }
+   weaponSpawn294 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 127.922 -124.842 31.934
+    angleY -15.364
+   }
+   weaponSpawn295 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 126.598 -124.842 36.756
+    angleY -15.364
+   }
+   weaponSpawn296 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 125.274 -124.842 41.575
+    angleY -15.364
+   }
+   weaponSpawn297 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 122.624 -124.842 51.223
+    angleY -15.364
+   }
+   weaponSpawn298 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 123.948 -124.842 46.398
+    angleY -15.364
+   }
+   weaponSpawn299 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 121.3 -124.842 56.043
+    angleY -15.364
+   }
+   weaponSpawn300 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 119.971 -124.842 60.866
+    angleY -15.364
+   }
+   weaponSpawn301 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 144.19 -124.842 10.48
+    angleY -15.364
+   }
+   weaponSpawn302 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 142.866 -124.842 15.303
+    angleY -15.364
+   }
+   weaponSpawn303 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 141.542 -124.842 20.123
+    angleY -15.364
+   }
+   weaponSpawn304 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 140.218 -124.842 24.943
+    angleY -15.364
+   }
+   weaponSpawn305 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 138.889 -124.842 29.768
+    angleY -15.364
+   }
+   weaponSpawn306 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 137.565 -124.842 34.584
+    angleY -15.364
+   }
+   weaponSpawn307 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 136.24 -124.842 39.406
+    angleY -15.364
+   }
+   weaponSpawn308 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 134.917 -124.842 44.224
+    angleY -15.364
+   }
+   weaponSpawn309 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 132.267 -124.842 53.873
+    angleY -15.364
+   }
+   weaponSpawn310 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 133.591 -124.842 49.047
+    angleY -15.364
+   }
+   weaponSpawn311 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 130.943 -124.842 58.692
+    angleY -15.364
+   }
+   weaponSpawn312 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 129.614 -124.842 63.515
+    angleY -15.364
+   }
+   weaponSpawn313 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -18.181 -125.904 61.005
+    angleY -15.364
+   }
+   weaponSpawn314 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -18.813 -125.904 63.306
+    angleY -15.364
+   }
+   weaponSpawn315 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -19.486 -125.904 65.757
+    angleY -15.364
+   }
+   weaponSpawn316 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -20.024 -125.904 67.716
+    angleY -15.364
+   }
+   weaponSpawn317 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -20.655 -125.904 70.012
+    angleY -15.364
+   }
+   weaponSpawn318 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -21.386 -125.904 72.673
+    angleY -15.364
+   }
+   weaponSpawn319 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -22.237 -125.904 75.77
+    angleY -15.364
+   }
+   weaponSpawn320 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.054 -125.904 78.743
+    angleY -15.364
+   }
+   weaponSpawn321 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -24.029 -125.904 82.292
+    angleY -15.364
+   }
+   weaponSpawn322 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -24.889 -125.891 85.423
+    angleY -15.364
+   }
+   weaponSpawn323 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -25.645 -125.873 88.175
+    angleY -15.364
+   }
+   weaponSpawn324 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -24.759 -125.904 75.077
+    angleY -15.364
+   }
+   weaponSpawn325 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -25.576 -125.904 78.05
+    angleY -15.364
+   }
+   weaponSpawn326 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -26.551 -125.904 81.599
+    angleY -15.364
+   }
+   weaponSpawn327 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -27.411 -125.902 84.73
+    angleY -15.364
+   }
+   weaponSpawn328 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -28.167 -125.887 87.482
+    angleY -15.364
+   }
+   weaponSpawn329 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -20.703 -125.904 60.312
+    angleY -15.364
+   }
+   weaponSpawn330 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -21.335 -125.904 62.613
+    angleY -15.364
+   }
+   weaponSpawn331 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -22.008 -125.904 65.064
+    angleY -15.364
+   }
+   weaponSpawn332 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -22.546 -125.904 67.023
+    angleY -15.364
+   }
+   weaponSpawn333 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.177 -125.904 69.319
+    angleY -15.364
+   }
+   weaponSpawn334 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.908 -125.904 71.98
+    angleY -15.364
+   }
+   weaponSpawn335 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -27.391 -125.904 74.354
+    angleY -15.364
+   }
+   weaponSpawn336 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -28.208 -125.905 77.327
+    angleY -15.364
+   }
+   weaponSpawn337 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -29.183 -125.904 80.876
+    angleY -15.364
+   }
+   weaponSpawn338 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -30.043 -125.904 84.007
+    angleY -15.364
+   }
+   weaponSpawn339 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -30.799 -125.886 86.759
+    angleY -15.364
+   }
+   weaponSpawn340 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.335 -125.904 59.589
+    angleY -15.364
+   }
+   weaponSpawn341 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -23.967 -125.904 61.89
+    angleY -15.364
+   }
+   weaponSpawn342 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -24.64 -125.904 64.341
+    angleY -15.364
+   }
+   weaponSpawn343 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -25.178 -125.904 66.3
+    angleY -15.364
+   }
+   weaponSpawn344 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -25.809 -125.904 68.596
+    angleY -15.364
+   }
+   weaponSpawn345 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -26.54 -125.904 71.257
+    angleY -15.364
+   }
+   weaponSpawn346 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 62.084 -126.979 -52.25
+    angleY -15.364
+   }
+   weaponSpawn347 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 62.945 -127.029 -55.384
+    angleY -15.364
+   }
+   weaponSpawn348 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -31.217 -127.029 -63.184
+    angleY -15.364
+   }
+   weaponSpawn349 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -30.338 -127.048 -66.384
+    angleY -15.364
+   }
+   weaponSpawn350 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 112.415 -125.521 -15.72
+    angleY -15.364
+   }
+   weaponSpawn351 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 113.3 -125.686 -18.94
+    angleY -15.364
+   }
+   weaponSpawn352 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 116.05 -125.694 -18.184
+    angleY -15.364
+   }
+   weaponSpawn353 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.165 -125.529 -14.964
+    angleY -15.364
+   }
+   weaponSpawn354 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -27.588 -127.029 -65.628
+    angleY -15.364
+   }
+   weaponSpawn355 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -28.467 -127.029 -62.427
+    angleY -15.364
+   }
+   weaponSpawn356 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 65.695 -127.017 -54.628
+    angleY -15.364
+   }
+   weaponSpawn357 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 64.834 -126.967 -51.494
+    angleY -15.364
+   }
+   weaponSpawn358 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 77.576 -125.427 85.278
+    angleY -15.364
+   }
+   weaponSpawn359 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 76.691 -125.515 88.498
+    angleY -15.364
+   }
+   weaponSpawn360 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -65.098 -127.039 44.49
+    angleY -15.364
+   }
+   weaponSpawn361 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -65.978 -127.029 47.691
+    angleY -15.364
+   }
+   weaponSpawn362 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 69.146 -127.029 -53.68
+    angleY -15.364
+   }
+   weaponSpawn363 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 68.285 -126.974 -50.546
+    angleY -15.364
+   }
+   weaponSpawn364 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 81.397 -125.432 86.328
+    angleY -15.364
+   }
+   weaponSpawn365 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 80.512 -125.518 89.548
+    angleY -15.364
+   }
+   weaponSpawn366 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -61.277 -127.061 45.54
+    angleY -15.364
+   }
+   weaponSpawn367 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -62.157 -127.031 48.741
+    angleY -15.364
+   }
+   weaponSpawn368 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 72.967 -127.017 -52.63
+    angleY -15.364
+   }
+   weaponSpawn369 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 72.106 -127.003 -49.496
+    angleY -15.364
+   }
+   weaponSpawn370 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 107.961 -126.748 -39.901
+    angleY -15.364
+   }
+   weaponSpawn371 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 118.844 -126.748 -40.281
+    angleY -15.364
+   }
+   weaponSpawn372 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 117.983 -126.748 -37.147
+    angleY -15.364
+   }
+   weaponSpawn373 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 119.647 -126.72 -43.205
+    angleY -15.364
+   }
+   weaponSpawn374 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 120.527 -126.648 -46.406
+    angleY -15.364
+   }
+   weaponSpawn375 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 122.348 -126.631 -53.032
+    angleY -15.364
+   }
+   weaponSpawn376 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 114.162 -126.748 -38.196
+    angleY -15.364
+   }
+   weaponSpawn377 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.023 -126.748 -41.331
+    angleY -15.364
+   }
+   weaponSpawn378 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.826 -126.748 -44.256
+    angleY -15.364
+   }
+   weaponSpawn379 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 116.706 -126.703 -47.456
+    angleY -15.364
+   }
+   weaponSpawn380 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 117.642 -126.689 -50.862
+    angleY -15.364
+   }
+   weaponSpawn381 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 121.463 -126.629 -49.812
+    angleY -15.364
+   }
+   weaponSpawn382 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 112.326 -126.803 -55.786
+    angleY -15.364
+   }
+   weaponSpawn383 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 115.076 -126.76 -55.03
+    angleY -15.364
+   }
+   weaponSpawn384 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 114.191 -126.774 -51.81
+    angleY -15.364
+   }
+   weaponSpawn385 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 118.527 -126.705 -54.082
+    angleY -15.364
+   }
+   weaponSpawn386 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 111.441 -126.817 -52.566
+    angleY -15.364
+   }
+   weaponSpawn387 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 110.711 -126.748 -39.145
+    angleY -15.364
+   }
+   weaponSpawn388 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 110.505 -126.796 -49.16
+    angleY -15.364
+   }
+   weaponSpawn389 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 111.572 -126.748 -42.279
+    angleY -15.364
+   }
+   weaponSpawn390 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 109.626 -126.757 -45.96
+    angleY -15.364
+   }
+   weaponSpawn391 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 112.376 -126.748 -45.204
+    angleY -15.364
+   }
+   weaponSpawn392 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 108.822 -126.748 -43.035
+    angleY -15.364
+   }
+   weaponSpawn393 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 113.255 -126.757 -48.404
+    angleY -15.364
+   }
+   weaponSpawn394 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 147.962 -124.842 85.54
+    angleY -15.364
+   }
+   weaponSpawn395 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 197.309 -124.922 105.276
+    angleY -15.364
+   }
+   weaponSpawn396 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 190.133 -125.051 103.606
+    angleY -15.364
+   }
+   weaponSpawn397 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 207.331 -124.842 108.031
+    angleY -15.364
+   }
+   weaponSpawn398 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 171.505 -124.997 98.529
+    angleY -15.364
+   }
+   weaponSpawn399 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 155.234 -124.842 87.538
+    angleY -15.364
+   }
+   weaponSpawn400 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 223.964 -124.871 112.425
+    angleY -15.364
+   }
+   weaponSpawn401 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 203.51 -124.858 106.981
+    angleY -15.364
+   }
+   weaponSpawn402 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 186.312 -125.053 102.556
+    angleY -15.364
+   }
+   weaponSpawn403 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 167.684 -124.981 97.478
+    angleY -15.364
+   }
+   weaponSpawn404 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 151.413 -124.842 86.488
+    angleY -15.364
+   }
+   weaponSpawn405 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 244.265 -125.271 118.543
+    angleY -15.364
+   }
+   weaponSpawn406 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 248.086 -125.26 119.593
+    angleY -15.364
+   }
+   weaponSpawn407 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 213.942 -124.842 109.671
+    angleY -15.364
+   }
+   weaponSpawn408 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 216.692 -124.842 110.427
+    angleY -15.364
+   }
+   weaponSpawn409 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 240.814 -125.312 117.595
+    angleY -15.364
+   }
+   weaponSpawn410 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 220.143 -124.867 111.375
+    angleY -15.364
+   }
+   weaponSpawn411 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 238.064 -125.323 116.839
+    angleY -15.364
+   }
+   weaponSpawn412 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 200.059 -124.887 106.032
+    angleY -15.364
+   }
+   weaponSpawn413 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 145.212 -124.842 84.784
+    angleY -15.364
+   }
+   weaponSpawn414 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 182.861 -125.062 101.608
+    angleY -15.364
+   }
+   weaponSpawn415 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 161.484 -124.923 95.774
+    angleY -15.364
+   }
+   weaponSpawn416 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 164.234 -124.935 96.53
+    angleY -15.364
+   }
+   weaponSpawn417 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 180.111 -125.069 100.852
+    angleY -15.364
+   }
+   weaponSpawn418 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 210.886 -124.811 6.431
+    angleY -15.364
+   }
+   weaponSpawn419 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 263.548 -124.455 23.584
+    angleY -15.364
+   }
+   weaponSpawn420 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 186.156 -124.277 -1.467
+    angleY -15.364
+   }
+   weaponSpawn421 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 273.57 -124.491 26.338
+    angleY -15.364
+   }
+   weaponSpawn422 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 201.951 -124.642 2.916
+    angleY -15.364
+   }
+   weaponSpawn423 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 218.158 -124.85 8.429
+    angleY -15.364
+   }
+   weaponSpawn424 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 255.44 -124.51 20.196
+    angleY -15.364
+   }
+   weaponSpawn425 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 269.749 -124.458 25.289
+    angleY -15.364
+   }
+   weaponSpawn426 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 182.335 -124.289 -2.517
+    angleY -15.364
+   }
+   weaponSpawn427 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 198.13 -124.557 1.865
+    angleY -15.364
+   }
+   weaponSpawn428 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 214.337 -124.842 7.379
+    angleY -15.364
+   }
+   weaponSpawn429 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 232.262 -124.93 12.882
+    angleY -15.364
+   }
+   weaponSpawn430 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 236.083 -124.945 13.932
+    angleY -15.364
+   }
+   weaponSpawn431 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 245.418 -124.914 17.442
+    angleY -15.364
+   }
+   weaponSpawn432 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 248.168 -124.868 18.198
+    angleY -15.364
+   }
+   weaponSpawn433 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 228.811 -124.899 11.934
+    angleY -15.364
+   }
+   weaponSpawn434 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 251.619 -124.664 19.146
+    angleY -15.364
+   }
+   weaponSpawn435 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 226.061 -124.877 11.178
+    angleY -15.364
+   }
+   weaponSpawn436 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 266.298 -124.451 24.34
+    angleY -15.364
+   }
+   weaponSpawn437 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 208.136 -124.786 5.675
+    angleY -15.364
+   }
+   weaponSpawn438 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 178.884 -124.385 -3.465
+    angleY -15.364
+   }
+   weaponSpawn439 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 191.93 -124.391 0.161
+    angleY -15.364
+   }
+   weaponSpawn440 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 194.68 -124.455 0.917
+    angleY -15.364
+   }
+   weaponSpawn441 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 176.134 -124.471 -4.221
+    angleY -15.364
+   }
+   weaponSpawn442 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -162.25 -124.813 17.643
+    angleY -15.364
+   }
+   weaponSpawn443 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -140.075 -125.186 23.95
+    angleY -15.364
+   }
+   weaponSpawn444 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -204.758 -123.967 5.598
+    angleY -15.364
+   }
+   weaponSpawn445 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -130.053 -125.19 26.705
+    angleY -15.364
+   }
+   weaponSpawn446 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -241.41 -123.878 -8.993
+    angleY -15.364
+   }
+   weaponSpawn447 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -154.978 -124.943 19.642
+    angleY -15.364
+   }
+   weaponSpawn448 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -181.328 -124.376 11.241
+    angleY -15.364
+   }
+   weaponSpawn449 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -133.874 -125.191 25.655
+    angleY -15.364
+   }
+   weaponSpawn450 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -208.579 -123.935 4.547
+    angleY -15.364
+   }
+   weaponSpawn451 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -245.231 -123.861 -10.044
+    angleY -15.364
+   }
+   weaponSpawn452 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -158.799 -124.873 18.59
+    angleY -15.364
+   }
+   weaponSpawn453 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -223.942 -123.873 -0.81
+    angleY -15.364
+   }
+   weaponSpawn454 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -220.121 -123.9 0.241
+    angleY -15.364
+   }
+   weaponSpawn455 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -191.35 -124.135 8.487
+    angleY -15.364
+   }
+   weaponSpawn456 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -188.6 -124.2 9.242
+    angleY -15.364
+   }
+   weaponSpawn457 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -227.393 -123.873 -1.758
+    angleY -15.364
+   }
+   weaponSpawn458 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -185.149 -124.283 10.19
+    angleY -15.364
+   }
+   weaponSpawn459 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -230.143 -123.842 -2.513
+    angleY -15.364
+   }
+   weaponSpawn460 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -137.325 -125.178 24.707
+    angleY -15.364
+   }
+   weaponSpawn461 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -165.001 -124.758 16.886
+    angleY -15.364
+   }
+   weaponSpawn462 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -212.03 -123.921 3.599
+    angleY -15.364
+   }
+   weaponSpawn463 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -251.431 -123.833 -11.749
+    angleY -15.364
+   }
+   weaponSpawn464 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -248.681 -123.859 -10.992
+    angleY -15.364
+   }
+   weaponSpawn465 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -214.78 -123.908 2.844
+    angleY -15.364
+   }
+   weaponSpawn466 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -215.089 -125.718 -117.455
+    angleY -15.364
+   }
+   weaponSpawn467 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -132.413 -124.142 -96.437
+    angleY -15.364
+   }
+   weaponSpawn468 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -153.452 -124.914 -100.599
+    angleY -15.364
+   }
+   weaponSpawn469 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -122.391 -124.061 -93.683
+    angleY -15.364
+   }
+   weaponSpawn470 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -183.561 -125.56 -109.484
+    angleY -15.364
+   }
+   weaponSpawn471 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -207.817 -125.686 -115.457
+    angleY -15.364
+   }
+   weaponSpawn472 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -103.395 -126.082 -91.634
+    angleY -15.364
+   }
+   weaponSpawn473 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -126.212 -124.071 -94.732
+    angleY -15.364
+   }
+   weaponSpawn474 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -157.273 -125.06 -101.649
+    angleY -15.364
+   }
+   weaponSpawn475 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -187.382 -125.579 -110.535
+    angleY -15.364
+   }
+   weaponSpawn476 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -211.638 -125.702 -116.507
+    angleY -15.364
+   }
+   weaponSpawn477 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -232.699 -125.811 -123.463
+    angleY -15.364
+   }
+   weaponSpawn478 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -228.878 -125.795 -122.413
+    angleY -15.364
+   }
+   weaponSpawn479 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -113.417 -124.4 -94.388
+    angleY -15.364
+   }
+   weaponSpawn480 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -110.667 -125.232 -93.632
+    angleY -15.364
+   }
+   weaponSpawn481 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -236.15 -125.826 -124.411
+    angleY -15.364
+   }
+   weaponSpawn482 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -107.216 -126.015 -92.684
+    angleY -15.364
+   }
+   weaponSpawn483 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -238.9 -125.869 -125.167
+    angleY -15.364
+   }
+   weaponSpawn484 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -129.663 -124.08 -95.681
+    angleY -15.364
+   }
+   weaponSpawn485 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -217.84 -125.729 -118.211
+    angleY -15.364
+   }
+   weaponSpawn486 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -160.724 -125.184 -102.597
+    angleY -15.364
+   }
+   weaponSpawn487 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -193.582 -125.623 -112.24
+    angleY -15.364
+   }
+   weaponSpawn488 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -190.832 -125.602 -111.483
+    angleY -15.364
+   }
+   weaponSpawn489 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -163.474 -125.258 -103.353
+    angleY -15.364
+   }
+   weaponSpawn490 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -142.547 -124.842 -59.684
+    angleY -15.364
+   }
+   weaponSpawn491 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -183.191 -124.842 -73.125
+    angleY -15.364
+   }
+   weaponSpawn492 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -164.503 -124.842 -23.805
+    angleY -15.364
+   }
+   weaponSpawn493 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -170.704 -124.842 -25.509
+    angleY -15.364
+   }
+   weaponSpawn494 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -189.759 -124.842 -30.787
+    angleY -15.364
+   }
+   weaponSpawn495 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -149.741 -124.842 -19.495
+    angleY -15.364
+   }
+   weaponSpawn496 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -159.347 -124.842 -65.184
+    angleY -15.364
+   }
+   weaponSpawn497 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -167.954 -124.842 -24.753
+    angleY -15.364
+   }
+   weaponSpawn498 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -187.009 -124.842 -30.031
+    angleY -15.364
+   }
+   weaponSpawn499 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -179.737 -124.842 -28.032
+    angleY -15.364
+   }
+   weaponSpawn500 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -155.896 -124.842 -64.236
+    angleY -15.364
+   }
+   weaponSpawn501 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -180.441 -124.842 -72.369
+    angleY -15.364
+   }
+   weaponSpawn502 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -160.682 -124.842 -22.754
+    angleY -15.364
+   }
+   weaponSpawn503 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -152.075 -124.842 -63.185
+    angleY -15.364
+   }
+   weaponSpawn504 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -132.525 -124.842 -56.93
+    angleY -15.364
+   }
+   weaponSpawn505 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -146.991 -124.842 -18.739
+    angleY -15.364
+   }
+   weaponSpawn506 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -173.17 -124.842 -70.37
+    angleY -15.364
+   }
+   weaponSpawn507 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -139.797 -124.842 -58.928
+    angleY -15.364
+   }
+   weaponSpawn508 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -143.54 -124.842 -17.791
+    angleY -15.364
+   }
+   weaponSpawn509 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -162.097 -124.842 -65.94
+    angleY -15.364
+   }
+   weaponSpawn510 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -139.719 -124.842 -16.741
+    angleY -15.364
+   }
+   weaponSpawn511 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -136.346 -124.842 -57.979
+    angleY -15.364
+   }
+   weaponSpawn512 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -176.991 -124.842 -71.421
+    angleY -15.364
+   }
+   weaponSpawn513 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -183.558 -124.842 -29.083
+    angleY -15.364
+   }
+   weaponSpawn514 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -145.402 -124.842 -29.464
+    angleY -15.364
+   }
+   weaponSpawn515 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -187.259 -124.842 -39.834
+    angleY -15.364
+   }
+   weaponSpawn516 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -160.406 -124.842 -56.137
+    angleY -15.364
+   }
+   weaponSpawn517 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -166.607 -124.842 -57.843
+    angleY -15.364
+   }
+   weaponSpawn518 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -188.452 -124.842 -65.504
+    angleY -15.364
+   }
+   weaponSpawn519 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -148.9 -124.842 -50.831
+    angleY -15.364
+   }
+   weaponSpawn520 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -161.381 -124.842 -33.119
+    angleY -15.364
+   }
+   weaponSpawn521 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -163.857 -124.842 -57.086
+    angleY -15.364
+   }
+   weaponSpawn522 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -185.702 -124.842 -64.748
+    angleY -15.364
+   }
+   weaponSpawn523 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -178.43 -124.842 -62.75
+    angleY -15.364
+   }
+   weaponSpawn524 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -157.93 -124.842 -32.171
+    angleY -15.364
+   }
+   weaponSpawn525 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -184.51 -124.842 -39.078
+    angleY -15.364
+   }
+   weaponSpawn526 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -156.585 -124.842 -55.088
+    angleY -15.364
+   }
+   weaponSpawn527 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -154.109 -124.842 -31.121
+    angleY -15.364
+   }
+   weaponSpawn528 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -135.38 -124.842 -26.711
+    angleY -15.364
+   }
+   weaponSpawn529 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -146.15 -124.842 -50.076
+    angleY -15.364
+   }
+   weaponSpawn530 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -177.238 -124.842 -37.079
+    angleY -15.364
+   }
+   weaponSpawn531 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -142.652 -124.842 -28.709
+    angleY -15.364
+   }
+   weaponSpawn532 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -142.699 -124.842 -49.127
+    angleY -15.364
+   }
+   weaponSpawn533 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -164.131 -124.842 -33.876
+    angleY -15.364
+   }
+   weaponSpawn534 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -138.878 -124.842 -48.078
+    angleY -15.364
+   }
+   weaponSpawn535 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -139.201 -124.842 -27.76
+    angleY -15.364
+   }
+   weaponSpawn536 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -181.059 -124.842 -38.13
+    angleY -15.364
+   }
+   weaponSpawn537 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords -182.251 -124.842 -63.8
+    angleY -15.364
+   }
+   weaponSpawn538 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 194.262 -124.842 64.394
+    angleY -15.364
+   }
+   weaponSpawn539 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 173.913 -124.842 59.938
+    angleY -15.364
+   }
+   weaponSpawn540 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 181.237 -124.834 30.993
+    angleY -15.364
+   }
+   weaponSpawn541 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 183.935 -124.842 62.69
+    angleY -15.364
+   }
+   weaponSpawn542 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 205.059 -124.832 39.031
+    angleY -15.364
+   }
+   weaponSpawn543 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 201.534 -124.842 66.392
+    angleY -15.364
+   }
+   weaponSpawn544 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 218.532 -124.842 71.295
+    angleY -15.364
+   }
+   weaponSpawn545 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 180.114 -124.842 61.641
+    angleY -15.364
+   }
+   weaponSpawn546 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 177.416 -124.833 29.943
+    angleY -15.364
+   }
+   weaponSpawn547 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 201.238 -124.842 37.982
+    angleY -15.364
+   }
+   weaponSpawn548 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 197.713 -124.842 65.342
+    angleY -15.364
+   }
+   weaponSpawn549 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 218.51 -124.842 44.113
+    angleY -15.364
+   }
+   weaponSpawn550 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 222.331 -124.842 45.163
+    angleY -15.364
+   }
+   weaponSpawn551 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 208.51 -124.842 68.542
+    angleY -15.364
+   }
+   weaponSpawn552 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 211.26 -124.842 69.297
+    angleY -15.364
+   }
+   weaponSpawn553 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 215.059 -124.842 43.165
+    angleY -15.364
+   }
+   weaponSpawn554 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 214.711 -124.842 70.245
+    angleY -15.364
+   }
+   weaponSpawn555 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 212.309 -124.842 42.41
+    angleY -15.364
+   }
+   weaponSpawn556 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 176.663 -124.842 60.692
+    angleY -15.364
+   }
+   weaponSpawn557 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 191.512 -124.833 63.639
+    angleY -15.364
+   }
+   weaponSpawn558 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 173.965 -124.834 28.995
+    angleY -15.364
+   }
+   weaponSpawn559 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 195.038 -124.833 36.277
+    angleY -15.364
+   }
+   weaponSpawn560 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 197.788 -124.842 37.034
+    angleY -15.364
+   }
+   weaponSpawn561 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 171.215 -124.834 28.24
+    angleY -15.364
+   }
+   weaponSpawn562 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 210.132 -124.842 78.603
+    angleY -15.364
+   }
+   weaponSpawn563 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 213.815 -124.842 32.362
+    angleY -15.364
+   }
+   weaponSpawn564 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 201.333 -124.842 29.474
+    angleY -15.364
+   }
+   weaponSpawn565 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 223.837 -124.842 35.116
+    angleY -15.364
+   }
+   weaponSpawn566 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 181.541 -124.842 22.672
+    angleY -15.364
+   }
+   weaponSpawn567 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 217.404 -124.842 80.601
+    angleY -15.364
+   }
+   weaponSpawn568 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 178.555 -124.842 70.46
+    angleY -15.364
+   }
+   weaponSpawn569 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 220.016 -124.842 34.067
+    angleY -15.364
+   }
+   weaponSpawn570 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 197.512 -124.842 28.424
+    angleY -15.364
+   }
+   weaponSpawn571 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 177.72 -124.842 21.621
+    angleY -15.364
+   }
+   weaponSpawn572 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 213.583 -124.842 79.551
+    angleY -15.364
+   }
+   weaponSpawn573 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 195.151 -124.842 75.167
+    angleY -15.364
+   }
+   weaponSpawn574 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 198.972 -124.842 76.217
+    angleY -15.364
+   }
+   weaponSpawn575 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 168.533 -124.842 67.706
+    angleY -15.364
+   }
+   weaponSpawn576 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 171.283 -124.842 68.462
+    angleY -15.364
+   }
+   weaponSpawn577 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 191.7 -124.842 74.219
+    angleY -15.364
+   }
+   weaponSpawn578 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 174.734 -124.842 69.41
+    angleY -15.364
+   }
+   weaponSpawn579 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 188.95 -124.842 73.463
+    angleY -15.364
+   }
+   weaponSpawn580 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 216.565 -124.842 33.118
+    angleY -15.364
+   }
+   weaponSpawn581 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 207.382 -124.842 77.847
+    angleY -15.364
+   }
+   weaponSpawn582 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 194.061 -124.842 27.476
+    angleY -15.364
+   }
+   weaponSpawn583 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 171.52 -124.842 19.917
+    angleY -15.364
+   }
+   weaponSpawn584 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 174.27 -124.842 20.673
+    angleY -15.364
+   }
+   weaponSpawn585 {
+    components {
+     Hierarchy "{62D3177DE53166C5}" {
+     }
+    }
+    coords 191.311 -124.842 26.72
+    angleY -15.364
+   }
+  }
+ }
+}
