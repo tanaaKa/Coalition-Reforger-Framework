@@ -1,0 +1,26 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 5047.607 124.101 7834.171
+}
+PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby/CRF_GameMode_Lobby-12.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
+   m_iStartingHours 19
+   m_iStartingMinutes 43
+  }
+ }
+ coords 4965.862 162.58 7295.584
+ angleX -1.788
+ angleY -0.056
+ angleZ 1.791
+ {
+  SCR_FactionManager {
+   ID "61BCFEC02D38B83E"
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+    }
+   }
+  }
+ }
+}
