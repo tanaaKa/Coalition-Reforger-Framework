@@ -1,0 +1,23 @@
+Vehicle : "{6CA46BC65DE861A8}Prefabs/Vehicles/Helicopters/AH6M/AH6M_Armed_base.et" {
+ ID "57DA6675519A417B"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{62D731EDC428159E}" {
+     SourceMaterial "Body_1"
+     AssignedMaterial "{D05FCF9E8C5A9A47}Assets/Vehicles/Helicopters/AH6M/Data/AH6BLUE.emat"
+    }
+    MaterialAssignClass "{62D731EDC428158D}" {
+     SourceMaterial "Body_2"
+     AssignedMaterial "{D05FCF9E8C5A9A47}Assets/Vehicles/Helicopters/AH6M/Data/AH6BLUE.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
+    Name "#AH6M-Vehicle_AH6M_RKT_Name"
+    m_Image "{0B633978E14CC2ED}UI/Textures/EditorPreviews/Vehicles/Helicopters/AH6M/AH6M_RKT.edds"
+   }
+  }
+ }
+}
