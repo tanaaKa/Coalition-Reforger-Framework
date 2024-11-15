@@ -11,9 +11,6 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     m_rGearScript "{1D536B85D27B03A8}Configs/Gearscripts/Custom/Harry/Special/CRF_GS_USSR80s_Empty.conf"
    }
   }
-  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
-   m_bSafestartInstantlyEnabled 0
-  }
  }
  coords 1402.837 184.751 2755.397
 }
