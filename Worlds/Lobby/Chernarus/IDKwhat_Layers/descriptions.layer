@@ -1,0 +1,76 @@
+PS_MissionDescription notes : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ coords 3501.165 259.679 14428.29
+ m_sTitle "Notes"
+ m_sTextData "1:1 ratio OPFOR:INDFOR, slight bias towards OPFOR"\
+ ""\
+ "70 minute mission time limit"\
+ ""\
+ "Caches are located within 100m of their rough marker."
+ m_bEmptyFactionVisibility 1
+ m_bShowForAnyFaction 1
+ m_iOrder 4
+}
+$grp PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
+ {
+  coords 4697.517 339.125 9853.812
+ }
+ CIVbrief {
+  coords 4696.551 339.124 9856.96
+  m_sTitle "INDFOR Briefing"
+  m_sTextData "Our rebellion has been smooth sailing, at least comparatively to down south. But the government dogs won't die on their knees, and have enlisted the help of their Russian friends. The Russians have sent in a Spetsnaz team, likely thinking we are target practice. Let's prove them wrong."\
+  ""\
+  "We have defensive positions scattered around the city. Some of them are marked on our maps. Take up defensive positions around our weapons caches and whatever you do, do not let them win."
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bEmptyFactionVisibility 0
+  m_bShowForAnyFaction 0
+  m_iOrder 5
+ }
+ SPETZBrief {
+  coords 4690.916 339.124 9868.456
+  m_sTitle "OPFOR Briefing"
+  m_sTextData "Rebellious civilians have begun uprisings all over Chernarus, but unfortunately for us the recent peace deal requires us to support the government. We won't turn down some easy pickings though, as these rebels aren't ready for what is about to hit them. "\
+  ""\
+  "There are two weapon caches in the town, and we must destroy both of them to stop this uprising. To some concern, there are minefields on the north side of town, but we have EOD Specialists with us to deal with them."\
+  "We are also aware of possible IED threats inside of the town, but we must deal with that as we go."\
+  " Let us crush these weaklings."
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bEmptyFactionVisibility 0
+  m_bShowForAnyFaction 0
+  m_iOrder 7
+ }
+ Assets {
+  coords 4687.423 339.125 9875.578
+  m_sTitle "Assets"
+  m_sTextData "Assets:"\
+  "INDFOR:"\
+  "None"\
+  ""\
+  "OPFOR:"\
+  "2x TIGR (Armed)"\
+  "1x BTR-70"\
+  "2x KamAZ Transport"\
+  "1x UAZ-452 Ambulance"
+  m_iOrder 3
+ }
+ Situation {
+  coords 4685.376 339.125 9881.442
+  m_sTitle "Situation"
+  m_sTextData "Chernarussian rebellions are sparking up across the country, and Novaya Petrovka has fallen. With government forces tied up in the south, the Chernarussian government has enlisted the help of the Russian Federation, who dispatched a Spetsnaz platoon to clear out the city. However, the rebels vow to not make it easy for them."
+  m_iOrder 1
+ }
+ Objectives {
+  coords 4680.063 339.126 9888.268
+  m_sTitle "Objectives"
+  m_sTextData "INDFOR"\
+  "-Defend *both* cache A and cache B"\
+  ""\
+  "OPFOR"\
+  "-Destroy *both* cache A and cache B"\
+  " "
+  m_iOrder 2
+ }
+}

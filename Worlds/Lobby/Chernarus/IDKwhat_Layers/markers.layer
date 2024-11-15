@@ -1,0 +1,1788 @@
+$grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+ MineMarkers {
+  coords 3204.91 204.54 13220.489
+  angleY 0
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "mine-field-2"
+  m_fWorldSize 50
+  m_sDescription "MINES"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    {
+     coords 22.264 0.06 13.181
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 40.195 0.288 26.356
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 63.37 0.354 39.012
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 91.551 0.778 59.167
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 103.348 0.991 68.272
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 95.943 1.897 88.447
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 91.488 2.522 102.969
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 72.386 2.681 95.208
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 52.881 2.713 86.317
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 28.758 2.487 73.354
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 16.354 2.312 66.109
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -5.01 2.163 54.466
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -21.052 2.089 41.506
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -30.613 2.124 36.039
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -30.822 1.477 18.133
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -19.292 0.517 -0.065
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 779.708 1.097 90.205
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 757.162 -10.95 82.663
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 737.426 -10.511 71.167
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 680.666 -8.618 55.214
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 636.395 -7.68 28.673
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 599.055 -5.586 18.913
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 566.229 -4.734 10.318
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 531.89 -4.239 4.081
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 504.395 -2.284 6.279
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 463.955 -0.339 13.078
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 417.062 1.161 22.643
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 376.658 2.073 25.209
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 344.265 3.352 43.893
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 329.81 3.723 54.239
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 307.938 15.977 72.642
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 273.854 1.642 97.318
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 276.298 5.991 136.513
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 293.157 8.661 156.151
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 318.766 8.893 176.925
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 359.358 8.523 192.614
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 395.108 8.553 208.173
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 437.627 8.81 226.999
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 465.658 9.081 246.577
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 497.005 7.741 256.471
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 533.341 5.407 262.75
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 592.748 3.603 252.671
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 639.578 2.653 238.449
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 704.494 -1.44 218.317
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 753.058 -5.461 192.429
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 774.878 -9.53 139.442
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 381.987 5.445 88.496
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 422.307 7.416 148.923
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 486.936 5.784 183.757
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 521.16 1.807 108.24
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 556.237 -0.928 78.075
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 606.228 -1.252 123.871
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 667.547 0.901 213.385
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 690.892 -4.376 140.731
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords 547.3 -0.05 83.702
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -55.037 -1.279 -242.909
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -32.293 -1.477 -228.923
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -11.382 -1.477 -217.585
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -20.852 -1.478 -187.499
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -32.047 -1.478 -163.288
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -43.915 -1.429 -130.227
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -68.589 -1.479 -136.122
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -94.253 -1.475 -148.179
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -68.923 -1.475 -205.675
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    {
+     coords -45.927 -1.477 -181.025
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "mine-field-2"
+     m_fWorldSize 50
+     m_sDescription "MINES"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+   }
+  }
+ }
+ AOborderMarkers {
+  coords 3440.515 201.423 12750.141
+  angleY 0
+  m_MarkerColor 0 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 100
+  m_sDescription "AO Border"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    AOborderMarkers2 {
+     coords 53.073 -0.68 5.979
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers3 {
+     coords 71.849 0.915 -28.506
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers4 {
+     coords 90.641 7.021 -94.067
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers5 {
+     coords 98.275 14.397 -123.799
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers6 {
+     coords 107.568 18.544 -173.212
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers7 {
+     coords 209.155 18.671 -175.769
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers8 {
+     coords 278.842 18.758 -170.709
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers9 {
+     coords 346.676 18.334 -147.193
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers10 {
+     coords 381.078 10.575 -106.273
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers11 {
+     coords 404.766 2.628 -33.922
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers12 {
+     coords 416.236 -3.51 31.188
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers13 {
+     coords 499.078 -7.08 71.422
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers14 {
+     coords 553.452 -8.688 116.951
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers15 {
+     coords 619.256 -15.063 210.189
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers16 {
+     coords 646.695 -17.883 273.122
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers17 {
+     coords 684.033 -18.443 394.294
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers18 {
+     coords 704.508 -17.205 480.017
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+     {
+      PS_ManualMarker AOborderMarkers19 : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+       coords -41.797 4.83 108.445
+       angleY 0
+       m_MarkerColor 0 0 0 1
+       m_sQuadName "dot"
+       m_fWorldSize 100
+       m_sDescription "AO Border"
+       m_bVisibleForEmptyFaction 1
+       m_bShowForAnyFaction 1
+      }
+     }
+    }
+    AOborderMarkers20 {
+     coords 588.451 -6.93 699.572
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers21 {
+     coords 557.612 0.372 840.548
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers22 {
+     coords 583.537 2.743 954.595
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers23 {
+     coords 595.124 4.156 1063.485
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers24 {
+     coords 577.125 7.706 1147.185
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers25 {
+     coords 516.547 12.123 1224.955
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers26 {
+     coords 501.291 18.749 1328.792
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers27 {
+     coords 489.57 31.542 1489.331
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers28 {
+     coords 521.76 63.155 1617.883
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers29 {
+     coords 548.28 110.83 1859.791
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers30 {
+     coords 667.359 142.765 1941.53
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers31 {
+     coords 652.314 179.828 2103.922
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers32 {
+     coords 596.676 187.626 2242.261
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers33 {
+     coords 566.227 206.504 2377.212
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers34 {
+     coords 541.456 240.37 2593.32
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers35 {
+     coords -62.531 -0.121 7.421
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers36 {
+     coords -120.155 -2.194 -1.275
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers37 {
+     coords -176.898 0.443 -45.416
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers38 {
+     coords -267.327 3.661 -119.887
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers39 {
+     coords -337.734 5.641 -158.304
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers40 {
+     coords -402.227 6.98 -176.445
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers41 {
+     coords -450.909 9.403 -236.371
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers42 {
+     coords -506.561 19.196 -305.869
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers43 {
+     coords -543.648 11.928 -277.648
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers44 {
+     coords -581.639 13.971 -201.523
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers45 {
+     coords -612.251 14.245 -119.523
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers46 {
+     coords -663.467 17.611 -64.095
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers47 {
+     coords -708.098 21.271 13.986
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers48 {
+     coords -753.001 25.321 109.161
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers49 {
+     coords -829.077 32.104 242.625
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers50 {
+     coords -880.578 37.487 395.825
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers51 {
+     coords -929.247 56.212 590.925
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers52 {
+     coords -1031.638 83.097 749.486
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers53 {
+     coords -1026.263 127.869 922.125
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers54 {
+     coords -1036.794 151.65 1100.513
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers55 {
+     coords -1045.508 166.213 1211.032
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers56 {
+     coords -1065.96 194.027 1353.512
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers57 {
+     coords -1081.408 180.648 1437.766
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers58 {
+     coords -1078.513 182.168 1574.959
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers59 {
+     coords -1080.474 189.168 1669.671
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers60 {
+     coords -1030.366 217.112 1766.402
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers61 {
+     coords -983.369 242.788 1894.12
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers62 {
+     coords -933.077 241.232 2030.452
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers63 {
+     coords -861.905 239.847 2254.626
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+    AOborderMarkers64 {
+     coords -768.331 210.246 2529.198
+     angleY 0
+     m_MarkerColor 0 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "AO Border"
+     m_bVisibleForEmptyFaction 1
+     m_bShowForAnyFaction 1
+    }
+   }
+  }
+ }
+ OPFORssBorder {
+  coords 3416.44 289 14808.054
+  angleY 0
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "dot"
+  m_fWorldSize 100
+  m_sDescription "OPFOR SS Border"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    OPFORssBorder2 {
+     coords 8.186 0.863 22.825
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder3 {
+     coords 10.209 2.543 47.629
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder4 {
+     coords -5.221 9.888 75.822
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder5 {
+     coords -18.766 27.963 99.245
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder6 {
+     coords -50.379 34.118 148.204
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder7 {
+     coords -88.487 32.333 189.147
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder8 {
+     coords -139.698 17.521 206.457
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder9 {
+     coords -133.485 34.104 147.379
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder10 {
+     coords -110.665 23.83 84.463
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder11 {
+     coords -82.46 15.384 43.948
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+    OPFORssBorder12 {
+     coords -33.853 3.289 -2.762
+     angleY 0
+     m_MarkerColor 0.502 0 0 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "OPFOR SS Border"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+   }
+  }
+ }
+ INDFORssBorder10 {
+  coords 3361.388 204.784 13291.849
+  angleY 0
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "dot"
+  m_fWorldSize 100
+  m_sDescription "INDFOR SS Border"
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    INDFORssBorder13 {
+     coords -56.611 0.185 -17.318
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder2 {
+     coords -113.763 -0.773 -60.624
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder3 {
+     coords -183.818 0.176 -139.779
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder4 {
+     coords -224.757 13.88 -194.007
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder5 {
+     coords -191.842 -1.649 -308.483
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder6 {
+     coords -166.148 -1.408 -366.956
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder7 {
+     coords -142.919 -2.724 -481.84
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder8 {
+     coords -123.172 -3.318 -554.642
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder9 {
+     coords -110.633 -3.55 -628.895
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder11 {
+     coords 71.519 -2.734 13.638
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder12 {
+     coords 163.293 3.144 -25.062
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder14 {
+     coords 284.791 -0.444 -70.926
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder15 {
+     coords 385.044 -13.143 -139.545
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder16 {
+     coords 505.239 -18.622 -181.637
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder17 {
+     coords 544.935 -17.687 -250.127
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder18 {
+     coords 534.631 -15.174 -319.418
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder19 {
+     coords 512.769 -11.465 -424.05
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    INDFORssBorder20 {
+     coords 534.998 -5.584 -525.646
+     angleY 0
+     m_MarkerColor 0 0.502 0.125 1
+     m_sQuadName "dot"
+     m_fWorldSize 100
+     m_sDescription "INDFOR SS Border"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+   }
+  }
+ }
+ INDFORspawnMarker {
+  coords 3332.509 198.663 12930.558
+  angleY 90
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 100
+  m_sDescription "INDFOR Spawn"
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+ }
+ OPFORspawnMarker2 {
+  coords 3334 298.477 14918.306
+  angleY 90
+  m_MarkerColor 0.502 0 0 1
+  m_sQuadName "flag-2"
+  m_fWorldSize 100
+  m_sDescription "OPFOR Spawn"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+ }
+ cacheAexact {
+  coords 3357.904 206.155 12982.042
+  angleY 90
+  m_MarkerColor 0.561 0.071 0.439 1
+  m_sQuadName "point-of-interest"
+  m_fWorldSize 75
+  m_sDescription "Cache A"
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+ }
+ cacheBexact {
+  coords 3434.504 199.851 13095.412
+  angleY 90
+  m_MarkerColor 0.561 0.071 0.439 1
+  m_sQuadName "point-of-interest"
+  m_fWorldSize 75
+  m_sDescription "Cache B"
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+ }
+ cacheArough {
+  coords 3308.718 199.837 13015.752
+  angleY 90
+  m_MarkerColor 0.561 0.071 0.439 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 115
+  m_sDescription "Cache Nearby"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ cacheBrough2 {
+  coords 3403.341 196.218 13123.99
+  angleY 90
+  m_MarkerColor 0.561 0.071 0.439 1
+  m_sQuadName "mark-question"
+  m_fWorldSize 115
+  m_sDescription "Cache Nearby"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 1
+ }
+ defensivePosition1 {
+  coords 3446.609 198.952 13151.037
+  angleY 90
+  m_MarkerColor 0.259 0.686 0.365 1
+  m_sQuadName "fortification"
+  m_fWorldSize 75
+  m_sDescription "Defensive Position"
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  {
+   $grp PS_ManualMarker : "{CD85ADE9E0F54679}PrefabsEditable/Markers/EditableMarker.et" {
+    defensivePosition2 {
+     coords 30.306 -0.102 -84.2
+     angleY 0
+     m_MarkerColor 0.259 0.686 0.365 1
+     m_sQuadName "fortification"
+     m_fWorldSize 75
+     m_sDescription "Defensive Position"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    defensivePosition3 {
+     coords 51.567 9.873 -42.624
+     angleY 0
+     m_MarkerColor 0.259 0.686 0.365 1
+     m_sQuadName "fortification"
+     m_fWorldSize 75
+     m_sDescription "Defensive Position"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    defensivePosition4 {
+     coords 98.901 16.049 -182.99
+     angleY 0
+     m_MarkerColor 0.259 0.686 0.365 1
+     m_sQuadName "fortification"
+     m_fWorldSize 75
+     m_sDescription "Defensive Position"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+    defensivePosition5 {
+     coords 132.993 0.755 -117.34
+     angleY 0
+     m_MarkerColor 0.259 0.686 0.365 1
+     m_sQuadName "fortification"
+     m_fWorldSize 75
+     m_sDescription "Defensive Position"
+     m_aVisibleForFactions {
+      "INDFOR"
+     }
+    }
+   }
+  }
+ }
+}

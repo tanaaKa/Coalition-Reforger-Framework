@@ -1,0 +1,59 @@
+$grp SCR_BaseTriggerEntity {
+ spawnVics {
+  coords 3372.561 293.535 14877.685
+  userScript "	string TIGR1 = \"{C759BD01F342125E}Prefabs/Vehicles/Wheeled/TIGR/GAZ_TIGR_v2_KORD_Shield.et\";"\
+  "	string TIGR2 = \"{7BC76F92B882889D}Prefabs/Vehicles/Wheeled/TIGR/GAZ_TIGR_v2_PKM_Base.et\";"\
+  "	string KAMAZ = \"{CE4BB0D5134151AB}Prefabs/Vehicles/Wheeled/KamAZ5350/Kamaz5350_Transport_Camo.et\";"\
+  "	string BTR = \"{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et\";"\
+  "	string AMB = \"{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et\";"\
+  "  	IEntity spawnTIGR1, spawnTIGR2, spawnBTR, spawnKAMAZ1, spawnKAMAZ2, spawnAMBO;"\
+  "  	void spawnthings()"\
+  "  	{"\
+  "  		spawnTIGR1 = GetGame().GetWorld().FindEntityByName(\"spawnTIGR1\");"\
+  "		spawnTIGR2 = GetGame().GetWorld().FindEntityByName(\"spawnTIGR2\");"\
+  "		spawnBTR = GetGame().GetWorld().FindEntityByName(\"spawnBTR\");"\
+  "		spawnKAMAZ1 = GetGame().GetWorld().FindEntityByName(\"spawnKAMAZ1\");"\
+  "		spawnKAMAZ2 = GetGame().GetWorld().FindEntityByName(\"spawnKAMAZ2\");"\
+  "		spawnAMBO = GetGame().GetWorld().FindEntityByName(\"spawnAMBO\");"\
+  "  		"\
+  "  		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
+  "  		spawnParams.TransformMode = ETransformMode.WORLD;"\
+  "  		"\
+  "  		spawnParams.Transform[3] = spawnTIGR1.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(TIGR1),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "  		spawnParams.Transform[3] = spawnTIGR2.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(TIGR2),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "		spawnParams.Transform[3] = spawnBTR.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(BTR),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "  		spawnParams.Transform[3] = spawnKAMAZ1.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(KAMAZ),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "  		spawnParams.Transform[3] = spawnKAMAZ2.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(KAMAZ),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "  		spawnParams.Transform[3] = spawnAMBO.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(AMB),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"260 0 0\");"\
+  "  		"\
+  "	}"
+  EOnInit ""\
+  "  		super.EOnInit(owner);"\
+  "  		GetGame().GetCallqueue().CallLater(spawnthings, 3000, false);"\
+  "	"
+ }
+ spawnTIGR1 {
+  coords 3391.626 290.528 14822.79
+ }
+ spawnTIGR2 {
+  coords 3378.1 292.333 14837.2
+ }
+ spawnBTR {
+  coords 3362.214 293.535 14854.256
+ }
+ spawnKAMAZ {
+  coords 3347.728 295.734 14870.627
+ }
+ spawnAMBO {
+  coords 3325.687 299.68 14898.542
+ }
+ spawnKAMAZ2 {
+  coords 3334.364 297.839 14885.414
+ }
+}
