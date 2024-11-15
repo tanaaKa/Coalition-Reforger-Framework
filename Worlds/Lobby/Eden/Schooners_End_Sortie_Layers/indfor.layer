@@ -1,28 +1,34 @@
-SCR_AIGroup : "{CA73F9230999408C}Prefabs/Groups/INDFOR/FIA 1980s/Command/Group_FIA_PlatoonHQ_P.et" {
- coords 7698.842 13.714 8124.792
- m_sCustomNameSet "Platoon Command"
+SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDFOR_Platoon_p.et" {
+ coords 7717.909 13.719 8144.633
+ m_sCustomNameSet "1st Platoon Command"
  {
-  SCR_AIGroup : "{17C7309FFE4775B1}Prefabs/Groups/INDFOR/FIA 1980s/Infantry/Group_FIA_RifleSquad_P.et" {
-   coords -14.508 -0.141 -12.439
+  SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+   coords -13.506 -0.75 -32.199
    {
-    SCR_AIGroup : "{17C7309FFE4775B1}Prefabs/Groups/INDFOR/FIA 1980s/Infantry/Group_FIA_RifleSquad_P.et" {
-     coords 7.667 -0.605 -11.109
+    SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+     coords -3.571 0 -3.763
      m_sCustomNameSet "2nd Squad"
      {
-      SCR_AIGroup : "{17C7309FFE4775B1}Prefabs/Groups/INDFOR/FIA 1980s/Infantry/Group_FIA_RifleSquad_P.et" {
-       coords -38.343 0.291 -28.103
+      SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+       coords 7.57 0 8.787
        m_sCustomNameSet "3rd Squad"
        {
-        SCR_AIGroup : "{17C7309FFE4775B1}Prefabs/Groups/INDFOR/FIA 1980s/Infantry/Group_FIA_RifleSquad_P.et" {
-         coords 17.854 -0.135 11.361
+        SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+         coords -10.078 0 -11.033
          m_sCustomNameSet "4th Squad"
          {
-          SCR_AIGroup : "{C402FC1C37B40123}Prefabs/Groups/INDFOR/FIA 1980s/Support/Group_FIA_Indirect_P.et" {
-           coords -15.262 -0.045 -29.428
+          SCR_AIGroup : "{D45B1996FADE5C03}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_IndirectTeam_p.et" {
+           coords -4.191 0 -6.481
            m_aUnitPrefabSlots {
-            "{6A1CC2F56CD38006}Prefabs/Characters/Factions/INDFOR/FIA/Standard/CRF_FIA_Leader_IndirectLeader_P.et" "{7BC851B8C62730CC}Prefabs/Characters/Factions/INDFOR/FIA/Standard/CRF_FIA_Rifleman_IndirectGunner_P.et" "{7BC851B8C62730CC}Prefabs/Characters/Factions/INDFOR/FIA/Standard/CRF_FIA_Rifleman_IndirectGunner_P.et"
+            "{B28C067E6191CC69}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectLead_P.et" "{C6A54A2FF38C9845}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectGunner_P.et" "{C6A54A2FF38C9845}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectGunner_P.et"
            }
-           m_sCustomNameSet "Mortar Team"
+           m_sCustomNameSet "Mortar Crew"
+           m_aUnitPrefabColorTeams {
+            "None" "None" "None"
+           }
+           m_aUnitPrefabOverrideIcons {
+            "None" "None" "None"
+           }
           }
          }
         }

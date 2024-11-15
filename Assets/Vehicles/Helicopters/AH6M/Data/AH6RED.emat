@@ -1,0 +1,13 @@
+MatPBRBasic {
+ DiffuseIBL 0.79 0.01 0.01 1
+ SpecularIBL 0.79 0.01 0.01 1
+ Diffuse 0.79 0.01 0.01 1
+ Cull none
+ Specular 0.79 0.01 0.01 1
+ SpecularMul 5
+ RoughnessScale 0
+ MetalnessScale 0
+ AOScale 5
+ BCRMap "{33D7ADFAA764F368}Assets/Vehicles/Helicopters/AH6M/Data/Textures/AH6M_Body_1_BCR.edds"
+ NMOMap "{0B0F16687E13A1F6}Assets/Vehicles/Helicopters/AH6M/Data/Textures/AH6M_Body_1_NMO.edds"
+}
