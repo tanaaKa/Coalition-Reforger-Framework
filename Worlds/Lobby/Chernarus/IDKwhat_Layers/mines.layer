@@ -1658,38 +1658,6 @@ $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.e
      }
     }
     {
-     coords -43.975 0.28 -17.172
-     angleY 0.017
-     {
-      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
-       {
-        coords -2.824 0.098 0.676
-       }
-       {
-        coords -1.017 0.027 0.136
-       }
-       {
-        coords -3.184 0.166 2.384
-       }
-       {
-        coords -0.344 0.168 3.39
-       }
-       {
-        coords 4.617 -0.154 -0.475
-       }
-       {
-        coords -1.29 -0.094 -1.869
-       }
-       {
-        coords -0.622 -0.139 -2.271
-       }
-       {
-        coords 1.165 0.067 1.648
-       }
-      }
-     }
-    }
-    {
      coords -75.719 -0.325 -36.489
      angleX 0.06
      angleY -0.022
@@ -1761,6 +1729,37 @@ $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.e
      coords -7.027 0.031 -2.207
      angleY 0.017
      {
+      GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.et" {
+       coords -36.944 0.249 -14.976
+       {
+        $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+         {
+          coords -2.824 0.098 0.676
+         }
+         {
+          coords -1.017 0.027 0.136
+         }
+         {
+          coords -3.184 0.166 2.384
+         }
+         {
+          coords -0.344 0.168 3.39
+         }
+         {
+          coords 4.617 -0.154 -0.475
+         }
+         {
+          coords -1.29 -0.094 -1.869
+         }
+         {
+          coords -0.622 -0.139 -2.271
+         }
+         {
+          coords 1.165 0.067 1.648
+         }
+        }
+       }
+      }
       $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
        {
         coords -2.824 0.098 0.676
@@ -2364,7 +2363,7 @@ $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.e
    }
    $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
     {
-     coords -1.021 -0 0.146
+     coords -1.021 0 0.146
      angleY -0.015
     }
     {
@@ -2400,7 +2399,7 @@ $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.e
      angleZ -0.06
     }
     {
-     coords 1.16 -0 1.655
+     coords 1.16 0 1.655
     }
    }
   }
@@ -4062,6 +4061,2450 @@ $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.e
      angleX -0.054
      angleY -0.114
      angleZ 0.89
+    }
+   }
+  }
+ }
+ {
+  coords 3826.381 199.667 13285.257
+  angleX -3.429
+  angleY 160.327
+  angleZ -1.622
+  {
+   $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.et" {
+    {
+     coords -10.75 -0.02 -3.653
+     angleX -0.303
+     angleY -0.225
+     angleZ -0.838
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -17.644 -0.008 -5.718
+     angleX -1.142
+     angleY -0.451
+     angleZ -0.528
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -23.493 0.005 -8.563
+     angleX -0.294
+     angleY 0.378
+     angleZ -0.841
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -29.445 0 -11.668
+     angleX -1.132
+     angleY 0.65
+     angleZ -0.55
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -38.396 -0.094 -13.091
+     angleY 0.117
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -45.537 -0.183 -16.282
+     angleX -0.306
+     angleY -0.441
+     angleZ -0.837
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -54.542 -0.337 -23.523
+     angleX 0.536
+     angleY -0.187
+     angleZ -1.144
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -62.73 -0.424 -28.054
+     angleX -0.836
+     angleY -0.584
+     angleZ 0.31
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -74.822 -0.127 -37.708
+     angleX -1.979
+     angleY -1.116
+     angleZ -0.197
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -86.127 0.084 -45.149
+     angleX -1.974
+     angleY 0.159
+     angleZ -0.241
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -96.021 0.559 -57.028
+     angleX -2.416
+     angleY -5.38
+     angleZ 1.135
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -97.165 0.227 -48.347
+     angleX -2.445
+     angleY -3.895
+     angleZ 1.072
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -87.184 -0.167 -37.984
+     angleX -1.977
+     angleY -0.675
+     angleZ -0.212
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -72.387 -0.453 -24.654
+     angleX -0.835
+     angleY -0.826
+     angleZ 0.314
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -58.39 -0.273 -13.303
+     angleX 0.841
+     angleY 0.12
+     angleZ -0.3
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -46.301 -0.156 -6.717
+     angleY 0.227
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -22.276 -0.096 2.4
+     angleX -0.3
+     angleY 0.013
+     angleZ -0.84
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -8.725 -0.054 8.588
+     angleX -0.294
+     angleY 0.432
+     angleZ -0.842
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -22.881 -0.12 4.975
+     angleX -0.84
+     angleY 0.239
+     angleZ 0.298
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -42.846 -0.136 -17.81
+     angleX -0.306
+     angleY -0.4
+     angleZ -0.837
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -73.557 -0.139 -37.678
+     angleX -1.669
+     angleY -0.694
+     angleZ 0.623
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -63.109 -0.121 -40.081
+     angleX -1.976
+     angleY -0.498
+     angleZ -0.218
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -6.951 -0.005 -2.268
+     angleX -0.839
+     angleY 0.01
+     angleZ 0.302
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+   }
+   $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+    {
+     coords -2.815 -0.02 0.674
+     angleX -0.298
+     angleY 0.115
+     angleZ -0.84
+    }
+    {
+     coords -1.017 0 0.143
+     angleY 0.061
+    }
+    {
+     coords -3.172 -0.031 2.38
+     angleY 0.039
+    }
+    {
+     coords -0.352 -0 3.404
+     angleY 0.072
+    }
+    {
+     coords 4.615 -0 -0.469
+     angleY -0.289
+    }
+    {
+     coords -1.282 -0 -1.873
+     angleY 0.028
+    }
+    {
+     coords -0.61 -0.001 -2.276
+     angleY 0.028
+    }
+    {
+     coords 1.158 -0 1.661
+     angleY 0.04
+    }
+   }
+  }
+ }
+ {
+  coords 3886.273 198.014 13316.572
+  angleX -3.429
+  angleY 160.327
+  angleZ -1.622
+  {
+   $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.et" {
+    {
+     coords -22.881 -0.088 4.972
+     angleX 0.841
+     angleY 0.231
+     angleZ -0.299
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -42.846 -0.128 -17.811
+     angleX -0.837
+     angleY -0.403
+     angleZ 0.308
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -73.541 0.455 -37.713
+     angleX -0.31
+     angleY -0.714
+     angleZ -0.836
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -63.086 0.702 -40.131
+     angleX -1.976
+     angleY -0.498
+     angleZ -0.218
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -6.953 -0.079 -2.264
+     angleX 0.539
+     angleY -0.018
+     angleZ -1.142
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -10.753 -0.125 -3.647
+     angleY -0.225
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -17.649 -0.187 -5.707
+     angleY -0.451
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -23.5 -0.241 -8.55
+     angleX -0.841
+     angleY 0.375
+     angleZ 0.296
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -29.452 -0.218 -11.655
+     angleY 0.65
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -38.399 -0.218 -13.084
+     angleX -0.298
+     angleY 0.122
+     angleZ -0.84
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -45.536 -0.148 -16.285
+     angleX -1.671
+     angleY -0.456
+     angleZ 0.616
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -54.529 0.129 -23.551
+     angleX -1.674
+     angleY -0.211
+     angleZ 0.609
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -62.708 0.348 -28.101
+     angleX -1.67
+     angleY -0.593
+     angleZ 0.62
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -74.806 0.437 -37.742
+     angleX -0.317
+     angleY -1.14
+     angleZ -0.833
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -86.128 0.057 -45.148
+     angleX 0.242
+     angleY 0.082
+     angleZ -1.98
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -96.048 -0.407 -56.971
+     angleX 0.429
+     angleY -5.439
+     angleZ -1.188
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -97.18 -0.316 -48.315
+     angleX 0.459
+     angleY -3.955
+     angleZ -1.177
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -87.177 0.074 -37.999
+     angleX 0.525
+     angleY -0.725
+     angleZ -1.149
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -72.369 0.221 -24.695
+     angleX -1.146
+     angleY -0.823
+     angleZ -0.521
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -58.387 -0.154 -13.31
+     angleX -1.137
+     angleY 0.138
+     angleZ -0.54
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -46.304 -0.249 -6.713
+     angleY 0.227
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -22.277 -0.123 2.402
+     angleX 0.84
+     angleY 0.007
+     angleZ -0.302
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -8.725 -0.032 8.587
+     angleY 0.432
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+   }
+   $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+    {
+     coords -2.815 -0.015 0.674
+     angleX 0.841
+     angleY 0.109
+     angleZ -0.301
+    }
+    {
+     coords -1.017 -0.001 0.143
+     angleX 0.54
+     angleY 0.05
+     angleZ -1.142
+    }
+    {
+     coords -3.171 -0.001 2.377
+     angleX -0.299
+     angleY 0.043
+     angleZ -0.84
+    }
+    {
+     coords -0.352 0.011 3.402
+     angleX 0.541
+     angleY 0.061
+     angleZ -1.141
+    }
+    {
+     coords 4.616 0.039 -0.471
+     angleX 0.839
+     angleY -0.293
+     angleZ -0.306
+    }
+    {
+     coords -1.283 -0.026 -1.871
+     angleX 0.54
+     angleY 0.017
+     angleZ -1.142
+    }
+    {
+     coords -0.611 -0.016 -2.274
+     angleX 0.54
+     angleY 0.017
+     angleZ -1.142
+    }
+    {
+     coords 1.158 0.025 1.66
+     angleX 0.54
+     angleY 0.03
+     angleZ -1.142
+    }
+   }
+  }
+ }
+ {
+  coords 3945.086 196.225 13342.903
+  angleX -3.729
+  angleY 160.34
+  angleZ -2.462
+  {
+   $grp GMFX_MineTriggerEntity : "{B0DBBAA7E1568D12}Prefabs/Systems/Mines/Mine_AT.et" {
+    {
+     coords -54.53 -0.061 -23.542
+     angleX 0.535
+     angleY -0.187
+     angleZ -1.143
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -62.723 -0.275 -28.064
+     angleX 1.362
+     angleY -0.64
+     angleZ -1.459
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -74.843 -0.614 -37.676
+     angleX 1.667
+     angleY -1.156
+     angleZ -0.639
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -86.165 -0.812 -45.092
+     angleX 1.98
+     angleY 0.175
+     angleZ 0.241
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -96.1 -1.275 -56.908
+     angleX 1.994
+     angleY -5.377
+     angleZ 0.048
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -97.219 -1.027 -48.266
+     angleX 2.089
+     angleY -4.046
+     angleZ -1.898
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -87.205 -0.653 -37.951
+     angleX 1.146
+     angleY -0.646
+     angleZ 0.524
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -72.383 -0.352 -24.66
+     angleX 0.835
+     angleY -0.835
+     angleZ -0.315
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -58.38 -0.042 -13.318
+     angleX 0.541
+     angleY 0.126
+     angleZ -1.14
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -46.29 0.105 -6.734
+     angleX 0.543
+     angleY 0.216
+     angleZ -1.139
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -22.266 0.13 2.386
+     angleX -1.674
+     angleY -0.001
+     angleZ 0.604
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -8.716 0.158 8.575
+     angleX 0.841
+     angleY 0.426
+     angleZ -0.296
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -22.87 0.125 4.959
+     angleX 0.84
+     angleY 0.231
+     angleZ -0.299
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -42.83 0.207 -17.832
+     angleX -0.609
+     angleY -0.391
+     angleZ -1.67
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -73.577 -0.6 -37.647
+     angleX 1.672
+     angleY -0.73
+     angleZ -0.627
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -63.123 -0.45 -40.058
+     angleX 0.528
+     angleY -0.548
+     angleZ -1.146
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -6.947 0.098 -2.276
+     angleX -0.539
+     angleY 0.016
+     angleZ 1.141
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -10.74 0.186 -3.666
+     angleX -1.37
+     angleY -0.252
+     angleZ 1.448
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -17.631 0.288 -5.737
+     angleX -1.67
+     angleY -0.457
+     angleZ 0.617
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -23.477 0.371 -8.587
+     angleX -1.678
+     angleY 0.364
+     angleZ 0.593
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+      }
+     }
+    }
+    {
+     coords -29.427 0.391 -11.692
+     angleX -0.29
+     angleY 0.637
+     angleZ -0.841
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -38.38 0.268 -13.115
+     angleX -0.298
+     angleY 0.122
+     angleZ -0.839
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+    {
+     coords -45.522 0.148 -16.302
+     angleX 0.223
+     angleY -0.459
+     angleZ -1.979
+     {
+      $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+       {
+        coords -2.824 0.098 0.676
+       }
+       {
+        coords -1.017 0.027 0.136
+       }
+       {
+        coords -3.184 0.166 2.384
+       }
+       {
+        coords -0.344 0.168 3.39
+       }
+       {
+        coords 4.617 -0.154 -0.475
+       }
+       {
+        coords -1.29 -0.094 -1.869
+       }
+       {
+        coords -0.622 -0.139 -2.271
+       }
+       {
+        coords 1.165 0.067 1.648
+       }
+      }
+     }
+    }
+   }
+   $grp GMFX_MineTriggerEntity : "{E1BBAB7F28FE8B0B}Prefabs/Systems/Mines/Mine_AP.et" {
+    {
+     coords -2.811 0.05 0.671
+     angleX -0.541
+     angleY 0.111
+     angleZ 1.14
+    }
+    {
+     coords -1.016 0.019 0.142
+     angleX -0.54
+     angleY 0.05
+     angleZ 1.141
+    }
+    {
+     coords -3.168 0.041 2.376
+     angleX -0.54
+     angleY 0.028
+     angleZ 1.141
+    }
+    {
+     coords -0.351 0.009 3.403
+     angleX 0.299
+     angleY 0.076
+     angleZ 0.84
+    }
+    {
+     coords 4.613 -0.057 -0.465
+     angleX -0.533
+     angleY -0.3
+     angleZ 1.144
+    }
+    {
+     coords -1.28 0.043 -1.875
+     angleX -0.539
+     angleY 0.018
+     angleZ 1.141
+    }
+    {
+     coords -0.609 0.034 -2.278
+     angleX -0.539
+     angleY 0.018
+     angleZ 1.141
+    }
+    {
+     coords 1.158 -0.008 1.663
+     angleX -0.54
+     angleY 0.03
+     angleZ 1.141
     }
    }
   }
