@@ -55,8 +55,8 @@ SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDF
   }
   SCR_AIGroup Support_team : "{D6130EBAAA378DE2}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_SniperTeam_p.et" {
    coords 21.799 -0.129 7.635
-   m_aUnitPrefabSlots {
-    "{8949382562216B1E}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_SL_P.et" "{0C86D510A52DF210}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Demo_P.et" "{65F1BBC392B2B484}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Sniper_P.et" "{96BCA2BC7A89F2CF}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Spotter_P.et"
+   m_aUnitPrefabSlots + {
+    "{0C86D510A52DF210}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Demo_P.et" "{0C86D510A52DF210}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Demo_P.et"
    }
    m_sCustomNameSet "Support Team"
   }
