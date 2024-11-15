@@ -1,136 +1,77 @@
 PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStartBorderMarker.et" {
  coords 11867.166 25.257 15886.134
- m_aVisibleForFactions {
-  "UK"
- }
  {
   $grp PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStartBorderMarker.et" {
    {
     coords 26.148 5.136 -46.6
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords 40.53 13.293 -89.171
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords 51.477 15.447 -125.835
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords 41.834 15.875 -155.706
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords 16.24 16.431 -184.911
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -20.902 29.987 -181.793
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -58.291 7.813 -168.335
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -99.193 2.128 -141.165
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -135.283 1.565 -109.3
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -168.422 6.681 -75.197
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -179.969 19.911 -18.593
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -156.055 22.474 18.164
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -130.685 11.126 44.951
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -92.628 9.682 46.725
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -49.976 1.723 27.598
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
    {
     coords -25.271 -0.354 18.167
     angleY 0
-    m_aVisibleForFactions {
-     "UK"
-    }
    }
   }
  }
 }
-$grp PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et" {
- {
-  coords 13789.278 26.625 14494.884
-  angleY 90.795
- }
- {
-  coords 14057.161 28.962 14908.309
-  angleY 0
-  m_sQuadName "circle"
-  m_sDescription "Motars"
- }
+PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et" {
+ coords 13789.278 26.625 14494.884
+ angleY 90.795
 }
 PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
  coords 14141.303 40.164 14538.248
@@ -259,15 +200,12 @@ PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" 
 PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.et" {
  coords 11851.826 34.092 15779.706
  angleY 90.937
- m_aVisibleForFactions {
-  "UK"
- }
 }
 PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFOR.et" {
  coords 13288.906 14.628 15464.668
  angleY 0
  m_aVisibleForFactions {
-  "USSR"
+  "OPFOR"
  }
  m_bVisibleForEmptyFaction 0
  m_bShowForAnyFaction 0
@@ -277,7 +215,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -20.82 -0.062 -51.896
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -286,7 +224,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -43.785 2.93 -116.85
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -295,7 +233,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -75.805 2.105 -180.521
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -304,7 +242,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -118.691 -3.77 -272.647
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -313,7 +251,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -124.609 1.687 -343.605
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -322,7 +260,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -102.406 -7.992 -428.056
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -331,7 +269,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -160.308 2.59 -507.107
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -340,7 +278,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -220.944 -6.7 -621.728
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -349,7 +287,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -272.988 -0.422 -707.54
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -358,7 +296,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -316.691 1.9 -793.945
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -367,7 +305,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -343.927 4.115 -862.179
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -376,7 +314,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -319.728 8.471 -949.058
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -385,7 +323,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -294.972 7.825 -1051.202
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -394,7 +332,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords -277.375 5.135 -1145.368
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -403,7 +341,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 27.018 -3.659 65.804
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -412,7 +350,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 72.002 15.807 132.654
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -421,7 +359,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 151.198 15.776 149.523
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -430,7 +368,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 257.155 1.644 143.516
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -439,7 +377,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 361.505 4.118 119.646
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -448,7 +386,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 444.44 20.176 78.598
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -457,7 +395,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 564.604 11.859 66.63
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -466,7 +404,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 679.728 10.842 24.602
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -475,7 +413,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 771.136 11.087 -61.782
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -484,7 +422,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 855.008 12.324 -174.379
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -493,7 +431,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 927.903 17.203 -264.771
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -502,7 +440,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 994.206 21.187 -349.084
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0
@@ -511,7 +449,7 @@ PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFO
     coords 1072.457 15.732 -443.627
     angleY 0
     m_aVisibleForFactions {
-     "USSR"
+     "OPFOR"
     }
     m_bVisibleForEmptyFaction 0
     m_bShowForAnyFaction 0

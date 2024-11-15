@@ -1,93 +1,3 @@
-$grp SCR_BaseTriggerEntity {
- m1 {
-  coords 14057.159 28.962 14902.729
- }
- m2 {
-  coords 14057.158 28.962 14914.233
- }
- spawnOpforVics {
-  coords 14055.585 28.752 14920.957
-  userScript "	string Mortar = \"{2A473C531D075905}Mortars/82/Podnosnew.et\";"\
-  "	IEntity m1, m2;"\
-  "	"\
-  "	void spawnthings()"\
-  "	{"\
-  "		m1 = GetGame().GetWorld().FindEntityByName(\"m1\");"\
-  "		m2 = GetGame().GetWorld().FindEntityByName(\"m2\");"\
-  "		"\
-  "		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
-  "		spawnParams.TransformMode = ETransformMode.WORLD;"\
-  "		"\
-  "		spawnParams.Transform[3] = m1.GetOrigin();		"\
-  "		GetGame().SpawnEntityPrefab(Resource.Load(Mortar),GetGame().GetWorld(),spawnParams);"\
-  "		spawnParams.Transform[3] = m2.GetOrigin();"\
-  "		GetGame().SpawnEntityPrefab(Resource.Load(Mortar),GetGame().GetWorld(),spawnParams);"\
-  "	}"
-  EOnInit ""\
-  "		super.EOnInit(owner);"\
-  "		GetGame().GetCallqueue().CallLater(spawnthings, 3000, false);"\
-  "	"
- }
-}
-SCR_AIGroup : "{01ADDE8A0A1C41CE}Prefabs/Groups/OPFOR/1980s/Command/Group_USSR80s_Command_Platoon_p.et" {
- coords 13796.248 26.625 14492.624
- m_sCustomNameSet "Platoon"
- {
-  $grp SCR_AIGroup : "{9D08872D94DE46D9}Prefabs/Groups/OPFOR/1980s/Infantry/Group_USSR80s_Infantry_RifleSquad_p.et" {
-   {
-    components {
-     AIFormationComponent "{507E9DC12F541FE6}" {
-      DefaultFormation "Row"
-     }
-    }
-    coords -9.143 0 23.771
-    m_sCustomNameSet "1st Squad"
-   }
-   {
-    components {
-     AIFormationComponent "{507E9DC12F541FE6}" {
-      DefaultFormation "Row"
-     }
-    }
-    coords -9.073 0 19.648
-    m_sCustomNameSet "2nd Squad"
-   }
-   {
-    components {
-     AIFormationComponent "{507E9DC12F541FE6}" {
-      DefaultFormation "Row"
-     }
-    }
-    coords -8.991 0 14.162
-    m_sCustomNameSet "3rd Squad"
-    {
-     SCR_AIGroup : "{0B2F593211D6E115}Prefabs/Groups/OPFOR/1980s/Support/Group_USSR80s_Support_MATTeam_p.et" {
-      components {
-       AIFormationComponent "{507E9DC12F541FE6}" {
-        DefaultFormation "Row"
-       }
-      }
-      coords 18.783 0 -7.086
-      m_sCustomNameSet "MAT Team"
-     }
-     SCR_AIGroup : "{7726B189C0DAF717}Prefabs/Groups/OPFOR/1980s/Support/Group_USSR80s_Support_IndirectTeam_p.et" {
-      coords 15.72 0 -14.351
-      m_aUnitPrefabSlots {
-       "{95F45AC5ACC93B43}Prefabs/Characters/Factions/OPFOR/USSR_Army/Standard/CRF_USSR_Leader_IndirectLeader_P.et" "{4477C584D7C1029D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Standard/CRF_USSR_Rifleman_IndirectGunner_P.et" "{4477C584D7C1029D}Prefabs/Characters/Factions/OPFOR/USSR_Army/Standard/CRF_USSR_Rifleman_IndirectGunner_P.et"
-      }
-      m_sCustomNameSet "Mortar Team"
-      m_aUnitPrefabColorTeams {
-       "None" "None" "None"
-      }
-      m_aUnitPrefabOverrideIcons {
-       "None" "None" "None"
-      }
-     }
-    }
-   }
-  }
- }
-}
 $grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
  UAZ1 {
   coords 13820.915 26.625 14501.735
@@ -101,6 +11,40 @@ $grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
 Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
  coords 13776.464 26.624 14500.233
  angleY -88.004
+}
+SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR_Platoon_p.et" {
+ coords 13796.248 26.625 14492.623
+ m_sCustomNameSet "PLT"
+ {
+  SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+   coords -9.073 0 19.649
+   m_sCustomNameSet "1-1"
+   {
+    SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+     coords 0.082 0 -5.486
+     m_sCustomNameSet "1-2"
+     {
+      SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+       coords -0.153 0 9.609
+       m_sCustomNameSet "1-3"
+       {
+        SCR_AIGroup : "{A1BDE5C4CC62ACAC}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_MATTeam_p.et" {
+         coords 18.937 0 -16.695
+         m_sCustomNameSet "MAT"
+         {
+          SCR_AIGroup : "{2598DBB9C3E01AD3}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_IndirectTeam_p.et" {
+           coords -3.062 0 -7.263
+           m_sCustomNameSet "MTR"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
 }
 $grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
  Ural4320_transport_covered1 {
