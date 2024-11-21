@@ -36,8 +36,8 @@ PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et
 }
 $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker_INDFOR.et" {
  {
-  coords 12264.633 41.625 9950.432
-  angleY 2.906
+  coords 12359.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -45,8 +45,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12239.664 41.625 9951.698
-  angleY 2.906
+  coords 12339.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -54,8 +54,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12214.695 41.625 9952.966
-  angleY 2.906
+  coords 12319.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -63,8 +63,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12189.728 41.625 9954.233
-  angleY 2.906
+  coords 12299.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -72,8 +72,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12180.355 41.625 9951.916
-  angleY 0.453
+  coords 12279.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -81,8 +81,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12180.157 41.625 9926.917
-  angleY 0.453
+  coords 12259.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -90,8 +90,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12179.96 41.625 9901.918
-  angleY 0.453
+  coords 12239.762 41.424 9957.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -99,8 +99,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12179.763 41.625 9876.919
-  angleY 0.453
+  coords 12239.762 41.424 9977.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -108,8 +108,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12179.564 41.625 9851.92
-  angleY 0.453
+  coords 12219.762 41.424 9977.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -117,8 +117,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12179.366 41.625 9826.921
-  angleY 0.453
+  coords 12199.762 41.424 9977.053
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -126,8 +126,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12178.689 41.625 9806.074
-  angleY 0.453
+  coords 12175.962 41.424 9982.297
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -135,8 +135,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12203.688 41.625 9805.877
-  angleY 0.453
+  coords 12182.312 41.424 9809.445
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -144,8 +144,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12228.687 41.625 9805.68
-  angleY 0.453
+  coords 12202.312 41.424 9809.445
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -153,8 +153,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12253.686 41.625 9805.482
-  angleY 0.453
+  coords 12222.312 41.424 9809.445
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -162,8 +162,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.007 41.625 9816.638
-  angleY 0.453
+  coords 12242.312 41.424 9809.445
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -171,8 +171,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.204 41.625 9841.637
-  angleY 0.453
+  coords 12266.541 41.424 9809.452
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -180,8 +180,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.401 41.625 9866.636
-  angleY 0.453
+  coords 12266.541 41.424 9829.452
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -189,8 +189,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.599 41.625 9891.635
-  angleY 0.453
+  coords 12286.541 41.424 9829.452
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -198,8 +198,8 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.796 41.625 9916.634
-  angleY 0.453
+  coords 12306.541 41.424 9829.452
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
@@ -207,8 +207,188 @@ $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker
   m_bShowForAnyFaction 0
  }
  {
-  coords 12265.993 41.625 9941.633
-  angleY 0.453
+  coords 12326.541 41.424 9829.452
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12346.541 41.424 9829.452
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12366.541 41.424 9829.452
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12366.541 41.424 9849.452
+  angleY -4.264
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12365.054 41.424 9869.396
+  angleY -4.264
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12363.565 41.424 9889.34
+  angleY -4.264
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12362.078 41.424 9909.284
+  angleY -0.258
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12361.988 41.424 9929.284
+  angleY -0.258
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12361.897 41.424 9949.284
+  angleY -0.258
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12155.962 41.424 9982.297
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9982.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9962.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9942.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9922.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9902.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12131.79 41.424 9882.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12151.79 41.424 9882.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12151.79 41.424 9862.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12151.79 41.424 9842.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12151.79 41.424 9822.99
+  angleY 0
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
+ }
+ {
+  coords 12166.79 41.424 9813.604
+  angleY 0
   m_aVisibleForFactions {
    "INDFOR"
   }
