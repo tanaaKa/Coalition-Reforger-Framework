@@ -18,7 +18,6 @@ class CRF_ClientAdminMenuComponent : ScriptComponent
 		else
 			return null;
 	}
-	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	//Admin Messaging
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -85,9 +84,9 @@ class CRF_ClientAdminMenuComponent : ScriptComponent
 			chatComponent.ShowMessage("INVALID PLAYER ID");
 			return;
 		}
-		
+				
 		chatComponent.ShowMessage(string.Format("Message Sent to %2: \"%1\"", toSend, GetGame().GetPlayerManager().GetPlayerName(playerID)));
-		toSend = string.Format("Admin: \"%1\"", toSend);
+		toSend = string.Format("\"%1\"", toSend);
 		Rpc(RpcAsk_ReplyAdminMessage, toSend, playerID);
 	}
 	
@@ -216,5 +215,48 @@ class CRF_ClientAdminMenuComponent : ScriptComponent
 	{
 		m_adminMenuComponent = CRF_AdminMenuGameComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_AdminMenuGameComponent));
 		m_adminMenuComponent.SendHintFaction(data, factionKey);
+	}
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// Heal
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayer(int playerID)
+	{
+		Rpc(RpcAsk_HealPlayer, playerID);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcAsk_HealPlayer(int playerID)
+	{
+		m_adminMenuComponent = CRF_AdminMenuGameComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_AdminMenuGameComponent));
+		m_adminMenuComponent.HealPlayer(playerID);
+	}
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayerVehicle(int playerID)
+	{
+		Rpc(RpcAsk_HealPlayerVehicle, playerID);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcAsk_HealPlayerVehicle(int playerID)
+	{
+		m_adminMenuComponent = CRF_AdminMenuGameComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_AdminMenuGameComponent));
+		m_adminMenuComponent.HealPlayerVehicle(playerID);
+	}
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// Log Admin Action
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void LogAdminAction(string data, int playerID, bool sendToPlayer)
+	{
+		Rpc(RpcAsk_LogAdminAction, data, playerID, sendToPlayer);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcAsk_LogAdminAction(string data, int playerID, bool sendToPlayer)
+	{
+		m_adminMenuComponent = CRF_AdminMenuGameComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_AdminMenuGameComponent));
+		m_adminMenuComponent.LogAdminAction(data, playerID, sendToPlayer);
 	}
 }

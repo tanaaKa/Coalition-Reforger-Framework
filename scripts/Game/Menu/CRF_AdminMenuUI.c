@@ -28,6 +28,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 	protected SCR_ButtonTextComponent m_resetGearMenuButton;
 	protected SCR_ButtonTextComponent m_teleportMenuButton;
 	protected SCR_ButtonTextComponent m_hintMenuButton;
+	protected SCR_ButtonTextComponent m_healMenuButton;
 	protected SCR_ButtonTextComponent m_actionButton;
 	protected SCR_ButtonTextComponent m_menuButton1;
 	protected SCR_ButtonTextComponent m_menuButton2;
@@ -37,6 +38,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 	protected TextWidget m_resetGearMenuText;
 	protected TextWidget m_teleportMenuText;
 	protected TextWidget m_hintMenuText;
+	protected TextWidget m_healMenuText;
 	protected ref array<int> m_groupIDList = {};
 	protected ref array<int> m_allPlayers = {};
 	protected ref array<SCR_AIGroup> m_outGroups = {};
@@ -96,6 +98,10 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_hintMenuButton = SCR_ButtonTextComponent.GetButtonText("HintButton", m_wRoot);
 		m_hintMenuButton.m_OnClicked.Insert(HintButton);
 		m_hintMenuText = TextWidget.Cast(m_hintMenuButton.GetRootWidget().FindWidget("HintText"));
+		
+		m_healMenuButton = SCR_ButtonTextComponent.GetButtonText("HealButton", m_wRoot);
+		m_healMenuButton.m_OnClicked.Insert(HealButton);
+		m_healMenuText = TextWidget.Cast(m_healMenuButton.GetRootWidget().FindWidget("HealText"));
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -111,6 +117,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_resetGearMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_teleportMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_hintMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_healMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		ClearMenu();
 		InitializeRespawnMenu();
 	}
@@ -122,6 +129,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_resetGearMenuText.SetColor(Color.FromInt(0xffffffff));
 		m_teleportMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_hintMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_healMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		ClearMenu();
 		InitializeGearMenu();
 	}
@@ -133,6 +141,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_resetGearMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_teleportMenuText.SetColor(Color.FromInt(0xffffffff));
 		m_hintMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_healMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		ClearMenu();
 		InitializeTeleportMenu();
 	}
@@ -144,8 +153,21 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_resetGearMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_teleportMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		m_hintMenuText.SetColor(Color.FromInt(0xffffffff));
+		m_healMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
 		ClearMenu();
 		InitializeHintMenu();
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealButton()
+	{
+		m_respawnMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_resetGearMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_teleportMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_hintMenuText.SetColor(Color.FromRGBA(115, 115, 115, 255));
+		m_healMenuText.SetColor(Color.FromInt(0xffffffff));
+		ClearMenu();
+		InitializeHealMenu();
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -177,7 +199,6 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_list4.m_OnChanged.Clear();
 		m_editBox1.SetText("");
 		
-		m_allPlayers.Clear();
 		m_outGroups.Clear();
 		m_spawnPoints.Clear();
 		m_groupIDList.Clear();
@@ -864,5 +885,57 @@ class CRF_AdminMenu: ChimeraMenuBase
 		m_clientAdminMenuComponent.m_sHintText = data;
 		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
 		m_clientAdminMenuComponent.SendHintPlayer(data, playerID);
+	}
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//-------------------------------Heal Menu UI Members------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void InitializeHealMenu()
+	{
+		m_list1Root.SetVisible(true);
+		m_actionButton.SetVisible(true, false);
+		m_menuButton1.SetVisible(true);
+		m_actionButton.m_OnClicked.Insert(HealPlayer);
+		m_menuButton1.m_OnClicked.Insert(HealPlayerVehicle);
+		TextWidget.Cast(m_menuButton1.GetRootWidget().FindWidget("MenuButtonText")).SetText("Repair Vehicle");
+		TextWidget.Cast(m_actionButton.GetRootWidget().FindWidget("ActionButtonText")).SetText("Heal Player");
+		TextWidget.Cast(m_wRoot.FindAnyWidget("List1Text")).SetText("Players");
+		
+		m_playerManager.GetPlayers(m_allPlayers);
+		
+		TStringArray playerNames = {};
+		
+		foreach(int playerID : m_allPlayers)
+			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
+		
+		playerNames.Sort(false);
+		
+		foreach(string name : playerNames)
+		{ 
+			int playerID = GetPlayerIdFromName(name);
+			if(m_groupManagerComponent.GetPlayerGroup(playerID))
+			{
+				m_list1.AddItem(string.Format("%1", name));
+			}
+		}
+	}
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayer()
+	{
+		if(m_list1.GetSelectedItem() < 0)
+			return;
+
+		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
+		
+		m_clientAdminMenuComponent.HealPlayer(playerID);
+	}	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayerVehicle()
+	{
+		if(m_list1.GetSelectedItem() < 0)
+			return;
+
+		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
+		
+		m_clientAdminMenuComponent.HealPlayerVehicle(playerID);
 	}
 }
