@@ -79,7 +79,7 @@ class CRF_ClientAdminMenuComponent : ScriptComponent
 			chatComponent.ShowMessage("INVALID PLAYER ID");
 			return;
 		}
-		if(!GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID))
+		if(!GetGame().GetPlayerManager().GetPlayerName(playerID))
 		{
 			chatComponent.ShowMessage("INVALID PLAYER ID");
 			return;
