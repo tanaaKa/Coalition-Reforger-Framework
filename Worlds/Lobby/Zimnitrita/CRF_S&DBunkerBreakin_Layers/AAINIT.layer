@@ -7,11 +7,21 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
     m_rGearScript "{C1DC7079CF042B8F}Configs/Gearscripts/Custom/RandAlThor/CRF_GS_RHSUSMC_bUNKERbREAKIN.conf"
    }
+   m_OPFORGearScriptSettings CRF_GearScriptContainer "{629E5222ACF12871}" {
+    m_rGearScript "{D7B22F98968C6317}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSATACS.conf"
+   }
+  }
+  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   m_iTimeLimitMinutes 40
+  }
+  CRF_SearchAndDestroyGameModeComponent "{62ED018C03FACFAE}" {
+   attackingSide "BLUFOR"
+   defendingSide "OPFOR"
   }
  }
  coords 10426.667 26.556 4706.805
  {
-  SCR_FactionManager {
+  SCR_FactionManager "62ED01897A701FE3" {
    ID "61BCFEC02D38B83E"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
