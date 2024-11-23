@@ -23,12 +23,19 @@ modded class PS_PlayableControllerComponent : ScriptComponent
 		SCR_ScreenEffectsManager.GetScreenEffectsDisplay().RHS_SetHDR("{0AD0A1ADEBCF893F}Assets/Items/Equipment/NVG/pvs14/data/SpecNVGFilm.emat", true)
 	}
 	
-	override void SwitchFromObserver()
+	override private void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
-		super.SwitchFromObserver();
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
 		m_bActivated = false;
-		SCR_ScreenEffectsManager.GetScreenEffectsDisplay().RHS_SetHDR("{765A5E642D09A4B8}Common/Postprocess/HDR_Vanila.emat", false);
+		DisableNVG();
+		super.OnControlledEntityChanged(from, to);
+	}
+	
+	void ZeusClose()
+	{
+		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		m_bActivated = false;
+		DisableNVG();
 	}
 	
 	void DisableNVG()
