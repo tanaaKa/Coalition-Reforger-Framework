@@ -8,12 +8,12 @@
 *	Server only
 */
 [ComponentEditorProps(category: "CRF Logging Component", description: "")]
-class CRF_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
+class CRF_OLD_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
 {
 	
 }
 
-class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
+class CRF_OLD_LoggingServerComponent: SCR_BaseGameModeComponent
 {	
 	const string SEPARATOR = ",";
 	const string m_sLogPath = "$profile:COAServerLog.txt";
@@ -28,7 +28,7 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 	private ref FileHandle m_handle;
 	SCR_FactionManager m_FM;
 	
-	static CRF_LoggingServerComponent GetInstance() 
+	static CRF_OLD_LoggingServerComponent GetInstance() 
 	{
 		BaseGameMode gameMode = GetGame().GetGameMode();
 		if (gameMode)
@@ -137,6 +137,8 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 	}
 }
 
+/* BROKEN in Reforger Lobby. Replaced by CRF_MDB_Logging_Server
+
 modded class SCR_BaseGameMode
 {
 	const string SEPARATOR = ",";
@@ -194,3 +196,4 @@ modded class SCR_BaseGameMode
 		m_handle.WriteLine("kill" + SEPARATOR + m_sKilledName + SEPARATOR + m_sKilledFaction + SEPARATOR + m_sKillerName + SEPARATOR + m_sKillerFaction + SEPARATOR + m_fRange + SEPARATOR + m_sWeaponName + SEPARATOR + m_sTime);
 	}
 }
+/*
