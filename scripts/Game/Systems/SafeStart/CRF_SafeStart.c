@@ -41,7 +41,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected bool m_bAdminForcedReady = false;
 	
 	protected SCR_BaseGameMode m_GameMode;
-	protected CRF_LoggingServerComponent m_Logging;
+	protected CRF_OLD_LoggingServerComponent m_Logging;
 	
 	protected int m_iPlayedFactionsCount;
 	protected ref map<IEntity,bool> m_mPlayersWithEHsMap = new map<IEntity,bool>;
@@ -83,7 +83,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		if (Replication.IsServer())
 		{
 			m_GameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
-			m_Logging = CRF_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_LoggingServerComponent));
+			m_Logging = CRF_OLD_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_OLD_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
 	}

@@ -24,6 +24,8 @@ class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 	int m_iIndforCount;
 	
 	SCR_FactionManager m_FM;
+	EDF_DbContext dbContext;
+	EDF_DbRepository<CRF_DbEntity> repository;
 	
 	static CRF_MDB_LoggingServerComponent GetInstance() 
 	{
@@ -44,11 +46,14 @@ class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 		m_sMissionName = GetGame().GetMissionName();
 		m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
 		
-		// Connect to DB 
+		// DB Params
 		EDF_MongoDbConnectionInfo connectInfo();
 		connectInfo.m_sDatabaseName = "reforger";
 		connectInfo.m_sProxyHost = "localhost";
-		connectInfo.m_iProxyPort = "27017";
+		connectInfo.m_iProxyPort = 27017;
+		// Create DB context & repo for usage everywhere else
+		dbContext = EDF_DbContext.Create(connectInfo);
+		repository = EDF_DbEntityHelper<CRF_DbEntity>.GetRepository(dbContext);
 	}
 	
 	// Player Connected
@@ -60,7 +65,8 @@ class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 		
 		playerName = GetGame().GetPlayerManager().GetPlayerName(playerId);
 		
-		
+		// Create or update a player instance 
+		repository.AddOrUpdateAsync(CRF_DbEntity.CreatePlayer(playerName,99));
 	}
 	
 	// Player Disconnected 
