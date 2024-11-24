@@ -498,7 +498,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(int playerID : m_allPlayers)
 			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
 		
-		playerNames.Sort(true);
+		playerNames.Sort(false);
 		
 		foreach(string name : playerNames)
 		{ 
@@ -613,7 +613,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(int playerID : m_allPlayers)
 			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
 		
-		playerNames.Sort(true);
+		playerNames.Sort(false);
 		
 		foreach(string name : playerNames)
 		{ 
@@ -669,7 +669,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(int playerID : m_allPlayers)
 			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
 		
-		playerNames.Sort(true);
+		playerNames.Sort(false);
 		
 		foreach(string name : playerNames)
 		{ 
@@ -732,7 +732,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(int playerID : m_allPlayers)
 			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
 		
-		playerNames.Sort(true);
+		playerNames.Sort(false);
 		
 		foreach(string name : playerNames)
 		{ 
@@ -812,7 +812,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(int playerID : m_allPlayers)
 			playerNames.Insert(m_playerManager.GetPlayerName(playerID));
 		
-		playerNames.Sort(true);
+		playerNames.Sort(false);
 		
 		foreach(string name : playerNames)
 		{ 

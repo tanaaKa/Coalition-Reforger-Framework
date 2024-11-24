@@ -76,7 +76,7 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 	const ref TStringArray m_aSquadLevelRolesRifle = {"_Rifleman_P", "_Demo_P", "_AAT_P", "_AAR_P"};
 	const ref TStringArray m_aSquadLevelRolesCarbine = {"_Medic_P"};
 		
-	const ref TStringArray m_aInfantrySpecialtiesRolesRifle = {"_AHAT_P", "_AMAT_P", "_AHMG_P", "_AMMG_P", "_AAA_P"};
+	const ref TStringArray m_aInfantrySpecialtiesRolesRifle = {"_AHAT_P", "_AMAT_P", "_AHMG_P", "_AMMG_P", "_AAA_P", "_DroneOp_P"};
 		
 	const ref TStringArray m_aVehicleSpecialtiesRolesCarbine = {"_VehDriver_P", "_VehGunner_P", "_VehLoader_P", "_LogiRunner_P", "_IndirectGunner_P", "_IndirectLoader_P"};
 	const ref TStringArray m_aVehicleSpecialtiesRolesPistol = {"_Pilot_P", "_CrewChief_P"};
@@ -853,6 +853,7 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 			case "_AAA_P"     : {role = "Assistant Anit-Air";          break;}
 			case "_Sniper_P"  : {role = "Sniper";                      break;}
 			case "_Spotter_P" : {role = "Spotter";                     break;}
+			case "_DroneOp_P" : {role = "Drone Operator";              break;}
 		}
 		
 		foreach(ref CRF_Infantry_Specialties_Custom_Gear customGear : customGearArray)

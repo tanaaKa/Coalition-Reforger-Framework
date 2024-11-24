@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{BF291B2ED6A5A293}Prefabs/Characters/HeadGear/Helmet_TOR/variants/Helmet_TOR_medium_amp_arsenal_1PN138.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass PS5 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+  EntityTemplateResourceClass Xbox : PC {
+  }
+ }
+}

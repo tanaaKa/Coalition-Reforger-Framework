@@ -1,10 +1,4 @@
-$grp SCR_AIGroup : "{E192BA64E43B50B4}Prefabs/Groups/OPFOR/1980s/Specials/Special_HeliBattle_Opfor_Crew.et" {
- {
-  coords 10342.838 307.642 2407.54
-  angleY -45
-  m_bSnapToTerrain 0
-  m_bPlayable 1
- }
+$grp SCR_AIGroup : "{67CF9BB46BE94DF0}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_AirCrew_p.et" {
  {
   coords 10370.953 307.642 2379.43
   angleY -45
@@ -18,13 +12,13 @@ $grp SCR_AIGroup : "{E192BA64E43B50B4}Prefabs/Groups/OPFOR/1980s/Specials/Specia
   m_bPlayable 1
  }
  {
-  coords 10423.857 307.641 2326.52
+  coords 10423.856 307.641 2326.52
   angleY -45
   m_bSnapToTerrain 0
   m_bPlayable 1
  }
  {
-  coords 10446.471 336.404 2303.912
+  coords 10446.472 336.404 2303.912
   angleY -45
   m_bSnapToTerrain 0
   m_bPlayable 1
@@ -36,7 +30,7 @@ $grp SCR_AIGroup : "{E192BA64E43B50B4}Prefabs/Groups/OPFOR/1980s/Specials/Specia
   m_bPlayable 1
  }
  {
-  coords 10793.162 103.263 1750.26
+  coords 10793.161 103.263 1750.26
   angleY -45
   m_bSnapToTerrain 0
   m_bPlayable 1
@@ -145,6 +139,12 @@ $grp SCR_AIGroup : "{E192BA64E43B50B4}Prefabs/Groups/OPFOR/1980s/Specials/Specia
  }
  {
   coords 10325.354 307.485 2425.027
+  angleY -45
+  m_bSnapToTerrain 0
+  m_bPlayable 1
+ }
+ {
+  coords 10342.838 307.642 2407.54
   angleY -45
   m_bSnapToTerrain 0
   m_bPlayable 1

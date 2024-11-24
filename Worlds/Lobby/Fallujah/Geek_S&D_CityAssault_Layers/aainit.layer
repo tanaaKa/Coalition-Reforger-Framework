@@ -8,6 +8,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
     m_rGearScript "{F64E94080BC19E3C}Configs/Gearscripts/Standard/GWOT/CRF_GS_2000sUS.conf"
    }
+   m_OPFORGearScriptSettings CRF_GearScriptContainer "{629E5222ACF12871}" {
+    m_rGearScript "{2D140B13588E56B8}Configs/Gearscripts/Standard/GWOT/CRF_GS_Taliban.conf"
+   }
    m_INDFORGearScriptSettings CRF_GearScriptContainer "{629E5222AC7F68BE}" {
     m_rGearScript "{2D140B13588E56B8}Configs/Gearscripts/Standard/GWOT/CRF_GS_Taliban.conf"
    }
@@ -16,7 +19,8 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    m_iTimeLimitMinutes 50
   }
   CRF_SearchAndDestroyGameModeComponent "{6274A01606909A61}" {
-   defendingSide "Tali"
+   attackingSide "BLUFOR"
+   defendingSide "INDFOR"
   }
   SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
    m_iStartingHours 11
