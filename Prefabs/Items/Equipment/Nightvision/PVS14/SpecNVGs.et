@@ -1,0 +1,31 @@
+GameEntity : "{64322D5D501B7D79}Prefabs/Items/Equipment/Nightvision/PVS14/NVG_PVS14_Base.et" {
+ ID "5D7765E30127E8B9"
+ components {
+  BaseLightManagerComponent "{5D7765E30127E89F}" {
+   LightSlots {
+    BaseLightSlot "{5D7765E30127E8E2}" {
+     LightPrefab "{1D532235C0028A0C}Prefabs/Items/Equipment/Nightvision/PVS14/NVG_Light_WP_light.et"
+    }
+   }
+  }
+  InventoryItemComponent "{5DB09136B1C985CE}" {
+   Attributes SCR_ItemAttributeCollection "{5DB09136B1C985C1}" {
+    ItemDisplayName SCR_ItemHintUIInfo "{5DB09136B1C985EB}" {
+     Name "#RHS-Item_ANPVS14_WP_Name"
+     Description "#RHS-Item_ANPVS14_WP_Description"
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{5DB09136B1C985C3}" {
+      CameraOrbitAngles 150 120 110
+     }
+    }
+    m_Size SLOT_1x1
+   }
+  }
+  RHS_RhinoAttachmentComponent "{5D7765E30127E8D1}" {
+   m_fAnimationLength 0
+   m_sNVGGooglesHDRMatrial "{7961F4B9E065FBF5}Assets/Items/Equipment/NVG/pvs14/data/NVG_WhitePhosphor_HDR.emat"
+   m_bUseMask 0
+  }
+ }
+}
