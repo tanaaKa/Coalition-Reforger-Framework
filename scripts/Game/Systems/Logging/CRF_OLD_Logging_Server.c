@@ -32,7 +32,7 @@ class CRF_OLD_LoggingServerComponent: SCR_BaseGameModeComponent
 	{
 		BaseGameMode gameMode = GetGame().GetGameMode();
 		if (gameMode)
-			return CRF_LoggingServerComponent.Cast(gameMode.FindComponent(CRF_LoggingServerComponent));
+			return CRF_OLD_LoggingServerComponent.Cast(gameMode.FindComponent(CRF_OLD_LoggingServerComponent));
 		else
 			return null;
 	}
