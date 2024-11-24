@@ -8,7 +8,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   DrawShape 1
   TriggerActivationType "Every query"
   PeriodicQueries 1
-  UpdatePeriod 15
+  UpdatePeriod 45
   OnQueryFinished ""\
   "		super.OnQueryFinished(bIsEmpty);"\
   "		"\
@@ -29,7 +29,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   "				"\
   "		}"\
   "	"
-  m_sOwnerFactionKey "UK"
+  m_sOwnerFactionKey "BLUFOR"
   m_fFriendlyRatioLimit 1
   {
    $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
@@ -40,7 +40,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "defend"
      m_sDescription "Garage"
      m_aVisibleForFactions {
-      "USSR"
+      "OPFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -52,7 +52,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "Destroy"
      m_sDescription "Garage"
      m_aVisibleForFactions {
-      "UK"
+      "BLUFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -64,14 +64,14 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sTitle "Take Garage"
      m_sTextData "Take Garage"
      m_iScore 25
-     m_sFactionKey "UK"
+     m_sFactionKey "BLUFOR"
     }
     {
      coords -381.851 -2.981 -641.432
      m_sTitle "Defend Garage"
      m_sTextData "Defend Garage"
      m_iScore 25
-     m_sFactionKey "USSR"
+     m_sFactionKey "OPFOR"
     }
    }
   }
@@ -85,7 +85,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   DrawShape 1
   TriggerActivationType "Every query"
   PeriodicQueries 1
-  UpdatePeriod 15
+  UpdatePeriod 30
   OnQueryFinished "	"\
   "		super.OnQueryFinished(bIsEmpty);"\
   "		"\
@@ -106,7 +106,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   "		}"\
   "		"\
   "	"
-  m_sOwnerFactionKey "UK"
+  m_sOwnerFactionKey "BLUFOR"
   m_fFriendlyRatioLimit 1
   {
    $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
@@ -117,7 +117,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "defend"
      m_sDescription "Lumberyard"
      m_aVisibleForFactions {
-      "USSR"
+      "OPFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -129,7 +129,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "Destroy"
      m_sDescription "Lumberyard"
      m_aVisibleForFactions {
-      "UK"
+      "BLUFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -141,14 +141,14 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sTitle "Take Lumberyard"
      m_sTextData "Take Lumberyard"
      m_iScore 25
-     m_sFactionKey "UK"
+     m_sFactionKey "BLUFOR"
     }
     {
      coords 156.021 5.939 -859.486
      m_sTitle "Defend Lumberyard"
      m_sTextData "Defend Lumberyard"
      m_iScore 25
-     m_sFactionKey "USSR"
+     m_sFactionKey "OPFOR"
     }
    }
   }
@@ -162,7 +162,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   DrawShape 1
   TriggerActivationType "Every query"
   PeriodicQueries 1
-  UpdatePeriod 15
+  UpdatePeriod 63
   OnQueryFinished ""\
   "		super.OnQueryFinished(bIsEmpty);"\
   "		"\
@@ -183,7 +183,7 @@ $grp SCR_FactionDominanceTriggerEntity {
   "				"\
   "		}"\
   "	"
-  m_sOwnerFactionKey "UK"
+  m_sOwnerFactionKey "BLUFOR"
   m_fFriendlyRatioLimit 1
   {
    $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
@@ -194,7 +194,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "defend"
      m_sDescription "School"
      m_aVisibleForFactions {
-      "USSR"
+      "OPFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -206,7 +206,7 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sQuadName "Destroy"
      m_sDescription "School"
      m_aVisibleForFactions {
-      "UK"
+      "BLUFOR"
      }
      m_bVisibleForEmptyFaction 0
      m_bShowForAnyFaction 0
@@ -218,14 +218,14 @@ $grp SCR_FactionDominanceTriggerEntity {
      m_sTitle "Take School"
      m_sTextData "Take School"
      m_iScore 50
-     m_sFactionKey "UK"
+     m_sFactionKey "BLUFOR"
     }
     {
      coords -293.998 0.852 -109.528
      m_sTitle "Defend School"
      m_sTextData "Defend School"
      m_iScore 50
-     m_sFactionKey "USSR"
+     m_sFactionKey "OPFOR"
     }
    }
   }

@@ -4,9 +4,7 @@ PS_MissionDescription : "{5D890E2198A25341}PrefabsEditable/MissionDescription/Ga
 PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescription/OPF_Brief.et" {
  coords 2018.335 233.591 1228.068
  m_sTitle "INDFOR Brief"
- m_sTextData "Defend your two main stockpiles of weapons at Babyol, and Ali Abad. "\
- ""\
- "There are some additional mounted PKMs that you have prepared around the AO, these are marked on your map."
+ m_sTextData "Defend your two bomb sites at Babyol, and Ali Abad. "
  m_aVisibleForFactions {
   "INDFOR"
  }
@@ -17,13 +15,12 @@ PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/As
  "1x UH1H"\
  "3x APC"\
  "2x Stryker"\
- "2x Crew Served Mortar"\
+ "1x Crew Served Mortar"\
  ""\
  "Indfor"\
  "1x HMG Team"\
  "1x Crew Served Mortar"\
- "3x Mounted PKMs"\
- "3x Imbedded AA, and MAT"
+ "3x Embedded AA, and MAT"
 }
 PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
  coords 2024.834 233.534 1251.574
@@ -38,7 +35,7 @@ PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/Wi
 }
 PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BLU_Brief.et" {
  coords 2007.366 238.378 1247.497
- m_sTextData "Search through Babyol and Ali Abad for two large main caches, and destroy them by planting bombs on the bomb site. You don't have specific locations, so the towns will have to be searched for each site."
+ m_sTextData "Search through Babyol and Ali Abad for two bomb sites, and destroy them. You don't have specific locations, so the towns will have to be searched for each site."
  m_aVisibleForFactions {
   "BLUFOR"
  }

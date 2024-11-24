@@ -1,0 +1,55 @@
+GenericEntity : "{F45E998709CE0B5D}Prefabs/Items/Equipment/Backpacks/Rucksack_GS_frame.et" {
+ ID "511E9C6ADE70F798"
+ components {
+  ClothNodeStorageComponent "{610725AC6FB5F8D5}" {
+   Enabled 0
+  }
+  InventoryItemComponent "{610725AC6FB5F8BE}" {
+   Enabled 0
+  }
+  MeshObject "{511E9C6ADE70F7BD}" {
+   Object "{55C5ABAB1BA7E6E1}Assets/Items/Equipment/Backpacks/Backpack_Rucksack_GS/Rucksack_GS_01.xob"
+  }
+  SCR_UniversalInventoryStorageComponent "{5222CB03A40528FA}" {
+   Enabled 1
+   Attributes SCR_ItemAttributeCollection "{5222CB039E9715D1}" {
+    ItemDisplayName UIInfo "{5222CB03904B414C}" {
+     Name "Rucksack, GS"
+     Description "A large nylon rucksack made to replace the 58 Pattern Large Pack"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes PhysicalAttributes {
+     Weight 4
+     SizeSetupStrategy Manual
+     ItemDimensions 20 20 20
+     ItemVolume 10001
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{52BCBDD2B54658EC}" {
+      CameraPreset Front
+      CameraOrbitAngles -25 25 0
+      CameraDistanceToItem 4
+      CameraOffset 0 0 0
+      FOV 10
+      AspectRatio 1
+      PreviewModel "{55C5ABAB1BA7E6E1}Assets/Items/Equipment/Backpacks/Backpack_Rucksack_GS/Rucksack_GS_01.xob"
+      LodModel 2
+     }
+    }
+   }
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 10000
+   MaxItemSize 20 20 20
+   m_fMaxWeight 40
+  }
+  SimpleSoundComponent "{62DD779F2D77A690}" {
+   Filenames {
+    "{0F536730D5251C70}Sounds/Items/_SharedData/PickUp/Items_PickUp_ALICE.acp" "{F01623940EA93645}Sounds/Items/_SharedData/Open/Backpack_ALICE/Items_Backpack_ALICE.acp"
+   }
+  }
+  BaseLoadoutClothComponent "{511E9C6ADE70F7BB}" {
+   WornModel "{55C5ABAB1BA7E6E1}Assets/Items/Equipment/Backpacks/Backpack_Rucksack_GS/Rucksack_GS_01.xob"
+   ItemModel "{D0E974FCDCC5756A}Assets/Items/Equipment/Backpacks/Backpack_Rucksack_GS/Rucksack_GS_Ground_01.xob"
+   DebugWornModel 0
+  }
+ }
+}
