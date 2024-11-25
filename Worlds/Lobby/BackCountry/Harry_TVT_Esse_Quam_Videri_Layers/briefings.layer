@@ -35,7 +35,7 @@ PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BL
 }
 PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
  coords 352.496 659.601 783.886
- m_sTextData "A group of local volunteers have collapsed a tunnel entrance, one of the only ways to the next valley, in an attempt to slow an invading force. The volunteers are being coordinated by a military representative, and have become suprisingly well armed. Locals even managed to steal a towed ZU23. OPFOR has commited a mechanized infantry platoon with supporting elements to take the tunnel, and restore access. "\
+ m_sTextData "A group of local volunteers have collapsed a tunnel entrance, one of the only ways to the next valley, in an attempt to slow an invading force. The volunteers are being coordinated by a military representative, and have become surprisingly well armed. Locals even managed to steal a towed ZU23. OPFOR has committed a mechanized infantry platoon with supporting elements to take the tunnel, and restore access. "\
  ""\
  "Ratio "\
  "3:2"

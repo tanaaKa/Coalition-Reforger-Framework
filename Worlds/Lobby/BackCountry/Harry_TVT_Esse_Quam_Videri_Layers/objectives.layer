@@ -80,6 +80,7 @@ $grp PS_Objective : "{DC02A6E23541A99B}PrefabsEditable/MissionDescription/Object
  {
   coords 116.092 609.985 754.787
   m_sTitle "Bring the engineering vehicle to the tunnel"
+  m_sTextData ""
   m_iScore 25
   m_sFactionKey "OPFOR"
  }
