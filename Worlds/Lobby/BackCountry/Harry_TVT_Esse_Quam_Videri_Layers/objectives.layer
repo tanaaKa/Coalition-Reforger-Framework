@@ -33,18 +33,24 @@ SCR_FactionControlTriggerEntity TunnelControl {
    OnQueryFinished ""\
    "		super.OnQueryFinished(bIsEmpty);"\
    "		"\
-   "		array<IEntity> entitiesInside = new array<IEntity>();"\
-   "		this.GetEntitiesInside(entitiesInside);"\
-   "		foreach (IEntity entity : entitiesInside)"\
-   "        {"\
-   "			Print(entity.GetName());"\
-   "			if (entity.GetName() == \"engiTruck\" && !pmessageSent)"\
-   "			{"\
-   "				SCR_PopUpNotification.GetInstance().PopupMsg(\"The engineering truck has made it to the tunnel\", 10);"\
-   "				pmessageSent = true;"\
+   "		IEntity engiTruck = GetGame().GetWorld().FindEntityByName(\"engiTruck\");"\
+   "		"\
+   "		if (engiTruck)"\
+   "		{"\
+   "			array<IEntity> entitiesInside = new array<IEntity>();"\
+   "			this.GetEntitiesInside(entitiesInside);"\
+   "			foreach (IEntity entity : entitiesInside)"\
+   " 	       {"\
+   "				Print(entity.GetName());"\
+   "				if (entity.GetName() == \"engiTruck\" && !pmessageSent)"\
+   "				{"\
+   "					SCR_PopUpNotification.GetInstance().PopupMsg(\"The engineering truck has made it to the tunnel\", 10);"\
+   "					pmessageSent = true;"\
    "				"\
+   "				}"\
    "			}"\
    "		}"\
+   ""\
    "	"
   }
  }
