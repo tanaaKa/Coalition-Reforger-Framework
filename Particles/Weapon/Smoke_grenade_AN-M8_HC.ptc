@@ -34,7 +34,7 @@ EffectDef {
    AnimFPS 25
    LifetimeByAnim 0
    RandomFrame 1
-   Lifetime 30
+   Lifetime 45
    LifetimeRND 0
    LifetimeVelFactor 1
    Color {
