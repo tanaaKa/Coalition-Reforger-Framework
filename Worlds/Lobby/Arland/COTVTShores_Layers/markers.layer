@@ -116,20 +116,6 @@ $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStart
   coords 936.133 28.256 3094.128
  }
 }
-$grp Vehicle : "{AFF6067A5CE8A853}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_base.et" {
- Mi8MT_base2 {
-  coords 932.638 38.968 2786.696
-  angleY 56
- }
- Mi8MT_base3 {
-  coords 909.531 39.033 2823.906
-  angleY 56
- }
- Mi8MT_base4 {
-  coords 775.797 39 2727.037
-  angleY -35
- }
-}
 GenericEntity : "{D215BC98417FA3CB}Prefabs/Vehicles/Airplanes/IL76/Plane_IL76USSR_Open.et" {
  coords 1350.186 39 2135.29
  angleY -124
