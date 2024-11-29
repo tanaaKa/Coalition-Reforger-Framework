@@ -79,33 +79,21 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
       m_aSquadNames {
        SCR_CallsignInfo "{62FB2146731A7EBB}" {
-        m_sCallsign "1PLT"
-       }
-       SCR_CallsignInfo "{62FB214673F8FDB6}" {
-        m_sCallsign "1-1"
-       }
-       SCR_CallsignInfo "{62FB214673DA12F4}" {
-        m_sCallsign "1-2"
-       }
-       SCR_CallsignInfo "{62FB214673B593CD}" {
-        m_sCallsign "1-3"
-       }
-       SCR_CallsignInfo "{62FB21467391DFB2}" {
         m_sCallsign "1-4"
        }
-       SCR_CallsignInfo "{62FB2146738D3B7D}" {
+       SCR_CallsignInfo "{62FB214673F8FDB6}" {
         m_sCallsign "1-5"
        }
-       SCR_CallsignInfo "{62FB2146706AAB30}" {
+       SCR_CallsignInfo "{62FB214673DA12F4}" {
         m_sCallsign "MORTAR"
        }
-       SCR_CallsignInfo "{62FB2146704621EB}" {
-        m_sCallsign "AFV 1"
+       SCR_CallsignInfo "{62FB214673B593CD}" {
+        m_sCallsign "IFV 1"
        }
-       SCR_CallsignInfo "{62FB2146704F6032}" {
-        m_sCallsign "AFV 2"
+       SCR_CallsignInfo "{62FB21467391DFB2}" {
+        m_sCallsign "IFV 2"
        }
-       SCR_CallsignInfo "{62FB2146701A9421}" {
+       SCR_CallsignInfo "{62FB2146738D3B7D}" {
         m_sCallsign "AH 1"
        }
       }
