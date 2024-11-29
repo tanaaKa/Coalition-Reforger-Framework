@@ -27,7 +27,6 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 	{
 		GetGame().GetCallqueue().CallLater(AddMsgAction, 0, false);
 	}
-	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Admin Messaging
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -91,7 +90,7 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	void RpcAsk_ReplyAdminMessage(string data, int playerID)
 	{
-		if(GetGame().GetPlayerController().GetPlayerId() != playerID && !SCR_Global.IsAdmin())
+		if(GetGame().GetPlayerController().GetPlayerId() != playerID)
 			return;
 		
 		PlayerController pc = GetGame().GetPlayerController();
@@ -101,7 +100,9 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		if (!chatComponent)
 			return;
 		
-		chatComponent.ShowMessage(data);
+		chatComponent.ShowMessage(string.Format("Admin: %1", data));
+
+		LogAdminAction(string.Format("Reply to %1: %2", GetGame().GetPlayerManager().GetPlayerName(playerID), data), playerID, false);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -144,6 +145,8 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		playableComponentNew.SetPlayable(true);
 		
 		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, entity, 4, groupID);
+		
+		LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), m_groupsManager.FindGroup(groupID).m_faction), playerId, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -201,6 +204,8 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 			m_GearScriptEditor.SetupAddGearToEntity(entity, prefab);
 			m_GearScriptEditor.SetPlayerGearScriptsMapValue(prefab, playerID, "GSR"); // GSR = Gear Script Resource
 		}
+		
+		LogAdminAction(string.Format("%1's gear was set to %2", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -216,6 +221,8 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		ref IEntity resourceSpawned = GetGame().SpawnEntityPrefab(Resource.Load(prefab), GetGame().GetWorld(), m_SpawnParams);
 		if(!entityInventoryManager.TryInsertItem(resourceSpawned))
 			delete resourceSpawned;
+		
+		LogAdminAction(string.Format("%2 was added to %1's inventory", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -241,6 +248,8 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 	    spawnParams.Transform[3] = teleportLocation;
 	
 		SCR_Global.TeleportPlayer(playerID1, teleportLocation);
+		
+		LogAdminAction(string.Format("%1 was teleported to %2", GetGame().GetPlayerManager().GetPlayerName(playerID1), GetGame().GetPlayerManager().GetPlayerName(playerID2)), playerID1, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -307,5 +316,71 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		CRF_Hint hint = CRF_Hint.Cast(widget.FindHandler(CRF_Hint));
 		float duration = 8000;
 		hint.ShowHint(data, duration);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// Heal
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayer(int playerID)
+	{
+		IEntity PlayerEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
+			
+		SCR_DamageManagerComponent damageComponent = SCR_DamageManagerComponent.Cast(PlayerEntity.FindComponent(SCR_DamageManagerComponent));
+		if (!damageComponent)
+			return;
+		
+		damageComponent.FullHeal();
+		damageComponent.SetHealthScaled(1);
+		
+		LogAdminAction(string.Format("%1's was healed", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void HealPlayerVehicle(int playerID)
+	{
+		IEntity PlayerEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
+		
+		IEntity VehicleEntity = SCR_CompartmentAccessComponent.GetVehicleIn(PlayerEntity);
+		if (!VehicleEntity)
+			return;
+			
+		SCR_DamageManagerComponent damageComponent = SCR_DamageManagerComponent.Cast(VehicleEntity.FindComponent(SCR_DamageManagerComponent));
+		if (!damageComponent)
+			return;
+		
+		damageComponent.FullHeal();
+		damageComponent.SetHealthScaled(1);
+		
+		LogAdminAction(string.Format("%1's vehicle was repaired", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
+	}
+
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	// Log Admin Actions
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	void SendAdminMessage(string data)
+	void LogAdminAction(string data, int playerID, bool sendToPlayer)
+	{
+		Rpc(RpcAsk_LogAdminAction, data, playerID, sendToPlayer);
+	}
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	void RpcAsk_LogAdminAction(string data, int playerID, bool sendToPlayer)
+	{
+		if (sendToPlayer)
+		{
+			if(GetGame().GetPlayerController().GetPlayerId() != playerID && !SCR_Global.IsAdmin())
+				return;
+		} else {
+			if(!SCR_Global.IsAdmin())
+				return;
+		}
+
+		PlayerController pc = GetGame().GetPlayerController();
+		if (!pc)
+			return;
+		SCR_ChatComponent chatComponent = SCR_ChatComponent.Cast(pc.FindComponent(SCR_ChatComponent));
+		if (!chatComponent)
+			return;
+		chatComponent.ShowMessage(data);
 	}
 }
