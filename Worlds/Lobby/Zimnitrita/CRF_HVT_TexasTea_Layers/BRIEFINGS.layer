@@ -60,7 +60,7 @@ PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BL
 PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
  coords 12059.663 20.928 11864.585
  m_sTitle "Situation"
- m_sTextData "ChDKZ Militants have taken over a petroleum plant in the Western region of Chernarus. They are holding an oil executive hostage inside of the plant. In just over a day, the loss of oil has raised US gas prices by multiple cents, resulting in a company of US Marines being deployed to eliminate the terrorists withholding America's precious."\
+ m_sTextData "ChDKZ Militants have taken over a petroleum plant in the Western region of Chernarus. They are holding an oil executive hostage inside of the plant. In just over a day, the loss of oil has raised US gas prices by multiple cents, resulting in a platoon of US Marines being deployed to eliminate the terrorists withholding America's precious."\
  ""\
  "60 minute time limit"\
  "3:2 BLUFOR:OPFOR slotting ratio"\

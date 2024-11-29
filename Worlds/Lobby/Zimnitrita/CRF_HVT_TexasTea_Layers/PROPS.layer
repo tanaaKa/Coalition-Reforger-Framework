@@ -1152,7 +1152,6 @@ $grp PolylineShapeEntity {
        angleX 0.847
        angleY 255.341
        angleZ -1.722
-       scale 1
       }
       {
        coords -87.237 -0.423 39.017
@@ -1768,7 +1767,6 @@ $grp PolylineShapeEntity {
        angleX 0.791
        angleY 314.636
        angleZ 1.88
-       scale 1
       }
       {
        coords -21.814 -1.887 104.743
@@ -4913,7 +4911,6 @@ $grp PolylineShapeEntity {
        angleX 1.149
        angleY 278.314
        angleZ 1.043
-       scale 1
       }
       {
        coords 44.363 -3.788 182.989
@@ -5340,7 +5337,6 @@ $grp PolylineShapeEntity {
        angleX 0.099
        angleY 19.611
        angleZ -0.086
-       scale 1
       }
       {
        coords 2.995 -2.47 107.103
@@ -6241,7 +6237,6 @@ $grp PolylineShapeEntity {
        angleX -0.658
        angleY 30.136
        angleZ -1.685
-       scale 1
       }
       {
        coords -41.542 -2.849 141.276
@@ -7107,7 +7102,6 @@ $grp PolylineShapeEntity {
        angleX -1.631
        angleY 147.232
        angleZ 1.271
-       scale 1
       }
       {
        coords -63.079 -0.341 36.334
@@ -8815,7 +8809,6 @@ $grp PolylineShapeEntity {
        angleX 0.489
        angleY 323.392
        angleZ -0.74
-       scale 1
       }
       {
        coords -63.847 -0.718 46.224
@@ -9498,7 +9491,6 @@ $grp PolylineShapeEntity {
        angleX -1.912
        angleY 271.7
        angleZ 1.3
-       scale 1
       }
       {
        coords 25.614 -5.665 62.513
@@ -9561,7 +9553,6 @@ $grp PolylineShapeEntity {
        angleX 1.571
        angleY 207.615
        angleZ 0.345
-       scale 1
       }
       {
        coords 43.824 -5.596 203.474
@@ -11857,7 +11848,6 @@ $grp PolylineShapeEntity {
       }
       {
        coords 82.605 -2.14 244.843
-       angleX -0
        angleY 39.08
        angleZ -0.917
        scale 0.83
@@ -14774,7 +14764,6 @@ $grp PolylineShapeEntity {
       {
        coords -127.627 -13.382 27.519
        angleY 3.571
-       scale 1
       }
       {
        coords -127.424 -13.966 25.502
@@ -24100,7 +24089,6 @@ $grp PolylineShapeEntity {
       }
       {
        coords -110.418 -1.565 61.204
-       angleX -0
        angleY 348.783
        angleZ -1.153
        scale 1.121
@@ -33330,7 +33318,6 @@ $grp PolylineShapeEntity {
       }
       {
        coords -6.953 -4.383 42.843
-       angleX -0
        angleY 304.902
        angleZ -1.077
        scale 0.769
@@ -40907,7 +40894,6 @@ $grp PolylineShapeEntity {
        angleX -0.977
        angleY 285.423
        angleZ 0.8
-       scale 1
       }
       {
        coords 128.562 -0.253 31.977
@@ -41450,7 +41436,6 @@ $grp PolylineShapeEntity {
        angleX 0.667
        angleY 159.241
        angleZ -0.314
-       scale 1
       }
       {
        coords 85.19 0.3 69.681
@@ -44598,7 +44583,6 @@ $grp PolylineShapeEntity {
        angleX -0.076
        angleY 178.577
        angleZ 0.419
-       scale 1
       }
       {
        coords 70.686 -1.209 85.245
@@ -45309,7 +45293,6 @@ $grp PolylineShapeEntity {
        angleX 1.634
        angleY 123.095
        angleZ -0.485
-       scale 1
       }
      }
      Tree : "{531BB93086610CA1}PrefabLibrary/Vegetation/Trees/t_betula_pendula_0.et" {
@@ -46493,7 +46476,7 @@ $grp PolylineShapeEntity {
   coords 11567.938 45.719 9125.024
   Points {
    ShapePoint "{62F97E67F4FEDF71}" {
-    Position 23.807 -0 8.396
+    Position 23.807 0 8.396
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -46521,7 +46504,7 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E67FEFB3E56}" {
-    Position 102.965 -0 -98.271
+    Position 102.965 0 -98.271
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -46777,7 +46760,7 @@ $grp PolylineShapeEntity {
        scale 1.025
       }
       {
-       coords 300.11 -0 -53.369
+       coords 300.11 0 -53.369
        angleY 304.276
        scale 1.123
       }
@@ -46917,7 +46900,7 @@ $grp PolylineShapeEntity {
        scale 0.626
       }
       {
-       coords 31.779 -0 -17.941
+       coords 31.779 0 -17.941
        angleY 266.383
        scale 1.162
       }
@@ -47152,27 +47135,27 @@ $grp PolylineShapeEntity {
        scale 0.692
       }
       {
-       coords 223.176 -0 0.061
+       coords 223.176 0 0.061
        angleY 129.752
        scale 0.934
       }
       {
-       coords 220.556 -0 -0.144
+       coords 220.556 0 -0.144
        angleY 132.906
        scale 0.94
       }
       {
-       coords 222.418 -0 -2.091
+       coords 222.418 0 -2.091
        angleY 157.549
        scale 0.613
       }
       {
-       coords 225.535 -0 1.203
+       coords 225.535 0 1.203
        angleY 238.477
        scale 0.932
       }
       {
-       coords 223.529 -0 1.22
+       coords 223.529 0 1.22
        angleY 19.611
        scale 0.715
       }
@@ -47312,12 +47295,12 @@ $grp PolylineShapeEntity {
        scale 0.887
       }
       {
-       coords 117.576 -0 -64.773
+       coords 117.576 0 -64.773
        angleY 78.247
        scale 0.894
       }
       {
-       coords 113.978 -0 -71.456
+       coords 113.978 0 -71.456
        angleY 198.573
        scale 0.788
       }
@@ -47472,17 +47455,17 @@ $grp PolylineShapeEntity {
        scale 0.81
       }
       {
-       coords 138.98 -0 -36.457
+       coords 138.98 0 -36.457
        angleY 273.832
        scale 0.923
       }
       {
-       coords 141.951 -0 -41.876
+       coords 141.951 0 -41.876
        angleY 198.342
        scale 0.92
       }
       {
-       coords 133.938 -0 -33.278
+       coords 133.938 0 -33.278
        angleY 228.797
        scale 0.561
       }
@@ -47502,17 +47485,17 @@ $grp PolylineShapeEntity {
        scale 0.796
       }
       {
-       coords 125.303 -0 -35.768
+       coords 125.303 0 -35.768
        angleY 97.012
        scale 0.753
       }
       {
-       coords 127.018 -0 -35.901
+       coords 127.018 0 -35.901
        angleY 21.809
        scale 0.618
       }
       {
-       coords 126.672 -0 -39.406
+       coords 126.672 0 -39.406
        angleY 87.893
        scale 0.759
       }
@@ -47686,59 +47669,59 @@ $grp PolylineShapeEntity {
        scale 0.95
       }
       {
-       coords 47.908 -0 -31.193
+       coords 47.908 0 -31.193
        scale 0.855
       }
       {
-       coords 50.42 -0 -31.298
+       coords 50.42 0 -31.298
        scale 1.191
       }
       {
-       coords 50.052 -0 -32.779
+       coords 50.052 0 -32.779
        scale 1.042
       }
       {
-       coords 51.766 -0 -32.844
+       coords 51.766 0 -32.844
        scale 1.052
       }
       {
-       coords 51.016 -0 -35.57
+       coords 51.016 0 -35.57
        scale 1.085
       }
       {
-       coords 56.756 -0 -52.601
+       coords 56.756 0 -52.601
        scale 0.941
       }
       {
-       coords 51.736 -0 -59.171
+       coords 51.736 0 -59.171
        scale 0.987
       }
       {
-       coords 49.903 -0 -58.787
+       coords 49.903 0 -58.787
        scale 1.143
       }
       {
-       coords 52.049 -0 -53.051
+       coords 52.049 0 -53.051
        scale 1.037
       }
       {
-       coords 52.096 -0 -51.53
+       coords 52.096 0 -51.53
        scale 0.882
       }
       {
-       coords 49.223 -0 -58.318
+       coords 49.223 0 -58.318
        scale 1.086
       }
       {
-       coords 50.822 -0 -58.337
+       coords 50.822 0 -58.337
        scale 0.868
       }
       {
-       coords 49.529 -0 -53.835
+       coords 49.529 0 -53.835
        scale 1.192
       }
       {
-       coords 52.654 -0 -59.059
+       coords 52.654 0 -59.059
        scale 0.949
       }
       {
@@ -48612,7 +48595,7 @@ $grp PolylineShapeEntity {
        scale 1.128
       }
       {
-       coords 152.288 -0 -3.522
+       coords 152.288 0 -3.522
        scale 1.188
       }
       {
@@ -48621,7 +48604,7 @@ $grp PolylineShapeEntity {
        scale 1.153
       }
       {
-       coords 154.105 -0 0.702
+       coords 154.105 0 0.702
        scale 0.957
       }
       {
@@ -48630,23 +48613,23 @@ $grp PolylineShapeEntity {
        scale 0.829
       }
       {
-       coords 150.951 -0 -2.343
+       coords 150.951 0 -2.343
        scale 1.098
       }
       {
-       coords 146.633 -0 -1.964
+       coords 146.633 0 -1.964
        scale 0.894
       }
       {
-       coords 148.853 -0 1.468
+       coords 148.853 0 1.468
        scale 1.047
       }
       {
-       coords 148.47 -0 -3.679
+       coords 148.47 0 -3.679
        scale 0.947
       }
       {
-       coords 150.442 -0 -1.351
+       coords 150.442 0 -1.351
        scale 0.884
       }
       {
@@ -48722,15 +48705,15 @@ $grp PolylineShapeEntity {
        scale 1.131
       }
       {
-       coords 54.285 -0 -38.11
+       coords 54.285 0 -38.11
        scale 0.879
       }
       {
-       coords 52.707 -0 -41.056
+       coords 52.707 0 -41.056
        scale 0.814
       }
       {
-       coords 50.195 -0 -41.422
+       coords 50.195 0 -41.422
        scale 1.036
       }
       {
@@ -48895,39 +48878,39 @@ $grp PolylineShapeEntity {
        scale 1.101
       }
       {
-       coords 32.449 -0 -14.106
+       coords 32.449 0 -14.106
        scale 1.012
       }
       {
-       coords 33.948 -0 -9.729
+       coords 33.948 0 -9.729
        scale 1.166
       }
       {
-       coords 35.037 -0 -17.879
+       coords 35.037 0 -17.879
        scale 1.109
       }
       {
-       coords 30.23 -0 -16.023
+       coords 30.23 0 -16.023
        scale 0.911
       }
       {
-       coords 31.678 -0 -14.084
+       coords 31.678 0 -14.084
        scale 0.991
       }
       {
-       coords 39.463 -0 -11.624
+       coords 39.463 0 -11.624
        scale 0.977
       }
       {
-       coords 34.027 -0 -17.325
+       coords 34.027 0 -17.325
        scale 0.928
       }
       {
-       coords 33.546 -0 -15.199
+       coords 33.546 0 -15.199
        scale 1.115
       }
       {
-       coords 31.83 -0 -12.822
+       coords 31.83 0 -12.822
        scale 1.188
       }
       {
@@ -50041,7 +50024,7 @@ $grp PolylineShapeEntity {
        scale 0.915
       }
       {
-       coords 307.969 -0 -60.206
+       coords 307.969 0 -60.206
        scale 0.818
       }
       {
@@ -50109,19 +50092,19 @@ $grp PolylineShapeEntity {
        scale 1.157
       }
       {
-       coords 204.734 -0 -40.897
+       coords 204.734 0 -40.897
        scale 0.904
       }
       {
-       coords 208.436 -0 -41.92
+       coords 208.436 0 -41.92
        scale 1.176
       }
       {
-       coords 206.559 -0 -43.8
+       coords 206.559 0 -43.8
        scale 1.061
       }
       {
-       coords 207.245 -0 -44.63
+       coords 207.245 0 -44.63
        scale 1.029
       }
       {
@@ -50803,31 +50786,31 @@ $grp PolylineShapeEntity {
        scale 1.041
       }
       {
-       coords 187.698 -0 -40.328
+       coords 187.698 0 -40.328
        scale 1.082
       }
       {
-       coords 189.277 -0 -34.916
+       coords 189.277 0 -34.916
        scale 1.044
       }
       {
-       coords 191.34 -0 -38.495
+       coords 191.34 0 -38.495
        scale 0.901
       }
       {
-       coords 189.979 -0 -43.525
+       coords 189.979 0 -43.525
        scale 0.874
       }
       {
-       coords 191.57 -0 -39.309
+       coords 191.57 0 -39.309
        scale 0.848
       }
       {
-       coords 186.338 -0 -41.282
+       coords 186.338 0 -41.282
        scale 0.903
       }
       {
-       coords 188.956 -0 -42.876
+       coords 188.956 0 -42.876
        scale 1.139
       }
       {
@@ -50874,15 +50857,15 @@ $grp PolylineShapeEntity {
        scale 1.063
       }
       {
-       coords 203.551 -0 -112.355
+       coords 203.551 0 -112.355
        scale 1.082
       }
       {
-       coords 201.967 -0 -115.502
+       coords 201.967 0 -115.502
        scale 1.196
       }
       {
-       coords 205.087 -0 -116.797
+       coords 205.087 0 -116.797
        scale 0.89
       }
       {
@@ -51164,15 +51147,15 @@ $grp PolylineShapeEntity {
        scale 1.011
       }
       {
-       coords 198.886 -0 -113.077
+       coords 198.886 0 -113.077
        scale 1.172
       }
       {
-       coords 194.802 -0 -112.39
+       coords 194.802 0 -112.39
        scale 1.165
       }
       {
-       coords 195.422 -0 -113.021
+       coords 195.422 0 -113.021
        scale 1.143
       }
       {
@@ -51855,7 +51838,7 @@ $grp PolylineShapeEntity {
        scale 1.098
       }
       {
-       coords 285.112 -0 -54.671
+       coords 285.112 0 -54.671
        angleX 1.009
        angleY 172.557
        angleZ -0.496
@@ -51869,14 +51852,14 @@ $grp PolylineShapeEntity {
        scale 1.148
       }
       {
-       coords 278.505 -0 -59.344
+       coords 278.505 0 -59.344
        angleX 0.373
        angleY 186.026
        angleZ -1.372
        scale 1.046
       }
       {
-       coords 280.074 -0 -53.711
+       coords 280.074 0 -53.711
        angleX 1.036
        angleY 217.8
        angleZ 0.618
@@ -51897,21 +51880,21 @@ $grp PolylineShapeEntity {
        scale 1.062
       }
       {
-       coords 273.189 -0 -60.068
+       coords 273.189 0 -60.068
        angleX -0.564
        angleY 22.94
        angleZ 0.095
        scale 1.047
       }
       {
-       coords 282.784 -0 -47.449
+       coords 282.784 0 -47.449
        angleX 0.548
        angleY 313.417
        angleZ 0.868
        scale 0.841
       }
       {
-       coords 278.981 -0 -55.026
+       coords 278.981 0 -55.026
        angleX 0.807
        angleY 91.255
        angleZ -0.834
@@ -53035,7 +53018,6 @@ $grp PolylineShapeEntity {
        angleX 1.256
        angleY 53.098
        angleZ -0.063
-       scale 1
       }
       {
        coords 789.256 -13.719 -225.611
@@ -53115,126 +53097,126 @@ $grp PolylineShapeEntity {
        scale 0.906
       }
       {
-       coords 145.961 -0 -33.221
+       coords 145.961 0 -33.221
        angleX 0.012
        angleY 265.46
        angleZ 0.375
        scale 1.044
       }
       {
-       coords 139.951 -0 -25.512
+       coords 139.951 0 -25.512
        angleX 1.153
        angleY 57.427
        angleZ -1.015
        scale 1.166
       }
       {
-       coords 142.141 -0 -25.305
+       coords 142.141 0 -25.305
        angleX 0.257
        angleY 59.086
        angleZ 0.705
        scale 1.088
       }
       {
-       coords 145.898 -0 -28.684
+       coords 145.898 0 -28.684
        angleX -1.046
        angleY 159.823
        angleZ -1.178
        scale 1.147
       }
       {
-       coords 142.656 -0 -24.528
+       coords 142.656 0 -24.528
        angleX -0.083
        angleY 273.744
        angleZ -1.134
        scale 0.843
       }
       {
-       coords 138.422 -0 -37.428
+       coords 138.422 0 -37.428
        angleX -0.118
        angleY 331.775
        angleZ 1.424
        scale 1.005
       }
       {
-       coords 135.793 -0 -42.417
+       coords 135.793 0 -42.417
        angleX -0.883
        angleY 253.506
        angleZ 0.364
        scale 0.908
       }
       {
-       coords 141.975 -0 -26.838
+       coords 141.975 0 -26.838
        angleX -0.998
        angleY 52.362
        angleZ -1.218
        scale 0.828
       }
       {
-       coords 137.503 -0 -34.381
+       coords 137.503 0 -34.381
        angleX 0.554
        angleY 182.335
        angleZ -0.216
        scale 1.09
       }
       {
-       coords 139.37 -0 -25.818
+       coords 139.37 0 -25.818
        angleX -1.044
        angleY 104.307
        angleZ 0.153
        scale 0.981
       }
       {
-       coords 148.278 -0 -20.462
+       coords 148.278 0 -20.462
        angleX -1.223
        angleY 329.182
        angleZ -0.281
        scale 0.817
       }
       {
-       coords 144.351 -0 -17.893
+       coords 144.351 0 -17.893
        angleX -0.899
        angleY 165.437
        angleZ -1.133
        scale 1.136
       }
       {
-       coords 144.46 -0 -27.453
+       coords 144.46 0 -27.453
        angleX 0.463
        angleY 317.24
        angleZ 0.939
        scale 1.008
       }
       {
-       coords 144.847 -0 -33.316
+       coords 144.847 0 -33.316
        angleX -0.095
        angleY 188.641
        angleZ 1.461
        scale 0.812
       }
       {
-       coords 144.558 -0 -21.818
+       coords 144.558 0 -21.818
        angleX 1.287
        angleY 42.881
        angleZ 0.223
        scale 1.038
       }
       {
-       coords 147.83 -0 -29.57
+       coords 147.83 0 -29.57
        angleX 0.6
        angleY 300.397
        angleZ 1.379
        scale 1.08
       }
       {
-       coords 140.061 -0 -24.231
+       coords 140.061 0 -24.231
        angleX 1.154
        angleY 264.119
        angleZ -1.15
        scale 1.104
       }
       {
-       coords 137.562 -0 -37.239
+       coords 137.562 0 -37.239
        angleX 0.764
        angleY 200.507
        angleZ -0.529
@@ -53430,189 +53412,189 @@ $grp PolylineShapeEntity {
        scale 0.976
       }
       {
-       coords 24.674 -0 -42.762
+       coords 24.674 0 -42.762
        angleX -0.001
        angleY 54.197
        angleZ -0.739
        scale 1.043
       }
       {
-       coords 26.451 -0 -46.234
+       coords 26.451 0 -46.234
        angleX -0.641
        angleY 346.926
        angleZ -0.45
        scale 1.062
       }
       {
-       coords 31.995 -0 -48.591
+       coords 31.995 0 -48.591
        angleX -1.429
        angleY 143.804
        angleZ 1.059
        scale 0.987
       }
       {
-       coords 26.755 -0 -41.829
+       coords 26.755 0 -41.829
        angleX -0.553
        angleY 252.572
        angleZ 1.442
        scale 1.133
       }
       {
-       coords 29.936 -0 -24.447
+       coords 29.936 0 -24.447
        angleX 0.724
        angleY 2.23
        angleZ 1.449
        scale 1.053
       }
       {
-       coords 32.724 -0 -42.489
+       coords 32.724 0 -42.489
        angleX 0.948
        angleY 277.007
        angleZ -1.088
        scale 0.937
       }
       {
-       coords 35.699 -0 -29.601
+       coords 35.699 0 -29.601
        angleX 0.698
        angleY 93.167
        angleZ -1.469
        scale 0.952
       }
       {
-       coords 28.771 -0 -25.693
+       coords 28.771 0 -25.693
        angleX 0.923
        angleY 337.357
        angleZ 1.363
        scale 1.109
       }
       {
-       coords 32.896 -0 -31.301
+       coords 32.896 0 -31.301
        angleX 0.933
        angleY 216.481
        angleZ 1.488
        scale 1.111
       }
       {
-       coords 25.729 -0 -47.993
+       coords 25.729 0 -47.993
        angleX -0.962
        angleY 253.276
        angleZ -0.606
        scale 1.041
       }
       {
-       coords 33.138 -0 -29.215
+       coords 33.138 0 -29.215
        angleX 1.187
        angleY 280.49
        angleZ -1.043
        scale 1.034
       }
       {
-       coords 31.943 -0 -47.876
+       coords 31.943 0 -47.876
        angleX -1.156
        angleY 75.72
        angleZ 1.435
        scale 0.982
       }
       {
-       coords 36.591 -0 -37.056
+       coords 36.591 0 -37.056
        angleX 1.051
        angleY 257.275
        angleZ 1.299
        scale 0.881
       }
       {
-       coords 27.981 -0 -47.158
+       coords 27.981 0 -47.158
        angleX 0.981
        angleY 52.879
        angleZ -0.896
        scale 1.147
       }
       {
-       coords 35.835 -0 -27.906
+       coords 35.835 0 -27.906
        angleX -0.614
        angleY 69.645
        angleZ 1.454
        scale 1.17
       }
       {
-       coords 29.889 -0 -40.504
+       coords 29.889 0 -40.504
        angleX -1.311
        angleY 267.13
        angleZ 0.334
        scale 0.895
       }
       {
-       coords 36.951 -0 -38.576
+       coords 36.951 0 -38.576
        angleX -1.359
        angleY 21.655
        angleZ 0.728
        scale 1.022
       }
       {
-       coords 25.779 -0 -49.845
+       coords 25.779 0 -49.845
        angleX 1.495
        angleY 79.214
        angleZ 0.976
        scale 1.086
       }
       {
-       coords 27.542 -0 -45.59
+       coords 27.542 0 -45.59
        angleX 0.842
        angleY 351.255
        angleZ 0.441
        scale 0.999
       }
       {
-       coords 24.977 -0 -37.81
+       coords 24.977 0 -37.81
        angleX 0.814
        angleY 199.265
        angleZ -0.156
        scale 1.121
       }
       {
-       coords 31.427 -0 -47.155
+       coords 31.427 0 -47.155
        angleX -0.409
        angleY 180.862
        angleZ -0.395
        scale 0.884
       }
       {
-       coords 32.332 -0 -49.675
+       coords 32.332 0 -49.675
        angleX 0.461
        angleY 35.113
        angleZ -0.487
        scale 1.127
       }
       {
-       coords 32.911 -0 -25.046
+       coords 32.911 0 -25.046
        angleX -0.814
        angleY 352.331
        angleZ 0.612
        scale 1.118
       }
       {
-       coords 37.286 -0 -27.105
+       coords 37.286 0 -27.105
        angleX -0.499
        angleY 311.23
        angleZ -0.168
        scale 1.174
       }
       {
-       coords 31.739 -0 -43.427
+       coords 31.739 0 -43.427
        angleX -0.832
        angleY 343.146
        angleZ 0.212
        scale 1.107
       }
       {
-       coords 35.808 -0 -37.782
+       coords 35.808 0 -37.782
        angleX 0.357
        angleY 330.457
        angleZ -1.396
        scale 0.993
       }
       {
-       coords 32.06 -0 -34.723
+       coords 32.06 0 -34.723
        angleX 0.767
        angleY 175.776
        angleZ -0.347
@@ -53882,7 +53864,6 @@ $grp PolylineShapeEntity {
        angleX -1.088
        angleY 57.801
        angleZ -1.044
-       scale 1
       }
       {
        coords 1086.187 -13.719 -273.103
@@ -54515,210 +54496,210 @@ $grp PolylineShapeEntity {
        scale 1.2
       }
       {
-       coords 45.693 -0 -38.726
+       coords 45.693 0 -38.726
        angleX 0.901
        angleY 239.18
        angleZ -0.826
        scale 0.902
       }
       {
-       coords 47.287 -0 -24.77
+       coords 47.287 0 -24.77
        angleX 0.22
        angleY 261.889
        angleZ -0.208
        scale 0.958
       }
       {
-       coords 42.876 -0 -36.071
+       coords 42.876 0 -36.071
        angleX 1.367
        angleY 289.499
        angleZ 1.076
        scale 0.933
       }
       {
-       coords 45.22 -0 -26.445
+       coords 45.22 0 -26.445
        angleX -0.609
        angleY 20.787
        angleZ 1.163
        scale 1.039
       }
       {
-       coords 50.336 -0 -32.25
+       coords 50.336 0 -32.25
        angleX -0.792
        angleY 83.004
        angleZ -0.053
        scale 1.048
       }
       {
-       coords 48.03 -0 -42.165
+       coords 48.03 0 -42.165
        angleX -1.04
        angleY 130.038
        angleZ -1.071
        scale 0.985
       }
       {
-       coords 42.604 -0 -40.423
+       coords 42.604 0 -40.423
        angleX 0.642
        angleY 223.447
        angleZ 0.763
        scale 1.058
       }
       {
-       coords 48.08 -0 -23.871
+       coords 48.08 0 -23.871
        angleX 1.204
        angleY 170.052
        angleZ -1.295
        scale 1.122
       }
       {
-       coords 43.956 -0 -39.53
+       coords 43.956 0 -39.53
        angleX -0.773
        angleY 35.069
        angleZ -1.078
        scale 1.026
       }
       {
-       coords 48.156 -0 -20.304
+       coords 48.156 0 -20.304
        angleX 0.666
        angleY 309.319
        angleZ 0.906
        scale 0.826
       }
       {
-       coords 47.9 -0 -22.997
+       coords 47.9 0 -22.997
        angleX -1.086
        angleY 320.679
        angleZ 1.07
        scale 1.059
       }
       {
-       coords 47.803 -0 -17.803
+       coords 47.803 0 -17.803
        angleX 0.326
        angleY 293.443
        angleZ 0.55
        scale 0.994
       }
       {
-       coords 46.049 -0 -35.959
+       coords 46.049 0 -35.959
        angleX 0.017
        angleY 76.72
        angleZ -1.351
        scale 1.042
       }
       {
-       coords 47.905 -0 -26.833
+       coords 47.905 0 -26.833
        angleX 0.796
        angleY 161.702
        angleZ 1.324
        scale 0.994
       }
       {
-       coords 42.939 -0 -31.995
+       coords 42.939 0 -31.995
        angleX -0.351
        angleY 193.552
        angleZ -0.232
        scale 1.114
       }
       {
-       coords 49.707 -0 -41.803
+       coords 49.707 0 -41.803
        angleX -0.705
        angleY 231.478
        angleZ -1.074
        scale 1.166
       }
       {
-       coords 53.526 -0 -27.378
+       coords 53.526 0 -27.378
        angleX -0.617
        angleY 0.341
        angleZ -0.639
        scale 0.999
       }
       {
-       coords 53.665 -0 -21.232
+       coords 53.665 0 -21.232
        angleX -0.303
        angleY 268.338
        angleZ 1.015
        scale 0.866
       }
       {
-       coords 53.212 -0 -26.622
+       coords 53.212 0 -26.622
        angleX 0.551
        angleY 128.379
        angleZ -0.341
        scale 1.181
       }
       {
-       coords 44.898 -0 -20.906
+       coords 44.898 0 -20.906
        angleX -0.7
        angleY 265.921
        angleZ 0.082
        scale 0.918
       }
       {
-       coords 47.421 -0 -44.445
+       coords 47.421 0 -44.445
        angleX 0.568
        angleY 326.82
        angleZ 1.038
        scale 1.103
       }
       {
-       coords 45.666 -0 -40.376
+       coords 45.666 0 -40.376
        angleX -0.558
        angleY 201.012
        angleZ 0.157
        scale 1.172
       }
       {
-       coords 43.74 -0 -32.204
+       coords 43.74 0 -32.204
        angleX -0.124
        angleY 97.847
        angleZ -0.241
        scale 1.078
       }
       {
-       coords 43.385 -0 -34.731
+       coords 43.385 0 -34.731
        angleX 1.057
        angleY 289.51
        angleZ 0.258
        scale 1.194
       }
       {
-       coords 54.07 -0 -20.432
+       coords 54.07 0 -20.432
        angleX -0.675
        angleY 287.543
        angleZ 1.312
        scale 1.174
       }
       {
-       coords 46.954 -0 -27.457
+       coords 46.954 0 -27.457
        angleX -0.829
        angleY 313.559
        angleZ -0.122
        scale 1.025
       }
       {
-       coords 41.998 -0 -33.532
+       coords 41.998 0 -33.532
        angleX 1.086
        angleY 39.816
        angleZ 0.454
        scale 0.845
       }
       {
-       coords 44.564 -0 -18.275
+       coords 44.564 0 -18.275
        angleX -0.534
        angleY 64.843
        angleZ 1.358
        scale 0.861
       }
       {
-       coords 50.761 -0 -24.332
+       coords 50.761 0 -24.332
        angleX 1.161
        angleY 239.652
        angleZ -1.15
        scale 0.809
       }
       {
-       coords 45.747 -0 -32.68
+       coords 45.747 0 -32.68
        angleX 0.842
        angleY 116.656
        angleZ -0.382
@@ -56817,28 +56798,28 @@ $grp PolylineShapeEntity {
        scale 0.955
       }
       {
-       coords 204.961 -0 -76.478
+       coords 204.961 0 -76.478
        angleX 0.366
        angleY 295.025
        angleZ 1.434
        scale 1.104
       }
       {
-       coords 201.749 -0 -78.52
+       coords 201.749 0 -78.52
        angleX -0.258
        angleY 207.439
        angleZ 0.334
        scale 1.105
       }
       {
-       coords 196.645 -0 -86.109
+       coords 196.645 0 -86.109
        angleX 0.22
        angleY 201.517
        angleZ -1.446
        scale 0.949
       }
       {
-       coords 200.628 -0 -84.264
+       coords 200.628 0 -84.264
        angleX 1.208
        angleY 197.529
        angleZ 1.141
@@ -56985,21 +56966,21 @@ $grp PolylineShapeEntity {
        scale 1.113
       }
       {
-       coords 17.676 -0 7.993
+       coords 17.676 0 7.993
        angleX -1.386
        angleY 85.597
        angleZ 0.945
        scale 1.142
       }
       {
-       coords 17.442 -0 2.559
+       coords 17.442 0 2.559
        angleX -1.317
        angleY 8.636
        angleZ 0.305
        scale 0.987
       }
       {
-       coords 13.522 -0 4.668
+       coords 13.522 0 4.668
        angleX 0.38
        angleY 211.175
        angleZ 0.24
@@ -57013,7 +56994,7 @@ $grp PolylineShapeEntity {
        scale 0.895
       }
       {
-       coords 5.565 -0 -13.304
+       coords 5.565 0 -13.304
        angleX -0.531
        angleY 76.039
        angleZ -1.485
@@ -57892,7 +57873,6 @@ $grp PolylineShapeEntity {
        angleX -1.045
        angleY 265.669
        angleZ -1.371
-       scale 1
       }
       {
        coords 524.449 -13.719 -132.866
@@ -58469,14 +58449,14 @@ $grp PolylineShapeEntity {
        scale 0.838
       }
       {
-       coords 304.694 -0 -53.801
+       coords 304.694 0 -53.801
        angleX -0.949
        angleY 28.214
        angleZ -1.374
        scale 1.062
       }
       {
-       coords 301.202 -0 -46.894
+       coords 301.202 0 -46.894
        angleX -1.173
        angleY 123.754
        angleZ -0.295
@@ -58490,7 +58470,7 @@ $grp PolylineShapeEntity {
        scale 1.15
       }
       {
-       coords 301.325 -0 -56.229
+       coords 301.325 0 -56.229
        angleX 0.337
        angleY 311.626
        angleZ -0.582
@@ -58511,21 +58491,21 @@ $grp PolylineShapeEntity {
        scale 1.079
       }
       {
-       coords 300.6 -0 -56.069
+       coords 300.6 0 -56.069
        angleX 1.313
        angleY 67.491
        angleZ 0.733
        scale 0.858
       }
       {
-       coords 301.837 -0 -58.32
+       coords 301.837 0 -58.32
        angleX -0.288
        angleY 259.087
        angleZ 0.398
        scale 1.134
       }
       {
-       coords 301.061 -0 -51.409
+       coords 301.061 0 -51.409
        angleX -0.335
        angleY 96.858
        angleZ -0.141
@@ -58539,7 +58519,7 @@ $grp PolylineShapeEntity {
        scale 0.823
       }
       {
-       coords 296.414 -0 -53.989
+       coords 296.414 0 -53.989
        angleX 0.812
        angleY 296.442
        angleZ 0.507
@@ -59061,7 +59041,6 @@ $grp PolylineShapeEntity {
        angleX 0.127
        angleY 59.295
        angleZ 0.832
-       scale 1
       }
       {
        coords 348.319 -7.779 -102.681
@@ -59442,126 +59421,126 @@ $grp PolylineShapeEntity {
        scale 1.163
       }
       {
-       coords 65.514 -0 -25.967
+       coords 65.514 0 -25.967
        angleX 0.672
        angleY 122.062
        angleZ 0.175
        scale 1.014
       }
       {
-       coords 60.244 -0 -18.882
+       coords 60.244 0 -18.882
        angleX -1.352
        angleY 24.929
        angleZ -0.276
        scale 1.044
       }
       {
-       coords 68.668 -0 -15.411
+       coords 68.668 0 -15.411
        angleX 0.436
        angleY 152.11
        angleZ -1.294
        scale 0.814
       }
       {
-       coords 62.303 -0 -7.494
+       coords 62.303 0 -7.494
        angleX 1.032
        angleY 127.302
        angleZ 0.907
        scale 1.12
       }
       {
-       coords 66.834 -0 -26.979
+       coords 66.834 0 -26.979
        angleX 0.562
        angleY 266.372
        angleZ -0.079
        scale 1.144
       }
       {
-       coords 69.397 -0 -20.107
+       coords 69.397 0 -20.107
        angleX 1.362
        angleY 359.868
        angleZ -0.201
        scale 1.16
       }
       {
-       coords 57.329 -0 -31.302
+       coords 57.329 0 -31.302
        angleX -0.077
        angleY 235.06
        angleZ 0.638
        scale 1.086
       }
       {
-       coords 64.609 -0 -24.513
+       coords 64.609 0 -24.513
        angleX 0.711
        angleY 340.29
        angleZ -0.3
        scale 0.809
       }
       {
-       coords 60.183 -0 -26.893
+       coords 60.183 0 -26.893
        angleX 0.244
        angleY 100.781
        angleZ 0.624
        scale 1.174
       }
       {
-       coords 68.477 -0 -14.577
+       coords 68.477 0 -14.577
        angleX 1.357
        angleY 61.317
        angleZ 0.041
        scale 1.105
       }
       {
-       coords 58.043 -0 -25.876
+       coords 58.043 0 -25.876
        angleX 1.405
        angleY 129.796
        angleZ 1.444
        scale 1.04
       }
       {
-       coords 56.79 -0 -27.547
+       coords 56.79 0 -27.547
        angleX 1.024
        angleY 32.773
        angleZ -0.682
        scale 0.822
       }
       {
-       coords 66.67 -0 -14.575
+       coords 66.67 0 -14.575
        angleX 0.47
        angleY 242.772
        angleZ 0.967
        scale 0.951
       }
       {
-       coords 60.54 -0 -19.499
+       coords 60.54 0 -19.499
        angleX -0.866
        angleY 166.272
        angleZ -0.822
        scale 0.921
       }
       {
-       coords 61.785 -0 -34.583
+       coords 61.785 0 -34.583
        angleX -0.994
        angleY 32.982
        angleZ -0.888
        scale 1.01
       }
       {
-       coords 56.85 -0 -26.953
+       coords 56.85 0 -26.953
        angleX 1.02
        angleY 335.884
        angleZ 0.132
        scale 0.942
       }
       {
-       coords 59.661 -0 -24.784
+       coords 59.661 0 -24.784
        angleX 0.448
        angleY 191.179
        angleZ -0.219
        scale 0.878
       }
       {
-       coords 57.559 -0 -24.284
+       coords 57.559 0 -24.284
        angleX -0.059
        angleY 30.136
        angleZ 0.555
@@ -60223,7 +60202,6 @@ $grp PolylineShapeEntity {
        angleX -0.365
        angleY 295.464
        angleZ 1.264
-       scale 1
       }
       {
        coords 1119.284 -13.688 -404.049
@@ -60632,7 +60610,7 @@ $grp PolylineShapeEntity {
        scale 0.999
       }
       {
-       coords 194.461 -0 -110.682
+       coords 194.461 0 -110.682
        angleX -0.915
        angleY 339.312
        angleZ -1.333
@@ -62015,7 +61993,6 @@ $grp PolylineShapeEntity {
        angleX -1.122
        angleY 104.132
        angleZ -0.663
-       scale 1
       }
       {
        coords 857.017 -13.719 -263.08
@@ -63551,84 +63528,84 @@ $grp PolylineShapeEntity {
        scale 0.82
       }
       {
-       coords 71.548 -0 -31.472
+       coords 71.548 0 -31.472
        angleX -1.143
        angleY 336.291
        angleZ -1.429
        scale 1.095
       }
       {
-       coords 73.538 -0 -29.147
+       coords 73.538 0 -29.147
        angleX -1.301
        angleY 235.159
        angleZ -0.232
        scale 1.178
       }
       {
-       coords 72.106 -0 -31.302
+       coords 72.106 0 -31.302
        angleX 1.459
        angleY 204.33
        angleZ -0.949
        scale 0.824
       }
       {
-       coords 71.963 -0 -29.393
+       coords 71.963 0 -29.393
        angleX 1.467
        angleY 248.837
        angleZ 0.836
        scale 0.805
       }
       {
-       coords 74.269 -0 -28.9
+       coords 74.269 0 -28.9
        angleX 0.654
        angleY 154.275
        angleZ 0.728
        scale 1.052
       }
       {
-       coords 74.369 -0 -31.591
+       coords 74.369 0 -31.591
        angleX -0.155
        angleY 236.51
        angleZ -0.066
        scale 1.135
       }
       {
-       coords 72.254 -0 -28.012
+       coords 72.254 0 -28.012
        angleX -0.337
        angleY 236.092
        angleZ 0.593
        scale 0.97
       }
       {
-       coords 70.876 -0 -28.89
+       coords 70.876 0 -28.89
        angleX 1.2
        angleY 303.66
        angleZ 0.266
        scale 1.124
       }
       {
-       coords 73.121 -0 -29.869
+       coords 73.121 0 -29.869
        angleX -0.794
        angleY 154.989
        angleZ -1
        scale 1.068
       }
       {
-       coords 71.687 -0 -28.613
+       coords 71.687 0 -28.613
        angleX 0.112
        angleY 296.387
        angleZ 0.703
        scale 1.189
       }
       {
-       coords 74.923 -0 -29.043
+       coords 74.923 0 -29.043
        angleX 1.093
        angleY 164.152
        angleZ 1.154
        scale 0.94
       }
       {
-       coords 73.783 -0 -30.729
+       coords 73.783 0 -30.729
        angleX -0.357
        angleY 247.793
        angleZ -0.294
@@ -63789,70 +63766,69 @@ $grp PolylineShapeEntity {
        scale 0.916
       }
       {
-       coords 211.54 -0 -56.041
+       coords 211.54 0 -56.041
        angleX 0.605
        angleY 321.184
        angleZ -0.568
        scale 1.137
       }
       {
-       coords 212.083 -0 -54.812
+       coords 212.083 0 -54.812
        angleX -0.801
        angleY 349.409
        angleZ -1.169
        scale 0.975
       }
       {
-       coords 210.567 -0 -56.185
+       coords 210.567 0 -56.185
        angleX -0.725
        angleY 290.652
        angleZ -0.919
        scale 1.069
       }
       {
-       coords 213.319 -0 -57.025
+       coords 213.319 0 -57.025
        angleX 0.163
        angleY 101.726
        angleZ 1.367
-       scale 1
       }
       {
-       coords 214.558 -0 -56.48
+       coords 214.558 0 -56.48
        angleX -1.143
        angleY 36.344
        angleZ 0.596
        scale 1.158
       }
       {
-       coords 212.721 -0 -54.628
+       coords 212.721 0 -54.628
        angleX -1.259
        angleY 205.604
        angleZ 0.878
        scale 1.121
       }
       {
-       coords 211.997 -0 -55.553
+       coords 211.997 0 -55.553
        angleX -1.46
        angleY 208.648
        angleZ -1.12
        scale 0.91
       }
       {
-       coords 213.801 -0 -54.443
+       coords 213.801 0 -54.443
        angleX 0.416
        angleY 235.246
        angleZ 1.454
        scale 0.933
       }
       {
-       coords 212.419 -0 -57.94
+       coords 212.419 0 -57.94
        angleX -1.425
        angleY 197.87
        angleZ 0.459
        scale 0.806
       }
       {
-       coords 214.236 -0 -55.83
+       coords 214.236 0 -55.83
        angleX -0.559
        angleY 147.232
        angleZ -0.595
@@ -64489,35 +64465,35 @@ $grp PolylineShapeEntity {
        scale 1.097
       }
       {
-       coords 313.63 -0 -17.911
+       coords 313.63 0 -17.911
        angleX 1.175
        angleY 89.783
        angleZ -1.091
        scale 1.149
       }
       {
-       coords 314.03 -0 -20.434
+       coords 314.03 0 -20.434
        angleX 0.45
        angleY 95.716
        angleZ 0.259
        scale 1.143
       }
       {
-       coords 314.169 -0 -18.914
+       coords 314.169 0 -18.914
        angleX 0.82
        angleY 285.84
        angleZ 0.22
        scale 1.184
       }
       {
-       coords 311.935 -0 -19.071
+       coords 311.935 0 -19.071
        angleX -1.479
        angleY 297.464
        angleZ -0.162
        scale 1.128
       }
       {
-       coords 313.61 -0 -21.472
+       coords 313.61 0 -21.472
        angleX 0.015
        angleY 102.528
        angleZ 0.076
@@ -65301,63 +65277,63 @@ $grp PolylineShapeEntity {
        scale 1.006
       }
       {
-       coords 159.114 -0 -105.533
+       coords 159.114 0 -105.533
        angleX 1.044
        angleY 308.473
        angleZ 0.953
        scale 1.161
       }
       {
-       coords 159.519 -0 -101.665
+       coords 159.519 0 -101.665
        angleX 0.394
        angleY 327.754
        angleZ 1.369
        scale 0.831
       }
       {
-       coords 158.807 -0 -103.446
+       coords 158.807 0 -103.446
        angleX -0.5
        angleY 204.154
        angleZ 0.519
        scale 1.152
       }
       {
-       coords 161.258 -0 -103.678
+       coords 161.258 0 -103.678
        angleX -0.821
        angleY 336.192
        angleZ 1.131
        scale 0.944
       }
       {
-       coords 157.899 -0 -103.204
+       coords 157.899 0 -103.204
        angleX -0.652
        angleY 209.197
        angleZ 1.18
        scale 1.005
       }
       {
-       coords 158.81 -0 -104.96
+       coords 158.81 0 -104.96
        angleX 0.214
        angleY 339.147
        angleZ 0.298
        scale 0.899
       }
       {
-       coords 159.72 -0 -104.649
+       coords 159.72 0 -104.649
        angleX 0.921
        angleY 195.354
        angleZ 0.613
        scale 0.84
       }
       {
-       coords 160.83 -0 -101.99
+       coords 160.83 0 -101.99
        angleX -0.514
        angleY 186.378
        angleZ -0.473
        scale 0.887
       }
       {
-       coords 159.582 -0 -102.831
+       coords 159.582 0 -102.831
        angleX -0.323
        angleY 311.593
        angleZ 0.472
@@ -65665,42 +65641,42 @@ $grp PolylineShapeEntity {
        scale 1.053
       }
       {
-       coords 220.685 -0 -127.258
+       coords 220.685 0 -127.258
        angleX 0.275
        angleY 325.513
        angleZ -0.18
        scale 1.126
       }
       {
-       coords 220.49 -0 -125.709
+       coords 220.49 0 -125.709
        angleX -0.349
        angleY 342.399
        angleZ -0.64
        scale 0.876
       }
       {
-       coords 221.346 -0 -126.938
+       coords 221.346 0 -126.938
        angleX 0.129
        angleY 66.491
        angleZ -0.941
        scale 1.163
       }
       {
-       coords 220.525 -0 -126.605
+       coords 220.525 0 -126.605
        angleX -0.427
        angleY 349.848
        angleZ 0.927
        scale 1.033
       }
       {
-       coords 221.334 -0 -128.351
+       coords 221.334 0 -128.351
        angleX -0.893
        angleY 223.919
        angleZ -0.465
        scale 1.008
       }
       {
-       coords 223.023 -0 -126.611
+       coords 223.023 0 -126.611
        angleX 0.254
        angleY 337.532
        angleZ -0.266
@@ -65798,14 +65774,14 @@ $grp PolylineShapeEntity {
        scale 1.079
       }
       {
-       coords 134.836 -0 -67.549
+       coords 134.836 0 -67.549
        angleX -1.324
        angleY 226.545
        angleZ -0.137
        scale 1.029
       }
       {
-       coords 135.509 -0 -66.371
+       coords 135.509 0 -66.371
        angleX -0.755
        angleY 227.918
        angleZ 0.617
@@ -66115,14 +66091,14 @@ $grp PolylineShapeEntity {
        scale 0.779
       }
       {
-       coords 186.721 -0 -87.182
+       coords 186.721 0 -87.182
        angleX 0.455
        angleY 322.986
        angleZ -1.331
        scale 0.816
       }
       {
-       coords 180.193 -0 -94.729
+       coords 180.193 0 -94.729
        angleX 1.791
        angleY 286.203
        angleZ 0.056
@@ -66178,7 +66154,7 @@ $grp PolylineShapeEntity {
        scale 0.858
       }
       {
-       coords 222.567 -0 -128.525
+       coords 222.567 0 -128.525
        angleX -0.828
        angleY 81.807
        angleZ -1.797
@@ -66262,14 +66238,14 @@ $grp PolylineShapeEntity {
        scale 0.757
       }
       {
-       coords 315.897 -0 -24.596
+       coords 315.897 0 -24.596
        angleX -0.221
        angleY 123.04
        angleZ 0.737
        scale 0.779
       }
       {
-       coords 320.53 -0 -13.794
+       coords 320.53 0 -13.794
        angleX -1.423
        angleY 147.078
        angleZ 1.991
@@ -66579,42 +66555,42 @@ $grp PolylineShapeEntity {
        scale 1.077
       }
       {
-       coords 187.318 -0 -84.163
+       coords 187.318 0 -84.163
        angleX 0.228
        angleY 99.935
        angleZ 1.42
        scale 1.071
       }
       {
-       coords 194.162 -0 -80.915
+       coords 194.162 0 -80.915
        angleX 0.185
        angleY 176.226
        angleZ 0.751
        scale 1.163
       }
       {
-       coords 198.753 -0 -65.755
+       coords 198.753 0 -65.755
        angleX 0.16
        angleY 263.273
        angleZ 0.93
        scale 0.849
       }
       {
-       coords 182.914 -0 -86.619
+       coords 182.914 0 -86.619
        angleX -0.102
        angleY 102.835
        angleZ 0.115
        scale 1.017
       }
       {
-       coords 170.631 -0 -84.383
+       coords 170.631 0 -84.383
        angleX -0.837
        angleY 238.597
        angleZ -0.353
        scale 1.065
       }
       {
-       coords 178.073 -0 -83.46
+       coords 178.073 0 -83.46
        angleX 0.045
        angleY 0.022
        angleZ -0.468
@@ -66705,14 +66681,14 @@ $grp PolylineShapeEntity {
        scale 0.971
       }
       {
-       coords 223.914 -0 -122.822
+       coords 223.914 0 -122.822
        angleX 0.667
        angleY 307.165
        angleZ -1.452
        scale 0.977
       }
       {
-       coords 222.222 -0 -122.925
+       coords 222.222 0 -122.925
        angleX -0.561
        angleY 42.046
        angleZ -0.313
@@ -66852,14 +66828,14 @@ $grp PolylineShapeEntity {
        scale 1.062
       }
       {
-       coords 324.502 -0 -17.062
+       coords 324.502 0 -17.062
        angleX -0.823
        angleY 189.981
        angleZ 0.02
        scale 1.12
       }
       {
-       coords 324.902 -0 -26.885
+       coords 324.902 0 -26.885
        angleX -0.218
        angleY 324.03
        angleZ 1.415
@@ -67347,7 +67323,7 @@ $grp PolylineShapeEntity {
        scale 0.976
       }
       {
-       coords 278.186 -0 -43.842
+       coords 278.186 0 -43.842
        angleY 277.183
        scale 0.922
       }
@@ -67362,17 +67338,17 @@ $grp PolylineShapeEntity {
        scale 1.183
       }
       {
-       coords 280.797 -0 -58.06
+       coords 280.797 0 -58.06
        angleY 237.158
        scale 1.173
       }
       {
-       coords 279.968 -0 -41.312
+       coords 279.968 0 -41.312
        angleY 275.831
        scale 0.895
       }
       {
-       coords 275.825 -0 -43.473
+       coords 275.825 0 -43.473
        angleY 266.372
        scale 0.97
       }
@@ -67382,7 +67358,7 @@ $grp PolylineShapeEntity {
        scale 0.83
       }
       {
-       coords 285.356 -0 -53.632
+       coords 285.356 0 -53.632
        angleY 228.545
        scale 1.107
       }
@@ -67422,17 +67398,17 @@ $grp PolylineShapeEntity {
        scale 1.141
       }
       {
-       coords 284.762 -0 -46.57
+       coords 284.762 0 -46.57
        angleY 1.439
        scale 1.052
       }
       {
-       coords 272.27 -0 -60.066
+       coords 272.27 0 -60.066
        angleY 331.413
        scale 0.858
       }
       {
-       coords 279.594 -0 -57.626
+       coords 279.594 0 -57.626
        angleY 8.998
        scale 1.04
       }
@@ -67442,7 +67418,7 @@ $grp PolylineShapeEntity {
        scale 0.917
       }
       {
-       coords 279.238 -0 -52.499
+       coords 279.238 0 -52.499
        angleY 95.309
        scale 1.135
       }
@@ -67452,7 +67428,7 @@ $grp PolylineShapeEntity {
        scale 1.159
       }
       {
-       coords 276.534 -0 -52.551
+       coords 276.534 0 -52.551
        angleY 210.779
        scale 1.103
       }
@@ -67462,7 +67438,7 @@ $grp PolylineShapeEntity {
        scale 0.903
       }
       {
-       coords 276.103 -0 -49.284
+       coords 276.103 0 -49.284
        angleY 109.262
        scale 1.076
       }
@@ -67472,17 +67448,17 @@ $grp PolylineShapeEntity {
        scale 1.075
       }
       {
-       coords 278.325 -0 -56.683
+       coords 278.325 0 -56.683
        angleY 186.268
        scale 0.8
       }
       {
-       coords 276.245 -0 -60.776
+       coords 276.245 0 -60.776
        angleY 168.689
        scale 1.075
       }
       {
-       coords 281.428 -0 -51.731
+       coords 281.428 0 -51.731
        angleY 227.885
        scale 0.892
       }
@@ -67492,7 +67468,7 @@ $grp PolylineShapeEntity {
        scale 1.166
       }
       {
-       coords 276.319 -0 -49.842
+       coords 276.319 0 -49.842
        angleY 79.598
        scale 0.907
       }
@@ -68237,37 +68213,37 @@ $grp PolylineShapeEntity {
        scale 0.928
       }
       {
-       coords 146.333 -0 -20.42
+       coords 146.333 0 -20.42
        angleY 354.518
        scale 1.088
       }
       {
-       coords 147.933 -0 -23.234
+       coords 147.933 0 -23.234
        angleY 125.775
        scale 1.195
       }
       {
-       coords 135.908 -0 -42.827
+       coords 135.908 0 -42.827
        angleY 195.892
        scale 1.09
       }
       {
-       coords 135.894 -0 -38.817
+       coords 135.894 0 -38.817
        angleY 317.031
        scale 1.07
       }
       {
-       coords 141.847 -0 -28.909
+       coords 141.847 0 -28.909
        angleY 89.64
        scale 0.941
       }
       {
-       coords 147.066 -0 -27.406
+       coords 147.066 0 -27.406
        angleY 32.389
        scale 0.972
       }
       {
-       coords 138.505 -0 -22.187
+       coords 138.505 0 -22.187
        angleY 356.407
        scale 1.032
       }
@@ -68402,12 +68378,12 @@ $grp PolylineShapeEntity {
        scale 0.931
       }
       {
-       coords 26.17 -0 -47.035
+       coords 26.17 0 -47.035
        angleY 99.462
        scale 1.058
       }
       {
-       coords 33.566 -0 -28.054
+       coords 33.566 0 -28.054
        angleY 233.148
        scale 1.094
       }
@@ -69317,147 +69293,147 @@ $grp PolylineShapeEntity {
        scale 0.872
       }
       {
-       coords 46.353 -0 -35.378
+       coords 46.353 0 -35.378
        angleY 268.316
        scale 1.087
       }
       {
-       coords 48.445 -0 -17.271
+       coords 48.445 0 -17.271
        angleY 283.665
        scale 1.129
       }
       {
-       coords 45.66 -0 -34.459
+       coords 45.66 0 -34.459
        angleY 167.81
        scale 0.84
       }
       {
-       coords 41.278 -0 -29.379
+       coords 41.278 0 -29.379
        angleY 74.215
        scale 1.033
       }
       {
-       coords 45.948 -0 -27.264
+       coords 45.948 0 -27.264
        angleY 210.175
        scale 1.103
       }
       {
-       coords 44.28 -0 -27.096
+       coords 44.28 0 -27.096
        angleY 141.662
        scale 1.03
       }
       {
-       coords 41.088 -0 -37.168
+       coords 41.088 0 -37.168
        angleY 154.374
        scale 0.831
       }
       {
-       coords 47.228 -0 -32.822
+       coords 47.228 0 -32.822
        angleY 198.87
        scale 0.9
       }
       {
-       coords 40.991 -0 -39.483
+       coords 40.991 0 -39.483
        angleY 45.177
        scale 1.175
       }
       {
-       coords 43.865 -0 -25.723
+       coords 43.865 0 -25.723
        angleY 63.92
        scale 1.057
       }
       {
-       coords 43.305 -0 -33.553
+       coords 43.305 0 -33.553
        angleY 143.398
        scale 1.136
       }
       {
-       coords 52.515 -0 -25.833
+       coords 52.515 0 -25.833
        angleY 11.723
        scale 1.063
       }
       {
-       coords 51.058 -0 -33.15
+       coords 51.058 0 -33.15
        angleY 164.998
        scale 0.889
       }
       {
-       coords 49.379 -0 -24.774
+       coords 49.379 0 -24.774
        angleY 14.667
        scale 0.94
       }
       {
-       coords 52.378 -0 -21.951
+       coords 52.378 0 -21.951
        angleY 244.42
        scale 1.023
       }
       {
-       coords 43.69 -0 -35.9
+       coords 43.69 0 -35.9
        angleY 77.346
        scale 0.805
       }
       {
-       coords 41.466 -0 -42.027
+       coords 41.466 0 -42.027
        angleY 336.565
        scale 1.199
       }
       {
-       coords 47.685 -0 -27.973
+       coords 47.685 0 -27.973
        angleY 91.376
        scale 0.918
       }
       {
-       coords 45.928 -0 -27.771
+       coords 45.928 0 -27.771
        angleY 350.189
        scale 0.948
       }
       {
-       coords 42.683 -0 -40.87
+       coords 42.683 0 -40.87
        angleY 342.191
        scale 0.822
       }
       {
-       coords 48.941 -0 -38.056
+       coords 48.941 0 -38.056
        angleY 226.347
        scale 0.911
       }
       {
-       coords 41.081 -0 -38.168
+       coords 41.081 0 -38.168
        angleY 77.006
        scale 0.953
       }
       {
-       coords 43.037 -0 -43.816
+       coords 43.037 0 -43.816
        angleY 264.658
        scale 1.022
       }
       {
-       coords 47.566 -0 -25.823
+       coords 47.566 0 -25.823
        angleY 155.626
        scale 1.02
       }
       {
-       coords 48.326 -0 -25.228
+       coords 48.326 0 -25.228
        angleY 282.423
        scale 0.909
       }
       {
-       coords 42.793 -0 -33.214
+       coords 42.793 0 -33.214
        angleY 78.752
        scale 0.8
       }
       {
-       coords 41.604 -0 -29.666
+       coords 41.604 0 -29.666
        angleY 172.051
        scale 0.871
       }
       {
-       coords 46.61 -0 -43.775
+       coords 46.61 0 -43.775
        angleY 147.826
        scale 1.116
       }
       {
-       coords 42.31 -0 -29.688
+       coords 42.31 0 -29.688
        angleY 285.774
        scale 0.804
       }
@@ -69929,7 +69905,6 @@ $grp PolylineShapeEntity {
       {
        coords 1000.945 -13.719 -261.226
        angleY 65.887
-       scale 1
       }
       {
        coords 1001.533 -13.719 -257.925
@@ -70867,72 +70842,72 @@ $grp PolylineShapeEntity {
        scale 1.103
       }
       {
-       coords 205.989 -0 -80.119
+       coords 205.989 0 -80.119
        angleY 20.402
        scale 0.879
       }
       {
-       coords 205.318 -0 -70.969
+       coords 205.318 0 -70.969
        angleY 132.62
        scale 1.086
       }
       {
-       coords 206.932 -0 -71.605
+       coords 206.932 0 -71.605
        angleY 86.048
        scale 0.893
       }
       {
-       coords 207.303 -0 -71.9
+       coords 207.303 0 -71.9
        angleY 61.932
        scale 1.054
       }
       {
-       coords 203.185 -0 -84.063
+       coords 203.185 0 -84.063
        angleY 126.347
        scale 0.848
       }
       {
-       coords 200.711 -0 -88.825
+       coords 200.711 0 -88.825
        angleY 195.101
        scale 0.934
       }
       {
-       coords 197.378 -0 -90.346
+       coords 197.378 0 -90.346
        angleY 108.307
        scale 0.91
       }
       {
-       coords 204.67 -0 -78.857
+       coords 204.67 0 -78.857
        angleY 354.001
        scale 1.168
       }
       {
-       coords 203.862 -0 -79.53
+       coords 203.862 0 -79.53
        angleY 250.078
        scale 0.984
       }
       {
-       coords 206.843 -0 -79.634
+       coords 206.843 0 -79.634
        angleY 315.251
        scale 0.941
       }
       {
-       coords 200.986 -0 -77.814
+       coords 200.986 0 -77.814
        angleY 40.881
        scale 0.981
       }
       {
-       coords 204.483 -0 -82.569
+       coords 204.483 0 -82.569
        angleY 136.323
        scale 1.021
       }
       {
-       coords 205.018 -0 -84.853
+       coords 205.018 0 -84.853
        angleY 65.48
        scale 1.137
       }
       {
-       coords 203.044 -0 -86.05
+       coords 203.044 0 -86.05
        angleY 314.131
        scale 0.843
       }
@@ -71012,122 +70987,122 @@ $grp PolylineShapeEntity {
        scale 0.97
       }
       {
-       coords 13.803 -0 -7.956
+       coords 13.803 0 -7.956
        angleY 326.842
        scale 0.919
       }
       {
-       coords 17.214 -0 10.721
+       coords 17.214 0 10.721
        angleY 180.917
        scale 1.02
       }
       {
-       coords 12.759 -0 -4.837
+       coords 12.759 0 -4.837
        angleY 37.904
        scale 0.821
       }
       {
-       coords 12.531 -0 6.219
+       coords 12.531 0 6.219
        angleY 277.545
        scale 1.113
       }
       {
-       coords 5.435 -0 -0.687
+       coords 5.435 0 -0.687
        angleY 341.839
        scale 1.173
       }
       {
-       coords 10.366 -0 -11.575
+       coords 10.366 0 -11.575
        angleY 214.46
        scale 1.188
       }
       {
-       coords 10.944 -0 5.443
+       coords 10.944 0 5.443
        angleY 174.875
        scale 0.863
       }
       {
-       coords 3.502 -0 -3.191
+       coords 3.502 0 -3.191
        angleY 254.308
        scale 1.048
       }
       {
-       coords 7.539 -0 -0.926
+       coords 7.539 0 -0.926
        angleY 267.393
        scale 1.002
       }
       {
-       coords 12.758 -0 -2.65
+       coords 12.758 0 -2.65
        angleY 333.742
        scale 0.959
       }
       {
-       coords 10.068 -0 10.314
+       coords 10.068 0 10.314
        angleY 298.607
        scale 1.067
       }
       {
-       coords 16.757 -0 4.355
+       coords 16.757 0 4.355
        angleY 90.047
        scale 0.97
       }
       {
-       coords 9.224 -0 3.623
+       coords 9.224 0 3.623
        angleY 224.458
        scale 0.9
       }
       {
-       coords 10.618 -0 -7.264
+       coords 10.618 0 -7.264
        angleY 14.392
        scale 0.945
       }
       {
-       coords 10.204 -0 6.471
+       coords 10.204 0 6.471
        angleY 126.819
        scale 1.147
       }
       {
-       coords 12.477 -0 4.345
+       coords 12.477 0 4.345
        angleY 257.703
        scale 1.017
       }
       {
-       coords 6.024 -0 -4.794
+       coords 6.024 0 -4.794
        angleY 95.936
        scale 1.004
       }
       {
-       coords 13.636 -0 9.389
+       coords 13.636 0 9.389
        angleY 202.682
        scale 1.182
       }
       {
-       coords 16.626 -0 6.334
+       coords 16.626 0 6.334
        angleY 255.748
        scale 0.964
       }
       {
-       coords 7.606 -0 -4.765
+       coords 7.606 0 -4.765
        angleY 3.779
        scale 0.807
       }
       {
-       coords 11.392 -0 1.744
+       coords 11.392 0 1.744
        angleY 296.728
        scale 1.063
       }
       {
-       coords 12.928 -0 -8.532
+       coords 12.928 0 -8.532
        angleY 330.534
        scale 1.003
       }
       {
-       coords 12.319 -0 5.732
+       coords 12.319 0 5.732
        angleY 179.764
        scale 0.835
       }
       {
-       coords 5.83 -0 -0.534
+       coords 5.83 0 -0.534
        angleY 94.364
        scale 1.019
       }
@@ -71137,37 +71112,37 @@ $grp PolylineShapeEntity {
        scale 1.095
       }
       {
-       coords 4.815 -0 -9.801
+       coords 4.815 0 -9.801
        angleY 78.928
        scale 0.996
       }
       {
-       coords 9.197 -0 -4.305
+       coords 9.197 0 -4.305
        angleY 66.513
        scale 0.955
       }
       {
-       coords 8.029 -0 4.975
+       coords 8.029 0 4.975
        angleY 54.824
        scale 1.121
       }
       {
-       coords 3.336 -0 -1.59
+       coords 3.336 0 -1.59
        angleY 7.339
        scale 1.004
       }
       {
-       coords 18.067 -0 5.618
+       coords 18.067 0 5.618
        angleY 185.642
        scale 0.837
       }
       {
-       coords 5.199 -0 -2.131
+       coords 5.199 0 -2.131
        angleY 358.649
        scale 1.08
       }
       {
-       coords 17.691 -0 -1.81
+       coords 17.691 0 -1.81
        angleY 129.654
        scale 1.017
       }
@@ -72324,7 +72299,6 @@ $grp PolylineShapeEntity {
       {
        coords 814.018 -9.092 -81.242
        angleY 225.919
-       scale 1
       }
       {
        coords 809.049 -11.234 -90.814
@@ -72497,12 +72471,12 @@ $grp PolylineShapeEntity {
        scale 1.093
       }
       {
-       coords 295.348 -0 -56.155
+       coords 295.348 0 -56.155
        angleY 283.467
        scale 1.184
       }
       {
-       coords 303.293 -0 -47.794
+       coords 303.293 0 -47.794
        angleY 260.933
        scale 1.138
       }
@@ -72512,7 +72486,7 @@ $grp PolylineShapeEntity {
        scale 1.113
       }
       {
-       coords 297.774 -0 -48.251
+       coords 297.774 0 -48.251
        angleY 38.168
        scale 1.098
       }
@@ -72522,27 +72496,27 @@ $grp PolylineShapeEntity {
        scale 0.991
       }
       {
-       coords 301.964 -0 -52.479
+       coords 301.964 0 -52.479
        angleY 248.683
        scale 0.902
       }
       {
-       coords 298.416 -0 -54.648
+       coords 298.416 0 -54.648
        angleY 92.541
        scale 0.806
       }
       {
-       coords 295.239 -0 -47.997
+       coords 295.239 0 -47.997
        angleY 314.109
        scale 1.137
       }
       {
-       coords 300.838 -0 -48.351
+       coords 300.838 0 -48.351
        angleY 308.22
        scale 0.851
       }
       {
-       coords 303.629 -0 -51.672
+       coords 303.629 0 -51.672
        angleY 214.723
        scale 0.997
       }
@@ -72562,7 +72536,7 @@ $grp PolylineShapeEntity {
        scale 0.939
       }
       {
-       coords 302.514 -0 -50.731
+       coords 302.514 0 -50.731
        angleY 215.13
        scale 1.075
       }
@@ -72572,7 +72546,7 @@ $grp PolylineShapeEntity {
        scale 1.009
       }
       {
-       coords 304.091 -0 -48.402
+       coords 304.091 0 -48.402
        angleY 210.878
        scale 1.179
       }
@@ -73102,117 +73076,117 @@ $grp PolylineShapeEntity {
        scale 1.14
       }
       {
-       coords 70.951 -0 -17.4
+       coords 70.951 0 -17.4
        angleY 216.24
        scale 1.173
       }
       {
-       coords 70.71 -0 -12.353
+       coords 70.71 0 -12.353
        angleY 249.628
        scale 1.075
       }
       {
-       coords 63.006 -0 -31.518
+       coords 63.006 0 -31.518
        angleY 280.874
        scale 0.828
       }
       {
-       coords 66.999 -0 -29.915
+       coords 66.999 0 -29.915
        angleY 121.831
        scale 1.162
       }
       {
-       coords 70.625 -0 -14.24
+       coords 70.625 0 -14.24
        angleY 348.244
        scale 0.883
       }
       {
-       coords 64.527 -0 -8.269
+       coords 64.527 0 -8.269
        angleY 141.102
        scale 0.861
       }
       {
-       coords 61.472 -0 -10.205
+       coords 61.472 0 -10.205
        angleY 6.306
        scale 0.965
       }
       {
-       coords 63.352 -0 -21.646
+       coords 63.352 0 -21.646
        angleY 159.164
        scale 0.851
       }
       {
-       coords 59.453 -0 -36.833
+       coords 59.453 0 -36.833
        angleY 275.677
        scale 1.126
       }
       {
-       coords 57.44 -0 -29.926
+       coords 57.44 0 -29.926
        angleY 359.308
        scale 1.051
       }
       {
-       coords 59.375 -0 -27.346
+       coords 59.375 0 -27.346
        angleY 73.633
        scale 1.011
       }
       {
-       coords 70.068 -0 -8.431
+       coords 70.068 0 -8.431
        angleY 300.76
        scale 0.833
       }
       {
-       coords 60.472 -0 -20.048
+       coords 60.472 0 -20.048
        angleY 291.773
        scale 1.082
       }
       {
-       coords 65.961 -0 -24.748
+       coords 65.961 0 -24.748
        angleY 333.456
        scale 1.131
       }
       {
-       coords 61.357 -0 -12.253
+       coords 61.357 0 -12.253
        angleY 8.712
        scale 1.165
       }
       {
-       coords 71.472 -0 -19.7
+       coords 71.472 0 -19.7
        angleY 68.667
        scale 1.036
       }
       {
-       coords 71.221 -0 -9.02
+       coords 71.221 0 -9.02
        angleY 151.484
        scale 0.868
       }
       {
-       coords 67.385 -0 -29.832
+       coords 67.385 0 -29.832
        angleY 255.275
        scale 0.929
       }
       {
-       coords 66.918 -0 -26.496
+       coords 66.918 0 -26.496
        angleY 326.381
        scale 1.032
       }
       {
-       coords 70.273 -0 -20.679
+       coords 70.273 0 -20.679
        angleY 228.347
        scale 0.832
       }
       {
-       coords 65.687 -0 -25.091
+       coords 65.687 0 -25.091
        angleY 168.667
        scale 1.058
       }
       {
-       coords 65.838 -0 -15.469
+       coords 65.838 0 -15.469
        angleY 172.721
        scale 0.808
       }
       {
-       coords 65.81 -0 -27.273
+       coords 65.81 0 -27.273
        angleY 254.275
        scale 0.807
       }
@@ -73777,12 +73751,12 @@ $grp PolylineShapeEntity {
        scale 1.167
       }
       {
-       coords 199.588 -0 -103.308
+       coords 199.588 0 -103.308
        angleY 274.293
        scale 1.097
       }
       {
-       coords 195.414 -0 -110.337
+       coords 195.414 0 -110.337
        angleY 179.709
        scale 1.156
       }
@@ -73792,32 +73766,32 @@ $grp PolylineShapeEntity {
        scale 0.861
       }
       {
-       coords 198.917 -0 -111.029
+       coords 198.917 0 -111.029
        angleY 157.417
        scale 0.893
       }
       {
-       coords 192.696 -0 -110.141
+       coords 192.696 0 -110.141
        angleY 341.114
        scale 0.845
       }
       {
-       coords 195.174 -0 -97.368
+       coords 195.174 0 -97.368
        angleY 189.685
        scale 1.043
       }
       {
-       coords 200.332 -0 -107.466
+       coords 200.332 0 -107.466
        angleY 60.745
        scale 0.854
       }
       {
-       coords 199.074 -0 -116.032
+       coords 199.074 0 -116.032
        angleY 169.931
        scale 0.915
       }
       {
-       coords 197.79 -0 -96.044
+       coords 197.79 0 -96.044
        angleY 97.089
        scale 0.938
       }
@@ -73832,12 +73806,12 @@ $grp PolylineShapeEntity {
        scale 1.149
       }
       {
-       coords 194.265 -0 -97.77
+       coords 194.265 0 -97.77
        angleY 338.235
        scale 0.897
       }
       {
-       coords 202.331 -0 -99.804
+       coords 202.331 0 -99.804
        angleY 354.935
        scale 0.966
       }
@@ -73847,7 +73821,7 @@ $grp PolylineShapeEntity {
        scale 1.065
       }
       {
-       coords 201.404 -0 -104.124
+       coords 201.404 0 -104.124
        angleY 201.067
        scale 1.2
       }
@@ -75517,7 +75491,6 @@ $grp PolylineShapeEntity {
        angleX -0.974
        angleY 278.6
        angleZ -1.453
-       scale 1
       }
       {
        coords 370.872 -4.513 -69.951
@@ -77662,133 +77635,132 @@ $grp PolylineShapeEntity {
        scale 0.857
       }
       {
-       coords 77.714 -0 -33.037
+       coords 77.714 0 -33.037
        angleX 0.306
        angleY 255.879
        angleZ 1.142
        scale 0.861
       }
       {
-       coords 74.739 -0 -27.652
+       coords 74.739 0 -27.652
        angleX -0.348
        angleY 155.582
        angleZ 1.202
        scale 1.122
       }
       {
-       coords 69.586 -0 -27.212
+       coords 69.586 0 -27.212
        angleX 0.636
        angleY 56.076
        angleZ -0.386
        scale 1.132
       }
       {
-       coords 79.094 -0 -29.228
+       coords 79.094 0 -29.228
        angleX 0.786
        angleY 11.756
        angleZ -1.389
        scale 0.841
       }
       {
-       coords 76.024 -0 -31.91
+       coords 76.024 0 -31.91
        angleX 0.303
        angleY 185.213
        angleZ -1.495
        scale 1.163
       }
       {
-       coords 75.301 -0 -37.067
+       coords 75.301 0 -37.067
        angleX -1.345
        angleY 238.905
        angleZ -0.38
        scale 0.832
       }
       {
-       coords 75.457 -0 -25.255
+       coords 75.457 0 -25.255
        angleX 0.467
        angleY 226.831
        angleZ -0.583
        scale 1.064
       }
       {
-       coords 69.488 -0 -24.775
+       coords 69.488 0 -24.775
        angleX -0.569
        angleY 121.513
        angleZ 0.421
        scale 0.844
       }
       {
-       coords 73.27 -0 -32.359
+       coords 73.27 0 -32.359
        angleX 0.781
        angleY 14.689
        angleZ -1.305
        scale 1.172
       }
       {
-       coords 73.622 -0 -25.331
+       coords 73.622 0 -25.331
        angleX 0.795
        angleY 210.131
        angleZ -0.287
        scale 1.125
       }
       {
-       coords 76.316 -0 -31.862
+       coords 76.316 0 -31.862
        angleX 1.462
        angleY 89.893
        angleZ 0.783
        scale 0.804
       }
       {
-       coords 77.199 -0 -29.978
+       coords 77.199 0 -29.978
        angleX -1.236
        angleY 200.649
        angleZ -0.252
        scale 0.802
       }
       {
-       coords 65.972 -0 -32.632
+       coords 65.972 0 -32.632
        angleX -1.392
        angleY 46.001
        angleZ -0.629
        scale 0.951
       }
       {
-       coords 78.789 -0 -27.191
+       coords 78.789 0 -27.191
        angleX 0.34
        angleY 275.084
        angleZ 0.939
        scale 1.169
       }
       {
-       coords 73.346 -0 -22.645
+       coords 73.346 0 -22.645
        angleX -1.021
        angleY 285.313
        angleZ 0.054
-       scale 1
       }
       {
-       coords 77.515 -0 -25.906
+       coords 77.515 0 -25.906
        angleX -1.057
        angleY 154.165
        angleZ 1.266
        scale 0.995
       }
       {
-       coords 76.126 -0 -22.628
+       coords 76.126 0 -22.628
        angleX 1.026
        angleY 163.064
        angleZ 0.287
        scale 1.027
       }
       {
-       coords 70.104 -0 -29.67
+       coords 70.104 0 -29.67
        angleX -0.801
        angleY 169.865
        angleZ 1.141
        scale 0.813
       }
       {
-       coords 74.932 -0 -30.082
+       coords 74.932 0 -30.082
        angleX 0.31
        angleY 125.534
        angleZ 0.554
@@ -78040,98 +78012,98 @@ $grp PolylineShapeEntity {
        scale 0.8
       }
       {
-       coords 216.772 -0 -56.532
+       coords 216.772 0 -56.532
        angleX -1.332
        angleY 49.868
        angleZ 1.021
        scale 0.978
       }
       {
-       coords 210.571 -0 -53.386
+       coords 210.571 0 -53.386
        angleX -0.661
        angleY 352.474
        angleZ -1.03
        scale 0.874
       }
       {
-       coords 210.077 -0 -53.289
+       coords 210.077 0 -53.289
        angleX 1.052
        angleY 326.908
        angleZ 1.188
        scale 1.001
       }
       {
-       coords 218.077 -0 -50.15
+       coords 218.077 0 -50.15
        angleX 1.233
        angleY 89.08
        angleZ 0.687
        scale 0.953
       }
       {
-       coords 212.985 -0 -59.729
+       coords 212.985 0 -59.729
        angleX -0.408
        angleY 166.283
        angleZ 1.111
        scale 0.89
       }
       {
-       coords 214.959 -0 -50.193
+       coords 214.959 0 -50.193
        angleX 1.388
        angleY 240.344
        angleZ 0.329
        scale 0.929
       }
       {
-       coords 216.258 -0 -56.617
+       coords 216.258 0 -56.617
        angleX -1.02
        angleY 287.719
        angleZ 0.967
        scale 1.194
       }
       {
-       coords 211.769 -0 -53.343
+       coords 211.769 0 -53.343
        angleX -0.593
        angleY 178.885
        angleZ -0.112
        scale 0.98
       }
       {
-       coords 209.244 -0 -54.206
+       coords 209.244 0 -54.206
        angleX -1.188
        angleY 201.88
        angleZ 0.702
        scale 0.968
       }
       {
-       coords 216.969 -0 -52.559
+       coords 216.969 0 -52.559
        angleX -0.122
        angleY 88.64
        angleZ -0.898
        scale 1.138
       }
       {
-       coords 208.419 -0 -62.204
+       coords 208.419 0 -62.204
        angleX 1.461
        angleY 159.757
        angleZ -1.446
        scale 0.827
       }
       {
-       coords 212.66 -0 -58.521
+       coords 212.66 0 -58.521
        angleX -1.08
        angleY 0.67
        angleZ 1.494
        scale 0.948
       }
       {
-       coords 216.371 -0 -53.494
+       coords 216.371 0 -53.494
        angleX 0.616
        angleY 174.721
        angleZ 1.216
        scale 1.091
       }
       {
-       coords 214.971 -0 -51.897
+       coords 214.971 0 -51.897
        angleX -0.78
        angleY 183.06
        angleZ -0.102
@@ -78730,7 +78702,6 @@ $grp PolylineShapeEntity {
        angleX 0.108
        angleY 248.277
        angleZ 1.285
-       scale 1
       }
       {
        coords 993.572 -13.688 -70.332
@@ -79139,70 +79110,70 @@ $grp PolylineShapeEntity {
        scale 1.146
       }
       {
-       coords 313.243 -0 -14.796
+       coords 313.243 0 -14.796
        angleX 1.079
        angleY 345.772
        angleZ 0.655
        scale 1.034
       }
       {
-       coords 315.184 -0 -20.777
+       coords 315.184 0 -20.777
        angleX 1.409
        angleY 248.947
        angleZ 0.022
        scale 0.98
       }
       {
-       coords 319.895 -0 -21.632
+       coords 319.895 0 -21.632
        angleX 1.364
        angleY 138.904
        angleZ -1.211
        scale 0.961
       }
       {
-       coords 315.353 -0 -15.327
+       coords 315.353 0 -15.327
        angleX -0.695
        angleY 86.059
        angleZ 0.976
        scale 1.185
       }
       {
-       coords 309.4 -0 -18.156
+       coords 309.4 0 -18.156
        angleX 0.612
        angleY 242.64
        angleZ 1.434
        scale 1.092
       }
       {
-       coords 307.791 -0 -20.482
+       coords 307.791 0 -20.482
        angleX 0.837
        angleY 104.044
        angleZ -1.272
        scale 1.125
       }
       {
-       coords 307.983 -0 -22.467
+       coords 307.983 0 -22.467
        angleX 0.587
        angleY 100.704
        angleZ 1.292
        scale 1.008
       }
       {
-       coords 312.064 -0 -25.445
+       coords 312.064 0 -25.445
        angleX 0.359
        angleY 210.713
        angleZ 0.883
        scale 0.992
       }
       {
-       coords 310.507 -0 -21.314
+       coords 310.507 0 -21.314
        angleX -1.322
        angleY 42.518
        angleZ 0.385
        scale 1.156
       }
       {
-       coords 311.96 -0 -16.792
+       coords 311.96 0 -16.792
        angleX 0.195
        angleY 306.55
        angleZ -0.733
@@ -79829,7 +79800,6 @@ $grp PolylineShapeEntity {
        angleX -0.219
        angleY 178.984
        angleZ 1.042
-       scale 1
       }
       {
        coords 872.307 -13.719 -291.206
@@ -80333,7 +80303,6 @@ $grp PolylineShapeEntity {
        angleX 0.148
        angleY 70.655
        angleZ 1.081
-       scale 1
       }
       {
        coords 573.225 -13.719 -176.62
@@ -80854,63 +80823,63 @@ $grp PolylineShapeEntity {
        scale 0.861
       }
       {
-       coords 152.627 -0 -105.957
+       coords 152.627 0 -105.957
        angleX -0.123
        angleY 123.93
        angleZ 0.671
        scale 0.841
       }
       {
-       coords 156.252 -0 -106.002
+       coords 156.252 0 -106.002
        angleX 1.388
        angleY 216.305
        angleZ -0.378
        scale 1.187
       }
       {
-       coords 166.477 -0 -100.338
+       coords 166.477 0 -100.338
        angleX -0.677
        angleY 257.11
        angleZ -0.159
        scale 0.92
       }
       {
-       coords 165.39 -0 -105.057
+       coords 165.39 0 -105.057
        angleX -1.456
        angleY 32.477
        angleZ -1.018
        scale 0.992
       }
       {
-       coords 155.077 -0 -102.944
+       coords 155.077 0 -102.944
        angleX 1.19
        angleY 6.592
        angleZ -0.311
        scale 0.831
       }
       {
-       coords 162.076 -0 -103.53
+       coords 162.076 0 -103.53
        angleX 0.363
        angleY 190.739
        angleZ -0.891
        scale 1.146
       }
       {
-       coords 163.174 -0 -104.297
+       coords 163.174 0 -104.297
        angleX 1.319
        angleY 144.398
        angleZ 0.085
        scale 1.136
       }
       {
-       coords 166.637 -0 -103.09
+       coords 166.637 0 -103.09
        angleX -1.347
        angleY 304.528
        angleZ -0.797
        scale 0.8
       }
       {
-       coords 154.243 -0 -98.391
+       coords 154.243 0 -98.391
        angleX -0.553
        angleY 351.299
        angleZ 0.857
@@ -81645,7 +81614,7 @@ $grp PolylineShapeEntity {
        scale 1.109
       }
       {
-       coords 222.927 -0 -118.728
+       coords 222.927 0 -118.728
        angleX 0.253
        angleY 309.571
        angleZ 0.374
@@ -81666,7 +81635,7 @@ $grp PolylineShapeEntity {
        scale 0.896
       }
       {
-       coords 221.477 -0 -120.037
+       coords 221.477 0 -120.037
        angleX 1.234
        angleY 109.229
        angleZ -0.754
@@ -81680,7 +81649,7 @@ $grp PolylineShapeEntity {
        scale 1.029
       }
       {
-       coords 216.478 -0 -125.711
+       coords 216.478 0 -125.711
        angleX -0.98
        angleY 190.838
        angleZ 0.706
@@ -81694,42 +81663,42 @@ $grp PolylineShapeEntity {
        scale 1.071
       }
       {
-       coords 227.841 -0 -124.436
+       coords 227.841 0 -124.436
        angleX 0.874
        angleY 31.74
        angleZ -0.501
        scale 0.935
       }
       {
-       coords 218.655 -0 -127.047
+       coords 218.655 0 -127.047
        angleX -0.198
        angleY 20.248
        angleZ -0.362
        scale 0.877
       }
       {
-       coords 218.706 -0 -125.907
+       coords 218.706 0 -125.907
        angleX -1.451
        angleY 232.906
        angleZ -0.166
        scale 1.134
       }
       {
-       coords 218.457 -0 -122.705
+       coords 218.457 0 -122.705
        angleX 1.098
        angleY 319.294
        angleZ -1.354
        scale 1.154
       }
       {
-       coords 218.332 -0 -127.634
+       coords 218.332 0 -127.634
        angleX -0.52
        angleY 190.926
        angleZ 0.675
        scale 1.135
       }
       {
-       coords 222.246 -0 -118.809
+       coords 222.246 0 -118.809
        angleX 0.587
        angleY 48.308
        angleZ -0.479
@@ -81743,14 +81712,14 @@ $grp PolylineShapeEntity {
        scale 1.115
       }
       {
-       coords 227.907 -0 -124.915
+       coords 227.907 0 -124.915
        angleX 1.022
        angleY 243.871
        angleZ 0.068
        scale 1.081
       }
       {
-       coords 219.686 -0 -123.453
+       coords 219.686 0 -123.453
        angleX 0.015
        angleY 219.536
        angleZ -0.96
@@ -81785,14 +81754,14 @@ $grp PolylineShapeEntity {
        scale 1.169
       }
       {
-       coords 215.314 -0 -123.405
+       coords 215.314 0 -123.405
        angleX -1.446
        angleY 218.448
        angleZ 1.389
        scale 1.186
       }
       {
-       coords 224.813 -0 -123.59
+       coords 224.813 0 -123.59
        angleX -0.283
        angleY 276.534
        angleZ 1.236
@@ -81834,14 +81803,14 @@ $grp PolylineShapeEntity {
        scale 0.944
       }
       {
-       coords 137.15 -0 -62.392
+       coords 137.15 0 -62.392
        angleX -0.348
        angleY 331.929
        angleZ 0.511
        scale 1.121
       }
       {
-       coords 137.162 -0 -66.253
+       coords 137.162 0 -66.253
        angleX -0.639
        angleY 1.912
        angleZ -0.075
@@ -82200,63 +82169,63 @@ $grp PolylineShapeEntity {
        scale 0.998
       }
       {
-       coords 48.291 -0 -38.113
+       coords 48.291 0 -38.113
        angleX 1.307
        angleY 215.448
        angleZ -1.519
        scale 1.203
       }
       {
-       coords 47.294 -0 -31.739
+       coords 47.294 0 -31.739
        angleX 0.5
        angleY 264.141
        angleZ 0.475
        scale 1.199
       }
       {
-       coords 45.911 -0 -33.944
+       coords 45.911 0 -33.944
        angleX 1.212
        angleY 196.639
        angleZ -1.52
        scale 0.863
       }
       {
-       coords 47.06 -0 -36.962
+       coords 47.06 0 -36.962
        angleX 0.973
        angleY 285.434
        angleZ 1.851
        scale 1.083
       }
       {
-       coords 48.285 -0 -39.081
+       coords 48.285 0 -39.081
        angleX -0.958
        angleY 239.344
        angleZ 0.05
        scale 1.224
       }
       {
-       coords 47.321 -0 -36.127
+       coords 47.321 0 -36.127
        angleX 0.458
        angleY 252.495
        angleZ 1.974
        scale 0.957
       }
       {
-       coords 47.007 -0 -33.99
+       coords 47.007 0 -33.99
        angleX 1.763
        angleY 117.579
        angleZ 0.757
        scale 1.126
       }
       {
-       coords 49.93 -0 -34.806
+       coords 49.93 0 -34.806
        angleX 1.57
        angleY 315.845
        angleZ 1.873
        scale 1.241
       }
       {
-       coords 51.021 -0 -36.798
+       coords 51.021 0 -36.798
        angleX -0.576
        angleY 108.12
        angleZ -0.628
@@ -82298,42 +82267,42 @@ $grp PolylineShapeEntity {
        scale 1.115
       }
       {
-       coords 48.466 -0 -55.822
+       coords 48.466 0 -55.822
        angleX -1.763
        angleY 50.879
        angleZ -0.79
        scale 0.949
       }
       {
-       coords 47.826 -0 -54.497
+       coords 47.826 0 -54.497
        angleX 0.322
        angleY 238.026
        angleZ 0.212
        scale 1.245
       }
       {
-       coords 50.05 -0 -54.362
+       coords 50.05 0 -54.362
        angleX -1.847
        angleY 286.214
        angleZ 0.237
        scale 1.271
       }
       {
-       coords 50.871 -0 -52.029
+       coords 50.871 0 -52.029
        angleX 1.129
        angleY 95.177
        angleZ 0.073
        scale 1.222
       }
       {
-       coords 49.865 -0 -55.76
+       coords 49.865 0 -55.76
        angleX -0.735
        angleY 134.642
        angleZ -0.562
        scale 1.299
       }
       {
-       coords 52.985 -0 -54.139
+       coords 52.985 0 -54.139
        angleX 0.885
        angleY 333.258
        angleZ 0.429
@@ -83026,7 +82995,7 @@ $grp PolylineShapeEntity {
        scale 1.032
       }
       {
-       coords 185.184 -0 -80.764
+       coords 185.184 0 -80.764
        angleX 1.743
        angleY 314.537
        angleZ -0.408
@@ -83439,7 +83408,7 @@ $grp PolylineShapeEntity {
        scale 0.932
       }
       {
-       coords 154.281 -0 -0.51
+       coords 154.281 0 -0.51
        angleX -1.588
        angleY 88.366
        angleZ 1.812
@@ -83523,21 +83492,21 @@ $grp PolylineShapeEntity {
        scale 1.187
       }
       {
-       coords 55.075 -0 -38.562
+       coords 55.075 0 -38.562
        angleX -0.408
        angleY 297.552
        angleZ -1.286
        scale 1.045
       }
       {
-       coords 50.087 -0 -36.459
+       coords 50.087 0 -36.459
        angleX 0.155
        angleY 227.874
        angleZ 0.16
        scale 1.087
       }
       {
-       coords 54.438 -0 -38.655
+       coords 54.438 0 -38.655
        angleX -0.106
        angleY 107.845
        angleZ 1.475
@@ -83796,35 +83765,35 @@ $grp PolylineShapeEntity {
        scale 0.882
       }
       {
-       coords 34.282 -0 -15.582
+       coords 34.282 0 -15.582
        angleX 1.76
        angleY 71.886
        angleZ 1.045
        scale 1.081
       }
       {
-       coords 33.011 -0 -13.485
+       coords 33.011 0 -13.485
        angleX 1.118
        angleY 63.437
        angleZ -0.103
        scale 0.823
       }
       {
-       coords 35.613 -0 -13.741
+       coords 35.613 0 -13.741
        angleX 1.471
        angleY 83.455
        angleZ -0.285
        scale 0.83
       }
       {
-       coords 37.127 -0 -15.062
+       coords 37.127 0 -15.062
        angleX 1.997
        angleY 91.98
        angleZ -0.662
        scale 0.813
       }
       {
-       coords 36.149 -0 -17.887
+       coords 36.149 0 -17.887
        angleX -1.603
        angleY 147.507
        angleZ -0.755
@@ -85235,7 +85204,6 @@ $grp PolylineShapeEntity {
        angleX 1.568
        angleY 316.603
        angleZ 1.803
-       scale 1
       }
       {
        coords 1018.299 -13.688 -117.038
@@ -85315,35 +85283,35 @@ $grp PolylineShapeEntity {
        scale 0.995
       }
       {
-       coords 206.333 -0 -40.729
+       coords 206.333 0 -40.729
        angleX 1.075
        angleY 313.384
        angleZ 0.209
        scale 1.202
       }
       {
-       coords 207.6 -0 -45.422
+       coords 207.6 0 -45.422
        angleX -0.1
        angleY 206.483
        angleZ -1.479
        scale 1.128
       }
       {
-       coords 208.015 -0 -40.137
+       coords 208.015 0 -40.137
        angleX -1.677
        angleY 295.289
        angleZ 1.648
        scale 1.332
       }
       {
-       coords 203.952 -0 -41.106
+       coords 203.952 0 -41.106
        angleX -1.551
        angleY 95.265
        angleZ -1.925
        scale 0.981
       }
       {
-       coords 206.747 -0 -37.232
+       coords 206.747 0 -37.232
        angleX 0.686
        angleY 343.597
        angleZ 1.917
@@ -86183,21 +86151,21 @@ $grp PolylineShapeEntity {
        scale 0.867
       }
       {
-       coords 205.642 -0 -115.965
+       coords 205.642 0 -115.965
        angleX -1.932
        angleY 236.169
        angleZ -0.757
        scale 0.845
       }
       {
-       coords 207.219 -0 -112.817
+       coords 207.219 0 -112.817
        angleX 1.978
        angleY 298.178
        angleZ -1.608
        scale 0.835
       }
       {
-       coords 203.058 -0 -113.478
+       coords 203.058 0 -113.478
        angleX -0.085
        angleY 72.787
        angleZ 1.528
@@ -86428,28 +86396,28 @@ $grp PolylineShapeEntity {
        scale 1.046
       }
       {
-       coords 164.987 -0 -10.853
+       coords 164.987 0 -10.853
        angleX -1.213
        angleY 260.67
        angleZ -0.176
        scale 1.118
       }
       {
-       coords 158.803 -0 -10.957
+       coords 158.803 0 -10.957
        angleX -1.292
        angleY 119.854
        angleZ -0.383
        scale 1.037
       }
       {
-       coords 161.613 -0 -14.303
+       coords 161.613 0 -14.303
        angleX -1.79
        angleY 142.233
        angleZ 0.983
        scale 1.079
       }
       {
-       coords 162.014 -0 -8.074
+       coords 162.014 0 -8.074
        angleX 0.959
        angleY 180.093
        angleZ 1.989
@@ -87046,7 +87014,7 @@ $grp PolylineShapeEntity {
        scale 0.843
       }
       {
-       coords 161.012 -0 -12.354
+       coords 161.012 0 -12.354
        angleY 124.171
        scale 0.881
       }
@@ -87136,17 +87104,17 @@ $grp PolylineShapeEntity {
        scale 0.887
       }
       {
-       coords 301.24 -0 -57.615
+       coords 301.24 0 -57.615
        angleY 170.777
        scale 0.82
       }
       {
-       coords 298.232 -0 -58.627
+       coords 298.232 0 -58.627
        angleY 115.898
        scale 0.449
       }
       {
-       coords 301.459 -0 -55.146
+       coords 301.459 0 -55.146
        angleY 98.627
        scale 0.368
       }
@@ -87376,7 +87344,7 @@ $grp PolylineShapeEntity {
        scale 0.347
       }
       {
-       coords 32.256 -0 -21.006
+       coords 32.256 0 -21.006
        angleY 244.53
        scale 1.148
       }
@@ -87861,7 +87829,7 @@ $grp PolylineShapeEntity {
        scale 0.344
       }
       {
-       coords 224.595 -0 1.786
+       coords 224.595 0 1.786
        angleY 190.783
        scale 0.715
       }
@@ -88096,17 +88064,17 @@ $grp PolylineShapeEntity {
        scale 0.377
       }
       {
-       coords 111.873 -0 -74.223
+       coords 111.873 0 -74.223
        angleY 64.404
        scale 0.918
       }
       {
-       coords 118.512 -0 -74.719
+       coords 118.512 0 -74.719
        angleY 229.325
        scale 0.222
       }
       {
-       coords 115.736 -0 -73.846
+       coords 115.736 0 -73.846
        angleY 109.922
        scale 0.299
       }
@@ -88116,7 +88084,7 @@ $grp PolylineShapeEntity {
        scale 1.165
       }
       {
-       coords 343.997 -0 -9.589
+       coords 343.997 0 -9.589
        angleY 212.998
        scale 0.573
       }
@@ -88331,37 +88299,37 @@ $grp PolylineShapeEntity {
        scale 0.323
       }
       {
-       coords 136.29 -0 -34.824
+       coords 136.29 0 -34.824
        angleY 278.874
        scale 0.79
       }
       {
-       coords 139.946 -0 -31.933
+       coords 139.946 0 -31.933
        angleY 149.792
        scale 1.104
       }
       {
-       coords 140.694 -0 -37.649
+       coords 140.694 0 -37.649
        angleY 275.589
        scale 0.834
       }
       {
-       coords 134.397 -0 -30.882
+       coords 134.397 0 -30.882
        angleY 60.141
        scale 0.555
       }
       {
-       coords 146.521 -0 -40.929
+       coords 146.521 0 -40.929
        angleY 93.936
        scale 0.373
       }
       {
-       coords 131.671 -0 -41.336
+       coords 131.671 0 -41.336
        angleY 101.055
        scale 0.494
       }
       {
-       coords 132.773 -0 -39.582
+       coords 132.773 0 -39.582
        angleY 258.187
        scale 0.289
       }
@@ -88416,42 +88384,42 @@ $grp PolylineShapeEntity {
        scale 0.344
       }
       {
-       coords 123.569 -0 -38.414
+       coords 123.569 0 -38.414
        angleY 71.644
        scale 1.079
       }
       {
-       coords 124.361 -0 -40.234
+       coords 124.361 0 -40.234
        angleY 202.748
        scale 0.683
       }
       {
-       coords 123.062 -0 -36.886
+       coords 123.062 0 -36.886
        angleY 267.734
        scale 0.755
       }
       {
-       coords 125.009 -0 -39.235
+       coords 125.009 0 -39.235
        angleY 9.789
        scale 0.691
       }
       {
-       coords 130.077 -0 -41.439
+       coords 130.077 0 -41.439
        angleY 68.546
        scale 0.487
       }
       {
-       coords 119.072 -0 -49.167
+       coords 119.072 0 -49.167
        angleY 309
        scale 0.266
       }
       {
-       coords 132.583 -0 -33.033
+       coords 132.583 0 -33.033
        angleY 303.067
        scale 0.53
       }
       {
-       coords 122.262 -0 -42.742
+       coords 122.262 0 -42.742
        angleY 326.754
        scale 0.492
       }
@@ -88861,49 +88829,49 @@ $grp PolylineShapeEntity {
        scale 1.069
       }
       {
-       coords 192.154 -0 -91.558
+       coords 192.154 0 -91.558
        angleX 0.845
        angleY 180.126
        angleZ -0.502
        scale 1.198
       }
       {
-       coords 186.631 -0 -81.554
+       coords 186.631 0 -81.554
        angleX 0.194
        angleY 77.412
        angleZ -0.214
        scale 1.164
       }
       {
-       coords 192.806 -0 -81.25
+       coords 192.806 0 -81.25
        angleX 1.837
        angleY 58.845
        angleZ 0.78
        scale 0.904
       }
       {
-       coords 201.276 -0 -70.256
+       coords 201.276 0 -70.256
        angleX -1.805
        angleY 297.914
        angleZ -1.388
        scale 1.145
       }
       {
-       coords 199.009 -0 -64.273
+       coords 199.009 0 -64.273
        angleX 1.969
        angleY 94.277
        angleZ -1.339
        scale 1.198
       }
       {
-       coords 183.405 -0 -88.507
+       coords 183.405 0 -88.507
        angleX 1.005
        angleY 223.26
        angleZ 1.659
        scale 0.829
       }
       {
-       coords 174.385 -0 -84.663
+       coords 174.385 0 -84.663
        angleX -0.044
        angleY 192.992
        angleZ -1.099
@@ -89169,7 +89137,7 @@ $grp PolylineShapeEntity {
        scale 0.975
       }
       {
-       coords 317.818 -0 -22.857
+       coords 317.818 0 -22.857
        angleX -0.383
        angleY 142.552
        angleZ -1.872
@@ -89416,28 +89384,28 @@ $grp PolylineShapeEntity {
        scale 0.64
       }
       {
-       coords 137.057 -0 -90.295
+       coords 137.057 0 -90.295
        angleX 1.989
        angleY 295.014
        angleZ 0.1
        scale 0.813
       }
       {
-       coords 120.981 -0 -86.978
+       coords 120.981 0 -86.978
        angleX 1.941
        angleY 188.641
        angleZ -1.549
        scale 0.835
       }
       {
-       coords 137.764 -0 -91.829
+       coords 137.764 0 -91.829
        angleX -0.753
        angleY 13.876
        angleZ 1.647
        scale 0.773
       }
       {
-       coords 126.764 -0 -100.02
+       coords 126.764 0 -100.02
        angleX -1.899
        angleY 229.731
        angleZ -1.094
@@ -89808,14 +89776,14 @@ $grp PolylineShapeEntity {
        scale 0.721
       }
       {
-       coords 287.211 -0 -58.081
+       coords 287.211 0 -58.081
        angleX 1.795
        angleY 261.955
        angleZ 0.337
        scale 0.713
       }
       {
-       coords 282.766 -0 -59.991
+       coords 282.766 0 -59.991
        angleX -0.464
        angleY 280.995
        angleZ 1.97
@@ -89948,35 +89916,35 @@ $grp PolylineShapeEntity {
        scale 0.784
       }
       {
-       coords 104.196 -0 -78.52
+       coords 104.196 0 -78.52
        angleX 0.87
        angleY 180.368
        angleZ 0.753
        scale 0.865
       }
       {
-       coords 107.256 -0 -87.356
+       coords 107.256 0 -87.356
        angleX -1.97
        angleY 73.446
        angleZ -1.433
        scale 0.809
       }
       {
-       coords 108.568 -0 -73.988
+       coords 108.568 0 -73.988
        angleX 1.8
        angleY 292.762
        angleZ -0.145
        scale 0.55
       }
       {
-       coords 110.101 -0 -77.531
+       coords 110.101 0 -77.531
        angleX 1.764
        angleY 187.63
        angleZ -1.038
        scale 0.527
       }
       {
-       coords 96.943 -0 -81.318
+       coords 96.943 0 -81.318
        angleX 1.883
        angleY 57.218
        angleZ -0.893
@@ -90025,7 +89993,7 @@ $grp PolylineShapeEntity {
        scale 0.582
       }
       {
-       coords 156.777 -0 -108.359
+       coords 156.777 0 -108.359
        angleX 1.102
        angleY 183.356
        angleZ -0.219
@@ -90039,7 +90007,7 @@ $grp PolylineShapeEntity {
        scale 0.857
       }
       {
-       coords 155.832 -0 -108.39
+       coords 155.832 0 -108.39
        angleX -0.505
        angleY 311.999
        angleZ -1.696
@@ -90053,14 +90021,14 @@ $grp PolylineShapeEntity {
        scale 1.075
       }
       {
-       coords 154.549 -0 -103.576
+       coords 154.549 0 -103.576
        angleX 1.373
        angleY 159.57
        angleZ -0.818
        scale 0.73
       }
       {
-       coords 147.708 -0 -105.685
+       coords 147.708 0 -105.685
        angleX 1.613
        angleY 146.123
        angleZ 0.939
@@ -91107,7 +91075,6 @@ $grp PolylineShapeEntity {
        angleX 1.756
        angleY 113.305
        angleZ -1.001
-       scale 1
       }
       {
        coords 823.978 -2.284 -55.634
@@ -91275,7 +91242,6 @@ $grp PolylineShapeEntity {
        angleX 0.34
        angleY 211.647
        angleZ 1.8
-       scale 1
       }
       {
        coords 909.5 -5.632 -19.138
@@ -91341,49 +91307,49 @@ $grp PolylineShapeEntity {
        scale 0.591
       }
       {
-       coords 153.068 -0 -105.413
+       coords 153.068 0 -105.413
        angleX -1.355
        angleY 294.915
        angleZ -1.532
        scale 1.01
       }
       {
-       coords 156.612 -0 -95.521
+       coords 156.612 0 -95.521
        angleX -0.72
        angleY 98.605
        angleZ -0.542
        scale 0.76
       }
       {
-       coords 153.933 -0 -96.938
+       coords 153.933 0 -96.938
        angleX -0.258
        angleY 355.539
        angleZ 1.508
        scale 1.037
       }
       {
-       coords 152.937 -0 -106.769
+       coords 152.937 0 -106.769
        angleX 0.04
        angleY 174.194
        angleZ -0.12
        scale 0.839
       }
       {
-       coords 148.091 -0 -100.948
+       coords 148.091 0 -100.948
        angleX -1.135
        angleY 84.949
        angleZ -0.83
        scale 0.648
       }
       {
-       coords 161.754 -0 -94.014
+       coords 161.754 0 -94.014
        angleX 1.727
        angleY 345.289
        angleZ 0.473
        scale 0.625
       }
       {
-       coords 159.944 -0 -107.49
+       coords 159.944 0 -107.49
        angleX 1.23
        angleY 245.684
        angleZ 1.65
@@ -91502,7 +91468,7 @@ $grp PolylineShapeEntity {
        scale 0.661
       }
       {
-       coords 209.195 -0 -92.478
+       coords 209.195 0 -92.478
        angleX -1.633
        angleY 300.936
        angleZ -1.107
@@ -91516,7 +91482,7 @@ $grp PolylineShapeEntity {
        scale 0.889
       }
       {
-       coords 207.246 -0 -86.135
+       coords 207.246 0 -86.135
        angleX -1.586
        angleY 104.121
        angleZ -1.821
@@ -91530,7 +91496,7 @@ $grp PolylineShapeEntity {
        scale 1.106
       }
       {
-       coords 208.123 -0 -93.61
+       coords 208.123 0 -93.61
        angleX 1.953
        angleY 148.452
        angleZ 1.927
@@ -91544,112 +91510,112 @@ $grp PolylineShapeEntity {
        scale 0.647
       }
       {
-       coords 90.057 -0 -16.466
+       coords 90.057 0 -16.466
        angleX -1.112
        angleY 61.8
        angleZ -1.316
        scale 0.777
       }
       {
-       coords 87.693 -0 -24.931
+       coords 87.693 0 -24.931
        angleX 1.971
        angleY 47.913
        angleZ -1.379
        scale 0.787
       }
       {
-       coords 93.046 -0 -20.977
+       coords 93.046 0 -20.977
        angleX -0.901
        angleY 1.022
        angleZ -1.775
        scale 0.91
       }
       {
-       coords 94.024 -0 -16.636
+       coords 94.024 0 -16.636
        angleX -1.297
        angleY 107.515
        angleZ -1.451
        scale 0.901
       }
       {
-       coords 92.219 -0 -27.77
+       coords 92.219 0 -27.77
        angleX -1.861
        angleY 272.623
        angleZ -0.661
        scale 1.011
       }
       {
-       coords 84.37 -0 -16.257
+       coords 84.37 0 -16.257
        angleX 0.746
        angleY 325.502
        angleZ 0.673
        scale 0.732
       }
       {
-       coords 82.632 -0 -25.425
+       coords 82.632 0 -25.425
        angleX -1.202
        angleY 300.815
        angleZ -0.392
        scale 0.621
       }
       {
-       coords 89.476 -0 -15.594
+       coords 89.476 0 -15.594
        angleX 1.768
        angleY 264.691
        angleZ -1.534
        scale 0.504
       }
       {
-       coords 203.19 -0 -39.295
+       coords 203.19 0 -39.295
        angleX 0.034
        angleY 168.634
        angleZ -0.265
        scale 0.882
       }
       {
-       coords 199.029 -0 -41.198
+       coords 199.029 0 -41.198
        angleX -1.316
        angleY 7.526
        angleZ -0.072
        scale 1.153
       }
       {
-       coords 205.799 -0 -39.795
+       coords 205.799 0 -39.795
        angleX -1.351
        angleY 100.22
        angleZ 1.238
        scale 0.922
       }
       {
-       coords 205.836 -0 -44.977
+       coords 205.836 0 -44.977
        angleX 0.089
        angleY 41.661
        angleZ 0.487
        scale 1.168
       }
       {
-       coords 208.895 -0 -45.24
+       coords 208.895 0 -45.24
        angleX 0.482
        angleY 351.573
        angleZ -1.756
        scale 0.862
       }
       {
-       coords 201.695 -0 -37.125
+       coords 201.695 0 -37.125
        angleX 0.93
        angleY 226.567
        angleZ -1.738
        scale 0.885
       }
       {
-       coords 206.298 -0 -40.218
+       coords 206.298 0 -40.218
        angleX 1.13
        angleY 158.823
        angleZ -1.702
        scale 0.642
       }
       {
-       coords 200.499 -0 -43.331
+       coords 200.499 0 -43.331
        angleX -0.592
        angleY 212.361
        angleZ -1.219
@@ -91831,7 +91797,7 @@ $grp PolylineShapeEntity {
        scale 0.767
       }
       {
-       coords 146.192 -0 -4.985
+       coords 146.192 0 -4.985
        angleX 1.46
        angleY 143.42
        angleZ 0.875
@@ -91845,35 +91811,35 @@ $grp PolylineShapeEntity {
        scale 0.887
       }
       {
-       coords 142.694 -0 -4.19
+       coords 142.694 0 -4.19
        angleX 1.038
        angleY 309.472
        angleZ -0.299
        scale 1.058
       }
       {
-       coords 157.044 -0 -8.276
+       coords 157.044 0 -8.276
        angleX -1.94
        angleY 91.815
        angleZ -0.809
        scale 0.762
       }
       {
-       coords 148.559 -0 0.609
+       coords 148.559 0 0.609
        angleX -0.508
        angleY 119.392
        angleZ 1.796
        scale 0.569
       }
       {
-       coords 150.176 -0 -11.545
+       coords 150.176 0 -11.545
        angleX -0.06
        angleY 84.96
        angleZ -0.236
        scale 0.591
       }
       {
-       coords 145.06 -0 -10.524
+       coords 145.06 0 -10.524
        angleX -1.98
        angleY 311.812
        angleZ 1.849
@@ -92378,7 +92344,6 @@ $grp PolylineShapeEntity {
       }
       {
        coords 715.893 -13.594 -126.019
-       angleX -0
        angleY 149.671
        angleZ 0.981
        scale 1.028
@@ -92503,91 +92468,91 @@ $grp PolylineShapeEntity {
        scale 0.56
       }
       {
-       coords 163.221 -0 -71.89
+       coords 163.221 0 -71.89
        angleX 0.001
        angleY 266.657
        angleZ -1.133
        scale 0.801
       }
       {
-       coords 160.984 -0 -68.585
+       coords 160.984 0 -68.585
        angleX 1.343
        angleY 124.281
        angleZ -1.581
        scale 0.868
       }
       {
-       coords 157.324 -0 -78.241
+       coords 157.324 0 -78.241
        angleX -1.305
        angleY 169.337
        angleZ -1.167
        scale 1.015
       }
       {
-       coords 158.681 -0 -68.502
+       coords 158.681 0 -68.502
        angleX -1.207
        angleY 191.454
        angleZ -1.863
        scale 1.038
       }
       {
-       coords 161.964 -0 -68.741
+       coords 161.964 0 -68.741
        angleX -1.906
        angleY 99.891
        angleZ 0.692
        scale 0.819
       }
       {
-       coords 164.585 -0 -81.454
+       coords 164.585 0 -81.454
        angleX 1.867
        angleY 221.074
        angleZ -0.6
        scale 0.887
       }
       {
-       coords 160.733 -0 -73.916
+       coords 160.733 0 -73.916
        angleX -1.788
        angleY 167.81
        angleZ 1.162
        scale 0.909
       }
       {
-       coords 169.281 -0 -75.766
+       coords 169.281 0 -75.766
        angleX -0.065
        angleY 241.86
        angleZ 1.866
        scale 0.891
       }
       {
-       coords 167.256 -0 -70.385
+       coords 167.256 0 -70.385
        angleX -1.931
        angleY 145.134
        angleZ -1.345
        scale 0.761
       }
       {
-       coords 168.134 -0 -75.725
+       coords 168.134 0 -75.725
        angleX 0.579
        angleY 350.705
        angleZ -0.905
        scale 0.562
       }
       {
-       coords 153.481 -0 -75.204
+       coords 153.481 0 -75.204
        angleX 1.536
        angleY 44.595
        angleZ 0.438
        scale 0.513
       }
       {
-       coords 161.211 -0 -79.577
+       coords 161.211 0 -79.577
        angleX -1.856
        angleY 37.673
        angleZ -1.232
        scale 0.625
       }
       {
-       coords 225.226 -0 -120.348
+       coords 225.226 0 -120.348
        angleX 0.786
        angleY 277.831
        angleZ -1.953
@@ -92853,7 +92818,7 @@ $grp PolylineShapeEntity {
        scale 0.863
       }
       {
-       coords 219.038 -0 7.069
+       coords 219.038 0 7.069
        angleX -1.334
        angleY 326.084
        angleZ 1.865
@@ -92867,21 +92832,21 @@ $grp PolylineShapeEntity {
        scale 1.145
       }
       {
-       coords 211.89 -0 8.953
+       coords 211.89 0 8.953
        angleX 0.379
        angleY 296.64
        angleZ 0.592
        scale 0.625
       }
       {
-       coords 213.8 -0 0.972
+       coords 213.8 0 0.972
        angleX 1.125
        angleY 238.685
        angleZ -0.501
        scale 0.639
       }
       {
-       coords 221.994 -0 2.201
+       coords 221.994 0 2.201
        angleX -1.225
        angleY 335.84
        angleZ -0.987
@@ -93415,21 +93380,21 @@ $grp PolylineShapeEntity {
        scale 0.777
       }
       {
-       coords 129.018 -0 -88.637
+       coords 129.018 0 -88.637
        angleX -0.903
        angleY 356.594
        angleZ 1.385
        scale 0.769
       }
       {
-       coords 135.946 -0 -99.371
+       coords 135.946 0 -99.371
        angleX 0.728
        angleY 188.542
        angleZ 0.021
        scale 0.987
       }
       {
-       coords 122.618 -0 -88.857
+       coords 122.618 0 -88.857
        angleX -0.955
        angleY 15.008
        angleZ -0.45
@@ -93485,21 +93450,21 @@ $grp PolylineShapeEntity {
        scale 0.784
       }
       {
-       coords 118.651 -0 -92.979
+       coords 118.651 0 -92.979
        angleX 1.077
        angleY 45.661
        angleZ 0.434
        scale 0.792
       }
       {
-       coords 122.89 -0 -106.947
+       coords 122.89 0 -106.947
        angleX -0.609
        angleY 136.202
        angleZ 0.029
        scale 0.94
       }
       {
-       coords 114.022 -0 -87.858
+       coords 114.022 0 -87.858
        angleX 0.68
        angleY 171.722
        angleZ -1.129
@@ -93786,49 +93751,49 @@ $grp PolylineShapeEntity {
        scale 0.986
       }
       {
-       coords 168.739 -0 -94.692
+       coords 168.739 0 -94.692
        angleX -0.602
        angleY 351.002
        angleZ -0.003
        scale 0.739
       }
       {
-       coords 166.205 -0 -91.845
+       coords 166.205 0 -91.845
        angleX 0.404
        angleY 144.464
        angleZ -0.65
        scale 0.911
       }
       {
-       coords 166.987 -0 -98.168
+       coords 166.987 0 -98.168
        angleX -1.436
        angleY 99.66
        angleZ -0.048
        scale 0.835
       }
       {
-       coords 161.734 -0 -97.08
+       coords 161.734 0 -97.08
        angleX -1.054
        angleY 320.096
        angleZ 1.161
        scale 0.96
       }
       {
-       coords 164.374 -0 -99.99
+       coords 164.374 0 -99.99
        angleX -1.044
        angleY 287.422
        angleZ 1.271
        scale 1.03
       }
       {
-       coords 287.881 -0 -49.511
+       coords 287.881 0 -49.511
        angleX 1.253
        angleY 178.775
        angleZ 0.1
        scale 0.94
       }
       {
-       coords 285.215 -0 -45.291
+       coords 285.215 0 -45.291
        angleX 0.872
        angleY 113.207
        angleZ -0.629
@@ -93954,21 +93919,21 @@ $grp PolylineShapeEntity {
        scale 0.739
       }
       {
-       coords 228.626 -0 -32.178
+       coords 228.626 0 -32.178
        angleX 0.563
        angleY 115.03
        angleZ -0.065
        scale 0.83
       }
       {
-       coords 225.297 -0 -35.963
+       coords 225.297 0 -35.963
        angleX -1.142
        angleY 288.037
        angleZ 0.636
        scale 0.93
       }
       {
-       coords 230.252 -0 -48.957
+       coords 230.252 0 -48.957
        angleX 0.797
        angleY 203.385
        angleZ -0.212
@@ -94332,14 +94297,14 @@ $grp PolylineShapeEntity {
        scale 1.083
       }
       {
-       coords 79.748 -0 -73.714
+       coords 79.748 0 -73.714
        angleX -1.47
        angleY 21.611
        angleZ 0.951
        scale 0.875
       }
       {
-       coords 86.356 -0 -77.305
+       coords 86.356 0 -77.305
        angleX 1.457
        angleY 19.392
        angleZ 1.254
@@ -94787,21 +94752,21 @@ $grp PolylineShapeEntity {
        scale 0.899
       }
       {
-       coords 98.239 -0 -35.924
+       coords 98.239 0 -35.924
        angleX 0.303
        angleY 233.06
        angleZ 1.298
        scale 1.009
       }
       {
-       coords 88.76 -0 -14.183
+       coords 88.76 0 -14.183
        angleX 0.286
        angleY 71.831
        angleZ -0.381
        scale 0.767
       }
       {
-       coords 95.369 -0 -25.156
+       coords 95.369 0 -25.156
        angleX -0.562
        angleY 353.826
        angleZ -0.355
@@ -95347,14 +95312,14 @@ $grp PolylineShapeEntity {
        scale 1.012
       }
       {
-       coords 128.312 -0 -60.54
+       coords 128.312 0 -60.54
        angleX 1.384
        angleY 272.975
        angleZ 1.09
        scale 0.712
       }
       {
-       coords 141.492 -0 -79.316
+       coords 141.492 0 -79.316
        angleX 0.249
        angleY 218.327
        angleZ 1.118
@@ -95981,22 +95946,22 @@ $grp PolylineShapeEntity {
        scale 0.879
       }
       {
-       coords 294.343 -0 -24.12
+       coords 294.343 0 -24.12
        angleY 233.785
        scale 0.91
       }
       {
-       coords 301.844 -0 -32.346
+       coords 301.844 0 -32.346
        angleY 355.704
        scale 0.957
       }
       {
-       coords 293.939 -0 -34.47
+       coords 293.939 0 -34.47
        angleY 106.845
        scale 0.866
       }
       {
-       coords 296.851 -0 -27.605
+       coords 296.851 0 -27.605
        angleY 330.27
        scale 0.86
       }
@@ -96036,7 +96001,7 @@ $grp PolylineShapeEntity {
        scale 0.879
       }
       {
-       coords 201.913 -0 -97.308
+       coords 201.913 0 -97.308
        angleY 292.256
        scale 0.735
       }
@@ -96221,27 +96186,27 @@ $grp PolylineShapeEntity {
        scale 0.853
       }
       {
-       coords 108.366 -0 -78.568
+       coords 108.366 0 -78.568
        angleY 202.924
        scale 0.84
       }
       {
-       coords 114.03 -0 -73.451
+       coords 114.03 0 -73.451
        angleY 52.428
        scale 0.795
       }
       {
-       coords 108.562 -0 -86.189
+       coords 108.562 0 -86.189
        angleY 88.212
        scale 0.944
       }
       {
-       coords 107.15 -0 -81.391
+       coords 107.15 0 -81.391
        angleY 159.691
        scale 0.913
       }
       {
-       coords 121.159 -0 -80.249
+       coords 121.159 0 -80.249
        angleY 273.425
        scale 0.998
       }
@@ -96401,12 +96366,12 @@ $grp PolylineShapeEntity {
        scale 0.727
       }
       {
-       coords 198.338 -0 -94.355
+       coords 198.338 0 -94.355
        angleY 193.135
        scale 0.782
       }
       {
-       coords 201.286 -0 -101.574
+       coords 201.286 0 -101.574
        angleY 280.654
        scale 0.92
       }
@@ -96659,14 +96624,14 @@ $grp PolylineShapeEntity {
        scale 0.814
       }
       {
-       coords 208.105 -0 -69.648
+       coords 208.105 0 -69.648
        angleX 1.986
        angleY 162.064
        angleZ -1.133
        scale 1.161
       }
       {
-       coords 182.583 -0 -82.99
+       coords 182.583 0 -82.99
        angleX -1.483
        angleY 215.668
        angleZ 1.531
@@ -96799,21 +96764,21 @@ $grp PolylineShapeEntity {
        scale 1.093
       }
       {
-       coords 320.474 -0 -25.32
+       coords 320.474 0 -25.32
        angleX -0.579
        angleY 326.71
        angleZ -1.053
        scale 0.968
       }
       {
-       coords 315.241 -0 -26.192
+       coords 315.241 0 -26.192
        angleX -1.539
        angleY 28.214
        angleZ 1.023
        scale 0.876
       }
       {
-       coords 316.992 -0 -10.076
+       coords 316.992 0 -10.076
        angleX 1.425
        angleY 276.974
        angleZ 1.659
@@ -97102,7 +97067,7 @@ $grp PolylineShapeEntity {
        scale 0.753
       }
       {
-       coords 126.818 -0 -97.342
+       coords 126.818 0 -97.342
        angleX -0.705
        angleY 11.767
        angleZ 0.653
@@ -97305,14 +97270,14 @@ $grp PolylineShapeEntity {
        scale 0.877
       }
       {
-       coords 293.053 -0 -52.975
+       coords 293.053 0 -52.975
        angleX 0.175
        angleY 130.137
        angleZ -0.805
        scale 0.777
       }
       {
-       coords 293.627 -0 -56.434
+       coords 293.627 0 -56.434
        angleX -0.673
        angleY 105.208
        angleZ 0.597
@@ -97522,14 +97487,14 @@ $grp PolylineShapeEntity {
        scale 0.708
       }
       {
-       coords 87.012 -0 -80.02
+       coords 87.012 0 -80.02
        angleX -0.535
        angleY 111.877
        angleZ 0.228
        scale 0.926
       }
       {
-       coords 87.345 -0 -83.602
+       coords 87.345 0 -83.602
        angleX -0.959
        angleY 36.64
        angleZ 0.568
@@ -97718,7 +97683,7 @@ $grp PolylineShapeEntity {
        scale 0.998
       }
       {
-       coords 91.778 -0 -25.099
+       coords 91.778 0 -25.099
        angleX -0.512
        angleY 28.774
        angleZ -0.294
@@ -97935,7 +97900,7 @@ $grp PolylineShapeEntity {
        scale 0.76
       }
       {
-       coords 138.609 -0 -76.566
+       coords 138.609 0 -76.566
        angleX 0.643
        angleY 272.557
        angleZ 0.036
@@ -98145,21 +98110,21 @@ $grp PolylineShapeEntity {
        scale 0.945
       }
       {
-       coords 204.396 -0 -109.505
+       coords 204.396 0 -109.505
        angleX 0.882
        angleY 42.409
        angleZ 0.121
        scale 0.913
       }
       {
-       coords 201.832 -0 -107.861
+       coords 201.832 0 -107.861
        angleX -0.549
        angleY 61.426
        angleZ -0.945
        scale 0.882
       }
       {
-       coords 201.719 -0 -110.514
+       coords 201.719 0 -110.514
        angleX 0.565
        angleY 127.335
        angleZ 0.933
@@ -98201,7 +98166,7 @@ $grp PolylineShapeEntity {
        scale 0.89
       }
       {
-       coords 108.884 -0 -80.589
+       coords 108.884 0 -80.589
        angleX 0.76
        angleY 158.494
        angleZ -0.408
@@ -98313,7 +98278,7 @@ $grp PolylineShapeEntity {
        scale 0.771
       }
       {
-       coords 209.336 -0 -95.475
+       coords 209.336 0 -95.475
        angleX -0.279
        angleY 235.488
        angleZ 0.335
@@ -98679,7 +98644,7 @@ $grp PolylineShapeEntity {
        scale 0.754
       }
       {
-       coords 130.033 -0 -91.789
+       coords 130.033 0 -91.789
        angleX -0.178
        angleY 41.112
        angleZ -0.87
@@ -98735,14 +98700,14 @@ $grp PolylineShapeEntity {
        scale 0.764
       }
       {
-       coords 124.94 -0 -103.923
+       coords 124.94 0 -103.923
        angleX -0.837
        angleY 340.839
        angleZ -0.096
        scale 0.833
       }
       {
-       coords 115.74 -0 -90.379
+       coords 115.74 0 -90.379
        angleX -0.611
        angleY 347.871
        angleZ 0.508
@@ -98959,28 +98924,28 @@ $grp PolylineShapeEntity {
        scale 0.959
       }
       {
-       coords 162.746 -0 -89.837
+       coords 162.746 0 -89.837
        angleX 0.653
        angleY 117.206
        angleZ -0.733
        scale 0.785
       }
       {
-       coords 292.148 -0 -48.774
+       coords 292.148 0 -48.774
        angleX 0.97
        angleY 125.017
        angleZ 0.439
        scale 0.812
       }
       {
-       coords 283.705 -0 -46.109
+       coords 283.705 0 -46.109
        angleX -0.876
        angleY 308.769
        angleZ -0.69
        scale 0.761
       }
       {
-       coords 285.475 -0 -49.614
+       coords 285.475 0 -49.614
        angleX -0.422
        angleY 206.165
        angleZ 0.114
@@ -98994,7 +98959,7 @@ $grp PolylineShapeEntity {
        scale 0.931
       }
       {
-       coords 297.316 -0 -55.225
+       coords 297.316 0 -55.225
        angleX 0.097
        angleY 174.424
        angleZ -0.766
@@ -99127,7 +99092,7 @@ $grp PolylineShapeEntity {
        scale 0.705
       }
       {
-       coords 232.446 -0 -44.11
+       coords 232.446 0 -44.11
        angleX 0.94
        angleY 182.39
        angleZ -0.406
@@ -99484,14 +99449,14 @@ $grp PolylineShapeEntity {
        scale 0.866
       }
       {
-       coords 81.974 -0 -80.754
+       coords 81.974 0 -80.754
        angleX 0.328
        angleY 169.579
        angleZ -0.356
        scale 0.718
       }
       {
-       coords 93.87 -0 -87.013
+       coords 93.87 0 -87.013
        angleX -0.217
        angleY 271.382
        angleZ 0.459
@@ -99813,21 +99778,21 @@ $grp PolylineShapeEntity {
        scale 0.935
       }
       {
-       coords 89.807 -0 -21.354
+       coords 89.807 0 -21.354
        angleX -0.905
        angleY 320.459
        angleZ 0.075
        scale 0.775
       }
       {
-       coords 95.586 -0 -28.055
+       coords 95.586 0 -28.055
        angleX 0.346
        angleY 233.5
        angleZ 0.445
        scale 0.929
       }
       {
-       coords 102.117 -0 -29.71
+       coords 102.117 0 -29.71
        angleX -0.834
        angleY 41.475
        angleZ 0.859
@@ -100233,49 +100198,49 @@ $grp PolylineShapeEntity {
        scale 0.881
       }
       {
-       coords 143.136 -0 -82.729
+       coords 143.136 0 -82.729
        angleX -0.005
        angleY 119.985
        angleZ -0.482
        scale 0.905
       }
       {
-       coords 132.584 -0 -76.971
+       coords 132.584 0 -76.971
        angleX -0.011
        angleY 15.59
        angleZ -0.612
        scale 0.726
       }
       {
-       coords 125.975 -0 -65.968
+       coords 125.975 0 -65.968
        angleX 0.749
        angleY 13.58
        angleZ -0.659
        scale 0.728
       }
       {
-       coords 130.784 -0 -64.116
+       coords 130.784 0 -64.116
        angleX -0.25
        angleY 228.347
        angleZ 0.393
        scale 1.045
       }
       {
-       coords 133.026 -0 -64.725
+       coords 133.026 0 -64.725
        angleX 0.63
        angleY 282.138
        angleZ 0.985
        scale 0.844
       }
       {
-       coords 130.194 -0 -67.407
+       coords 130.194 0 -67.407
        angleX -0.649
        angleY 253.056
        angleZ -0.099
        scale 0.962
       }
       {
-       coords 134.754 -0 -80.123
+       coords 134.754 0 -80.123
        angleX -0.762
        angleY 191.234
        angleZ 0.44
@@ -101241,35 +101206,35 @@ $grp PolylineShapeEntity {
        scale 0.791
       }
       {
-       coords 296.294 -0 -37.98
+       coords 296.294 0 -37.98
        angleX 0.693
        angleY 126.808
        angleZ -0.202
        scale 0.953
       }
       {
-       coords 307.493 -0 -27.602
+       coords 307.493 0 -27.602
        angleX -0.703
        angleY 300.408
        angleZ -0.693
        scale 0.773
       }
       {
-       coords 291.573 -0 -31.789
+       coords 291.573 0 -31.789
        angleX -0.518
        angleY 136.048
        angleZ 0.554
        scale 0.739
       }
       {
-       coords 299.897 -0 -31.255
+       coords 299.897 0 -31.255
        angleX 0.977
        angleY 32.861
        angleZ -0.079
        scale 0.753
       }
       {
-       coords 299.656 -0 -38.456
+       coords 299.656 0 -38.456
        angleX 0.385
        angleY 359.165
        angleZ 0.388
@@ -101283,28 +101248,27 @@ $grp PolylineShapeEntity {
        scale 0.793
       }
       {
-       coords 191.833 -0 -111.613
+       coords 191.833 0 -111.613
        angleX -0.699
        angleY 351.518
        angleZ 0.327
        scale 0.721
       }
       {
-       coords 199.434 -0 -109.85
+       coords 199.434 0 -109.85
        angleX 0.382
        angleY 145.452
        angleZ 0.521
-       scale 1
       }
       {
-       coords 210.907 -0 -116.733
+       coords 210.907 0 -116.733
        angleX 0.282
        angleY 318.624
        angleZ -0.791
        scale 1.061
       }
       {
-       coords 196.403 -0 -110.896
+       coords 196.403 0 -110.896
        angleX -0.503
        angleY 237.037
        angleZ 0.933
@@ -101525,7 +101489,6 @@ $grp PolylineShapeEntity {
        angleX 0.516
        angleY 131.521
        angleZ -0.863
-       scale 1
       }
       {
        coords 837.254 -13.719 -260.408
@@ -101563,7 +101526,7 @@ $grp PolylineShapeEntity {
        scale 0.867
       }
       {
-       coords 105.341 -0 -85.99
+       coords 105.341 0 -85.99
        angleX -0.055
        angleY 133.763
        angleZ -0.986
@@ -101752,7 +101715,7 @@ $grp PolylineShapeEntity {
        scale 0.705
       }
       {
-       coords 211.74 -0 -95.392
+       coords 211.74 0 -95.392
        angleX -0.492
        angleY 131.928
        angleZ 0.843
@@ -101773,21 +101736,21 @@ $grp PolylineShapeEntity {
        scale 0.727
       }
       {
-       coords 204.76 -0 -96.522
+       coords 204.76 0 -96.522
        angleX -0.774
        angleY 223.491
        angleZ 0.778
        scale 0.84
       }
       {
-       coords 204.48 -0 -98.814
+       coords 204.48 0 -98.814
        angleX -0.27
        angleY 175.391
        angleZ 0.72
        scale 1.079
       }
       {
-       coords 209.742 -0 -103.159
+       coords 209.742 0 -103.159
        angleX 0.617
        angleY 16.601
        angleZ -0.872
@@ -101969,7 +101932,7 @@ $grp PolylineShapeEntity {
        scale 1.068
       }
       {
-       coords 190.674 -0 -85.124
+       coords 190.674 0 -85.124
        angleX 0.832
        angleY 238.422
        angleZ -0.157
@@ -102158,14 +102121,14 @@ $grp PolylineShapeEntity {
        scale 1.107
       }
       {
-       coords 318.39 -0 -18.833
+       coords 318.39 0 -18.833
        angleX 0.144
        angleY 258.187
        angleZ 0.103
        scale 0.883
       }
       {
-       coords 317.12 -0 -17.163
+       coords 317.12 0 -17.163
        angleX 0.325
        angleY 12.481
        angleZ -0.971
@@ -102320,7 +102283,7 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E644FDFAC2D}" {
-    Position 38.282 -0 52.519
+    Position 38.282 0 52.519
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -102334,14 +102297,14 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E644DEDB9C1}" {
-    Position 75.719 -0 138.465
+    Position 75.719 0 138.465
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
     }
    }
    ShapePoint "{62F97E64534D483E}" {
-    Position 45.728 -0 161.804
+    Position 45.728 0 161.804
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -105441,7 +105404,7 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E645C5ABD4A}" {
-    Position 19.183 -0 19.659
+    Position 19.183 0 19.659
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -105469,7 +105432,7 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E6466FBC281}" {
-    Position 206.613 -0 37.495
+    Position 206.613 0 37.495
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -105539,14 +105502,14 @@ $grp PolylineShapeEntity {
     }
    }
    ShapePoint "{62F97E6480C39574}" {
-    Position 62.318 -0 1.452
+    Position 62.318 0 1.452
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
     }
    }
    ShapePoint "{62F97E64864451F8}" {
-    Position 0.092 -0 0.437
+    Position 0.092 0 0.437
     Data {
      ForestGeneratorPointData "{000000002C57B0BA}" {
      }
@@ -108872,7 +108835,6 @@ $grp PolylineShapeEntity {
        angleX -0.043
        angleY 118.216
        angleZ -0.305
-       scale 1
       }
       {
        coords 257.393 0 73.992
@@ -109260,7 +109222,7 @@ $grp PolylineShapeEntity {
        scale 0.903
       }
       {
-       coords 353.01 -0 142.113
+       coords 353.01 0 142.113
        angleX -0.513
        angleY 63.36
        angleZ -0.13
@@ -115687,6 +115649,10 @@ GenericEntity : "{2B07A2B8170DF481}Prefabs/Props/Agriculture/CultivatorWreck_01_
  coords 12299.559 32.771 8650.144
  angleY 0
 }
+GenericEntity : "{420E14DDFE57AF53}PrefabsEditable/Auto/Props/Military/Sandbags/E_Sandbag_01_end_burlap.et" {
+ coords 11432.151 60.903 8522.581
+ angleY -113.614
+}
 GenericEntity : "{4A0EB5570B2BB36C}Prefabs/Props/Wrecks/Ural4320_wreck.et" {
  coords 12291.518 31.547 8649.908
  angleY 91.218
@@ -115694,6 +115660,10 @@ GenericEntity : "{4A0EB5570B2BB36C}Prefabs/Props/Wrecks/Ural4320_wreck.et" {
 SCR_DestructibleBuildingEntity : "{4BB3C0291333467A}Prefabs/Structures/Industrial/IndustrialComplex 02.et" {
  coords 11411.309 0 8510.651
  angleY 64.833
+}
+GenericEntity : "{4ED8BBC0E6679FBE}PrefabsEditable/Auto/Props/Military/Sandbags/E_Sandbag_01_end_high_burlap.et" {
+ coords 11433.485 60.903 8508.516
+ angleY 154.001
 }
 $grp GenericEntity : "{6BDDFE9FA1D4B2F0}Prefabs/Props/Wrecks/UAZ469_wreck.et" {
  {
@@ -115714,6 +115684,24 @@ SCR_DestructibleBuildingEntity : "{896636DEF097E6F6}Prefabs/Structures/Industria
  coords 11374.087 49.781 8502.438
  angleY -28.28
 }
+$grp GenericEntity : "{A3A7C365E845B1B6}PrefabsEditable/Auto/Props/Military/Sandbags/E_Sandbag_01_long_high_burlap.et" {
+ {
+  coords 11437.043 60.903 8511.539
+  angleY 66.336
+ }
+ {
+  coords 11435.831 60.903 8509.728
+  angleY 156.408
+ }
+ {
+  coords 11434.226 60.904 8517.355
+  angleY 66.336
+ }
+ {
+  coords 11432.982 60.904 8520.286
+  angleY 66.336
+ }
+}
 GenericEntity : "{A98BA618430E9BAA}Prefabs/Props/Agriculture/PlowWreck_01.et" {
  coords 12298.622 33.01 8650.385
  angleY 0
@@ -115723,6 +115711,10 @@ GenericEntity : "{B3283803059E2750}Prefabs/Props/Crates/CrateWooden_01_plain.et"
  coords 12285.886 32.57 8669.987
  angleY -89.235
  scale 1.65
+}
+GenericEntity : "{BDAA871A06DABD74}PrefabsEditable/Auto/Props/Military/Sandbags/E_Sandbag_01_long_burlap.et" {
+ coords 11435.724 60.903 8514.413
+ angleY 61.088
 }
 GenericEntity : "{C260F0E07274ACA1}Prefabs/Props/Furniture/Boiler_01.et" {
  coords 12286.494 33.906 8670.043
@@ -115741,4 +115733,8 @@ GenericEntity : "{CFB893B8084ECD2B}Prefabs/Props/Furniture/Armchair_01.et" {
  angleX 79.992
  angleY 59.376
  angleZ -43.204
+}
+GenericEntity : "{FA9066DE33E8E67D}Prefabs/Structures/Military/Camps/Canvas_Covers/US/CanvasCover_Large_US.et" {
+ coords 11432.644 61.409 8513.21
+ angleY -24.553
 }
