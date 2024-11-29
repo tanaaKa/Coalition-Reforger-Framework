@@ -12,6 +12,9 @@ $grp Vehicle : "{44E2468321E19451}Prefabs/Vehicles/Wheeled/Stryker/Stryker_Drago
   angleZ -0.07
  }
 }
+Vehicle AH6M_RKT1 : "{823CA4130CE90077}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT.et" {
+ coords 1621.106 4.059 899.007
+}
 SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Company_p.et" {
  coords 453.987 3.874 2641.342
  {
