@@ -559,7 +559,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		if(m_list1.GetSelectedItem() < 0)
 			return;
 		
-		int playerID = m_allPlayers.Get(m_list1.GetSelectedItem());
+		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
 		m_clientAdminMenuComponent.AddItem(playerID, CRF_GearScriptGamemodeComponent.GetInstance().GetGearScriptSettings(m_groupManagerComponent.GetPlayerGroup(playerID).GetFaction().GetFactionKey()).m_rLeadershipRadiosPrefab);
 	}
 	
@@ -569,7 +569,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		if(m_list1.GetSelectedItem() < 0)
 			return;
 		
-		int playerID = m_allPlayers.Get(m_list1.GetSelectedItem());
+		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
 		m_clientAdminMenuComponent.AddItem(playerID, CRF_GearScriptGamemodeComponent.GetInstance().GetGearScriptSettings(m_groupManagerComponent.GetPlayerGroup(playerID).GetFaction().GetFactionKey()).m_rGIRadiosPrefab);
 	}
 	
@@ -579,7 +579,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		if(m_list1.GetSelectedItem() < 0)
 			return;
 		
-		int playerID = m_allPlayers.Get(m_list1.GetSelectedItem());
+		int playerID = GetPlayerIdFromName(TextWidget.Cast(m_list1.GetElementComponent(m_list1.GetSelectedItem()).GetRootWidget().FindAnyWidget("Text")).GetText());
 		m_clientAdminMenuComponent.AddItem(playerID, GetBinos(playerID));
 	}
 	
