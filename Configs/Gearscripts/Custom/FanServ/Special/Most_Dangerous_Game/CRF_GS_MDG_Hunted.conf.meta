@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{FADFAA76EE563C81}Configs/Gearscripts/Custom/FanServ/Special/Most_Dangerous_Game/CRF_GS_MDG_Hunted.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+  CONFResourceClass Xbox : PC {
+  }
+ }
+}

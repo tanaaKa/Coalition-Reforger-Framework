@@ -1,0 +1,34 @@
+SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+ coords 2039.74 557.686 234.703
+ m_sCustomNameSet "Prey 1"
+ {
+  SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+   coords 15.638 -1.084 3.092
+   m_sCustomNameSet "Prey 2"
+   {
+    SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+     coords -18.363 -0.758 4.991
+     m_sCustomNameSet "Prey 3"
+     {
+      SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+       coords 15.647 -1.208 3.25
+       m_sCustomNameSet "Prey 4"
+       {
+        SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+         coords -18.518 -0.63 4.573
+         m_sCustomNameSet "Prey 5"
+         {
+          SCR_AIGroup : "{CED4FAC8F241483D}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunted_10Man.et" {
+           coords 17.001 -1.253 3.344
+           m_sCustomNameSet "Prey 6"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

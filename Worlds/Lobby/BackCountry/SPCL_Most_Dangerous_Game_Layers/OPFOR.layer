@@ -1,0 +1,10 @@
+SCR_AIGroup : "{B374342F23A7E6A7}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunter_10Man.et" {
+ coords 1869.211 522.217 584.539
+ m_sCustomNameSet "Zaroff's Crew"
+ {
+  SCR_AIGroup : "{B374342F23A7E6A7}Prefabs/Groups/Special/MostDangerousGame/MostDangerousGame_Group_Hunter_10Man.et" {
+   coords -7.195 -2.239 11.276
+   m_sCustomNameSet "Van Pelt's Posse"
+  }
+ }
+}

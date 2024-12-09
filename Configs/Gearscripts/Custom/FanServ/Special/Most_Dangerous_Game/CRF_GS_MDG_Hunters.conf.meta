@@ -1,0 +1,19 @@
+MetaFileClass {
+ Name "{DE4C545A48EA4DCA}Configs/Gearscripts/Custom/FanServ/Special/Most_Dangerous_Game/CRF_GS_MDG_Hunters.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass PS5 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+  CONFResourceClass Xbox : PC {
+  }
+ }
+}

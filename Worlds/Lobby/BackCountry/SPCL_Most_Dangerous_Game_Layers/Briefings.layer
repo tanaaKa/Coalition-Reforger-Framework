@@ -1,0 +1,41 @@
+PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescription/OPF_Brief.et" {
+ coords 2097.187 561.463 192.82
+ m_sTextData "You're not sure what kind of prey could be worth your time, after the incredible hunts you have participated in. But General Zaroff has promised that none of you have never hunted anything like this. However, he has warned you that your awareness must be higher than ever if you wish to survive against this \"most dangerous game\"."
+ m_aVisibleForFactions {
+  "OPFOR"
+ }
+}
+PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/Assets.et" {
+ coords 2088.95 563.71 176.77
+ m_sTextData "OPFOR:"\
+ ""\
+ "M40A5 Sniper Rifles"\
+ ""\
+ "BLUFOR:"\
+ ""\
+ "Camouflage and Bayonets"
+}
+PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
+ coords 2098.211 559.569 204.586
+}
+PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
+ coords 2094.846 561.329 198.39
+ m_sTextData "OPFOR:"\
+ ""\
+ "Hunt the most dangerous game and extract from the hunt."\
+ ""\
+ "BLUFOR:"\
+ ""\
+ "Hunt the hunters and survive the most dangerous game."
+}
+PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BLU_Brief.et" {
+ coords 2095.336 562.305 185.263
+ m_sTextData "You don't remember how you arrived in this forest, nor do you understand why you are covered in camouflage and armed with a bayonet. But you do understand that the sound of distant gunshots can't mean anything good."
+ m_aVisibleForFactions {
+  "BLUFOR"
+ }
+}
+PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
+ coords 2098.842 560.37 198.982
+ m_sTextData "A secretive big game hunting club composed of wealthy landowners has gathered together on the private hunting reserve of General Zaroff, the chairman of the club. He has promised the Hunters that he has acquired a special prey for this once-in-a-lifetime experience, a grand hunt for what he calls \"the most dangerous game\"."
+}
