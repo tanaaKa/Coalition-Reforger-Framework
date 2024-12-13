@@ -423,7 +423,7 @@
 //		bluforButton.m_OnClicked.Insert(SelectBlufor);
 //		ofporButton.m_OnClicked.Insert(SelectOpfor);
 //		indforButton.m_OnClicked.Insert(SelectIndfor);
-	}
+//	}
 //	
 //	override void Action_CloseInventory()
 //	{
