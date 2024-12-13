@@ -1,0 +1,54 @@
+SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR_Platoon_p.et" {
+ coords 2560.884 9.871 3156.992
+ {
+  SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+   coords -19.158 -1.094 -1.36
+   {
+    SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+     coords -12.43 0.22 0
+     m_sCustomNameSet "2nd Squad"
+     {
+      SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+       coords -11.512 0.16 0
+       m_sCustomNameSet "3rd Squad"
+       {
+        SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+         coords -12.944 0.407 0
+         m_sCustomNameSet "4th Squad"
+         {
+          SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+           coords -11.249 0.019 0
+           m_sCustomNameSet "5th Squad"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 2465.653 17.838 3089.72
+  angleY 92.302
+ }
+ Ural4320_transport_covered2 {
+  coords 2455.079 17.579 3089.964
+  angleY 92.302
+ }
+ Ural4320_transport_covered3 {
+  coords 2443.511 17.305 3090.188
+  angleY 92.302
+ }
+ Ural4320_transport_covered4 {
+  coords 2431.477 17.023 3090.606
+  angleY 92.302
+ }
+ Ural4320_transport_covered5 {
+  coords 2421.863 16.808 3091.017
+  angleY 92.302
+ }
+}
