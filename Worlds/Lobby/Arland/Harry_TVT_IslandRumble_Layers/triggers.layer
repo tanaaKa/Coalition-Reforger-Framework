@@ -27,7 +27,6 @@ $grp SCR_FactionControlTriggerEntity {
   "	}"
   TriggerShapeType Sphere
   SphereRadius 60
-  DrawShape 1
   PeriodicQueries 1
   UpdatePeriod 15
   OnQueryFinished ""\
@@ -36,7 +35,7 @@ $grp SCR_FactionControlTriggerEntity {
   "		if (m_bResult && !m_captured)"\
   "		{"\
   "			m_captured = true;"\
-  "			GetGame().GetCallqueue().CallLater(captureCheck, 60000, false);"\
+  "			GetGame().GetCallqueue().CallLater(captureCheck, 120000, false);"\
   "			if (m_held)"\
   "			{"\
   "				spawnthings();"\
@@ -91,7 +90,6 @@ $grp SCR_FactionControlTriggerEntity {
   "	}"
   TriggerShapeType Sphere
   SphereRadius 60
-  DrawShape 1
   PeriodicQueries 1
   UpdatePeriod 15
   OnQueryFinished ""\
@@ -100,7 +98,7 @@ $grp SCR_FactionControlTriggerEntity {
   "		if (m_bResult && !m_captured)"\
   "		{"\
   "			m_captured = true;"\
-  "			GetGame().GetCallqueue().CallLater(captureCheck, 60000, false);"\
+  "			GetGame().GetCallqueue().CallLater(captureCheck, 120000, false);"\
   "			if (m_held)"\
   "			{"\
   "				spawnthings();"\

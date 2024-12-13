@@ -3,34 +3,38 @@ $grp PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescripti
   coords 2446.902 248.877 2199.98
   m_sTextData "You've managed to land on Arland, and need to push quickly to Signal Hill. Once there, you can call for support in the form of two BTR-70s that will arrive at the predesignated spot. This will give you the support you need for the main objective, eliminating the FIA cell at Arleville."\
   ""\
-  "Note: Signal Hill must be held for 1 minute to receive the assets."
+  "Note: Signal Hill must be held for 2 minutes to receive the assets."
   m_aVisibleForFactions {
    "OPFOR"
   }
+  m_iOrder 4
  }
  indBrief {
   coords 2455.247 252.282 2193.842
   m_sTitle "INDFOR Brief"
   m_sTextData "OPFOR has managed a surprise landing on the sandbank near Beauregard. We have intelligence that they are going to cut off our communications at Signal Hill, and direct asset drops to support their push. We can try to take Signal Hill, and redirect those assets for ourselves, but the primary objective is to hold Arleville until help can arrive. "\
   ""\
-  "Note: Signal Hill must be held for 1 minute to receive the assets."
+  "Note: Signal Hill must be held for 2 minutes to receive the assets."
   m_aVisibleForFactions {
    "INDFOR"
   }
+  m_iOrder 4
  }
 }
-PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/Assets.et" {
+PS_MissionDescription c_assets : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/Assets.et" {
  coords 2456.353 251.463 2202.714
  m_sTextData "Both sides have the potential to have 2x BTR-70. "
+ m_iOrder 2
 }
-PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
+PS_MissionDescription a_welcome : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
  coords 2450.316 250.287 2204.12
 }
-PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
+PS_MissionDescription d_wincon : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
  coords 2450.492 249.974 2200.096
  m_sTextData "The game will end once Arleville has been held by Opfor for 8 minutes uncontested, if FIA is eliminated, or Opfor has unsufficient numbers to take Arleville. "
+ m_iOrder 3
 }
-PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
+PS_MissionDescription b_situation : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
  coords 2456.494 252.566 2194.172
  m_sTextData "Opfor has mounted an assault on Arland with the intent to eliminate the FIA cell at Arleville. Opfor has inserted infantry with the goal to quietly take Signal Hill, cut off communications, receive asset support, and then wipe out the FIA cells at Arleville."
 }
