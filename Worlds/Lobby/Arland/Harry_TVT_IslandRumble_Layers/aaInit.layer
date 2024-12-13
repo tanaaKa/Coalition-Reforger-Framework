@@ -1,0 +1,33 @@
+SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ coords 2591.366 123.062 2320.689
+}
+PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby/CRF_GameMode_Lobby-12.et" {
+ components {
+  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   m_iTimeLimitMinutes 60
+  }
+  SCR_InitWeatherComponent "{61BCFEC02D389EB2}" {
+   m_sInitialStartingWeatherId "Rainy"
+  }
+ }
+ coords 2577.146 142.956 2301.469
+ {
+  SCR_FactionManager "631B17F232983D10" {
+   ID "61BCFEC02D38B83E"
+   Factions {
+    SCR_Faction "{628C2D2BFC8C6447}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{631B065D52998440}" {
+        m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{631B065D579A3EAE}" {
+        m_sCallsign "1-5"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
