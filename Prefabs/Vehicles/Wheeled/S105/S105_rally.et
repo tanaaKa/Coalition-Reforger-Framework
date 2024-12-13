@@ -10,6 +10,18 @@ Vehicle : "{8EB38BBD860DA06E}Prefabs/Vehicles/Wheeled/S105/S105_lightblue.et" {
     }
    }
   }
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{631B4948527E5708}" {
+     SourceMaterial "Exterior02"
+     AssignedMaterial "{9A6DEA4C5AB75B67}Assets/Vehicles/Wheeled/S105/Data/S105_Rally_Exterior.emat"
+    }
+    MaterialAssignClass "{631B4948527E577F}" {
+     SourceMaterial "S105Body_mat"
+     AssignedMaterial "{168AD3C54A6F5CA8}Assets/Vehicles/Wheeled/S105/Data/S105Body_rally_mat.emat"
+    }
+   }
+  }
   SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
    CompartmentSlots {
     PilotCompartmentSlot PilotCompartment {
