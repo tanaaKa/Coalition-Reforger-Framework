@@ -96,7 +96,7 @@ $grp SCR_BaseTriggerEntity {
   OnActivate ""\
   "		m_PopUpNotification = SCR_PopUpNotification.GetInstance();"\
   "		"\
-  "		m_PopUpNotification.PopupMsg(\"OPFOR has extracted the FIA Truck\");"\
+  "		m_PopUpNotification.PopupMsg(\"BLUFOR has extracted the FIA Truck\");"\
   "	"
  }
 }
