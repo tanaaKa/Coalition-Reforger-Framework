@@ -81,19 +81,6 @@ SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR
            }
            m_aUnitPrefabOverrideIcons {
            }
-           {
-            SCR_AIGroup : "{2598DBB9C3E01AD3}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_IndirectTeam_p.et" {
-             components {
-              AIFormationComponent "{507E9DC12F541FE6}" {
-               DefaultFormation "File"
-              }
-             }
-             coords 21.827 3.56 -2.755
-             m_aUnitPrefabSlots {
-              "{1A48A3C1A69E573E}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_IndirectLead_P.et" "{48E86145C5152AD5}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_IndirectGunner_P.et" "{0F69A00097D4E2E1}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_IndirectLoader_P.et"
-             }
-            }
-           }
           }
          }
         }

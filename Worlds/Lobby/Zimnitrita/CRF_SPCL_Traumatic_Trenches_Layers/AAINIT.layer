@@ -18,79 +18,35 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    }
   }
   CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
-   m_iTimeLimitMinutes 20
+   m_iTimeLimitMinutes 25
   }
   SCR_InitWeatherComponent "{61BCFEC02D389EB2}" {
-   m_sInitialStartingWeatherId "RAINY"
+   m_sInitialStartingWeatherId "Rainy"
   }
   SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
-   m_iStartingHours 6
+   m_iStartingHours 5
    m_iStartingMinutes 30
-   m_bUsePredefineStartingTimeAndWeatehr 1
    m_aStartingWeatherAndTime {
-    SCR_TimeAndWeatherState "{6316058D1029F300}" {
-     m_sWeatherPresetName "RAINY"
-     m_iStartingHour 6
+    SCR_TimeAndWeatherState "{631B5D8BA32BB5F5}" {
+     m_sWeatherPresetName "Rainy"
+     m_iStartingHour 5
      m_iStartingMinutes 30
     }
    }
   }
  }
- coords 12242.009 17.19 12147.789
+ coords 11865.413 16.395 3983.646
  {
-  SCR_FactionManager "6274D40EDDDB563B" {
+  SCR_FactionManager "631B5D8AE913EAF4" {
    ID "61BCFEC02D38B83E"
    Factions {
-    SCR_Faction "{5978B9CE6585BBE8}" {
-     m_CallsignInfo SCR_FactionCallsignInfo "{5977478D568C093C}" {
-      m_aSquadNames {
-       SCR_CallsignInfo "{5977478D568C092E}" {
-        m_sCallsign "COY"
-       }
-       SCR_CallsignInfo "{5977478D568C092D}" {
-        m_sCallsign "1PLT"
-       }
-       SCR_CallsignInfo "{6274091DC7B6251A}" {
-        m_sCallsign "1-1"
-       }
-       SCR_CallsignInfo "{6274091DC7ACF5D7}" {
-        m_sCallsign "1-4"
-       }
-       SCR_CallsignInfo "{6274091DC7C58CFD}" {
-        m_sCallsign "2PLT"
-       }
-       SCR_CallsignInfo "{6274091DC7F9B1C1}" {
-        m_sCallsign "2-1"
-       }
-       SCR_CallsignInfo "{6274091DC7ECEA69}" {
-        m_sCallsign "2-2"
-       }
-       SCR_CallsignInfo "{6274091DF8CC32AB}" {
-        m_sCallsign "2-3"
-       }
-       SCR_CallsignInfo "{6274091DF8FEF44A}" {
-        m_sCallsign "2-4"
-       }
-      }
-     }
-    }
-    SCR_Faction "{5CC8DE37E1FF0F7A}" {
-     m_CallsignInfo SCR_FactionCallsignInfo "{5CC8BB97E017CDBC}" {
-      m_aSquadNames {
-       SCR_CallsignInfo "{6274091C9D5AADE1}" {
-        m_sCallsign "1-4"
-       }
-      }
-     }
-    }
     SCR_Faction "{628B22E9B4056C88}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB792D1218E95}" {
-        m_sCallsign "MMG"
        }
        SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
-        m_sCallsign "MORTAR"
+        m_sCallsign "MMG"
        }
       }
      }
@@ -98,14 +54,11 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     SCR_Faction "{628C2D2BFC8C6447}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
       m_aSquadNames {
-       SCR_CallsignInfo "{62F97E62A286160C}" {
+       SCR_CallsignInfo "{631B5D8BCF54E625}" {
         m_sCallsign "1-4"
        }
-       SCR_CallsignInfo "{62F97E62A36240B4}" {
+       SCR_CallsignInfo "{631B5D8BCF378441}" {
         m_sCallsign "1-5"
-       }
-       SCR_CallsignInfo "{62F97E62A30493E6}" {
-        m_sCallsign "MORTAR"
        }
       }
      }
