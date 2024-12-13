@@ -1,0 +1,180 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2644.063 91.911 5357.611
+}
+PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby/CRF_GameMode_Lobby-12.et" {
+ coords 2624.306 94.688 5377.013
+ {
+  SCR_FactionManager "631A3EBA05EDD3CB" {
+   ID "61BCFEC02D38B83E"
+   Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{631A3EA03CEBCE03}" {
+        m_sCallsign "1-4 (W)"
+       }
+      }
+     }
+    }
+    SCR_Faction "{628C2D2BFC8C6447}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{55CCB79287A4D7B6}" {
+        m_sCallsign "1-3 (W)"
+       }
+       SCR_CallsignInfo "{631A3EA04F245D3F}" {
+        m_sCallsign "COY"
+       }
+       SCR_CallsignInfo "{631A3EA04B77C602}" {
+        m_sCallsign "BTR 1"
+       }
+       SCR_CallsignInfo "{631A3EA04BF03E37}" {
+        m_sCallsign "BTR 2"
+       }
+       SCR_CallsignInfo "{631A3EA0400A982A}" {
+        m_sCallsign "2PLT"
+       }
+       SCR_CallsignInfo "{631A3EA040BF893E}" {
+        m_sCallsign "2-1"
+       }
+       SCR_CallsignInfo "{631A3EA040F33467}" {
+        m_sCallsign "2-2"
+       }
+       SCR_CallsignInfo "{631A3EA043B75890}" {
+        m_sCallsign "2-3 (W)"
+       }
+       SCR_CallsignInfo "{631A3EA043953CD9}" {
+        m_sCallsign "BTR 3"
+       }
+       SCR_CallsignInfo "{631A3EA056EC7267}" {
+        m_sCallsign "BTR-4"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp BaseGameTriggerEntity {
+ OBJ1 {
+  coords 2755.436 35.521 4209.204
+  userScript "	float m_iBluforPlayers = 0;"\
+  "    float m_iOpforPlayers = 0;"\
+  "    "\
+  "    protected bool FilterPlayers(IEntity ent) // Sphere Query Method"\
+  "    {        "\
+  "        //Is the entity on a player?"\
+  "        if(ChimeraCharacter.Cast(ent))"\
+  "        {"\
+  "            if(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent))"\
+  "                if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"BLUFOR\")"\
+  "                    m_iBluforPlayers += 1;"\
+  "                else if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"OPFOR\")"\
+  "                    m_iOpforPlayers += 1;"\
+  "        }            "\
+  "        "\
+  "        return true;"\
+  "    }"\
+  "    "\
+  "    void Captured()"\
+  "    {"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"OPFOR has established a beach head!\", 10);"\
+  "        delete GetGame().GetWorld().FindEntityByName(\"OBJ1\");"\
+  "    }"
+  TriggerShapeType Sphere
+  SphereRadius 358.1
+  PeriodicQueries 1
+  UpdatePeriod 10
+  OnQueryFinished ""\
+  "		m_iBluforPlayers= 0;"\
+  "        m_iOpforPlayers = 0;"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ1\").GetOrigin(), 360, FilterPlayers, null);"\
+  "        if(m_iBluforPlayers == 0 && m_iOpforPlayers > 0)"\
+  "            Captured();"\
+  "        if(m_iBluforPlayers > 0 && m_iOpforPlayers > 0)"\
+  "            if(m_iOpforPlayers/m_iBluforPlayers > 0.8)"\
+  "                Captured();"\
+  "	"
+ }
+ OBJ2 {
+  coords 3071.791 118.561 5221.563
+  userScript "	float m_iBluforPlayers = 0;"\
+  "    float m_iOpforPlayers = 0;"\
+  "    "\
+  "    protected bool FilterPlayers(IEntity ent) // Sphere Query Method"\
+  "    {        "\
+  "        //Is the entity on a player?"\
+  "        if(ChimeraCharacter.Cast(ent))"\
+  "        {"\
+  "            if(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent))"\
+  "                if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"BLUFOR\")"\
+  "                    m_iBluforPlayers += 1;"\
+  "                else if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"OPFOR\")"\
+  "                    m_iOpforPlayers += 1;"\
+  "        }            "\
+  "        "\
+  "        return true;"\
+  "    }"\
+  "    "\
+  "    void Captured()"\
+  "    {"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"OPFOR has captured the saw mill!\", 10);"\
+  "        delete GetGame().GetWorld().FindEntityByName(\"OBJ2\");"\
+  "    }"
+  TriggerShapeType Sphere
+  SphereRadius 71.8
+  PeriodicQueries 1
+  UpdatePeriod 10
+  OnQueryFinished ""\
+  "		m_iBluforPlayers= 0;"\
+  "        m_iOpforPlayers = 0;"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ2\").GetOrigin(), 72, FilterPlayers, null);"\
+  "        if(m_iBluforPlayers == 0 && m_iOpforPlayers > 0)"\
+  "            Captured();"\
+  "        if(m_iBluforPlayers > 0 && m_iOpforPlayers > 0)"\
+  "            if(m_iOpforPlayers/m_iBluforPlayers > 0.8)"\
+  "                Captured();"\
+  "	"
+ }
+ OBJ3 {
+  coords 2601.722 96.613 5423.186
+  userScript "	float m_iBluforPlayers = 0;"\
+  "    float m_iOpforPlayers = 0;"\
+  "    "\
+  "    protected bool FilterPlayers(IEntity ent) // Sphere Query Method"\
+  "    {        "\
+  "        //Is the entity on a player?"\
+  "        if(ChimeraCharacter.Cast(ent))"\
+  "        {"\
+  "            if(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent))"\
+  "                if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"BLUFOR\")"\
+  "                    m_iBluforPlayers += 1;"\
+  "                else if(SCR_FactionManager.SGetPlayerFaction(GetGame().GetPlayerManager().GetPlayerIdFromControlledEntity(ent)).GetFactionKey() == \"OPFOR\")"\
+  "                    m_iOpforPlayers += 1;"\
+  "        }            "\
+  "        "\
+  "        return true;"\
+  "    }"\
+  "    "\
+  "    void Captured()"\
+  "    {"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"OPFOR has captured LeMoule!\", 10);"\
+  "        delete GetGame().GetWorld().FindEntityByName(\"OBJ3\");"\
+  "    }"
+  TriggerShapeType Sphere
+  SphereRadius 175.9
+  PeriodicQueries 1
+  UpdatePeriod 10
+  OnQueryFinished ""\
+  "		m_iBluforPlayers= 0;"\
+  "        m_iOpforPlayers = 0;"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ3\").GetOrigin(), 176, FilterPlayers, null);"\
+  "        if(m_iBluforPlayers == 0 && m_iOpforPlayers > 0)"\
+  "            Captured();"\
+  "        if(m_iBluforPlayers > 0 && m_iOpforPlayers > 0)"\
+  "            if(m_iOpforPlayers/m_iBluforPlayers > 0.8)"\
+  "                Captured();"\
+  "	"
+ }
+}
