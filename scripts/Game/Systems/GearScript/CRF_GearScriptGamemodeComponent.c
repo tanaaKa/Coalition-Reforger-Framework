@@ -700,8 +700,6 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 				
 				weaponSlotComponent.SetWeapon(weaponSpawned);
 				
-				SCR_CharacterControllerComponent.Cast(m_InventoryManager.GetOwner().FindComponent(SCR_CharacterControllerComponent)).SelectWeapon(weaponSlotComponent);
-				
 				weaponSlotComponent.GetAttachments(attatchmentSlotArray);
 				
 				if(!weaponsAttachments)
