@@ -1,0 +1,27 @@
+Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
+ coords 5928.821 148.372 6682.13
+ angleX 1.723
+ angleY 122.755
+ angleZ 5.77
+ {
+  GenericEntity {
+   ID "5E2E7C60E0F9B3F4"
+   coords 0 -0 0
+   angleY -90
+  }
+ }
+}
+$grp Vehicle : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ Ural4320_transport_covered1 {
+  coords 5942.309 149.666 6684.613
+  angleX 4.595
+  angleY 48.705
+  angleZ -0.283
+ }
+ Ural4320_transport_covered2 {
+  coords 5924.514 147.296 6668.964
+  angleX -6.011
+  angleY -125.557
+  angleZ -0.232
+ }
+}
