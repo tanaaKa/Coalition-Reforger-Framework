@@ -1,10 +1,20 @@
-modded class PS_PlayableControllerComponent : ScriptComponent
+modded class SCR_PlayerController
 {
 	bool m_bActivated = false;
 	
-	override void SwitchToObserver(IEntity from)
+	override protected void UpdateLocalPlayerController()
 	{
-		super.SwitchToObserver(from);
+		super.UpdateLocalPlayerController();
+		
+		m_bIsLocalPlayerController = this == GetGame().GetPlayerController();
+		if (!m_bIsLocalPlayerController)
+			return;
+
+		s_pLocalPlayerController = this;
+		InputManager inputManager = GetGame().GetInputManager();
+		if (!inputManager)
+			return;
+		
 		GetGame().GetInputManager().AddActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
 	}
 	

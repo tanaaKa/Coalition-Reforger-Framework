@@ -1,12 +1,6 @@
-PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
+CRF_Gamemode : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
  ID "56B2B479C6B96951"
  components {
-  SignalsManagerComponent "{61BCFEC02D389A61}" {
-  }
-  SCR_CommunicationSoundComponent "{61BCFEC02D389A7B}" {
-  }
-  CRF_AdminMenuGameComponent "{629F70E06AD4F665}" {
-  }
   CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
    m_bGearScriptEnabled 1
    m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
@@ -33,6 +27,59 @@ PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
     m_bEnableRTORadios 0
     m_bEnableGIRadios 0
    }
+  }
+  SCR_DataCollectorComponent "{5ADE83EE64329989}" {
+   m_aModules {
+    SCR_DataCollectorCrimesModule "{5D9C706AD14AF695}" {
+     m_aLightBanPunishments {
+      0
+     }
+     m_aHeavyBanPunishments {
+      0
+     }
+     m_bWarCrimesEnabled 0
+     m_bWarCrimesProportionalityPrincipleEnabled 0
+     MODIFIER_PROPORTIONALITY_FRIENDLY_KILLS 0
+     MODIFIER_PROPORTIONALITY_FRIENDLY_AI_KILLS 0
+     MODIFIER_PROPORTIONALITY_AI_KILLS 0
+     MODIFIER_PROPORTIONALITY_KILLS 0
+    }
+   }
+   m_iOptionalKickingFriendlyPlayerKillPenalty 9
+   m_iOptionalKickingFriendlyAIKillPenalty 9
+   m_iOptionalKickingKickPenaltyLimit 99999
+   m_iOptionalKickingBanDuration 0
+   m_iOptionalKickingPenaltySubtractionPeriod 99999
+   m_iOptionalKickingPenaltySubtractionPoints 9
+  }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.35
+   m_fRegenScale 0.75
+   m_fTourniquetStrengthMultiplier 0.7
+   m_fRegenerationDelay 30
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType DISABLED
+   m_iReceiveKillFeedType ALL
+  }
+  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
+   Enabled 0
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{61BCFEC02D389E8A}" {
+   }
+  }
+  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
+   Enabled 0
+  }
+  SignalsManagerComponent "{61BCFEC02D389A61}" {
+  }
+  SCR_CommunicationSoundComponent "{61BCFEC02D389A7B}" {
+  }
+  CRF_AdminMenuGameComponent "{629F70E06AD4F665}" {
   }
   CRF_RadioRespawnSystemComponent "{625032709409AAD9}" {
    Enabled 0
@@ -78,69 +125,25 @@ PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
    m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
    m_BudgetType CAMPAIGN
    m_iCompositionRefundPercentage 100
-   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" : "{96A8B496A076F1C0}scripts/Game/Building/CampaignBuildingCompositionOutline.conf" {
+   m_OutlineManager SCR_CampaignBuildingCompositionOutlineManager "{5DF6FBB5913F3245}" {
    }
    m_sPrefabsToBuildResource "{D2527D9AA5B4A33E}Configs/Editor/PlaceableEntities/Compositions/Compositions_FreeRoamBuilding.conf"
   }
   SCR_CommandingManagerComponent "{61BCFEC02D389EBD}" {
   }
-  SCR_DataCollectorComponent "{5ADE83EE64329989}" {
-   m_aModules {
-    SCR_DataCollectorCrimesModule "{5D9C706AD14AF695}" {
-     m_aLightBanPunishments {
-      0
-     }
-     m_aHeavyBanPunishments {
-      0
-     }
-     m_bWarCrimesEnabled 0
-     m_bWarCrimesProportionalityPrincipleEnabled 0
-     MODIFIER_PROPORTIONALITY_FRIENDLY_KILLS 0
-     MODIFIER_PROPORTIONALITY_FRIENDLY_AI_KILLS 0
-     MODIFIER_PROPORTIONALITY_AI_KILLS 0
-     MODIFIER_PROPORTIONALITY_KILLS 0
-    }
-   }
-   m_iOptionalKickingFriendlyPlayerKillPenalty 9
-   m_iOptionalKickingFriendlyAIKillPenalty 9
-   m_iOptionalKickingKickPenaltyLimit 99999
-   m_iOptionalKickingBanDuration 0
-   m_iOptionalKickingPenaltySubtractionPeriod 99999
-   m_iOptionalKickingPenaltySubtractionPoints 9
-  }
-  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
-   m_fDOTScale 0.35
-   m_fRegenScale 0.75
-   m_fTourniquetStrengthMultiplier 0.7
-   m_fRegenerationDelay 30
-  }
   SCR_GameModeSFManager "{61BCFEC02D389EBC}" {
   }
   SCR_InitWeatherComponent "{61BCFEC02D389EB2}" {
   }
-  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
-   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
-  }
-  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
-   m_iKillFeedType DISABLED
-   m_iReceiveKillFeedType ALL
-  }
   SCR_PreGameGameModeStateComponent "{61BCFEC02D389EB5}" {
    m_fDuration 0
-  }
-  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
-   Enabled 0
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{61BCFEC02D389E8A}" {
-   }
   }
   SCR_RestoreEditorModesComponent "{61BCFEC02D389E89}" {
   }
   SCR_SaveLoadComponent "{61BCFEC02D389E88}" {
    m_Struct SCR_MissionStruct "{61BCFEC02D389E8F}" {
     m_Struct0 SCR_EditorStruct "{61BCFEC02D389E8E}" {
-     m_AttributeList SCR_EditorAttributeList "{590C7881C296FA7D}" : "{F3D6C6D25642352C}Configs/Editor/AttributeLists/Edit.conf" {
+     m_AttributeList SCR_EditorAttributeList "{590C7881C296FA7D}" {
      }
     }
    }
@@ -148,16 +151,11 @@ PS_GameModeCoop : "{0F307326459A1395}Prefabs/MP/Modes/GameMode_Base.et" {
   }
   SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
   }
-  SCR_VotingManagerComponent "{5650BB6B6089393A}" {
-   Enabled 0
-  }
  }
  coords 0 0 0
  PlayerControllerPrefab "{4E5DAC62A374950F}Prefabs/Characters/Core/DefaultPlayerControllerMP_Coop.et"
  m_bAutoPlayerRespawn 0
  m_bAllowFactionChange 0
- m_bTeamSwitch 1
- m_iFreezeTime 0
  {
   SCR_FactionManager "5EA8C932C68D400F" : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
    ID "61BCFEC02D38B83E"

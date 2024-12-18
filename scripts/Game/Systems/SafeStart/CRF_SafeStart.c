@@ -27,7 +27,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected string m_sMessageContent;
 	protected string m_sStoredMessageContent;
 	
-	[RplProp(onRplName: "CallDeleteRedundantUnits")]
+	[RplProp()]
 	protected bool m_bKillRedundantUnitsBool;
 	
 	protected int m_iTimeSafeStartBegan;
@@ -46,8 +46,6 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected int m_iPlayedFactionsCount;
 	protected ref map<IEntity,bool> m_mPlayersWithEHsMap = new map<IEntity,bool>;
 	
-	protected PS_PlayableManager m_PlayableManager;
-	protected ref map<RplId, PS_PlayableComponent> m_mPlayables = new map<RplId, PS_PlayableComponent>;
 	protected int m_mPlayablesCount = 0;
 	
 	protected SCR_PopUpNotification m_PopUpNotification = null;
@@ -311,7 +309,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			
 			UpdatePlayedFactions();
 			
-			CallDeleteRedundantUnits();
+			DeleteEmptySlots();
 			m_bKillRedundantUnitsBool = true;
 			m_bAdminForcedReady = false;
 			m_bBluforReady = false;
@@ -386,48 +384,67 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		Replication.BumpMe();
 	};
 	
+	void DeleteEmptySlots()
+	{
+		if(m_bDeleteJIPSlots) 
+			if (m_SafeStartEnabled) 
+				GetGame().GetCallqueue().CallLater(DeleteEmptySlotsSlowly, 125, true);
+	}
+	
+	void DeleteEmptySlotsSlowly()
+	{
+		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
+		for(int i = 0; i < gamemode.m_aEntitySlots.Count(); i++)
+		{
+			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)
+			{
+				gamemode.SetSlot(i, -2);
+				SCR_EntityHelper.DeleteEntityAndChildren(RplComponent.Cast(Replication.FindItem(gamemode.m_aEntitySlots.Get(i))).GetEntity());
+			}
+		}
+	}
+	
 	// Called from server to all clients
 	//------------------------------------------------------------------------------------------------
-	void CallDeleteRedundantUnits() 
-	{
-		m_PlayableManager = PS_PlayableManager.GetInstance();
-		if(m_PlayableManager && m_bDeleteJIPSlots) {
-			if (m_SafeStartEnabled) {
-				// Slowly delete AI on another thread so we dont create any massive lag spikes.
-				m_mPlayables = m_PlayableManager.GetPlayables();
-				m_mPlayablesCount = m_mPlayables.Count();
-				GetGame().GetCallqueue().CallLater(DeleteRedundantUnitsSlowly, 125, true);
-			} else {
-				// Quickly delete AI on the main thread if they are a JIP and have come in after safestart has been turned off.
-				map<RplId, PS_PlayableComponent> playables = m_PlayableManager.GetPlayables();
-				for (int i = 0; i < playables.Count(); i++) {
-					PS_PlayableComponent playable = playables.GetElement(i);
-					if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
-					{
-						SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
-						SCR_EntityHelper.DeleteEntityAndChildren(character);
-					};
-				}
-			};
-		};
-	}
-
-	//------------------------------------------------------------------------------------------------
-	void DeleteRedundantUnitsSlowly() 
-	{
-		if (m_mPlayablesCount > 0) {
-			PS_PlayableComponent playable = m_mPlayables.GetElement(m_mPlayablesCount - 1);
-			if(!playable)
-				return;
-			m_mPlayablesCount = m_mPlayablesCount - 1;
-			if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
-			{
-				SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
-				SCR_EntityHelper.DeleteEntityAndChildren(character);
-			}
-		} else
-			GetGame().GetCallqueue().Remove(DeleteRedundantUnitsSlowly);
-	}
+//	void CallDeleteRedundantUnits() 
+//	{
+//		if(m_bDeleteJIPSlots) {
+//			if (m_SafeStartEnabled) {
+//				// Slowly delete AI on another thread so we dont create any massive lag spikes.
+//				m_mPlayables = m_PlayableManager.GetPlayables();
+//				m_mPlayablesCount = m_mPlayables.Count();
+//				GetGame().GetCallqueue().CallLater(DeleteRedundantUnitsSlowly, 125, true);
+//			} else {
+//				// Quickly delete AI on the main thread if they are a JIP and have come in after safestart has been turned off.
+//				map<RplId, PS_PlayableComponent> playables = m_PlayableManager.GetPlayables();
+//				for (int i = 0; i < playables.Count(); i++) {
+//					PS_PlayableComponent playable = playables.GetElement(i);
+//					if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
+//					{
+//						SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
+//						SCR_EntityHelper.DeleteEntityAndChildren(character);
+//					};
+//				}
+//			};
+//		};
+//	}
+//
+//	//------------------------------------------------------------------------------------------------
+//	void DeleteRedundantUnitsSlowly() 
+//	{
+//		if (m_mPlayablesCount > 0) {
+//			PS_PlayableComponent playable = m_mPlayables.GetElement(m_mPlayablesCount - 1);
+//			if(!playable)
+//				return;
+//			m_mPlayablesCount = m_mPlayablesCount - 1;
+//			if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
+//			{
+//				SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
+//				SCR_EntityHelper.DeleteEntityAndChildren(character);
+//			}
+//		} else
+//			GetGame().GetCallqueue().Remove(DeleteRedundantUnitsSlowly);
+//	}
 	
 	// Called from server to all clients
 	//------------------------------------------------------------------------------------------------
