@@ -50,6 +50,8 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	
 	protected SCR_PopUpNotification m_PopUpNotification = null;
 	
+	protected CRF_Gamemode m_CRFGameMode;
+	
 	bool m_bHUDVisible = true;
 	
 	//------------------------------------------------------------------------------------------------
@@ -81,6 +83,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		if (Replication.IsServer())
 		{
 			m_GameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
+			m_CRFGameMode = CRF_Gamemode.GetInstance();
 			m_Logging = CRF_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
@@ -271,6 +274,9 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		if (!m_GameMode.IsRunning()) 
 			return;
 		
+		if(m_CRFGameMode.m_GamemodState != CRF_GamemodeState.GAME)
+			return;
+		
 		m_SafeStartEnabled = !m_bSafestartInstantlyEnabled;
 		Replication.BumpMe();//Broadcast m_SafeStartEnabled change
 		
@@ -398,10 +404,12 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		{
 			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)
 			{
-				gamemode.SetSlot(i, -2);
-				SCR_EntityHelper.DeleteEntityAndChildren(RplComponent.Cast(Replication.FindItem(gamemode.m_aEntitySlots.Get(i))).GetEntity());
+				Print("Removing Entity");
+				gamemode.RemovePlayableEntity(RplComponent.Cast(Replication.FindItem(gamemode.m_aEntitySlots.Get(i))).GetEntity());
+				return;
 			}
 		}
+		GetGame().GetCallqueue().Remove(DeleteEmptySlotsSlowly);
 	}
 	
 	// Called from server to all clients

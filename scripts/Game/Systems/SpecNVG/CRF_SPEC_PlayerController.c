@@ -36,16 +36,22 @@ modded class SCR_PlayerController
 	override private void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		if(m_bActivated)
+			DisableNVG();
+		
 		m_bActivated = false;
-		DisableNVG();
+		
 		super.OnControlledEntityChanged(from, to);
 	}
 	
 	void ZeusClose()
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		if(m_bActivated)
+			DisableNVG();
+		
 		m_bActivated = false;
-		DisableNVG();
+		
 	}
 	
 	void DisableNVG()

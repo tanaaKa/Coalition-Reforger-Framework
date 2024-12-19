@@ -37,7 +37,7 @@ class CRF_GearScriptClientComponent: ScriptComponent
 	protected void DelayUpdate()
 	{
 		OnControlledEntityChanged(SCR_PlayerController.GetLocalMainEntity(), SCR_PlayerController.GetLocalMainEntity());
-		UpdateLocalPlayerGroup(SCR_GroupsManagerComponent.GetInstance().GetPlayerGroup(SCR_PlayerController.GetLocalPlayerId()).GetGroupID())
+		UpdateLocalPlayerGroup(SCR_GroupsManagerComponent.GetInstance().GetPlayerGroup(SCR_PlayerController.GetLocalPlayerId()).GetGroupID());
 	}
 	
 	//------------------------------------------------------------------------------------------------
