@@ -1,0 +1,32 @@
+$grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ {
+  coords 9695.079 13.377 1548.873
+  m_MarkerColor 0 0 0 1
+  m_sDescription "Defend St. Pierre"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+ }
+ {
+  coords 9688.254 13.377 1548.873
+  m_MarkerColor 0 0 0 1
+  m_sDescription "Land at St. Pierre"
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+ }
+ {
+  coords 9446.864 44.342 1694.828
+  m_sDescription "MG Nest"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+ }
+ {
+  coords 9689.141 22.673 1713.089
+  m_sDescription "MG Nest"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+ }
+}

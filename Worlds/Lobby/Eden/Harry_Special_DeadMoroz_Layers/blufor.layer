@@ -1,0 +1,88 @@
+SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+ coords 8814.102 111.424 2969.355
+ m_sCustomNameSet "Santa's Helpers"
+ {
+  SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+   coords -29.558 -0.604 0.135
+   m_sCustomNameSet "Santa's Helpers"
+   {
+    SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+     coords -28.477 0.13 0.707
+     m_sCustomNameSet "Santa's Helpers"
+     {
+      SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+       coords 57.017 2.547 17.242
+       m_sCustomNameSet "Santa's Helpers"
+       {
+        SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+         coords -28.028 -1.417 -2.171
+         m_sCustomNameSet "Santa's Helpers"
+         {
+          SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+           coords -25.821 -0.304 0.35
+           m_sCustomNameSet "Santa's Helpers"
+           {
+            SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+             coords 79.006 19.053 127.905
+             m_sCustomNameSet "Santa's Helpers"
+             {
+              SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+               coords -7.065 -0.764 4.089
+               m_sCustomNameSet "Santa's Helpers"
+               {
+                SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                 coords -9.09 -1.314 1.544
+                 m_sCustomNameSet "Santa's Helpers"
+                 {
+                  SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                   coords 16.36 3.128 4
+                   m_sCustomNameSet "Santa's Helpers"
+                   {
+                    SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                     coords -6.389 -0.795 4.638
+                     m_sCustomNameSet "Santa's Helpers"
+                     {
+                      SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                       coords -10.211 -1.687 2.97
+                       m_sCustomNameSet "Santa's Helpers"
+                       {
+                        SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                         coords 17.089 3.591 1.966
+                         m_sCustomNameSet "Santa's Helpers"
+                         {
+                          SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                           coords -7.028 -1.09 3.342
+                           m_sCustomNameSet "Santa's Helpers"
+                           {
+                            SCR_AIGroup : "{ABEBD4386CA25E24}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_AirCrew_p.et" {
+                             coords -10.009 -1.653 2.267
+                             m_sCustomNameSet "Santa's Helpers"
+                            }
+                           }
+                          }
+                         }
+                        }
+                       }
+                      }
+                     }
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

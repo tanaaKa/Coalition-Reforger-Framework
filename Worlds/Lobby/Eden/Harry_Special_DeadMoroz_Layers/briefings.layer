@@ -1,0 +1,38 @@
+PS_MissionDescription : "{79EBB4201309B9F3}PrefabsEditable/MissionDescription/OPF_Brief.et" {
+ coords 9560.246 39.304 1836.104
+ m_sTextData "We simply cannot allow the Americans to infect this town with their maximalist holidays. Defend St. Pierre, shoot down their \"Santa Claus\", and let Ded Moroz reign supreme!"
+ m_aVisibleForFactions {
+  "OPFOR"
+ }
+ m_iOrder 4
+}
+PS_MissionDescription : "{7D0DD3460BE3D185}PrefabsEditable/MissionDescription/Assets.et" {
+ coords 9545.561 38.062 1829.976
+ m_sTextData "Blufor "\
+ "The power of American Christmas"\
+ ""\
+ "Opfor"\
+ "The power of Communism"
+ m_iOrder 2
+}
+PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/WelcomeDescription.et" {
+ coords 9454.525 40.529 1739.849
+}
+PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
+ coords 9554.776 38.951 1834.441
+ m_sTitle "Win Conditions"
+ m_sTextData "Blufor captures St. Pierre via Helicopter"
+ m_iOrder 3
+}
+PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BLU_Brief.et" {
+ coords 9561.616 38.075 1828.499
+ m_sTextData "Santa has asked for our help to bring christmas cheer to the people of St. Pierre, which is held by the communist. Help him break through, and bring consumerism to the people once again."
+ m_aVisibleForFactions {
+  "BLUFOR"
+ }
+ m_iOrder 4
+}
+PS_MissionDescription : "{E600EB659F551D8E}PrefabsEditable/MissionDescription/Situation.et" {
+ coords 9577.285 41.336 1843.769
+ m_sTextData "Communist currently occupy St. Pierre, but Santa is hell bent on bringing American Christmas to the residents."
+}

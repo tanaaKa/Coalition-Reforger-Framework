@@ -1,0 +1,136 @@
+$grp SCR_BaseTriggerEntity {
+ spawnHeli1 {
+  coords 8808.51 118.057 3013.084
+ }
+ spawnHeli2 {
+  coords 8778.751 115.391 3011.343
+ }
+ spawnHeli3 {
+  coords 8750.602 115.253 3013.401
+ }
+ spawnHeli4 {
+  coords 8807.766 119.806 3040.56
+ }
+ spawnHeli5 {
+  coords 8779.995 117.439 3038.756
+ }
+ spawnHeli6 {
+  coords 8754.493 116.791 3040.336
+ }
+ spawnHeli7 {
+  coords 8750.789 120.652 3117.979
+ }
+ spawnHeli8 {
+  coords 8779.59 122.584 3116.17
+ }
+ spawnHeli9 {
+  coords 8809.662 127.166 3118.629
+ }
+ spawnHeli10 {
+  coords 8808.275 129.302 3144.933
+ }
+ spawnHeli11 {
+  coords 8778.678 125.454 3142.621
+ }
+ spawnHeli12 {
+  coords 8750.116 122.706 3144.803
+ }
+ spawnHeli13 {
+  coords 8807.712 132.187 3172.355
+ }
+ spawnHeli14 {
+  coords 8779.173 127.577 3170.488
+ }
+ spawnHeli15 {
+  coords 8754.382 124.004 3171.432
+ }
+ spawnNSV1 {
+  coords 9482.142 41.045 1672.299
+ }
+ spawnNSV2 {
+  coords 9683.424 23.346 1716.249
+ }
+ spawnVics {
+  coords 9546.923 31.363 1708.032
+  userScript "	string Heli = \"{DDDD9B51F1234DF3}Prefabs/Vehicles/Helicopters/UH1H/UH1H_armed.et\";"\
+  "	string Nsv = \"{29F0CC704A582154}Prefabs/Weapons/Tripods/6T7/Tripod_6T7_NSV.et\";"\
+  "	IEntity spawnHeli, spawnNSV1, spawnNSV2;"\
+  "	"\
+  "	void spawnthings() "\
+  "	{"\
+  "  		spawnNSV1 = GetGame().GetWorld().FindEntityByName(\"spawnNSV1\");"\
+  "  		spawnNSV2 = GetGame().GetWorld().FindEntityByName(\"spawnNSV2\");"\
+  "  		"\
+  "  		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
+  "  		spawnParams.TransformMode = ETransformMode.WORLD;"\
+  "  		"\
+  "  		spawnParams.Transform[3] = spawnNSV1.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(Nsv),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"335 0 0\");"\
+  "  		spawnParams.Transform[3] = spawnNSV2.GetOrigin();"\
+  "  		GetGame().SpawnEntityPrefab(Resource.Load(Nsv),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"310 0 0\");"\
+  ""\
+  "		for (int i = 1; i <= 15; i++) "\
+  "			{"\
+  "	    	string heliNum = \"spawnHeli\" + i.ToString();"\
+  "			spawnHeli = GetGame().GetWorld().FindEntityByName(heliNum);"\
+  "			spawnParams.Transform[3] = spawnHeli.GetOrigin();"\
+  "  			GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"180 0 0\");"\
+  ""\
+  "			}"\
+  "  		"\
+  "  	}"
+  EOnInit ""\
+  "  		super.EOnInit(owner);"\
+  "  		GetGame().GetCallqueue().CallLater(spawnthings, 3000, false);"\
+  "	"
+ }
+}
+StaticModelEntity : "{CF1FFB7BAA1A0769}Prefabs/Structures/Military/Camps/HelipadImprovised_01/HelipadImprovised_US_01.et" {
+ coords 8780.032 2.012 3038.909
+ {
+  $grp StaticModelEntity : "{CF1FFB7BAA1A0769}Prefabs/Structures/Military/Camps/HelipadImprovised_01/HelipadImprovised_US_01.et" {
+   {
+    coords -0.187 -2.059 -27.751
+   }
+   {
+    coords 28.741 0.666 -24.852
+   }
+   {
+    coords 27.823 2.358 2.587
+   }
+   {
+    coords -29.241 -2.163 -25.239
+   }
+   {
+    coords -25.172 -0.657 1.375
+   }
+   {
+    coords -0.071 8.027 103.59
+   }
+   {
+    coords -0.111 5.136 77.592
+   }
+   {
+    coords 29.498 9.72 80.508
+   }
+   {
+    coords 28.855 11.857 106.488
+   }
+   {
+    coords 27.942 14.741 133.926
+   }
+   {
+    coords -28.772 3.248 79.338
+   }
+   {
+    coords -29.125 5.258 106.101
+   }
+   {
+    coords -25.053 6.556 132.715
+   }
+   {
+    coords 0.113 10.144 131.34
+   }
+  }
+ }
+}

@@ -1,0 +1,93 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 9569.656 43.154 1854.057
+}
+PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby/CRF_GameMode_Lobby-12.et" {
+ components {
+  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   m_bSafestartInstantlyEnabled 0
+  }
+ }
+ coords 9560.771 40.89 1844.71
+ {
+  SCR_FactionManager {
+   ID "61BCFEC02D38B83E"
+   Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{55CCB792D10AD8F4}" {
+        m_sCallsign "Red 1"
+       }
+       SCR_CallsignInfo "{55CCB792D13759D8}" {
+        m_sCallsign "Red 2"
+       }
+       SCR_CallsignInfo "{55CCB792D1218E95}" {
+        m_sCallsign "Red 3"
+       }
+       SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
+        m_sCallsign "Red 4"
+       }
+       SCR_CallsignInfo "{632758F63603E1DF}" {
+        m_sCallsign "Red 5"
+       }
+       SCR_CallsignInfo "{632758F63657196C}" {
+        m_sCallsign "Red 6"
+       }
+       SCR_CallsignInfo "{632758F636B3B107}" {
+        m_sCallsign "Red 7"
+       }
+       SCR_CallsignInfo "{632758F605B6B861}" {
+        m_sCallsign "Red 8"
+       }
+       SCR_CallsignInfo "{632758F60A376C09}" {
+        m_sCallsign "Red 9"
+       }
+       SCR_CallsignInfo "{632758F6084BA44E}" {
+        m_sCallsign "Red 10"
+       }
+       SCR_CallsignInfo "{632758F60D17BDFD}" {
+        m_sCallsign "Red 11"
+       }
+       SCR_CallsignInfo "{632758F60C530326}" {
+        m_sCallsign "Red 12"
+       }
+       SCR_CallsignInfo "{632758F60C93CAF5}" {
+        m_sCallsign "Red 13"
+       }
+       SCR_CallsignInfo "{632758F60CD76384}" {
+        m_sCallsign "Red 14"
+       }
+       SCR_CallsignInfo "{632758F613087A8D}" {
+        m_sCallsign "Red 15"
+       }
+      }
+     }
+    }
+    SCR_Faction "{628C2D2BFC8C6447}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{55CCB79287E901BC}" {
+        m_sCallsign "1-1"
+       }
+       SCR_CallsignInfo "{55CCB79287936EBD}" {
+        m_sCallsign "1-2"
+       }
+       SCR_CallsignInfo "{55CCB79287BAFBD6}" {
+        m_sCallsign "1-3"
+       }
+       SCR_CallsignInfo "{55CCB79287A4D7B6}" {
+        m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{632758F647798B0B}" {
+        m_sCallsign "1-5"
+       }
+       SCR_CallsignInfo "{632758F64422C6FD}" {
+        m_sCallsign "1-6"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

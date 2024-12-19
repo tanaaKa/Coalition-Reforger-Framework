@@ -1,0 +1,249 @@
+$grp GenericEntity : "{07D58C64654F71A3}Prefabs/Compositions/Slotted/SlotFlatSmall/SandbagPosition_S_USSR_03.et" {
+ {
+  coords 9497.384 38.628 1678.816
+ }
+ {
+  coords 9567.842 26.91 1639.458
+  angleY 23.241
+ }
+}
+$grp GenericEntity : "{0B31DF40DF62F895}Prefabs/Structures/Infrastructure/Naval/Breakwater/BreakwaterStone_01_stack_wall_half.et" {
+ {
+  coords 8389.951 -89.593 2480.849
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 9231.188 -49.324 1335.559
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 7661.681 -174.055 3472.342
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 8528.844 9.898 3260.708
+  angleY 145.257
+  scale 50
+ }
+ {
+  coords 9000.382 -53.649 3363.487
+  angleY -129.096
+  scale 50
+ }
+ {
+  coords 9896.52 -153.815 2260.625
+  angleY -129.096
+  scale 50
+ }
+ {
+  coords 10038.409 63.434 1229.467
+  angleY -38.616
+  scale 50
+ }
+ {
+  coords 9896.52 -283.225 2260.625
+  angleY -129.096
+  scale 50
+ }
+ {
+  coords 8389.951 125.406 2480.849
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 9231.188 165.675 1335.559
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 7661.681 40.944 3472.342
+  angleY 53.702
+  scale 50
+ }
+ {
+  coords 8528.844 224.897 3260.708
+  angleY 145.257
+  scale 50
+ }
+ {
+  coords 9000.382 161.35 3363.487
+  angleY -129.096
+  scale 50
+ }
+ {
+  coords 9896.52 61.184 2260.625
+  angleY -129.096
+  scale 50
+ }
+ {
+  coords 10038.409 278.433 1229.467
+  angleY -38.616
+  scale 50
+ }
+ {
+  coords 9896.52 -68.226 2260.625
+  angleY -129.096
+  scale 50
+ }
+}
+$grp GenericEntity : "{20D02D188D3E883F}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Camo_wall_high_USSR.et" {
+ {
+  coords 9479.374 40.788 1668.299
+  angleY 65.964
+ }
+ {
+  coords 9480.463 40.788 1665.858
+  angleY 65.964
+ }
+ {
+  coords 9481.521 40.788 1663.484
+  angleY 65.964
+ }
+ {
+  coords 9502.913 37.622 1678.995
+  angleY 65.964
+ }
+ {
+  coords 9504.002 37.522 1676.554
+  angleY 65.964
+ }
+ {
+  coords 9505.06 37.394 1674.18
+  angleY 65.964
+ }
+ {
+  coords 9547.377 30.214 1636.483
+  angleY 78.137
+ }
+ {
+  coords 9547.927 30.005 1633.867
+  angleY 78.137
+ }
+ {
+  coords 9548.459 29.803 1631.324
+  angleY 78.137
+ }
+ {
+  coords 9574.665 26.06 1639.901
+  angleY 65.964
+ }
+ {
+  coords 9575.756 25.924 1637.46
+  angleY 65.964
+ }
+ {
+  coords 9576.813 25.787 1635.086
+  angleY 65.964
+ }
+ {
+  coords 9439.916 44.96 1695.086
+  angleY 65.964
+ }
+ {
+  coords 9441.005 44.8 1692.645
+  angleY 65.964
+ }
+ {
+  coords 9442.063 44.731 1690.271
+  angleY 65.964
+ }
+ {
+  coords 9451.649 43.308 1699.272
+  angleY 65.964
+ }
+ {
+  coords 9452.74 43.4 1696.831
+  angleY 65.964
+ }
+ {
+  coords 9453.798 43.458 1694.457
+  angleY 65.964
+ }
+ {
+  coords 9683.561 22.418 1704.643
+  angleY 31.968
+ }
+ {
+  coords 9685.826 22.34 1703.228
+  angleY 31.968
+ }
+ {
+  coords 9688.032 22.125 1701.851
+  angleY 31.968
+ }
+}
+$grp GenericEntity : "{3001B0C35F835714}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Wall_BarbedWire_USSR_01.et" {
+ {
+  coords 9447.39 43.967 1699.468
+ }
+ {
+  coords 9689.276 22.719 1717.677
+ }
+}
+$grp GenericEntity : "{8E1DF47DD56E69E6}Prefabs/Compositions/Slotted/SlotFlatSmall/SandbagPosition_S_USSR_01.et" {
+ {
+  coords 9482.748 40.381 1670.959
+  angleY -25.345
+ }
+ {
+  coords 9683.372 22.629 1710.346
+  angleY -93.984
+ }
+ {
+  coords 9551.297 29.693 1638.014
+  angleY -2.105
+ }
+}
+$grp GenericEntity : "{A2D4DAC9EDE8BD6E}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_MG_USSR_01_NSV.et" {
+ {
+  coords 9441.295 44.609 1699.487
+  angleY -21.383
+ }
+ {
+  coords 9683.284 22.761 1716.389
+  angleY -49.602
+ }
+}
+$grp GenericEntity : "{E249C09D69AAE6C8}Prefabs/Compositions/Slotted/SlotFlatSmall/SandbagPosition_S_USSR_02.et" {
+ {
+  coords 9489.491 39.313 1675.293
+  angleY -24.997
+  {
+   GenericEntity {
+    ID "5CCCBEEECFFEB849"
+    {
+     DecalEntity {
+      ID "56E0B29E17039037"
+      coords -0.174 -0.367 0
+     }
+    }
+   }
+   GenericEntity {
+    ID "5CCCBEEECFFEB8EB"
+    coords 3.792 -0.316 0.36
+   }
+  }
+ }
+ {
+  coords 9559.202 28.472 1639.334
+  angleY -1.757
+  {
+   GenericEntity {
+    ID "5CCCBEEECFFEB849"
+    {
+     DecalEntity {
+      ID "56E0B29E17039037"
+      coords -0.174 -0.367 0
+     }
+    }
+   }
+   GenericEntity {
+    ID "5CCCBEEECFFEB8EB"
+    coords 3.792 -0.316 0.36
+   }
+  }
+ }
+}
