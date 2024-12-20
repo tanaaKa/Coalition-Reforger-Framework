@@ -11,6 +11,9 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
     m_rGearScript "{D7B22F98968C6317}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSATACS.conf"
    }
   }
+  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+   m_iTimeLimitMinutes 45
+  }
   CRF_SearchAndDestroyGameModeComponent "{6329490493B6B6F3}" {
    attackingSide "OPFOR"
    defendingSide "BLUFOR"
