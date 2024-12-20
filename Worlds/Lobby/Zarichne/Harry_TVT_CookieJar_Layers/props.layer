@@ -1,14 +1,6 @@
-GenericEntity : "{010D5FBC85347C39}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_MG_US_01_M2HB.et" {
- coords 1816.071 8.763 3520.734
- angleY 156.902
-}
 GenericEntity : "{18B92018CF634D22}Prefabs/Compositions/Slotted/SlotFlatSmall/SandbagPosition_S_US_03.et" {
  coords 1852.967 10.324 3671.59
  angleY 100.392
-}
-GenericEntity : "{207442723F49FC41}Prefabs/Compositions/Misc/SubCompositions/Sandbag_MG_US_02_M60.et" {
- coords 1759.68 9.314 3664.214
- angleY -173.556
 }
 GenericEntity : "{258D0520BA0FC415}Prefabs/Compositions/Slotted/SlotFlatSmall/SandbagPosition_S_US_04.et" {
  coords 1854.406 10.239 3702.9
@@ -35,8 +27,13 @@ $grp GenericEntity : "{5519B339E041781E}Prefabs/Compositions/Misc/SubComposition
   coords 1864.861 10.156 3705.759
  }
 }
-GenericEntity : "{5EF52FAE299A831A}Prefabs/Props/Military/Sandbags/Sandbag_01_short_base.et" {
- coords 1761.445 9.399 3664.18
+$grp GenericEntity : "{5EF52FAE299A831A}Prefabs/Props/Military/Sandbags/Sandbag_01_short_base.et" {
+ {
+  coords 1761.445 9.399 3664.18
+ }
+ {
+  coords 1759.653 9.399 3664.18
+ }
 }
 $grp StaticModelEntity : "{5FB3A1755261CA59}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Bunker_Camouflaged_US_01.et" {
  {
@@ -109,6 +106,10 @@ $grp GenericEntity : "{C56ED190635B0129}Prefabs/Compositions/Misc/SubComposition
   coords 1896.39 8.008 3339.759
   angleY -106.543
  }
+}
+GenericEntity : "{CDE80E823669F91D}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Corner_Right_US_01.et" {
+ coords 1814.349 8.756 3519.406
+ angleY 149.497
 }
 StaticModelEntity : "{D4ABEC6A0DB2E253}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/Utility/E_Helipad_Lights_US_01.et" {
  coords 1555.066 0.428 3518.609
