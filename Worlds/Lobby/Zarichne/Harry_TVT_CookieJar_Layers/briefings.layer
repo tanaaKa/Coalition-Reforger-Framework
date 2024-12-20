@@ -23,7 +23,7 @@ PS_MissionDescription : "{8204C07A1B25066F}PrefabsEditable/MissionDescription/We
 }
 PS_MissionDescription : "{AE37B19A0B021679}PrefabsEditable/MissionDescription/WinCondition.et" {
  coords 1866.296 65.247 3619.256
- m_sTextData "The game ends if Opfor holds the factory uncontested for 8 minutes, if Blufor is wiped out, or if Opfor is has insufficient force remaining to capture the factory."
+ m_sTextData "The game ends if Opfor holds the factory uncontested for 8 minutes, if Blufor is wiped out, or if Opfor has insufficient force remaining to capture the factory."
  m_iOrder 3
 }
 PS_MissionDescription : "{DC34D37AC97B74B0}PrefabsEditable/MissionDescription/BLU_Brief.et" {
