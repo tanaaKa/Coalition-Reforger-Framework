@@ -1,0 +1,12 @@
+$grp PS_Objective : "{A4F0B4846EF850C4}Prefabs/Objective/Objective.et" {
+ {
+  coords 333.565 39.494 3918.297
+  m_sTitle "Seized Howitzers"
+  m_sFactionKey "BLUFOR"
+ }
+ {
+  coords 346.292 38.361 3921.809
+  m_sTitle "Defended Howitzers"
+  m_sFactionKey "INDFOR"
+ }
+}

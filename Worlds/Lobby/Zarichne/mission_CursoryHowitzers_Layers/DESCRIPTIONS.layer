@@ -1,0 +1,59 @@
+$grp PS_MissionDescription : "{3136BE42592F3B1B}PrefabsEditable/MissionDescription/EditableMissionDescription.et" {
+ {
+  coords 150.374 77.026 1831.131
+  m_sTitle "Welcome"
+  m_sTextData "#Coal_Lobby_Welcome_Text"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 153.219 76.854 1831.521
+  m_sTitle "Situation"
+  m_sTextData "US forces attempt to seize field guns recently captured by guerillas. "\
+  "3:2 ratio BLUFOR:INDFOR"\
+  "45 minute time limit"
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 1
+ }
+ {
+  coords 156.483 76.626 1831.978
+  m_sTitle "Assets"
+  m_sTextData "None"\
+  ""
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 2
+ }
+ {
+  coords 159.538 76.438 1832.185
+  m_sTitle "BLUFOR Brief"
+  m_sTextData "BLUFOR must seize the field guns marked on the map, preferably by eliminating all INDFOR."
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_iOrder 4
+ }
+ {
+  coords 148.464 77.054 1846.343
+  m_sTitle "INDFOR Brief"
+  m_sTextData "INDFOR must protect the field guns marked on the map, preferably by eliminating all BLUFOR."\
+  ""
+  m_aVisibleForFactions {
+   "INDFOR"
+  }
+  m_iOrder 5
+ }
+ {
+  coords 140.914 76.916 1859.858
+  m_sTitle "Objectives"
+  m_sTextData "BLUFOR:"\
+  "Seize the field guns."\
+  ""\
+  "INDFOR:"\
+  "Defend the field guns."
+  m_bEmptyFactionVisibility 1
+  m_bShowForAnyFaction 1
+  m_iOrder 3
+ }
+}

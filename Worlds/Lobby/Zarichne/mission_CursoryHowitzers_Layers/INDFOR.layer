@@ -1,0 +1,41 @@
+SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDFOR_Platoon_p.et" {
+ coords 350.587 45.219 3679.583
+ m_sCustomNameSet "Platoon Command"
+ {
+  SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+   components {
+    AIFormationComponent "{507E9DC12F541FE6}" {
+     DefaultFormation "File"
+    }
+   }
+   coords -22.294 0.372 18.571
+   m_aUnitPrefabSlots + {
+    "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+   }
+   {
+    SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+     components {
+      AIFormationComponent "{507E9DC12F541FE6}" {
+       DefaultFormation "File"
+      }
+     }
+     coords 0.5 -0.312 5.899
+     m_aUnitPrefabSlots + {
+      "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+     }
+     m_sCustomNameSet "2nd Squad"
+     {
+      SCR_AIGroup : "{48C8363A10E31372}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_HMGTeam_p.et" {
+       components {
+        AIFormationComponent "{507E9DC12F541FE6}" {
+         DefaultFormation "File"
+        }
+       }
+       coords -0.912 -0.547 11.856
+      }
+     }
+    }
+   }
+  }
+ }
+}
