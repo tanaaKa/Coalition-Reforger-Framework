@@ -10,7 +10,7 @@ $grp SCR_BaseTriggerEntity {
      m_sTextData "Destroy BombSite B"
      m_iOrder 1
      m_iScore 50
-     m_sFactionKey "BLUFOR"
+     m_sFactionKey "OPFOR"
     }
     {
      coords -292.196 -2.277 -220.333
@@ -18,7 +18,7 @@ $grp SCR_BaseTriggerEntity {
      m_sTextData "Protect BombSite B"
      m_iOrder 1
      m_iScore 50
-     m_sFactionKey "OPFOR"
+     m_sFactionKey "BLUFOR"
     }
    }
   }
@@ -34,7 +34,7 @@ $grp SCR_BaseTriggerEntity {
      m_sTitle "Destroy BombSite A"
      m_sTextData "Destroy BombSite A"
      m_iScore 50
-     m_sFactionKey "BLUFOR"
+     m_sFactionKey "OPFOR"
     }
     {
      coords -589.936 -4.179 125.255
@@ -42,7 +42,7 @@ $grp SCR_BaseTriggerEntity {
      m_sTitle "Protect BombSite A"
      m_sTextData "Protect BombSite A"
      m_iScore 50
-     m_sFactionKey "OPFOR"
+     m_sFactionKey "BLUFOR"
     }
    }
   }
