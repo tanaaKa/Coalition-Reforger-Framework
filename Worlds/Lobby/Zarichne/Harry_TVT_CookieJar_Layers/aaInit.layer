@@ -11,7 +11,7 @@ PS_GameModeCoop CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby
    m_iSetWeatherConstant 1
   }
   SCR_TimeAndWeatherHandlerComponent "{61BCFEC02D389E83}" {
-   m_iStartingHours 14
+   m_iStartingHours 12
   }
  }
  coords 1848.693 9.938 3629.966
