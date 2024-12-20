@@ -192,127 +192,282 @@ $grp PS_ManualMarker : "{E8B2EB8EECE8491C}PrefabsEditable/Markers/GameZoneMarker
  {
   coords 1876.929 2.591 2915.836
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 1973.368 2.591 2942.285
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2069.807 2.591 2968.734
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2166.246 2.591 2995.183
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2262.685 2.591 3021.632
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2359.124 2.591 3048.081
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2455.563 2.591 3074.53
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2552.002 2.591 3100.979
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2648.441 2.591 3127.428
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2744.88 2.591 3153.877
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2841.319 2.591 3180.326
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2937.758 2.591 3206.775
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 3034.197 2.591 3233.224
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 3130.636 2.591 3259.673
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 3227.075 2.591 3286.122
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 3323.514 2.591 3312.571
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 3419.953 2.591 3339.02
   angleY -15.337
+  m_aVisibleForFactions {
+   "BLUFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
 }
 $grp PS_ManualMarker : "{FC557CF9344FF7A7}PrefabsEditable/Markers/GameZoneMarker_OPFOR.et" {
  {
   coords 2320.125 2.91 1963.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2320.125 2.91 1913.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2320.125 2.91 1863.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2370.125 2.91 1863.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2420.125 2.91 1863.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2470.125 2.91 1863.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2520.125 2.91 1863.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2520.125 2.91 1913.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2520.125 2.91 1963.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2520.125 2.91 2013.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2470.125 2.91 2013.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2420.125 2.91 2013.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2370.125 2.91 2013.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
  {
   coords 2320.125 2.91 2013.164
   angleY 0
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 0
+  m_bShowForAnyFaction 0
  }
 }
