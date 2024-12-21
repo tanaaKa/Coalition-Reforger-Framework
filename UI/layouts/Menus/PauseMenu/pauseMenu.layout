@@ -8,7 +8,7 @@ FrameWidgetClass {
      Slot OverlayWidgetSlot "{62A28B2892C0F8BB}" {
       HorizontalAlign 0
       VerticalAlign 0
-      Padding 200 100 0 0
+      Padding 55 200 0 0
      }
      Clipping False
      {
