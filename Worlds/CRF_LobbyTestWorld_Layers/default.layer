@@ -1,134 +1,31 @@
 SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  coords 2046.755 45.732 2064.089
 }
-CRF_Gamemode CRF_GameMode_Lobby_1 : "{70D51A019CC9AA3F}Prefabs/MP/Modes/Lobby/CRF_GameMode_Lobby-12.et" {
+CRF_Gamemode GameMode_Lobby1 : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
  components {
-  CRF_SafestartGameModeComponent "{61BCFEC3FE6731AB}" {
+  CRF_AdminMenuGameComponent "{632A66B13D760948}" {
+  }
+  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
    m_bSafestartInstantlyEnabled 0
   }
-  SCR_BaseScoringSystemComponent "{63261719616DE892}" {
-  }
-  SCR_RespawnTimerComponent "{6326171978520474}" {
-  }
- }
- coords 2045.484 44.2 2062.603
- PlayerControllerPrefab "{A1AE127F16DD352E}Prefabs/Characters/Core/DefaultPlayerControllerMP_Factions.et"
- m_aMissionDescriptors {
-  CRF_MissionDescriptor "{6326171F52245AB6}" {
-   m_sTitle "Tesst"
-   m_sTextData "Test"
-   m_bShowForAnyFaction 1
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
+   }
   }
  }
+ coords 2049.433 45.156 2065.633
  {
   SCR_FactionManager {
-   ID "61BCFEC02D38B83E"
+   ID "632771FB44BBF896"
    Factions {
-    SCR_Faction "{61500924662B6062}" {
-     FactionKey "SPEC"
-     FactionColor 0.392 0.157 0.624 1
-     UIInfo SCR_FactionUIInfo "{56B49118D8D0A9C5}" {
-      Name "#AR-Faction_CIV"
-      Icon "{6C40CAD74C2327B0}CRF Images/CIV.edds"
-      m_sNameUpper "#AR-Faction_CIV_UC"
-     }
-     "Identity of soldiers" FactionIdentity "{60DCEDE56D10632C}" {
-      VisualIdentityArray {
-       VisualIdentity "{570CE64C790A3C7D}" {
-       }
-       VisualIdentity "{570CE64C784286B5}" {
-       }
-       VisualIdentity "{570CFDC06CAAD480}" {
-       }
-       VisualIdentity "{570CFDC05A2BFCE8}" {
-       }
-       VisualIdentity "{570CFDC037CCBCD3}" {
-       }
-       VisualIdentity "{570CFDC1C8B17A43}" {
-       }
-       VisualIdentity "{570EDB838B8AC563}" {
-       }
-       VisualIdentity "{588508C19AA51746}" {
-       }
-       VisualIdentity "{588508C199AD5966}" {
-       }
-      }
-      SoundIdentityArray {
-       SoundIdentity "{62D8F84F4058FF0E}" {
-       }
-       SoundIdentity "{62D8F84F4058FF0A}" {
-       }
-       SoundIdentity "{62D8F84F4058FF09}" {
-       }
-       SoundIdentity "{62D8F84F405887F1}" {
-       }
-       SoundIdentity "{62D8F84F405887FF}" {
-       }
-       SoundIdentity "{62D8F84F405887FC}" {
-       }
-      }
-     }
-     m_iOrder 3000
-     m_OutlineFactionColor 0.045 0 0.084 1
-     m_NotificationFactionColor 0.517 0.204 0.823 1
-     m_NotificationTextFactionColor 0.392 0.157 0.624 1
-     m_bIsPlayable 0
-     m_bShowInWelcomeScreenIfNonPlayable 0
-     m_bIsMilitary 0
-     m_sFactionFlag "{6C40CAD74C2327B0}CRF Images/CIV.edds"
-     m_FactionFlagMaterial "{936E6C67A71A9421}Assets/Props/Fabric/Flags/Data/Flag_2_3_White.emat"
-     m_FactionLabel FACTION_CIV
-     m_aFriendlyFactionsIds {
-      "US" "USSR" "FIA" "RHS_USAF" "RHS_AFRF" "RHS_ION" "RHS_USAF" "RHS_AFRF" "RHS_ION"
-     }
-     m_CallsignInfo SCR_FactionCallsignInfo "{607A9A9E40D70F6E}" {
-      m_bIsAssignedRandomly 0
-      m_aCompanyNames {
-       SCR_CallsignInfo "{607A9A9EC820C29F}" {
-       }
-      }
-      m_iCompanyOverflowIndex 0
-      m_aPlatoonNames {
-       SCR_CallsignInfo "{607A9A9EC820C263}" {
-       }
-      }
-      m_aSquadNames {
-       SCR_CallsignInfo "{607A9A9EC820C279}" {
-        m_sCallsign "291"
-       }
-       SCR_CallsignInfo "{607A9A9EC820C27A}" {
-        m_sCallsign "292"
-       }
-       SCR_CallsignInfo "{607A9A9EC820C27B}" {
-        m_sCallsign "293"
-       }
-       SCR_CallsignInfo "{607A9A9EC820C27D}" {
-        m_sCallsign "300"
-       }
-      }
-      m_sCallsignGroupFormat "%3"
-      m_sCallsignCharacterFormat "%1 %3: %4"
-      m_sCallsignCharacterWithRoleFormat "%1 %3: %4"
-     }
-     m_iFactionRadioFrequency 58000
-     m_aEntityCatalogs {
-      SCR_EntityCatalogMultiList "{607A9A9FE55EDF5F}" {
-      }
-      SCR_EntityCatalogMultiList "{607A9A9FFA54DFE9}" {
-      }
-      SCR_EntityCatalogMultiList "{61C8ED1193902596}" {
-      }
-      SCR_EntityCatalogMultiList "{61C8ED1182211903}" {
-      }
-      SCR_EntityCatalogMultiList "{607A9A9FFBDA2F92}" {
-      }
-     }
-     m_sGroupFlagsImageSet "{D7E06968B5F9FC92}UI/Textures/GroupManagement/FlagIcons/GroupFlagsCivilian.imageset"
-     m_sGroupFlagsImageSetOutlines "{824ADD5E7A28B03E}UI/Textures/GroupManagement/FlagIcons/GroupFlagsCivilian-outline.imageset"
-     m_aFlagNames {
-      "land" "helicopter" "maintenance" "medical"
-     }
-     m_sFactionBackground "{781301447441F404}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_Civilian.imageset"
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     FactionKey "BLUFOR"
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     FactionKey "OPFOR"
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     FactionKey "INDFOR"
     }
    }
   }
