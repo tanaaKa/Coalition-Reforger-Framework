@@ -11,19 +11,29 @@
  * 1.0       12/21/24    Harry         Initial creation.
  * 
  * Notes:
- * The code below is typically a method in the script section of an object.
+ * The code below is typically in the script section of an object.
  * This does not cover game modes covered in the wiki.
  * Do not expect to copy, and paste this code into your script without modifying it.
  * As Reforger is rapidly developing, sections here may be out of date.
  ****************************************************************************************/
 
+/****************************************************************************************
+ * --------------Section Headers--------------
+ * Vehicle Spawning
+ * Sending a Global Message
+ * Safestart End Check & Timer
+ * Accessing a component
+ * Object Presence Inside Control Trigger
+ * Setting an objective complete
+ * Randomizing Spawns
+****************************************************************************************/
 
 
 
 
 /****************************************************************************************
  * --------------Vehicle Spawning--------------
- * This is an example of how vehicles have been spawned in the past. Vehicles can exibit some
+ * This is an example of how vehicles have been spawned in the past. Modded vehicles can create some
  * instability if spawned at the beginning of initialization, especially as so much else 
  * happens at EOnInit. This script delays the spawn slightly using the CallLater method,
  * and references the location of a base trigger entity named as the IEntity. It's not 
@@ -99,9 +109,9 @@ GetGame().SpawnEntityPrefab(Resource.Load(btr),GetGame().GetWorld(),spawnParams)
  * --------------Sending a Global Message--------------
  * This script is set up with a faction control trigger to send a message to every player
  * once the keyed faction has met the control conditions, and in this scenario it does 
- * so on a looping query. OnQueryFinished will set m_bResult result to true once the 
- * hold conditions have been met during the query period. The m_sent variable simply 
- * prevents the message from being spammed every time the query is done, and the condition is met.
+ * so on a query. The trigger will set m_bResult result to true once the 
+ * hold conditions have been met. The m_sent variable simply prevents the message from being 
+ * spammed every time the query is done, and the condition is met.
 ****************************************************************************************/
 
 class factory_Control_Class: SCR_FactionControlTriggerEntity 
@@ -136,7 +146,7 @@ delete bridge_Control;
 
 /****************************************************************************************
  * --------------Safestart End Check & Timer--------------
- * CRF utilizes a safe start rule at the beginning of most missions to allow for 
+ * Coalition utilizes a safe start rule at the beginning of most missions to allow for 
  * each team to strategize, brief, etc. This class was built with two opposing forces 
  * in mind, each competing over a faction control trigger. If the defending faction held
  * the trigger for the timer duration, something happens for them. If the attacking
@@ -151,7 +161,11 @@ delete bridge_Control;
  * 4. Once the timer has been set to true, then it executes the defending script and
  *      deletes the trigger.
 ****************************************************************************************/
+//Here is the safestart relevant section isolated
+CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+safestart.GetSafestartStatus()
 
+//Here is the full example
 class bridge_Control_Class: SCR_FactionControlTriggerEntity 
 {
 	// user script
@@ -312,9 +326,9 @@ bluObjective.SetCompleted(true);
 /****************************************************************************************
  * --------------Randomizing Spawns--------------
  * This is a system I built for spawning a randomized weapon at one of 585 triggers. 
- * The number of triggers isn't important, other than you have to specify that numberin the loop. 
+ * The number of triggers isn't important, other than you have to specify that number in the loop. 
  * It utilizes the same basic logic as the vehicle spawn, but with a weighted randomizer.
- * Each item to be spawned is given a range in an array, in an array, and then a random
+ * Each item to be spawned is given a range in an array and then a random
  * number generated to access that item. 
 ****************************************************************************************/
 
