@@ -24,6 +24,7 @@
  * Safestart End Check & Timer
  * Accessing a component
  * Object Presence Inside Control Trigger
+ * Action on Vehicle Destruction
  * Setting an objective complete
  * Randomizing Spawns
 ****************************************************************************************/
@@ -161,6 +162,7 @@ delete bridge_Control;
  * 4. Once the timer has been set to true, then it executes the defending script and
  *      deletes the trigger.
 ****************************************************************************************/
+
 //Here is the safestart relevant section isolated
 CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
 safestart.GetSafestartStatus()
@@ -311,6 +313,52 @@ class EngiPresence_Class: SCR_BaseTriggerEntity
 
 
 /****************************************************************************************
+ * --------------Action on Vehicle Destruction--------------
+ * This script is attached to a vehicle, in this case an engineering truck, and
+ * sends a message once the truck has been destroyed. It's utilizes the call later loop
+ * from the example in section Safestart End Check & Timer to listen for the state change.
+****************************************************************************************/
+
+class engiTruck_Class: Vehicle 
+{
+	// user script
+	bool dmessageSent = false;
+	
+	void checkDamage()
+	{
+		DamageManagerComponent dmgManager = DamageManagerComponent.Cast(this.FindComponent(DamageManagerComponent));
+		
+		if (dmgManager  && !dmessageSent)
+		{
+			if (dmgManager.IsDestroyed())
+			{
+				SCR_PopUpNotification.GetInstance().PopupMsg("The engineering vehicle has been destroyed", 10);
+				
+				dmessageSent = true;
+			}
+			
+			else 
+			{
+				GetGame().GetCallqueue().CallLater(checkDamage, 3000, false);
+			}
+		}
+	}
+
+	override void EOnInit(IEntity owner)
+	{
+		super.EOnInit(owner);
+		
+		GetGame().GetCallqueue().CallLater(checkDamage, 3000, false);
+
+	}
+
+};
+
+
+
+
+
+/****************************************************************************************
  * --------------Setting an objective complete--------------
  * This is not really necessary as whoever is running the session can simply toggle 
  * objective completion, but if you want to, this is how you set it via script.
@@ -325,7 +373,7 @@ bluObjective.SetCompleted(true);
 
 /****************************************************************************************
  * --------------Randomizing Spawns--------------
- * This is a system I built for spawning a randomized weapon at one of 585 triggers. 
+ * This is a rough system I built for spawning a randomized weapon at one of 585 triggers. 
  * The number of triggers isn't important, other than you have to specify that number in the loop. 
  * It utilizes the same basic logic as the vehicle spawn, but with a weighted randomizer.
  * Each item to be spawned is given a range in an array and then a random
