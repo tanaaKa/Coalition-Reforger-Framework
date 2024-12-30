@@ -1,0 +1,59 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 2046.755 45.732 2064.089
+}
+CRF_Gamemode GameMode_Lobby1 : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
+ components {
+  CRF_AdminMenuGameComponent "{632A66B13D760948}" {
+  }
+  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
+   m_bSafestartInstantlyEnabled 0
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
+   }
+  }
+ }
+ coords 2049.433 45.156 2065.633
+ {
+  SCR_FactionManager {
+   ID "632771FB44BBF896"
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     FactionKey "BLUFOR"
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     FactionKey "OPFOR"
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     FactionKey "INDFOR"
+    }
+   }
+  }
+ }
+}
+SCR_AIGroup : "{350C8DE227E3C030}Prefabs/Groups/BLUFOR/BLUFOR_PL.et" {
+ coords 2049.361 44.169 2062.238
+ m_faction "BLUFOR"
+ m_bIsPlayable 1
+ {
+  SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
+   coords -0.162 -0.752 -2.187
+   m_faction "BLUFOR"
+   m_bIsPlayable 1
+   {
+    SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
+     coords -2.346 -0.109 -0.049
+     m_faction "BLUFOR"
+     m_bIsPlayable 1
+     {
+      SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
+       coords -12.28 1.166 7.387
+       m_faction "BLUFOR"
+       m_bIsPlayable 1
+      }
+     }
+    }
+   }
+  }
+ }
+}

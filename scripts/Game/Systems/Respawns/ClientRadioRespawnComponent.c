@@ -19,7 +19,7 @@ class CRF_ClientRadioRespawnComponent : ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcAsk_SpawnGroup(int groupID)
 	{
-		CRF_RadioRespawnSystemComponent m_radioComponent = CRF_RadioRespawnSystemComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_RadioRespawnSystemComponent));
-		m_radioComponent.SpawnGroupServer(groupID);
+//		CRF_RadioRespawnSystemComponent m_radioComponent = CRF_RadioRespawnSystemComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_RadioRespawnSystemComponent));
+//		m_radioComponent.SpawnGroupServer(groupID);
 	}
 }

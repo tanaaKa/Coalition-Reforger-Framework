@@ -117,78 +117,70 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void Respawn(int playerId, string prefab, vector spawnLocation, int groupID)
 	{
-		Rpc(RpcAsk_CloseMap, playerId);
+//		Rpc(RpcAsk_CloseMap, playerId);
 		
 		if(prefab.IsEmpty())
 		{
 			switch(m_groupsManager.FindGroup(groupID).m_faction)
 			{
-				case "BLUFOR" : {prefab = "{6F99DE8453E6B423}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Rifleman_P.et"; break;}
+				case "BLUFOR" : {prefab = "{268EAF6C56517778}Prefabs/Characters/Factions/BLUFOR/US_Army/BLUFOR_AMG.et"; break;}
 				case "OPFOR"  : {prefab = "{FC0904D71EF8DB6A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Rifleman_P.et";   break;}
 				case "INDFOR" : {prefab = "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"; break;}
 				case "CIV"    : {prefab = "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et";       break;}
 			}
 		}
-		
-		RandomGenerator random = new RandomGenerator();
-		random.SetSeed(Math.Randomize(-1));
+
 		m_groupsManager = SCR_GroupsManagerComponent.GetInstance();
 		Resource resource = Resource.Load(prefab);
 		EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
 		vector finalSpawnLocation = vector.Zero;
 		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
-        spawnParams.Transform[3] = finalSpawnLocation;
-		IEntity entity = GetGame().SpawnEntityPrefab(resource, GetGame().GetWorld(), spawnParams);
-		
-		PS_PlayableComponent playableComponentNew = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		playableComponentNew.SetPlayable(true);
-		
-		GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, entity, 4, groupID);
-		
+
+		CRF_Gamemode.GetInstance().RespawnPlayer(playerId, prefab, finalSpawnLocation, groupID);
 		LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), m_groupsManager.FindGroup(groupID).m_faction), playerId, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void RpcAsk_CloseMap(int playerID)
-	{
-		if(playerID == 0 || SCR_PlayerController.GetLocalPlayerId() != playerID)
-			return;
-		
-		PS_SpectatorMenu spectatorMenu = PS_SpectatorMenu.Cast(GetGame().GetMenuManager().GetTopMenu());
-		
-		if(spectatorMenu)
-			spectatorMenu.CloseMap();
-	}
+//	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+//	void RpcAsk_CloseMap(int playerID)
+//	{
+//		if(playerID == 0 || SCR_PlayerController.GetLocalPlayerId() != playerID)
+//			return;
+//		
+//		CRF_SpectatorMenuUI spectatorMenu = CRF_SpectatorMenuUI.Cast(GetGame().GetMenuManager().GetTopMenu());
+//		
+//		if(spectatorMenu)
+//			spectatorMenu.CloseMap();
+//	}
 		
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void SwitchToSpawnedEntity(int playerId, IEntity entity, int frameCounter, int groupID)
-	{
-		if (frameCounter > 0) // Await four frames
-		{		
-			GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, entity, frameCounter - 1, groupID);
-			return;
-		}
-		
-		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
-		
-		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
-		RplId playableId = playableComponent.GetId();
-		
-		if (playerId >= 0)
-		{
-			playableManager.SetPlayerPlayable(playerId, playableId);
-			playableManager.ForceSwitch(playerId);
-		}
-		SCR_AIGroup playerGroup = m_groupsManager.FindGroup(groupID);
-		
-		GetGame().GetCallqueue().CallLater(SetPlayerGroup, 1250, false, playerGroup, playerId, playableManager);
-	}
+//	void SwitchToSpawnedEntity(int playerId, IEntity entity, int frameCounter, int groupID)
+//	{
+//		if (frameCounter > 0) // Await four frames
+//		{		
+//			GetGame().GetCallqueue().Call(SwitchToSpawnedEntity, playerId, entity, frameCounter - 1, groupID);
+//			return;
+//		}
+//		
+//		PS_PlayableManager playableManager = PS_PlayableManager.GetInstance();
+//		
+//		PS_PlayableComponent playableComponent = PS_PlayableComponent.Cast(entity.FindComponent(PS_PlayableComponent));
+//		RplId playableId = playableComponent.GetId();
+//		
+//		if (playerId >= 0)
+//		{
+//			playableManager.SetPlayerPlayable(playerId, playableId);
+//			playableManager.ForceSwitch(playerId);
+//		}
+//		SCR_AIGroup playerGroup = m_groupsManager.FindGroup(groupID);
+//		
+//		GetGame().GetCallqueue().CallLater(SetPlayerGroup, 1250, false, playerGroup, playerId, playableManager);
+//	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void SetPlayerGroup(SCR_AIGroup group, int playerID, PS_PlayableManager playableManager)
+	void SetPlayerGroup(SCR_AIGroup group, int playerID)
 	{
-		playableManager.SetPlayerFactionKey(playerID, group.m_faction);
+		SCR_PlayerFactionAffiliationComponent.Cast(GetGame().GetPlayerManager().GetPlayerController(playerID).FindComponent(SCR_PlayerFactionAffiliationComponent)).RequestFaction(group.GetFaction());
 		m_groupsManager.AddPlayerToGroup(group.GetGroupID(), playerID);
 	}
 	
