@@ -1,10 +1,20 @@
-modded class PS_PlayableControllerComponent : ScriptComponent
+modded class SCR_PlayerController
 {
 	bool m_bActivated = false;
 	
-	override void SwitchToObserver(IEntity from)
+	override protected void UpdateLocalPlayerController()
 	{
-		super.SwitchToObserver(from);
+		super.UpdateLocalPlayerController();
+		
+		m_bIsLocalPlayerController = this == GetGame().GetPlayerController();
+		if (!m_bIsLocalPlayerController)
+			return;
+
+		s_pLocalPlayerController = this;
+		InputManager inputManager = GetGame().GetInputManager();
+		if (!inputManager)
+			return;
+		
 		GetGame().GetInputManager().AddActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
 	}
 	
@@ -26,16 +36,22 @@ modded class PS_PlayableControllerComponent : ScriptComponent
 	override private void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		if(m_bActivated)
+			DisableNVG();
+		
 		m_bActivated = false;
-		DisableNVG();
+		
 		super.OnControlledEntityChanged(from, to);
 	}
 	
 	void ZeusClose()
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		if(m_bActivated)
+			DisableNVG();
+		
 		m_bActivated = false;
-		DisableNVG();
+		
 	}
 	
 	void DisableNVG()

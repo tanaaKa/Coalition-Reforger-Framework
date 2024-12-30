@@ -1,4 +1,4 @@
-modded class PS_SpectatorMenu
+modded class CRF_SpectatorMenuUI
 {
 	protected SCR_NotificationSenderComponent m_Sender;
 	

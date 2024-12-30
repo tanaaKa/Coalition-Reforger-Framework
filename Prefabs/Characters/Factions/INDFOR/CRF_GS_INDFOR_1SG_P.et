@@ -19,15 +19,16 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
     }
    }
   }
+  CRF_PlayableCharacter "{62F200EA748008B9}" {
+   m_sName "First Sergeant"
+   m_bIsPlayable 1
+   m_bIsLeaderOrMedic 1
+  }
   CharacterWeaponManagerComponent "{5C9CA676383262FD}" {
    DefaultWeaponIndex 0
   }
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
    "faction affiliation" "INDFOR"
-  }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "First Sergeant"
-   m_bIsPlayable 1
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
