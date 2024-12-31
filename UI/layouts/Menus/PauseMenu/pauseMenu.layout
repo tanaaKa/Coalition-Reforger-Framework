@@ -8,7 +8,7 @@ FrameWidgetClass {
      Slot OverlayWidgetSlot "{62A28B2892C0F8BB}" {
       HorizontalAlign 0
       VerticalAlign 0
-      Padding 48 191 0 0
+      Padding 55 200 0 0
      }
      Clipping False
      {
@@ -84,18 +84,6 @@ FrameWidgetClass {
        "Min Font Size" 15
        "Horizontal Alignment" Center
        "Vertical Alignment" Center
-      }
-     }
-    }
-    VerticalLayoutWidgetClass "{5DB8B556919FE5EE}" {
-     Prefab "{5DB8B556919FE5EE}"
-     {
-      ButtonWidgetClass "{5E3F0D899867D744}" {
-       Prefab "{5E3F0D899867D744}"
-       Name "MOTD"
-       Slot LayoutSlot "{5CD890A87968D2F0}" {
-        VerticalAlign 1
-       }
       }
      }
     }

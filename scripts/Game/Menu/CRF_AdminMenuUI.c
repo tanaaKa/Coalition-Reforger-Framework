@@ -644,7 +644,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		foreach(string name : playerNames)
 		{ 
 			int playerID = GetPlayerIdFromName(name);
-			if(!m_groupManagerComponent.GetPlayerGroup(playerID))
+			if(SCR_FactionManager.SGetPlayerFaction(playerID).GetFactionKey() == "SPEC")
 			{
 				m_list1.AddItem(string.Format("%1", name));
 			}
