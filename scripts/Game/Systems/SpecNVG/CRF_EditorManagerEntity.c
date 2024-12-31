@@ -9,9 +9,9 @@ modded class SCR_EditorManagerEntity : SCR_EditorBaseEntity
 			if(!SCR_PlayerController.GetLocalControlledEntity())
 				return;
 			
-			PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(SCR_PlayerController.Cast(GetGame().GetPlayerController()).FindComponent(PS_PlayableControllerComponent));
-			
-			playableController.ZeusClose();
+//			PS_PlayableControllerComponent playableController = PS_PlayableControllerComponent.Cast(SCR_PlayerController.Cast(GetGame().GetPlayerController()).FindComponent(PS_PlayableControllerComponent));
+//			
+//			playableController.ZeusClose();
 		}
 	}
 }

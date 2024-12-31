@@ -144,10 +144,9 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
  coords 0 0 0
  m_faction "INDFOR"
  m_aUnitPrefabSlots {
-  "{83EC6868D4319899}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_PL_P.et" "{97C13390010A9E27}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_MO_P.et"
+  "{83EC6868D4319899}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_PL_P.et" "{7D94B1371CED7004}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_PSG_P.et"
  }
- m_sCustomNameSet "1st Platoon"
- m_bSetPlayable 1
+ m_bIsPlayable 1
  m_aUnitPrefabColorTeams {
   "None" "None"
  }
