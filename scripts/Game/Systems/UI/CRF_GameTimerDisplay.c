@@ -14,7 +14,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	override protected void OnInit(IEntity owner)
 	{
 		super.OnInit(owner);
-		GetGame().GetCallqueue().CallLater(UpdateTimer, 100, true);
+		GetGame().GetCallqueue().CallLater(UpdateTimer, 5000, true);
 	};
 
 	//------------------------------------------------------------------------------------------------

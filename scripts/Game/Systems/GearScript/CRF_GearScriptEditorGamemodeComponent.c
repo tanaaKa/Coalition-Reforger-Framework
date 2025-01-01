@@ -1,3 +1,4 @@
+/*
 [ComponentEditorProps(category: "Game Mode Component", description: "")]
 class CRF_GearScriptEditorGamemodeComponentClass: SCR_BaseGameModeComponentClass {}
 
@@ -723,3 +724,4 @@ class CRF_GearScriptEditorGamemodeComponent: SCR_BaseGameModeComponent
 		}
 	}
 }
+*/

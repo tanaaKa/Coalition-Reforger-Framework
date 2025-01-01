@@ -1,12 +1,12 @@
 modded class CLB_Gamemode
 {
-	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode")]
+	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode SafeStart")]
 	int m_iTimeLimitMinutes;
 	
-	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?", category: "CRF Gamemode")]
+	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?", category: "CRF Gamemode SafeStart")]
 	bool m_bDeleteJIPSlots;
 	
-	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.", category: "CRF Gamemode")]
+	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.", category: "CRF Gamemode SafeStart")]
 	bool m_bSafestartInstantlyEnabled;
 	
 	[RplProp(onRplName: "OnSafeStartChange")]
@@ -287,9 +287,9 @@ modded class CLB_Gamemode
 			GetGame().GetCallqueue().Remove(CheckPlayersAlive);
 			
 			GetGame().GetCallqueue().CallLater(CheckStartCountDown, 5000, true);
-			GetGame().GetCallqueue().CallLater(UpdateServerWorldTime, 250, true);
-			GetGame().GetCallqueue().CallLater(ActivateSafeStartEHs, 1250, true);
-			GetGame().GetCallqueue().CallLater(UpdatePlayedFactions, 1000, true);
+			GetGame().GetCallqueue().CallLater(UpdateServerWorldTime, 1000, true);
+			GetGame().GetCallqueue().CallLater(ActivateSafeStartEHs, 5000, true);
+			GetGame().GetCallqueue().CallLater(UpdatePlayedFactions, 5000, true);
 			
 			Replication.BumpMe();//Broadcast m_SafeStartEnabled change
 			

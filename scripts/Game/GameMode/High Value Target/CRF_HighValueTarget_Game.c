@@ -102,7 +102,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 			
 			
 			// Create marker on transponder and filter faction if needed
-			CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+			CRF_ClientComponent gameModePlayerComponent = CRF_ClientComponent.GetInstance();
 				if (!gameModePlayerComponent) 
 					return;
 				

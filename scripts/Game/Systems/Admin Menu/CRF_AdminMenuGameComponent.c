@@ -46,7 +46,7 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void SendAdminMessage_Callback(SCR_ChatPanel panel, string data)
 	{
-		CRF_ClientAdminMenuComponent.GetInstance().SendAdminMessage(data);
+		CRF_ClientComponent.GetInstance().SendAdminMessage(data);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		if(!SCR_Global.IsAdmin())
 			return;
 		
-		CRF_ClientAdminMenuComponent.GetInstance().ReplyAdminMessage(data);
+		CRF_ClientComponent.GetInstance().ReplyAdminMessage(data);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
