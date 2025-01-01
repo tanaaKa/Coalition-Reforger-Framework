@@ -3,13 +3,6 @@ CRF_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
  components {
   CRF_AdminMenuGameComponent "{632A66B13D760948}" {
   }
-  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
-   m_iTimeLimitMinutes 60
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
-   }
-  }
   CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
    m_bGearScriptEnabled 1
    m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
@@ -37,8 +30,21 @@ CRF_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     m_bEnableGIRadios 0
    }
   }
+  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
+   m_iTimeLimitMinutes 60
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
+   }
+  }
  }
  coords 2049.433 45.156 2065.633
+ m_aMissionDescriptors {
+  CRF_MissionDescriptor "{632771FB5C619E1C}" {
+   m_sTitle "Welcome!"
+   m_sTextData "#Coal_Missions_Lobby_Welcome_Text"
+  }
+ }
  {
   SCR_FactionManager "5EA8C932C68D400F" : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
    ID "632A77473B3CC3A8"
