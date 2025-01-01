@@ -8,12 +8,12 @@
 *	Server only
 */
 [ComponentEditorProps(category: "CRF Logging Component", description: "")]
-class CRF_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
+class CRF_LoggingServerComponentClass: CLB_GamemodeComponentClass
 {
 	
 }
 
-class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
+class CRF_LoggingServerComponent: CLB_GamemodeComponent
 {	
 	const string SEPARATOR = ",";
 	const string m_sLogPath = "$profile:COAServerLog.txt";
@@ -81,7 +81,7 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 	}
 	
 	// Mission status messages 
-	void OnGamemodeStateChanged()
+	override void OnGamemodeStateChanged()
 	{
 		if (!Replication.IsServer())
 			return;
