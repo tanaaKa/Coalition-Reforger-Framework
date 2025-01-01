@@ -6,7 +6,7 @@ class SCR_RadioRespawnSystem : SCR_InventoryAction
 ////	protected CRF_RadioRespawnSystemComponent m_radioComponent;
 //	protected string m_factionKey;
 //	protected int m_groupID;
-//	protected CRF_SafestartGameModeComponent m_safestart;
+//	protected CLB_Gamemode m_safestart;
 //	protected IEntity m_player;
 //	protected int m_playerID = -1;
 //	protected SCR_GroupsManagerComponent m_groupManager;
@@ -65,7 +65,7 @@ class SCR_RadioRespawnSystem : SCR_InventoryAction
 //				soundMan.CreateAndPlayAudioSource(pOwnerEntity,SCR_SoundEvent.SOUND_ITEM_RADIO_TUNE_ERROR);
 //				return;
 //			}
-//			CRF_ClientRadioRespawnComponent.GetInstance().SpawnGroup(m_groupID);
+//			CRF_ClientComponent.GetInstance().SpawnGroup(m_groupID);
 //			
 //			soundMan.CreateAndPlayAudioSource(pOwnerEntity,SCR_SoundEvent.SOUND_ITEM_RADIO_TUNE_UP);
 //		} else

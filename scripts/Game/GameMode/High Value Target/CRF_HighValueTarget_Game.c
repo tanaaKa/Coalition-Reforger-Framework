@@ -32,7 +32,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("0 0 0", "auto", "The rotation of the prefab")]
 	 vector m_hvtPrefabYaw;
 	
-	CRF_SafestartGameModeComponent m_safestart;
+	CLB_Gamemode m_safestart;
 		
 	[RplProp(onRplName: "updateHvtPos")]
 	vector m_sHvtPos;
@@ -91,7 +91,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	
 	void WaitTillSafeStartEnds()
 	{
-		m_safestart = CRF_SafestartGameModeComponent.GetInstance();
+		m_safestart = CLB_Gamemode.GetInstance();
 		if (!m_safestart.GetSafestartStatus())
 		{	
 			GetGame().GetCallqueue().Remove(WaitTillSafeStartEnds);
@@ -102,7 +102,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 			
 			
 			// Create marker on transponder and filter faction if needed
-			CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+			CRF_ClientComponent gameModePlayerComponent = CRF_ClientComponent.GetInstance();
 				if (!gameModePlayerComponent) 
 					return;
 				

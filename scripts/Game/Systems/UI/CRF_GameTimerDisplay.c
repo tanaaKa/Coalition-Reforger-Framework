@@ -5,7 +5,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	protected SCR_MapEntity m_MapEntity;
 	protected TextWidget m_wTimer;
 	protected ImageWidget m_wBackground;
-	protected CRF_SafestartGameModeComponent m_Safestart;
+	protected CLB_Gamemode m_Safestart;
 	protected string m_sStoredServerWorldTime;
 	protected string m_sServerWorldTime;
 	protected SCR_PopUpNotification m_PopUpNotification = null;
@@ -14,7 +14,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	override protected void OnInit(IEntity owner)
 	{
 		super.OnInit(owner);
-		GetGame().GetCallqueue().CallLater(UpdateTimer, 100, true);
+		GetGame().GetCallqueue().CallLater(UpdateTimer, 5000, true);
 	};
 
 	//------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		// Respawn support
 		if (!m_Safestart || !m_wTimer || !m_wBackground || !m_MapEntity) 
 		{
-			m_Safestart = CRF_SafestartGameModeComponent.GetInstance();
+			m_Safestart = CLB_Gamemode.GetInstance();
 			m_wTimer      = TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
 			m_wBackground = ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
 			m_MapEntity = SCR_MapEntity.GetMapInstance();
