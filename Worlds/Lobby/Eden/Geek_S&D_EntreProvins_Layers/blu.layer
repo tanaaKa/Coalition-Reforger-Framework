@@ -9,7 +9,6 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
  m_aUnitPrefabSlots + {
   "{4F201B6446013397}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Medic_P.et"
  }
- m_sCustomNameSet "Company Command"
  {
   SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Platoon_p.et" {
    components {
@@ -17,9 +16,8 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
      DefaultFormation "Column"
     }
    }
-   coords -5.208 -0.285 9.225
-   angleY 178.237
-   m_sCustomNameSet "1st Platoon"
+   coords -7.643 -0.45 10.188
+   angleY 177.86
    {
     SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
      components {
@@ -27,7 +25,8 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
        DefaultFormation "Column"
       }
      }
-     coords -1.119 0.139 -2.998
+     coords -2.298 0.23 -2.056
+     angleY -0.661
      {
       SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
        components {
@@ -35,8 +34,7 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
          DefaultFormation "Column"
         }
        }
-       coords -2.287 0.089 0.002
-       m_sCustomNameSet "2nd Squad"
+       coords -3.072 0.156 0.001
        {
         SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
          components {
@@ -44,8 +42,7 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
            DefaultFormation "Column"
           }
          }
-         coords -1.868 0.037 -0.003
-         m_sCustomNameSet "3rd Squad"
+         coords -2.556 0.049 0.002
          {
           SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Platoon_p.et" {
            components {
@@ -53,8 +50,8 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
              DefaultFormation "Column"
             }
            }
-           coords -2.854 0.038 3.187
-           m_sCustomNameSet "2nd Platoon"
+           coords -1.512 0.012 2.135
+           angleY 0.661
            {
             SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
              components {
@@ -62,7 +59,8 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                DefaultFormation "Column"
               }
              }
-             coords -1.119 0.01 -2.994
+             coords -2.298 0.035 -2.054
+             angleY -0.661
              {
               SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
                components {
@@ -70,8 +68,7 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                  DefaultFormation "Column"
                 }
                }
-               coords -2.288 0.003 -0.002
-               m_sCustomNameSet "2nd Squad"
+               coords -3.074 0 0
                {
                 SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
                  components {
@@ -79,39 +76,25 @@ SCR_AIGroup : "{EE91BF23FBC94408}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                    DefaultFormation "Column"
                   }
                  }
-                 coords -1.866 0 -0.002
-                 m_sCustomNameSet "3rd Squad"
+                 coords -2.556 0 0.002
                  {
-                  SCR_AIGroup : "{2F07AC5EE3DE3921}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_MMGTeam_p.et" {
+                  SCR_AIGroup : "{D0B17EDF43465305}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_MedicTeam_p.et" {
                    components {
                     AIFormationComponent "{507E9DC12F541FE6}" {
                      DefaultFormation "Column"
                     }
                    }
-                   coords 19.845 -1.015 6.718
-                   angleY -90.012
-                   m_sCustomNameSet "1st MMG Team"
+                   coords 14.712 -0.001 13.054
+                   angleY -176.787
                    {
                     SCR_AIGroup : "{2F07AC5EE3DE3921}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_MMGTeam_p.et" {
                      components {
                       AIFormationComponent "{507E9DC12F541FE6}" {
-                       DefaultFormation "Column"
+                       DefaultFormation "Row"
                       }
                      }
-                     coords -4.426 0.104 -0.001
-                     m_sCustomNameSet "2nd MMG Team"
-                     {
-                      SCR_AIGroup : "{5804AD2759E17E13}Prefabs/Groups/BLUFOR/Standard/Vehicle/CRF_BLUFOR_3manCrew_p.et" {
-                       components {
-                        AIFormationComponent "{507E9DC12F541FE6}" {
-                         DefaultFormation "Column"
-                        }
-                       }
-                       coords 10.428 0.911 17.374
-                       angleY -178.621
-                       m_sCustomNameSet "M1025 Crew"
-                      }
-                     }
+                     coords 9.552 -0.004 3.928
+                     angleY -90.58
                     }
                    }
                   }
