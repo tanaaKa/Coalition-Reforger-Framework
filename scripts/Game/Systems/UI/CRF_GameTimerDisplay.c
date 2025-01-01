@@ -14,7 +14,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	override protected void OnInit(IEntity owner)
 	{
 		super.OnInit(owner);
-		GetGame().GetCallqueue().CallLater(UpdateTimer, 5000, true);
+		GetGame().GetCallqueue().CallLater(UpdateTimer, 1000, true);
 	};
 
 	//------------------------------------------------------------------------------------------------
@@ -104,6 +104,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		switch (true) {
 			case (messageSplitArray[0] == "00" && messageSplitArray[1].ToInt() < 15 && messageSplitArray[1].ToInt() > 4): {m_wTimer.SetColorInt(ARGB(255, 230, 230, 0)); break;};
 			case (messageSplitArray[0] == "00" && messageSplitArray[1].ToInt() < 5):                                      {m_wTimer.SetColorInt(ARGB(255, 200, 65, 65)); break;};
+			default : m_wTimer.SetColorInt(ARGB(255, 215, 215, 215));
 		};
 	}
 }

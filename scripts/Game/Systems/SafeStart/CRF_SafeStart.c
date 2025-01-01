@@ -254,9 +254,6 @@ modded class CLB_Gamemode
 	//------------------------------------------------------------------------------------------------
 	void WaitTillGameStart()
 	{
-		if (IsRunning()) 
-			return;
-		
 		if(m_GamemodeState != CLB_GamemodeState.GAME)
 			return;
  		
@@ -289,7 +286,7 @@ modded class CLB_Gamemode
 			GetGame().GetCallqueue().CallLater(CheckStartCountDown, 5000, true);
 			GetGame().GetCallqueue().CallLater(UpdateServerWorldTime, 1000, true);
 			GetGame().GetCallqueue().CallLater(ActivateSafeStartEHs, 5000, true);
-			GetGame().GetCallqueue().CallLater(UpdatePlayedFactions, 5000, true);
+			GetGame().GetCallqueue().CallLater(UpdatePlayedFactions, 1000, true);
 			
 			Replication.BumpMe();//Broadcast m_SafeStartEnabled change
 			
@@ -314,7 +311,7 @@ modded class CLB_Gamemode
 			
 			if (m_iTimeLimitMinutes > 0) {
 				m_iTimeMissionEnds = GetGame().GetWorld().GetWorldTime() + (m_iTimeLimitMinutes * 60000);
-				GetGame().GetCallqueue().CallLater(UpdateMissionEndTimer, 250, true);
+				GetGame().GetCallqueue().CallLater(UpdateMissionEndTimer, 1000, true);
 			} else {
 				m_sServerWorldTime = "N/A";
 			};
