@@ -5,7 +5,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	protected SCR_MapEntity m_MapEntity;
 	protected TextWidget m_wTimer;
 	protected ImageWidget m_wBackground;
-	protected CRF_SafestartGameModeComponent m_Safestart;
+	protected CLB_Gamemode m_Safestart;
 	protected string m_sStoredServerWorldTime;
 	protected string m_sServerWorldTime;
 	protected SCR_PopUpNotification m_PopUpNotification = null;
@@ -14,7 +14,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 	override protected void OnInit(IEntity owner)
 	{
 		super.OnInit(owner);
-		GetGame().GetCallqueue().CallLater(UpdateTimer, 100, true);
+		GetGame().GetCallqueue().CallLater(UpdateTimer, 1000, true);
 	};
 
 	//------------------------------------------------------------------------------------------------
@@ -25,7 +25,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		// Respawn support
 		if (!m_Safestart || !m_wTimer || !m_wBackground || !m_MapEntity) 
 		{
-			m_Safestart = CRF_SafestartGameModeComponent.GetInstance();
+			m_Safestart = CLB_Gamemode.GetInstance();
 			m_wTimer      = TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
 			m_wBackground = ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
 			m_MapEntity = SCR_MapEntity.GetMapInstance();
@@ -104,6 +104,7 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		switch (true) {
 			case (messageSplitArray[0] == "00" && messageSplitArray[1].ToInt() < 15 && messageSplitArray[1].ToInt() > 4): {m_wTimer.SetColorInt(ARGB(255, 230, 230, 0)); break;};
 			case (messageSplitArray[0] == "00" && messageSplitArray[1].ToInt() < 5):                                      {m_wTimer.SetColorInt(ARGB(255, 200, 65, 65)); break;};
+			default : m_wTimer.SetColorInt(ARGB(255, 215, 215, 215));
 		};
 	}
 }

@@ -14,7 +14,7 @@ class CRF_SafeStartDisplay : SCR_InfoDisplay
 	protected TextWidget m_wOpforReady;
 	protected TextWidget m_wIndforReady;
 	
-	protected CRF_SafestartGameModeComponent m_SafestartComponent = null;
+	protected CLB_Gamemode m_SafestartComponent = null;
 	protected SCR_FactionManager m_FactionManager = null;
 	
 	protected float m_fCurrentOpacity = 0;
@@ -32,7 +32,7 @@ class CRF_SafeStartDisplay : SCR_InfoDisplay
 		super.UpdateValues(owner, timeSlice);
 		
 		if (!m_SafestartComponent || !m_FactionManager) {
-			m_SafestartComponent = CRF_SafestartGameModeComponent.GetInstance();
+			m_SafestartComponent = CLB_Gamemode.GetInstance();
 			m_FactionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
 			return;
 		};
