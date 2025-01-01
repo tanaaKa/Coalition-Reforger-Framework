@@ -83,7 +83,7 @@ class CRF_SafeStartPlayerComponent: ScriptComponent
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcAsk_ToggleSideReady(string setReady, string playerName, bool adminForced)
 	{
-		CRF_SafestartGameModeComponent safestartComponent = CRF_SafestartGameModeComponent.GetInstance();
+		CLB_Gamemode safestartComponent = CLB_Gamemode.GetInstance();
 		safestartComponent.ToggleSideReady(setReady, playerName, adminForced);
 	}
 }

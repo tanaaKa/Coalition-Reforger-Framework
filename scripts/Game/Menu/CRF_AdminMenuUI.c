@@ -650,7 +650,6 @@ class CRF_AdminMenu: ChimeraMenuBase
 			}
 		}
 		
-		int rowNumber = 0;
 		foreach(SCR_AIGroup group : m_outGroups)
 		{
 			string factionTag = group.GetFaction().GetFactionKey().Substring(0, 3);

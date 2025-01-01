@@ -137,7 +137,7 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		vector finalSpawnLocation = vector.Zero;
 		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
 
-		CRF_Gamemode.GetInstance().RespawnPlayer(playerId, prefab, finalSpawnLocation, groupID);
+		CLB_Gamemode.GetInstance().RespawnPlayer(playerId, prefab, finalSpawnLocation, groupID);
 		LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), m_groupsManager.FindGroup(groupID).m_faction), playerId, true);
 	}
 	
@@ -306,8 +306,7 @@ class CRF_AdminMenuGameComponent: SCR_BaseGameModeComponent
 		m_wSavedHintWidget = widget;
 		
 		CRF_Hint hint = CRF_Hint.Cast(widget.FindHandler(CRF_Hint));
-		float duration = 8000;
-		hint.ShowHint(data, duration);
+		hint.ShowHint(data, 8000);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-modded class CRF_SpectatorMenuUI
+modded class CLB_SpectatorMenuUI
 {
 	protected SCR_NotificationSenderComponent m_Sender;
 	

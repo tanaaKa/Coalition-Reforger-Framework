@@ -1,15 +1,12 @@
-[ComponentEditorProps(category: "Safe Start Component", description: "")]
-class CRF_SafestartGameModeComponentClass: SCR_BaseGameModeComponentClass {}
-
-class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
+modded class CLB_Gamemode
 {
-	[Attribute("45", "auto", "Mission Time (set to -1 to disable)")]
+	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode")]
 	int m_iTimeLimitMinutes;
 	
-	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?")]
+	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?", category: "CRF Gamemode")]
 	bool m_bDeleteJIPSlots;
 	
-	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.")]
+	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.", category: "CRF Gamemode")]
 	bool m_bSafestartInstantlyEnabled;
 	
 	[RplProp(onRplName: "OnSafeStartChange")]
@@ -40,7 +37,6 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	
 	protected bool m_bAdminForcedReady = false;
 	
-	protected SCR_BaseGameMode m_GameMode;
 	protected CRF_LoggingServerComponent m_Logging;
 	
 	protected int m_iPlayedFactionsCount;
@@ -49,9 +45,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected int m_mPlayablesCount = 0;
 	
 	protected SCR_PopUpNotification m_PopUpNotification = null;
-	
-	protected CRF_Gamemode m_CRFGameMode;
-	
+
 	bool m_bHUDVisible = true;
 	
 	//------------------------------------------------------------------------------------------------
@@ -60,19 +54,10 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 
 	//------------------------------------------------------------------------------------------------
 	
-	static CRF_SafestartGameModeComponent GetInstance()
-	{
-		BaseGameMode gameMode = GetGame().GetGameMode();
-		if (gameMode)
-			return CRF_SafestartGameModeComponent.Cast(gameMode.FindComponent(CRF_SafestartGameModeComponent));
-		else
-			return null;
-	}
-	
 	//------------------------------------------------------------------------------------------------
-	override protected void OnPostInit(IEntity owner)
+	override protected void EOnInit(IEntity owner)
 	{
-		super.OnPostInit(owner);
+		super.EOnInit(owner);
 		
 		// Only run on in-game post init
 		// Is the the right way to do this? WHO KNOWS !
@@ -82,9 +67,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			
 		if (Replication.IsServer())
 		{
-			m_GameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
-			m_CRFGameMode = CRF_Gamemode.GetInstance();
-			m_Logging = CRF_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_LoggingServerComponent));
+			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
 	}
@@ -271,12 +254,12 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	void WaitTillGameStart()
 	{
-		if (!m_GameMode.IsRunning()) 
+		if (IsRunning()) 
 			return;
 		
-		if(m_CRFGameMode.m_GamemodState != CRF_GamemodeState.GAME)
+		if(m_GamemodeState != CLB_GamemodeState.GAME)
 			return;
-		
+ 		
 		m_SafeStartEnabled = !m_bSafestartInstantlyEnabled;
 		Replication.BumpMe();//Broadcast m_SafeStartEnabled change
 		
@@ -399,7 +382,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	
 	void DeleteEmptySlotsSlowly()
 	{
-		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
+		CLB_Gamemode gamemode = CLB_Gamemode.GetInstance();
 		for(int i = 0; i < gamemode.m_aEntitySlots.Count(); i++)
 		{
 			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)

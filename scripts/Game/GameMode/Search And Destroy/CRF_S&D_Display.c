@@ -23,7 +23,7 @@ class CRF_SearchAndDestroyDisplay : SCR_InfoDisplay
 			return;
 		};
 		
-		if(!CRF_SafestartGameModeComponent.GetInstance().m_bHUDVisible)
+		if(!CLB_Gamemode.GetInstance().m_bHUDVisible)
 		{
 			m_wTimer.SetOpacity(0);
 			m_wBackground.SetOpacity(0);	
