@@ -387,7 +387,7 @@ modded class CLB_Gamemode
 		{
 			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)
 			{
-				Print("Removing Entity");
+				//Print("Removing Entity");
 				gamemode.RemovePlayableEntity(RplComponent.Cast(Replication.FindItem(gamemode.m_aEntitySlots.Get(i))).GetEntity());
 				return;
 			}
