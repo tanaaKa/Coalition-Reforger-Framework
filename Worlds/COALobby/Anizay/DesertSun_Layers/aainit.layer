@@ -1,8 +1,35 @@
 SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
  coords 4513 134.875 5768.303
 }
-CLB_Gamemode CRF_Lobby2 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
- coords 3908.429 139.219 7082.281
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
+   m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
+    m_rGearScript "{D62FC8AB893C3D7E}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSION_SCARs.conf"
+   }
+   m_OPFORGearScriptSettings CRF_GearScriptContainer "{629E5222ACF12871}" {
+    m_rGearScript "{2D140B13588E56B8}Configs/Gearscripts/Standard/GWOT/CRF_GS_Taliban.conf"
+   }
+  }
+  CRF_HighValueTargetGameModeComponent "{64426D59D8E1B645}" {
+   m_setUnconcious 1
+   m_disableDamage 1
+   m_transponderEntity "transponderEntity"
+   m_filterFaction 1
+  }
+  SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
+   m_sInitialStartingWeatherId "Clear"
+  }
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_iStartingHours 3
+   m_iStartingMinutes 19
+  }
+ }
+ coords 4276.399 132.791 5840.334
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "BLU"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "OPF"
  {
   SCR_FactionManager {
    ID "632A77473B3CC3A8"

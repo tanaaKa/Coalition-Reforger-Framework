@@ -1,8 +1,8 @@
 modded class CLB_SlottingMenuUI
 
-override void OnMenuOpen()
-{
-	if (RplSession.Mode() == RplMode.Dedicated) {
+	override void OnMenuOpen()
+	{	
+		if (RplSession.Mode() == RplMode.Dedicated) {
 			Close();
 			return;
 		}
@@ -225,7 +225,22 @@ override void OnMenuOpen()
 			
 			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2Image")).SetColor(colorTwo);
 		}
-	
+
+		
+		if (gamemode.m_iFactionTwoRatio < 0 || gamemode.m_sFactionTwoKey.IsEmpty() || gamemode.m_iFactionOneRatio < 0 || gamemode.m_sFactionOneKey.IsEmpty())
+		{
+			EditBoxWidget.Cast(m_wRoot.FindAnyWidget("RatioBox1")).SetVisible(false);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox1Image")).SetVisible(false);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox1IntImage")).SetVisible(false);
+			TextWidget.Cast(m_wRoot.FindAnyWidget("RatioBox1Text")).SetVisible(false);
+			EditBoxWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2")).SetVisible(false);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2Image")).SetVisible(false);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2IntImage")).SetVisible(false);
+			TextWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2Text")).SetVisible(false);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FinalImage")).SetVisible(false);
+			TextWidget.Cast(m_wRoot.FindAnyWidget("Final")).SetVisible(false);
+		}
+		
 		if(m_iBluforSlots > 0)
 		{
 			m_fSelectedFaction = GetGame().GetFactionManager().GetFactionByKey("BLUFOR");
@@ -251,5 +266,5 @@ override void OnMenuOpen()
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonBlufor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionBlufor);
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonOpfor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionOpfor);
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonIndfor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionIndfor);
-		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonCiv")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionCiv);	
-}
+		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonCiv")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionCiv);		
+	}
