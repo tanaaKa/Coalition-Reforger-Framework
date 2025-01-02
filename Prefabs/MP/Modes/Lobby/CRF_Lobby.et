@@ -30,9 +30,6 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     m_bEnableGIRadios 0
    }
   }
-  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
-   m_iTimeLimitMinutes 60
-  }
   SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
