@@ -1,0 +1,55 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 9994.791 0 1406.353
+}
+SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/Editor/GameMode_Editor_Full.et" {
+ components {
+  SCR_InitWeatherComponent "{58DCAB6D83A0CB17}" {
+   m_sInitialStartingWeatherId "Clear"
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D44B78DAD98E7F9}" {
+    m_sForcedFaction "CIV"
+   }
+  }
+  SCR_RespawnTimerComponent "{56C2DDA6EE0E4071}" {
+   m_fRespawnTime 0
+  }
+ }
+ coords 10056.205 0 1432.833
+ {
+  SCR_FactionManager "64437B2E01567B9F" {
+   ID "56E685E92F1B7E7A"
+   Factions {
+    SCR_Faction "{56DEAC40D2DBC8B1}" {
+     m_bShowInWelcomeScreenIfNonPlayable 0
+    }
+    SCR_Faction "{56DEAC40D3C2E623}" {
+     m_bShowInWelcomeScreenIfNonPlayable 0
+    }
+    SCR_Faction "{56DEAC40D132400B}" {
+     m_bShowInWelcomeScreenIfNonPlayable 0
+    }
+    SCR_Faction "{607AA5C7A94496DA}" {
+     m_bIsPlayable 1
+     m_bShowInWelcomeScreenIfNonPlayable 1
+    }
+   }
+  }
+  SCR_LoadoutManager {
+   ID "56E685E92F1B7E2A"
+   m_aPlayerLoadouts {
+    SCR_FactionPlayerLoadout "{607AA5C7CC976D12}" {
+    }
+    SCR_FactionPlayerLoadout "{61069306CE3712F4}" {
+     m_sAffiliatedFaction ""
+    }
+    SCR_FactionPlayerLoadout "{61069306CC96B466}" {
+     m_sAffiliatedFaction ""
+    }
+    SCR_FactionPlayerLoadout "{6106F7F7BAA2E2F4}" {
+     m_sAffiliatedFaction ""
+    }
+   }
+  }
+ }
+}
