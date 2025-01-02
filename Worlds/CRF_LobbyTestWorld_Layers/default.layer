@@ -1,59 +1,31 @@
-SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
- coords 2046.755 45.732 2064.089
+SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ coords 2506.797 147.634 2250.988
 }
-CRF_Gamemode GameMode_Lobby1 : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
-  CRF_AdminMenuGameComponent "{632A66B13D760948}" {
+  SCR_InitWeatherComponent "{64427040F14EBE5E}" {
   }
-  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
-   m_bSafestartInstantlyEnabled 0
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
-   }
+  SCR_TimeAndWeatherHandlerComponent "{64427040FFF5E7B2}" {
   }
  }
- coords 2049.433 45.156 2065.633
+ coords 2041.716 47.102 2073.176
+ m_sFactionOneKey "BLU"
+ m_sFactionTwoKey "OPF"
+}
+SCR_AIGroup : "{2A01769C204DED43}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_AATeam_p.et" {
+ coords 2967.981 30.665 2617.584
+}
+SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+ coords 2938.142 34.624 2627.897
+}
+$grp SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
  {
-  SCR_FactionManager {
-   ID "632771FB44BBF896"
-   Factions {
-    SCR_Faction "{56DEAC40D2DBC8B1}" {
-     FactionKey "BLUFOR"
-    }
-    SCR_Faction "{56DEAC40D3C2E623}" {
-     FactionKey "OPFOR"
-    }
-    SCR_Faction "{56DEAC40D132400B}" {
-     FactionKey "INDFOR"
-    }
-   }
-  }
+  coords 2500.462 140.314 2258.376
+ }
+ {
+  coords 2504.975 147.797 2257.654
  }
 }
-SCR_AIGroup : "{350C8DE227E3C030}Prefabs/Groups/BLUFOR/BLUFOR_PL.et" {
- coords 2049.361 44.169 2062.238
- m_faction "BLUFOR"
- m_bIsPlayable 1
- {
-  SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
-   coords -0.162 -0.752 -2.187
-   m_faction "BLUFOR"
-   m_bIsPlayable 1
-   {
-    SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
-     coords -2.346 -0.109 -0.049
-     m_faction "BLUFOR"
-     m_bIsPlayable 1
-     {
-      SCR_AIGroup : "{F8B1BF99CF492650}Prefabs/Groups/BLUFOR/BLUFOR_FIreteam.et" {
-       coords -12.28 1.166 7.387
-       m_faction "BLUFOR"
-       m_bIsPlayable 1
-      }
-     }
-    }
-   }
-  }
- }
+SCR_AIGroup : "{F0FACADA943070F9}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevCrew_p.et" {
+ coords 2790.122 67.857 2383.263
 }

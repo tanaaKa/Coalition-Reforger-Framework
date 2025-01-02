@@ -1,4 +1,4 @@
-CRF_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
+CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
  ID "56B2B479C6B96951"
  components {
   CRF_AdminMenuGameComponent "{632A66B13D760948}" {
