@@ -26,6 +26,10 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 4276.399 132.791 5840.334
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "BLU"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "OPF"
  {
   SCR_FactionManager "6444210EE996CFCA" {
    ID "632A77473B3CC3A8"
