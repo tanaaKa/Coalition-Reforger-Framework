@@ -26,38 +26,8 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 4276.399 132.791 5840.334
- m_aMissionDescriptors {
-  CRF_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "A brownwater pilot was shot down over night around the fortress city of Khas. ION PMC has been deployed to the region in an extreme attempt to quell the insurgency and recover the pilot."\
-   ""\
-   "BLUFOR Composition: Mixed PMC"\
-   "BLUFOR Assets: Air, Vehicles"\
-   ""\
-   "OPFOR Composition: Insurgent"\
-   "OPFOR Assets: Cars, Trucks, Light Arms"\
-   ""\
-   "Time: 3:20 AM"\
-   ""\
-   "Weather: Clear"
-  }
-  CRF_MissionDescriptor "{64425051F2E00216}" {
-   m_sTextData "The brownwater pilot transponder activiated approximately one hour ago. He appears to be in the city of Khas, which is a walled fortress city. "\
-   ""\
-   "We have no idea if he's dead or alive, but he or his body must be extracted to send a message to this regions insurgency."
-  }
-  CRF_MissionDescriptor "{64425051B9B5AF67}" {
-   m_sTextData "BROTHERS"\
-   ""\
-   "A western PMC has been spotted transitioning into the area over night. They no doubt have come to restrict our freedom after yesterday's victory."\
-   ""\
-   "Move the pilot out of the big mosque and resist them at all costs. Do not let the american pilot fall into their hands."
-  }
-  CRF_MissionDescriptor "{6442505149CF6C93}" {
-   m_sTextData "OPFOR is restricted to the walled city of Khas"
-  }
- }
  {
-  SCR_FactionManager {
+  SCR_FactionManager "6444210EE996CFCA" {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
