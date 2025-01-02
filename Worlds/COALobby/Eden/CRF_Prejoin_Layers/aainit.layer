@@ -8,7 +8,6 @@ SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/E
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_MenuSpawnLogic "{5D44B78DAD98E7F9}" {
-    m_sForcedFaction "CIV"
    }
   }
   SCR_RespawnTimerComponent "{56C2DDA6EE0E4071}" {
@@ -21,10 +20,10 @@ SCR_GameModeEditor GameMode_Editor_Full1 : "{DA3986AF1B5032B7}Prefabs/MP/Modes/E
    ID "56E685E92F1B7E7A"
    Factions {
     SCR_Faction "{56DEAC40D2DBC8B1}" {
-     m_bShowInWelcomeScreenIfNonPlayable 0
+     m_bIsPlayable 1
     }
     SCR_Faction "{56DEAC40D3C2E623}" {
-     m_bShowInWelcomeScreenIfNonPlayable 0
+     m_bIsPlayable 1
     }
     SCR_Faction "{56DEAC40D132400B}" {
      m_bShowInWelcomeScreenIfNonPlayable 0
