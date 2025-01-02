@@ -340,7 +340,7 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 				case(m_aSquadLevelRolesCarbine.Contains(role))         : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "Carbine",  "",    false); isSquad = true;   break;}
 				case(m_aSquadLevelRolesRifle.Contains(role))           : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "Rifle",    "",    false); isSquad = true;   break;}
 				case(role == "_AT_P")                                  : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "Rifle",    "AT",  false); isSquad = true;   break;}
-				case(role == "_AR_P")                                  : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "AR",       "",    false); isSquad = true;   break;}
+				case(role == "_AR_P")                                  : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "AR",       "",    true); isSquad = true;   break;}
 				// Infantry Specialties ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 				case(m_aInfantrySpecialtiesRolesRifle.Contains(role))  : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "Rifle",    "",    false); isInfSpec = true; break;}
 				case(role == "_HAT_P")                                 : {AddWeapons(m_WeaponSlotComponentArray, gearConfig, "Rifle",    "HAT", false); isInfSpec = true; break;}
