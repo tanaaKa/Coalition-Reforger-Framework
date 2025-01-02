@@ -225,4 +225,31 @@ override void OnMenuOpen()
 			
 			ImageWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2Image")).SetColor(colorTwo);
 		}
+	
+		if(m_iBluforSlots > 0)
+		{
+			m_fSelectedFaction = GetGame().GetFactionManager().GetFactionByKey("BLUFOR");
+			SelectFactionBlufor();
+		}
+		else if(m_iOpforSlots > 0)
+		{
+			m_fSelectedFaction = GetGame().GetFactionManager().GetFactionByKey("OPFOR");
+			SelectFactionOpfor();
+		}
+		else if(m_iIndforSlots > 0)
+		{
+			m_fSelectedFaction = GetGame().GetFactionManager().GetFactionByKey("INDFOR");
+			SelectFactionIndfor();
+		}
+		else if(m_iCivSlots > 0)
+		{
+			m_fSelectedFaction = GetGame().GetFactionManager().GetFactionByKey("CIV");
+			SelectFactionOpfor();
+		}
+		localSlotChanges = m_Gamemode.m_iSlotChanges;
+		UpdateSlots();
+		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonBlufor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionBlufor);
+		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonOpfor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionOpfor);
+		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonIndfor")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionIndfor);
+		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("ButtonCiv")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionCiv);	
 }
