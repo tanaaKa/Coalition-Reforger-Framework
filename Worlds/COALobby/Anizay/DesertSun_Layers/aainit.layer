@@ -31,12 +31,48 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iFactionTwoRatio 2
  m_sFactionTwoKey "OPF"
  {
-  SCR_FactionManager "6444210EE996CFCA" {
+  SCR_FactionManager {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aCompanyNames {
+       SCR_CallsignInfo "{55CCB792CD021D5C}" {
+       }
+       SCR_CallsignInfo "{55CCB792CCD598D3}" {
+       }
+       SCR_CallsignInfo "{55CCB792CC9C7AD6}" {
+       }
+       SCR_CallsignInfo "{55CCB792CCB4D441}" {
+       }
+       SCR_CallsignInfo "{55CCB792CC5F08F3}" {
+       }
+       SCR_CallsignInfo "{55CCB792CC49B7DB}" {
+       }
+       SCR_CallsignInfo "{55CCB792CC711A37}" {
+       }
+       SCR_CallsignInfo "{55CCB792CC33211C}" {
+       }
+      }
+      m_aPlatoonNames {
+       SCR_CallsignInfo "{55CCB792CE6E998D}" {
+       }
+       SCR_CallsignInfo "{55CCB792CE18FB44}" {
+       }
+       SCR_CallsignInfo "{55CCB792CE02ECFA}" {
+       }
+       SCR_CallsignInfo "{55CCB792CE2A44BD}" {
+       }
+      }
       m_aSquadNames {
+       SCR_CallsignInfo "{55CCB792D10AD8F4}" {
+       }
+       SCR_CallsignInfo "{55CCB792D13759D8}" {
+       }
+       SCR_CallsignInfo "{55CCB792D1218E95}" {
+       }
+       SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
+       }
        SCR_CallsignInfo "{644289875731F193}" {
         m_sCallsign "1-4"
        }
@@ -50,10 +86,46 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
         m_sCallsign "TH"
        }
       }
+      m_aCharacterRoleCallsigns {
+       SCR_LeaderRoleCallsign "{55CA746925A7EB29}" {
+       }
+       SCR_RadioOperatorRoleCallsign "{55CA79ECD4CC1F73}" {
+       }
+       SCR_PlayerLeaderRoleCallsign "{5D9E9ECA7C7EBEA2}" {
+       }
+      }
      }
     }
     SCR_Faction "{628C2D2BFC8C6447}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+      m_aCompanyNames {
+       SCR_CallsignInfo "{55CCB79282FF010C}" {
+       }
+       SCR_CallsignInfo "{55CCB792829053B0}" {
+       }
+       SCR_CallsignInfo "{55CCB79282A19687}" {
+       }
+       SCR_CallsignInfo "{55CCB792821E9332}" {
+       }
+       SCR_CallsignInfo "{55CCB7928223BB00}" {
+       }
+       SCR_CallsignInfo "{55CCB79285FF31DB}" {
+       }
+       SCR_CallsignInfo "{55CCB79285E2C8BA}" {
+       }
+       SCR_CallsignInfo "{55CCB7928553B8DC}" {
+       }
+      }
+      m_aPlatoonNames {
+       SCR_CallsignInfo "{55CCB7928490AEEE}" {
+       }
+       SCR_CallsignInfo "{55CCB79284BA6D27}" {
+       }
+       SCR_CallsignInfo "{55CCB79284A2F6C9}" {
+       }
+       SCR_CallsignInfo "{55CCB792844D665F}" {
+       }
+      }
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB79287E901BC}" {
         m_sCallsign "Cell Leader"
@@ -75,6 +147,10 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        }
        SCR_CallsignInfo "{6442898746EFFA4A}" {
         m_sCallsign "MAT"
+       }
+      }
+      m_aCharacterRoleCallsigns {
+       SCR_PlayerLeaderRoleCallsign "{5D9E9EC98A0C9F91}" {
        }
       }
      }
