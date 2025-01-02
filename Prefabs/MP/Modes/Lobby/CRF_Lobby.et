@@ -41,7 +41,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
  }
  coords 2049.433 45.156 2065.633
  {
-  PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+  PerceptionManager "6445176B75D36372" : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
    ID "64443AC8FCA0C42D"
    coords 0 0 0
   }
@@ -235,14 +235,19 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_iFactionRadioFrequency 58000
      m_aEntityCatalogs {
       SCR_EntityCatalogMultiList "{607A9A9FE55EDF5F}" {
+       m_eEntityCatalogType ITEM
       }
       SCR_EntityCatalogMultiList "{607A9A9FFA54DFE9}" {
+       m_eEntityCatalogType CHARACTER
       }
       SCR_EntityCatalogMultiList "{61C8ED1193902596}" {
+       m_eEntityCatalogType VEHICLE
       }
       SCR_EntityCatalogMultiList "{61C8ED1182211903}" {
+       m_eEntityCatalogType GROUP
       }
       SCR_EntityCatalogMultiList "{607A9A9FFBDA2F92}" {
+       m_eEntityCatalogType WEAPONS_TRIPOD
       }
      }
      m_sGroupFlagsImageSet "{D7E06968B5F9FC92}UI/Textures/GroupManagement/FlagIcons/GroupFlagsCivilian.imageset"
@@ -251,18 +256,6 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       "land" "helicopter" "maintenance" "medical"
      }
      m_sFactionBackground "{781301447441F404}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_Civilian.imageset"
-    }
-    SCR_Faction "{623507721849E36C}" {
-     FactionKey "Tali"
-     UIInfo SCR_FactionUIInfo "{623503F81F166E81}" {
-      Name "INDFOR"
-      m_sNameUpper "INDFOR"
-     }
-     m_bIsPlayable 1
-     m_aFriendlyFactionsIds {
-      "MECIV" "CIV"
-     }
-     m_sFactionRadioEncryptionKey "candleSauce"
     }
     SCR_Faction "{628B22E9B4056C88}" {
      FactionKey "BLUFOR"
