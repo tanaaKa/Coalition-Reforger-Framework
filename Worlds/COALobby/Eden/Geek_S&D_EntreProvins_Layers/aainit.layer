@@ -1,66 +1,51 @@
 SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
  coords 6391.21 158.928 6420.281
 }
-CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
-  CRF_SafestartGameModeComponent "{632A66B120BCF77B}" {
-   m_iTimeLimitMinutes 30
-  }
-  CRF_SearchAndDestroyGameModeComponent "{633F7280D2DA16C5}" {
+  CRF_SearchAndDestroyGameModeComponent "{6446F969578B550D}" {
    attackingSide "BLUFOR"
    defendingSide "OPFOR"
   }
  }
- coords 5952.082 151.38 6692.378
+ coords 6357.209 158.116 6452.083
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "BLU"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "OPF"
  m_aMissionDescriptors {
-  CRF_MissionDescriptor "{632771FB5C619E1C}" {
-   m_sTitle "Welcome!"
-   m_sTextData "#Coal_Missions_Lobby_Welcome_Text"
-  }
-  CRF_MissionDescriptor "{633F728B5AE09F76}" {
-   m_sTitle "Mission Description"
-   m_sTextData "30 Minute Time Limit."\
+  CLB_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "US Forces move to detonate 2 bombs located in towns controlled by Soviet Armed Forces. "\
    ""\
-   "One Life, No Respawns."
-   m_bShowForAnyFaction 1
-  }
-  CRF_MissionDescriptor "{633F728B5AF68700}" {
-   m_sTitle "Gamemode"
-   m_sTextData "Search and Destroy"\
+   "BLUFOR Composition: Motorized Infantry"\
+   "BLUFOR Assets: 5x M923A1 Transport Trucks, 1x M1025 Armed Vic, 1x M997 Ambulance."\
    ""\
-   "The attackers must find and plant bombs on both A and B bomb site in order to win."\
+   "OPFOR Composition: Infantry"\
+   "OPFOR Assets: 2x Ural4320 Transport Trucks, 1x UAZ452 Ambulance."\
    ""\
-   "Only one bomb site can be active at a time."
-   m_bShowForAnyFaction 1
+   "Time: 12pm"\
+   "Weather: Clear"
   }
-  CRF_MissionDescriptor "{633F728AA52844A7}" {
-   m_sTitle "Assets"
-   m_sTextData "BLUFOR: 5x M923A1 Transport Trucks, 1x M1025 Armed Vic, 1x M997 Ambulance. "\
-   ""\
-   "OPFOR: 2x Ural4320 Transport Trucks, 1x UAZ452 Ambulance."
-   m_bShowForAnyFaction 1
-  }
-  CRF_MissionDescriptor "{633F728AA530F1FB}" {
-   m_sTitle "US Briefing"
-   m_sTextData "Enter the towns of Provins and Entre Deux and detonate 2 explosive devices being stored in the centre of town within the 30 minute time limit. "\
+  CLB_MissionDescriptor "{64425051F2E00216}" {
+   m_sTextData "Enter the towns of Provins and Entre Deux and detonate 2 explosive devices being stored in the centre of town."\
    ""\
    "DO NOT EXIT THE SAFE START ZONE BEFORE THE END OF SAFE START."
-   m_aFactionKeys {
-    "BLUFOR"
-   }
   }
-  CRF_MissionDescriptor "{633F728AA54626A1}" {
-   m_sTitle "USSR Briefing"
-   m_sTextData "Defend the 2 explosive devices in the centre of Provins and Entre Deux for the 30 minute time limit."\
+  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTextData "Defend the 2 explosive devices in the centre of Provins and Entre Deux."\
    ""\
    "DO NOT EXIT THE SAFE START ZONE BEFORE THE END OF SAFE START."
-   m_aFactionKeys {
-    "OPFOR"
-   }
+  }
+  CLB_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData "One Life, No Respawns."\
+   "30 minute time limit."\
+   ""
+   m_bShowForAnyFaction 1
   }
  }
+ m_iTimeLimitMinutes 30
  {
-  SCR_FactionManager "633F72810C271F9F" {
+  SCR_FactionManager {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
@@ -78,25 +63,25 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
         m_sCallsign "1-2"
        }
-       SCR_CallsignInfo "{633F72884B5CED7D}" {
+       SCR_CallsignInfo "{6446F968F9304134}" {
         m_sCallsign "1-3"
        }
-       SCR_CallsignInfo "{633F72884BD1A861}" {
+       SCR_CallsignInfo "{6446F968F9A6BB02}" {
         m_sCallsign "2PLT"
        }
-       SCR_CallsignInfo "{633F72884A510210}" {
+       SCR_CallsignInfo "{6446F968F81618FA}" {
         m_sCallsign "2-1"
        }
-       SCR_CallsignInfo "{633F72884ACDF673}" {
+       SCR_CallsignInfo "{6446F968F8866D02}" {
         m_sCallsign "2-2"
        }
-       SCR_CallsignInfo "{633F7288550C37A8}" {
+       SCR_CallsignInfo "{6446F968F8E7586B}" {
         m_sCallsign "2-3"
        }
-       SCR_CallsignInfo "{633F7288559F9774}" {
+       SCR_CallsignInfo "{6446F968FBC8108F}" {
         m_sCallsign "MEDIC"
        }
-       SCR_CallsignInfo "{633F728855CCBD88}" {
+       SCR_CallsignInfo "{6446F968FA58517F}" {
         m_sCallsign "MMG"
        }
       }
@@ -105,16 +90,16 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
     SCR_Faction "{628C2D2BFC8C6447}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
       m_aSquadNames {
-       SCR_CallsignInfo "{633F728BA3D40998}" {
+       SCR_CallsignInfo "{6446F968D2F45591}" {
         m_sCallsign "1-4"
        }
-       SCR_CallsignInfo "{633F728BA3F6A620}" {
+       SCR_CallsignInfo "{6446F96823DDAD99}" {
         m_sCallsign "MEDIC"
        }
-       SCR_CallsignInfo "{633F728BA2C3D40D}" {
+       SCR_CallsignInfo "{6446F96823FE1D25}" {
         m_sCallsign "MMG"
        }
-       SCR_CallsignInfo "{633F728BBE7BC7DF}" {
+       SCR_CallsignInfo "{6446F9682F256BE5}" {
         m_sCallsign "MAT"
        }
       }
