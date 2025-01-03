@@ -20,7 +20,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
    }
   }
   CLB_PlayableCharacter "{62F200EA748008B9}" {
-   m_sName "Gunner"
+   m_sName "Vehicle Gunner"
    m_bIsPlayable 1
    m_bIsSpecialty 1
   }
@@ -32,7 +32,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Gunner"
+    Name "Vehicle Gunner"
     Icon "{A489F552FB7489C3}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Custom.edds"
     IconSetName ""
     m_Image "{C8565602E0F422C5}Images/UI/Zeus GearScript Factions/CIV_NATO.edds"

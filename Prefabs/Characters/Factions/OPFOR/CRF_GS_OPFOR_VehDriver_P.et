@@ -20,7 +20,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
    }
   }
   CLB_PlayableCharacter "{62F200EA748008B9}" {
-   m_sName "Driver"
+   m_sName "Vehicle Driver"
    m_bIsPlayable 1
    m_bIsSpecialty 1
   }
@@ -32,7 +32,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Driver"
+    Name "Vehicle Driver"
     IconSetName ""
     m_Image "{0A1F947948102E69}Images/UI/Zeus GearScript Factions/OPFOR_NATO.edds"
     m_sFaction "OPFOR"

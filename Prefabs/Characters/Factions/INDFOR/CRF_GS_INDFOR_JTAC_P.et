@@ -32,7 +32,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "JTAC"
+    Name "Joint Terminal Attack Controller"
     Icon "{9A61AD7EADB131FD}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Spotter.edds"
     IconSetName ""
     m_Image "{EFA0BA63504B1230}Images/UI/Zeus GearScript Factions/INDFOR_NATO.edds"

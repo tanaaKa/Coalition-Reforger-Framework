@@ -32,7 +32,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
-    Name "Heavy MachineGun"
+    Name "Heavy Machine-Gunner"
     Icon "{EF1F445746A3391A}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_MachineGunner.edds"
     IconSetName ""
     m_Image "{E5DECCCA6F4B7416}Images/UI/Zeus GearScript Factions/BLUFOR_NATO.edds"

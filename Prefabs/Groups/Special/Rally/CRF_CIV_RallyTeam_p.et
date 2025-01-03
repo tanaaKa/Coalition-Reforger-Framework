@@ -14,7 +14,7 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_EntityChildrenBudgetCost {
      SCR_EntityBudgetValue "{62C61C12249DEDEE}" {
       m_BudgetType AI
-      m_Value 9
+      m_Value 1
      }
     }
     m_bUseUIInfoName 1
