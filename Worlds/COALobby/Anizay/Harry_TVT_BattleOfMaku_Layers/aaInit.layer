@@ -24,11 +24,11 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "Blufor has a vested interest in securing the infrastructure around Maku.  Opfor has hired some mercenaries to push them out of the area, with plausible deniability. "\
    ""\
-   "BLUFOR Composition: Infantry"\
+   "BLUFOR Composition: Air Assault Infantry"\
    "BLUFOR Assets: 1x UH60, 1x Weapon Squad"\
    ""\
-   "OPFOR Composition: Infantry"\
-   "OPFOR Assets: 3x K17"\
+   "OPFOR Composition: Mechanized Infantry"\
+   "OPFOR Assets: 3x BMP3"\
    ""\
    "Time: 60 Minutes"\
    ""\

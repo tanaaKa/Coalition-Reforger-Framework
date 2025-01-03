@@ -18,7 +18,7 @@ $grp SCR_BaseTriggerEntity {
   coords 6965.334 320.239 5412.799
   userScript "	string ural = \"{0075D36080C56819}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_tan.et\";"\
   "	string ambu1 = \"{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et\";"\
-  "	string kt = \"{944D59BF5EC046D6}Prefabs/Vehicles/Wheeled/K17/APC_K17_Berezok_tan.et\";"\
+  "	string kt = \"{1BE270891F0F3772}Prefabs/Vehicles/Tracked/BMP3/BMP3_Tank.et\";"\
   "	string ambu2 = \"{4E3A86638BFF9FC6}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_USAF.et\";"\
   "	string heli = \"{F503F71C08BE3F7D}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_armed.et\";"\
   "	"\
