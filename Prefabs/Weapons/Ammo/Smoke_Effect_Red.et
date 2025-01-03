@@ -2,6 +2,14 @@ Projectile : "{7018A917ED080F86}Prefabs/Weapons/Core/FlareEffect_Base.et" {
  ID "5A52CD9231D8AB66"
  components {
   TimerTriggerComponent "{60F2D6E8520B1C8B}" {
+   PROJECTILE_EFFECTS {
+    SpawnParticleEffect "{62FB4613CC50998C}" {
+     TriggerOnce 1
+     AttachToParent 1
+     ParticleEffect "{94CAB105E065775C}Particles/Weapon/Smoke_grenade_M18_Red.ptc"
+    }
+   }
+   ArmingTime 2
    TIMER 60
   }
   FlareMoveComponent "{5A52CD9231D8AB6E}" {

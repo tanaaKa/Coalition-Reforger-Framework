@@ -8,12 +8,12 @@
 *	Server only
 */
 [ComponentEditorProps(category: "CRF Logging Component", description: "")]
-class CRF_OLD_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
+class CRF_LoggingServerComponentClass: CLB_GamemodeComponentClass
 {
 	
 }
 
-class CRF_OLD_LoggingServerComponent: SCR_BaseGameModeComponent
+class CRF_LoggingServerComponent: CLB_GamemodeComponent
 {	
 	const string SEPARATOR = ",";
 	const string m_sLogPath = "$profile:COAServerLog.txt";
@@ -81,31 +81,32 @@ class CRF_OLD_LoggingServerComponent: SCR_BaseGameModeComponent
 	}
 	
 	// Mission status messages 
-	override void OnGameStateChanged(SCR_EGameModeState state)
+	override void OnGamemodeStateChanged()
 	{
-		super.OnGameStateChanged(state);
 		if (!Replication.IsServer())
 			return;
+		
+		CLB_GamemodeState state = CLB_Gamemode.GetInstance().m_GamemodeState;
 		
 		m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
 		switch (state)
 		{
-			case SCR_EGameModeState.SLOTSELECTION:
+			case CLB_GamemodeState.SLOTTING:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "slotting" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case SCR_EGameModeState.BRIEFING:
+			case CLB_GamemodeState.INITIAL:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "briefing" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case SCR_EGameModeState.GAME:
+			case CLB_GamemodeState.GAME:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "safestart" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case SCR_EGameModeState.DEBRIEFING:
+			case CLB_GamemodeState.AAR:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "ended" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;

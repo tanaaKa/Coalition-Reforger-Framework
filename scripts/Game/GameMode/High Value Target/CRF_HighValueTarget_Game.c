@@ -32,7 +32,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	[Attribute("0 0 0", "auto", "The rotation of the prefab")]
 	 vector m_hvtPrefabYaw;
 	
-	CRF_SafestartGameModeComponent m_safestart;
+	CLB_Gamemode m_safestart;
 		
 	[RplProp(onRplName: "updateHvtPos")]
 	vector m_sHvtPos;
@@ -40,6 +40,8 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	
 	IEntity m_eHvtEntity;
 	
+	SCR_PopUpNotification m_PopUpNotification = null;
+	string m_PopUpNotificationMessage
 
 	//------------------------------------------------------------------------------------------------
 	
@@ -52,46 +54,63 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 		
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	// Spawn HVT & Set State
+	//------------------------------------------------------------------------------------------------
 	void WaitTillGameStart()
 	{
 		if (SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning()) 
 		{
+			GetGame().GetCallqueue().Remove(WaitTillGameStart);
+			GetGame().GetCallqueue().CallLater(WaitTillSafeStartEnds, 1000, true);
 			IEntity transponderEntity = GetGame().GetWorld().FindEntityByName(m_transponderEntity);
 			
-			// Spawn hvt entity
 			EntitySpawnParams spawnParams = new EntitySpawnParams();
 			spawnParams.TransformMode = ETransformMode.WORLD;
 			spawnParams.Transform[3] = transponderEntity.GetOrigin();
-			
 			m_eHvtEntity = GetGame().SpawnEntityPrefab(Resource.Load(m_hvtPrefab),GetGame().GetWorld(),spawnParams);
 			
 			if (Replication.IsServer())
 			{
 				m_eHvtEntity.SetYawPitchRoll(m_hvtPrefabYaw);
-			}
-			
-			// Knock the entity uncon if needed
-			if (m_setUnconcious && Replication.IsServer()) 
-			{	
+				
 				SCR_CharacterControllerComponent characterController = SCR_CharacterControllerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterControllerComponent));
-				characterController.SetUnconscious(true);
+				if (!characterController)
+				return;
+				
+				characterController.m_OnPlayerDeathWithParam.Insert(HVTKilled);
 			}
 			
 			if (m_disableDamage && Replication.IsServer()) 
 			{
 				SCR_CharacterDamageManagerComponent damangeMangerController = SCR_CharacterDamageManagerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterDamageManagerComponent));
-				damangeMangerController.EnableDamageHandling(false)
+				if (!damangeMangerController)
+					return;
+				
+				damangeMangerController.EnableDamageHandling(false);
 			}
 			
-			GetGame().GetCallqueue().Remove(WaitTillGameStart);
-			GetGame().GetCallqueue().CallLater(WaitTillSafeStartEnds, 1000, true);
+			if (m_setUnconcious && Replication.IsServer()) 
+			{			
+				SCR_CharacterControllerComponent characterController = SCR_CharacterControllerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterControllerComponent));
+				if (!characterController)
+					return;
+				
+				setHVTUnconcious();
+				characterController.m_OnLifeStateChanged.Insert(setHVTUnconcious);
+				
+			}	
 		}
 		return;
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	// Scripted Marker
+	//------------------------------------------------------------------------------------------------	
+	
 	void WaitTillSafeStartEnds()
 	{
-		m_safestart = CRF_SafestartGameModeComponent.GetInstance();
+		m_safestart = CLB_Gamemode.GetInstance();
 		if (!m_safestart.GetSafestartStatus())
 		{	
 			GetGame().GetCallqueue().Remove(WaitTillSafeStartEnds);
@@ -100,9 +119,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 				GetGame().GetCallqueue().CallLater(transponderInit, 1000, true);
 			}
 			
-			
-			// Create marker on transponder and filter faction if needed
-			CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+			CRF_ClientComponent gameModePlayerComponent = CRF_ClientComponent.GetInstance();
 				if (!gameModePlayerComponent) 
 					return;
 				
@@ -110,11 +127,11 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 			{
 				SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
 				if (!factionManager)
-				return;
+					return;
 				
 				Faction faction = factionManager.GetPlayerFaction(SCR_PlayerController.GetLocalPlayerId());
 				if (!faction)
-				return;
+					return;
 		        
 		        if (faction.GetFactionKey() == m_searcherFactionKey)  
 				{
@@ -128,31 +145,73 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 
 	}
 	
+	//------------------------------------------------------------------------------------------------
+	// Transponder Location Update
+	//------------------------------------------------------------------------------------------------
+	
 	void transponderInit()
 	{
-		// Update the transponder position to the entity being searched for across all the clients
 		if (SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning()) 
 		{
-			
 			m_sHvtPos = m_eHvtEntity.GetOrigin();
-			
 			Replication.BumpMe();
 			updateHvtPos();
 		}
 		return;
 	}
 	
-	// Function called by the server sent to the clients
 	void updateHvtPos()
 	{	
 			if (m_sHvtPos == m_sStoredHvtPos)
-			return;
+				return;
 	
 			IEntity transponder = GetGame().GetWorld().FindEntityByName(m_transponderEntity);	
-			// Update tranponder location on the client
 			transponder.SetOrigin(m_sHvtPos);
-				
 			m_sStoredHvtPos = m_sHvtPos;
 	};
+	
+	//------------------------------------------------------------------------------------------------
+	// HVT Unconcious State
+	//------------------------------------------------------------------------------------------------
+	
+	void setHVTUnconcious()
+	{
+		SCR_CharacterControllerComponent characterController = SCR_CharacterControllerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterControllerComponent));
+		if (!characterController)
+			return;
+		
+		SCR_CharacterDamageManagerComponent damangeMangerController = SCR_CharacterDamageManagerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterDamageManagerComponent));
+		if (!damangeMangerController)
+			return;
+		
+		characterController.SetUnconscious(true);
+		damangeMangerController.SetRegenScale(0, true);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	// Pop up notification
+	//------------------------------------------------------------------------------------------------
+	
+	void HVTKilled(SCR_CharacterControllerComponent characterController, IEntity killerEntity, Instigator killer)
+	{
+		SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
+		if (!factionManager)
+			return;
+	
+		Faction faction = factionManager.GetPlayerFaction(killer.GetInstigatorPlayerID());
+		if (!faction)
+			return;
+		
+		Rpc(RpcAsk_PopUpNotification, faction.GetFactionKey())
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	void RpcAsk_PopUpNotification(string faction)
+	{
+		AudioSystem.PlaySound("{E23715DAF7FE2E8A}Sounds/Items/Equipment/Radios/Samples/Items_Radio_Turn_On.wav");
+		m_PopUpNotificationMessage = "HVT Killed by " + faction;
+		m_PopUpNotification = SCR_PopUpNotification.GetInstance();
+		m_PopUpNotification.PopupMsg(m_PopUpNotificationMessage, 10, "");
+	}
 	
 }

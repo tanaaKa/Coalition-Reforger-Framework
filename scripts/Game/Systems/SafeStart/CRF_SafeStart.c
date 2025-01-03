@@ -1,15 +1,12 @@
-[ComponentEditorProps(category: "Safe Start Component", description: "")]
-class CRF_SafestartGameModeComponentClass: SCR_BaseGameModeComponentClass {}
-
-class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
+modded class CLB_Gamemode
 {
-	[Attribute("45", "auto", "Mission Time (set to -1 to disable)")]
+	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode SafeStart")]
 	int m_iTimeLimitMinutes;
 	
-	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?")]
+	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?", category: "CRF Gamemode SafeStart")]
 	bool m_bDeleteJIPSlots;
 	
-	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.")]
+	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.", category: "CRF Gamemode SafeStart")]
 	bool m_bSafestartInstantlyEnabled;
 	
 	[RplProp(onRplName: "OnSafeStartChange")]
@@ -27,7 +24,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	protected string m_sMessageContent;
 	protected string m_sStoredMessageContent;
 	
-	[RplProp(onRplName: "CallDeleteRedundantUnits")]
+	[RplProp()]
 	protected bool m_bKillRedundantUnitsBool;
 	
 	protected int m_iTimeSafeStartBegan;
@@ -40,18 +37,15 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	
 	protected bool m_bAdminForcedReady = false;
 	
-	protected SCR_BaseGameMode m_GameMode;
-	protected CRF_OLD_LoggingServerComponent m_Logging;
+	protected CRF_LoggingServerComponent m_Logging;
 	
 	protected int m_iPlayedFactionsCount;
 	protected ref map<IEntity,bool> m_mPlayersWithEHsMap = new map<IEntity,bool>;
 	
-	protected PS_PlayableManager m_PlayableManager;
-	protected ref map<RplId, PS_PlayableComponent> m_mPlayables = new map<RplId, PS_PlayableComponent>;
 	protected int m_mPlayablesCount = 0;
 	
 	protected SCR_PopUpNotification m_PopUpNotification = null;
-	
+
 	bool m_bHUDVisible = true;
 	
 	//------------------------------------------------------------------------------------------------
@@ -60,19 +54,10 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 
 	//------------------------------------------------------------------------------------------------
 	
-	static CRF_SafestartGameModeComponent GetInstance()
-	{
-		BaseGameMode gameMode = GetGame().GetGameMode();
-		if (gameMode)
-			return CRF_SafestartGameModeComponent.Cast(gameMode.FindComponent(CRF_SafestartGameModeComponent));
-		else
-			return null;
-	}
-	
 	//------------------------------------------------------------------------------------------------
-	override protected void OnPostInit(IEntity owner)
+	override protected void EOnInit(IEntity owner)
 	{
-		super.OnPostInit(owner);
+		super.EOnInit(owner);
 		
 		// Only run on in-game post init
 		// Is the the right way to do this? WHO KNOWS !
@@ -82,8 +67,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			
 		if (Replication.IsServer())
 		{
-			m_GameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode());
-			m_Logging = CRF_OLD_LoggingServerComponent.Cast(m_GameMode.FindComponent(CRF_OLD_LoggingServerComponent));
+			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
 	}
@@ -270,9 +254,9 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	void WaitTillGameStart()
 	{
-		if (!m_GameMode.IsRunning()) 
+		if(m_GamemodeState != CLB_GamemodeState.GAME)
 			return;
-		
+ 		
 		m_SafeStartEnabled = !m_bSafestartInstantlyEnabled;
 		Replication.BumpMe();//Broadcast m_SafeStartEnabled change
 		
@@ -300,8 +284,8 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			GetGame().GetCallqueue().Remove(CheckPlayersAlive);
 			
 			GetGame().GetCallqueue().CallLater(CheckStartCountDown, 5000, true);
-			GetGame().GetCallqueue().CallLater(UpdateServerWorldTime, 250, true);
-			GetGame().GetCallqueue().CallLater(ActivateSafeStartEHs, 1250, true);
+			GetGame().GetCallqueue().CallLater(UpdateServerWorldTime, 1000, true);
+			GetGame().GetCallqueue().CallLater(ActivateSafeStartEHs, 5000, true);
 			GetGame().GetCallqueue().CallLater(UpdatePlayedFactions, 1000, true);
 			
 			Replication.BumpMe();//Broadcast m_SafeStartEnabled change
@@ -311,7 +295,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			
 			UpdatePlayedFactions();
 			
-			CallDeleteRedundantUnits();
+			DeleteEmptySlots();
 			m_bKillRedundantUnitsBool = true;
 			m_bAdminForcedReady = false;
 			m_bBluforReady = false;
@@ -327,7 +311,7 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 			
 			if (m_iTimeLimitMinutes > 0) {
 				m_iTimeMissionEnds = GetGame().GetWorld().GetWorldTime() + (m_iTimeLimitMinutes * 60000);
-				GetGame().GetCallqueue().CallLater(UpdateMissionEndTimer, 250, true);
+				GetGame().GetCallqueue().CallLater(UpdateMissionEndTimer, 1000, true);
 			} else {
 				m_sServerWorldTime = "N/A";
 			};
@@ -386,47 +370,26 @@ class CRF_SafestartGameModeComponent: SCR_BaseGameModeComponent
 		Replication.BumpMe();
 	};
 	
-	// Called from server to all clients
-	//------------------------------------------------------------------------------------------------
-	void CallDeleteRedundantUnits() 
+	void DeleteEmptySlots()
 	{
-		m_PlayableManager = PS_PlayableManager.GetInstance();
-		if(m_PlayableManager && m_bDeleteJIPSlots) {
-			if (m_SafeStartEnabled) {
-				// Slowly delete AI on another thread so we dont create any massive lag spikes.
-				m_mPlayables = m_PlayableManager.GetPlayables();
-				m_mPlayablesCount = m_mPlayables.Count();
-				GetGame().GetCallqueue().CallLater(DeleteRedundantUnitsSlowly, 125, true);
-			} else {
-				// Quickly delete AI on the main thread if they are a JIP and have come in after safestart has been turned off.
-				map<RplId, PS_PlayableComponent> playables = m_PlayableManager.GetPlayables();
-				for (int i = 0; i < playables.Count(); i++) {
-					PS_PlayableComponent playable = playables.GetElement(i);
-					if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
-					{
-						SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
-						SCR_EntityHelper.DeleteEntityAndChildren(character);
-					};
-				}
-			};
-		};
+		if(m_bDeleteJIPSlots) 
+			if (m_SafeStartEnabled) 
+				GetGame().GetCallqueue().CallLater(DeleteEmptySlotsSlowly, 125, true);
 	}
-
-	//------------------------------------------------------------------------------------------------
-	void DeleteRedundantUnitsSlowly() 
+	
+	void DeleteEmptySlotsSlowly()
 	{
-		if (m_mPlayablesCount > 0) {
-			PS_PlayableComponent playable = m_mPlayables.GetElement(m_mPlayablesCount - 1);
-			if(!playable)
-				return;
-			m_mPlayablesCount = m_mPlayablesCount - 1;
-			if (m_PlayableManager.GetPlayerByPlayable(playable.GetId()) <= 0)
+		CLB_Gamemode gamemode = CLB_Gamemode.GetInstance();
+		for(int i = 0; i < gamemode.m_aEntitySlots.Count(); i++)
+		{
+			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)
 			{
-				SCR_ChimeraCharacter character = SCR_ChimeraCharacter.Cast(playable.GetOwner());
-				SCR_EntityHelper.DeleteEntityAndChildren(character);
+				//Print("Removing Entity");
+				gamemode.RemovePlayableEntity(gamemode.m_aEntitySlots.Get(i));
+				return;
 			}
-		} else
-			GetGame().GetCallqueue().Remove(DeleteRedundantUnitsSlowly);
+		}
+		GetGame().GetCallqueue().Remove(DeleteEmptySlotsSlowly);
 	}
 	
 	// Called from server to all clients

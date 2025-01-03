@@ -101,7 +101,7 @@ class CRF_FrontlineGameModeComponent: SCR_BaseGameModeComponent
 	void CheckAddInitialMarkers()
 	{
 		// Create markers on each bomb site
-		CRF_GameModePlayerComponent gameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+		CRF_ClientComponent gameModePlayerComponent = CRF_ClientComponent.GetInstance();
 		if (!gameModePlayerComponent) 
 			return;
 		
@@ -132,7 +132,7 @@ class CRF_FrontlineGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	void StartGame()
 	{
-		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+		CLB_Gamemode safestart = CLB_Gamemode.GetInstance();
 		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
 			return;
 		
@@ -164,7 +164,7 @@ class CRF_FrontlineGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	protected void UpdateZones()
 	{
-		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+		CLB_Gamemode safestart = CLB_Gamemode.GetInstance();
 		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() || !m_bGameStarted)
 			return;
 		
@@ -576,7 +576,7 @@ class CRF_FrontlineGameModeComponent: SCR_BaseGameModeComponent
 	//------------------------------------------------------------------------------------------------
 	void UpdateClients()
 	{
-		CRF_GameModePlayerComponent.GetInstance().UpdateMapMarkers(m_aZonesStatus, m_aZoneObjectNames, m_BluforSide, m_OpforSide);
+		CRF_ClientComponent.GetInstance().UpdateMapMarkers(m_aZonesStatus, m_aZoneObjectNames, m_BluforSide, m_OpforSide);
 	}
 	
 	//------------------------------------------------------------------------------------------------

@@ -2,7 +2,7 @@ GenericEntity : "{09D6A1C9543E4A95}Prefabs/Items/Core/Backpack_Base.et" {
  ID "511E9C6ADE70F798"
  components {
   MeshObject "{511E9C6ADE70F7BD}" {
-   Object "{96E4CCC9D5BC33A5}Assets/Empty_pants.xob"
+   Object "{E0BEDFA62478F57F}Assets/Items/Equipment/Backpacks/Backpack_ALICE_Medium/Backpack_ALICE_Medium_combined.xob"
    Materials {
     MaterialAssignClass "{625917C51E196DDE}" {
      SourceMaterial "Color_palette"

@@ -8,7 +8,7 @@ Projectile : "{D40A105437369C1D}Prefabs/Weapons/Core/Ammo_GrenadeLauncher_Base.e
      SoundEvent "SOUND_DEPLOY"
     }
    }
-   TIMER 0.1
+   TIMER 1
   }
   AICombatPropertiesComponent "{59C92CB12877478B}" {
    Priority 0

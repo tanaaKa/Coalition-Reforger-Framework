@@ -143,6 +143,5 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
  m_aUnitPrefabSlots {
   "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et" "{878571E46D6257C1}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_USSR_Pilot.et"
  }
- m_sCustomNameSet "Racers"
- m_bSetPlayable 1
+ m_bIsPlayable 1
 }

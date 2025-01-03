@@ -5,11 +5,13 @@ FrameWidgetClass {
    Name "Blur"
    Slot FrameWidgetSlot "{62993E1169649355}" {
     Anchor 0 0 1 1
-    PositionX 0.252
-    PositionY -0.041
-    SizeX 0.058
+    PositionX 0
+    OffsetLeft 0
+    PositionY 0
+    OffsetTop 0
+    SizeX 0
     OffsetRight 0
-    SizeY -0.249
+    SizeY 0
     OffsetBottom 0
    }
    "Z Order" -5
@@ -195,7 +197,41 @@ FrameWidgetClass {
        }
        Clipping False
        Color 0.172 0.172 0.172 1
-       Text "Hint menu"
+       Text "Hint Menu"
+       "Font Size" 14
+       "Min Font Size" 14
+       FontProperties FontProperties "{629B0EA7F3E8BCED}" {
+        OutlineSize 4
+       }
+      }
+     }
+    }
+    ButtonWidgetClass "{62E57BE02FE32C1B}" {
+     Name "HealButton"
+     Slot FrameWidgetSlot "{62992E477A603216}" {
+      PositionX 410
+      OffsetLeft 410
+      PositionY 0.741
+      OffsetTop 0.7
+      SizeX 100.001
+      OffsetRight -510
+      SizeY 30
+      OffsetBottom -30.7
+     }
+     Color 0.045 0.045 0.045 1
+     components {
+      SCR_ButtonTextComponent "{629B0EA6BE25C8A5}" {
+       m_bCanBeToggled 1
+      }
+     }
+     {
+      TextWidgetClass "{62E57BE02FE32C1A}" {
+       Name "HealText"
+       Slot ButtonWidgetSlot "{62992E44F11398F5}" {
+       }
+       Clipping False
+       Color 0.172 0.172 0.172 1
+       Text "Heal Menu"
        "Font Size" 14
        "Min Font Size" 14
        FontProperties FontProperties "{629B0EA7F3E8BCED}" {

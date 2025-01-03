@@ -24,7 +24,7 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 	protected bool m_bStoredFadeInBoolean;
 	protected bool m_bStoredProgressBarBoolean;
 
-	protected CRF_GameModePlayerComponent m_GameModePlayerComponent = null;
+	protected CRF_ClientComponent m_GameModePlayerComponent = null;
 	protected CRF_FrontlineGameModeComponent m_FrontlineGameModeComponent = null;
 	
 	//------------------------------------------------------------------------------------------------
@@ -45,7 +45,7 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 		};
 		
 		if (!m_GameModePlayerComponent || !m_wASite || !m_wSiteCaptureBar || !m_wASiteInZone || !m_wASiteLock) {
-			m_GameModePlayerComponent = CRF_GameModePlayerComponent.GetInstance();
+			m_GameModePlayerComponent = CRF_ClientComponent.GetInstance();
 			m_wASite                  = ImageWidget.Cast(m_wRoot.FindWidget("ASite"));
 			m_wBSite                  = ImageWidget.Cast(m_wRoot.FindWidget("BSite"));
 			m_wCSite                  = ImageWidget.Cast(m_wRoot.FindWidget("CSite"));
@@ -66,7 +66,7 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 			return;
 		};
 		
-		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
+		CLB_Gamemode safestart = CLB_Gamemode.GetInstance();
 		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() || !safestart.m_bHUDVisible)
 			m_wRoot.SetOpacity(0);
 		else
@@ -84,8 +84,6 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 				continue;
 			
 			string status = m_FrontlineGameModeComponent.m_aZonesStatus[i];
-			string imageTexture;
-			int imageColor;
 			
 			ImageWidget widget;
 			ImageWidget lockWidget;
@@ -134,8 +132,6 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 				return;
 			
 			GetGame().GetWorld().QueryEntitiesBySphere(zone.GetOrigin(), 75, ProcessEntity, null, EQueryEntitiesFlags.DYNAMIC | EQueryEntitiesFlags.WITH_OBJECT); // get all entitys within a 150m radius around the zone
-			
-			string nickname;
 			
 			switch(zonefaction)
 			{

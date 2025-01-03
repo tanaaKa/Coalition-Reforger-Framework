@@ -18,7 +18,7 @@ $grp SCR_AIGroup : "{10ADE105A7E8EDE4}Prefabs/Groups/Special/LBQF/CRF_OPF_PILOTS
 }
 $grp Vehicle : "{4473F8A55148AAE8}Prefabs/Vehicles/Helicopters/AH6M/LBQF_RED.et" {
  AH6M_RKT1 {
-  coords 4815.776 24.782 12001.695
+  coords 4815.294 24.406 12001.917
   angleX 0.926
   angleY 178.014
   angleZ 0.863
