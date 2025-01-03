@@ -112,10 +112,14 @@ $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarke
  {
   coords 6780.351 171.395 4814.884
   m_sDescription "FOB Nessie"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
  }
  {
   coords 6849.526 119.656 5527.34
   m_sDescription "Depot"
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
  }
 }
 $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
