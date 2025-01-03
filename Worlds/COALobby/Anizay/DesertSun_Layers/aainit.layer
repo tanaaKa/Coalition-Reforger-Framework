@@ -30,8 +30,43 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_sFactionOneKey "BLU"
  m_iFactionTwoRatio 2
  m_sFactionTwoKey "OPF"
+ m_aMissionDescriptors {
+  CLB_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "A brownwater pilot was shot down over night around the fortress city of Khas. ION PMC has been deployed to the region in an extreme attempt to quell the insurgency and recover the pilot."\
+   ""\
+   "BLUFOR Composition: Air Assault Infantry PMC"\
+   "BLUFOR Assets: Rotary Craft, HWWMVs"\
+   ""\
+   "OPFOR Composition: Insurgents"\
+   "OPFOR Assets: Wheeled Vehicles"\
+   ""\
+   "Time: 3:19 AM"\
+   ""\
+   "Weather: Clear"
+  }
+  CLB_MissionDescriptor "{64425051F2E00216}" {
+   m_sTextData "The brownwater pilot transponder activiated approximately one hour ago. He appears to be in the city of Khas, which is a walled fortress city."\
+   ""\
+   "We have no idea if he's dead or alive, but he or his body must be extracted to send a message to this regions insurgency."
+  }
+  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTextData "BROTHERS"\
+   ""\
+   "A western PMC has been spotted transitioning into the area over night. They no doubt have come to restrict our freedom after yesterday's victory."\
+   ""\
+   "Move the pilot out of the mosque and resist them at all costs. Do not let the american pilot fall into their hands."
+  }
+  CLB_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData "Mission time limit: 50 minutes"\
+   ""\
+   "OPFOR is restricted to the walled city of Khas"\
+   ""\
+   "OPFOR can not place the pilot inside the mosque"
+  }
+ }
+ m_iTimeLimitMinutes 50
  {
-  SCR_FactionManager {
+  SCR_FactionManager "64472E48F4DDA409" {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
@@ -66,6 +101,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
       }
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB792D10AD8F4}" {
+       }
+       SCR_CallsignInfo "{64472E4BDAEE56DF}" {
+        m_sCallsign "MED"
        }
        SCR_CallsignInfo "{55CCB792D13759D8}" {
        }
@@ -129,6 +167,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB79287E901BC}" {
         m_sCallsign "Cell Leader"
+       }
+       SCR_CallsignInfo "{64472E4BAF0BC844}" {
+        m_sCallsign "MED"
        }
        SCR_CallsignInfo "{55CCB79287936EBD}" {
         m_sCallsign "Cell 1"
