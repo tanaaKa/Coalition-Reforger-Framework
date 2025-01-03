@@ -5,7 +5,7 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
  coords 4511.59 134.875 5779.527
  {
   SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
-   coords -11.557 -0 58.074
+   coords -11.557 0 58.074
    {
     SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
      coords 26.78 0 33.66
@@ -14,7 +14,7 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
        coords 2.857 0 -23.774
        {
         SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
-         coords -0.67 -0 -23.235
+         coords -0.67 0 -23.235
          {
           SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
            coords 20.769 0.219 43.365
@@ -41,28 +41,6 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
 }
 Vehicle AUS_UH60_unarmed1 : "{420562B2B5D106C3}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_unarmed.et" {
  coords 4547.957 135.226 5772.823
-}
-$grp Vehicle : "{8E72856AFC84900F}Prefabs/Vehicles/Wheeled/M998/HumveeUs1.et" {
- HumveeUs1 {
-  coords 4516.001 134.875 5818.942
-  angleY 88
- }
- HumveeUs2 {
-  coords 4515.586 134.875 5823.878
-  angleY 88
- }
- HumveeUs3 {
-  coords 4515.512 134.875 5828.945
-  angleY 88
- }
- HumveeUs4 {
-  coords 4515.269 134.875 5833.545
-  angleY 88
- }
- HumveeUs5 {
-  coords 4514.704 134.875 5838.67
-  angleY 88
- }
 }
 Vehicle AH6M_GAU1 : "{A317D959A4248173}Prefabs/Vehicles/Helicopters/AH6M/AH6M_GAU19.et" {
  coords 4524.222 135.287 5773.493
