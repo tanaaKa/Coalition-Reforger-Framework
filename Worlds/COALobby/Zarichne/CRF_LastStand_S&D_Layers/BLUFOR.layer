@@ -1,3 +1,13 @@
+$grp Vehicle : "{3B1EB924602C7A07}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_MERDC.et" {
+ M997_maxi_ambulance_MERDC2 {
+  coords 2210.313 7.625 2466.51
+  angleY -23.12
+ }
+ M997_maxi_ambulance_MERDC1 {
+  coords 2214.971 7.625 2468.499
+  angleY -23.12
+ }
+}
 SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Platoon_p.et" {
  components {
   AIFormationComponent "{507E9DC12F541FE6}" {
@@ -67,6 +77,6 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
  }
 }
 Tank M2A2_MERDC1 : "{5CFD8CB5C3E55A4E}Prefabs/Vehicles/Tracked/BFV/M2A2_MERDC.et" {
- coords 2132.642 2.868 2472.344
+ coords 2132.642 2.869 2472.344
  angleY 92.917
 }
