@@ -1,11 +1,12 @@
 SCR_ChimeraCharacter : "{1DF1291C7BF63429}Prefabs/Characters/Factions/Legacy_Specials/Specials/HeliBattleSpecial_Blufor_Base.et" {
  ID "520EC961A090B1EE"
  components {
+  CLB_PlayableCharacter "{64476BA40E63D1D5}" {
+   m_sName "Pilot"
+   m_bIsPlayable 1
+  }
   FactionAffiliationComponent "{520EC961FB0A2E90}" {
    "faction affiliation" "BLUFOR"
-  }
-  PS_PlayableComponent "{5EFCC1946F475F15}" {
-   m_name "Pilot"
   }
  }
 }
