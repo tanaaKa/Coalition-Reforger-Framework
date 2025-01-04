@@ -9,7 +9,7 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     Name "CRF 1980s Rifle Squad"
     m_Image "{B7385DA4504BD4D5}CRF Images/crflogo.edds"
     m_aAuthoredLabels {
-     4 51870 25 34 38
+     4 51872 25 34 38
     }
     m_aAutoLabels {
      72
@@ -17,12 +17,12 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_EntityChildrenBudgetCost {
      SCR_EntityBudgetValue "{628CDE94290DF826}" {
       m_BudgetType AI
-      m_Value 9
+      m_Value 1
      }
     }
     m_bUseUIInfoName 1
     m_MilitarySymbol SCR_MilitarySymbol "{628CDE94290DF82F}" {
-     m_Identity BLUFOR
+     m_Identity INDFOR
      m_Dimension LAND
      m_Icons INFANTRY
      m_Amplifier SQUAD
