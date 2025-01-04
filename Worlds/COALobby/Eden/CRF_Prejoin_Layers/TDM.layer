@@ -1,10 +1,10 @@
 SCR_SpawnPoint : "{45225582B358C31A}PrefabsEditable/SpawnPoints/E_SpawnPoint_USSR.et" {
- coords 9410.503 45.935 1646.62
+ coords 9410.503 46.449 1646.62
  angleY 67.832
 }
 $grp GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
  {
-  coords 9938.656 2.452 1552.905
+  coords 9938.655 2.452 1552.905
   angleY 88.034
  }
  {
@@ -21,7 +21,7 @@ $grp GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/A
  }
 }
 GenericEntity : "{78FA5AE736775EA8}Prefabs/Compositions/Slotted/SlotRoadMedium/COAL_Barricade_M_US_Green_01.et" {
- coords 10207.354 6.208 1578.218
+ coords 10207.354 6.209 1578.218
  angleX 1.012
  angleY 67.029
 }
@@ -40,20 +40,20 @@ $grp GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR
   angleY -121.613
  }
  {
-  coords 9422.791 44.4 1654.172
+  coords 9422.791 44.399 1654.172
   angleY -121.613
  }
  {
-  coords 9419.392 45.053 1652.078
+  coords 9419.392 45.052 1652.078
   angleY -121.613
  }
  {
-  coords 9423.231 44.99 1645.833
+  coords 9423.231 44.988 1645.833
   angleY -121.613
  }
 }
 SCR_SpawnPoint : "{CEA2B24051A44525}PrefabsEditable/SpawnPoints/E_SpawnPoint_US.et" {
- coords 9955.56 4.025 1553.889
+ coords 9955.56 2.471 1553.889
  angleY -87.346
 }
 GenericEntity : "{E8A060E1B1289600}Prefabs/Compositions/Slotted/SlotRoadMedium/COAL_Barricade_M_US_Tan_01.et" {

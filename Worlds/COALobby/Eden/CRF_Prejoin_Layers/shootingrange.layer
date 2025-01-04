@@ -319,6 +319,66 @@ $grp SCR_FiringRangeTarget : "{379D34B0D41DA810}Prefabs/Props/Military/Training/
   coords 7194.333 123.501 5255.797
   angleY 92.754
  }
+ {
+  coords 7159.196 119.362 5338.14
+  angleY 92.754
+ }
+ {
+  coords 7168.478 122.232 5308.939
+  angleY 92.754
+ }
+ {
+  coords 7160.268 121.231 5287.264
+  angleY 92.754
+ }
+ {
+  coords 7070.3 116.072 5252.722
+  angleY 92.754
+ }
+ {
+  coords 7128.859 117.863 5333.379
+  angleY 92.754
+ }
+ {
+  coords 7103.46 117.887 5302.9
+  angleY 92.754
+ }
+ {
+  coords 7210.296 124.688 5327.562
+  angleY 92.754
+ }
+ {
+  coords 7210.296 124.659 5328.775
+  angleY 92.754
+ }
+ {
+  coords 7210.296 124.618 5330.022
+  angleY 92.754
+ }
+ {
+  coords 7210.296 124.509 5331.185
+  angleY 92.754
+ }
+ {
+  coords 7210.296 124.19 5332.65
+  angleY 92.754
+ }
+ {
+  coords 7051.382 119.06 5332.996
+  angleY 92.754
+ }
+ {
+  coords 7041.38 114.124 5302.432
+  angleY 92.754
+ }
+ {
+  coords 7054.573 115.046 5261.803
+  angleY 92.754
+ }
+ {
+  coords 7012.406 110.965 5281.798
+  angleY 92.754
+ }
 }
 $grp StaticModelEntity : "{4241A59E64C29DC1}Prefabs/Structures/Military/BunkerLift.et" {
  {
@@ -343,38 +403,6 @@ $grp StaticModelEntity : "{4241A59E64C29DC1}Prefabs/Structures/Military/BunkerLi
  }
 }
 $grp GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
- {
-  coords 7336.357 122.839 5316.795
-  angleY -97.391
- }
- {
-  coords 7336.357 122.839 5312.562
-  angleY -97.391
- }
- {
-  coords 7336.357 122.839 5308.172
-  angleY -97.391
- }
- {
-  coords 7336.357 122.703 5303.792
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5312.562
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5308.172
-  angleY -97.391
- }
- {
-  coords 7339.001 122.703 5303.792
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5316.795
-  angleY -97.391
- }
  {
   coords 7336.356 122.839 5294.491
   angleY -97.391
@@ -407,210 +435,8 @@ $grp GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/A
   coords 7339.001 122.839 5294.491
   angleY -97.391
  }
- {
-  coords 7336.355 122.839 5272.288
-  angleY -97.391
- }
- {
-  coords 7336.355 122.839 5268.055
-  angleY -97.391
- }
- {
-  coords 7336.355 122.839 5263.665
-  angleY -97.391
- }
- {
-  coords 7336.355 122.703 5259.285
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5268.055
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5263.665
-  angleY -97.391
- }
- {
-  coords 7339.001 122.703 5259.285
-  angleY -97.391
- }
- {
-  coords 7339.001 122.839 5272.288
-  angleY -97.391
- }
-}
-SCR_FiringRangeManager : "{4E79356AF4204F88}Prefabs/Props/Military/Training/FiringRangeBasePrefab.et" {
- coords 7332.432 122.487 5233.435
- angleY -34.701
- {
-  GenericEntity {
-   ID "55C49C58312351EB"
-   coords -2.541 0.026 1.485
-   angleY -19.015
-  }
-  GenericEntity {
-   ID "55C49C58857F13FD"
-   coords 6.378 0.026 1.515
-   angleY -19.015
-  }
-  SCR_FiringRangeController {
-   ID "55C49C589D0D20AA"
-   coords 2.97 0 1.742
-   angleY 23.263
-   {
-    LightEntity {
-     ID "55C2E377B2174450"
-     coords 0.009 1.1 -0.001
-    }
-    SCR_FiringRangeLineArea {
-     ID "55C49C589326C3EA"
-     coords 1.391 0 0.981
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C04D"
-     coords 5.449 0 -9.087
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C059"
-     coords 7.259 0 -8.309
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C065"
-     coords 5.36 0 -3.625
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C39D"
-     coords 3.547 0 -4.377
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C3AA"
-     coords 3.155 0.731 1.212
-     angleY -64.903
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589326C3B1"
-     coords 1.675 0 -5.154
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C589F8C573F"
-     coords 3.666 0 -9.927
-     angleY -23.263
-    }
-   }
-  }
-  SCR_FiringRangeController {
-   ID "55C49C58E9ED9959"
-   coords -5.724 0 1.712
-   angleY 23.263
-   {
-    LightEntity {
-     ID "55C2E377B2174450"
-     coords 0.009 1.1 0
-    }
-    SCR_FiringRangeLineArea {
-     ID "55C49C583A58DC9E"
-     coords 1.188 0 0.909
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C58353C0BD0"
-     coords 2.946 0.731 1.123
-     angleY -64.903
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C583C258252"
-     coords 5.151 0 -3.713
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C583C258260"
-     coords 1.467 0 -5.241
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C583F6ED272"
-     coords 7.052 0 -8.397
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C583F6ED59B"
-     coords 5.242 0 -9.175
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C583F6ED5B1"
-     coords 3.449 0 -9.995
-     angleY -23.263
-    }
-    SCR_FiringRangeTarget {
-     ID "55C49C58C051960F"
-     coords 3.34 0 -4.465
-     angleY -23.263
-    }
-   }
-  }
-  StaticModelEntity {
-   ID "55C49C583123523A"
-   coords -5.315 0.216 1.761
-  }
-  StaticModelEntity {
-   ID "55C49C58857F13AA"
-   coords 3.605 -0.002 1.79
-  }
- }
-}
-SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
- components {
-  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
-   DisplayName "Firing Range"
-  }
- }
- coords 7343.942 122.648 5287.966
- angleY -97.538
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Firing Range"
- }
 }
 $grp GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et" {
- {
-  coords 7351.893 122.843 5316.541
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5312.328
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5308.055
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5304.205
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5312.328
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5308.055
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5304.205
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5316.541
-  angleY 80.291
- }
  {
   coords 7351.893 122.843 5294.237
   angleY 80.291
@@ -643,168 +469,8 @@ $grp GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR
   coords 7349.012 122.843 5294.237
   angleY 80.291
  }
- {
-  coords 7351.893 122.843 5272.034
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5267.821
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5263.548
-  angleY 80.291
- }
- {
-  coords 7351.893 122.843 5259.698
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5267.821
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5263.548
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5259.698
-  angleY 80.291
- }
- {
-  coords 7349.012 122.843 5272.034
-  angleY 80.291
- }
 }
 $grp GenericEntity : "{BBE13893AEA69C0C}Prefabs/Props/Military/Sandbags/Sandbag_01_foundation_plastic.et" {
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.69 5308.03
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.69 5303.793
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.69 5308.03
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.753 5303.793
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.82 5316.663
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.82 5312.426
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.82 5316.663
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.82 5312.426
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.82 5312.57
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.69 5308.174
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.82 5316.807
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.69 5303.937
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.69 5308.174
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.69 5303.937
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.82 5312.57
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.82 5316.807
-  angleY -1.948
- }
  {
   components {
    Hierarchy "{5A58883F88AF1AEC}" {
@@ -938,7 +604,15 @@ $grp GenericEntity : "{BBE13893AEA69C0C}Prefabs/Props/Military/Sandbags/Sandbag_
    Hierarchy "{5A58883F88AF1AEC}" {
    }
   }
-  coords 7337.57 122.69 5259.286
+  coords 7345.661 122.82 5309.356
+  angleY -1.445
+ }
+ {
+  components {
+   Hierarchy "{5A58883F88AF1AEC}" {
+   }
+  }
+  coords 7345.742 122.82 5305.209
   angleY 180
  }
  {
@@ -946,248 +620,16 @@ $grp GenericEntity : "{BBE13893AEA69C0C}Prefabs/Props/Military/Sandbags/Sandbag_
    Hierarchy "{5A58883F88AF1AEC}" {
    }
   }
-  coords 7341.93 122.69 5263.523
-  angleY -1.948
+  coords 7349.977 122.82 5309.514
+  angleY -1.445
  }
  {
   components {
    Hierarchy "{5A58883F88AF1AEC}" {
    }
   }
-  coords 7341.93 122.753 5259.286
+  coords 7350.062 122.82 5305.384
   angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.82 5272.156
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.82 5267.918
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7341.93 122.82 5272.156
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.82 5267.918
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.82 5268.063
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.69 5263.667
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.82 5272.3
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.69 5259.43
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.69 5263.667
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.69 5259.43
-  angleY 180
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7350.656 122.82 5268.063
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7346.296 122.82 5272.3
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.57 122.69 5263.523
-  angleY -1.948
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7330.728 122.55 5231.224
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7327.219 122.613 5228.621
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7324.807 122.55 5232.104
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7328.314 122.55 5234.708
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7337.727 122.387 5236.547
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7334.219 122.45 5233.942
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7331.806 122.387 5237.427
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7335.313 122.387 5240.031
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7342.856 122.362 5229.485
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7335.858 122.525 5224.162
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7333.447 122.525 5227.646
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7339.35 122.425 5226.881
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7332.351 122.588 5221.558
-  angleY 145.298
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7336.938 122.362 5230.365
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7340.445 122.362 5232.969
-  angleY -36.65
- }
- {
-  components {
-   Hierarchy "{5A58883F88AF1AEC}" {
-   }
-  }
-  coords 7329.938 122.525 5225.043
-  angleY -36.65
  }
 }
 $grp GenericEntity : "{CCCC784526173F16}Prefabs/Structures/Signs/Military/Sign_FiringRange_US_01.et" {

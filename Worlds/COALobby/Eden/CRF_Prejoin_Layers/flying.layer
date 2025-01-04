@@ -4,15 +4,11 @@ $grp Vehicle : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
   angleY -90.798
  }
  UH1H2 {
-  coords 4893.722 28.594 11808.353
-  angleY -90.798
- }
- UH1H3 {
-  coords 4893.722 28.594 11834.252
+  coords 4893.633 28.594 11814.716
   angleY -90.798
  }
  UH1H4 {
-  coords 4893.722 28.594 11856.67
+  coords 4893.826 28.594 11849.182
   angleY -90.798
  }
  UH1H5 {
@@ -20,15 +16,11 @@ $grp Vehicle : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
   angleY -90.798
  }
  UH1H6 {
-  coords 4860.807 28.594 11808.353
-  angleY -90.798
- }
- UH1H7 {
-  coords 4860.807 28.594 11834.252
+  coords 4860.718 28.594 11814.716
   angleY -90.798
  }
  UH1H8 {
-  coords 4860.807 28.594 11856.67
+  coords 4860.911 28.594 11849.182
   angleY -90.798
  }
  UH1H9 {
@@ -38,18 +30,6 @@ $grp Vehicle : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
  UH1H10 {
   coords 4860.807 28.594 11785.909
   angleY -90.798
- }
-}
-SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
- components {
-  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
-   DisplayName "Helicopters"
-  }
- }
- coords 4816.1 28.506 11835.936
- angleY 90
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Helicopters"
  }
 }
 $grp Vehicle : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {

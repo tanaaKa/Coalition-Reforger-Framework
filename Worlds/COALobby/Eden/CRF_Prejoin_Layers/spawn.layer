@@ -11,18 +11,6 @@ $grp Vehicle : "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.
   coords 7398.203 9.688 6726.79
   angleY 125.667
  }
- S105_randomized4 {
-  coords 7393.468 9.688 6720.315
-  angleY 125.667
- }
- S105_randomized5 {
-  coords 7391.093 9.688 6717.369
-  angleY 125.667
- }
- S105_randomized6 {
-  coords 7395.672 9.688 6723.332
-  angleY 125.667
- }
 }
 $grp Vehicle : "{57A441224AC02CF3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_Randomized.et" {
  UAZ469_covered_CIV_Randomized1 {
@@ -37,248 +25,177 @@ $grp Vehicle : "{57A441224AC02CF3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered
   coords 7415.307 9.688 6748.7
   angleY 127.241
  }
- UAZ469_covered_CIV_Randomized4 {
-  coords 7417.777 9.688 6751.868
-  angleY 127.242
- }
- UAZ469_covered_CIV_Randomized5 {
-  coords 7420.318 9.688 6754.858
-  angleY 127.241
- }
- UAZ469_covered_CIV_Randomized7 {
-  coords 7425.097 9.688 6761.159
-  angleY 127.241
- }
- UAZ469_covered_CIV_Randomized6 {
-  coords 7422.675 9.688 6757.955
-  angleY 127.241
- }
 }
 $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification/CzechHedgehog_01_painted.et" {
  {
-  coords 7456.694 0 6747.342
+  coords 7443.993 -0.061 6747.229
  }
  {
-  coords 7454.816 0 6745.025
+  coords 7446.296 -0 6750.01
  }
  {
-  coords 7452.869 0 6742.634
+  coords 7448.463 -0 6753.37
  }
  {
-  coords 7452.225 0 6739.624
+  coords 7450.217 -0 6756.617
  }
  {
-  coords 7443.586 0 6706.492
+  coords 7452.842 0 6764.427
  }
  {
-  coords 7444.686 0 6703.989
+  coords 7451.074 -0.287 6767.441
  }
  {
-  coords 7445.652 0 6701.584
+  coords 7449.288 0 6770.466
  }
  {
-  coords 7446.674 0.114 6699.121
+  coords 7448.026 0 6772.595
  }
  {
-  coords 7447.619 0 6696.164
+  coords 7445.983 0 6774.699
  }
  {
-  coords 7448.374 0 6693.623
+  coords 7443.956 0 6776.396
  }
  {
-  coords 7441.925 0 6708.55
+  coords 7442.238 -0 6777.341
  }
  {
-  coords 7465.871 0 6748.806
-  angleY 83.432
+  coords 7439.564 0 6778.251
  }
  {
-  coords 7463.354 -0.001 6750.406
-  angleY 83.432
+  coords 7436.94 0 6778.301
  }
  {
-  coords 7470.51 0 6745.742
-  angleY 83.432
+  coords 7434.929 0 6778.733
  }
  {
-  coords 7467.992 0 6747.342
-  angleY 83.432
+  coords 7432.807 -0 6778.207
  }
  {
-  coords 7486.68 0.001 6732.156
-  angleY 83.432
+  coords 7430.331 0 6778.107
  }
  {
-  coords 7484.163 0 6733.757
-  angleY 83.432
+  coords 7428.069 0 6777.834
  }
  {
-  coords 7488.8 0 6730.69
-  angleY 83.432
+  coords 7425.6 0 6778
  }
  {
-  coords 7491.315 0 6729.09
-  angleY 83.432
+  coords 7423.49 1.243 6775.571
  }
  {
-  coords 7496.244 0 6726.327
-  angleY 83.432
+  coords 7422.641 0 6778.206
  }
  {
-  coords 7493.727 0 6727.927
-  angleY 83.432
+  coords 7421.547 1.243 6773.685
  }
  {
-  coords 7498.363 0 6724.861
-  angleY 83.432
+  coords 7424.307 -0 6770.215
  }
  {
-  coords 7500.879 0 6723.261
-  angleY 83.432
+  coords 7423.26 -0 6768.295
  }
  {
-  coords 7505.859 0 6720.436
-  angleY 83.432
+  coords 7422.506 -0 6766.544
  }
  {
-  coords 7503.343 0 6722.036
-  angleY 83.432
+  coords 7405.649 0 6742.464
  }
  {
-  coords 7507.978 0 6718.969
-  angleY 83.432
+  coords 7401.357 -0 6736.764
  }
  {
-  coords 7510.495 0.001 6717.37
-  angleY 83.432
+  coords 7392.87 0 6691.128
  }
  {
-  coords 7512.789 0 6716.259
-  angleY 83.432
+  coords 7396.071 0 6695.277
  }
  {
-  coords 7515.257 0 6715.282
-  angleY 83.432
+  coords 7398.139 -0 6698.063
  }
  {
-  coords 7457.326 0 6725.248
+  coords 7400.116 0 6701.081
  }
  {
-  coords 7454.805 0 6726.136
+  coords 7401.71 -0 6703.083
  }
  {
-  coords 7452.569 0 6727.739
+  coords 7403.435 -0 6707.194
  }
  {
-  coords 7450.849 0 6729.789
+  coords 7406.033 0 6711.244
  }
  {
-  coords 7451.279 0.001 6680.531
+  coords 7411.723 -0 6719.457
  }
  {
-  coords 7452.225 0 6677.573
+  coords 7414.402 -0 6722.294
  }
  {
-  coords 7453.395 0.001 6674.718
+  coords 7418.207 0 6727.253
+ }
+ {
+  coords 7423.058 0 6733.91
+ }
+ {
+  coords 7426.532 -0 6738.061
+ }
+ {
+  coords 7433.963 0 6748.097
+ }
+ {
+  coords 7437.396 0 6751.045
+ }
+ {
+  coords 7440.879 -0 6749.765
+ }
+ {
+  coords 7419.37 -0 6789.771
+ }
+ {
+  coords 7417.344 0 6791.156
+ }
+ {
+  coords 7415.022 -0 6792.956
+ }
+ {
+  coords 7413.085 -0 6794.517
+ }
+ {
+  coords 7418.784 -0 6774.124
+ }
+ {
+  coords 7417.279 0 6772.267
  }
 }
 SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
- components {
-  SCR_MapDescriptorComponent "{54C659A97C47BDE2}" {
-   DisplayName "Main"
-  }
- }
- coords 7477.692 7.132 6718.51
- angleY -83.564
- m_Info SCR_UIInfo "{56B4CC4ECACA2C37}" {
-  Name "Main"
- }
+ coords 7472.716 7.742 6701.783
+ angleY -31.529
 }
 $grp GenericEntity : "{D52DE33328969B3C}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_COA_base.et" {
- {
-  coords 7477.12 11.103 6738.985
+ rangeFlag {
+  coords 7472.396 7.263 6730.034
+  EOnActivate ""\
+  "		/* code here */"\
+  "	"
  }
- {
-  coords 7455.525 11.997 6754.259
- }
- {
-  coords 7426.364 9.688 6766.277
- }
- {
-  coords 7440.259 10.047 6715.573
- }
- {
-  coords 7443.666 10.047 6708.177
- }
- {
-  coords 7461.583 10.047 6725.292
- }
- {
-  coords 7447.278 16.033 6692.757
- }
- {
-  coords 7451.95 16.033 6682.314
- }
- {
-  coords 7437.912 16.033 6673.355
- }
- {
-  coords 7432.452 16.032 6686.061
- }
- {
-  coords 7380.603 13.521 6692.016
- }
- {
-  coords 7387.81 12.694 6687.922
- }
- {
-  coords 7373.746 13.696 6697.227
+ flyingFlag {
+  coords 7483.975 6.784 6723.878
  }
 }
 $grp Vehicle : "{EEAC3A94929A2B55}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_randomized.et" {
- Ural4320_transport_CIV_randomized1 {
-  coords 7377.682 9.734 6706.958
-  angleY 124.494
- }
- Ural4320_transport_CIV_randomized2 {
-  coords 7380.77 9.688 6710.945
-  angleY 124.494
- }
- Ural4320_transport_CIV_randomized4 {
-  coords 7402.1 9.397 6702.452
-  angleY -52.757
- }
- Ural4320_transport_CIV_randomized5 {
-  coords 7430.565 7.875 6678.877
-  angleY -21.348
- }
  Ural4320_transport_CIV_randomized6 {
-  coords 7430.843 9.688 6777.031
-  angleY 166.965
- }
- Ural4320_transport_CIV_randomized8 {
-  coords 7444.683 9.688 6765.467
-  angleY -143.448
+  coords 7431.678 9.686 6765.944
+  angleY -139.264
  }
  Ural4320_transport_CIV_randomized9 {
-  coords 7434.808 9.688 6780.993
-  angleY 166.965
+  coords 7437.218 9.642 6765.088
+  angleY -139.264
  }
  Ural4320_transport_CIV_randomized10 {
-  coords 7438.726 9.688 6786.177
-  angleY 166.965
- }
- Ural4320_transport_CIV_randomized7 {
-  coords 7450.395 9.688 6779.383
-  angleY -145.387
- }
- Ural4320_transport_CIV_randomized11 {
-  coords 7437.828 7.875 6700.368
-  angleY -114.497
- }
- Ural4320_transport_CIV_randomized12 {
-  coords 7440.505 7.875 6693.664
-  angleY -114.497
+  coords 7443.716 9.683 6764.99
+  angleY -139.264
  }
 }
 GenericEntity : "{F4B7F1D4D3ADE456}Prefabs/Structures/Signs/Military/Sign_VehicleRepair_US_01.et" {
