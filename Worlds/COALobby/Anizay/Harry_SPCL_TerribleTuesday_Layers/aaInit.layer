@@ -17,6 +17,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 7940.861 147.56 3023.676
+ m_iFactionOneRatio 2
+ m_sFactionOneKey "BLU"
+ m_sFactionTwoKey "IND"
  m_aMissionDescriptors {
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "Blufor is on a goodwill mission to Mian. They hope to distribute supplies to the locals, and move on, but some people have other plans. Among the civilians there are hidden insurgents who want to take the supplies for themselves and bury these Americans."\
@@ -46,7 +49,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CLB_MissionDescriptor "{644250519BE30999}" {
    m_sTextData "You want to take the supplies for yourself, and kill Blufor. You don't actively want to hurt the civilians, but there's no rule against it necessarily. "\
    ""\
-   "Don't pull out weapons until you're ready, as the civilians will rat you out!"
+   "Don't pull out anything until you're ready, as the civilians will rat you out! Civilians have no equipment at all!"
   }
   CLB_MissionDescriptor "{6442505149CF6C93}" {
    m_sTextData "Safestart has been left enabled for people to orient themselves, but the countdown will instantly start."
@@ -54,7 +57,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  }
  m_iTimeLimitMinutes 15
  {
-  SCR_FactionManager {
+  SCR_FactionManager "644B3D6241F4342D" {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
