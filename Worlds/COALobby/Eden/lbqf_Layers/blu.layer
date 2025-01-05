@@ -1,17 +1,3 @@
-$grp SCR_AIGroup : "{139AB8FB37FC1B19}Prefabs/Groups/Special/LBQF/CRF_BLU_PILOTS.et" {
- {
-  coords 4961.9 158.34 7373.145
- }
- {
-  coords 4949.356 160.808 7346.563
- }
- {
-  coords 4975.224 158.698 7353.606
- }
- {
-  coords 5010.555 157.221 7372.076
- }
-}
 $grp Vehicle : "{8AA6BB736904D59E}Prefabs/Vehicles/Helicopters/AH6M/LBQF_BLUE.et" {
  AH6M_RKT48 {
   coords 4841.055 163.624 7335.282
@@ -312,5 +298,31 @@ $grp Vehicle : "{8AA6BB736904D59E}Prefabs/Vehicles/Helicopters/AH6M/LBQF_BLUE.et
   angleX -3.605
   angleY 1.953
   angleZ 0.771
+ }
+}
+$grp SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+ {
+  coords 4885.057 162.747 7349.038
+  m_aUnitPrefabSlots {
+   "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et"
+  }
+ }
+ {
+  coords 4836.248 162.762 7352.399
+  m_aUnitPrefabSlots {
+   "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et"
+  }
+ }
+ {
+  coords 4860.046 162.745 7350.108
+  m_aUnitPrefabSlots {
+   "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et"
+  }
+ }
+ {
+  coords 4912.251 162.679 7348.799
+  m_aUnitPrefabSlots {
+   "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et" "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et"
+  }
  }
 }

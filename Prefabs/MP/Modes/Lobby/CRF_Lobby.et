@@ -30,6 +30,11 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     m_bEnableGIRadios 0
    }
   }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.5
+   m_fRegenScale 0.75
+   m_fRegenerationScale 0.6
+  }
   SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
@@ -138,11 +143,11 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     }
     SCR_Faction "{607AA5C7A94496DA}" {
      UIInfo SCR_FactionUIInfo "{56B49118D8D0A9C5}" {
-      Icon "{6C40CAD74C2327B0}CRF Images/CIV.edds"
+      Icon "{C8565602E0F422C5}Images/UI/Zeus GearScript Factions/CIV_NATO.edds"
      }
      "Identity of soldiers" FactionIdentity "{60DCEDE56D10632C}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
      }
-     m_sFactionFlag "{6C40CAD74C2327B0}CRF Images/CIV.edds"
+     m_sFactionFlag "{C8565602E0F422C5}Images/UI/Zeus GearScript Factions/CIV_NATO.edds"
      m_FactionFlagMaterial "{936E6C67A71A9421}Assets/Props/Fabric/Flags/Data/Flag_2_3_White.emat"
      m_CallsignInfo SCR_FactionCallsignInfo "{607A9A9E40D70F6E}" {
       m_sCallsignGroupFormat "%3"
@@ -228,8 +233,8 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_sFactionFlag "{76A2D42714BB3806}UI/Textures/Flags/Civilian-flag-base_3it.edds"
      m_FactionFlagMaterial "{E3BB2EF7F600DD28}Assets/Props/Fabric/Flags/Data/Flag_2_3_CIVILIAN.emat"
      m_FactionLabel FACTION_CIV
-     m_aFriendlyFactionsIds {
-      "US" "USSR" "FIA"
+     m_aFriendlyFactionsIds + {
+      "USSR" "FIA"
      }
      m_sFactionRadioEncryptionKey "Sandbox"
      m_iFactionRadioFrequency 58000
@@ -262,7 +267,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      FactionColor 0.016 0.552 0.905 1
      UIInfo SCR_FactionUIInfo "{528C961236B7DCD3}" {
       Name "BLUFOR"
-      Icon "{E5DECCCA6F4B7417}CRF Images/blufor.edds"
+      Icon "{E5DECCCA6F4B7416}Images/UI/Zeus GearScript Factions/BLUFOR_NATO.edds"
       m_sNameUpper "BLUFOR"
      }
      "Identity of soldiers" FactionIdentity "{62D8F84F18596BBF}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
@@ -271,7 +276,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_NotificationFactionColor 0.016 0.552 0.905 1
      m_NotificationTextFactionColor 0.013 0.395 0.651 1
      m_bIsPlayable 0
-     m_sFactionFlag "{E5DECCCA6F4B7417}CRF Images/blufor.edds"
+     m_sFactionFlag "{E5DECCCA6F4B7416}Images/UI/Zeus GearScript Factions/BLUFOR_NATO.edds"
      m_FactionFlagMaterial "{DB52C2D4463AA0A0}Assets/Props/Fabric/Flags/Data/Flag_2_3_Blue.emat"
      m_FactionLabel FACTION_US
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
@@ -459,7 +464,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      FactionColor 0.855 0.031 0.028 1
      UIInfo SCR_FactionUIInfo "{528C96127F8B6B08}" {
       Name "OPFOR"
-      Icon "{0A1F947948102E6A}CRF Images/opfor.edds"
+      Icon "{11112420EEC8576C}Images/UI/Zeus GearScript Factions/OPFOR_NATO.edds"
       m_sNameUpper "OPFOR"
      }
      "Identity of soldiers" FactionIdentity "{62D8F84F060C0F95}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
@@ -469,7 +474,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_NotificationFactionColor 0.855 0.031 0.028 1
      m_NotificationTextFactionColor 0.521 0.021 0.019 1
      m_bIsPlayable 0
-     m_sFactionFlag "{0A1F947948102E6A}CRF Images/opfor.edds"
+     m_sFactionFlag "{11112420EEC8576C}Images/UI/Zeus GearScript Factions/OPFOR_NATO.edds"
      m_FactionFlagMaterial "{362AC46447DBE58B}Assets/Props/Fabric/Flags/Data/Flag_1_2_Red.emat"
      m_FactionLabel FACTION_USSR
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
@@ -653,7 +658,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      FactionColor 0 0.44 0.078 1
      UIInfo SCR_FactionUIInfo "{5570936866E0AD08}" {
       Name "INDFOR"
-      Icon "{2513C1E3711E50BD}CRF Images/INDFOR.edds"
+      Icon "{EFA0BA63504B1230}Images/UI/Zeus GearScript Factions/INDFOR_NATO.edds"
       m_sNameUpper "INDFOR"
      }
      "Identity of soldiers" FactionIdentity "{62D8F84F08F0FEAC}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
@@ -663,7 +668,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_NotificationFactionColor 0 0.44 0.078 1
      m_NotificationTextFactionColor 0 0.296 0.055 1
      m_bIsPlayable 0
-     m_sFactionFlag "{2513C1E3711E50BD}CRF Images/INDFOR.edds"
+     m_sFactionFlag "{EFA0BA63504B1230}Images/UI/Zeus GearScript Factions/INDFOR_NATO.edds"
      m_FactionFlagMaterial "{B7A02313829700F9}Assets/Props/Fabric/Flags/Data/Flag_1_2_Green.emat"
      m_FactionLabel FACTION_FIA
      m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
