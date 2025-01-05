@@ -30,6 +30,11 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     m_bEnableGIRadios 0
    }
   }
+  SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
+   m_fDOTScale 0.5
+   m_fRegenScale 0.75
+   m_fRegenerationScale 0.6
+  }
   SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
@@ -228,8 +233,8 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_sFactionFlag "{76A2D42714BB3806}UI/Textures/Flags/Civilian-flag-base_3it.edds"
      m_FactionFlagMaterial "{E3BB2EF7F600DD28}Assets/Props/Fabric/Flags/Data/Flag_2_3_CIVILIAN.emat"
      m_FactionLabel FACTION_CIV
-     m_aFriendlyFactionsIds {
-      "US" "USSR" "FIA"
+     m_aFriendlyFactionsIds + {
+      "USSR" "FIA"
      }
      m_sFactionRadioEncryptionKey "Sandbox"
      m_iFactionRadioFrequency 58000
