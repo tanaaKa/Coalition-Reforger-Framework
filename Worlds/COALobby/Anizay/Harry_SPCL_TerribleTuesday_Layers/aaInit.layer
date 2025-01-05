@@ -1,0 +1,107 @@
+SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
+ coords 7970.501 150.298 3053.22
+}
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
+   m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
+    m_rGearScript "{3FCA1378C33401ED}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSUSArmyMC.conf"
+    m_bEnableGIRadios 0
+   }
+   m_INDFORGearScriptSettings CRF_GearScriptContainer "{629E5222AC7F68BE}" {
+    m_rGearScript "{EEF6657C936083FA}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Hidden.conf"
+   }
+   m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{629E5222AC1510B5}" {
+    m_rGearScript "{3168EE67347980DB}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Civ_Unarmed.conf"
+   }
+  }
+ }
+ coords 7940.861 147.56 3023.676
+ m_aMissionDescriptors {
+  CLB_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "Blufor is on a goodwill mission to Mian. They hope to distribute supplies to the locals, and move on, but some people have other plans. Among the civilians there are hidden insurgents who want to take the supplies for themselves and bury these Americans."\
+   ""\
+   "BLUFOR Composition: Infantry"\
+   "BLUFOR Assets: 1x Armed Humvee"\
+   ""\
+   "INDFOR Composition: Infantry"\
+   "INDFOR Assets: N/A"\
+   ""\
+   "Time: 12:00"\
+   ""\
+   "Weather: Clear"
+  }
+  CLB_MissionDescriptor "{64425051F2E00216}" {
+   m_sTextData "Travel to Mian, and distribute the supplies to the locals there. There are hidden insurgents among the locals, and around the AO. ROE is to only fire if fired upon until the area has been deemed dangerous. After that time, ROE allows fire upon any non-compliant individuals."\
+   ""\
+   "Once you have distributed the supplies, head to the exfil."
+  }
+  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTitle "Civilian Objectives"
+   m_sTextData "Civilians must value their lives above everything else. You do not like the insurgents in the area, and you can inform on them if you suspect someone. Lastly, you want the supplies being given out by Blufor."
+   m_aFactionKeys {
+    "CIV"
+   }
+  }
+  CLB_MissionDescriptor "{644250519BE30999}" {
+   m_sTextData "You want to take the supplies for yourself, and kill Blufor. You don't actively want to hurt the civilians, but there's no rule against it necessarily. "\
+   ""\
+   "Don't pull out weapons until you're ready, as the civilians will rat you out!"
+  }
+  CLB_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData "Safestart has been left enabled for people to orient themselves, but the countdown will instantly start."
+  }
+ }
+ m_iTimeLimitMinutes 15
+ {
+  SCR_FactionManager {
+   ID "632A77473B3CC3A8"
+   Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{55CCB792D0C8B3CE}" {
+       }
+      }
+     }
+    }
+    SCR_Faction "{628CDE9209CA3FF9}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{58B2B630FDD64B6D}" {
+        m_sCallsign "Cell 1"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B53}" {
+        m_sCallsign "Cell 2"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B51}" {
+        m_sCallsign "Operator 1"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B50}" {
+        m_sCallsign "Operator 2"
+       }
+       SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
+        m_sCallsign "Operator 3"
+       }
+       SCR_CallsignInfo "{644B3D7FFFB1DFA7}" {
+        m_sCallsign "Operator 4"
+       }
+       SCR_CallsignInfo "{644B3D7FFC36B65D}" {
+        m_sCallsign "Operator 5"
+       }
+       SCR_CallsignInfo "{644B3D7FC2A38E40}" {
+        m_sCallsign "Operator 6"
+       }
+       SCR_CallsignInfo "{644B3D7FC702522C}" {
+        m_sCallsign "Operator 7"
+       }
+       SCR_CallsignInfo "{644B3D7FCA6B595E}" {
+        m_sCallsign "Operator 8"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

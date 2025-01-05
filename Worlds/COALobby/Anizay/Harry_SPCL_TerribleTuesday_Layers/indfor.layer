@@ -1,0 +1,72 @@
+$grp SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+ {
+  coords 7713.33 142.601 2949.073
+  m_aUnitPrefabSlots {
+   "{8949382562216B1E}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_SL_P.et" "{911CD22FC97CC36A}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AT_P.et" "{911CD22FC97CC36A}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AT_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 8206.394 178.392 2873.727
+  m_aUnitPrefabSlots {
+   "{8949382562216B1E}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_SL_P.et" "{2CCC80A8B667DF74}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AR_P.et" "{2CCC80A8B667DF74}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AR_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7958.177 149.705 3052.194
+  m_aUnitPrefabSlots {
+   "{0C86D510A52DF210}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Demo_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7919.607 150.462 3054.221
+  m_aUnitPrefabSlots {
+   "{0C86D510A52DF210}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Demo_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7930.625 151.951 3070.519
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7891.282 151.149 3049.121
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7925.165 156.657 3092.74
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7966.863 153.713 3091.103
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7893.126 145.009 3002.615
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+ {
+  coords 7889.054 150.907 3045.684
+  m_aUnitPrefabSlots {
+   "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"
+  }
+  m_iGroupRadioFrequency 0
+ }
+}

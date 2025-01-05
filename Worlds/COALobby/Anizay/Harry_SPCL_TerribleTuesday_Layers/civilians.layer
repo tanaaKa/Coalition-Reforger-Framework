@@ -1,0 +1,236 @@
+$grp SCR_AIGroup : "{1782AE1B90B5A492}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevGI_p.et" {
+ {
+  coords 7955.623 149.435 3049.749
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7948.005 149.013 3052.132
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7936.091 150.352 3061.532
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7911.61 151.354 3056.52
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7928.153 152.64 3073.594
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7929.039 147.087 3026.422
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7902.742 153.888 3067.754
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7892.668 154.002 3066.189
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7913.842 148.239 3034.874
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7924.123 145.696 3010.873
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7912.706 144.608 2999.173
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7889.898 145.572 3007.218
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7892.572 144.745 2998.786
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7968.103 152.073 3078.645
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7962.997 154.99 3099.252
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7977.685 150.877 3051.698
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7951.748 147.164 2995.507
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7939.655 144.845 2985.153
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7911.563 141.212 2963.992
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7954.712 150.798 3070.537
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7952.006 154.698 3095.669
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7999.913 157.864 3115.778
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7883.177 150.985 3044.554
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7904.042 149.206 3037.933
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7932.738 147.891 3035.94
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7911.92 159.471 3099.83
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7874.743 157.365 3074.627
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7927.04 151.692 3066.741
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7971.348 150.506 3058.834
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7916.435 150.042 3049.553
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7911.916 147.982 3032.337
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7907.337 148.907 3037.542
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7960.98 148.813 3023.16
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7891.722 155.322 3070.779
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7929.411 161.108 3116.442
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7931.437 156.271 3094.989
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7958.862 161.989 3137.281
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7937.493 146.379 3003.9
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+ {
+  coords 7959.077 148.834 3036.258
+  m_aUnitPrefabSlots {
+   "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
+  }
+ }
+}

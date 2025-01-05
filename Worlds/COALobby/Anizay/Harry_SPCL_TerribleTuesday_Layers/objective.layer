@@ -1,0 +1,18 @@
+SCR_FactionControlTriggerEntity exit {
+ coords 8845.756 87.288 2184.252
+ TriggerShapeType Sphere
+ SphereRadius 100
+ DrawShape 1
+ PeriodicQueries 1
+ UpdatePeriod 15
+ OnQueryFinished ""\
+ "		if (m_bResult)"\
+ "		{"\
+ "			SCR_PopUpNotification.GetInstance().PopupMsg(\"BLUFOR has left the AO\", 10);"\
+ ""\
+ "		}"\
+ "	"
+ m_sOwnerFactionKey "BLUFOR"
+ m_iRatioMethod "More than"
+ m_fFriendlyRatioLimit 0.1
+}
