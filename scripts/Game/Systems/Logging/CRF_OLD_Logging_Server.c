@@ -28,11 +28,11 @@ class CRF_LoggingServerComponent: CLB_GamemodeComponent
 	private ref FileHandle m_handle;
 	SCR_FactionManager m_FM;
 	
-	static CRF_OLD_LoggingServerComponent GetInstance() 
+	static CRF_LoggingServerComponent GetInstance() 
 	{
 		BaseGameMode gameMode = GetGame().GetGameMode();
 		if (gameMode)
-			return CRF_OLD_LoggingServerComponent.Cast(gameMode.FindComponent(CRF_OLD_LoggingServerComponent));
+			return CRF_LoggingServerComponent.Cast(gameMode.FindComponent(CRF_LoggingServerComponent));
 		else
 			return null;
 	}
