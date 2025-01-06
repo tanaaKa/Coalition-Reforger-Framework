@@ -1,234 +1,234 @@
 $grp SCR_AIGroup : "{1782AE1B90B5A492}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevGI_p.et" {
  {
-  coords 7955.623 149.435 3049.749
+  coords 4009.004 137.551 6911.299
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7948.005 149.013 3052.132
+  coords 3970.121 137.218 7021.587
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7936.091 150.352 3061.532
+  coords 3993.29 137.218 6967.283
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7911.61 151.354 3056.52
+  coords 4029.256 137.679 7070.554
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7928.153 152.64 3073.594
+  coords 4044.599 137.688 7073.684
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7929.039 147.087 3026.422
+  coords 3997.065 137.219 6953.17
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7902.742 153.888 3067.754
+  coords 3958.648 137.219 7019.393
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7892.668 154.002 3066.189
+  coords 3979.393 137.625 7069.471
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7913.842 148.239 3034.874
+  coords 3967.768 137.204 7127.253
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7924.123 145.696 3010.873
+  coords 3973.177 137.406 7221.871
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7912.706 144.608 2999.173
+  coords 3859.78 137.408 7180.692
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7889.898 145.572 3007.218
+  coords 3827.861 137.528 7165.775
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7892.572 144.745 2998.786
+  coords 3795.801 138.649 7101.34
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7968.103 152.073 3078.645
+  coords 3803.809 138.444 7101.254
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7962.997 154.99 3099.252
+  coords 3822.246 137.567 7169.072
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7977.685 150.877 3051.698
+  coords 3880.738 138.591 7292.187
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7951.748 147.164 2995.507
+  coords 3908.44 140.496 7328.461
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7939.655 144.845 2985.153
+  coords 3915.835 139.424 7340.094
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7911.563 141.212 2963.992
+  coords 3806.02 138.749 7355.771
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7954.712 150.798 3070.537
+  coords 3759.038 138.108 7427.28
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7952.006 154.698 3095.669
+  coords 3790.048 154.444 7405.505
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7999.913 157.864 3115.778
+  coords 3848.151 138.281 7432.072
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7883.177 150.985 3044.554
+  coords 3850.058 138.288 7419.574
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7904.042 149.206 3037.933
+  coords 3950.795 137.4 7299.359
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7932.738 147.891 3035.94
+  coords 3941.883 137.452 7297.552
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7911.92 159.471 3099.83
+  coords 3924.832 139.748 7092.37
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7874.743 157.365 3074.627
+  coords 3916.579 139.323 7093.324
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7927.04 151.692 3066.741
+  coords 4079.909 136.71 6938.153
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7971.348 150.506 3058.834
+  coords 4080.93 132.07 6874.575
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7916.435 150.042 3049.553
+  coords 4155.723 138.622 6895.998
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7911.916 147.982 3032.337
+  coords 4086.701 135.522 6953.016
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7907.337 148.907 3037.542
+  coords 3902.699 139.24 7077.58
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7960.98 148.813 3023.16
+  coords 3743.449 138.817 7375.523
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7891.722 155.322 3070.779
+  coords 3754.326 138.75 7361.436
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7929.411 161.108 3116.442
+  coords 3791.374 139.032 7457.313
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7931.437 156.271 3094.989
+  coords 3754.183 137.846 7488.094
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7958.862 161.989 3137.281
+  coords 3710.955 136.823 7438.224
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7937.493 146.379 3003.9
+  coords 3913.501 137.25 7211.683
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
  }
  {
-  coords 7959.077 148.834 3036.258
+  coords 3980.479 137.406 7130.2
   m_aUnitPrefabSlots {
    "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"
   }
