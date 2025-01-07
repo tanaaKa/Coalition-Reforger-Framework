@@ -50,7 +50,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "The HVT is a player, and can be killed. You will lose if you kill the HVT. The one exception is if they are in an armed vehicle, that will be deemed unavoidable losses."
   }
   CLB_MissionDescriptor "{644250519BE30999}" {
-   m_sTextData "You are playing the HVT. You must value your life, and generally be compliant with your captors."\
+   m_sTextData "You are playing the HVT. You must value your life, you want to be found by Opfor, and must generally be compliant with your captors."\
    ""\
    "If Blufor makes it to the camp, triggers the chinook cooldown, and you are in a position to, you are allowed to disregard Blufor orders to run to the command post tent. Inside the command post tent is a radio with an area trigger on it to mark your location for Opfor. Run to it, and stand there until you see the message trigger. After this, you must be compliant again. "\
    ""\
