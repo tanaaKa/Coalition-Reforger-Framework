@@ -12,6 +12,7 @@ SCR_ChimeraCharacter {
   SCR_CharacterStaminaComponent "{520EA1D2F659C824}" {
    StaminaDrainRun -0.006
    StaminaDrainSprint -0.009
+   EncumbranceMassMax 170
   }
  }
 }
