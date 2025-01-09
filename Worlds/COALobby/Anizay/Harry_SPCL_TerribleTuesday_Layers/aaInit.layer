@@ -47,7 +47,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    }
   }
   CLB_MissionDescriptor "{644250519BE30999}" {
-   m_sTextData "You want to take the supplies for yourself, and kill Blufor. You don't actively want to hurt the civilians, but there's no rule against it. Your cell leader has an intel folder that is not allowed to be dropped."\
+   m_sTextData "Indfor wins by either eliminating all of blufor, or by stealing their covered truck with a majority of supplies still in it. You don't actively want to hurt the civilians, but there's no rule against it. Your cell leader has an intel folder that is not allowed to be dropped."\
    ""\
    "Don't pull out anything until you're ready, as the civilians want to inform on you! Civilians start with no equipment at all!"
   }
