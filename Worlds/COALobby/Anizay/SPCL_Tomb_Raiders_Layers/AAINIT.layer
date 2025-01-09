@@ -25,6 +25,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 2071.644 166.813 1672.838
+ m_sFactionOneKey "BLU"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "IND"
  m_aMissionDescriptors {
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "An uneasy alliance of world-famous treasure hunters have discovered the long-lost Tomb of the Coalition, a group of ancient priests whose wise counsel brought the land to prosperity. The Pharaoh honored them by allowing them to be entombed beside him. If the Pharaoh's mummy can be recovered, worldwide fame and wealth await the lucky hunter - but only one group can do it. However, it is said that the priests each brought their mightiest Guardians, who were sworn to defend the Pharaoh... forever."\
