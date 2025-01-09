@@ -1,0 +1,162 @@
+$grp Tank : "{726286E1F9570EA1}Prefabs/Vehicles/Tracked/T-72B/T72B_base.et" {
+ T72B_base18 {
+  coords 3883.477 15.488 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base17 {
+  coords 3864.582 15.395 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base13 {
+  coords 3799.381 15.051 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base14 {
+  coords 3815.697 15.093 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base1 {
+  coords 3628.723 15.083 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base19 {
+  coords 3904.583 15.551 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base20 {
+  coords 3923.152 15.508 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.197 -0.094 -8.041
+   }
+  }
+ }
+ T72B_base12 {
+  coords 3783.264 15.051 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base11 {
+  coords 3767.516 15.062 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base2 {
+  coords 3641.22 15.051 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base3 {
+  coords 3652.974 15.02 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base7 {
+  coords 3702.841 15.064 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base6 {
+  coords 3687.94 15.051 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base8 {
+  coords 3718.656 15.082 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base9 {
+  coords 3738.059 15.082 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base16 {
+  coords 3845.178 15.281 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base15 {
+  coords 3829.639 15.176 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base5 {
+  coords 3675.671 15.019 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base4 {
+  coords 3664.461 15.021 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+ T72B_base10 {
+  coords 3751.773 15.082 1301.262
+  {
+   SCR_AIGroup : "{E5143827D374F6DD}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_3manVehicleCrew_p.et" {
+    coords -0.198 -0.031 -8.041
+   }
+  }
+ }
+}

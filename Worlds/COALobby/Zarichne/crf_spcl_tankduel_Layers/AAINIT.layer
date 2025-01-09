@@ -1,0 +1,12 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 3396.621 26.712 1351.953
+}
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ coords 3589.239 14.27 1219.276
+ {
+  SCR_LoadoutManager {
+   ID "632771FB44BBFB73"
+   coords 0.828 -0.125 0.558
+  }
+ }
+}
