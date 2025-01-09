@@ -1,0 +1,40 @@
+Vehicle : "{1760B962AEA2719F}Prefabs/Vehicles/Wheeled/Gatoma/Gatoma_advanced_Jungle.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     PivotID "v_root"
+     Offset 0 0.0975 -0.52
+     Prefab "{3FD39AB29FFCE6E8}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Turret_M2_Modded.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterWeapons 1
+     RegisterCompartments 1
+    }
+    RegisteringComponentSlotInfo Armor {
+     Prefab "{FE4EE7192907DFB9}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_Armor_base.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterCompartments 1
+    }
+    RegisteringComponentSlotInfo DriverDoorArmor {
+     PivotID "v_door_l01"
+     Prefab "{9746CAA0808FBB2F}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_FL_door_armor.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterCompartments 1
+    }
+    RegisteringComponentSlotInfo PassDoorArmor {
+     PivotID "v_door_r01"
+     Prefab "{2D2D8B57741975E1}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_FR_door_armor.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterCompartments 1
+    }
+   }
+  }
+ }
+}
