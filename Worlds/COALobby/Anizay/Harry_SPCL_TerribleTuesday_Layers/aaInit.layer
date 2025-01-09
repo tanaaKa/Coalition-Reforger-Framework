@@ -22,7 +22,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_sFactionTwoKey "IND"
  m_aMissionDescriptors {
   CLB_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "Blufor is on a goodwill mission to Khas. They hope to distribute the food and medicine in their covered truck to the locals, and move on, but some people have other plans. Among the civilians there are hidden insurgents who want to take the supplies for themselves and bury these Americans."\
+   m_sTextData "Blufor is on a goodwill mission to Khas. They hope to distribute the food and medicine in their covered truck to the locals, but some people have other plans. Among the civilians there are hidden insurgents who want to take the supplies for themselves and bury these Americans."\
    ""\
    "BLUFOR Composition: Infantry"\
    "BLUFOR Assets: 1x Armed Humvee"\
@@ -35,21 +35,21 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Weather: Clear"
   }
   CLB_MissionDescriptor "{64425051F2E00216}" {
-   m_sTextData "Travel to Khas, and distribute the food and medicine in your covered truck to the locals there. There are hidden insurgents among the locals, and around the AO. ROE is to only fire if fired upon until the area has been deemed dangerous. After that time, ROE allows fire upon any non-compliant individuals."\
+   m_sTextData "Blufor has two main objectives. 1) Travel to Khas, and distribute the food and medicine in your covered truck to the locals there. 2) There is an insurgent leader in Khas who has valuable intel, directing hidden insurgents in the AO. Talk to the locals, find him, liquidate him, and recover the intel."\
    ""\
-   "Once you have distributed the supplies, exit the city."
+   "ROE is to only fire if fired upon until the area has been deemed dangerous. After that time, ROE allows fire upon any non-compliant individuals."
   }
   CLB_MissionDescriptor "{64425051B9B5AF67}" {
    m_sTitle "Civilian Objectives"
-   m_sTextData "Civilians must value their lives above everything else. You do not like the insurgents in the area, and you can inform on them if you suspect someone. Lastly, you want the supplies being given out by Blufor."
+   m_sTextData "Civilians must value their lives above everything else. You've heard there is an insurgent leader in the area that might prove valuable to Blufor. You want the supplies being given out by Blufor. Seperately from Blufor/Indfor, the civilian with the most supplies will win their category."
    m_aFactionKeys {
     "CIV"
    }
   }
   CLB_MissionDescriptor "{644250519BE30999}" {
-   m_sTextData "You want to take the supplies for yourself, and kill Blufor. You don't actively want to hurt the civilians, but there's no rule against it necessarily. "\
+   m_sTextData "You want to take the supplies for yourself, and kill Blufor. You don't actively want to hurt the civilians, but there's no rule against it. Your cell leader has an intel folder that is not allowed to be dropped."\
    ""\
-   "Don't pull out anything until you're ready, as the civilians will rat you out! Civilians have no equipment at all!"
+   "Don't pull out anything until you're ready, as the civilians want to inform on you! Civilians start with no equipment at all!"
   }
   CLB_MissionDescriptor "{6442505149CF6C93}" {
    m_sTextData "Safestart has been left enabled for people to orient themselves, but the countdown will instantly start."\
@@ -77,19 +77,18 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
      m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
       m_aSquadNames {
        SCR_CallsignInfo "{58B2B630FDD64B6D}" {
-        m_sCallsign "Cell 1"
+        m_sCallsign "Insurgent Leader"
        }
        SCR_CallsignInfo "{58B2B630FDD64B53}" {
-        m_sCallsign "Cell 2"
        }
        SCR_CallsignInfo "{58B2B630FDD64B51}" {
-        m_sCallsign "Cell 3"
        }
        SCR_CallsignInfo "{58B2B630FDD64B50}" {
-        m_sCallsign "Operator 1"
        }
        SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
-        m_sCallsign "Operator 2"
+        m_sCallsign "Operator 1"
+       }
+       SCR_CallsignInfo "{645349C479DBB7C9}" {
        }
        SCR_CallsignInfo "{644B3D7FFFB1DFA7}" {
         m_sCallsign "Operator 3"
