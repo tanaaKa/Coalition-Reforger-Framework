@@ -26,8 +26,6 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "Blufor is moving a HVT through this AO. There is a helipad camp that Blufor wants to get to, and radio for pickup. After a duration at the camp, a chinook will spawn. If the HVT gets loaded onto the chinook, and it takes off, Blufor wins."\
    ""\
-   "IMPORTANT NOTE: If the HVT is in an armed vehicle, and they die, that will be deemed unavoidable casulties and no fault to the attackers."\
-   ""\
    "BLUFOR Composition: Mechanized Infantry"\
    "BLUFOR Assets: 1xBFV, armed and unarmed Stryker APCs"\
    ""\
@@ -60,6 +58,11 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    m_sTextData "The HVT has been assigned to INDFOR. The message saying all indfor players have died will indicate that the HVT has died."\
    ""\
    "BRIEFINGS ARE VERY IMPORTANT IN THIS MISSION!"
+  }
+  CLB_MissionDescriptor "{645300DB0F9CDFE4}" {
+   m_sTitle "Important Game Rule"
+   m_sTextData "If the HVT is in an armed vehicle, and they die, that will be deemed unavoidable casulties and no fault to the attackers."
+   m_bShowForAnyFaction 1
   }
  }
  {
@@ -100,6 +103,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
         m_sCallsign "Attack heli"
        }
        SCR_CallsignInfo "{55CCB79287A4D7B6}" {
+        m_sCallsign "Transport heli"
+       }
+       SCR_CallsignInfo "{645300DB8369AC6A}" {
         m_sCallsign "1-1"
        }
        SCR_CallsignInfo "{644E0346CB409C43}" {

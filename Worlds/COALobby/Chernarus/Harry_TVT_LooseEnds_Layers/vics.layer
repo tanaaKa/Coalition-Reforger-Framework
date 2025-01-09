@@ -32,7 +32,7 @@ $grp SCR_BaseTriggerEntity {
   coords 4645.912 339.125 10341.472
  }
  spawnAmbOp {
-  coords 4694.047 339.123 10210.19
+  coords 4645.347 339.125 10243.231
  }
  spawnChinook {
   coords 1196.054 382.072 12358.194
@@ -76,10 +76,10 @@ $grp SCR_BaseTriggerEntity {
   "		GetGame().SpawnEntityPrefab(Resource.Load(BFV),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"180 0 0\");"\
   "		spawnParams.Transform[3] = spawnHeli.GetOrigin();		"\
   "		GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams);"\
-  "		spawnParams.Transform[3] = spawnHeli2.GetOrigin();		"\
-  "		GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams);"\
-  "		spawnParams.Transform[3] = spawnHeli3.GetOrigin();		"\
-  "		GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams);"\
+  "//		spawnParams.Transform[3] = spawnHeli2.GetOrigin();		"\
+  "//		GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams);"\
+  "//		spawnParams.Transform[3] = spawnHeli3.GetOrigin();		"\
+  "//		GetGame().SpawnEntityPrefab(Resource.Load(Heli),GetGame().GetWorld(),spawnParams);"\
   "		spawnParams.Transform[3] = spawnStryker.GetOrigin();		"\
   "		GetGame().SpawnEntityPrefab(Resource.Load(stryker),GetGame().GetWorld(),spawnParams).SetYawPitchRoll(\"180 0 0\");"\
   "		spawnParams.Transform[3] = spawnStryker2.GetOrigin();		"\
