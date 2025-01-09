@@ -1,0 +1,69 @@
+Vehicle : "{1760B962AEA2719F}Prefabs/Vehicles/Wheeled/Gatoma/Gatoma_advanced_Jungle.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  MeshObject "{51DAA09FEFBFC0E7}" {
+   Materials {
+    MaterialAssignClass "{605D5241E4E84770}" {
+     SourceMaterial "SignalGlass"
+     AssignedMaterial "{2C004F75DF0428A5}Assets/Props/Services/Healthcare/CabinetMedical_01/Data/TLGLASS.emat"
+    }
+    MaterialAssignClass "{60612E9CE13FB8CE}" {
+     SourceMaterial "body"
+     AssignedMaterial "{C3C1FF1F99FF8FF2}Assets/Vehicles/Wheeled/Gatoma/data/bodyTAN.emat"
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "Gatoma Offroad Jungle TAN"
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{61B8460725BBEBF5}" {
+   MultiSlots {
+    MultiSlotConfiguration "{644E4491FCE14EF3}" {
+     SlotTemplate InventoryStorageSlot bandage {
+      Prefab "{A81F501D3EF6F38E}Prefabs/Items/Medicine/FieldDressing_01/FieldDressing_US_01.et"
+     }
+     NumSlots 2
+    }
+    MultiSlotConfiguration "{644E4491FD294407}" {
+     SlotTemplate InventoryStorageSlot "{644E449F66A42DDE}" {
+      Prefab "{12D5AD21E383B768}Prefabs/Items/Fuel/Jerrycan_01/Jerrycan_01_item.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{644E4491FD7A8202}" {
+     SlotTemplate InventoryStorageSlot "{644E449F6B667849}" {
+      Prefab "{33B2DFDCD0EBA3DB}Prefabs/Items/Equipment/Kits/RepairKit_01/RepairKit_01_wrench.et"
+     }
+     NumSlots 1
+    }
+    MultiSlotConfiguration "{644E4491FD438DB9}" {
+     SlotTemplate InventoryStorageSlot M2Ammo {
+      Prefab "{C820846B0521423B}Prefabs/Weapons/Magazines/Box_127x99_M2_100rnd_4AP_1APIT.et"
+     }
+     NumSlots 4
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    EntitySlotInfo HoodScoop {
+     Prefab "{60777F3E273A8BF2}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_Hood_Scoop_TAN.et"
+    }
+    RegisteringComponentSlotInfo Turret {
+     PivotID "v_root"
+     Offset 0 0.0975 -0.52
+     Prefab "{3FD39AB29FFCE6E8}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Turret_M2_Modded.et"
+     RegisterActions 1
+     RegisterDamage 1
+     RegisterControllers 1
+     RegisterWeapons 1
+     RegisterCompartments 1
+    }
+   }
+  }
+ }
+ coords 147.445 1 144.901
+ angleY 0
+}

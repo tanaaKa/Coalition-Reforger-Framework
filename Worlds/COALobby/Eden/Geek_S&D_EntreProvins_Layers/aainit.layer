@@ -17,6 +17,9 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "US Forces move to detonate 2 bombs located in towns controlled by Soviet Armed Forces. "\
    ""\
+   "Search and Destroy "\
+   "The attackers must find and plant bombs on both A and B bomb site in order to win. Only one bomb site can be active at a time."\
+   ""\
    "BLUFOR Composition: Overstrength Motorized Infantry Platoon"\
    "BLUFOR Assets: 5x M923A1 Transport Trucks, 1x M1025 Armed Vic, 1x M997 Ambulance."\
    ""\
