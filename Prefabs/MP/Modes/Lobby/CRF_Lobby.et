@@ -30,6 +30,8 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
     m_bEnableGIRadios 0
    }
   }
+  CRF_MDB_LoggingServerComponent "{644D40ACAABB4590}" {
+  }
   SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
    m_fDOTScale 0.5
    m_fRegenScale 0.75
