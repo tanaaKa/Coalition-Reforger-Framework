@@ -1,0 +1,27 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 9994.791 0 1406.353
+}
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
+   m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{629E5222AC1510B5}" {
+    m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
+   }
+  }
+ }
+ coords 6490.654 177.993 6794.724
+ m_aMissionDescriptors {
+  CLB_MissionDescriptor "{644250503DF684C0}" {
+   m_sTitle "Prejoin"
+   m_sTextData "Welcome to Prejoin!"\
+   ""\
+   "This is a place to chill out and talk with other players (and potential enemies) before session begins and usually lasts around 30-45 minutes."\
+   ""\
+   ""\
+   ""\
+   "Any feedback is welcome, just DM me @geek_x on Discord!"
+  }
+ }
+ m_iTimeLimitMinutes 90
+ m_bDeleteJIPSlots 0
+}
