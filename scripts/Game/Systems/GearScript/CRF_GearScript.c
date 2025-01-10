@@ -69,7 +69,7 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 	
 	const ref array<EWeaponType> WEAPON_TYPES_THROWABLE = {EWeaponType.WT_FRAGGRENADE, EWeaponType.WT_SMOKEGRENADE};
 	
-	const ref TStringArray m_aLeadershipRolesUGL = {"_COY_P", "_PL_P", "_SL_P", "_FO_P", "_JTAC_P"};
+	const ref TStringArray m_aLeadershipRolesUGL = {"_COY_P", "_PL_P", "_SL_P", "_FO_P", "_JTAC_P", "_1SG_P", "_PSG_P"};
 	const ref TStringArray m_aLeadershipRolesCarbine = {"_MO_P", "_IndirectLead_P", "_LogiLead_P", "_VehLead_P"};
 		
 	const ref TStringArray m_aSquadLevelRolesUGL = {"_TL_P", "_Gren_P", "_RTO_P"};
@@ -378,7 +378,7 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 		if(gearConfig.m_DefaultFactionGear)
 		{
 			//Who we give Leadership Radios
-			if(gearScriptSettings.m_bEnableLeadershipRadios && (m_aLeadershipRolesUGL.Contains(role) || m_aLeadershipRolesCarbine.Contains(role) || role == "_Spotter_P" || role == "_Pilot_P" || role == "_CrewChief_P"))
+			if(gearScriptSettings.m_bEnableLeadershipRadios && (m_aLeadershipRolesUGL.Contains(role) || m_aLeadershipRolesCarbine.Contains(role) || role == "_Spotter_P" || role == "_Pilot_P" || role == "_CrewChief_P" || role == "_Medic_P"))
 				AddInventoryItem(gearScriptSettings.m_rLeadershipRadiosPrefab, 1);
 			
 			//Who we give GI Radios
@@ -789,6 +789,8 @@ class CRF_GearScriptGamemodeComponent: SCR_BaseGameModeComponent
 			case "_VehLead_P"      : {role = "Vehicle Lead";      break;}
 			case "_IndirectLead_P" : {role = "Indirect Lead";     break;}
 			case "_LogiLead_P"     : {role = "Logi Lead";         break;}
+			case "_1SG_P"          : {role = "First Sergeant";    break;}
+			case "_PSG_P"          : {role = "Platoon Sergeant";  break;}
 		}	
 		
 		foreach(ref CRF_Leadership_Custom_Gear customGear : customGearArray)
