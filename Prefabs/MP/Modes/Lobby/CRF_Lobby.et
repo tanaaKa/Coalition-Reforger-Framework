@@ -72,6 +72,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
        }
       }
      }
+     m_iOrder 10
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB792D10AD8F4}" {
@@ -95,6 +96,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Name "OPFOR"
       m_sNameUpper "OPFOR"
      }
+     m_iOrder 9
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
       m_bIsAssignedRandomly 0
       m_aSquadNames {
@@ -120,6 +122,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Icon "{FB266CDD4502D60B}UI/Textures/Editor/EditableEntities/Factions/EditableEntity_Faction_Fia.edds"
       m_sNameUpper "INDFOR"
      }
+     m_iOrder 8
      m_sFactionFlag "{FB266CDD4502D60B}UI/Textures/Editor/EditableEntities/Factions/EditableEntity_Faction_Fia.edds"
      m_FactionFlagMaterial "{B7A02313829700F9}Assets/Props/Fabric/Flags/Data/Flag_1_2_Green.emat"
      m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
@@ -147,6 +150,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      }
      "Identity of soldiers" FactionIdentity "{60DCEDE56D10632C}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
      }
+     m_iOrder 7
      m_sFactionFlag "{C8565602E0F422C5}Images/UI/Zeus GearScript Factions/CIV_NATO.edds"
      m_FactionFlagMaterial "{936E6C67A71A9421}Assets/Props/Fabric/Flags/Data/Flag_2_3_White.emat"
      m_CallsignInfo SCR_FactionCallsignInfo "{607A9A9E40D70F6E}" {
@@ -159,6 +163,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Name "OPFOR"
       m_sNameUpper "OPFOR"
      }
+     m_iOrder 6
      m_CallsignInfo SCR_FactionCallsignInfo "{5977478D568C093C}" {
       m_bIsAssignedRandomly 0
       m_aSquadNames {
@@ -183,6 +188,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Name "BLUFOR"
       m_sNameUpper "BLUFOR"
      }
+     m_iOrder 5
      m_CallsignInfo SCR_FactionCallsignInfo "{5CC8BB97E017CDBC}" {
       m_aSquadNames {
        SCR_CallsignInfo "{55CCB792D10AD8F4}" {
@@ -206,6 +212,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Name "INDFOR"
       m_sNameUpper "INDFOR"
      }
+     m_iOrder 4
      m_sFactionRadioEncryptionKey "candleSauce"
     }
     SCR_Faction "{5E5106B25048F22B}" {
@@ -223,7 +230,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       Name "BLUFOR"
       m_sNameUpper "BLUFOR"
      }
-     m_iOrder 3000
+     m_iOrder 3
      m_OutlineFactionColor 0.045 0 0.084 1
      m_NotificationFactionColor 0.517 0.204 0.823 1
      m_NotificationTextFactionColor 0.392 0.157 0.624 1
@@ -469,7 +476,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      }
      "Identity of soldiers" FactionIdentity "{62D8F84F060C0F95}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
      }
-     m_iOrder 1000
+     m_iOrder 1
      m_OutlineFactionColor 0.168 0.006 0.007 1
      m_NotificationFactionColor 0.855 0.031 0.028 1
      m_NotificationTextFactionColor 0.521 0.021 0.019 1
@@ -663,7 +670,7 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      }
      "Identity of soldiers" FactionIdentity "{62D8F84F08F0FEAC}" : "{7BE453211ACB5F01}Configs/Identities/FactionIdentity_COAL.conf" {
      }
-     m_iOrder 2000
+     m_iOrder 2
      m_OutlineFactionColor 0.001 0.082 0.023 1
      m_NotificationFactionColor 0 0.44 0.078 1
      m_NotificationTextFactionColor 0 0.296 0.055 1
