@@ -255,7 +255,9 @@ class CRF_AdminMenu: ChimeraMenuBase
 		list.AddItem("CrewChief");
 		list.AddItem("LogiLead");
 		list.AddItem("LogiRunner");
-		list.AddItem("DroneOperator");
+		list.AddItem("DroneOp");
+		list.AddItem("1SG");
+		list.AddItem("PSG");
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -310,17 +312,19 @@ class CRF_AdminMenu: ChimeraMenuBase
 				case 26:   {prefab = "{6B23BDB84254123F}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_AA_P.et"; 				break;}
 				case 27:   {prefab = "{FADE5BED859475A2}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_AAA_P.et"; 				break;}
 				case 28:   {prefab = "{478FBA09EDDFC439}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehLead_P.et"; 			break;}	
-				case 29:   {prefab = "{88611B14BF2B14B1}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehDriver_P.et"; 			break;}
-				case 30:   {prefab = "{5915E51A1AABB9D2}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehGunner_P.et"; 			break;}
-				case 31:   {prefab = "{1E94245F486A71E6}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehLoader_P.et"; 			break;}
+				case 29:   {prefab = "{88611B14BF2B14B1}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehDriver_P.et"; 		break;}
+				case 30:   {prefab = "{5915E51A1AABB9D2}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehGunner_P.et"; 		break;}
+				case 31:   {prefab = "{1E94245F486A71E6}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_VehLoader_P.et"; 		break;}
 				case 32:   {prefab = "{DDFC9128CBEF1AAB}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLead_P.et"; 		break;}
 				case 33:   {prefab = "{E6875FC6CEED7B4B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectGunner_P.et"; 	break;}
 				case 34:   {prefab = "{4ACCBC7F35D46EF7}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_IndirectLoader_P.et"; 	break;}
 				case 35:   {prefab = "{810337D2F231A02D}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Pilot_P.et"; 			break;}
-				case 36:   {prefab = "{9441BEBB9DF7FC1B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_CrewChief_P.et"; 			break;}
+				case 36:   {prefab = "{9441BEBB9DF7FC1B}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_CrewChief_P.et"; 		break;}
 				case 37:   {prefab = "{48FB5BBC1A942F28}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_LogiLead_P.et"; 			break;}
 				case 38:   {prefab = "{EB5C0AB8268A5C43}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_LogiRunner_P.et"; 		break;}
-				case 39:   {prefab = "{A49CC762AEE2A230}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_DroneOp_P.et"; 			break;}				
+				case 39:   {prefab = "{A49CC762AEE2A230}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_DroneOp_P.et"; 			break;}
+				case 40:   {prefab = "{F5FDAAADCCD3C2F9}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_1SG_P.et"; 				break;}
+				case 41:   {prefab = "{6BB714F2C0835B67}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_PSG_P.et"; 				break;}			
 				default:   {prefab = "{6F99DE8453E6B423}Prefabs/Characters/Factions/BLUFOR/CRF_GS_BLUFOR_Rifleman_P.et"; 			break;}
 			}
 		}else if(factionKey == "OPFOR")
@@ -367,6 +371,8 @@ class CRF_AdminMenu: ChimeraMenuBase
 				case 37:   {prefab = "{E5250C1BEBC038A2}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_LogiLead_P.et";		 	break;}
 				case 38:   {prefab = "{7043203A0D1F11AF}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_LogiRunner_P.et"; 			break;}
 				case 39:   {prefab = "{2A9957B9D12FD70B}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_DroneOp_P.et"; 			break;}
+				case 40:   {prefab = "{713B12ED29D6FD39}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_1SG_P.et"; 				break;}
+				case 41:   {prefab = "{EF71ACB2258664A7}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_PSG_P.et"; 				break;}
 				default:   {prefab = "{FC0904D71EF8DB6A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Rifleman_P.et"; 			break;}
 			}
 		}else if(factionKey == "INDFOR")
@@ -402,51 +408,53 @@ class CRF_AdminMenu: ChimeraMenuBase
 				case 26:   {prefab = "{2EE458983CC5B8EF}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AA_P.et"; 				break;}
 				case 27:   {prefab = "{ECFDFE2859FA5EC1}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AAA_P.et";				break;}
 				case 28:   {prefab = "{C74239418F3417B9}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehLead_P.et"; 			break;}	
-				case 29:   {prefab = "{FE9C0A1600114796}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehDriver_P.et"; 			break;}
-				case 30:   {prefab = "{2FE8F418A591EAF5}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehGunner_P.et"; 			break;}
-				case 31:   {prefab = "{6869355DF75022C1}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehLoader_P.et"; 			break;}
+				case 29:   {prefab = "{FE9C0A1600114796}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehDriver_P.et"; 		break;}
+				case 30:   {prefab = "{2FE8F418A591EAF5}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehGunner_P.et"; 		break;}
+				case 31:   {prefab = "{6869355DF75022C1}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_VehLoader_P.et"; 		break;}
 				case 32:   {prefab = "{B28C067E6191CC69}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectLead_P.et"; 		break;}
 				case 33:   {prefab = "{C6A54A2FF38C9845}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectGunner_P.et"; 	break;}
 				case 34:   {prefab = "{81248B6AA14D5071}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_IndirectLoader_P.et"; 	break;}
 				case 35:   {prefab = "{ED774ED0660B2DCD}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Pilot_P.et"; 			break;}
-				case 36:   {prefab = "{E2BCAFB922CDAF3C}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_CrewChief_P.et"; 			break;}
+				case 36:   {prefab = "{E2BCAFB922CDAF3C}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_CrewChief_P.et"; 		break;}
 				case 37:   {prefab = "{6E8D0EF9755740F1}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_LogiLead_P.et"; 			break;}
 				case 38:   {prefab = "{AADD26801A0155A4}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_LogiRunner_P.et"; 		break;}
 				case 39:   {prefab = "{06E225B70C43C545}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_DroneOp_P.et"; 			break;}
+				case 40:   {prefab = "{E3DE0F6810BDE99A}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_1SG_P.et"; 				break;}
+				case 41:   {prefab = "{7D94B1371CED7004}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_PSG_P.et"; 				break;}	
 				default:   {prefab = "{A303C25424BC7149}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_Rifleman_P.et"; 			break;}
 			}
 		}else if(factionKey == "CIV")
 		{
 			switch(index)
 			{
-				case 0:    {prefab = "{66A37C085C2B2873}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_COY_P.et"; 				break;}
+				case 0:    {prefab = "{66A37C085C2B2873}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_COY_P.et"; 					break;}
 				case 1:    {prefab = "{B409C0B57C8ACCBF}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_MO_P.et"; 					break;}
 				case 2:    {prefab = "{4C1AB1853DBEA6A1}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_FO_P.et"; 					break;}
 				case 3:    {prefab = "{19854386F78A1A01}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_JTAC_P.et"; 				break;}
 				case 4:    {prefab = "{A0249B4DA9B1CA01}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_PL_P.et"; 					break;}
 				case 5:    {prefab = "{8C7C798DDB2E1DDC}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Medic_P.et"; 				break;}
 				case 6:    {prefab = "{AA81CB001FA13986}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_SL_P.et"; 					break;}
-				case 7:    {prefab = "{9E7073842E6135B7}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_RTO_P.et"; 			    break;}
+				case 7:    {prefab = "{9E7073842E6135B7}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_RTO_P.et"; 			    	break;}
 				case 8:    {prefab = "{7807FB0686D69D84}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_TL_P.et"; 					break;}
 				case 9:    {prefab = "{0F04738DCBE78DEC}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AR_P.et"; 					break;}
-				case 10:   {prefab = "{2D4DD0A688F7F131}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAR_P.et"; 				break;}
+				case 10:   {prefab = "{2D4DD0A688F7F131}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAR_P.et"; 					break;}
 				case 11:   {prefab = "{B2D4210AB4FC91F2}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AT_P.et"; 					break;}
-				case 12:   {prefab = "{909D8221F7ECED2F}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAT_P.et"; 				break;}
+				case 12:   {prefab = "{909D8221F7ECED2F}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAT_P.et"; 					break;}
 				case 13:   {prefab = "{162C966A88CCBF22}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Gren_P.et"; 				break;}
 				case 14:   {prefab = "{7F9EAEA267859747}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Demo_P.et"; 				break;}
 				case 15:   {prefab = "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"; 			break;}
-				case 16:   {prefab = "{F69CD35D8851E7EE}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_MMG_P.et"; 				break;}
+				case 16:   {prefab = "{F69CD35D8851E7EE}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_MMG_P.et"; 					break;}
 				case 17:   {prefab = "{F6A4CA36EA3A5C16}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AMMG_P.et"; 				break;}
-				case 18:   {prefab = "{6315F58BC15D85D5}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_HMG_P.et"; 				break;}
+				case 18:   {prefab = "{6315F58BC15D85D5}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_HMG_P.et"; 					break;}
 				case 19:   {prefab = "{632DECE0A3363E2D}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AHMG_P.et"; 				break;}
 				case 20:   {prefab = "{6B2ECC0633190E43}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Sniper_P.et"; 				break;}
 				case 21:   {prefab = "{0C3A7A5513878002}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Spotter_P.et"; 			break;}
-				case 22:   {prefab = "{DE214A5BDAB04E69}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_MAT_P.et"; 				break;}
+				case 22:   {prefab = "{DE214A5BDAB04E69}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_MAT_P.et"; 					break;}
 				case 23:   {prefab = "{DE195330B8DBF591}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AMAT_P.et"; 				break;}
-				case 24:   {prefab = "{4BA86C8D93BC2C52}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_HAT_P.et"; 				break;}
+				case 24:   {prefab = "{4BA86C8D93BC2C52}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_HAT_P.et"; 					break;}
 				case 25:   {prefab = "{4B9075E6F1D797AA}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AHAT_P.et"; 				break;}
 				case 26:   {prefab = "{0D2CABBD4145EA77}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AA_P.et"; 					break;}
-				case 27:   {prefab = "{2F650896025596AA}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAA_P.et"; 				break;}
+				case 27:   {prefab = "{2F650896025596AA}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_AAA_P.et"; 					break;}
 				case 28:   {prefab = "{468195F8659D88FE}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_VehLead_P.et"; 			break;}
 				case 29:   {prefab = "{A6410407E82601E2}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_VehDriver_P.et"; 			break;}
 				case 30:   {prefab = "{7735FA094DA6AC81}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_VehGunner_P.et"; 			break;}
@@ -459,6 +467,8 @@ class CRF_AdminMenu: ChimeraMenuBase
 				case 37:   {prefab = "{192BB338081045AF}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_LogiLead_P.et"; 			break;}
 				case 38:   {prefab = "{598D81084B4F5CDA}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_LogiRunner_P.et"; 			break;}
 				case 39:   {prefab = "{FA2F9B99D8CBB8A6}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_DroneOp_P.et"; 			break;}
+				case 40:   {prefab = "{2046F9D64B1221F1}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_1SG_P.et"; 					break;}
+				case 41:   {prefab = "{BE0C47894742B86F}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_PSG_P.et"; 					break;}	
 				default:   {prefab = "{71EF8F2C5207403C}Prefabs/Characters/Factions/CIV/CRF_GS_CIV_Rifleman_P.et"; 			break;}
 			}
 		} else
@@ -545,7 +555,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 		
 		for(int i = 0; i < m_list2.GetItemCount(); i++)
 		{
-			 if(CRF_GearScriptGamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR").Contains("_" + TextWidget.Cast(m_list2.GetElementComponent(i).GetRootWidget().FindAnyWidget("Text")).GetText() + "_P")) // GSR = Gear Script Resource
+			if(CRF_GearScriptGamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR").Contains("_" + TextWidget.Cast(m_list2.GetElementComponent(i).GetRootWidget().FindAnyWidget("Text")).GetText() + "_P")) // GSR = Gear Script Resource
 			{
 				m_list2.SetItemSelected(i, true);
 				return;
@@ -657,7 +667,7 @@ class CRF_AdminMenu: ChimeraMenuBase
 			if(factionTag.IsEmpty())
 				continue;
 			
-			m_list2.AddItem(string.Format("%1 | %2", factionTag , group.GetCustomName()));
+			m_list2.AddItem(string.Format("%1 | %2", factionTag , group.GetCustomNameWithOriginal()));
 			m_groupIDList.Insert(group.GetGroupID());
 		}
 	}
