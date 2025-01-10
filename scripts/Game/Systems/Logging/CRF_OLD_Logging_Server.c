@@ -138,6 +138,8 @@ class CRF_LoggingServerComponent: CLB_GamemodeComponent
 	}
 }
 
+/* BROKEN in Reforger Lobby. Replaced by CRF_MDB_Logging_Server
+
 modded class SCR_BaseGameMode
 {
 	const string SEPARATOR = ",";
@@ -195,3 +197,4 @@ modded class SCR_BaseGameMode
 		m_handle.WriteLine("kill" + SEPARATOR + m_sKilledName + SEPARATOR + m_sKilledFaction + SEPARATOR + m_sKillerName + SEPARATOR + m_sKillerFaction + SEPARATOR + m_fRange + SEPARATOR + m_sWeaponName + SEPARATOR + m_sTime);
 	}
 }
+/*
