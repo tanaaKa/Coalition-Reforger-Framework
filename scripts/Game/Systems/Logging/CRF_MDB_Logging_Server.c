@@ -75,11 +75,11 @@ class CRF_MDB_LoggingServerComponent: CLB_GamemodeComponent
 	{
 		super.OnGamemodeStateChanged();
 		
-		if (CLB_Gamemode.GetInstance().GetGameModeState() == CLB_GamemodeState.AAR) // log stats only at AAR
+		/*if (CLB_Gamemode.GetInstance().GetGameModeState() == CLB_GamemodeState.AAR) // log stats only at AAR
 		{
 			//TODO: Implement data collector here by iterating through all players and only log data at end of game (AAR screen)
 			//SCR_PlayerData playerData = GetGame().GetDataCollector().GetPlayerData(playerID, false);
-		}
+		}*/
 	}
 	
 	/*override void OnPlayerKilled(notnull SCR_InstigatorContextData instigatorContextData)
