@@ -1,34 +1,7 @@
-CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
+CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
  ID "56B2B479C6B96951"
  components {
-  CRF_AdminMenuGameComponent "{632A66B13D760948}" {
-  }
-  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
-   m_bGearScriptEnabled 1
-   m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
-    m_rGearScript "{D3B6188EF875E2C4}Configs/Gearscripts/Standard/80s/CRF_GS_US80s.conf"
-    m_rLeadershipRadiosPrefab "{1C171319AA17FF29}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_Leader.et"
-    m_rRTORadiosPrefab "{1C171319AA17FF29}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_Leader.et"
-    m_rGIRadiosPrefab "{0FA212334ACFBABB}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_GI.et"
-   }
-   m_OPFORGearScriptSettings CRF_GearScriptContainer "{629E5222ACF12871}" {
-    m_rGearScript "{83E186D97FF79DCF}Configs/Gearscripts/Standard/80s/CRF_GS_USSR80s.conf"
-    m_rLeadershipRadiosPrefab "{47A758B63E7ED912}Prefabs/Items/Equipment/Radios/OPFOR_Radio_Leader.et"
-    m_rRTORadiosPrefab "{47A758B63E7ED912}Prefabs/Items/Equipment/Radios/OPFOR_Radio_Leader.et"
-    m_rGIRadiosPrefab "{C166493B95671DEE}Prefabs/Items/Equipment/Radios/OPFOR_Radio_GI.et"
-   }
-   m_INDFORGearScriptSettings CRF_GearScriptContainer "{629E5222AC7F68BE}" {
-    m_rGearScript "{9F4A0C3FCDF3F6DE}Configs/Gearscripts/Standard/80s/CRF_GS_FIA.conf"
-    m_rLeadershipRadiosPrefab "{72B7D9E24B495F57}Prefabs/Items/Equipment/Radios/INDFOR_Radio_Leader.et"
-    m_rRTORadiosPrefab "{72B7D9E24B495F57}Prefabs/Items/Equipment/Radios/INDFOR_Radio_Leader.et"
-    m_rGIRadiosPrefab "{2F19DBB99A359B48}Prefabs/Items/Equipment/Radios/INDFOR_Radio_GI.et"
-   }
-   m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{629E5222AC1510B5}" {
-    m_rGearScript "{F528876B88A01733}Configs/Gearscripts/Custom/RandAlThor/CRF_GS_CIVWithGuns.conf"
-    m_bEnableLeadershipRadios 0
-    m_bEnableRTORadios 0
-    m_bEnableGIRadios 0
-   }
+  CRF_GamemodeComponent "{644344EEF3C64CD6}" {
   }
   SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
    m_fDOTScale 0.5
@@ -36,6 +9,16 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
    m_fRegenerationScale 0.6
   }
   SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
+   Enabled 0
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
+   }
   }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
@@ -45,6 +28,115 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
   }
  }
  coords 2049.433 45.156 2065.633
+ PlayerControllerPrefab "{4E5DAC62A374950F}Prefabs/Characters/Core/CRF_PlayerControllerMP.et"
+ m_bAutoPlayerRespawn 0
+ m_bAllowFactionChange 0
+ m_aMissionDescriptors {
+  CRF_MissionDescriptor "{632771FB5C619E1C}" {
+   m_sTitle "Welcome / How to Play"
+   m_sTextData "Welcome to a COALITION Session."\
+   ""\
+   "If this is your first time here, please join the discord:"\
+   "Escape -> Server Message -> Join Discord"\
+   ""\
+   "COALITION hosts one-life missions every Friday. Each session will have, at minimum, 3 missions a night."\
+   ""\
+   "Anyone can join the mission, but after a mission starts, join in progress (JIP) is disabled and you must wait until the next mission to take part."\
+   ""\
+   "If the mission has not started yet, please take time to familiarize yourself with the rest of the briefing and then hold U to select a slot."\
+   ""\
+   ""\
+   ""
+   m_bShowForAnyFaction 1
+  }
+  CRF_MissionDescriptor "{64425053BDE568A1}" {
+   m_sTitle "Custom Controls"
+   m_sTextData "Custom Controls (Keyboard/Controller)"\
+   ""\
+   "WHILE ALIVE:"\
+   "Hold U / Hold View - Open Lobby"\
+   "HOME / Menu + D-pad Right - Squad Settings"\
+   "CTRL + Home / Menu + D-pad Left - Personal Squad Settings"\
+   "F9 / Menu + D-pad Up - Toggle Side Ready"\
+   "LCtrl + Space / RB + A Button - Place Static Weapon"\
+   "LCtrl + X / RB + B Button - Cancel Static Weapon"\
+   ""\
+   "IN SPECTATOR:"\
+   "L / Y Button - Toggle spectator/alive chat"\
+   "N / 2x D-pad Right - Enable night vision "\
+   ""\
+   "CHAT COMMANDS:"\
+   "/a <message> - Message admins"
+   m_bShowForAnyFaction 1
+  }
+  CRF_MissionDescriptor "{644250503DF684C0}" {
+   m_sTitle "Mission: Situation"
+   m_sTextData "Add background info about the mission. "\
+   ""\
+   "BLUFOR Composition: Armored/Infantry/Mechanized/Etc.."\
+   "BLUFOR Assets:"\
+   ""\
+   "OPFOR Composition: Armored/Infantry/Mechanized/Etc.."\
+   "OPFOR Assets:"\
+   ""\
+   "Time:"\
+   ""\
+   "Weather:"
+   m_bShowForAnyFaction 1
+  }
+  CRF_MissionDescriptor "{64425051F2E00216}" {
+   m_sTitle "BLUFOR Objectives"
+   m_sTextData "If BLUFOR is playable, add mission objectives in bullet point list. Add details for each if you feel necessary, but keep it concise."
+   m_aFactionKeys {
+    "BLUFOR"
+   }
+  }
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTitle "OPFOR Objectives"
+   m_sTextData "If OPFOR is playable, add mission objectives in bullet point list. Add details for each if you feel necessary, but keep it concise."
+   m_aFactionKeys {
+    "OPFOR"
+   }
+  }
+  CRF_MissionDescriptor "{644250519BE30999}" {
+   m_sTitle "INDFOR Objectives"
+   m_sTextData "If INDFOR is playable, add mission objectives in bullet point list. Add details for each if you feel necessary, but keep it concise."
+   m_aFactionKeys {
+    "INDFOR"
+   }
+  }
+  CRF_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTitle "Administration"
+   m_sTextData "Place any meta or technical information that players should know here. Otherwise, leave empty."
+   m_aFactionKeys {
+    "BLUFOR" "OPFOR" "INDFOR"
+   }
+  }
+ }
+ m_BLUFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B419A7B}" {
+  m_rGearScript "{D3B6188EF875E2C4}Configs/Gearscripts/Standard/80s/CRF_GS_US80s.conf"
+  m_rLeadershipRadiosPrefab "{1C171319AA17FF29}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_Leader.et"
+  m_rRTORadiosPrefab "{1C171319AA17FF29}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_Leader.et"
+  m_rGIRadiosPrefab "{0FA212334ACFBABB}Prefabs/Items/Equipment/Radios/BLUFOR_Radio_GI.et"
+ }
+ m_OPFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B11EAAD}" {
+  m_rGearScript "{83E186D97FF79DCF}Configs/Gearscripts/Standard/80s/CRF_GS_USSR80s.conf"
+  m_rLeadershipRadiosPrefab "{47A758B63E7ED912}Prefabs/Items/Equipment/Radios/OPFOR_Radio_Leader.et"
+  m_rRTORadiosPrefab "{47A758B63E7ED912}Prefabs/Items/Equipment/Radios/OPFOR_Radio_Leader.et"
+  m_rGIRadiosPrefab "{C166493B95671DEE}Prefabs/Items/Equipment/Radios/OPFOR_Radio_GI.et"
+ }
+ m_INDFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9AE1C9ED}" {
+  m_rGearScript "{9F4A0C3FCDF3F6DE}Configs/Gearscripts/Standard/80s/CRF_GS_FIA.conf"
+  m_rLeadershipRadiosPrefab "{72B7D9E24B495F57}Prefabs/Items/Equipment/Radios/INDFOR_Radio_Leader.et"
+  m_rRTORadiosPrefab "{72B7D9E24B495F57}Prefabs/Items/Equipment/Radios/INDFOR_Radio_Leader.et"
+  m_rGIRadiosPrefab "{2F19DBB99A359B48}Prefabs/Items/Equipment/Radios/INDFOR_Radio_GI.et"
+ }
+ m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{64570ACB9A9C5C52}" {
+  m_rGearScript "{F528876B88A01733}Configs/Gearscripts/Custom/RandAlThor/CRF_GS_CIVWithGuns.conf"
+  m_bEnableLeadershipRadios 0
+  m_bEnableRTORadios 0
+  m_bEnableGIRadios 0
+ }
  {
   PerceptionManager "6445176B75D36372" : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
    ID "64443AC8FCA0C42D"
@@ -215,14 +307,6 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_iOrder 4
      m_sFactionRadioEncryptionKey "candleSauce"
     }
-    SCR_Faction "{5E5106B25048F22B}" {
-     UIInfo SCR_FactionUIInfo "{5E5106B6FC0CCF01}" {
-      Name "BLUFOR"
-     }
-     m_NotificationFactionColor 0.016 0.552 0.905 1
-     m_NotificationTextFactionColor 0.013 0.395 0.651 1
-     m_sFactionRadioEncryptionKey "chickenNuggets"
-    }
     SCR_Faction "{61500924662B6062}" {
      FactionKey "SPEC"
      FactionColor 0.392 0.157 0.624 1
@@ -268,6 +352,14 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
       "land" "helicopter" "maintenance" "medical"
      }
      m_sFactionBackground "{781301447441F404}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_Civilian.imageset"
+    }
+    SCR_Faction "{5E5106B25048F22B}" {
+     UIInfo SCR_FactionUIInfo "{5E5106B6FC0CCF01}" {
+      Name "BLUFOR"
+     }
+     m_NotificationFactionColor 0.016 0.552 0.905 1
+     m_NotificationTextFactionColor 0.013 0.395 0.651 1
+     m_sFactionRadioEncryptionKey "chickenNuggets"
     }
     SCR_Faction "{628B22E9B4056C88}" {
      FactionKey "BLUFOR"
@@ -769,6 +861,27 @@ CLB_Gamemode : "{25E59F270F06BAA4}Prefabs/MP/Modes/Plain/GameMode_Lobby.et" {
      m_sFactionBackground "{81BF3B1DCC106577}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_FIA.imageset"
     }
    }
+  }
+  RadioManagerEntity : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+   ID "632771FB44BBF8E1"
+   coords -26.061 38.454 -1.92
+  }
+  ScriptedChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+   ID "632771FB44BBF8D8"
+   coords -318.139 54.389 2.396
+  }
+  SCR_EditorSettingsEntity {
+   ID "632771FB44BBD90B"
+   coords 0.828 -0.125 0.558
+   m_bIsUnlimitedEditorLegal 1
+  }
+  SCR_BaseTaskManager : "{87208DAD6F3C0DE2}Prefabs/MP/Managers/Tasks/TaskManager_Editor.et" {
+   ID "632771FB44BBFB1C"
+   coords 0.828 -0.125 0.558
+  }
+  SCR_LoadoutManager : "{B54D08AEA74A5354}Prefabs/MP/Managers/Loadouts/LoadoutManager_Editor.et" {
+   ID "632771FB44BBFB73"
+   coords 0.828 -0.125 0.558
   }
  }
 }

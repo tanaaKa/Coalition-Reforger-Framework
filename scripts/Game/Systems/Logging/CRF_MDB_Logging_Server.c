@@ -1,10 +1,10 @@
 [ComponentEditorProps(category: "CRF Logging Component", description: "")]
-class CRF_MDB_LoggingServerComponentClass: CLB_GamemodeComponentClass
+class CRF_MDB_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
 {
 	
 }
 
-class CRF_MDB_LoggingServerComponent: CLB_GamemodeComponent
+class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 {	
 	string m_sMissionName;
 	string m_sPlayerName;
@@ -28,6 +28,13 @@ class CRF_MDB_LoggingServerComponent: CLB_GamemodeComponent
 			return CRF_MDB_LoggingServerComponent.Cast(gameMode.FindComponent(CRF_MDB_LoggingServerComponent));
 		else
 			return null;
+	}
+	
+	override void OnPostInit(IEntity owner)
+	{
+		super.OnPostInit(owner);
+		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
+		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
 	}
 	
 	// Setup
@@ -71,11 +78,10 @@ class CRF_MDB_LoggingServerComponent: CLB_GamemodeComponent
 		m_sPlayerName = GetGame().GetPlayerManager().GetPlayerName(playerId);
 	}
 	
-	override void OnGamemodeStateChanged()
+	void OnGamemodeStateChanged(CRF_GamemodeState state)
 	{
-		super.OnGamemodeStateChanged();
-		
-		/*if (CLB_Gamemode.GetInstance().GetGameModeState() == CLB_GamemodeState.AAR) // log stats only at AAR
+		//Print(state);
+		/*if (CRF_Gamemode.GetInstance().GetGameModeState() == CRF_GamemodeState.AAR) // log stats only at AAR
 		{
 			//TODO: Implement data collector here by iterating through all players and only log data at end of game (AAR screen)
 			//SCR_PlayerData playerData = GetGame().GetDataCollector().GetPlayerData(playerID, false);

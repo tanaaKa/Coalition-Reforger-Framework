@@ -1,7 +1,7 @@
 SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
  coords 2311.388 9 2364.759
 }
-CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
   CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
    m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
@@ -22,7 +22,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iFactionTwoRatio 2
  m_sFactionTwoKey "BLU"
  m_aMissionDescriptors {
-  CLB_MissionDescriptor "{644250503DF684C0}" {
+  CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "The last rements of an American force is trapped on the easy side of the river and has been tasked with holding out until reinforcements arrive."\
    ""\
    "Intel suggests that the Russians are planning an assault, the direction is unknown"\
@@ -37,12 +37,12 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    ""\
    "Weather: Clear"
   }
-  CLB_MissionDescriptor "{64425051F2E00216}" {
+  CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "Defend Bombsite A"\
    ""\
    "Defend Bombsite B"
   }
-  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
    m_sTextData "Destroy Bombsite A"\
    ""\
    "Destroy Bombsite B"\

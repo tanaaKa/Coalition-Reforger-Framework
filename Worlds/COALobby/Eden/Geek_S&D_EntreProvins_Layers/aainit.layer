@@ -1,7 +1,7 @@
 SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
  coords 6391.21 158.928 6420.281
 }
-CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
   CRF_SearchAndDestroyGameModeComponent "{6446F969578B550D}" {
    attackingSide "BLUFOR"
@@ -14,7 +14,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iFactionTwoRatio 2
  m_sFactionTwoKey "OPF"
  m_aMissionDescriptors {
-  CLB_MissionDescriptor "{644250503DF684C0}" {
+  CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "US Forces move to detonate 2 bombs located in towns controlled by Soviet Armed Forces. "\
    ""\
    "Search and Destroy "\
@@ -29,17 +29,17 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Time: 12pm"\
    "Weather: Clear"
   }
-  CLB_MissionDescriptor "{64425051F2E00216}" {
+  CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "Enter the towns of Provins and Entre Deux and detonate 2 explosive devices being stored in the centre of town."\
    ""\
    "DO NOT EXIT THE SAFE START ZONE BEFORE THE END OF SAFE START."
   }
-  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
    m_sTextData "Defend the 2 explosive devices in the centre of Provins and Entre Deux."\
    ""\
    "DO NOT EXIT THE SAFE START ZONE BEFORE THE END OF SAFE START."
   }
-  CLB_MissionDescriptor "{6442505149CF6C93}" {
+  CRF_MissionDescriptor "{6442505149CF6C93}" {
    m_sTextData "One Life, No Respawns."\
    "30 minute time limit."\
    ""

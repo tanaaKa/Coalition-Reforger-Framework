@@ -67,7 +67,7 @@ class CRF_RadioRespawnSystemComponent: SCR_BaseGameModeComponent
 //	protected PS_GameModeCoop m_GameModeCoop;
 //	
 //	protected SCR_GroupsManagerComponent m_GroupsManagerComponent;
-//	CLB_Gamemode m_safestart;
+//	CRF_Gamemode m_safestart;
 //	
 //	protected ref map<IEntity, int> m_entitySlots = new map<IEntity, int>();
 //	protected ref map<IEntity, ResourceName> m_entityPrefabs = new map<IEntity, ResourceName>();
@@ -90,7 +90,7 @@ class CRF_RadioRespawnSystemComponent: SCR_BaseGameModeComponent
 //	
 //	void WaitTillGameStart()
 //	{
-//		m_safestart = CLB_Gamemode.GetInstance();
+//		m_safestart = CRF_Gamemode.GetInstance();
 //		if (m_safestart.GetSafestartStatus()) 
 //		{	
 //			GetGame().GetCallqueue().Remove(WaitTillGameStart);
