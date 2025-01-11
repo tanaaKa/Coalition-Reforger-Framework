@@ -30,13 +30,6 @@ class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 			return null;
 	}
 	
-	override void OnPostInit(IEntity owner)
-	{
-		super.OnPostInit(owner);
-		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
-		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
-	}
-	
 	// Setup
 	override void OnWorldPostProcess(World world)
 	{
@@ -45,6 +38,8 @@ class CRF_MDB_LoggingServerComponent: SCR_BaseGameModeComponent
 			return;
 
 		m_sMissionName = GetGame().GetMissionName();
+		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
+		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
 	}
 	
 	// Player Connected

@@ -144,6 +144,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("", UIWidgets.Auto, desc: "Gearscript applied to all civ players", category: "CRF Gamemode Gearscript")]
 	ref CRF_GearScriptContainer m_CIVILIANGearScriptSettings;
 	
+	IEntity m_eGamemodeEntity;
 	protected ref ScriptInvoker m_OnStateChanged;
 	protected ref array<CRF_GamemodeComponent> m_aAdditionalCLBGamemodeComponents = {};
 	
@@ -159,6 +160,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	override void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
+		m_eGamemodeEntity = owner;
 		
 		array<Managed> additionalComponents = new array<Managed>();
 		int count = owner.FindComponents(CRF_GamemodeComponent, additionalComponents);

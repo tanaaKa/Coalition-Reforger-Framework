@@ -37,13 +37,6 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 			return null;
 	}
 	
-	override void OnPostInit(IEntity owner)
-	{
-		super.OnPostInit(owner);
-		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
-		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
-	}
-	
 	FileHandle ReturnFileHandle()
 	{
 		return m_handle;
@@ -62,6 +55,9 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 		m_handle = FileIO.OpenFile(m_sLogPath, FileMode.APPEND);
 		
 		m_handle.WriteLine("mission" + SEPARATOR + "beginning" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
+		
+		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
+		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
 	}
 	
 	// Player Connected
