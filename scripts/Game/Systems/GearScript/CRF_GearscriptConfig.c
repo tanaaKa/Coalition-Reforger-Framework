@@ -1,4 +1,36 @@
 //------------------------------------------------------------------------------------------------
+// CONTAINER
+//------------------------------------------------------------------------------------------------
+
+[BaseContainerProps()]
+class CRF_GearScriptContainer
+{
+	[Attribute("", UIWidgets.ResourceNamePicker, desc: "Gearscript applied to all entities on this faction", "conf class=CRF_GearScriptConfig")]
+	ResourceName m_rGearScript;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableMiniArsenal;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rLeadershipRadiosPrefab;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rRTORadiosPrefab;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rGIRadiosPrefab;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableLeadershipRadios;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableRTORadios;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableGIRadios;
+};
+
+//------------------------------------------------------------------------------------------------
 // MASTER
 //------------------------------------------------------------------------------------------------
 
@@ -202,7 +234,7 @@ class CRF_Custom_Gear
 [BaseContainerProps(), SCR_BaseContainerCustomTitleFields({"m_sRoleToOverride"}, "%1")]
 class CRF_Leadership_Custom_Gear
 {
-	[Attribute("", uiwidget: UIWidgets.ComboBox, enums: {ParamEnum("", ""), ParamEnum("Company Commander", "Company Commander"), ParamEnum("Platoon Leader", "Platoon Leader"),  ParamEnum("Medical Officer", "Medical Officer"), ParamEnum("Squad Lead", "Squad Lead"), ParamEnum("Forward Observer", "Forward Observer"), ParamEnum("JTAC", "JTAC"), ParamEnum("Vehicle Lead", "Vehicle Lead"), ParamEnum("Indirect Lead", "Indirect Lead"), ParamEnum("Logi Lead", "Logi Lead")})]
+	[Attribute("", uiwidget: UIWidgets.ComboBox, enums: {ParamEnum("", ""), ParamEnum("Company Commander", "Company Commander"), ParamEnum("Platoon Leader", "Platoon Leader"),  ParamEnum("Medical Officer", "Medical Officer"), ParamEnum("Squad Lead", "Squad Lead"), ParamEnum("Forward Observer", "Forward Observer"), ParamEnum("JTAC", "JTAC"), ParamEnum("Vehicle Lead", "Vehicle Lead"), ParamEnum("Indirect Lead", "Indirect Lead"), ParamEnum("Logi Lead", "Logi Lead"), ParamEnum("First Sergeant", "First Sergeant"), ParamEnum("Platoon Sergeant", "Platoon Sergeant")})]
 	string m_sRoleToOverride;
 	
 	[Attribute()]

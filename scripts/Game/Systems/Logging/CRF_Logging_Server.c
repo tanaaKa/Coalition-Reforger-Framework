@@ -8,12 +8,12 @@
 *	Server only
 */
 [ComponentEditorProps(category: "CRF Logging Component", description: "")]
-class CRF_LoggingServerComponentClass: CLB_GamemodeComponentClass
+class CRF_LoggingServerComponentClass: SCR_BaseGameModeComponentClass
 {
 	
 }
 
-class CRF_LoggingServerComponent: CLB_GamemodeComponent
+class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 {	
 	const string SEPARATOR = ",";
 	const string m_sLogPath = "$profile:COAServerLog.txt";
@@ -55,6 +55,9 @@ class CRF_LoggingServerComponent: CLB_GamemodeComponent
 		m_handle = FileIO.OpenFile(m_sLogPath, FileMode.APPEND);
 		
 		m_handle.WriteLine("mission" + SEPARATOR + "beginning" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
+		
+		CRF_Gamemode.GetInstance().GetOnStateChanged().Insert(OnGamemodeStateChanged);
+		OnGamemodeStateChanged(CRF_GamemodeState.INITIAL);
 	}
 	
 	// Player Connected
@@ -81,32 +84,32 @@ class CRF_LoggingServerComponent: CLB_GamemodeComponent
 	}
 	
 	// Mission status messages 
-	override void OnGamemodeStateChanged()
+	void OnGamemodeStateChanged(CRF_GamemodeState state)
 	{
 		if (!Replication.IsServer())
 			return;
 		
-		CLB_GamemodeState state = CLB_Gamemode.GetInstance().m_GamemodeState;
+		//Print(state);
 		
 		m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
 		switch (state)
 		{
-			case CLB_GamemodeState.SLOTTING:
+			case CRF_GamemodeState.SLOTTING:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "slotting" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case CLB_GamemodeState.INITIAL:
+			case CRF_GamemodeState.INITIAL:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "briefing" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case CLB_GamemodeState.GAME:
+			case CRF_GamemodeState.GAME:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "safestart" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;
 			}
-			case CLB_GamemodeState.AAR:
+			case CRF_GamemodeState.AAR:
 			{
 				m_handle.WriteLine("mission" + SEPARATOR + "ended" + SEPARATOR + m_sMissionName + SEPARATOR + m_iPlayerCount);
 				break;

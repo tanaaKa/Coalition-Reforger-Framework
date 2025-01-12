@@ -72,7 +72,6 @@ class CRF_SupplyExtractionGameModeComponent: SCR_BaseGameModeComponent
 
 	//For checking to see if safestart is running
 	protected SCR_PopUpNotification m_PopUpNotification = null;
-	CLB_Gamemode m_safestart;
 
 	//------------------------------------------------------------------------------------------------
 	override protected void OnPostInit(IEntity owner)
@@ -90,7 +89,7 @@ class CRF_SupplyExtractionGameModeComponent: SCR_BaseGameModeComponent
 	protected void SupplyInit()
 	{
 		//Is the game running? I fucking hope so
-		if (m_safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning()) return;
+		if (CRF_GamemodeComponent.GetInstance().GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning()) return;
 		//Who's near extract?
 		int playerCount = CountFactionPlayers(m_extractionLocation, m_extractionDistance, m_factionKey);
 		//Who's alive
@@ -138,8 +137,7 @@ class CRF_SupplyExtractionGameModeComponent: SCR_BaseGameModeComponent
 	//Cause it starts not running and can fuck up some init code
 	void WaitTillGameStart()
 	{
-		m_safestart = CLB_Gamemode.GetInstance();
-		if (!m_safestart.GetSafestartStatus()) 
+		if (!CRF_GamemodeComponent.GetInstance().GetSafestartStatus()) 
 		{
 			m_extractionLocation = GetGame().GetWorld().FindEntityByName(m_extractionObject).GetOrigin();
 			GetGame().GetCallqueue().Remove(WaitTillGameStart);
