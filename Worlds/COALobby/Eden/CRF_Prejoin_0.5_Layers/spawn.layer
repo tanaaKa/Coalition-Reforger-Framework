@@ -880,6 +880,10 @@ $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification
   angleY -33.661
  }
 }
+SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
+ coords 4912.772 28.594 11763.633
+ angleY 90.93
+}
 $grp SCR_DestructibleEntity : "{A968F1BDCB2595BD}Prefabs/Structures/Walls/Concrete/ConcreteWall_01/ConcreteWall_01_camo_6m_B.et" {
  {
   coords 4882.01 0.83 11662.115
