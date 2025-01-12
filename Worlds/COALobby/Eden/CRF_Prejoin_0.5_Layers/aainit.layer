@@ -2,16 +2,10 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
  coords 9994.791 0 1406.353
 }
 CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
- components {
-  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
-   m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{629E5222AC1510B5}" {
-    m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
-   }
-  }
- }
  coords 6490.654 177.993 6794.724
  m_bAutoPlayerRespawn 1
- m_sFactionOneKey "CIV"
+ m_iTimeLimitMinutes 90
+ m_bDeleteJIPSlots 0
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTitle "Prejoin"
@@ -24,10 +18,8 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Any feedback is welcome, just DM me @geek_x on Discord!"
   }
  }
- m_iTimeLimitMinutes 90
- m_bDeleteJIPSlots 0
-}
-SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
- coords 4912.772 28.594 11763.633
- angleY 90.93
+ m_sFactionOneKey "CIV"
+ m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{64570ACB9A9C5C52}" {
+  m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
+ }
 }
