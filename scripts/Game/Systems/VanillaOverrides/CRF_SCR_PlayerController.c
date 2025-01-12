@@ -133,6 +133,18 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().RespawnPlayer(playerID, prefab, position, groupID);
 	}
 	
+	// Ask server to respawn player after timer ends
+	void RespawnWithTicket(int playerId)
+	{
+		Rpc(RpcDo_RespawnWithTicket, playerId)	
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_RespawnWithTicket(int playerID)
+	{
+		CRF_Gamemode.GetInstance().RespawnPlayerTicket(playerID);
+	}
+	
 	void UpdateCameraPos(vector cameraPos[4])
 	{
 		//Rpc(RpcDo_UpdateCameraPos, entityID, cameraPos);
