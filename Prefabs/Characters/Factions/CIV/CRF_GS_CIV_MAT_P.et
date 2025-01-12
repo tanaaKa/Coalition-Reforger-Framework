@@ -19,7 +19,7 @@ SCR_ChimeraCharacter : "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_
     }
    }
   }
-  CLB_PlayableCharacter "{62F200EA748008B9}" {
+  CRF_PlayableCharacter "{62F200EA748008B9}" {
    m_sName "Medium Anti-Tank Gunner"
    m_bIsPlayable 1
    m_bIsSpecialty 1

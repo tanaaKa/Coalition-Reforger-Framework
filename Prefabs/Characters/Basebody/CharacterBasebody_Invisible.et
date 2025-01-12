@@ -1,0 +1,31 @@
+GenericEntity {
+ ID "633B21304D3C78AA"
+ components {
+  MeshObject "{633B21304D3C6199}" {
+   Object "{9F3AF591CD6DFE1A}Assets/Characters/Basebody/Basebody_Male_01.xob"
+   Materials {
+    MaterialAssignClass "{633B213047025511}" {
+     SourceMaterial "Basebody_01_Male_Arms"
+     AssignedMaterial "{916CDF1F5C63010C}Terrains/Common/Water/WaterTreatmentPlant/WaterTreatmentPlant_Clear.emat"
+    }
+    MaterialAssignClass "{633B21304702550D}" {
+     SourceMaterial "Basebody_01_Male_Arms_wound"
+     AssignedMaterial "{916CDF1F5C63010C}Terrains/Common/Water/WaterTreatmentPlant/WaterTreatmentPlant_Clear.emat"
+    }
+    MaterialAssignClass "{633B213047025570}" {
+     SourceMaterial "Basebody_01_Male_Body"
+     AssignedMaterial "{916CDF1F5C63010C}Terrains/Common/Water/WaterTreatmentPlant/WaterTreatmentPlant_Clear.emat"
+    }
+    MaterialAssignClass "{633B213047025573}" {
+     SourceMaterial "Basebody_01_Male_Body_wound"
+     AssignedMaterial "{916CDF1F5C63010C}Terrains/Common/Water/WaterTreatmentPlant/WaterTreatmentPlant_Clear.emat"
+    }
+   }
+   LODFactors {
+    4 0.8 0.1 0.1 0.1
+   }
+   PixelSizeScale 2
+  }
+ }
+ coords -18.369 1 8.297
+}

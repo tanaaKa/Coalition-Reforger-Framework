@@ -1,4 +1,36 @@
 //------------------------------------------------------------------------------------------------
+// CONTAINER
+//------------------------------------------------------------------------------------------------
+
+[BaseContainerProps()]
+class CRF_GearScriptContainer
+{
+	[Attribute("", UIWidgets.ResourceNamePicker, desc: "Gearscript applied to all entities on this faction", "conf class=CRF_GearScriptConfig")]
+	ResourceName m_rGearScript;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableMiniArsenal;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rLeadershipRadiosPrefab;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rRTORadiosPrefab;
+	
+	[Attribute(uiwidget: "resourcePickerThumbnail", params: "et")]
+	ResourceName m_rGIRadiosPrefab;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableLeadershipRadios;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableRTORadios;
+	
+	[Attribute("true", UIWidgets.CheckBox)]
+	bool m_bEnableGIRadios;
+};
+
+//------------------------------------------------------------------------------------------------
 // MASTER
 //------------------------------------------------------------------------------------------------
 
