@@ -6,7 +6,7 @@ class SCR_RadioRespawnSystem : SCR_InventoryAction
 ////	protected CRF_RadioRespawnSystemComponent m_radioComponent;
 //	protected string m_factionKey;
 //	protected int m_groupID;
-//	protected CLB_Gamemode m_safestart;
+//	protected CRF_Gamemode m_safestart;
 //	protected IEntity m_player;
 //	protected int m_playerID = -1;
 //	protected SCR_GroupsManagerComponent m_groupManager;

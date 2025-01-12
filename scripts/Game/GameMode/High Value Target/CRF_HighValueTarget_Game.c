@@ -31,8 +31,6 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	
 	[Attribute("0 0 0", "auto", "The rotation of the prefab")]
 	 vector m_hvtPrefabYaw;
-	
-	CLB_Gamemode m_safestart;
 		
 	[RplProp(onRplName: "updateHvtPos")]
 	vector m_sHvtPos;
@@ -110,8 +108,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 	
 	void WaitTillSafeStartEnds()
 	{
-		m_safestart = CLB_Gamemode.GetInstance();
-		if (!m_safestart.GetSafestartStatus())
+		if (!CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 		{	
 			GetGame().GetCallqueue().Remove(WaitTillSafeStartEnds);
 			if (Replication.IsServer())

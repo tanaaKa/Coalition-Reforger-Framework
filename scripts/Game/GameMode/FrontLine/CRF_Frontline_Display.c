@@ -66,8 +66,7 @@ class CRF_Frontline_HUD : SCR_InfoDisplay
 			return;
 		};
 		
-		CLB_Gamemode safestart = CLB_Gamemode.GetInstance();
-		if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() || !safestart.m_bHUDVisible)
+		if(CRF_GamemodeComponent.GetInstance().GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning() || !CRF_GamemodeComponent.GetInstance().m_bHUDVisible)
 			m_wRoot.SetOpacity(0);
 		else
 			m_wRoot.SetOpacity(1);

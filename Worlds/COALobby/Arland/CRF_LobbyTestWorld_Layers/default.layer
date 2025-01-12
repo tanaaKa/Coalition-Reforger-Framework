@@ -1,7 +1,7 @@
 SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
  coords 2506.797 147.634 2250.988
 }
-CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
   SCR_InitWeatherComponent "{64427040F14EBE5E}" {
   }
