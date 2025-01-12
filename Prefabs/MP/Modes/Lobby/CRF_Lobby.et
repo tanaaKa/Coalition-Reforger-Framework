@@ -353,14 +353,6 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      }
      m_sFactionBackground "{781301447441F404}UI/Textures/DeployMenu/Loadout-BG/Loadout_BG_Civilian.imageset"
     }
-    SCR_Faction "{5E5106B25048F22B}" {
-     UIInfo SCR_FactionUIInfo "{5E5106B6FC0CCF01}" {
-      Name "BLUFOR"
-     }
-     m_NotificationFactionColor 0.016 0.552 0.905 1
-     m_NotificationTextFactionColor 0.013 0.395 0.651 1
-     m_sFactionRadioEncryptionKey "chickenNuggets"
-    }
     SCR_Faction "{628B22E9B4056C88}" {
      FactionKey "BLUFOR"
      FactionColor 0.016 0.552 0.905 1
