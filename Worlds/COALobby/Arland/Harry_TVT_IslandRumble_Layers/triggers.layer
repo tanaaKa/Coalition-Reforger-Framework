@@ -27,6 +27,7 @@ $grp SCR_FactionControlTriggerEntity {
   "	}"
   TriggerShapeType Sphere
   SphereRadius 60
+  DrawShape 1
   PeriodicQueries 1
   UpdatePeriod 15
   OnQueryFinished ""\
@@ -90,6 +91,7 @@ $grp SCR_FactionControlTriggerEntity {
   "	}"
   TriggerShapeType Sphere
   SphereRadius 60
+  DrawShape 1
   PeriodicQueries 1
   UpdatePeriod 15
   OnQueryFinished ""\
