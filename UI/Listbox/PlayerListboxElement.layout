@@ -1,0 +1,120 @@
+ButtonWidgetClass {
+ Name "rootFrame"
+ Slot AlignableSlot "{62F2056BF4F1EC36}" {
+  HorizontalAlign 3
+  VerticalAlign 3
+ }
+ components {
+  CRF_ListBoxElementComponent "{62F200F0C4795E5F}" {
+  }
+ }
+ style blank
+ {
+  SizeLayoutWidgetClass "{630A25D7A5616D68}" {
+   Name "SizeLayout"
+   Slot ButtonWidgetSlot "{5548E6E7E6AEDDC1}" {
+    HorizontalAlign 3
+   }
+   AllowHeightOverride 1
+   HeightOverride 40
+   {
+    OverlayWidgetClass "{630A25D7A5616D69}" {
+     Name "Overlay"
+     Slot ButtonWidgetSlot "{5548E6E7F213FB11}" {
+      HorizontalAlign 3
+      VerticalAlign 3
+     }
+     Clipping False
+     {
+      ImageWidgetClass "{630A25D7A5616D16}" {
+       Name "Image0"
+       Slot OverlayWidgetSlot "{630A2578A5208A35}" {
+        HorizontalAlign 3
+       }
+       Color 0.044 0.044 0.044 0.137
+       Size 40 512
+       "Transition width" 1
+       Progress 0.52
+      }
+      PanelWidgetClass "{630A25D7A5616D1E}" {
+       Name "Border"
+       Slot OverlayWidgetSlot "{5548E6E7D859FCD2}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+       }
+       "Is Visible" 0
+       Color 0.761 0.386 0.08 1
+       style outline_2px
+      }
+      ImageWidgetClass "{630A25D7EF51CC94}" {
+       Name "Image"
+       Slot OverlayWidgetSlot "{630A25D63A026CBC}" {
+        HorizontalAlign 0
+        Padding 0 0 135 0
+       }
+       Image ""
+       Size 32 32
+      }
+      FrameWidgetClass "{630A25D7A5616D17}" {
+       Name "ButtonLayout"
+       Slot OverlayWidgetSlot "{62F200F27385E1FB}" {
+        HorizontalAlign 0
+       }
+       {
+        TextWidgetClass "{630A25D7A5616D14}" {
+         Name "Text"
+         Slot FrameWidgetSlot "{630A2568FA12B1F6}" {
+          Anchor 0 0 0 0
+          PositionX 38.76
+          OffsetLeft 38.76
+          PositionY 0
+          OffsetTop 0
+          SizeX 133.678
+          OffsetRight -172.438
+          SizeY 35.557
+          OffsetBottom -35.557
+         }
+         Clipping Ancestor
+         Color 1 1 1 0.706
+         Text "RqandAlThor"
+         "Min Font Size" 5
+         "Vertical Alignment" Center
+         Wrap 1
+        }
+        ButtonWidgetClass "{630A25D7A5616D15}" {
+         Name "PlayerButton"
+         Slot FrameWidgetSlot "{630510543BD8CBB1}" {
+          PositionX 38.075
+          OffsetLeft 38.075
+          PositionY 0
+          OffsetTop 0
+          SizeX 134.038
+          OffsetRight -172.113
+          SizeY 35.557
+          OffsetBottom -35.557
+         }
+         "Z Order" 10
+         Color 1 1 1 0.012
+         components {
+          ButtonComponent "{6305105441730952}" {
+           m_ColorButtonDefault 0 0 0 0
+           m_sSoundClicked ""
+           m_sSoundFocused ""
+           m_sSoundHovered ""
+          }
+          SCR_ButtonTextComponent "{630510843AEEE3AD}" {
+           m_sSoundHovered ""
+           m_sSoundClicked ""
+           m_BackgroundSelected 0.76 0.392 0.08 0.3
+           m_TextToggled 0.761 0.386 0.078 1
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
