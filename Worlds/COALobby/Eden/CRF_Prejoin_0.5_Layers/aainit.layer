@@ -10,6 +10,8 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 6490.654 177.993 6794.724
+ m_bAutoPlayerRespawn 1
+ m_sFactionOneKey "CIV"
  m_aMissionDescriptors {
   CLB_MissionDescriptor "{644250503DF684C0}" {
    m_sTitle "Prejoin"
@@ -24,4 +26,8 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  }
  m_iTimeLimitMinutes 90
  m_bDeleteJIPSlots 0
+}
+SCR_SpawnPoint : "{A79A87C616EEA08A}PrefabsEditable/SpawnPoints/E_SpawnPoint_CIV.et" {
+ coords 4912.772 28.594 11763.633
+ angleY 90.93
 }
