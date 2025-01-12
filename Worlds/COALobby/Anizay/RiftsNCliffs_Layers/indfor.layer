@@ -1,0 +1,33 @@
+SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDFOR_Platoon_p.et" {
+ coords 9376.766 67.51 460.26
+ angleY -127.554
+ {
+  SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+   coords 0.368 -0.281 22.164
+   angleY 127.554
+   {
+    SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+     coords -1.016 0.709 -16.219
+     {
+      SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_Infantry_p.et" {
+       coords 1.627 -0.58 -14.778
+       {
+        SCR_AIGroup : "{0A56302C3814952B}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_MMGTeam_p.et" {
+         coords 0.41 -0.992 -10.494
+         {
+          SCR_AIGroup : "{F894CE09B5815A68}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_AATeam_p.et" {
+           coords 2.561 -4.369 -8.581
+           m_aUnitPrefabSlots {
+            "{8949382562216B1E}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_SL_P.et" "{2EE458983CC5B8EF}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AA_P.et" "{2EE458983CC5B8EF}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AA_P.et" "{2EE458983CC5B8EF}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AA_P.et"
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

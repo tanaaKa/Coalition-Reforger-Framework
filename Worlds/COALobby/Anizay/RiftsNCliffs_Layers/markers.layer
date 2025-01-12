@@ -1,0 +1,883 @@
+PS_ManualMarker : "{36BD5DC9A80977F2}PrefabsEditable/Markers/INDFORSafeStartBorderMarker.et" {
+ coords 8562.682 109.447 6705.679
+ angleY 0
+ m_MarkerColor 0.561 0.071 0.071 1
+ m_sDescription "OPFOR Safe Start Border"
+ m_aVisibleForFactions {
+  "OPFOR"
+ }
+ {
+  $grp PS_ManualMarker : "{36BD5DC9A80977F2}PrefabsEditable/Markers/INDFORSafeStartBorderMarker.et" {
+   {
+    coords -3.826 1.044 -75.177
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -36.584 2.081 -110.138
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -101.053 1.931 -121.098
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -154.15 1.505 -96.991
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -173.877 1.152 3.092
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -179.366 2.04 113.934
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -113.564 7.993 175.027
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords -68.173 -2.537 196.816
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords 48.041 2.083 173.122
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+   {
+    coords 96.49 2.066 50.397
+    angleY 0
+    m_MarkerColor 0.561 0.071 0.071 1
+    m_sDescription "OPFOR Safe Start Border"
+    m_aVisibleForFactions {
+     "OPFOR"
+    }
+   }
+  }
+ }
+}
+PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker_INDFOR.et" {
+ coords 10220.509 144.917 3054.619
+ angleY 0
+ m_sDescription "SS Limit (INDFOR)"
+ m_aVisibleForFactions {
+  "INDFOR"
+ }
+ m_bVisibleForEmptyFaction 0
+ m_bShowForAnyFaction 0
+ {
+  $grp PS_ManualMarker : "{75C8FEC653BE08CB}PrefabsEditable/Markers/GameZoneMarker_INDFOR.et" {
+   {
+    coords -226.613 -34.277 -17.649
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -366.495 -26.861 -23.906
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -599.936 -32.105 -41.724
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -736.643 -36.234 -70.842
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -981.241 -25.23 -49.409
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -1179.95 -34.582 -72.395
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -1360.314 -24.134 -113.505
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -1585.198 -13.444 -162.157
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -1791.265 24.205 -175.261
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -1999.173 33.937 -196.552
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2144.214 -14.854 -288.614
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2321.101 -15.719 -394.383
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2463.14 -16.075 -471.147
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2653.278 7.84 -537.631
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2680.97 35 -642.632
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2689.904 71.28 -791.39
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2704.875 77.072 -930.263
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2713.987 17.545 -1099.659
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2688.761 23.304 -1312.203
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2623.597 7.411 -1504.643
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2759.62 65.661 -1671.44
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2870.902 7.842 -1970.921
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2889.557 -4.744 -2250.308
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2913.605 -10.485 -2541.946
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -2960.171 23.463 -2730.092
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+   {
+    coords -3029.602 56.949 -3037.258
+    angleY 0
+    m_sDescription "SS Limit (INDFOR)"
+    m_aVisibleForFactions {
+     "INDFOR"
+    }
+    m_bVisibleForEmptyFaction 0
+    m_bShowForAnyFaction 0
+   }
+  }
+ }
+}
+$grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
+ {
+  coords 8589.136 111.582 7210.871
+  angleY 0
+  {
+   $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
+    {
+     coords 174.282 -20.89 -140.979
+     angleY 0
+    }
+    {
+     coords 237.644 -38.468 -280.251
+     angleY 0
+    }
+    {
+     coords 308.265 -43.479 -499.621
+     angleY 0
+    }
+    {
+     coords 356.969 -46.325 -677.608
+     angleY 0
+    }
+    {
+     coords 527.332 -51.404 -865.587
+     angleY 0
+    }
+    {
+     coords 638.666 -50.74 -1086.604
+     angleY 0
+    }
+    {
+     coords 776.527 -53.217 -1319.403
+     angleY 0
+    }
+    {
+     coords 849.068 -61.723 -1504.333
+     angleY 0
+    }
+    {
+     coords 1016.277 -69.779 -1602.531
+     angleY 0
+    }
+    {
+     coords 1130.439 -65.978 -1509.131
+     angleY 0
+    }
+    {
+     coords 1263.762 -63.492 -1619.455
+     angleY 0
+    }
+    {
+     coords 1329.981 -73.16 -1757.697
+     angleY 0
+    }
+    {
+     coords 1442.609 -80.741 -1896.448
+     angleY 0
+    }
+    {
+     coords 1570.962 -81.279 -1939.128
+     angleY 0
+    }
+    {
+     coords 1672.537 -59.013 -1919.386
+     angleY 0
+    }
+    {
+     coords -118.616 1.602 9.303
+     angleY 0
+    }
+    {
+     coords -284.101 0.546 3.568
+     angleY 0
+    }
+    {
+     coords -402.36 -17.422 -5.692
+     angleY 0
+    }
+    {
+     coords -3402.683 179.367 -7110.457
+     angleY 0
+    }
+    {
+     coords -3373.662 158.98 -6990.764
+     angleY 0
+    }
+    {
+     coords -3435.538 160.487 -6849.326
+     angleY 0
+    }
+    {
+     coords -3562.652 162.512 -6721.053
+     angleY 0
+    }
+    {
+     coords -3594.769 132.546 -6564.671
+     angleY 0
+    }
+    {
+     coords -3554.986 127.484 -6417.586
+     angleY 0
+    }
+    {
+     coords -3508.412 127.146 -6334.846
+     angleY 0
+    }
+    {
+     coords -3392.692 121.846 -6201.135
+     angleY 0
+    }
+    {
+     coords -3369.511 94.071 -6052.104
+     angleY 0
+    }
+    {
+     coords -3372.403 92.144 -5887.848
+     angleY 0
+    }
+    {
+     coords -3357.139 102.873 -5774.042
+     angleY 0
+    }
+    {
+     coords -3261.969 109.735 -5705.542
+     angleY 0
+    }
+    {
+     coords -3160.473 97.5 -5637.003
+     angleY 0
+    }
+    {
+     coords -3135.194 81.907 -5502.524
+     angleY 0
+    }
+    {
+     coords -3109.024 82.357 -5418.55
+     angleY 0
+    }
+    {
+     coords -3078.574 73.497 -5294.858
+     angleY 0
+    }
+    {
+     coords -3107.263 60.181 -5184.008
+     angleY 0
+    }
+    {
+     coords -3100.036 66.534 -5108.813
+     angleY 0
+    }
+    {
+     coords -3182.74 73.054 -5053.184
+     angleY 0
+    }
+    {
+     coords -3196.587 74.514 -4983.348
+     angleY 0
+    }
+    {
+     coords -3208.382 66.201 -4898.578
+     angleY 0
+    }
+    {
+     coords -3245.121 63.943 -4817.546
+     angleY 0
+    }
+    {
+     coords -3215.853 71.671 -4764.55
+     angleY 0
+    }
+    {
+     coords -3176.492 75.161 -4706.065
+     angleY 0
+    }
+    {
+     coords -3100.144 89.786 -4589.689
+     angleY 0
+    }
+    {
+     coords -3038.024 83.469 -4524.955
+     angleY 0
+    }
+    {
+     coords -2973.045 81.317 -4418.596
+     angleY 0
+    }
+    {
+     coords -2911.018 86.007 -4330.31
+     angleY 0
+    }
+    {
+     coords -2889.235 97.282 -4189.004
+     angleY 0
+    }
+    {
+     coords -2977.797 103.717 -3999.658
+     angleY 0
+    }
+    {
+     coords -3099.109 88.345 -3888.09
+     angleY 0
+    }
+    {
+     coords -3214.19 111.176 -3929.822
+     angleY 0
+    }
+    {
+     coords -3347.182 101.306 -3900.462
+     angleY 0
+    }
+    {
+     coords -3462.274 90.042 -3852.304
+     angleY 0
+    }
+    {
+     coords -3548.984 105.568 -3742.605
+     angleY 0
+    }
+    {
+     coords -3607.991 121.625 -3650.837
+     angleY 0
+    }
+    {
+     coords -3649.851 94.011 -3463.719
+     angleY 0
+    }
+    {
+     coords -3697.612 74.493 -3339.64
+     angleY 0
+    }
+    {
+     coords -3714.294 74.192 -3219.926
+     angleY 0
+    }
+    {
+     coords -3706.138 62.382 -3027.647
+     angleY 0
+    }
+    {
+     coords -3742.48 61.553 -2896.123
+     angleY 0
+    }
+    {
+     coords -3770.338 49.655 -2775.1
+     angleY 0
+    }
+    {
+     coords -3832.458 56.245 -2589.353
+     angleY 0
+    }
+    {
+     coords -3858.154 50.634 -2485.935
+     angleY 0
+    }
+    {
+     coords -3829.568 41.919 -2335.401
+     angleY 0
+    }
+    {
+     coords -3824.969 35.079 -2216.398
+     angleY 0
+    }
+    {
+     coords -3796.081 22.429 -2043.35
+     angleY 0
+    }
+    {
+     coords -3754.218 25.387 -1909.824
+     angleY 0
+    }
+    {
+     coords -3732.273 23.115 -1730.505
+     angleY 0
+    }
+    {
+     coords -3714.864 21.586 -1564.005
+     angleY 0
+    }
+    {
+     coords -3654.503 24.42 -1454.919
+     angleY 0
+    }
+    {
+     coords -3655.798 23.9 -1390.595
+     angleY 0
+    }
+    {
+     coords -3650.738 24.341 -1210.095
+     angleY 0
+    }
+    {
+     coords -3649.815 15.861 -1083.562
+     angleY 0
+    }
+    {
+     coords -3573.125 22.908 -936.478
+     angleY 0
+    }
+    {
+     coords -3525.894 26.758 -799.787
+     angleY 0
+    }
+    {
+     coords -3464.785 19.502 -693.271
+     angleY 0
+    }
+    {
+     coords -3523.805 28.924 -594.231
+     angleY 0
+    }
+    {
+     coords -3408.966 1.049 -461.232
+     angleY 0
+    }
+    {
+     coords -3316.179 2.838 -359.317
+     angleY 0
+    }
+    {
+     coords -3349.599 6.798 -207.809
+     angleY 0
+    }
+    {
+     coords -3260.347 -1.565 -105.63
+     angleY 0
+    }
+    {
+     coords -3129.218 11.587 2.074
+     angleY 0
+    }
+    {
+     coords -2855.519 0.122 25.247
+     angleY 0
+    }
+    {
+     coords -2712.497 2.055 -63.964
+     angleY 0
+    }
+    {
+     coords -2459.929 1.942 22.271
+     angleY 0
+    }
+    {
+     coords -2263.563 -4.176 -0.488
+     angleY 0
+    }
+    {
+     coords -2045.919 -8.682 -87.25
+     angleY 0
+    }
+    {
+     coords -1858.955 -14.725 -140.56
+     angleY 0
+    }
+    {
+     coords -1704.466 -9.846 -95.977
+     angleY 0
+    }
+    {
+     coords -1539.643 -7.583 -129.849
+     angleY 0
+    }
+    {
+     coords -1349.889 -20.009 -95.881
+     angleY 0
+    }
+    {
+     coords -1054.846 -23.267 -57.863
+     angleY 0
+    }
+    {
+     coords -852.02 -17.68 -41.492
+     angleY 0
+    }
+    {
+     coords -608.117 -14.799 -14.916
+     angleY 0
+    }
+    {
+     coords -349.442 -0.512 18.976
+     angleY 0
+    }
+   }
+  }
+ }
+ searchzoneborder {
+  coords 10210.078 123.243 1691.299
+  angleY 0
+  m_sDescription "Search Zone"
+  {
+   $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
+    {
+     coords -218.217 38.086 22.595
+     angleY 0
+    }
+    {
+     coords -416.322 -9.41 -5.133
+     angleY 0
+    }
+    {
+     coords -546.87 -49.606 -28.086
+     angleY 0
+    }
+    {
+     coords -666.232 -88.222 -108.297
+     angleY 0
+    }
+    {
+     coords -772.944 -76.847 -125.181
+     angleY 0
+    }
+    {
+     coords -879.497 -79.015 -117.614
+     angleY 0
+    }
+    {
+     coords -982.512 -61.76 -216.102
+     angleY 0
+    }
+    {
+     coords -1101.015 -29.834 -275.262
+     angleY 0
+    }
+    {
+     coords -1190.666 -15.774 -340.034
+     angleY 0
+    }
+    {
+     coords -1262.769 -16.551 -426.76
+     angleY 0
+    }
+    {
+     coords -1376.95 -21.739 -453.839
+     angleY 0
+    }
+    {
+     coords -1457.049 -22.813 -535.044
+     angleY 0
+    }
+    {
+     coords -1552.063 -20.659 -608.046
+     angleY 0
+    }
+    {
+     coords -1554.399 -23.306 -688.532
+     angleY 0
+    }
+    {
+     coords -1510.875 -24.296 -783.402
+     angleY 0
+    }
+    {
+     coords -1455.413 -6.096 -889.991
+     angleY 0
+    }
+    {
+     coords -1406.509 -26.963 -1047.089
+     angleY 0
+    }
+    {
+     coords -1354.828 -56.473 -1192.505
+     angleY 0
+    }
+    {
+     coords -1359.146 -63.756 -1329.144
+     angleY 0
+    }
+    {
+     coords -1359.83 -64.377 -1429.841
+     angleY 0
+    }
+    {
+     coords -1360.792 -68.387 -1554.426
+     angleY 0
+    }
+    {
+     coords -1351.488 -44.296 -1613.496
+     angleY 0
+    }
+   }
+  }
+ }
+}
+$grp PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
+ {
+  coords 8502.852 111.555 6701.484
+  angleY 90
+  m_MarkerColor 0.502 0 0 1
+  m_sDescription "OPFOR Spawn"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+ }
+ {
+  coords 9306.37 61.031 435.846
+  angleY 90
+  m_MarkerColor 0 0.502 0.125 1
+ }
+ {
+  coords 9299.436 162.288 566.666
+  angleY 0
+  m_MarkerColor 0 0.502 0.125 1
+  m_sQuadName "objective-marker"
+  m_sDescription "Cache Cave"
+ }
+}

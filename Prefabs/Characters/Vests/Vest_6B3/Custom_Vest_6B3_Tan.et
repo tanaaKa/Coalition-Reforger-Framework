@@ -1,0 +1,39 @@
+GenericEntity : "{67AD477577B7BFF2}Prefabs/Characters/Vests/Vest_6B3/Vest_6B3_base.et" {
+ ID "50D8C49B3558F152"
+ components {
+  SCR_ArmorDamageManagerComponent "{5E58DD321A29E783}" {
+   "Additional hit zones" {
+    HitZone Vest {
+     ColliderNames {
+     }
+    }
+   }
+   m_fPassedDamageScale 0.6
+  }
+  SCR_UniversalInventoryStorageComponent "{5E58B72A46DA985C}" {
+   Attributes SCR_ItemAttributeCollection "{5E58B72A42751C16}" {
+    CustomAttributes {
+     SCR_ArmoredClothItemData "{5E58B72BE8E9706F}" {
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5312D798A71DFBB1}" {
+   WornMaterialsOverride {
+    "{8E1245DFDFACBE52}Prefabs/Characters/Vests/Vest_6B3/Custom_Vest_6b3_Tan.emat"
+   }
+   ItemMaterialsOverride {
+    "{8E1245DFDFACBE52}Prefabs/Characters/Vests/Vest_6B3/Custom_Vest_6b3_Tan.emat"
+   }
+  }
+  ActionsManagerComponent "{53153A1F9AB97FF6}" {
+   ActionContexts {
+    UserActionContext "{5315328F7AEDED0B}" {
+     ContextName ""
+     Radius 0.3
+     Height 0
+    }
+   }
+  }
+ }
+}

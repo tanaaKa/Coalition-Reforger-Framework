@@ -1,0 +1,165 @@
+GenericEntity {
+ ID "6457409E6C58A34A"
+ components {
+  ColliderHistoryComponent "{645740A1A784F618}" {
+  }
+  InventoryItemComponent "{645740A43B7A915E}" {
+   Attributes SCR_ItemAttributeCollection "{645740A445FE72F7}" {
+    CustomAttributes {
+     SCR_ArmoredClothItemData "{645740A456670474}" {
+      m_aProtectedHitZones {
+       "Chest"
+      }
+      m_aProtectedDamageTypes {
+       4 5 2 3
+      }
+      m_MaterialResourceName "{1AE2448C41E561B6}Common/Materials/Game/Core/soft_aramid_base.gamemat"
+     }
+    }
+    m_Size SLOT_2x2
+   }
+  }
+  MeshObject "{6457409E59DDC4E2}" {
+   Object "{B2C1CA53540DCB84}Assets/Characters/Vests/Vest_6B3/Vest_6B3.xob"
+  }
+  RigidBody "{645740A1C842B7F5}" {
+   SimState None
+   ModelGeometry 1
+   Static 1
+  }
+  SCR_SoundDataComponent "{645740A1E0065200}" {
+   m_aAudioSourceConfiguration {
+    SCR_AudioSourceConfiguration "{645740A1E18BF72B}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_PICK_UP"
+    }
+    SCR_AudioSourceConfiguration "{645740A1E6142116}" {
+     m_sSoundProject "{A4549939684B6820}Sounds/Items/_SharedData/PickUp/Items_PickUp_Vest.acp"
+     m_sSoundEventName "SOUND_EQUIP"
+     m_eFlags 0
+    }
+    SCR_AudioSourceConfiguration "{645740A1E6A23493}" {
+     m_sSoundProject "{087200FA6DF8D1D2}Sounds/Items/_SharedData/Drop/Items_Drop_Vest.acp"
+     m_sSoundEventName "SOUND_DROP"
+    }
+   }
+  }
+  SCR_UniversalInventoryStorageComponent "{645740A1F717E586}" {
+   components {
+    SCR_EquipmentStorageComponent "{645740A1FD4D0F16}" {
+     Priority 2
+     StoragePurpose 64
+     UseVirtualInventoryReplication 0
+     InitialStorageSlots {
+      SCR_EquipmentStorageSlot FlashlightSlot {
+       PivotID "Spine5"
+       Offset -0.11 0.075 0.17
+       Angles 15 -20 0
+       Enabled 0
+       Prefab "{575EA58E67448C2A}Prefabs/Items/Equipment/Flashlights/Flashlight_Soviet_01/Flashlight_Soviet_01.et"
+       DisablePhysicsInteraction 1
+       AllowedItemTypes {
+        "FLASHLIGHT"
+       }
+       AnimatedMeshRefference "{B2C1CA53540DCB84}Assets/Characters/Vests/Vest_6B3/Vest_6B3.xob"
+      }
+     }
+    }
+   }
+   Attributes SCR_ItemAttributeCollection "{645740A20085ABB0}" {
+    ItemDisplayName UIInfo "{645740A206C8F413}" {
+     Name "6b3 Vest"
+     Description "(FOR USE IN COALITION FIGHT CLUB)"
+    }
+    ItemPhysAttributes ItemPhysicalAttributes "{645740A207EE4F90}" {
+     Weight 8.2
+     SizeSetupStrategy Manual
+     ItemDimensions 20 20 20
+     ItemVolume 5000
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{645740A22D7A3927}" {
+      CameraDistanceToItem 3.7
+      FOV 10
+      PreviewWornModel 1
+     }
+    }
+    m_Size SLOT_2x2
+   }
+   StoragePurpose 64
+   UseCapacityCoefficient 0
+   MaxCumulativeVolume 2000
+   MaxItemSize 10 10 10
+   m_fMaxWeight 10
+  }
+  BaseLoadoutClothComponent "{645740A2BACE42F3}" {
+   AreaType LoadoutArmoredVestSlotArea "{645740A2CA3DA7A4}" {
+   }
+   Slots {
+    LoadoutSlotInfo Canteen {
+     PivotID "spine3"
+     Offset -0.2094 -0.0798 -0.1163
+     Angles 0 -105.3767 0
+     Prefab "{70BC751317551D9B}Prefabs/Items/Equipment/Canteens/Canteen_Soviet_01.et"
+     EnableDeflatedOffset 1
+     DeflatedOffset -0.1987 -0.0798 -0.1134
+     DeflatedAngles 0 -105.3767 0
+    }
+    LoadoutSlotInfo Bayonet {
+     PivotID "spine3"
+     Offset 0.1923 0.057 -0.0511
+     Angles 7.2165 100.8907 0
+     Prefab "{F759F0488730620F}Prefabs/Items/Equipment/Accessories/Scabbard_Bayonet_6Kh4/Scabbard_Bayonet_6Kh4.et"
+     EnableDeflatedOffset 1
+     DeflatedOffset 0.1744 0.0599 -0.0477
+     DeflatedAngles 4.593 100.8907 0
+    }
+   }
+   WornModel "{B2C1CA53540DCB84}Assets/Characters/Vests/Vest_6B3/Vest_6B3.xob"
+   WornMaterialsOverride {
+    "{8E1245DFDFACBE52}Prefabs/Characters/Vests/Vest_6B3/Custom_Vest_6b3_Tan.emat"
+   }
+   ItemModel "{CBAA5ED35508C2BD}Assets/Characters/Vests/Vest_6B3/Vest_6B3_item.xob"
+   PhysicsOnWearEnabled 1
+   AnimateCollidersOnWear 1
+   SoundInt 400
+   DepthLeft 0.05
+   DepthRight 0.05
+   DeflatedModel "{4B9EA1AD192D9560}Assets/Characters/Vests/Vest_6B3/Vest_6B3_Deflated.xob"
+   AreaTypeWhenModelChange {
+    LoadoutBackpackArea "{645740A2BD209C55}" {
+    }
+   }
+   BlockedSlots {
+    LoadoutVestArea "{645740A2C19409C5}" {
+    }
+   }
+  }
+  ActionsManagerComponent "{645740A2962A0E7B}" {
+   ActionContexts {
+    UserActionContext "{645740A294CDE128}" {
+     Height 0
+    }
+   }
+   additionalActions {
+    SCR_PickUpItemAction "{645740A2988810D9}" {
+     ParentContextList {
+      "default"
+     }
+    }
+    SCR_EquipClothAction "{645740A29C52D37D}" {
+     ParentContextList {
+      "default"
+     }
+    }
+   }
+  }
+  RplComponent "{645740A1B7BF5D86}" {
+   "Rpl State Override" Runtime
+   "Parent Node From Parent Entity" 0
+  }
+  Hierarchy "{645740A1BFD601F7}" {
+  }
+ }
+ coords 0 0.191 0
+}

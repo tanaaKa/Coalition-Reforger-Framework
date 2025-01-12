@@ -1,0 +1,68 @@
+SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
+ coords 8336.322 113.181 6965.677
+}
+CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
+   m_OPFORGearScriptSettings CRF_GearScriptContainer "{629E5222ACF12871}" {
+    m_rGearScript "{0E6D67FD9BD2A0DC}Configs/Gearscripts/Custom/fluff/CRF_GS_USSR80sAfghan.conf"
+   }
+   m_INDFORGearScriptSettings CRF_GearScriptContainer "{629E5222AC7F68BE}" {
+    m_rGearScript "{C7F856669ADB6698}Configs/Gearscripts/Custom/fluff/CRF_GS_TalibanFLuffdssadf.conf"
+    m_bEnableGIRadios 0
+   }
+  }
+ }
+ coords 8334.907 111.486 6964.238
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "OPF"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "IND"
+ m_aMissionDescriptors {
+  CLB_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "Soviet VDV forces are deployed to track down an insurgent hideout that has been harssing regional supply lines."\
+   ""\
+   "OPFOR Composition: Airborne Infantry"\
+   "OPFOR Assets:"\
+   "1x MI-8 Transport (MGs + Rockets)"\
+   "1x MI-8 Transport (MGs)"\
+   "1x MI-8 Transport (Unarmed)"\
+   ""\
+   "INDFOR Composition: Guerilla Infantry"\
+   "INFFOR Assets:"\
+   "1x MMG Team"\
+   "1x AA Team"\
+   ""\
+   "Time: 75 minutes"\
+   ""\
+   "Weather: Clear"
+  }
+  CLB_MissionDescriptor "{64425051F2E00216}" {
+   m_sTitle "OPFOR Objectives"
+   m_sTextData "- Locate and seize the enemy weapons cache located in a cave somewhere near Murabat"
+  }
+  CLB_MissionDescriptor "{64425051B9B5AF67}" {
+   m_aFactionKeys {
+    ""
+   }
+  }
+  CLB_MissionDescriptor "{644250519BE30999}" {
+   m_sTextData "-Defend the weapons cache in the cave near Murabat"
+  }
+  CLB_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData "A trigger will be set off upon a successful capture of the cave, prompting text on the top of the screen."
+  }
+ }
+ m_iTimeLimitMinutes 75
+}
+SCR_FactionDominanceTriggerEntity missionEndTrigger {
+ coords 9317.036 71.728 559.096
+ TriggerShapeType Sphere
+ SphereRadius 50
+ TriggerActivationType "First change"
+ OnActivate ""\
+ "		SCR_PopUpNotification.GetInstance().PopupMsg(\"USSR forces have seized the weapons cache!\", 10, \"OPFOR Victory\");"\
+ "	"
+ m_sOwnerFactionKey "OPFOR"
+ m_fFriendlyRatioLimit 1
+}

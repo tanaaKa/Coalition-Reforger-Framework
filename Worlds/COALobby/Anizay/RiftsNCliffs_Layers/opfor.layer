@@ -1,0 +1,105 @@
+Vehicle Upgraded_Mi8MT_unarmed_transport1 : "{1FCF34410C6682E6}Prefabs/Vehicles/Helicopters/Mi8MT/Upgraded_Mi8MT_unarmed_transport.et" {
+ coords 8478.729 111.554 6706.352
+ angleY 89.076
+}
+Vehicle Upgraded_Mi8MT_armed1 : "{53337E216F65182E}Prefabs/Vehicles/Helicopters/Mi8MT/Upgraded_Mi8MT_armed.et" {
+ coords 8502.335 111.555 6655.428
+ angleY 89.258
+}
+SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR_Platoon_p.et" {
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Row"
+  }
+ }
+ coords 8518.55 111.531 6776.262
+}
+$grp SCR_AIGroup : "{67CF9BB46BE94DF0}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_AirCrew_p.et" {
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8505.093 111.531 6797.161
+  m_aUnitPrefabSlots {
+   "{5014F1D05348F21E}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Pilot_P.et" "{5014F1D05348F21E}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Pilot_P.et" "{E93346512E3C0AFA}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_CrewChief_P.et" "{E93346512E3C0AFA}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_CrewChief_P.et"
+  }
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8505.037 111.53 6804.057
+  m_aUnitPrefabSlots {
+   "{5014F1D05348F21E}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Pilot_P.et" "{5014F1D05348F21E}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Pilot_P.et" "{E93346512E3C0AFA}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_CrewChief_P.et" "{E93346512E3C0AFA}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_CrewChief_P.et"
+  }
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8505.078 111.531 6810.706
+ }
+}
+Vehicle Upgraded_Mi8MT_armed_gunship1 : "{72F91563A7C7DFC7}Prefabs/Vehicles/Helicopters/Mi8MT/Upgraded_Mi8MT_armed_gunship.et" {
+ coords 8501.408 111.555 6733.573
+ angleY 93.836
+}
+$grp SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8541.475 111.531 6783.619
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8541.656 111.531 6793.442
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8541.671 111.531 6800.252
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8541.46 111.531 6808.137
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 8541.452 111.531 6814.99
+ }
+}
+GenericEntity : "{D46BDDEABBEAD3A1}Prefabs/Models/Rocks/tem_rock5.et" {
+ components {
+  Occluder "{62D8C85BA824F886}" {
+   Enabled 0
+  }
+ }
+ coords 9295.266 -0.09 519.935
+ angleY 22.7
+ angleZ 7.777
+ scale 0.32
+}

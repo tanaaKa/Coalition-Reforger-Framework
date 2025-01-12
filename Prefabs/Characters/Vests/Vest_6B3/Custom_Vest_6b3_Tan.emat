@@ -1,0 +1,7 @@
+MatPBRBasic {
+ Color 0.637 0.596 0.424 1
+ RoughnessScale 1.5
+ CavityFromAO 0.978
+ BCRMap "{1AA25E5516D1E3C9}Assets/Characters/Vests/Vest_6B3/Data/Vest_6b3_BCR.edds"
+ NMOMap "{227AE5C7CFA6B157}Assets/Characters/Vests/Vest_6B3/Data/Vest_6b3_NMO.edds"
+}
