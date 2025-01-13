@@ -1,36 +1,94 @@
 $grp Vehicle : "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et" {
  UH1H1 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4893.722 28.594 11785.909
   angleY -90.798
  }
  UH1H2 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4893.633 28.594 11814.716
   angleY -90.798
  }
  UH1H4 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4893.826 28.594 11849.182
   angleY -90.798
  }
  UH1H5 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4893.722 28.594 11882.124
   angleY -90.798
  }
  UH1H6 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4860.718 28.594 11814.716
   angleY -90.798
  }
  UH1H8 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4860.911 28.594 11849.182
   angleY -90.798
  }
  UH1H9 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4860.807 28.594 11882.123
   angleY -90.798
  }
  UH1H10 {
+  components {
+   SCR_FuelConsumptionComponent "{5D5921F8C6EFACA8}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
   coords 4860.807 28.594 11785.909
   angleY -90.798
  }
+}
+PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
+ coords 4911.413 28.594 11829.254
+ m_MarkerColor 0.392 0.157 0.624 1
+ m_sDescription "Airport"
+ m_aVisibleForFactions {
+  "CIV"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_bShowForAnyFaction 1
 }
 $grp Vehicle : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
  Mi8MT_unarmed_transport1 {

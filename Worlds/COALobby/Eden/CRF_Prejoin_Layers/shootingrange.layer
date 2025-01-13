@@ -632,6 +632,16 @@ $grp GenericEntity : "{BBE13893AEA69C0C}Prefabs/Props/Military/Sandbags/Sandbag_
   angleY 180
  }
 }
+PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
+ coords 7347.85 122.804 5307.337
+ m_MarkerColor 0.392 0.157 0.624 1
+ m_sDescription "Shooting Range"
+ m_aVisibleForFactions {
+  "CIV"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_bShowForAnyFaction 1
+}
 $grp GenericEntity : "{CCCC784526173F16}Prefabs/Structures/Signs/Military/Sign_FiringRange_US_01.et" {
  {
   coords 7325.806 121.841 5309.297
