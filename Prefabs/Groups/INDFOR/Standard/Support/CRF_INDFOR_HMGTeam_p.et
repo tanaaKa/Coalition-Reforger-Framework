@@ -10,12 +10,11 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_Image "{EFA0BA63504B1230}Images/UI/Zeus GearScript Factions/INDFOR_NATO.edds"
     m_sFaction "INDFOR"
     m_aAuthoredLabels {
-     4 51872
+     4 51872 34 25 38
     }
     m_aAutoLabels {
      71
     }
-
     m_EntityChildrenBudgetCost {
      SCR_EntityBudgetValue "{629509BC3DB2A1F1}" {
       m_BudgetType AI
@@ -36,6 +35,7 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_Icons MACHINEGUN
     m_Amplifier SQUAD
    }
+   m_bForced 1
   }
   SCR_PreviewEntityComponent "{5636898C25429AD9}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
    m_bRuntime 0
@@ -100,46 +100,6 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
      m_vPosition -6 0 -6
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{629509BC3DB117E6}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition 9 0 -9
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629509BC3DB117F9}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition -9 0 -9
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629509BC3DB117F8}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition 12 0 -12
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629509BC3DB117FB}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition -12 0 -12
-     m_vAngles 0 0 0
-    }
    }
   }
  }
@@ -148,11 +108,11 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
  m_aUnitPrefabSlots {
   "{8949382562216B1E}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_SL_P.et" "{A08D03359AF24DBE}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_HMG_P.et" "{10359752619E5B7A}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AHMG_P.et" "{A08D03359AF24DBE}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_HMG_P.et" "{10359752619E5B7A}Prefabs/Characters/Factions/INDFOR/CRF_GS_INDFOR_AHMG_P.et"
  }
- m_bIsPlayable 1
  m_aUnitPrefabColorTeams {
   "None" "Blue" "Blue" "Yellow" "Yellow"
  }
  m_aUnitPrefabOverrideIcons {
   "None" "None" "None" "None" "None"
  }
+ m_bIsPlayable 1
 }
