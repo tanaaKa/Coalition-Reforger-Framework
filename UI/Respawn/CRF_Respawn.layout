@@ -32,24 +32,6 @@ FrameWidgetClass {
    }
    "Z Order" 10
    {
-    TextWidgetClass "{64513E6B670CEF98}" {
-     Name "timerCountDown"
-     Slot FrameWidgetSlot "{62EF62DC8321B9B0}" {
-      Anchor 0 0 0 1
-      PositionX 969.106
-      OffsetLeft 969.106
-      PositionY 24.5
-      OffsetTop 24.5
-      SizeX 944.6
-      OffsetRight -1913.71
-      SizeY -49.1
-      OffsetBottom 24.6
-     }
-     "Z Order" 2
-     Text "00:00:00"
-     "Font Size" 100
-     "Vertical Alignment" Center
-    }
     ImageWidgetClass "{64513E6B670CEF9A}" {
      Name "HeaderBG"
      Slot FrameWidgetSlot "{62EF62C8ABA4CFE1}" {
@@ -69,23 +51,44 @@ FrameWidgetClass {
      Progress 0.24
      "Mask Mode" "Include Below"
     }
-    TextWidgetClass "{64513E6BA88819E1}" {
-     Name "timerTitle"
-     Slot FrameWidgetSlot "{62EF62DC8321B9B0}" {
-      Anchor 0 0 0 1
-      PositionX 673.335
-      OffsetLeft 673.335
-      PositionY 24.464
-      OffsetTop 24.464
-      SizeX 944.589
-      OffsetRight -1617.92
-      SizeY -49.096
-      OffsetBottom 24.632
+    HorizontalLayoutWidgetClass "{645911A60CD1186F}" {
+     Name "HorizontalLayout0"
+     Slot FrameWidgetSlot "{645911A60CD1185E}" {
+      Anchor 0.5 0 0.5 0
+      PositionX -282.5
+      OffsetLeft -282.5
+      PositionY 15
+      OffsetTop 15
+      SizeX 565
+      OffsetRight -282.5
+      SizeY 65
+      OffsetBottom -80
      }
-     "Z Order" 2
-     Text "Respawn in"
-     "Font Size" 100
-     "Vertical Alignment" Center
+     {
+      TextWidgetClass "{64513E6BA88819E1}" {
+       Name "timerTitle"
+       Slot LayoutSlot {
+        HorizontalAlign 1
+        VerticalAlign 1
+       }
+       "Z Order" 2
+       Text "Respawn in -"
+       "Font Size" 100
+       "Vertical Alignment" Center
+      }
+      TextWidgetClass "{64513E6B670CEF98}" {
+       Name "timerCountDown"
+       Slot LayoutSlot {
+        HorizontalAlign 1
+        VerticalAlign 1
+        Padding 16 0 0 0
+       }
+       "Z Order" 2
+       Text "00:00:00"
+       "Font Size" 100
+       "Vertical Alignment" Center
+      }
+     }
     }
    }
   }
