@@ -460,11 +460,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	void CheckTickets(int playerID)
 	{
 		bool canRespawn = true;
-		int playerEntityRplID = m_aEntitySlots.Get(m_aSlots.Find(playerID));
-		int playerGroupRplID = m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(playerEntityRplID));
-		int groupRplID = m_aGroupRplIDs.Get(m_aPlayerGroupIDs.Find(playerGroupRplID));
-		int groupID = m_aGroupRplIDs.Find(groupRplID);
-		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();
+		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(GetRespawnGroupID(playerID)).GetFaction().GetFactionKey();
 		        
 		switch(faction)
 		{
@@ -476,7 +472,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		if (canRespawn)
 		{
-			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 100, false, playerID);			
+			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID);			
 			switch(faction)
 			{
 				case "BLUFOR" 	: {m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1 ;		UpdateClientRespawnTickets();break;}
@@ -494,6 +490,16 @@ class CRF_Gamemode : SCR_BaseGameMode
 		Replication.BumpMe()
 	}
 
+	//------------------------------------------------------------------------------------------------
+	int GetRespawnGroupID(int playerID)
+	{
+		int playerEntityRplID = m_aEntitySlots.Get(m_aSlots.Find(playerID));
+		int playerGroupRplID = m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(playerEntityRplID));
+		int GroupRplID = m_aGroupRplIDs.Get(m_aPlayerGroupIDs.Find(playerGroupRplID));
+		int groupID = m_aGroupRplIDs.Find(GroupRplID);
+		
+		return groupID;
+	}
 	//------------------------------------------------------------------------------------------------
 	void UpdateRespawnTimer()
 	{
@@ -521,12 +527,17 @@ class CRF_Gamemode : SCR_BaseGameMode
 	}
 
 	//------------------------------------------------------------------------------------------------
-	[RplRpc(RplChannel.Unreliable, RplRcver.Broadcast)]
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	void RpcDo_SendRespawnScreen(int playerId)
 	{
 		if(SCR_PlayerController.GetLocalPlayerId() != playerId)
 			return;
 		
+		MenuBase topMenu = GetGame().GetMenuManager().GetTopMenu();
+		if (topMenu)
+			topMenu.Close();
+
+		GetGame().GetMenuManager().CloseAllMenus();
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
 			
 	}
@@ -550,10 +561,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		if(SCR_FactionManager.SGetPlayerFaction(playerID).GetFactionKey() == "SPEC")
 		{	
 			string respawnPrefab = CRF_GamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR");
-			int playerEntityRplID = m_aEntitySlots.Get(m_aSlots.Find(playerID));
-			int playerGroupRplID = m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(playerEntityRplID));
-			int respawnGroupRplID = m_aGroupRplIDs.Get(m_aPlayerGroupIDs.Find(playerGroupRplID));
-			int respawnGroupID = m_aGroupRplIDs.Find(respawnGroupRplID);
+			int respawnGroupID = GetRespawnGroupID(playerID);
 			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(respawnGroupID).GetFaction().GetFactionKey();
 			string spawnpoint
 			
