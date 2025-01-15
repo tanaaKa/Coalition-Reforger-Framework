@@ -106,10 +106,10 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode SafeStart")]
 	int m_iTimeLimitMinutes;
 	
-	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off?", category: "CRF Gamemode SafeStart")]
+	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off? COOP = FALSE", category: "CRF Gamemode SafeStart")]
 	bool m_bDeleteJIPSlots;
 	
-	[Attribute("true", "auto", "If safestart turns on instnatly after the lobby screen.", category: "CRF Gamemode SafeStart")]
+	[Attribute("true", "auto", "If safestart turns on instantly after the lobby screen.", category: "CRF Gamemode SafeStart")]
 	bool m_bSafestartInstantlyEnabled;
 	
 	//Descriptions on the left in briefing
