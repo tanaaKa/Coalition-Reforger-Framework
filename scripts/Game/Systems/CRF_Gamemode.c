@@ -103,17 +103,17 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[RplProp()]
 	RplId m_rSpectatorGroup;
 	
-	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode SafeStart")]
+	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode General")]
 	int m_iTimeLimitMinutes;
 	
-	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off? COOP = FALSE", category: "CRF Gamemode SafeStart")]
+	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off? COOP = FALSE", category: "CRF Gamemode General")]
 	bool m_bDeleteJIPSlots;
 	
-	[Attribute("true", "auto", "If safestart turns on instantly after the lobby screen.", category: "CRF Gamemode SafeStart")]
+	[Attribute("true", "auto", "If safestart turns on instantly after the lobby screen.", category: "CRF Gamemode General")]
 	bool m_bSafestartInstantlyEnabled;
 	
 	//Descriptions on the left in briefing
-	[Attribute("", category: "CRF Gamemode Descriptors")]
+	[Attribute("", category: "CRF Gamemode General")]
 	ref	array<ref CRF_MissionDescriptor> m_aMissionDescriptors;
 	
 	//This just is what is auto set in the slotting UI for ratio calculation
@@ -145,38 +145,26 @@ class CRF_Gamemode : SCR_BaseGameMode
 	ref CRF_GearScriptContainer m_CIVILIANGearScriptSettings;
 	
 	// Respawn Settings
-	[Attribute("0", "auto", "", category: "CRF Respawn")]
+	[Attribute("0", "auto", "", category: "CRF Gamemode Respawn")]
 	bool m_bRespawnEnabled;
 	
-	[Attribute("0", "auto", "", category: "CRF Respawn")]
+	[Attribute("0", "auto", "", category: "CRF Gamemode Respawn")]
 	bool m_bWaveRespawn;
 	
-	[Attribute("300", UIWidgets.EditBox, "Respawn Timer in Seconds", category: "CRF Respawn")]
-	int m_iRespawnWaveTimer;
+	[Attribute("300", UIWidgets.EditBox, "Time To Respawn in Seconds", category: "CRF Gamemode Respawn")]
+	int m_iTimeToRespawn;
 	
-	[Attribute("blutickets", UIWidgets.EditBox, "Amount of BLUFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Respawn")]
+	[Attribute("blutickets", UIWidgets.EditBox, "Amount of BLUFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iBLUFORTickets;
 	
-	[Attribute("bluspawnpoint", UIWidgets.EditBox, "BLUFOR spawn entity name", category: "CRF Respawn")]
-	string m_sBLUFORSpawnPoint;
-	
-	[Attribute("opftickets", UIWidgets.EditBox, "Amount of OPFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Respawn")]
+	[Attribute("opftickets", UIWidgets.EditBox, "Amount of OPFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iOPFORTickets;
 	
-	[Attribute("opfspawnpoint", UIWidgets.EditBox, "OPFOR spawn entity name", category: "CRF Respawn")]
-	string m_sOPFORSpawnPoint;	
-	
-	[Attribute("indtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Respawn")]
+	[Attribute("indtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iINDFORTickets;
 	
-	[Attribute("indspawnpoint", UIWidgets.EditBox, "INDFOR spawn entity name", category: "CRF Respawn")]
-	string m_sINDFORSpawnPoint;
-	
-	[Attribute("civtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Respawn")]
+	[Attribute("civtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iCIVTickets;
-	
-	[Attribute("civspawnpoint", UIWidgets.EditBox, "CIV spawn entity name", category: "CRF Respawn")]
-	string m_sCIVSpawnPoint;
 	
 	[RplProp(onRplName: "UpdateClientRespawnTickets")]
 	int m_iOPFORCurrentTickets;
@@ -192,10 +180,11 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	[RplProp(onRplName: "UpdateRespawnTimer")]
 	int m_iRespawnWaveCurrentTime;
-	
+
 	IEntity m_eGamemodeEntity;
 	protected ref ScriptInvoker m_OnStateChanged;
-	protected ref array<CRF_GamemodeComponent> m_aAdditionalCLBGamemodeComponents = {};
+	protected ref array<CRF_GamemodeComponent> m_aAdditionalCRFGamemodeComponents = {};
+	protected ref array<IEntity> m_aRespawnPoints = {};
 	
 	static CRF_Gamemode GetInstance()
 	{
@@ -213,11 +202,11 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		array<Managed> additionalComponents = new array<Managed>();
 		int count = owner.FindComponents(CRF_GamemodeComponent, additionalComponents);
-		m_aAdditionalCLBGamemodeComponents.Clear();
+		m_aAdditionalCRFGamemodeComponents.Clear();
 		for (int i = 0; i < count; i++)
 		{
 			CRF_GamemodeComponent comp = CRF_GamemodeComponent.Cast(additionalComponents[i]);
-			m_aAdditionalCLBGamemodeComponents.Insert(comp);
+			m_aAdditionalCRFGamemodeComponents.Insert(comp);
 		}
 		
 		if (m_bRespawnEnabled)
@@ -459,13 +448,14 @@ class CRF_Gamemode : SCR_BaseGameMode
 		m_iOPFORCurrentTickets = m_iOPFORTickets;
 		m_iINDFORCurrentTickets = m_iINDFORTickets;
 		m_iCIVCurrentTickets = m_iCIVTickets;
-		m_iRespawnWaveCurrentTime = m_iRespawnWaveTimer;
+		m_iRespawnWaveCurrentTime = m_iTimeToRespawn;
 		
 		if (m_bWaveRespawn && Replication.IsServer())
 		{
 			GetGame().GetCallqueue().CallLater(UpdateRespawnTimer, 1000, true);
 		}
 	}
+
 	//------------------------------------------------------------------------------------------------
 	void CheckTickets(int playerID)
 	{
@@ -493,11 +483,13 @@ class CRF_Gamemode : SCR_BaseGameMode
 		}
 			
 	}
+
 	//------------------------------------------------------------------------------------------------
 	void UpdateClientRespawnTickets()
 	{
 		Replication.BumpMe()
 	}
+
 	//------------------------------------------------------------------------------------------------
 	int GetRespawnGroupID(int playerID)
 	{
@@ -516,16 +508,24 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		if (m_iRespawnWaveCurrentTime == 0)
 		{
-			m_iRespawnWaveCurrentTime = m_iRespawnWaveTimer;
+			m_iRespawnWaveCurrentTime = m_iTimeToRespawn;
 		}
 		m_iRespawnWaveCurrentTime--;
 		Replication.BumpMe();
 	}
+
+	//------------------------------------------------------------------------------------------------
+	void RegisterRespawnPoint(IEntity respawnPoint)
+	{
+		m_aRespawnPoints.Insert(respawnPoint);
+	}
+
 	//------------------------------------------------------------------------------------------------
 	void SendRespawnScreen(int playerId)
 	{
 		Rpc(RpcDo_SendRespawnScreen, playerId)	
 	}
+
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
 	void RpcDo_SendRespawnScreen(int playerId)
@@ -541,11 +541,13 @@ class CRF_Gamemode : SCR_BaseGameMode
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
 			
 	}
+
 	//------------------------------------------------------------------------------------------------
 	void RespawnPlayerTicket(int playerId)
 	{
 		Rpc(RpcDo_RespawnPlayerTicket, playerId)	
 	}
+
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcDo_RespawnPlayerTicket(int playerID)
@@ -574,20 +576,20 @@ class CRF_Gamemode : SCR_BaseGameMode
 				}
 			}
 			
-			switch(faction)
-			{
-				case "BLUFOR" : {spawnpoint = m_sBLUFORSpawnPoint;	break;}
-				case "OPFOR"  : {spawnpoint = m_sOPFORSpawnPoint;	break;}
-				case "INDFOR" : {spawnpoint = m_sINDFORSpawnPoint; break;}
-				case "CIV" : {spawnpoint = m_sCIVSpawnPoint; 		break;}
-			}
-			
 			vector finalSpawnLocation = vector.Zero;
 			EntitySpawnParams spawnParams = new EntitySpawnParams();
 			spawnParams.TransformMode = ETransformMode.WORLD;
-			vector spawnLocation = GetGame().GetWorld().FindEntityByName(spawnpoint).GetOrigin();
 			
+			vector spawnLocation = vector.Zero;
 			IEntity newEntity = GetGame().SpawnEntityPrefab(Resource.Load(respawnPrefab),GetGame().GetWorld(),spawnParams);
+			
+			foreach(IEntity spawnPoint : m_aRespawnPoints)
+			{
+				if(!spawnPoint || CRF_RespawnPointComponent.Cast(spawnPoint.FindComponent(CRF_RespawnPointComponent)).m_sRespawnPointFaction != faction || !CRF_RespawnPointComponent.Cast(spawnPoint.FindComponent(CRF_RespawnPointComponent)).m_bActiveRespawnPoint || spawnLocation != vector.Zero)
+					continue;
+				
+				spawnLocation = spawnPoint.GetOrigin();
+			};
 			
 			Resource resource = Resource.Load(respawnPrefab);
 			SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
@@ -733,7 +735,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 			if (m_OnStateChanged)
 				m_OnStateChanged.Invoke(m_GamemodeState);
 			
-			foreach (CRF_GamemodeComponent component : m_aAdditionalCLBGamemodeComponents)
+			foreach (CRF_GamemodeComponent component : m_aAdditionalCRFGamemodeComponents)
 				component.OnGamemodeStateChanged();
 			
 			if(m_GamemodeState == CRF_GamemodeState.AAR)

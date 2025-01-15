@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{D52DE33328969B3C}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_COA_base.et"
+ Name "{0B3312C6940005B9}Prefabs/Structures/FlagPoles/RespawnPoles/OPFOR_Respawn.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
