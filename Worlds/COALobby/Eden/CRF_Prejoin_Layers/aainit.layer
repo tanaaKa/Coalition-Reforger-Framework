@@ -55,7 +55,9 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
  }
  m_bRespawnEnabled 1
- m_iRespawnWaveTimer 10
+ m_iTimeToRespawn 10
+ m_iBLUFORTickets -1
+ m_iOPFORTickets -1
  m_iINDFORTickets -1
  m_iCIVTickets -1
 }

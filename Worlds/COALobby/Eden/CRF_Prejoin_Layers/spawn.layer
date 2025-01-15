@@ -32,47 +32,51 @@ $grp Vehicle : "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.
 }
 $grp SCR_AIGroup : "{29CA3A88FC500B66}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevRifleman_p.et" {
  {
-  coords 7503.272 6.228 6723.385
+  coords 7507.134 6.228 6720.514
   angleY -143.377
  }
  {
-  coords 7501.611 6.219 6724.622
+  coords 7505.473 6.219 6721.751
   angleY -143.377
  }
  {
-  coords 7500.069 6.219 6725.769
+  coords 7503.931 6.219 6722.897
   angleY -143.377
  }
  {
-  coords 7498.468 6.204 6726.958
+  coords 7502.33 6.204 6724.087
   angleY -143.377
  }
  {
-  coords 7497.074 6.202 6727.992
+  coords 7500.937 6.202 6725.121
   angleY -143.377
  }
  {
-  coords 7495.593 6.208 6729.094
+  coords 7499.455 6.208 6726.223
   angleY -143.377
  }
  {
-  coords 7493.892 6.236 6730.357
+  coords 7497.754 6.236 6727.486
   angleY -143.377
  }
  {
-  coords 7492.542 6.395 6731.363
+  coords 7496.404 6.395 6728.492
   angleY -143.377
  }
  {
-  coords 7491.209 6.535 6732.352
+  coords 7495.071 6.535 6729.481
   angleY -143.377
  }
  {
-  coords 7489.727 6.679 6733.455
+  coords 7493.589 6.679 6730.584
   angleY -143.377
  }
  {
-  coords 7488.214 6.817 6734.578
+  coords 7492.076 6.817 6731.707
+  angleY -143.377
+ }
+ {
+  coords 7490.417 6.817 6732.94
   angleY -143.377
  }
 }
@@ -257,13 +261,13 @@ $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification
   coords 7448.356 -0.497 6760.918
  }
  {
-  coords 7449.789 -0 6762.126
+  coords 7449.789 0 6762.126
  }
  {
-  coords 7430.802 -0 6743.909
+  coords 7430.802 0 6743.909
  }
  {
-  coords 7428.715 -0 6741.359
+  coords 7428.715 0 6741.359
  }
  {
   coords 7392.96 0 6685.727
@@ -275,22 +279,22 @@ $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification
   coords 7491.057 0 6770.793
  }
  {
-  coords 7492.84 -0 6771.791
+  coords 7492.84 0 6771.791
  }
  {
-  coords 7494.928 -0 6773.117
+  coords 7494.928 0 6773.117
  }
  {
-  coords 7496.698 -0 6775.394
+  coords 7496.698 0 6775.394
  }
  {
-  coords 7499.868 -0 6777.886
+  coords 7499.868 0 6777.886
  }
  {
-  coords 7498.368 -0 6777.038
+  coords 7498.368 0 6777.038
  }
  {
-  coords 7500.824 -0 6779.957
+  coords 7500.824 0 6779.957
  }
  {
   coords 7501.799 -0.071 6782.477
@@ -308,25 +312,25 @@ $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification
   coords 7488.865 0 6767.911
  }
  {
-  coords 7451.344 -0 6763.207
+  coords 7451.344 0 6763.207
  }
  {
   coords 7370.409 0 6722.56
  }
  {
-  coords 7369.284 -0 6721.154
+  coords 7369.284 0 6721.154
  }
  {
-  coords 7367.831 -0 6719.417
+  coords 7367.831 0 6719.417
  }
  {
-  coords 7366.935 -0 6718.176
+  coords 7366.935 0 6718.176
  }
  {
-  coords 7366.202 -0 6716.83
+  coords 7366.202 0 6716.83
  }
  {
-  coords 7366.202 -0 6716.83
+  coords 7366.202 0 6716.83
  }
 }
 PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
@@ -339,10 +343,6 @@ PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.e
  }
  m_bVisibleForEmptyFaction 1
  m_bShowForAnyFaction 1
-}
-GenericEntity civspawnpoint : "{D52DE33328969B3C}Prefabs/Structures/Military/Flags/FlagPole_02/FlagPole_COA_base.et" {
- coords 7470.782 7.67 6706.349
- angleY -18.757
 }
 $grp Vehicle : "{EEAC3A94929A2B55}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_randomized.et" {
  Ural4320_transport_CIV_randomized6 {
