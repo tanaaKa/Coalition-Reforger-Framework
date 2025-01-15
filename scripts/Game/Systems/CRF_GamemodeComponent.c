@@ -1628,6 +1628,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		Replication.BumpMe();
 	};
 	
+	// Why are these two methods done this way? It should just be one wtf
 	void DeleteEmptySlots()
 	{
 		if(CRF_Gamemode.GetInstance().m_bDeleteJIPSlots) 
@@ -1638,16 +1639,17 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	void DeleteEmptySlotsSlowly()
 	{
 		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
-		for(int i = 0; i < gamemode.m_aEntitySlots.Count(); i++)
-		{
-			if(gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1)
-			{
-				//Print("Removing Entity");
-				gamemode.RemovePlayableEntity(gamemode.m_aEntitySlots.Get(i));
-				return;
+		if (gamemode.m_bDeleteJIPSlots && !gamemode.m_bRespawnEnabled) {
+			for (int i = 0; i < gamemode.m_aEntitySlots.Count(); i++) {
+				if (gamemode.m_aSlots.Get(i) == 0 || gamemode.m_aSlots.Get(i) == -1) {
+					//Print("Removing Entity");
+					gamemode.RemovePlayableEntity(gamemode.m_aEntitySlots.Get(i));
+					return;
+				}
 			}
+			GetGame().GetCallqueue().Remove(DeleteEmptySlotsSlowly);
 		}
-		GetGame().GetCallqueue().Remove(DeleteEmptySlotsSlowly);
+		
 	}
 	
 	// Called from server to all clients

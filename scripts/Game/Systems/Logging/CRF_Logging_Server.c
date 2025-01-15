@@ -141,7 +141,7 @@ class CRF_LoggingServerComponent: SCR_BaseGameModeComponent
 	}
 }
 
-modded class SCR_BaseGameMode
+/*modded class SCR_BaseGameMode
 {
 	const string SEPARATOR = ",";
 	string m_sKillerName;
@@ -197,4 +197,4 @@ modded class SCR_BaseGameMode
 		
 		m_handle.WriteLine("kill" + SEPARATOR + m_sKilledName + SEPARATOR + m_sKilledFaction + SEPARATOR + m_sKillerName + SEPARATOR + m_sKillerFaction + SEPARATOR + m_fRange + SEPARATOR + m_sWeaponName + SEPARATOR + m_sTime);
 	}
-}
+}*/
