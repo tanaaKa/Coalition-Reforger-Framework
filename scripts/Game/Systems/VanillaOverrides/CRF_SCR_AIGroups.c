@@ -6,6 +6,13 @@ modded class SCR_AIGroup
 	override void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
+		
+		if(!GetGame().InPlayMode())
+			return;
+		
+		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
+			m_bIsPlayable = false;
+		
 		if(Replication.IsServer() && m_bIsPlayable)
 			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
 	}

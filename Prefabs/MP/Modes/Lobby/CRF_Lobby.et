@@ -3,33 +3,16 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
  components {
   CRF_GamemodeComponent "{644344EEF3C64CD6}" {
   }
+  SCR_AdditionalGameModeSettingsComponent "{6170E11C3C452ACC}" {
+   m_bEnableTeamKillPunishment 0
+  }
   SCR_DataCollectorComponent "{5ADE83EE64329989}" {
    m_aModules {
     SCR_DataCollectorCrimesModule "{5D9C706AD14AF695}" {
-     m_fUpdatePeriod 10000
-     m_fLatestActionThreshold 10
-     m_fMaxTimeAccumulationThreshold 0
-     m_aLightBanPunishments {
-      0 0
-     }
-     m_aHeavyBanPunishments {
-      0 0 0
-     }
-     m_iSecondsOfReincidencyHeavyBan 0
      m_bWarCrimesEnabled 0
      m_bWarCrimesProportionalityPrincipleEnabled 0
-     MODIFIER_PROPORTIONALITY_FRIENDLY_KILLS 0
-     MODIFIER_PROPORTIONALITY_FRIENDLY_AI_KILLS 0
-     MODIFIER_PROPORTIONALITY_AI_KILLS 0
-     MODIFIER_PROPORTIONALITY_KILLS 0
     }
    }
-   m_iOptionalKickingFriendlyPlayerKillPenalty 0
-   m_iOptionalKickingFriendlyAIKillPenalty 0
-   m_iOptionalKickingKickPenaltyLimit 9999
-   m_iOptionalKickingBanDuration 0
-   m_iOptionalKickingPenaltySubtractionPeriod 9999
-   m_iOptionalKickingPenaltySubtractionPoints 9999
   }
   SCR_GameModeHealthSettings "{5A22E11F9ACBB1DF}" {
    m_fDOTScale 0.5
@@ -43,14 +26,6 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
   SCR_ReconnectComponent "{5A02809D5E8ABE42}" {
    Enabled 0
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
-   }
-  }
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_SpawnLogic "{5D36888CC966608A}" {
-   }
   }
   SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
   }

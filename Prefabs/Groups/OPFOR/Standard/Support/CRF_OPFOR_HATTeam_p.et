@@ -7,12 +7,11 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_Image "{11112420EEC8576C}Images/UI/Zeus GearScript Factions/OPFOR_NATO.edds"
     m_sFaction "OPFOR"
     m_aAuthoredLabels {
-     4 51871
+     4 51871 34 25 38
     }
     m_aAutoLabels {
      71
     }
-
     m_EntityChildrenBudgetCost {
      SCR_EntityBudgetValue "{629F78CD57063427}" {
       m_BudgetType AI
@@ -33,6 +32,7 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
     m_Icons ANTITANK
     m_Amplifier SQUAD
    }
+   m_bForced 1
   }
   SCR_PreviewEntityComponent "{5636898C25429AD9}" : "{6CADA7A88A6265FD}Prefabs/Editor/Components/PreviewEntityComponentClass.ct" {
    m_bRuntime 0
@@ -97,46 +97,6 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
      m_vPosition -6 0 -6
      m_vAngles 0 0 0
     }
-    SCR_BasePreviewEntry "{629F78CD57063402}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition 9 0 -9
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629F78CD57062E17}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition -9 0 -9
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629F78CD57062E15}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition 12 0 -12
-     m_vAngles 0 0 0
-    }
-    SCR_BasePreviewEntry "{629F78CD57062E14}" {
-     m_iParentID 0
-     m_Mesh "{7B2420C8BC72373A}Prefabs/Characters/Core/Character_Base_Preview.et"
-     m_Flags 0
-     m_Shape PREFAB
-     m_iPivotID ""
-     m_vScale 1 1 1
-     m_vPosition -12 0 -12
-     m_vAngles 0 0 0
-    }
    }
   }
  }
@@ -145,11 +105,11 @@ SCR_AIGroup : "{EACD97CF4A702FAE}Prefabs/Groups/BLUFOR/Group_US_Base.et" {
  m_aUnitPrefabSlots {
   "{9CB623C7B62F4955}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_SL_P.et" "{1AD587B6F178F09A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_HAT_P.et" "{C8B3D585E66CCDF9}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_AHAT_P.et" "{1AD587B6F178F09A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_HAT_P.et" "{C8B3D585E66CCDF9}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_AHAT_P.et"
  }
- m_bIsPlayable 1
  m_aUnitPrefabColorTeams {
   "None" "Blue" "Blue" "Yellow" "Yellow"
  }
  m_aUnitPrefabOverrideIcons {
   "None" "None" "None" "None" "None"
  }
+ m_bIsPlayable 1
 }
