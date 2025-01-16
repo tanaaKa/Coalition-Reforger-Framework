@@ -1,6 +1,6 @@
 $grp SCR_BaseTriggerEntity {
  spawnTank {
-  coords 1531.377 17.064 2125.671
+  coords 1541.751 19.108 2147.31
  }
  spawnAH60 {
   coords 1520.745 7.844 1005.708
