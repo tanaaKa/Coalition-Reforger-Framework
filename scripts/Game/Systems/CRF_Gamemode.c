@@ -166,16 +166,16 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("civtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iCIVTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iOPFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iBLUFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iINDFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iCIVCurrentTickets;
 	
 	[RplProp(onRplName: "UpdateRespawnTimer")]
@@ -448,6 +448,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		m_iOPFORCurrentTickets = m_iOPFORTickets;
 		m_iINDFORCurrentTickets = m_iINDFORTickets;
 		m_iCIVCurrentTickets = m_iCIVTickets;
+		
 		m_iRespawnWaveCurrentTime = m_iTimeToRespawn;
 		
 		if (m_bWaveRespawn && Replication.IsServer())
@@ -460,34 +461,65 @@ class CRF_Gamemode : SCR_BaseGameMode
 	void CheckTickets(int playerID)
 	{
 		bool canRespawn = true;
-		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(GetRespawnGroupID(playerID)).GetFaction().GetFactionKey();
+		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(GetRespawnGroupID(playerID)).GetFaction().GetFactionKey();	
 		        
+		// TODO: Collapse these two switch statements together
 		switch(faction)
 		{
-			case "BLUFOR" : {if (m_iBLUFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "OPFOR"  : {if (m_iOPFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "INDFOR" : {if (m_iINDFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "CIV" : {if (m_iCIVCurrentTickets == 0){canRespawn = false}; 	break;}
+			case "BLUFOR" : {
+				if (m_iBLUFORCurrentTickets == 0) {
+					canRespawn = false
+				}; 	
+				break;
+			}
+			case "OPFOR"  : {
+				if (m_iOPFORCurrentTickets == 0) {
+					canRespawn = false
+				}; 	
+				break;
+			}
+			case "INDFOR" : {
+				if (m_iINDFORCurrentTickets == 0) {
+					canRespawn = false
+				}; 	
+				break;
+			}
+			case "CIV" : {
+				if (m_iCIVCurrentTickets == 0) {
+					canRespawn = false
+				}; 	
+				break;
+			}
 		}
 		
 		if (canRespawn)
 		{
-			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID);			
+			// Start respawn process
+			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID);	
+			
+			// Subtract respawn tickets		
 			switch(faction)
 			{
-				case "BLUFOR" 	: {m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1 ;		UpdateClientRespawnTickets();break;}
-				case "OPFOR"  	: {m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1 ;   	UpdateClientRespawnTickets();break;}
-				case "INDFOR" 	: {m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1 ;		UpdateClientRespawnTickets();break;}
-				case "CIV" 		: {m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1 ;			UpdateClientRespawnTickets();break;}
+				case "BLUFOR" 	: {
+					m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1;	
+					break;
+				}
+				case "OPFOR"  	: {
+					m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1;   	
+					break;
+				}
+				case "INDFOR" 	: {
+					m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1;		
+					break;
+				}
+				case "CIV" 		: {
+					m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1;			
+					break;
+				}
 			}
+			Replication.BumpMe();
 		}
 			
-	}
-
-	//------------------------------------------------------------------------------------------------
-	void UpdateClientRespawnTickets()
-	{
-		Replication.BumpMe()
 	}
 
 	//------------------------------------------------------------------------------------------------
