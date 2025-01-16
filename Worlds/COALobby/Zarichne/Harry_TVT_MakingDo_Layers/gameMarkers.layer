@@ -39,6 +39,50 @@ $grp PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStar
   coords 1975.119 10.803 1236.15
   angleY -7.506
  }
+ {
+  coords 1095.895 10.803 1019.444
+  angleY -7.506
+ }
+ {
+  coords 1108.958 10.803 920.301
+  angleY -7.506
+ }
+ {
+  coords 1122.021 10.803 821.158
+  angleY -7.506
+ }
+ {
+  coords 1135.084 10.803 722.015
+  angleY -7.506
+ }
+ {
+  coords 1148.147 10.803 622.872
+  angleY -7.506
+ }
+ {
+  coords 1161.21 10.803 523.729
+  angleY -7.506
+ }
+ {
+  coords 1174.273 10.803 424.586
+  angleY -7.506
+ }
+ {
+  coords 1187.336 10.803 325.443
+  angleY -7.506
+ }
+ {
+  coords 1200.399 10.803 226.3
+  angleY -7.506
+ }
+ {
+  coords 1213.462 10.803 127.157
+  angleY -7.506
+ }
+ {
+  coords 1226.525 10.803 28.014
+  angleY -7.506
+ }
 }
 $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
  {
@@ -75,6 +119,38 @@ $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStart
  }
  {
   coords 1022.976 12.569 1969.596
+  angleY -9.739
+ }
+ {
+  coords 1006.06 12.569 2068.155
+  angleY -9.739
+ }
+ {
+  coords 989.144 12.569 2166.714
+  angleY -9.739
+ }
+ {
+  coords 972.228 12.569 2265.273
+  angleY -9.739
+ }
+ {
+  coords 955.312 12.569 2363.832
+  angleY -9.739
+ }
+ {
+  coords 938.396 12.569 2462.391
+  angleY -9.739
+ }
+ {
+  coords 921.48 12.569 2560.95
+  angleY -9.739
+ }
+ {
+  coords 904.564 12.569 2659.509
+  angleY -9.739
+ }
+ {
+  coords 887.648 12.569 2758.068
   angleY -9.739
  }
 }
