@@ -122,12 +122,18 @@ class CRF_PlayableCharacter : ScriptComponent
 	void SetInitialEntity(IEntity owner)
 	{
 		//Logs entity on server and disables AI
-		if(Replication.IsServer())
+		#ifdef WORKBENCH
+		SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
+		if(playableGroup)
+			CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
+		#else
+		if(RplSession.Mode() == RplMode.Dedicated)
 		{
 			SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
 			if(playableGroup)
 				CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
 		}
+		#endif
 			
 		//Sets location and all the physics BS on all machines
 		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")

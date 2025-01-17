@@ -34,7 +34,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		GetGame().GetInputManager().AddActionListener("SwitchSpectatorUI", EActionTrigger.DOWN, UpdateHUDVisible);
 		GetGame().GetCallqueue().CallLater(AddMsgAction, 0, false);
 			
-		if (Replication.IsServer())
+		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(UpdatePlayerGearScriptsArray, m_RNG.RandInt(10000, 20000), true);
 			
