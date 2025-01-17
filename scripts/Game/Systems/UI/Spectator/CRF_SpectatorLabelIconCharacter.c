@@ -73,13 +73,11 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			}
 		}
 		
-		if (m_fDistanceToIcon > 120)
+		if (m_fDistanceToIcon > 30)
 		{
 			m_wOverlayCircle.SetVisible(false);
 			m_wSpectatorLabelIcon.SetVisible(false);
-		}
-		else
-		{
+		} else {
 			m_wOverlayCircle.SetVisible(true);
 			m_wSpectatorLabelIcon.SetVisible(true);
 		}
@@ -113,7 +111,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 		}
 		else 
 		{
-			m_wRoot.SetOpacity(0.6);
+			m_wRoot.SetOpacity(0.5);
 		}
 	}
 }
