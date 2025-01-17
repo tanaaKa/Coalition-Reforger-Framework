@@ -209,7 +209,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void LogCharacter(IEntity entity)
 	{
-		if (Replication.IsServer())
+		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			if(!SCR_ChimeraCharacter.Cast(entity))
 				return;
@@ -446,7 +446,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	// Should only ever be ran on the server
 	void RespawnPlayer(int playerID, string prefab, vector position, int groupID)
 	{
-		if(!Replication.IsServer())
+		if(!RplSession.Mode() == RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnPlayer ON SERVER");
 			return;
@@ -483,7 +483,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		m_iRespawnWaveCurrentTime = m_iTimeToRespawn;
 		
-		if (m_bWaveRespawn && Replication.IsServer())
+		if (m_bWaveRespawn && RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(UpdateRespawnTimer, 1000, true);
 		}
@@ -616,7 +616,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcDo_RespawnPlayerTicket(int playerID)
 	{
-		if(!Replication.IsServer())
+		if(!RplSession.Mode() == RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnSide ON SERVER");
 			return; 
@@ -791,7 +791,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void OnGamemodeStateChanged()
 	{
-		if(Replication.IsServer())
+		if(RplSession.Mode() == RplMode.Dedicated)
 		{
 			if (m_OnStateChanged)
 				m_OnStateChanged.Invoke(m_GamemodeState);
