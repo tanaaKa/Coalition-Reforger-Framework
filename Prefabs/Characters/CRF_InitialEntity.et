@@ -25,6 +25,15 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
   SCR_CharacterPerceivableComponent "{566CCE2397E28600}" {
    Enabled 0
   }
+  SCR_CharacterStaminaComponent "{520EA1D2F659C824}" {
+   StaminaRegainPerS 1
+   StaminaDrainRun 1
+   StaminaDrainSprint 1
+   BreathNormalFrequency 0.001
+   BreathNormalMagnitude 0.001
+   BreathExhaustedFrequency 0.001
+   BreathExhaustedMagnitude 0.001
+  }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "#AR-Role_Rifleman"
