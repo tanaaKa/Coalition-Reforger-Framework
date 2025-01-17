@@ -343,6 +343,8 @@ class CRF_AARMenuUI: ChimeraMenuBase
 		m_cPlayerListBoxComponent.Clear();
 		foreach(int player : playerIDs)
 		{
+			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
+				continue;
 			int index = m_cPlayerListBoxComponent.AddItem(GetGame().GetPlayerManager().GetPlayerName(player), null, "{51F58D728FBCAD99}UI/Listbox/PlayerListboxElementNoIcon.layout");
 			SCR_ListBoxElementComponent comp = m_cPlayerListBoxComponent.GetElementComponent(index);
 			if(GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.ADMINISTRATOR) || GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.SESSION_ADMINISTRATOR))
