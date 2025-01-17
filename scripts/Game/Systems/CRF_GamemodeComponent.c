@@ -1430,7 +1430,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// SafeStart functions
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	string GetServerWorldTime()
 	{
 		return m_sServerWorldTime;
@@ -1442,6 +1441,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		return m_SafeStartEnabled;
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void OnSafeStartChange() 
 	{
 		m_OnSafeStartChange.Invoke(m_SafeStartEnabled);
@@ -1562,6 +1562,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	};
 	
 	// Why are these two methods done this way? It should just be one wtf
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void DeleteEmptySlots()
 	{
 		if(CRF_Gamemode.GetInstance().m_bDeleteJIPSlots) 
@@ -1569,6 +1570,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 				GetGame().GetCallqueue().CallLater(DeleteEmptySlotsSlowly, 125, true);
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void DeleteEmptySlotsSlowly()
 	{
 		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
@@ -1630,7 +1632,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// SafeStart EHs
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	protected void ActivateSafeStartEHs()
 	{	
 		array<int> outPlayers = {};
@@ -1641,6 +1642,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			IEntity controlledEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 			if (!controlledEntity) 
 				continue;
+			
+			SCR_CharacterDamageManagerComponent.Cast(controlledEntity.FindComponent(SCR_CharacterDamageManagerComponent)).EnableDamageHandling(false);
 			
 			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntity.FindComponent(EventHandlerManagerComponent));
 			if (!eventHandler) 
@@ -1661,29 +1664,32 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		};
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	protected void DisableSafeStartEHs()
 	{	
 		for (int i = 0; i < m_mPlayersWithEHsMap.Count(); i++)
 		{
-			IEntity controlledEntityKey = m_mPlayersWithEHsMap.GetKey(i);
+			IEntity controlledEntity = m_mPlayersWithEHsMap.GetKey(i);
 			
-			if(!controlledEntityKey)
+			if(!controlledEntity)
 				continue;
 			
-			CharacterControllerComponent charComp = CharacterControllerComponent.Cast(controlledEntityKey.FindComponent(CharacterControllerComponent));
+			SCR_CharacterDamageManagerComponent.Cast(controlledEntity.FindComponent(SCR_CharacterDamageManagerComponent)).EnableDamageHandling(true);
+			
+			CharacterControllerComponent charComp = CharacterControllerComponent.Cast(controlledEntity.FindComponent(CharacterControllerComponent));
 			if (!charComp) 
 				continue;
 			
 			charComp.SetSafety(false, false);
 			
-			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntityKey.FindComponent(EventHandlerManagerComponent));
+			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntity.FindComponent(EventHandlerManagerComponent));
 			if (!eventHandler) 
 				continue;
 			
 			eventHandler.RemoveScriptHandler("OnProjectileShot", this, OnWeaponFired);
 			eventHandler.RemoveScriptHandler("OnGrenadeThrown", this, OnGrenadeThrown);
 			
-			m_mPlayersWithEHsMap.Set(controlledEntityKey, false);
+			m_mPlayersWithEHsMap.Set(controlledEntity, false);
 		};
 	};
 	
