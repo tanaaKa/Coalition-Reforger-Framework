@@ -192,6 +192,9 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 	
 	void DescriptionInit()
 	{
+		ScrollLayoutWidget scrollLayout = ScrollLayoutWidget.Cast(m_wRoot.FindAnyWidget("ScrollLayout"));
+		scrollLayout.SetEnabled(false);
+		
 		m_wBackButton.SetOpacity(0);
 		SCR_ButtonTextComponent backButton = SCR_ButtonTextComponent.Cast(m_wBackButton.FindHandler(SCR_ButtonTextComponent));
 		backButton.m_OnClicked.Clear();
@@ -223,6 +226,9 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 	
 	void DescriptionSelected()
 	{
+		ScrollLayoutWidget scrollLayout = ScrollLayoutWidget.Cast(m_wRoot.FindAnyWidget("ScrollLayout"));
+		scrollLayout.SetEnabled(true);
+		
 		int index = m_cMissionDescriptionListBoxComponent.GetSelectedItem();
 		string description = m_aActiveDescriptors.Get(index).m_sTextData;
 		
