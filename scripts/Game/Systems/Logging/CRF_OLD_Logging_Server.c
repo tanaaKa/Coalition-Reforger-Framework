@@ -46,7 +46,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	override void OnWorldPostProcess(World world)
 	{
 		super.OnWorldPostProcess(world);
-		if (!Replication.IsServer() || !GetGame().InPlayMode())
+		if (RplSession.Mode() != RplMode.Dedicated || !GetGame().InPlayMode())
 			return;
 		
 		m_sMissionName = GetGame().GetMissionName();
@@ -61,7 +61,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	override void OnPlayerConnected(int playerId)
 	{
 		super.OnPlayerConnected(playerId);
-		if (!Replication.IsServer())
+		if (RplSession.Mode() != RplMode.Dedicated)
 			return;
 		
 		playerName = GetGame().GetPlayerManager().GetPlayerName(playerId);
@@ -72,7 +72,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	override void OnPlayerDisconnected(int playerId, KickCauseCode cause, int timeout)
 	{
 		super.OnPlayerDisconnected(playerId, cause, timeout);
-		if (!Replication.IsServer())
+		if (RplSession.Mode() != RplMode.Dedicated)
 			return;
 		
 		// Get player name
@@ -83,7 +83,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	// Mission status messages 
 	override void OnGamemodeStateChanged()
 	{
-		if (!Replication.IsServer())
+		if (RplSession.Mode() != RplMode.Dedicated)
 			return;
 		
 		CRF_GamemodeState state = CRF_Gamemode.GetInstance().m_GamemodeState;
@@ -117,7 +117,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	override void OnGameModeEnd(SCR_GameModeEndData data)
 	{
 		super.OnGameModeEnd(data);
-		if (!Replication.IsServer())
+		if (RplSession.Mode() != RplMode.Dedicated)
 			return;
 		
 		m_handle.Close(); // lets avoid a mem leak
@@ -126,7 +126,7 @@ class CRF_LoggingServerComponent: CRF_GamemodeComponent
 	// Method called from safestart to annotate a game has begun
 	void GameStarted()
 	{
-		if (!Replication.IsServer())
+		if (RplSession.Mode() != RplMode.Dedicated)
 			return;
 		
 		// Collect mission data 

@@ -82,7 +82,7 @@ class CRF_RadioRespawnSystemComponent: SCR_BaseGameModeComponent
 //		if (!GetGame().InPlayMode()) 
 //			return;
 //		
-//		if (Replication.IsServer())
+//		if (RplSession.Mode() == RplMode.Dedicated)
 //		{
 //			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 //		}
