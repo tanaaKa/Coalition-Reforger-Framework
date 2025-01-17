@@ -211,7 +211,7 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 			{
 				if(SCR_PlayerFactionAffiliationComponent.Cast(GetGame().GetPlayerController().FindComponent(SCR_PlayerFactionAffiliationComponent)).GetAffiliatedFactionKey() == factionKey)
 				{
-					m_cMissionDescriptionListBoxComponent.AddItem(description.m_sTitle);
+					m_cMissionDescriptionListBoxComponent.AddItem(description.m_sTitle, null, "{A564FC959554A1B9}UI/Listbox/DescriptionListboxElementNoIcon.layout");
 					m_aActiveDescriptors.Insert(description);
 					continue;
 				}
