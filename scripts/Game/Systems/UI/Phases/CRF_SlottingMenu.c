@@ -836,12 +836,45 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 	void Action_VONon()
 	{
 		SCR_PlayerController.Cast(GetGame().GetPlayerController()).SetTalking(true, GetGame().GetPlayerController().GetPlayerId());
+		GetGame().GetCallqueue().Remove(LobbyVoNDisableDelayed);
+		SCR_VoNComponent von = SCR_VoNComponent.Cast(GetGame().GetPlayerController().GetControlledEntity().FindComponent(SCR_VoNComponent));
+		von.SetTransmitRadio(GetVoNTransiver());
+		von.SetCommMethod(ECommMethod.SQUAD_RADIO);
+		von.SetCapture(true);
+	}
+	
+	//From RL
+	RadioTransceiver GetVoNTransiver()
+	{
+		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
+		ref array<IEntity> items = {};
+		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
+		IEntity radioEntity;
+		foreach(IEntity item: items)
+		{
+			if(item.FindComponent(BaseRadioComponent))
+				radioEntity = item;
+		}
+		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
+		radio.SetPower(true);
+		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
+		transiver.SetFrequency(1);
+		return transiver;
+	}
+	
+	
+	void LobbyVoNDisableDelayed()
+	{
+		SCR_VoNComponent von = SCR_VoNComponent.Cast(GetGame().GetPlayerController().GetControlledEntity().FindComponent(SCR_VoNComponent));
+		von.SetCommMethod(ECommMethod.DIRECT);
+		von.SetCapture(false);
 	}
 	
 	//From reforger lobby <3
 	void Action_VONOff()
 	{
 		SCR_PlayerController.Cast(GetGame().GetPlayerController()).SetTalking(false, GetGame().GetPlayerController().GetPlayerId());
+		GetGame().GetCallqueue().CallLater(LobbyVoNDisableDelayed, 400);
 	}
 	
 	void Action_OnChatToggleAction()
