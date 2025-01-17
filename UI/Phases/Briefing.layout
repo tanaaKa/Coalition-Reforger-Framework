@@ -664,21 +664,35 @@ FrameWidgetClass {
       }
      }
     }
-    RichTextWidgetClass "{62F06D4239BB1138}" {
-     Name "DescriptionInfo"
-     Slot FrameWidgetSlot "{62F06D4239BB111D}" {
-      Anchor 0.02 0.132 0.963 0.988
-      PositionX 0
-      OffsetLeft 0
-      PositionY 0
-      OffsetTop 0
-      SizeX 0
-      OffsetRight 0
-      SizeY 0
-      OffsetBottom 0
+    ScrollLayoutWidgetClass "{64635E2E391DE3DB}" {
+     Name "ScrollLayout"
+     Slot FrameWidgetSlot "{64635E2E391DE034}" {
+      Anchor 0 0 1 0
+      PositionX 5.887
+      OffsetLeft 5.887
+      PositionY 78.537
+      OffsetTop 78.537
+      SizeX -21.122
+      OffsetRight 15.235
+      SizeY 494.463
+      OffsetBottom -573
      }
-     Text ""
-     Wrap 1
+     {
+      VerticalLayoutWidgetClass "{64635E2E26327346}" {
+       Name "VerticalLayout"
+       Slot AlignableSlot "{64635E2C07810990}" {
+       }
+       {
+        RichTextWidgetClass "{62F06D4239BB1138}" {
+         Name "DescriptionInfo"
+         Slot LayoutSlot {
+         }
+         Text ""
+         Wrap 1
+        }
+       }
+      }
+     }
     }
    }
   }
