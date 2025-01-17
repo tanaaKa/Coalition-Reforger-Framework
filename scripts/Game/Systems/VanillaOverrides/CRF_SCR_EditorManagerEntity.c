@@ -24,7 +24,7 @@ modded class SCR_EditorManagerEntity
 		{	
 			if(CRF_Gamemode.GetInstance())
 			{
-				GetGame().GetCallqueue().CallLater(OpenUI, 200, false);
+				GetGame().GetCallqueue().CallLater(OpenUI, 500, false);
 			}
 		}
 	}
@@ -33,10 +33,14 @@ modded class SCR_EditorManagerEntity
 	{
 		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
 		if(gamemode)
-			if(!CRF_PlayableCharacter.Cast(SCR_PlayerController.GetLocalControlledEntity().FindComponent(CRF_PlayableCharacter)).IsPlayable() && SCR_PlayerController.GetLocalControlledEntity().GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			if(SCR_PlayerController.GetLocalControlledEntity().FindComponent(CRF_PlayableCharacter))
+			{
+				if(!CRF_PlayableCharacter.Cast(SCR_PlayerController.GetLocalControlledEntity().FindComponent(CRF_PlayableCharacter)).IsPlayable() && SCR_PlayerController.GetLocalControlledEntity().GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+					return;
+			}
+			else if (SCR_PlayerController.GetLocalControlledEntity().GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 				return;
-		
-		Print("Opening UI");
+
 		switch(CRF_Gamemode.GetInstance().m_GamemodeState)
 		{
 			case CRF_GamemodeState.INITIAL: 	{GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_PreviewMenu);	break;}
