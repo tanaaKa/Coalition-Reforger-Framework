@@ -38,7 +38,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iFactionTwoRatio 2
  m_sFactionTwoKey "BLU"
  m_BLUFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B419A7B}" {
-  m_rGearScript "{1DCFD33B70F9A72D}Configs/Gearscripts/Standard/80s/CRF_GS_UK80s.conf"
+  m_rGearScript "{B476F825AD9CCBEA}Configs/Gearscripts/Standard/80s/CRF_GS_UK80s_FAL.conf"
  }
  {
   SCR_FactionManager "6463092FA6D6329D" {
