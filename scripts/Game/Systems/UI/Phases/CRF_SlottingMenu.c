@@ -817,6 +817,9 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			}
 		}
 		
+		if (m_Gamemode.m_aSlots.Get(m_Gamemode.m_aEntitySlots.Find(comp.entityID)) != 0 && m_Gamemode.m_aSlots.Get(m_Gamemode.m_aEntitySlots.Find(comp.entityID)) != GetGame().GetPlayerController().GetPlayerId())
+			return;
+		
 		if (m_Gamemode.m_aSlots.Get(m_Gamemode.m_aEntitySlots.Find(comp.entityID)) == GetGame().GetPlayerController().GetPlayerId())
 		{
 			SCR_PlayerController.Cast(GetGame().GetPlayerController()).SetSlot(index, 0);
