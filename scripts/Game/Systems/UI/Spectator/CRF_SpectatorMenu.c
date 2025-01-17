@@ -29,6 +29,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
 		GetGame().GetInputManager().AddActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
+		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
 	}
 	
 	override void OnMenuUpdate(float tDelta)
@@ -89,9 +90,16 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().RemoveActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().RemoveActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
 		GetGame().GetInputManager().RemoveActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
+		GetGame().GetInputManager().RemoveActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
 		
 		SCR_NotificationSenderComponent sender = SCR_NotificationSenderComponent.Cast(GetGame().GetGameMode().FindComponent(SCR_NotificationSenderComponent));
 		sender.SetKillFeedTypeNoneLocal();
+	}
+	
+	// Add player list to spectator
+	protected static void OnShowPlayerList()
+	{
+		ArmaReforgerScripted.OpenPlayerList();
 	}
 	
 	// Teleporting players camera
