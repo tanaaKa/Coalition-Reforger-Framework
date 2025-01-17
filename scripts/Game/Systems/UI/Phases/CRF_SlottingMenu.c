@@ -130,7 +130,7 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			m_wRoot.FindAnyWidget("BluforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("BluforBGSelect").SetVisible(true);
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagBlufor")).LoadImageTexture(1, icon);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagBlufor")).LoadImageTexture(0, icon);
 			m_wRoot.FindAnyWidget("BluforBGSelect").SetColor(Color.FromRGBA(34, 196, 244, 33));
 		};
 		
@@ -157,7 +157,7 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			m_wRoot.FindAnyWidget("OpforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("OpforBGSelect").SetVisible(true);	
 			
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagOpfor")).LoadImageTexture(1, SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("OPFOR")).GetFactionFlag());
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagOpfor")).LoadImageTexture(0, icon);
 			m_wRoot.FindAnyWidget("OpforBGSelect").SetColor(Color.FromRGBA(238, 49, 47, 33));
 		};
 		
@@ -184,7 +184,7 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			m_wRoot.FindAnyWidget("IndforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("IndforBGSelect").SetVisible(true);	
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagIndfor")).LoadImageTexture(1, SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("INDFOR")).GetFactionFlag());
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagIndfor")).LoadImageTexture(0, icon);
 			m_wRoot.FindAnyWidget("IndforBGSelect").SetColor(Color.FromRGBA(0, 177, 79, 33));
 		};
 		
@@ -211,7 +211,7 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			m_wRoot.FindAnyWidget("CivButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("CivBGSelect").SetVisible(true);	
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagCiv")).LoadImageTexture(1, SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("CIV")).GetFactionFlag());
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagCiv")).LoadImageTexture(0, icon);
 			m_wRoot.FindAnyWidget("CivBGSelect").SetColor(Color.FromRGBA(168, 110, 207, 33));
 		};	
 		

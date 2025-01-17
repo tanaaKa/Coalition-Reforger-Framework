@@ -209,6 +209,21 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void LogCharacter(IEntity entity)
 	{
+		#ifdef WORKBENCH
+		if(!SCR_ChimeraCharacter.Cast(entity))
+				return;
+			m_aCharacters.Insert(RplComponent.Cast(entity.FindComponent(RplComponent)).Id());
+			if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)))
+			{
+				if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName())
+					m_aCharacterNames.Insert(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName());
+				else
+					m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			}
+			else
+				m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			Replication.BumpMe();
+		#else
 		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			if(!SCR_ChimeraCharacter.Cast(entity))
@@ -225,6 +240,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 				m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
 			Replication.BumpMe();
 		}
+		#endif
 	}
 	
 	override void EOnInit(IEntity owner)
