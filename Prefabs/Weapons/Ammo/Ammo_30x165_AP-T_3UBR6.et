@@ -1,0 +1,46 @@
+TracerProjectile : "{6DEC9F287271AB24}Prefabs/Weapons/Ammo/Ammo_127x99_AP_M2.et" {
+ ID "476AE74C1F2F140D"
+ components {
+  CollisionTriggerComponent "{6463399D24AD37B7}" {
+   PROJECTILE_EFFECTS {
+    SubmunitionEffect "{6463399D3BAD02FD}" {
+     TriggerOnce 1
+     Prefab "{EDC9C1FB7F55A32D}Prefabs/Weapons/Ammo/Ammo_Grenade_HEDP_M433_Spall.et"
+     Count 3
+     Dispersion 15
+     InitSpeedCoef 1
+    }
+    SubmunitionEffect "{6463399D33D24306}" {
+     TriggerOnce 1
+     Prefab "{16F3F5C6467D43DE}Prefabs/Weapons/Core/Ammo_Spall_Base.et"
+     Count 6
+     Dispersion 60
+     InitSpeedCoef 1
+    }
+    SpawnParticleEffect "{6463399D4AC2E111}" {
+     TriggerOnce 1
+     ParticleEffect "{728768DE31C8D1DE}Particles/Weapon/Explosion_VOG25.ptc"
+    }
+   }
+  }
+  ShellMoveComponent "{851AA4A2AE0A5691}" {
+   InitSpeed 1345
+   DispersionMultiplier 0.8
+   Mass 0.134
+   ProjectileEffects {
+    ProjectileDamage "{5168BBF3DBD79134}" {
+     DamageValue 2500
+    }
+   }
+   BallisticTableConfig "{9CB7C5D3DD2A3C2A}Configs/Weapons/AIBallisiticTables/AIBT_127x99_APIT_M20.conf"
+   AirDrag 0.0000117
+   Length 70
+   TumblingDamageMultiplier 0
+   DeflectionCriticalAngle 5
+   DeflectionDirDistribution 0.1
+   PenetrationDepth 60
+   PenetrationSpeed 1345
+   PenetrationDirDistribution 0.005
+  }
+ }
+}
