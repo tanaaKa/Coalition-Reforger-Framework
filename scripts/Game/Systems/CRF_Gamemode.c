@@ -72,6 +72,12 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[RplProp()]
 	ref array<bool> m_aEntityDeathStatus = {};
 	
+	[RplProp()]
+	ref array<RplId> m_aCharacters = {};
+	
+	[RplProp()]
+	ref array<string> m_aCharacterNames = {};
+	
 	//RplId of entities that are playable
 	[RplProp()]
 	ref array<RplId> m_aEntitySlots = {};
@@ -193,6 +199,32 @@ class CRF_Gamemode : SCR_BaseGameMode
 			return CRF_Gamemode.Cast(gameMode);
 		else
 			return null;
+	}
+	
+	override void OnControllableSpawned(IEntity entity)
+	{
+		super.OnControllableSpawned(entity);
+		GetGame().GetCallqueue().CallLater(LogCharacter, 500, false, entity);
+	}
+	
+	void LogCharacter(IEntity entity)
+	{
+		if (Replication.IsServer())
+		{
+			if(!SCR_ChimeraCharacter.Cast(entity))
+				return;
+			m_aCharacters.Insert(RplComponent.Cast(entity.FindComponent(RplComponent)).Id());
+			if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)))
+			{
+				if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName())
+					m_aCharacterNames.Insert(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName());
+				else
+					m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			}
+			else
+				m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			Replication.BumpMe();
+		}
 	}
 	
 	override void EOnInit(IEntity owner)
