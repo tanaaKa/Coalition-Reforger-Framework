@@ -59,6 +59,9 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        SCR_CallsignInfo "{64604BDE4F171589}" {
         m_sCallsign "1-4"
        }
+       SCR_CallsignInfo "{646218123CA4D4E4}" {
+        m_sCallsign "1-5"
+       }
        SCR_CallsignInfo "{64604BDE4F6B9914}" {
         m_sCallsign "MAT team"
        }
@@ -82,6 +85,9 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        }
        SCR_CallsignInfo "{64604BDEBC1955A2}" {
         m_sCallsign "1-3"
+       }
+       SCR_CallsignInfo "{646218124F0308D3}" {
+        m_sCallsign "MMG Team"
        }
        SCR_CallsignInfo "{64604BDEBC46A630}" {
         m_sCallsign "T-72"

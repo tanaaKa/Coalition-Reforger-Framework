@@ -51,7 +51,7 @@ $grp SCR_BaseTriggerEntity {
  }
 }
 Vehicle M997_maxi_ambulance1 : "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et" {
- coords 1671.967 6.751 926.918
+ coords 1671.637 6.751 895.584
 }
 Vehicle UAZ452_ambulance_base1 : "{1247D68D2A76907D}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance_base.et" {
  coords 1031.622 20.656 2621.727
@@ -59,27 +59,33 @@ Vehicle UAZ452_ambulance_base1 : "{1247D68D2A76907D}Prefabs/Vehicles/Wheeled/UAZ
 }
 $grp Vehicle : "{4A71F755A4513227}Prefabs/Vehicles/Wheeled/M998/M1025.et" {
  M1 {
-  coords 1673.201 7.317 986.308
+  coords 1673.201 7.317 972.514
  }
  M2 {
-  coords 1673.131 7.317 977.659
+  coords 1673.131 7.317 962.77
  }
  M3 {
-  coords 1673.076 7.317 969.978
+  coords 1673.076 7.317 955.089
  }
  M4 {
-  coords 1672.925 7.317 963.421
+  coords 1672.925 7.317 948.532
  }
  M5 {
-  coords 1672.902 7.317 956.577
+  coords 1672.902 7.317 941.688
  }
  M6 {
-  coords 1672.68 7.317 949.728
+  coords 1672.68 7.317 934.839
  }
  M7 {
-  coords 1672.371 7.317 943.426
+  coords 1672.371 7.317 928.359
  }
  M8 {
-  coords 1672.232 7.317 935.896
+  coords 1672.232 7.317 920.829
+ }
+ M9 {
+  coords 1672.371 7.317 913.543
+ }
+ M10 {
+  coords 1672.232 7.317 906.013
  }
 }
