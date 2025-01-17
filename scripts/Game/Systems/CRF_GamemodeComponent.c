@@ -34,6 +34,15 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		GetGame().GetInputManager().AddActionListener("SwitchSpectatorUI", EActionTrigger.DOWN, UpdateHUDVisible);
 		GetGame().GetCallqueue().CallLater(AddMsgAction, 0, false);
 			
+		#ifdef WORKBENCH
+		if (Replication.IsServer())
+		{
+			GetGame().GetCallqueue().CallLater(UpdatePlayerGearScriptsArray, m_RNG.RandInt(10000, 20000), true);
+			
+			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
+			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
+		} 
+		#else
 		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(UpdatePlayerGearScriptsArray, m_RNG.RandInt(10000, 20000), true);
@@ -41,6 +50,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
+		#endif
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1489,7 +1499,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			DisableSafeStartEHs();
 			
 			// Send notification message 
-			m_Logging.GameStarted();
+			if (m_Logging)
+				m_Logging.GameStarted();
 			
 			// Use CallLater to delay the call for the removal of EHs so the changes so m_SafeStartEnabled can propagate.
 			GetGame().GetCallqueue().CallLater(DisableSafeStartEHs, 1500);
@@ -1501,12 +1512,15 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			
 			// Update logging component since game is now live
 			CRF_MDB_LoggingServerComponent logCom = CRF_MDB_LoggingServerComponent.GetInstance();
-			logCom.m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
-			SCR_FactionManager scrFM = SCR_FactionManager.Cast(GetGame().GetFactionManager());
-			logCom.m_iBluforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("BLUFOR"));
-			logCom.m_iOpforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("OPFOR"));
-			logCom.m_iIndforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("INDFOR"));
-			logCom.m_iCivCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("CIV"));
+			if(logCom)
+			{
+				logCom.m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
+				SCR_FactionManager scrFM = SCR_FactionManager.Cast(GetGame().GetFactionManager());
+				logCom.m_iBluforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("BLUFOR"));
+				logCom.m_iOpforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("OPFOR"));
+				logCom.m_iIndforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("INDFOR"));
+				logCom.m_iCivCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("CIV"));
+			};
 		}
 	};
 	

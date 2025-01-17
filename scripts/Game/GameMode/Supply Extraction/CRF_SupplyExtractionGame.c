@@ -79,7 +79,7 @@ class CRF_SupplyExtractionGameModeComponent: SCR_BaseGameModeComponent
 		if (!GetGame().InPlayMode()) 
 			return;
 		
-		if (Replication.IsServer())
+		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		}
