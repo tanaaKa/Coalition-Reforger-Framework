@@ -270,7 +270,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		// Throw em into deathscreen
 		if (m_bRespawnEnabled)
-			CheckTickets(playerId);
+			CheckTickets(playerId, SCR_GroupsManagerComponent.GetInstance().GetPlayerGroup(playerId).GetGroupID());
+		
 		
 		//Throw em into spectator
 		GetGame().GetCallqueue().CallLater(SetPlayerSpectator, 100, false, playerId, playerEntity);
@@ -509,79 +510,51 @@ class CRF_Gamemode : SCR_BaseGameMode
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void CheckTickets(int playerID)
+	void CheckTickets(int playerID, int groupID)
 	{
 		bool canRespawn = true;
-		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(GetRespawnGroupID(playerID)).GetFaction().GetFactionKey();	
+		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();	
 		        
-		// TODO: Collapse these two switch statements together
 		switch(faction)
 		{
 			case "BLUFOR" : {
-				if (m_iBLUFORCurrentTickets == 0) {
-					canRespawn = false
-				}; 	
+				if (!m_iBLUFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iBLUFORCurrentTickets != -1)
+						m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1;
+				}
 				break;
 			}
-			case "OPFOR"  : {
-				if (m_iOPFORCurrentTickets == 0) {
-					canRespawn = false
-				}; 	
+			case "OPFOR" : {
+				if (!m_iOPFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iOPFORCurrentTickets != -1)
+						m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1;
+				}
 				break;
 			}
 			case "INDFOR" : {
-				if (m_iINDFORCurrentTickets == 0) {
-					canRespawn = false
-				}; 	
+				if (!m_iINDFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iINDFORCurrentTickets != -1)
+						m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1;	
+				}
 				break;
 			}
 			case "CIV" : {
-				if (m_iCIVCurrentTickets == 0) {
-					canRespawn = false
-				}; 	
+				if (!m_iCIVCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iCIVCurrentTickets != -1)
+						m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1;
+				}
 				break;
 			}
 		}
-		
-		if (canRespawn)
-		{
-			// Start respawn process
-			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID);	
-			
-			// Subtract respawn tickets		
-			switch(faction)
-			{
-				case "BLUFOR" 	: {
-					m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1;	
-					break;
-				}
-				case "OPFOR"  	: {
-					m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1;   	
-					break;
-				}
-				case "INDFOR" 	: {
-					m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1;		
-					break;
-				}
-				case "CIV" 		: {
-					m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1;			
-					break;
-				}
-			}
-			Replication.BumpMe();
-		}
-			
-	}
-
-	//------------------------------------------------------------------------------------------------
-	int GetRespawnGroupID(int playerID)
-	{
-		int playerEntityRplID = m_aEntitySlots.Get(m_aSlots.Find(playerID));
-		int playerGroupRplID = m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(playerEntityRplID));
-		int GroupRplID = m_aGroupRplIDs.Get(m_aPlayerGroupIDs.Find(playerGroupRplID));
-		int groupID = m_aGroupRplIDs.Find(GroupRplID);
-		
-		return groupID;
+		Replication.BumpMe();
 	}
 	//------------------------------------------------------------------------------------------------
 	void UpdateRespawnTimer()
@@ -604,14 +577,14 @@ class CRF_Gamemode : SCR_BaseGameMode
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void SendRespawnScreen(int playerId)
+	void SendRespawnScreen(int playerId, int groupID)
 	{
-		Rpc(RpcDo_SendRespawnScreen, playerId)	
+		Rpc(RpcDo_SendRespawnScreen, playerId, groupID)	
 	}
 
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void RpcDo_SendRespawnScreen(int playerId)
+	void RpcDo_SendRespawnScreen(int playerId, int groupID)
 	{
 		if(SCR_PlayerController.GetLocalPlayerId() != playerId)
 			return;
@@ -621,19 +594,21 @@ class CRF_Gamemode : SCR_BaseGameMode
 			topMenu.Close();
 
 		GetGame().GetMenuManager().CloseAllMenus();
-		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
+		MenuBase respawnMenu = GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
+		CRF_RespawnMenu respawnMenuUI = CRF_RespawnMenu.Cast(respawnMenu);
+		respawnMenuUI.m_iGroupID = groupID;
 			
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void RespawnPlayerTicket(int playerId)
+	void RespawnPlayerTicket(int playerId, int groupID)
 	{
-		Rpc(RpcDo_RespawnPlayerTicket, playerId)	
+		Rpc(RpcDo_RespawnPlayerTicket, playerId, groupID)	
 	}
 
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcDo_RespawnPlayerTicket(int playerID)
+	void RpcDo_RespawnPlayerTicket(int playerID, int groupID)
 	{
 		if(RplSession.Mode() != RplMode.Dedicated)
 		{
@@ -644,8 +619,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		if(SCR_FactionManager.SGetPlayerFaction(playerID).GetFactionKey() == "SPEC")
 		{	
 			string respawnPrefab = CRF_GamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR");
-			int respawnGroupID = GetRespawnGroupID(playerID);
-			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(respawnGroupID).GetFaction().GetFactionKey();
+			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();
 			string spawnpoint
 			
 			if(respawnPrefab.IsEmpty())
@@ -676,7 +650,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 			
 			Resource resource = Resource.Load(respawnPrefab);
 			SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
-			RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, respawnGroupID);
+			RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, groupID);
 		}
 	}
 	//------------------------------------------------------------------------------------------------	
