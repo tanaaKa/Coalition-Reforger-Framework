@@ -17,6 +17,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  coords 5116.674 154.95 5140.063
+ m_iTimeLimitMinutes 60
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "Elements of 1ABCT, 3rd ID recently captured the city of Anizay. With the major supply hub captured the Landay Airfield is all but cut off from the ground. A Recon Company has been tasked with clearing the MSR to the airfield and capturing the airfield propper. Defending it is a depleted Iraqi recon company."\
