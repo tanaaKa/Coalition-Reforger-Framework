@@ -1,54 +1,44 @@
 $grp PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStartBorderMarker.et" {
  {
-  coords 4494.628 138.495 6927.698
+  coords 4423.666 138.355 6798.42
  }
  {
-  coords 4424.393 137.661 6912.021
+  coords 4472.543 135.615 6803.478
  }
  {
-  coords 4375.275 132.907 6885.519
+  coords 4532.826 139.603 6824.812
  }
  {
-  coords 4386.474 139.787 6837.553
+  coords 4528.104 143.094 6870.211
  }
  {
-  coords 4415.93 138.321 6780.988
+  coords 4505.875 143.192 6901.863
  }
  {
-  coords 4451.491 135.559 6756.242
+  coords 4447.657 133.478 6893.846
  }
  {
-  coords 4516.667 137.008 6786.071
- }
- {
-  coords 4559.444 136.634 6821.323
- }
- {
-  coords 4546.671 132.345 6878.68
- }
- {
-  coords 4548.807 134.594 6933.851
-  angleY 0
+  coords 4394.773 137.568 6860.486
  }
 }
 PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et" {
- coords 8382.519 111.53 7105.114
+ coords 6717.037 224.819 2484.188
 }
 $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
  {
-  coords 6174.047 103.64 7028.229
+  coords 5224.667 170.726 5042.623
   m_MarkerColor 0 0 0 1
   m_sDescription "OBJ 1"
   m_bShowForAnyFaction 1
  }
  {
-  coords 7377.814 90.494 6893.185
+  coords 5204.099 233.685 3594.211
   m_MarkerColor 0 0 0 1
   m_sDescription "OBJ 2"
   m_bShowForAnyFaction 1
  }
  {
-  coords 8373.169 111.532 7015.336
+  coords 6458.567 214.342 2384.43
   m_MarkerColor 0 0 0 1
   m_sDescription "OBJ 3"
   m_bShowForAnyFaction 1
@@ -56,136 +46,172 @@ $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarke
 }
 $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
  {
-  coords 7187.869 108.134 6987.654
+  coords 6450.078 219.304 3888.883
+  angleY 0
  }
  {
-  coords 7246.1 110.311 7483.226
+  coords 5846.036 204.652 3854.879
+  angleY 0
  }
  {
-  coords 7284.66 131.506 8458.986
+  coords 5490.066 222.789 3761.15
+  angleY 0
  }
  {
-  coords 7210.303 108.111 9389.643
+  coords 5192.387 249.215 3693.844
+  angleY 0
  }
  {
-  coords 7133.634 95.601 6875.028
+  coords 4729.203 206.552 3488.748
+  angleY 0
  }
  {
-  coords 7194.12 88.869 6659.606
+  coords 4419.792 220.785 3340.773
+  angleY 0
  }
  {
-  coords 7208.836 76.762 6486.38
+  coords 4270.7 243.419 3180.262
+  angleY 0
  }
  {
-  coords 7108.318 100.883 6300.716
+  coords 3882.95 171.843 2863.329
+  angleY 0
  }
  {
-  coords 7095.174 122.911 5963.714
- }
- {
-  coords 7134.209 145.058 5768.866
- }
- {
-  coords 7149.215 129.059 5515.143
- }
- {
-  coords 7171.807 126.301 5185.124
+  coords 3599.447 189.5 2670.173
+  angleY 0
  }
 }
 $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
  {
-  coords 9054.188 146.394 8573.766
+  coords 4936.478 154.239 6988.009
   angleY 0
  }
  {
-  coords 8698.772 118.65 9073.834
+  coords 4492.808 135.193 6967.529
   angleY 0
  }
  {
-  coords 8193.822 139.33 9310.106
+  coords 3920.418 138.037 6928.084
   angleY 0
  }
  {
-  coords 7514.732 163.424 9395.493
+  coords 3589.183 135.406 6817.23
   angleY 0
  }
  {
-  coords 6869.732 154.945 9404.489
+  coords 3541.455 142.972 6380.519
   angleY 0
  }
  {
-  coords 5724.225 165.462 9537.048
+  coords 3477.573 135.873 6010.683
   angleY 0
  }
  {
-  coords 4960.754 152.78 9555.864
+  coords 3479.153 135.053 5755.47
   angleY 0
  }
  {
-  coords 4354.645 145.909 9201.525
+  coords 3557.427 135.84 5322.266
   angleY 0
  }
  {
-  coords 4337.22 149.905 8220.849
+  coords 3600.931 142.017 5123.334
   angleY 0
  }
  {
-  coords 4348.683 138.846 7664.597
+  coords 3765.475 168.01 4580.125
   angleY 0
  }
  {
-  coords 4358.376 141.616 7149.233
+  coords 3787.914 157.782 4198.206
   angleY 0
  }
  {
-  coords 4392.457 140.787 6692.301
+  coords 3410.332 162.585 3709.924
   angleY 0
  }
  {
-  coords 4473.208 135.797 6135.159
+  coords 3086.436 170.972 3095.986
   angleY 0
  }
  {
-  coords 4728.96 130.272 5574.645
+  coords 3600.18 205.438 2448.729
   angleY 0
  }
  {
-  coords 5085.507 162.488 4934.45
+  coords 3277.368 166.191 2692.964
   angleY 0
  }
  {
-  coords 5394.979 182.879 4447.247
+  coords 4323.859 180.948 2401.539
   angleY 0
  }
  {
-  coords 5929.415 -17.631 4498.695
+  coords 4868.623 199.388 2252.414
   angleY 0
  }
  {
-  coords 7232.56 136.991 4914.894
+  coords 5446.846 182.093 1947.845
   angleY 0
  }
  {
-  coords 8039.229 100.606 4941.928
+  coords 5846.136 216.227 1471.55
   angleY 0
  }
  {
-  coords 8531.375 107.286 4660.038
+  coords 6325.922 226.044 1858.467
   angleY 0
  }
  {
-  coords 9149.813 96.766 4598.066
+  coords 6840.949 229.321 2263.391
   angleY 0
  }
  {
-  coords 9429.862 45.815 5699.486
+  coords 6838.523 219.721 2781.655
   angleY 0
  }
  {
-  coords 9304.766 82.36 6661.814
+  coords 6883.521 250.203 3228.756
+  angleY 0
+ }
+ {
+  coords 6904.96 283.573 3571.089
+  angleY 0
+ }
+ {
+  coords 6959.501 233.741 4043.095
+  angleY 0
+ }
+ {
+  coords 7014.967 157.092 4678.754
+  angleY 0
+ }
+ {
+  coords 6854.596 144.262 5122.849
+  angleY 0
+ }
+ {
+  coords 6621.563 113.034 5656.218
+  angleY 0
+ }
+ {
+  coords 6239.851 125.608 6180.14
+  angleY 0
+ }
+ {
+  coords 5865.502 96.915 6716.435
+  angleY 0
+ }
+ {
+  coords 5433.898 113.519 7023.093
+  angleY 0
+ }
+ {
+  coords 5134.882 127.054 6997.781
   angleY 0
  }
 }
 PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.et" {
- coords 4473.775 133.692 6854.912
+ coords 4499.002 130.94 6857.5
 }

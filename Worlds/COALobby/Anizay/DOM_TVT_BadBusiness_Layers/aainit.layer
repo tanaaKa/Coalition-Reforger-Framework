@@ -1,5 +1,5 @@
-SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
- coords 5115.327 157.606 5131.801
+SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
+ coords 6555.295 216.3 2432.566
 }
 CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
@@ -195,7 +195,10 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
 }
 $grp BaseGameTriggerEntity {
  OBJ1 {
-  coords 6184.114 103.719 7025.916
+  coords 5212.58 171.289 5079.869
+  angleX -2.764
+  angleY 55.004
+  angleZ -88.067
   userScript "	float m_iBluforPlayers = 0;"\
   "    float m_iOpforPlayers = 0;"\
   "    "\
@@ -216,17 +219,17 @@ $grp BaseGameTriggerEntity {
   "    "\
   "    void Captured()"\
   "    {"\
-  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Zaranj has been captured by Blufor\", 10);"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Idak has been captured by Blufor\", 10);"\
   "        delete GetGame().GetWorld().FindEntityByName(\"OBJ1\");"\
   "    }"
   TriggerShapeType Sphere
-  SphereRadius 200
+  SphereRadius 152.2
   PeriodicQueries 1
   UpdatePeriod 10
   OnQueryFinished ""\
   "		m_iBluforPlayers= 0;"\
   "        m_iOpforPlayers = 0;"\
-  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ1\").GetOrigin(), 200, FilterPlayers, null);"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ1\").GetOrigin(), 150, FilterPlayers, null);"\
   "        if(m_iOpforPlayers == 0 && m_iBluforPlayers > 0)"\
   "            Captured();"\
   "        if(m_iOpforPlayers > 0 && m_iBluforPlayers > 0)"\
@@ -235,7 +238,10 @@ $grp BaseGameTriggerEntity {
   "	"
  }
  OBJ2 {
-  coords 7377.762 90.453 6888.763
+  coords 5219.574 246.443 3601.646
+  angleX -0.245
+  angleY -0.507
+  angleZ 64.26
   userScript "	float m_iBluforPlayers = 0;"\
   "    float m_iOpforPlayers = 0;"\
   "    "\
@@ -256,11 +262,11 @@ $grp BaseGameTriggerEntity {
   "    "\
   "    void Captured()"\
   "    {"\
-  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Landay has been captured by Blufor\", 10);"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Janur has been captured by Blufor\", 10);"\
   "        delete GetGame().GetWorld().FindEntityByName(\"OBJ2\");"\
   "    }"
   TriggerShapeType Sphere
-  SphereRadius 300
+  SphereRadius 173.6
   PeriodicQueries 1
   UpdatePeriod 10
   OnQueryFinished ""\
@@ -268,7 +274,7 @@ $grp BaseGameTriggerEntity {
   "        m_iOpforPlayers = 0;"\
   "		if(GetGame().GetWorld().FindEntityByName(\"OBJ1\"))"\
   "			return;"\
-  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ2\").GetOrigin(), 300, FilterPlayers, null);"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ2\").GetOrigin(), 170, FilterPlayers, null);"\
   "        if(m_iOpforPlayers == 0 && m_iBluforPlayers > 0)"\
   "            Captured();"\
   "        if(m_iOpforPlayers > 0 && m_iBluforPlayers > 0)"\
@@ -277,7 +283,7 @@ $grp BaseGameTriggerEntity {
   "	"
  }
  OBJ3 {
-  coords 8442.1 111.529 7012.068
+  coords 6447.537 214.344 2375.753
   userScript "	float m_iBluforPlayers = 0;"\
   "    float m_iOpforPlayers = 0;"\
   "    "\
@@ -298,11 +304,11 @@ $grp BaseGameTriggerEntity {
   "    "\
   "    void Captured()"\
   "    {"\
-  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"The Airfield has been captured by Blufor\", 10);"\
+  "        SCR_PopUpNotification.GetInstance().PopupMsg(\"Gorqan has been captured by Blufor, OPFOR total defeat.\", 10);"\
   "        delete GetGame().GetWorld().FindEntityByName(\"OBJ3\");"\
   "    }"
   TriggerShapeType Sphere
-  SphereRadius 230
+  SphereRadius 254.1
   PeriodicQueries 1
   UpdatePeriod 10
   OnQueryFinished ""\
@@ -310,7 +316,7 @@ $grp BaseGameTriggerEntity {
   "        m_iOpforPlayers = 0;"\
   "		if(GetGame().GetWorld().FindEntityByName(\"OBJ2\"))"\
   "			return;"\
-  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ3\").GetOrigin(), 230, FilterPlayers, null);"\
+  "        GetGame().GetWorld().QueryEntitiesBySphere(GetGame().GetWorld().FindEntityByName(\"OBJ3\").GetOrigin(), 250, FilterPlayers, null);"\
   "        if(m_iOpforPlayers == 0 && m_iBluforPlayers > 0)"\
   "            Captured();"\
   "        if(m_iOpforPlayers > 0 && m_iBluforPlayers > 0)"\
