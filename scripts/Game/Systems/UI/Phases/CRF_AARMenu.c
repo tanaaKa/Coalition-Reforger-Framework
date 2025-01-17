@@ -49,7 +49,6 @@ class CRF_AARMenuUI: ChimeraMenuBase
 		
 		
 		//INPUT MANAGERS
-		GetGame().GetInputManager().ActivateContext("MapContext", 99999);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("MenuBack", EActionTrigger.DOWN, Action_Exit);
@@ -316,6 +315,8 @@ class CRF_AARMenuUI: ChimeraMenuBase
 	override void OnMenuUpdate(float tDelta)
 	{
 		super.OnMenuUpdate(tDelta);
+		if (m_MapEntity)
+			GetGame().GetInputManager().ActivateContext("MapContext");
 		TimeContainer timeContainer = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetTimeAndWeatherManager().GetTime();
 		int hours = timeContainer.m_iHours;
 		int minutes = timeContainer.m_iMinutes;
