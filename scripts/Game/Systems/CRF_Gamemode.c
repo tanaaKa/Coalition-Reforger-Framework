@@ -780,7 +780,6 @@ class CRF_Gamemode : SCR_BaseGameMode
 		GetGame().GetPlayerManager().GetAllPlayers(players);
 		foreach(int player: players)
 		{
-			Print("Scanning player");
 			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
 				continue;
 			
