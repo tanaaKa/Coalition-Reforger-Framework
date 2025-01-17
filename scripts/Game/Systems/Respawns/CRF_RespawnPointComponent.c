@@ -16,7 +16,7 @@ class CRF_RespawnPointComponent: ScriptComponent
 	{
 		super.OnPostInit(owner);
 		
-		if (!GetGame().InPlayMode() || !Replication.IsServer()) return;
+		if (!GetGame().InPlayMode() || RplSession.Mode() != RplMode.Dedicated) return;
 		
 		CRF_Gamemode.GetInstance().RegisterRespawnPoint(owner);
 	};

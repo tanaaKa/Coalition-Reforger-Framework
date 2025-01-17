@@ -34,6 +34,15 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		GetGame().GetInputManager().AddActionListener("SwitchSpectatorUI", EActionTrigger.DOWN, UpdateHUDVisible);
 		GetGame().GetCallqueue().CallLater(AddMsgAction, 0, false);
 			
+		#ifdef WORKBENCH
+		if (Replication.IsServer())
+		{
+			GetGame().GetCallqueue().CallLater(UpdatePlayerGearScriptsArray, m_RNG.RandInt(10000, 20000), true);
+			
+			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
+			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
+		} 
+		#else
 		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(UpdatePlayerGearScriptsArray, m_RNG.RandInt(10000, 20000), true);
@@ -41,6 +50,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			m_Logging = CRF_LoggingServerComponent.Cast(this.FindComponent(CRF_LoggingServerComponent));
 			GetGame().GetCallqueue().CallLater(WaitTillGameStart, 1000, true);
 		} 
+		#endif
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1420,7 +1430,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// SafeStart functions
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	string GetServerWorldTime()
 	{
 		return m_sServerWorldTime;
@@ -1432,6 +1441,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		return m_SafeStartEnabled;
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void OnSafeStartChange() 
 	{
 		m_OnSafeStartChange.Invoke(m_SafeStartEnabled);
@@ -1489,7 +1499,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			DisableSafeStartEHs();
 			
 			// Send notification message 
-			m_Logging.GameStarted();
+			if (m_Logging)
+				m_Logging.GameStarted();
 			
 			// Use CallLater to delay the call for the removal of EHs so the changes so m_SafeStartEnabled can propagate.
 			GetGame().GetCallqueue().CallLater(DisableSafeStartEHs, 1500);
@@ -1501,12 +1512,15 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			
 			// Update logging component since game is now live
 			CRF_MDB_LoggingServerComponent logCom = CRF_MDB_LoggingServerComponent.GetInstance();
-			logCom.m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
-			SCR_FactionManager scrFM = SCR_FactionManager.Cast(GetGame().GetFactionManager());
-			logCom.m_iBluforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("BLUFOR"));
-			logCom.m_iOpforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("OPFOR"));
-			logCom.m_iIndforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("INDFOR"));
-			logCom.m_iCivCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("CIV"));
+			if(logCom)
+			{
+				logCom.m_iPlayerCount = GetGame().GetPlayerManager().GetPlayerCount();
+				SCR_FactionManager scrFM = SCR_FactionManager.Cast(GetGame().GetFactionManager());
+				logCom.m_iBluforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("BLUFOR"));
+				logCom.m_iOpforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("OPFOR"));
+				logCom.m_iIndforCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("INDFOR"));
+				logCom.m_iCivCount = scrFM.GetFactionPlayerCount(GetGame().GetFactionManager().GetFactionByKey("CIV"));
+			};
 		}
 	};
 	
@@ -1548,6 +1562,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	};
 	
 	// Why are these two methods done this way? It should just be one wtf
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void DeleteEmptySlots()
 	{
 		if(CRF_Gamemode.GetInstance().m_bDeleteJIPSlots) 
@@ -1555,6 +1570,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 				GetGame().GetCallqueue().CallLater(DeleteEmptySlotsSlowly, 125, true);
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	void DeleteEmptySlotsSlowly()
 	{
 		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
@@ -1616,7 +1632,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// SafeStart EHs
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	
 	protected void ActivateSafeStartEHs()
 	{	
 		array<int> outPlayers = {};
@@ -1627,6 +1642,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			IEntity controlledEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 			if (!controlledEntity) 
 				continue;
+			
+			SCR_CharacterDamageManagerComponent.Cast(controlledEntity.FindComponent(SCR_CharacterDamageManagerComponent)).EnableDamageHandling(false);
 			
 			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntity.FindComponent(EventHandlerManagerComponent));
 			if (!eventHandler) 
@@ -1647,29 +1664,32 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		};
 	}
 	
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	protected void DisableSafeStartEHs()
 	{	
 		for (int i = 0; i < m_mPlayersWithEHsMap.Count(); i++)
 		{
-			IEntity controlledEntityKey = m_mPlayersWithEHsMap.GetKey(i);
+			IEntity controlledEntity = m_mPlayersWithEHsMap.GetKey(i);
 			
-			if(!controlledEntityKey)
+			if(!controlledEntity)
 				continue;
 			
-			CharacterControllerComponent charComp = CharacterControllerComponent.Cast(controlledEntityKey.FindComponent(CharacterControllerComponent));
+			SCR_CharacterDamageManagerComponent.Cast(controlledEntity.FindComponent(SCR_CharacterDamageManagerComponent)).EnableDamageHandling(true);
+			
+			CharacterControllerComponent charComp = CharacterControllerComponent.Cast(controlledEntity.FindComponent(CharacterControllerComponent));
 			if (!charComp) 
 				continue;
 			
 			charComp.SetSafety(false, false);
 			
-			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntityKey.FindComponent(EventHandlerManagerComponent));
+			EventHandlerManagerComponent eventHandler = EventHandlerManagerComponent.Cast(controlledEntity.FindComponent(EventHandlerManagerComponent));
 			if (!eventHandler) 
 				continue;
 			
 			eventHandler.RemoveScriptHandler("OnProjectileShot", this, OnWeaponFired);
 			eventHandler.RemoveScriptHandler("OnGrenadeThrown", this, OnGrenadeThrown);
 			
-			m_mPlayersWithEHsMap.Set(controlledEntityKey, false);
+			m_mPlayersWithEHsMap.Set(controlledEntity, false);
 		};
 	};
 	

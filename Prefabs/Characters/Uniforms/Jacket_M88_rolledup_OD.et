@@ -1,0 +1,31 @@
+GameEntity : "{E44990162EBC47B7}Prefabs/Characters/Uniforms/Jacket_M88_base.et" {
+ ID "5104869D194C6243"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5222CB01D5B9A306}" {
+   Attributes SCR_ItemAttributeCollection "{5222CB01245CDF32}" {
+    ItemDisplayName UIInfo "{5222CB0109A04AB2}" {
+     Name "#AR-Uniform_M88_Jacket_RolledUp_Name"
+    }
+    CustomAttributes {
+     PreviewRenderAttributes "{555292467DA11B7C}" {
+      PreviewModel "{D9E721215D2BC00F}Assets/Characters/Uniforms/Jacket_M88/Jacket_M88_01_rolledup.xob"
+     }
+    }
+   }
+  }
+  BaseLoadoutClothComponent "{5104869D194C627A}" {
+   Slots {
+    LoadoutSlotInfo DummyBelt {
+     Prefab "{F928D90B6E4B9166}Prefabs/Characters/Vests/Vest_SovietHarness/Vest_SovietHarness_belt_dummy.et"
+    }
+   }
+   WornModel "{D9E721215D2BC00F}Assets/Characters/Uniforms/Jacket_M88/Jacket_M88_01_rolledup.xob"
+   WornMaterialsOverride {
+    "{BDCB3AED74534D4D}Assets/Characters/Uniforms/Jacket_M88/Data/Jacket_M88_01_rolledup_OD.emat"
+   }
+   OverrideMeshesToHide +{
+   }
+   DeflatedModel "{EADB7BA9BDDAF56B}Assets/Characters/Uniforms/Jacket_M88/Jacket_M88_01_rolledup_Deflated.xob"
+  }
+ }
+}
