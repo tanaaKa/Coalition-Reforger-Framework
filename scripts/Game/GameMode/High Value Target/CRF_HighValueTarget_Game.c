@@ -68,7 +68,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 			spawnParams.Transform[3] = transponderEntity.GetOrigin();
 			m_eHvtEntity = GetGame().SpawnEntityPrefab(Resource.Load(m_hvtPrefab),GetGame().GetWorld(),spawnParams);
 			
-			if (Replication.IsServer())
+			if (RplSession.Mode() == RplMode.Dedicated)
 			{
 				m_eHvtEntity.SetYawPitchRoll(m_hvtPrefabYaw);
 				
@@ -79,7 +79,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 				characterController.m_OnPlayerDeathWithParam.Insert(HVTKilled);
 			}
 			
-			if (m_disableDamage && Replication.IsServer()) 
+			if (m_disableDamage && RplSession.Mode() == RplMode.Dedicated) 
 			{
 				SCR_CharacterDamageManagerComponent damangeMangerController = SCR_CharacterDamageManagerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterDamageManagerComponent));
 				if (!damangeMangerController)
@@ -88,7 +88,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 				damangeMangerController.EnableDamageHandling(false);
 			}
 			
-			if (m_setUnconcious && Replication.IsServer()) 
+			if (m_setUnconcious && RplSession.Mode() == RplMode.Dedicated) 
 			{			
 				SCR_CharacterControllerComponent characterController = SCR_CharacterControllerComponent.Cast(m_eHvtEntity.FindComponent(SCR_CharacterControllerComponent));
 				if (!characterController)
@@ -111,7 +111,7 @@ class CRF_HighValueTargetGameModeComponent: SCR_BaseGameModeComponent
 		if (!CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 		{	
 			GetGame().GetCallqueue().Remove(WaitTillSafeStartEnds);
-			if (Replication.IsServer())
+			if (RplSession.Mode() == RplMode.Dedicated)
 			{
 				GetGame().GetCallqueue().CallLater(transponderInit, 1000, true);
 			}
