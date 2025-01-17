@@ -640,7 +640,34 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	
 	protected void SpawnWeapon(WeaponSlotComponent weaponSlotComponent, CRF_Weapon_Class weaponToSpawn, EntitySpawnParams spawnParams, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
 	{		
-		IEntity weaponSpawned = GetGame().SpawnEntityPrefab(Resource.Load(weaponToSpawn.m_Weapon), GetGame().GetWorld(), spawnParams);
+		bool successfulSpawn = inventoryManager.TrySpawnPrefabToStorage(weaponToSpawn.m_Weapon);
+		
+		if (!successfulSpawn)
+		{
+			Print("-------------------------------------------------------------------------------------------------------------", LogLevel.ERROR);
+			Print(string.Format("CRF GEAR SCRIPT ERROR: UNABLE TO INSERT WEAPON: %1", weaponToSpawn.m_Weapon), LogLevel.ERROR);
+			Print(string.Format("CRF GEAR SCRIPT ERROR: INTO ENTITY: %1", inventoryManager.GetOwner().GetPrefabData().GetPrefabName()), LogLevel.ERROR);
+			Print(" ", LogLevel.ERROR);
+			Print("CRF GEAR SCRIPT ERROR: NOT ENOUGH SPACE IN INVENTORY/INVALID WEAPON ITEM!", LogLevel.ERROR);
+			Print("-------------------------------------------------------------------------------------------------------------", LogLevel.ERROR);
+			return;
+		};
+		
+		IEntity weaponSpawned;
+		array<IEntity> outItems = {};
+		inventoryManager.GetItems(outItems);
+		
+		if (outItems.IsEmpty())
+			return;
+		
+		foreach(IEntity item : outItems)
+		{
+			if(item.GetPrefabData().GetPrefabName() == weaponToSpawn.m_Weapon)
+			{
+				weaponSpawned = item;
+				break;
+			};
+		}
 		
 		if(weaponSpawned)
 		{
@@ -654,8 +681,35 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	}
 	
 	protected void SpawnSpecWeapon(WeaponSlotComponent weaponSlotComponent, CRF_Spec_Weapon_Class specWeaponToSpawn, EntitySpawnParams spawnParams, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
-	{		
-		IEntity specWeaponSpawned = GetGame().SpawnEntityPrefab(Resource.Load(specWeaponToSpawn.m_Weapon), GetGame().GetWorld(), spawnParams);
+	{				
+		bool successfulSpawn = inventoryManager.TrySpawnPrefabToStorage(specWeaponToSpawn.m_Weapon);
+		
+		if (!successfulSpawn)
+		{
+			Print("-------------------------------------------------------------------------------------------------------------", LogLevel.ERROR);
+			Print(string.Format("CRF GEAR SCRIPT ERROR: UNABLE TO INSERT WEAPON: %1", specWeaponToSpawn.m_Weapon), LogLevel.ERROR);
+			Print(string.Format("CRF GEAR SCRIPT ERROR: INTO ENTITY: %1", inventoryManager.GetOwner().GetPrefabData().GetPrefabName()), LogLevel.ERROR);
+			Print(" ", LogLevel.ERROR);
+			Print("CRF GEAR SCRIPT ERROR: NOT ENOUGH SPACE IN INVENTORY/INVALID WEAPON ITEM!", LogLevel.ERROR);
+			Print("-------------------------------------------------------------------------------------------------------------", LogLevel.ERROR);
+			return;
+		};
+		
+		IEntity specWeaponSpawned;
+		array<IEntity> outItems = {};
+		inventoryManager.GetItems(outItems);
+		
+		if (outItems.IsEmpty())
+			return;
+		
+		foreach(IEntity item : outItems)
+		{
+			if(item.GetPrefabData().GetPrefabName() == specWeaponToSpawn.m_Weapon)
+			{
+				specWeaponSpawned = item;
+				break;
+			};
+		}
 		
 		if(specWeaponSpawned)
 		{
