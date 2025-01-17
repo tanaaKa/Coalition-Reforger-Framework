@@ -675,8 +675,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			{
 				IEntity attachmentSpawned = GetGame().SpawnEntityPrefab(Resource.Load(attachment), GetGame().GetWorld(), spawnParams);
 				
-				InsertInventoryItem(attachmentSpawned, inventory, inventoryManager);
-				
 				if(attachmentSlot.CanSetAttachment(attachmentSpawned))
 				{
 					delete attachmentSlot.GetAttachedEntity();
