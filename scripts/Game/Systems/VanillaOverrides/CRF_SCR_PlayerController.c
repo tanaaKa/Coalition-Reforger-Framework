@@ -296,9 +296,9 @@ modded class SCR_PlayerController
 		EntitySpawnParams params = new EntitySpawnParams();
 		params.TransformMode = ETransformMode.WORLD;
 		if(CRF_Gamemode.GetInstance().m_aSlots.Find(SCR_PlayerController.GetLocalPlayerId()) != -1)
-			params.Transform = m_vLastEntityTransform;
+			params.Transform[3] = m_vLastEntityTransform[3];
 		else
-			params.Transform = CRF_Gamemode.GetInstance().m_vGenericSpawn;
+			params.Transform[3] = CRF_Gamemode.GetInstance().m_vGenericSpawn[3];
 		
 		m_bIsListening = false;
 		
