@@ -1,0 +1,74 @@
+Vehicle AH6M_RKT1 : "{823CA4130CE90077}Prefabs/Vehicles/Helicopters/AH6M/AH6M_RKT.et" {
+ coords 3314.693 351.125 6671.353
+ angleY 53.609
+}
+SCR_AIGroup : "{96DB67CD45DC5F85}Prefabs/Groups/INDFOR/Standard/Command/CRF_INDFOR_Platoon_p.et" {
+ coords 3278.277 352.477 6635.961
+ {
+  SCR_AIGroup : "{35D9448A4ED99223}Prefabs/Groups/INDFOR/Standard/Support/CRF_INDFOR_MedicTeam_p.et" {
+   coords 15.997 -1.636 -18.47
+   angleY 55.038
+   {
+    SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_RifleSquad_p.et" {
+     coords -35.146 2.784 -15.611
+     angleY -4.073
+     {
+      SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_RifleSquad_p.et" {
+       coords 10.427 -0 -0
+       {
+        SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_RifleSquad_p.et" {
+         coords 12.985 0 0.001
+         {
+          SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_RifleSquad_p.et" {
+           coords 11.832 0 -0.001
+           {
+            SCR_AIGroup : "{ADF09DD7FCCA37C3}Prefabs/Groups/INDFOR/Standard/Infantry/CRF_INDFOR_RifleSquad_p.et" {
+             coords 9.95 0 -0
+             {
+              SCR_AIGroup : "{A95EA25C8833C6BE}Prefabs/Groups/INDFOR/Standard/Vehicle/CRF_INDFOR_AirTeam_p.et" {
+               coords -21.74 -2.83 34.058
+               angleY -0.253
+               {
+                SCR_AIGroup : "{A95EA25C8833C6BE}Prefabs/Groups/INDFOR/Standard/Vehicle/CRF_INDFOR_AirTeam_p.et" {
+                 coords 10.061 -0 -0.001
+                 {
+                  SCR_AIGroup : "{A95EA25C8833C6BE}Prefabs/Groups/INDFOR/Standard/Vehicle/CRF_INDFOR_AirTeam_p.et" {
+                   coords 10.53 0 0
+                   {
+                    SCR_AIGroup : "{A95EA25C8833C6BE}Prefabs/Groups/INDFOR/Standard/Vehicle/CRF_INDFOR_AirTeam_p.et" {
+                     coords 8.998 0 0
+                    }
+                   }
+                  }
+                 }
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{F503F71C08BE3F7D}Prefabs/Vehicles/Helicopters/AUS_MH60/AUS_UH60_armed.et" {
+ AUS_UH60_armed1 {
+  coords 3348.93 347.13 6615.507
+  angleY 56.315
+ }
+ AUS_UH60_armed2 {
+  coords 3336.356 348.52 6634.37
+  angleY 56.315
+ }
+ AUS_UH60_armed3 {
+  coords 3322.98 349.952 6654.437
+  angleY 56.315
+ }
+}

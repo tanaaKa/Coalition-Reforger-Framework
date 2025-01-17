@@ -6,6 +6,17 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CRF_HighValueTargetGameModeComponent "{6462011F13E8549E}" {
    m_hvtPrefab "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et"
   }
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_fDayTimeAcceleration 0.1
+   m_fNightTimeAcceleration 0.1
+   m_bUsePredefineStartingTimeAndWeather 1
+   m_aStartingWeatherAndTime {
+    SCR_TimeAndWeatherState "{6462FA50324877FB}" {
+     m_sWeatherPresetName "Rainy"
+     m_iStartingHour 2
+    }
+   }
+  }
  }
  coords 9959.637 266.551 5617.237
  m_iFactionOneRatio 3
@@ -15,8 +26,11 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_BLUFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B419A7B}" {
   m_rGearScript "{3FCA1378C33401ED}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSUSArmyMC.conf"
  }
+ m_INDFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9AE1C9ED}" {
+  m_rGearScript "{E87A99E18FA57C5C}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSION.conf"
+ }
  {
-  SCR_FactionManager {
+  SCR_FactionManager "6462FA53D64B5BA3" {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
@@ -48,6 +62,45 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        }
        SCR_CallsignInfo "{646256D4311CA844}" {
         m_sCallsign "AA (Avenger)"
+       }
+      }
+     }
+    }
+    SCR_Faction "{628CDE9209CA3FF9}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{58B2B630FDD64B6D}" {
+        m_sCallsign "PLT"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B53}" {
+        m_sCallsign "MED"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B51}" {
+        m_sCallsign "1-1"
+       }
+       SCR_CallsignInfo "{58B2B630FDD64B50}" {
+        m_sCallsign "1-2"
+       }
+       SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
+        m_sCallsign "1-3"
+       }
+       SCR_CallsignInfo "{6462FA577FE12C8A}" {
+        m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{6462FA577F1A0876}" {
+        m_sCallsign "1-5"
+       }
+       SCR_CallsignInfo "{6462FA577F3324FC}" {
+        m_sCallsign "AH (AH6M)"
+       }
+       SCR_CallsignInfo "{6462FA577F2B2BF9}" {
+        m_sCallsign "TH 1"
+       }
+       SCR_CallsignInfo "{6462FA577F436997}" {
+        m_sCallsign "TH 2"
+       }
+       SCR_CallsignInfo "{6462FA577C8AF60C}" {
+        m_sCallsign "TH 3"
        }
       }
      }
