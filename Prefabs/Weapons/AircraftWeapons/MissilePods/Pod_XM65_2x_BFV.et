@@ -1,0 +1,22 @@
+GenericEntity : "{FA7937B6B7D13933}Prefabs/Weapons/AircraftWeapons/MissilePods/Pod_XM65.et" {
+ ID "629D11C8BD6AE717"
+ components {
+  WCS_Armament_WeaponComponent "{629D11C992611C79}" {
+   m_DefaultProjectile "{65CDB9FEFCF751DE}Prefabs/Weapons/Ammo/Ammo_Missile_Kornet.et"
+  }
+  SlotManagerComponent "{629D11C99AEE634A}" {
+   Slots {
+    WCS_Armament_ProjectileSlotInfo W_0 {
+     Offset 0 -0.2845 -0.15
+    }
+    WCS_Armament_ProjectileSlotInfo W_1 {
+     Offset 0 -0.2845 -0.15
+    }
+   }
+  }
+  RplComponent "{629D11CAC0959C56}" {
+   Streamable Disabled
+   SpatialRelevancy 0
+  }
+ }
+}
