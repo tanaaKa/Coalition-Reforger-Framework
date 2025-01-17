@@ -41,25 +41,34 @@ class CRF_PlayableCharacter : ScriptComponent
 	override void OnPostInit(IEntity owner)
 	{
 		super.EOnInit(owner);
-		GetGame().GetCallqueue().CallLater(SetInitialEntity, 500, false, owner);
+		
+		if(!GetGame().InPlayMode())
+			return;
+		
+		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
+			m_bIsPlayable = false;
+
 		if(m_bIsPlayable)
+		{
+			GetGame().GetCallqueue().CallLater(SetInitialEntity, 500, false, owner);
 			GetGame().GetCallqueue().CallLater(DisableAI, 0, false, owner);
+		} else {
+			return;
+		}
 		
 		m_PlayerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
 		
 		SetEventMask(owner, EntityEvent.FIXEDFRAME);
 		
 		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
-		{
-			m_bIsSpectator = true;
-			
-		}
-			
-			
+			m_bIsSpectator = true;		
 	}
 	
 	override void EOnFixedFrame(IEntity owner, float timeSlice)
 	{
+		if(!m_bIsPlayable || !GetGame().InPlayMode())
+			return;
+		
 		super.EOnFixedFrame(owner, timeSlice);
 		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 		{
@@ -113,12 +122,18 @@ class CRF_PlayableCharacter : ScriptComponent
 	void SetInitialEntity(IEntity owner)
 	{
 		//Logs entity on server and disables AI
-		if(m_bIsPlayable && Replication.IsServer())
+		#ifdef WORKBENCH
+		SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
+		if(playableGroup)
+			CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
+		#else
+		if(RplSession.Mode() == RplMode.Dedicated)
 		{
 			SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
 			if(playableGroup)
 				CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
 		}
+		#endif
 			
 		//Sets location and all the physics BS on all machines
 		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")

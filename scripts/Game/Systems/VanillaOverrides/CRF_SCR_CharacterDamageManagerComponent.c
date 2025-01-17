@@ -4,7 +4,10 @@ modded class SCR_CharacterDamageManagerComponent
 	override void OnLifeStateChanged(ECharacterLifeState previousLifeState, ECharacterLifeState newLifeState)
 	{
 		super.OnLifeStateChanged(previousLifeState, newLifeState);
-		if(newLifeState == 10 && CRF_PlayableCharacter.Cast(GetOwner().FindComponent(CRF_PlayableCharacter)).IsPlayable())
+		
+		CRF_PlayableCharacter playableComp = CRF_PlayableCharacter.Cast(GetOwner().FindComponent(CRF_PlayableCharacter));
+		
+		if(playableComp && newLifeState == 10 && playableComp.IsPlayable())
 			CRF_Gamemode.GetInstance().SetDeathState(GetOwner(), true);
 	}
 }

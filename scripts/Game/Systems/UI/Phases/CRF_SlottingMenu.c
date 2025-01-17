@@ -684,7 +684,7 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 		TextWidget.Cast(m_wRoot.FindAnyWidget("PlayersText")).SetText("Players: " + GetGame().GetPlayerManager().GetPlayerCount());
 		int leftRatio = EditBoxWidget.Cast(m_wRoot.FindAnyWidget("RatioBox1")).GetText().ToInt();
 		int rightRatio = EditBoxWidget.Cast(m_wRoot.FindAnyWidget("RatioBox2")).GetText().ToInt();
-		TextWidget.Cast(m_wRoot.FindAnyWidget("Final")).SetText((GetGame().GetPlayerManager().GetPlayerCount() / (leftRatio + rightRatio) * leftRatio).ToString() + " : " + (GetGame().GetPlayerManager().GetPlayerCount() / (leftRatio + rightRatio) * rightRatio).ToString());
+		TextWidget.Cast(m_wRoot.FindAnyWidget("Final")).SetText(Math.Round(GetGame().GetPlayerManager().GetPlayerCount() / (leftRatio + rightRatio) * leftRatio).ToString() + " : " + Math.Round(GetGame().GetPlayerManager().GetPlayerCount() / (leftRatio + rightRatio) * rightRatio).ToString());
 		if(localSlotChanges != m_Gamemode.m_iSlotChanges)
 			UpdateSlots();
 		

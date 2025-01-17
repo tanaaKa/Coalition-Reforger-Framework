@@ -6,8 +6,20 @@ modded class SCR_AIGroup
 	override void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
-		if(Replication.IsServer() && m_bIsPlayable)
+		
+		if(!GetGame().InPlayMode())
+			return;
+		
+		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
+			m_bIsPlayable = false;
+		
+		#ifdef WORKBENCH
+		if (m_bIsPlayable)
 			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#else
+		if (RplSession.Mode() == RplMode.Dedicated && m_bIsPlayable)
+			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#endif
 	}
 	
 	//Saves the group on the server

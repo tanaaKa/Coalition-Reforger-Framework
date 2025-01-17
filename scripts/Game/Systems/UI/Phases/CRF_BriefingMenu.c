@@ -29,7 +29,6 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 			GetGame().GetCallqueue().CallLater(OpenMap, 0); 
 		}
 		
-		GetGame().GetInputManager().ActivateContext("MapContext", 99999);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("MenuBack", EActionTrigger.DOWN, Action_Exit);
@@ -125,6 +124,8 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 	override void OnMenuUpdate(float tDelta)
 	{
 		super.OnMenuUpdate(tDelta);
+		if (m_MapEntity)
+			GetGame().GetInputManager().ActivateContext("MapContext");
 		TimeContainer timeContainer = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetTimeAndWeatherManager().GetTime();
 		int hours = timeContainer.m_iHours;
 		int minutes = timeContainer.m_iMinutes;
@@ -149,6 +150,8 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 		m_cPlayerListBoxComponent.Clear();
 		foreach(int player : playerIDs)
 		{
+			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
+				continue;
 			int index = m_cPlayerListBoxComponent.AddItem(GetGame().GetPlayerManager().GetPlayerName(player), null, "{51F58D728FBCAD99}UI/Listbox/PlayerListboxElementNoIcon.layout");
 			SCR_ListBoxElementComponent comp = m_cPlayerListBoxComponent.GetElementComponent(index);
 			if(GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.ADMINISTRATOR) || GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.SESSION_ADMINISTRATOR))
@@ -180,8 +183,7 @@ class CRF_PreviewMenuUI: ChimeraMenuBase
 	{
 		if (m_MapEntity)
 			m_MapEntity.CloseMap();
-		
-		GetGame().GetInputManager().ActivateContext("MapContext");
+
 		GetGame().GetInputManager().RemoveActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().RemoveActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().RemoveActionListener("MenuBack", EActionTrigger.DOWN, Action_Exit);
