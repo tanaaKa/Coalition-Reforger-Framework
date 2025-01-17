@@ -3,11 +3,11 @@ Tank : "{8A883ABED22B6E27}Prefabs/Vehicles/Core/Tracked_Base.et" {
  components {
   SCR_UniversalInventoryStorageComponent "{631366138943B0C8}" {
    MultiSlots {
-    MultiSlotConfiguration "{64626B75A7483486}" {
-     SlotTemplate InventoryStorageSlot TOW {
-      Prefab "{92C68643676C43EE}Prefabs/Weapons/AircraftWeapons/MissilePods/Pod_XM65_2x_BFV.et"
-     }
-     NumSlots 1
+    MultiSlotConfiguration "{631649014A162D4F}" {
+     NumSlots 3
+    }
+    MultiSlotConfiguration "{63164901B488A5C9}" {
+     NumSlots 3
     }
    }
   }
