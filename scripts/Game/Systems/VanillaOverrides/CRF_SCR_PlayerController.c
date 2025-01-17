@@ -10,6 +10,7 @@ modded class SCR_PlayerController
 	protected bool m_bIsListening = false;
 	int m_iFPS;
 	int m_iAudioSetting;
+	protected bool m_bListeningBuffer = false;
 
 	//Adds action lisener to open menu in game
 	override protected void UpdateLocalPlayerController()
@@ -101,6 +102,11 @@ modded class SCR_PlayerController
 	
 	void Action_SetListening()
 	{
+		if(m_bListeningBuffer)
+			return;
+		
+		m_bListeningBuffer = true;
+		GetGame().GetCallqueue().CallLater(ListeningBuffer, 1000, false);
 		SCR_VONController vonController = SCR_VONController.Cast(GetGame().GetPlayerController().FindComponent(SCR_VONController));
 		vonController.PublicResetVON();
 		m_bIsListening = !m_bIsListening;
@@ -109,6 +115,11 @@ modded class SCR_PlayerController
 			vonController.SetVONDisabled(true);
 		else
 			vonController.SetVONDisabled(false);
+	}
+	
+	void ListeningBuffer()
+	{
+		m_bListeningBuffer = false;
 	}
 	
 	void SetListening(bool input)
