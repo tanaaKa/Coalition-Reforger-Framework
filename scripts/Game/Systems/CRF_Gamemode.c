@@ -759,9 +759,6 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void OnGamemodeStateChanged()
 	{
-		if(!GetGame().GetPlayerController() || RplSession.Mode() == RplMode.Dedicated)
-			return;
-		
 		if(Replication.IsServer())
 		{
 			if (m_OnStateChanged)
@@ -773,8 +770,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 			if(m_GamemodeState == CRF_GamemodeState.AAR)
 				EnterAAR();
 		}
-		
-		OpenMenu();
+		else
+			OpenMenu();
 	}
 	
 	void EnterAAR()
@@ -783,10 +780,14 @@ class CRF_Gamemode : SCR_BaseGameMode
 		GetGame().GetPlayerManager().GetAllPlayers(players);
 		foreach(int player: players)
 		{
+			Print("Scanning player");
+			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
+				continue;
+			
 			if(GetGame().GetPlayerManager().GetPlayerControlledEntity(player).GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 				continue;
 			
-			SpawnInitialEntity(player);
+			GetGame().GetCallqueue().CallLater(SpawnInitialEntity, 500, false, player);
 		}
 	}
 }
