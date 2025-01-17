@@ -13,7 +13,7 @@ Tank : "{8A883ABED22B6E27}Prefabs/Vehicles/Core/Tracked_Base.et" {
      SlotTemplate InventoryStorageSlot APAmmo {
       Prefab "{4195403866390EEE}Prefabs/Weapons/Magazines/Box_30x165_2A72_200rnd_AP-T.et"
      }
-     NumSlots 3
+     NumSlots 4
     }
    }
   }
