@@ -13,8 +13,13 @@ modded class SCR_AIGroup
 		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
 			m_bIsPlayable = false;
 		
-		if(Replication.IsServer() && m_bIsPlayable)
+		#ifdef WORKBENCH
+		if (m_bIsPlayable)
 			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#else
+		if (RplSession.Mode() == RplMode.Dedicated && m_bIsPlayable)
+			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#endif
 	}
 	
 	//Saves the group on the server
