@@ -5,7 +5,8 @@ modded enum ChimeraMenuPreset : ScriptMenuPresetEnum
 
 class CRF_SpectatorMenuUI: ChimeraMenuBase
 {
-	protected ref array<IEntity> m_aEntityIcons = {};
+	protected ref array<RplId> m_aEntityIcons = {};
+	protected ref array<Widget> m_aSpectatorWidgets = {};
 	protected ref array<ref CRF_SpectatorLabelIconCharacter> m_aSpectatorIcons = {};
 	protected CRF_Gamemode m_Gamemode;
 	protected SCR_ChatPanel m_ChatPanel;
@@ -32,21 +33,31 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	{
 		if (m_MapEntity)
 			GetGame().GetInputManager().ActivateContext("MapContext");
-		foreach(RplId entityID: m_Gamemode.m_aEntitySlots)
+		foreach(RplId entityID: m_Gamemode.m_aCharacters)
 		{
 			if(!Replication.FindItem(entityID))
+			{
+				int index = m_aEntityIcons.Find(entityID);
+				if(index == -1)
+					continue;
+				
+				m_aEntityIcons.RemoveOrdered(index);
+				delete m_aSpectatorWidgets.Get(index);
+				m_aSpectatorWidgets.RemoveOrdered(index);
+				m_aSpectatorIcons.RemoveOrdered(index);
 				continue;
+			}
 			
 			IEntity entity = RplComponent.Cast(Replication.FindItem(entityID)).GetEntity();
-			
-			if(m_aEntityIcons.Find(entity) != -1)
+			if(m_aEntityIcons.Find(entityID) != -1)
 				continue;
 			
 			Widget spectatorIconWidget = GetGame().GetWorkspace().CreateWidgets("{68625BAD23CEE68F}UI/Spectator/SpectatorLabelIconCharacter.layout", FrameWidget.Cast(GetRootWidget().FindAnyWidget("IconsFrame")));
 			CRF_SpectatorLabelIconCharacter spectatorIcon = CRF_SpectatorLabelIconCharacter.Cast(spectatorIconWidget.FindHandler(CRF_SpectatorLabelIconCharacter));
 			spectatorIcon.SetEntity(entity, "Spine3");
-			m_aEntityIcons.Insert(entity);
+			m_aEntityIcons.Insert(entityID);
 			m_aSpectatorIcons.Insert(spectatorIcon);
+			m_aSpectatorWidgets.Insert(spectatorIconWidget);
 		}
 		UpdateIcons();
 		
