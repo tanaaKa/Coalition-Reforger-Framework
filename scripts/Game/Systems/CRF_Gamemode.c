@@ -446,7 +446,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	// Should only ever be ran on the server
 	void RespawnPlayer(int playerID, string prefab, vector position, int groupID)
 	{
-		if(!RplSession.Mode() == RplMode.Dedicated)
+		if(RplSession.Mode() != RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnPlayer ON SERVER");
 			return;
@@ -616,7 +616,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcDo_RespawnPlayerTicket(int playerID)
 	{
-		if(!RplSession.Mode() == RplMode.Dedicated)
+		if(RplSession.Mode() != RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnSide ON SERVER");
 			return; 
