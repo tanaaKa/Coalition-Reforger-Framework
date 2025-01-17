@@ -1,0 +1,16 @@
+SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
+ coords 5115.327 157.606 5131.801
+}
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ coords 5116.674 154.95 5140.063
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "BLU"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "OPF"
+ m_BLUFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B419A7B}" {
+  m_rGearScript "{0370CF23AA203775}Configs/Gearscripts/Custom/Salami/CRF_GS_US90s.conf"
+ }
+ m_OPFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B11EAAD}" {
+  m_rGearScript "{195BE77A8FEFF946}Configs/Gearscripts/Custom/Salami/CRF_GS_IRAQ90s.conf"
+ }
+}
