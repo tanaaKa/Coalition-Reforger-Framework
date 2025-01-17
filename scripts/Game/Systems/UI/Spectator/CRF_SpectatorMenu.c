@@ -30,6 +30,8 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	}
 	override void OnMenuUpdate(float tDelta)
 	{
+		if (m_MapEntity)
+			GetGame().GetInputManager().ActivateContext("MapContext");
 		foreach(RplId entityID: m_Gamemode.m_aEntitySlots)
 		{
 			if(!Replication.FindItem(entityID))
