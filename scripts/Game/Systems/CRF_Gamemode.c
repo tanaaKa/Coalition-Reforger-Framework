@@ -112,6 +112,9 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode General")]
 	int m_iTimeLimitMinutes;
 	
+	[Attribute("false", "auto", "Enables AI autonomy while in GAME state", category: "CRF Gamemode General")]
+	bool EnableAIInGameState;
+	
 	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off? COOP = FALSE", category: "CRF Gamemode General")]
 	bool m_bDeleteJIPSlots;
 	
