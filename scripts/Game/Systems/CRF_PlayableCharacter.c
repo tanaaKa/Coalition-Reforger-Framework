@@ -45,7 +45,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		if(!GetGame().InPlayMode())
 			return;
 		
-		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
+		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState)
 			m_bIsPlayable = false;
 
 		if(m_bIsPlayable)
