@@ -139,7 +139,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			return;
 		}
 		
-		AddGearToEntity(entity, entity.GetPrefabData().GetPrefabName());
+		GetGame().GetCallqueue().CallLater(AddGearToEntity, m_RNG.RandInt(250, 1000), false, entity, entity.GetPrefabData().GetPrefabName());
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -303,6 +303,12 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		foreach(IEntity item : items)
 			SCR_EntityHelper.DeleteEntityAndChildren(item);
 		
+		GetGame().GetCallqueue().CallLater(AddGearToEntityDelay, m_RNG.RandInt(250, 1000), false, entity, gearScriptResourceName, gearScriptSettings, role, inventory, inventoryManager);
+	};
+		
+	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	void AddGearToEntityDelay(IEntity entity, string gearScriptResourceName, CRF_GearScriptContainer gearScriptSettings, string role, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
+	{
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// CHECK CLOTHING/WEAPONS/ITEMS
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------	
@@ -676,7 +682,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			foreach(ref CRF_Magazine_Class magazine : weaponToSpawn.m_MagazineArray)
 				AddInventoryItem(magazine.m_Magazine, magazine.m_MagazineCount, spawnParams, inventory, inventoryManager);
 			
-			InsertWeapon(weaponSpawned, weaponSlotComponent, weaponsAttachments, spawnParams, inventory, inventoryManager);
+			GetGame().GetCallqueue().CallLater(InsertWeapon, m_RNG.RandInt(5000, 10000), false, weaponSpawned, weaponSlotComponent, weaponsAttachments, spawnParams, inventory, inventoryManager);
 		};
 	}
 	
@@ -718,14 +724,14 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			foreach(ref CRF_Spec_Magazine_Class specMagazine : specWeaponToSpawn.m_MagazineArray)
 				AddInventoryItem(specMagazine.m_Magazine, specMagazine.m_MagazineCount, spawnParams, inventory, inventoryManager);
 			
-			InsertWeapon(specWeaponSpawned, weaponSlotComponent, specWeaponsAttachments, spawnParams, inventory, inventoryManager);
+			GetGame().GetCallqueue().CallLater(InsertWeapon, m_RNG.RandInt(5000, 10000), false, specWeaponSpawned, weaponSlotComponent, specWeaponsAttachments, spawnParams, inventory, inventoryManager);
 		};
 	}
 	
 	protected void InsertWeapon(IEntity weaponSpawned, WeaponSlotComponent weaponSlotComponent, array<ResourceName> weaponsAttachments, EntitySpawnParams spawnParams, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
 	{					
 		// Use SetSlotWeapon() instead of weaponSlotComponent.SetWeapon() due to replication issues.
-		ChimeraCharacter.Cast(inventoryManager.GetOwner()).GetCharacterController().GetWeaponManagerComponent().SetSlotWeapon(weaponSlotComponent, weaponSpawned);
+		//ChimeraCharacter.Cast(inventoryManager.GetOwner()).GetCharacterController().GetWeaponManagerComponent().SetSlotWeapon(weaponSlotComponent, weaponSpawned);
 		
 		if(!weaponsAttachments || weaponsAttachments.IsEmpty())
 			return;
@@ -1094,7 +1100,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	{	
 		IEntity entity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 
-		AddGearToEntity(entity, prefab);
+		GetGame().GetCallqueue().CallLater(AddGearToEntity, m_RNG.RandInt(250, 1000), false, entity, entity.GetPrefabData().GetPrefabName());
 		SetPlayerGearScriptsMapValue(prefab, playerID, "GSR"); // GSR = Gear Script Resource
 		
 		LogAdminAction(string.Format("%1's gear was set to %2", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
