@@ -10,7 +10,7 @@ modded class SCR_AIGroup
 		if(!GetGame().InPlayMode())
 			return;
 		
-		GetGame().GetCallqueue().CallLater(CheckIfPlayableOnInit, 5000, false);
+		GetGame().GetCallqueue().CallLater(CheckIfPlayableOnInit, 150, false);
 	}
 	
 	protected void CheckIfPlayableOnInit()

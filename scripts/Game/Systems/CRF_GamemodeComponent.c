@@ -127,7 +127,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		if(RplSession.Mode() == RplMode.Client)
 			return;
 		
-		GetGame().GetCallqueue().CallLater(CheckWorldValid, 500, false, entity);
+		GetGame().GetCallqueue().CallLater(CheckWorldValid, 150, false, entity);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -139,7 +139,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			return;
 		}
 		
-		GetGame().GetCallqueue().CallLater(SetupAddGearToEntity, m_RNG.RandInt(250, 500), false, entity, entity.GetPrefabData().GetPrefabName());
+		GetGame().GetCallqueue().CallLater(SetupAddGearToEntity, m_RNG.RandInt(100, 250), false, entity, entity.GetPrefabData().GetPrefabName());
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -307,7 +307,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		// ADD CLOTHING/WEAPONS/ITEMS
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
-		GetGame().GetCallqueue().CallLater(AddGearToEntity, m_RNG.RandInt(250, 500), false, entity, role, gearScriptResourceName, gearScriptSettings, inventory, inventoryManager);
+		GetGame().GetCallqueue().CallLater(AddGearToEntity, m_RNG.RandInt(100, 250), false, entity, role, gearScriptResourceName, gearScriptSettings, inventory, inventoryManager);
 	}
 		
 	protected void AddGearToEntity(IEntity entity, string role, ResourceName gearScriptResourceName, CRF_GearScriptContainer gearScriptSettings, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
