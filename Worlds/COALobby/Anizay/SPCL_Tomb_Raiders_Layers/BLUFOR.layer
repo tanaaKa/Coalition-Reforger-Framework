@@ -1,11 +1,12 @@
 SCR_AIGroup : "{347B55E5C1FC86B0}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Hunters_10Man.et" {
- coords 1973.023 150.645 2052.312
+ coords 2095.482 151.883 1979.376
+ angleY 180
  {
   SCR_AIGroup : "{347B55E5C1FC86B0}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Hunters_10Man.et" {
-   coords -4.305 -1.644 15.49
+   coords 1.13 -0.78 -16.074
    {
     SCR_AIGroup : "{347B55E5C1FC86B0}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Hunters_10Man.et" {
-     coords -4.805 -0.478 10.663
+     coords -0.932 -0.467 -15.75
     }
    }
   }
