@@ -1,20 +1,21 @@
 SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
- coords 2132.769 166.813 1539.157
+ coords 2137.627 166.812 1527.858
+ angleY 160
  {
   SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
-   coords -8.485 0 23.419
+   coords -0.787 0 -10.499
    {
     SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
-     coords -7.68 0 21.177
+     coords -0.094 0 -8.394
      {
       SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
-       coords -5.719 0 17.541
+       coords -0.685 0 -8.552
        {
         SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
-         coords -6.679 -0.001 18.138
+         coords 0.551 0 -8.988
          {
           SCR_AIGroup : "{BA7D15BB5AC85763}Prefabs/Groups/Special/TombRaiders/TombRaiders_Group_Guardians_10Man.et" {
-           coords -6.05 0 18.909
+           coords -0.13 0.001 -7.19
           }
          }
         }
