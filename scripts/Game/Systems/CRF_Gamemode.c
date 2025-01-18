@@ -359,8 +359,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 		else
 			SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aSlots.Find(playerID)))))).GetEntity()).AddPlayer(playerID);
 		
-		if(oldEntity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
-			GetGame().GetCallqueue().CallLater(DeleteOldEntity, 100, false, oldEntity);
+		if (oldEntity && oldEntity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			GetGame().GetCallqueue().CallLater(DeleteOldEntity, 500, false, oldEntity);
 	}
 	
 	//Gotta wait for stuff and thangssss
