@@ -10,7 +10,12 @@ modded class SCR_AIGroup
 		if(!GetGame().InPlayMode())
 			return;
 		
-		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState)
+		GetGame().GetCallqueue().CallLater(CheckIfPlayableOnInit, 1250, false);
+	}
+	
+	protected void CheckIfPlayableOnInit()
+	{
+		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState && !CRF_PlayableCharacter.Cast(GetLeaderEntity().FindComponent(CRF_PlayableCharacter)).IsPlayable())
 			m_bIsPlayable = false;
 		
 		#ifdef WORKBENCH
