@@ -46,24 +46,24 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		// Respawn support
 		if (!m_GamemodeComponent || !m_wTimer || !m_wBackground || !m_MapEntity) 
 		{
-			m_GamemodeComponent 	= CRF_GamemodeComponent.GetInstance();
-			m_wTimer            	= TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
-			m_wBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
+			m_GamemodeComponent 		= CRF_GamemodeComponent.GetInstance();
+			m_wTimer            		= TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
+			m_wBackground       		= ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
 			
 			m_wTicketOneImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneImage"));
-			m_wTicketOneText				= TextWidget.Cast(m_wRoot.FindWidget("TicketOneText"));
+			m_wTicketOneText			= TextWidget.Cast(m_wRoot.FindWidget("TicketOneText"));
 			m_wTicketOneNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketOneNumber"));
-			m_wTicketOneBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneBackground"));
+			m_wTicketOneBackground     	= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneBackground"));
 			
 			m_wTicketTwoImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoImage"));
-			m_wTicketTwoText				= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoText"));
+			m_wTicketTwoText			= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoText"));
 			m_wTicketTwoNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoNumber"));
-			m_wTicketTwoBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoBackground"));
+			m_wTicketTwoBackground     	= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoBackground"));
 			
-			m_wTicketThreeImage				= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeImage"));
-			m_wTicketThreeText				= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeText"));
-			m_wTicketThreeNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeNumber"));
-			m_wTicketThreeBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeBackground"));
+			m_wTicketThreeImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeImage"));
+			m_wTicketThreeText			= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeText"));
+			m_wTicketThreeNumber		= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeNumber"));
+			m_wTicketThreeBackground	= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeBackground"));
 			
 			m_wTicketFourImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketFourImage"));
 			m_wTicketFourText			= TextWidget.Cast(m_wRoot.FindWidget("TicketFourText"));
