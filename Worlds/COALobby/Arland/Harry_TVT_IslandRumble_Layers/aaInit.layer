@@ -1,20 +1,16 @@
 SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
  coords 2591.366 123.062 2320.689
 }
-CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
   SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
-   m_sInitialStartingWeatherId "Rainy"
+   m_sInitialStartingWeatherId "Weather"
   }
  }
- coords 2531.802 141.035 2238.874
- m_iFactionOneRatio 3
- m_sFactionOneKey "OPF"
- m_iFactionTwoRatio 2
- m_sFactionTwoKey "IND"
+ coords 2705.347 432.434 1899.5
  m_aMissionDescriptors {
-  CLB_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "Opfor has been inserted into Arland to eliminate the Indfor cell at Arleville. They are to first go to Signal Hill, capture the radio tower there, and call in for two BTR-70s. Indfor has the opportunity to redirect those assets to their own dropoff location if they get to Signal Hill first. Whoever controls Signal Hill for 2 minutes first gets the assets."\
+  CRF_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "Opfor is assaulting an Indfor cell at Arleville. They plan to capture Signal Hill, cut off comms to locals, and use it to provide a drop off location for assets to use in their assault. If Indfor can get there first, they can redirect those assets to themselves. "\
    ""\
    "BLUFOR Composition: Infantry"\
    "BLUFOR Assets:"\
@@ -22,24 +18,29 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "OPFOR Composition: Infantry"\
    "OPFOR Assets:"\
    ""\
-   "Time: 12:00"\
+   "Time:12:00"\
    ""\
-   "Weather: Rainy"
+   "Weather:Rainy"
   }
-  CLB_MissionDescriptor "{64425051B9B5AF67}" {
-   m_sTextData "The main objective is Arleville. Whether you can capture that, and hold it is the only thing that matters. "\
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTextData "Main Objective"\
+   "Capture Arleville"\
    ""\
-   "There is a secondary objective to capture Signal Hill first, and hold it for two minutes to receive two BTRs at the specified location. Indfor could capture Signal Hill first, and receive those assets."
+   "Secondary Objective"\
+   "Get to Signall Hill first, and hold it for two minutes to receive 2 BTR-70s."
   }
-  CLB_MissionDescriptor "{644250519BE30999}" {
-   m_sTextData "Arleville is the main objective. Whether you can retain control of it determines if you win. "\
+  CRF_MissionDescriptor "{644250519BE30999}" {
+   m_sTextData "Main Objective"\
+   "Defend Arleville"\
    ""\
-   "There is a second objective to get to Signal Hill first, and control it for two minutes to receive two BTRS at the specified location. Opfor can also complete this objective first."
-  }
-  CLB_MissionDescriptor "{6442505149CF6C93}" {
-   m_sTextData ""
+   "Secondary Objective"\
+   "Get to Signall Hill first, and hold it for two minutes to receive 2 BTR-70s."
   }
  }
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "OPF"
+ m_iFactionTwoRatio 2
+ m_sFactionTwoKey "IND"
  {
   SCR_FactionManager {
    ID "632A77473B3CC3A8"
@@ -47,8 +48,11 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
     SCR_Faction "{628C2D2BFC8C6447}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
       m_aSquadNames {
+       SCR_CallsignInfo "{55CCB79287E901BC}" {
+        m_sCallsign "PLT"
+       }
        SCR_CallsignInfo "{55CCB79287936EBD}" {
-        m_sCallsign "Medical-1"
+        m_sCallsign "Medical"
        }
        SCR_CallsignInfo "{55CCB79287BAFBD6}" {
         m_sCallsign "1-1"
@@ -56,17 +60,23 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        SCR_CallsignInfo "{55CCB79287A4D7B6}" {
         m_sCallsign "1-2"
        }
-       SCR_CallsignInfo "{64580A3173721144}" {
+       SCR_CallsignInfo "{646604F50DD36948}" {
         m_sCallsign "1-3"
        }
-       SCR_CallsignInfo "{64580A3173AC5D27}" {
+       SCR_CallsignInfo "{646604F50C07672F}" {
         m_sCallsign "1-4"
        }
-       SCR_CallsignInfo "{64580A31738DF555}" {
+       SCR_CallsignInfo "{646604F50C18E004}" {
         m_sCallsign "1-5"
        }
-       SCR_CallsignInfo "{64580A3173EE82B9}" {
+       SCR_CallsignInfo "{646604F567AAF5C8}" {
         m_sCallsign "1-6"
+       }
+       SCR_CallsignInfo "{646604F565D75C1D}" {
+        m_sCallsign "1-7"
+       }
+       SCR_CallsignInfo "{646604F5678D607F}" {
+        m_sCallsign "MMG Team"
        }
       }
      }
@@ -75,7 +85,7 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
      m_CallsignInfo SCR_FactionCallsignInfo "{60A6B21E18F28741}" {
       m_aSquadNames {
        SCR_CallsignInfo "{58B2B630FDD64B53}" {
-        m_sCallsign "Medical-1"
+        m_sCallsign "Medical"
        }
        SCR_CallsignInfo "{58B2B630FDD64B51}" {
         m_sCallsign "Cell 1"
@@ -86,8 +96,14 @@ CLB_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
         m_sCallsign "Cell 3"
        }
-       SCR_CallsignInfo "{64580A31A84CB8B4}" {
+       SCR_CallsignInfo "{646604F5430CA263}" {
         m_sCallsign "Cell 4"
+       }
+       SCR_CallsignInfo "{646604F54377869C}" {
+        m_sCallsign "Cell 5"
+       }
+       SCR_CallsignInfo "{646604F5434B2293}" {
+        m_sCallsign "MMG Team"
        }
       }
      }
