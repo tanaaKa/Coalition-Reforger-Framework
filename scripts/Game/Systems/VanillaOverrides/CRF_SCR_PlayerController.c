@@ -10,6 +10,7 @@ modded class SCR_PlayerController
 	protected bool m_bIsListening = false;
 	int m_iFPS;
 	int m_iAudioSetting;
+	protected bool m_bListeningBuffer = false;
 
 	//Adds action lisener to open menu in game
 	override protected void UpdateLocalPlayerController()
@@ -101,6 +102,11 @@ modded class SCR_PlayerController
 	
 	void Action_SetListening()
 	{
+		if(m_bListeningBuffer)
+			return;
+		
+		m_bListeningBuffer = true;
+		GetGame().GetCallqueue().CallLater(ListeningBuffer, 1000, false);
 		SCR_VONController vonController = SCR_VONController.Cast(GetGame().GetPlayerController().FindComponent(SCR_VONController));
 		vonController.PublicResetVON();
 		m_bIsListening = !m_bIsListening;
@@ -109,6 +115,11 @@ modded class SCR_PlayerController
 			vonController.SetVONDisabled(true);
 		else
 			vonController.SetVONDisabled(false);
+	}
+	
+	void ListeningBuffer()
+	{
+		m_bListeningBuffer = false;
 	}
 	
 	void SetListening(bool input)
@@ -134,15 +145,15 @@ modded class SCR_PlayerController
 	}
 	
 	// Ask server to respawn player after timer ends
-	void RespawnWithTicket(int playerId)
+	void RespawnWithTicket(int playerId, int groupID)
 	{
-		Rpc(RpcDo_RespawnWithTicket, playerId)	
+		Rpc(RpcDo_RespawnWithTicket, playerId, groupID)	
 	}
 	
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcDo_RespawnWithTicket(int playerID)
+	void RpcDo_RespawnWithTicket(int playerID, int groupID)
 	{
-		CRF_Gamemode.GetInstance().RespawnPlayerTicket(playerID);
+		CRF_Gamemode.GetInstance().RespawnPlayerTicket(playerID, groupID);
 	}
 	
 	void UpdateCameraPos(vector cameraPos[4])
@@ -285,9 +296,9 @@ modded class SCR_PlayerController
 		EntitySpawnParams params = new EntitySpawnParams();
 		params.TransformMode = ETransformMode.WORLD;
 		if(CRF_Gamemode.GetInstance().m_aSlots.Find(SCR_PlayerController.GetLocalPlayerId()) != -1)
-			params.Transform = m_vLastEntityTransform;
+			params.Transform[3] = m_vLastEntityTransform[3];
 		else
-			params.Transform = CRF_Gamemode.GetInstance().m_vGenericSpawn;
+			params.Transform[3] = CRF_Gamemode.GetInstance().m_vGenericSpawn[3];
 		
 		m_bIsListening = false;
 		

@@ -5,7 +5,8 @@ modded enum ChimeraMenuPreset : ScriptMenuPresetEnum
 
 class CRF_SpectatorMenuUI: ChimeraMenuBase
 {
-	protected ref array<IEntity> m_aEntityIcons = {};
+	protected ref array<RplId> m_aEntityIcons = {};
+	protected ref array<Widget> m_aSpectatorWidgets = {};
 	protected ref array<ref CRF_SpectatorLabelIconCharacter> m_aSpectatorIcons = {};
 	protected CRF_Gamemode m_Gamemode;
 	protected SCR_ChatPanel m_ChatPanel;
@@ -27,25 +28,42 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
+		GetGame().GetInputManager().AddActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
+		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
 	}
+	
 	override void OnMenuUpdate(float tDelta)
 	{
-		foreach(RplId entityID: m_Gamemode.m_aEntitySlots)
+		if (m_MapEntity)
+			GetGame().GetInputManager().ActivateContext("MapContext");
+		
+		foreach(RplId entityID: m_Gamemode.m_aCharacters)
 		{
 			if(!Replication.FindItem(entityID))
+			{
+				int index = m_aEntityIcons.Find(entityID);
+				if(index == -1)
+					continue;
+				
+				m_aEntityIcons.RemoveOrdered(index);
+				delete m_aSpectatorWidgets.Get(index);
+				m_aSpectatorWidgets.RemoveOrdered(index);
+				m_aSpectatorIcons.RemoveOrdered(index);
 				continue;
+			}
 			
 			IEntity entity = RplComponent.Cast(Replication.FindItem(entityID)).GetEntity();
-			
-			if(m_aEntityIcons.Find(entity) != -1)
+			if(m_aEntityIcons.Find(entityID) != -1)
 				continue;
 			
 			Widget spectatorIconWidget = GetGame().GetWorkspace().CreateWidgets("{68625BAD23CEE68F}UI/Spectator/SpectatorLabelIconCharacter.layout", FrameWidget.Cast(GetRootWidget().FindAnyWidget("IconsFrame")));
 			CRF_SpectatorLabelIconCharacter spectatorIcon = CRF_SpectatorLabelIconCharacter.Cast(spectatorIconWidget.FindHandler(CRF_SpectatorLabelIconCharacter));
 			spectatorIcon.SetEntity(entity, "Spine3");
-			m_aEntityIcons.Insert(entity);
+			m_aEntityIcons.Insert(entityID);
 			m_aSpectatorIcons.Insert(spectatorIcon);
+			m_aSpectatorWidgets.Insert(spectatorIconWidget);
 		}
+		
 		UpdateIcons();
 		
 		if (m_ChatPanel)
@@ -60,6 +78,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		m_wRoot = GetRootWidget();
 		if (!m_MapEntity)
 			m_MapEntity = SCR_MapEntity.GetMapInstance();
+		
 		m_wRoot.FindAnyWidget("MapFrame").SetVisible(false);
 	}
 	
@@ -69,9 +88,87 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().RemoveActionListener("MenuBack", EActionTrigger.DOWN, Action_Exit);
 		GetGame().GetInputManager().RemoveActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().RemoveActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
+		GetGame().GetInputManager().RemoveActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
+		GetGame().GetInputManager().RemoveActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
+		GetGame().GetInputManager().RemoveActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
 		
 		SCR_NotificationSenderComponent sender = SCR_NotificationSenderComponent.Cast(GetGame().GetGameMode().FindComponent(SCR_NotificationSenderComponent));
 		sender.SetKillFeedTypeNoneLocal();
+	}
+	
+	// Add player list to spectator
+	protected static void OnShowPlayerList()
+	{
+		ArmaReforgerScripted.OpenPlayerList();
+	}
+	
+	// Teleporting players camera
+	void Action_ManualCameraTeleport()
+	{
+		MoveCamera(GetCursorWorldPos());
+	}
+	
+	void MoveCamera(vector worldPosition)
+	{
+		SCR_ManualCamera camera = SCR_ManualCamera.Cast(GetGame().GetCameraManager().CurrentCamera());
+		if (camera)
+		{
+			SCR_TeleportToCursorManualCameraComponent teleportComponent = SCR_TeleportToCursorManualCameraComponent.Cast(camera.FindCameraComponent(SCR_TeleportToCursorManualCameraComponent));
+			if (teleportComponent)
+			{
+				teleportComponent.TeleportCamera(worldPosition, true, false);
+			}
+		}
+	}
+	
+	vector GetCursorWorldPos()
+	{
+		ArmaReforgerScripted game = GetGame();
+		WorkspaceWidget workspace = game.GetWorkspace();
+		BaseWorld world = game.GetWorld();
+		
+		vector worldPos = "0 0 0";
+		
+		// If map is open return map cursor world position
+		SCR_MapEntity mapEntity = SCR_MapEntity.GetMapInstance();
+		if (mapEntity && mapEntity.IsOpen())
+		{
+			float worldX, worldY;
+			mapEntity.GetMapCursorWorldPosition(worldX, worldY);
+			worldPos[0] = worldX;
+			worldPos[2] = worldY;
+			worldPos[1] = world.GetSurfaceY(worldPos[0], worldPos[2]);
+			
+			return worldPos;
+		}
+		
+		
+		vector cursorPos = GetCursorPos();
+		vector outDir;
+		vector startPos = workspace.ProjScreenToWorld(cursorPos[0], cursorPos[1], outDir, world, -1);
+		outDir *= 1000.0;
+	
+		autoptr TraceParam trace = new TraceParam();
+		trace.Start = startPos;
+		trace.End = startPos + outDir;
+		trace.Flags = TraceFlags.ANY_CONTACT | TraceFlags.WORLD | TraceFlags.ENTS | TraceFlags.OCEAN; 
+		
+		float traceDis = world.TraceMove(trace, null);
+		worldPos = startPos + outDir * traceDis;
+		
+		return worldPos;
+	}
+	
+	vector GetCursorPos()
+	{
+		int cursorX, cursorY;
+		if (GetGame().GetInputManager() && GetGame().GetInputManager().IsUsingMouseAndKeyboard())
+		{
+			WidgetManager.GetMousePos(cursorX, cursorY);
+			return Vector(GetGame().GetWorkspace().DPIUnscale(cursorX), GetGame().GetWorkspace().DPIUnscale(cursorY), 0);
+		} else {
+			return Vector(GetGame().GetWorkspace().DPIUnscale(GetGame().GetWorkspace().GetWidth()/2.0), GetGame().GetWorkspace().DPIUnscale(GetGame().GetWorkspace().GetHeight()/2.0), 0);
+		}
 	}
 
 	//From RL
@@ -154,8 +251,10 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	//More RL code
 	void Action_ToggleMap()
 	{
-		if (!m_MapEntity.IsOpen()) OpenMap();
-		else CloseMap();
+		if (!m_MapEntity.IsOpen()) 
+			OpenMap();
+		else 
+			CloseMap();
 	}
 	
 	void OpenMap()

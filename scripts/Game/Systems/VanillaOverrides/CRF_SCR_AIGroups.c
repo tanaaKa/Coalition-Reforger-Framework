@@ -10,11 +10,35 @@ modded class SCR_AIGroup
 		if(!GetGame().InPlayMode())
 			return;
 		
-		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME)
-			m_bIsPlayable = false;
+		GetGame().GetCallqueue().CallLater(CheckIfPlayableOnInit, 150, false);
+	}
+	
+	protected void CheckIfPlayableOnInit()
+	{
+		CRF_PlayableCharacter playableChar = null;
+		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
 		
-		if(Replication.IsServer() && m_bIsPlayable)
+		array<AIAgent> OutAgents = {};
+		GetAgents(OutAgents);
+		
+		if(!OutAgents.IsEmpty())
+		{
+			AIAgent agent = OutAgents.Get(0);
+			
+			if(agent)
+				playableChar = CRF_PlayableCharacter.Cast(agent.GetControlledEntity().FindComponent(CRF_PlayableCharacter));
+			
+			if(gamemode && agent && playableChar && gamemode.m_GamemodeState == CRF_GamemodeState.GAME && gamemode.EnableAIInGameState && playableChar.IsPlayable())
+				m_bIsPlayable = false;
+		};
+		
+		#ifdef WORKBENCH
+		if (m_bIsPlayable)
 			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#else
+		if (RplSession.Mode() == RplMode.Dedicated && m_bIsPlayable)
+			GetGame().GetCallqueue().CallLater(SaveAIGRoup, 500, false);
+		#endif
 	}
 	
 	//Saves the group on the server

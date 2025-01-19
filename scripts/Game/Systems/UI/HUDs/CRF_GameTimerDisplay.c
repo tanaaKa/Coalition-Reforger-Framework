@@ -46,31 +46,31 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		// Respawn support
 		if (!m_GamemodeComponent || !m_wTimer || !m_wBackground || !m_MapEntity) 
 		{
-			m_GamemodeComponent 	= CRF_GamemodeComponent.GetInstance();
-			m_wTimer            	= TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
-			m_wBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
+			m_GamemodeComponent 		= CRF_GamemodeComponent.GetInstance();
+			m_wTimer            		= TextWidget.Cast(m_wRoot.FindWidget("timeLeftTimer"));
+			m_wBackground       		= ImageWidget.Cast(m_wRoot.FindWidget("timeLeftBackground"));
 			
-			m_wTicketOneImage				= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneImage"));
-			m_wTicketOneText				= TextWidget.Cast(m_wRoot.FindWidget("TicketOneText"));
-			m_wTicketOneNumber				= TextWidget.Cast(m_wRoot.FindWidget("TicketOneNumber"));
-			m_wTicketOneBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneBackground"));
+			m_wTicketOneImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneImage"));
+			m_wTicketOneText			= TextWidget.Cast(m_wRoot.FindWidget("TicketOneText"));
+			m_wTicketOneNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketOneNumber"));
+			m_wTicketOneBackground     	= ImageWidget.Cast(m_wRoot.FindWidget("TicketOneBackground"));
 			
-			m_wTicketTwoImage				= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoImage"));
-			m_wTicketTwoText				= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoText"));
-			m_wTicketTwoNumber				= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoNumber"));
-			m_wTicketTwoBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoBackground"));
+			m_wTicketTwoImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoImage"));
+			m_wTicketTwoText			= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoText"));
+			m_wTicketTwoNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketTwoNumber"));
+			m_wTicketTwoBackground     	= ImageWidget.Cast(m_wRoot.FindWidget("TicketTwoBackground"));
 			
-			m_wTicketThreeImage				= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeImage"));
-			m_wTicketThreeText				= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeText"));
-			m_wTicketThreeNumber				= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeNumber"));
-			m_wTicketThreeBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeBackground"));
+			m_wTicketThreeImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeImage"));
+			m_wTicketThreeText			= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeText"));
+			m_wTicketThreeNumber		= TextWidget.Cast(m_wRoot.FindWidget("TicketThreeNumber"));
+			m_wTicketThreeBackground	= ImageWidget.Cast(m_wRoot.FindWidget("TicketThreeBackground"));
 			
-			m_wTicketFourImage				= ImageWidget.Cast(m_wRoot.FindWidget("TicketFourImage"));
-			m_wTicketFourText				= TextWidget.Cast(m_wRoot.FindWidget("TicketFourText"));
-			m_wTicketFourNumber				= TextWidget.Cast(m_wRoot.FindWidget("TicketFourNumber"));
-			m_wTicketFourBackground       	= ImageWidget.Cast(m_wRoot.FindWidget("TicketFourBackground"));					
+			m_wTicketFourImage			= ImageWidget.Cast(m_wRoot.FindWidget("TicketFourImage"));
+			m_wTicketFourText			= TextWidget.Cast(m_wRoot.FindWidget("TicketFourText"));
+			m_wTicketFourNumber			= TextWidget.Cast(m_wRoot.FindWidget("TicketFourNumber"));
+			m_wTicketFourBackground		= ImageWidget.Cast(m_wRoot.FindWidget("TicketFourBackground"));					
 			
-			m_MapEntity         	= SCR_MapEntity.GetMapInstance();
+			m_MapEntity = SCR_MapEntity.GetMapInstance();
 			return;
 		};
 		
@@ -106,41 +106,83 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 				if (!factionManager)
 					return;
 			
-			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()))
+			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()) && CRF_Gamemode.GetInstance().m_bRespawnEnabled)
 			{
-				string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(CRF_Gamemode.GetInstance().GetRespawnGroupID(SCR_PlayerController.GetLocalPlayerId())).GetFaction().GetFactionKey();
+				string faction = SCR_FactionManager.SGetLocalPlayerFaction().GetFactionKey();
 				
-				m_wTicketOneText.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
-				m_wTicketOneNumber.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
-				m_wTicketOneImage.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
-				
-				switch(faction)
-				{			
-					case "BLUFOR"	:{m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString()); 	break;}
-					case "OPFOR"	:{m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString()); 	break;}
-					case "INDFOR"	:{m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString()); 	break;}
-					case "CIV"		:{m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString()); 		break;}
+				// This will cause the ui to not update tickets when in spectator!
+				if (SCR_FactionManager.SGetLocalPlayerFaction().GetFactionKey() != "SPEC") 
+				{
+					m_wTicketOneText.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
+					m_wTicketOneNumber.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
+					m_wTicketOneImage.SetColor(factionManager.GetFactionByKey(faction).GetFactionColor());
+					
+					switch(faction)
+					{			
+						case "BLUFOR"	:	{
+							if (CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets == -1)
+								m_wTicketOneNumber.SetText("INF");
+							else
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString());
+							break;
+						}
+						case "OPFOR"	:	{
+							if (CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets == -1)
+								m_wTicketOneNumber.SetText("INF");
+							else		
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString());
+							break;
+						}
+						case "INDFOR"	:	{
+							if (CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets == -1)
+								m_wTicketOneNumber.SetText("INF");
+							else
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
+	
+							break;
+						}
+						case "CIV"	:	{
+							if (CRF_Gamemode.GetInstance().m_iCIVCurrentTickets == -1)
+								m_wTicketOneNumber.SetText("INF");
+							else
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString());
+							break;
+						}
+					}
 				}
 			}else{
 				m_wTicketOneText.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
 				m_wTicketOneNumber.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
 				m_wTicketOneImage.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
-				m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString());
+				if (CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets == -1)
+					m_wTicketOneNumber.SetText("INF");
+				else
+					m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString());
 				
 				m_wTicketTwoText.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
 				m_wTicketTwoNumber.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
 				m_wTicketTwoImage.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
-				m_wTicketTwoNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString());
+				if (CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets == -1)
+					m_wTicketTwoNumber.SetText("INF");
+				else
+					m_wTicketTwoNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString());
 				
 				m_wTicketThreeText.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
 				m_wTicketThreeNumber.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
 				m_wTicketThreeImage.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
 				m_wTicketThreeNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
+				if (CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets == -1)
+					m_wTicketThreeNumber.SetText("INF");
+				else
+					m_wTicketThreeNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
 				
 				m_wTicketFourText.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
 				m_wTicketFourNumber.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
 				m_wTicketFourImage.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
-				m_wTicketFourNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString());
+				if (CRF_Gamemode.GetInstance().m_iCIVCurrentTickets == -1)
+					m_wTicketFourNumber.SetText("INF");
+				else
+					m_wTicketFourNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString());
 			}
 		}
 		
@@ -214,32 +256,35 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		} else {
 			m_wTimer.SetOpacity(1);
 			m_wBackground.SetOpacity(1);
-			m_wTicketOneImage.SetOpacity(1);
-			m_wTicketOneText.SetOpacity(1);
-			m_wTicketOneNumber.SetOpacity(1);
-			m_wTicketOneBackground.SetOpacity(1);
-			if (SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()))
+			if (CRF_Gamemode.GetInstance().m_bRespawnEnabled)
 			{
 				m_wTicketOneImage.SetOpacity(1);
 				m_wTicketOneText.SetOpacity(1);
 				m_wTicketOneNumber.SetOpacity(1);
 				m_wTicketOneBackground.SetOpacity(1);
-				
-				m_wTicketTwoImage.SetOpacity(1);
-				m_wTicketTwoText.SetOpacity(1);
-				m_wTicketTwoNumber.SetOpacity(1);
-				m_wTicketTwoBackground.SetOpacity(1);
-				
-				m_wTicketThreeImage.SetOpacity(1);
-				m_wTicketThreeText.SetOpacity(1);
-				m_wTicketThreeNumber.SetOpacity(1);
-				m_wTicketThreeBackground.SetOpacity(1);				
-				
-				m_wTicketFourImage.SetOpacity(1);
-				m_wTicketFourText.SetOpacity(1);
-				m_wTicketFourNumber.SetOpacity(1);
-				m_wTicketFourBackground.SetOpacity(1);
-			}
+				if (SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()))
+				{
+					m_wTicketOneImage.SetOpacity(1);
+					m_wTicketOneText.SetOpacity(1);
+					m_wTicketOneNumber.SetOpacity(1);
+					m_wTicketOneBackground.SetOpacity(1);
+					
+					m_wTicketTwoImage.SetOpacity(1);
+					m_wTicketTwoText.SetOpacity(1);
+					m_wTicketTwoNumber.SetOpacity(1);
+					m_wTicketTwoBackground.SetOpacity(1);
+					
+					m_wTicketThreeImage.SetOpacity(1);
+					m_wTicketThreeText.SetOpacity(1);
+					m_wTicketThreeNumber.SetOpacity(1);
+					m_wTicketThreeBackground.SetOpacity(1);				
+					
+					m_wTicketFourImage.SetOpacity(1);
+					m_wTicketFourText.SetOpacity(1);
+					m_wTicketFourNumber.SetOpacity(1);
+					m_wTicketFourBackground.SetOpacity(1);
+				};
+			};
 		};
 		
 		if (messageSplitArray[0] == "00")

@@ -49,7 +49,6 @@ class CRF_AARMenuUI: ChimeraMenuBase
 		
 		
 		//INPUT MANAGERS
-		GetGame().GetInputManager().ActivateContext("MapContext", 99999);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.DOWN, Action_VONon);
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("MenuBack", EActionTrigger.DOWN, Action_Exit);
@@ -139,6 +138,9 @@ class CRF_AARMenuUI: ChimeraMenuBase
 	
 	void DescriptionInit()
 	{
+		ScrollLayoutWidget scrollLayout = ScrollLayoutWidget.Cast(m_wRoot.FindAnyWidget("ScrollLayout"));
+		scrollLayout.SetEnabled(false);
+		
 		m_wBackButton.SetOpacity(0);
 		SCR_ButtonTextComponent backButton = SCR_ButtonTextComponent.Cast(m_wBackButton.FindHandler(SCR_ButtonTextComponent));
 		backButton.m_OnClicked.Clear();
@@ -157,6 +159,9 @@ class CRF_AARMenuUI: ChimeraMenuBase
 	
 	void DescriptionSelected()
 	{
+		ScrollLayoutWidget scrollLayout = ScrollLayoutWidget.Cast(m_wRoot.FindAnyWidget("ScrollLayout"));
+		scrollLayout.SetEnabled(true);
+		
 		int index = m_cMissionDescriptionListBoxComponent.GetSelectedItem();
 		string description = m_aActiveDescriptors.Get(index).m_sTextData;
 		
@@ -316,6 +321,8 @@ class CRF_AARMenuUI: ChimeraMenuBase
 	override void OnMenuUpdate(float tDelta)
 	{
 		super.OnMenuUpdate(tDelta);
+		if (m_MapEntity)
+			GetGame().GetInputManager().ActivateContext("MapContext");
 		TimeContainer timeContainer = ChimeraWorld.CastFrom(GetGame().GetWorld()).GetTimeAndWeatherManager().GetTime();
 		int hours = timeContainer.m_iHours;
 		int minutes = timeContainer.m_iMinutes;
@@ -342,6 +349,8 @@ class CRF_AARMenuUI: ChimeraMenuBase
 		m_cPlayerListBoxComponent.Clear();
 		foreach(int player : playerIDs)
 		{
+			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
+				continue;
 			int index = m_cPlayerListBoxComponent.AddItem(GetGame().GetPlayerManager().GetPlayerName(player), null, "{51F58D728FBCAD99}UI/Listbox/PlayerListboxElementNoIcon.layout");
 			SCR_ListBoxElementComponent comp = m_cPlayerListBoxComponent.GetElementComponent(index);
 			if(GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.ADMINISTRATOR) || GetGame().GetPlayerManager().HasPlayerRole(player, EPlayerRole.SESSION_ADMINISTRATOR))

@@ -72,6 +72,12 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[RplProp()]
 	ref array<bool> m_aEntityDeathStatus = {};
 	
+	[RplProp()]
+	ref array<RplId> m_aCharacters = {};
+	
+	[RplProp()]
+	ref array<string> m_aCharacterNames = {};
+	
 	//RplId of entities that are playable
 	[RplProp()]
 	ref array<RplId> m_aEntitySlots = {};
@@ -105,6 +111,9 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	[Attribute("45", "auto", "Mission Time (set to -1 to disable)", category: "CRF Gamemode General")]
 	int m_iTimeLimitMinutes;
+	
+	[Attribute("false", "auto", "Enables AI autonomy while in GAME state", category: "CRF Gamemode General")]
+	bool EnableAIInGameState;
 	
 	[Attribute("true", "auto", "Should we delete all JIP slots after SafeStart turns off? COOP = FALSE", category: "CRF Gamemode General")]
 	bool m_bDeleteJIPSlots;
@@ -166,16 +175,16 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("civtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn")]
 	int m_iCIVTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iOPFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iBLUFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iINDFORCurrentTickets;
 	
-	[RplProp(onRplName: "UpdateClientRespawnTickets")]
+	[RplProp()]
 	int m_iCIVCurrentTickets;
 	
 	[RplProp(onRplName: "UpdateRespawnTimer")]
@@ -193,6 +202,48 @@ class CRF_Gamemode : SCR_BaseGameMode
 			return CRF_Gamemode.Cast(gameMode);
 		else
 			return null;
+	}
+	
+	override void OnControllableSpawned(IEntity entity)
+	{
+		super.OnControllableSpawned(entity);
+		GetGame().GetCallqueue().CallLater(LogCharacter, 500, false, entity);
+	}
+	
+	void LogCharacter(IEntity entity)
+	{
+		#ifdef WORKBENCH
+		if(!SCR_ChimeraCharacter.Cast(entity))
+				return;
+			m_aCharacters.Insert(RplComponent.Cast(entity.FindComponent(RplComponent)).Id());
+			if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)))
+			{
+				if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName())
+					m_aCharacterNames.Insert(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName());
+				else
+					m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			}
+			else
+				m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			Replication.BumpMe();
+		#else
+		if (RplSession.Mode() == RplMode.Dedicated)
+		{
+			if(!SCR_ChimeraCharacter.Cast(entity))
+				return;
+			m_aCharacters.Insert(RplComponent.Cast(entity.FindComponent(RplComponent)).Id());
+			if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)))
+			{
+				if(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName())
+					m_aCharacterNames.Insert(CRF_PlayableCharacter.Cast(entity.FindComponent(CRF_PlayableCharacter)).GetName());
+				else
+					m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			}
+			else
+				m_aCharacterNames.Insert(SCR_EditableCharacterComponent.Cast(entity.FindComponent(SCR_EditableCharacterComponent)).GetDisplayName());
+			Replication.BumpMe();
+		}
+		#endif
 	}
 	
 	override void EOnInit(IEntity owner)
@@ -219,7 +270,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 		
 		// Throw em into deathscreen
 		if (m_bRespawnEnabled)
-			CheckTickets(playerId);
+			CheckTickets(playerId, SCR_GroupsManagerComponent.GetInstance().GetPlayerGroup(playerId).GetGroupID());
+		
 		
 		//Throw em into spectator
 		GetGame().GetCallqueue().CallLater(SetPlayerSpectator, 100, false, playerId, playerEntity);
@@ -311,8 +363,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 		else
 			SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aSlots.Find(playerID)))))).GetEntity()).AddPlayer(playerID);
 		
-		if(oldEntity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
-			GetGame().GetCallqueue().CallLater(DeleteOldEntity, 100, false, oldEntity);
+		if (oldEntity && oldEntity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			GetGame().GetCallqueue().CallLater(DeleteOldEntity, 500, false, oldEntity);
 	}
 	
 	//Gotta wait for stuff and thangssss
@@ -414,7 +466,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	// Should only ever be ran on the server
 	void RespawnPlayer(int playerID, string prefab, vector position, int groupID)
 	{
-		if(!Replication.IsServer())
+		if(RplSession.Mode() != RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnPlayer ON SERVER");
 			return;
@@ -448,57 +500,61 @@ class CRF_Gamemode : SCR_BaseGameMode
 		m_iOPFORCurrentTickets = m_iOPFORTickets;
 		m_iINDFORCurrentTickets = m_iINDFORTickets;
 		m_iCIVCurrentTickets = m_iCIVTickets;
+		
 		m_iRespawnWaveCurrentTime = m_iTimeToRespawn;
 		
-		if (m_bWaveRespawn && Replication.IsServer())
+		if (m_bWaveRespawn && RplSession.Mode() == RplMode.Dedicated)
 		{
 			GetGame().GetCallqueue().CallLater(UpdateRespawnTimer, 1000, true);
 		}
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void CheckTickets(int playerID)
+	void CheckTickets(int playerID, int groupID)
 	{
 		bool canRespawn = true;
-		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(GetRespawnGroupID(playerID)).GetFaction().GetFactionKey();
+		string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();	
 		        
 		switch(faction)
 		{
-			case "BLUFOR" : {if (m_iBLUFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "OPFOR"  : {if (m_iOPFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "INDFOR" : {if (m_iINDFORCurrentTickets == 0){canRespawn = false}; 	break;}
-			case "CIV" : {if (m_iCIVCurrentTickets == 0){canRespawn = false}; 	break;}
-		}
-		
-		if (canRespawn)
-		{
-			GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID);			
-			switch(faction)
-			{
-				case "BLUFOR" 	: {m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1 ;		UpdateClientRespawnTickets();break;}
-				case "OPFOR"  	: {m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1 ;   	UpdateClientRespawnTickets();break;}
-				case "INDFOR" 	: {m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1 ;		UpdateClientRespawnTickets();break;}
-				case "CIV" 		: {m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1 ;			UpdateClientRespawnTickets();break;}
+			case "BLUFOR" : {
+				if (!m_iBLUFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iBLUFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+						m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1;
+				}
+				break;
+			}
+			case "OPFOR" : {
+				if (!m_iOPFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iOPFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+						m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1;
+				}
+				break;
+			}
+			case "INDFOR" : {
+				if (!m_iINDFORCurrentTickets == 0)
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iINDFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+						m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1;	
+				}
+				break;
+			}
+			case "CIV" : {
+				if (!m_iCIVCurrentTickets == 0 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+				{
+					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
+					if (m_iCIVCurrentTickets != -1)
+						m_iCIVCurrentTickets = m_iCIVCurrentTickets - 1;
+				}
+				break;
 			}
 		}
-			
-	}
-
-	//------------------------------------------------------------------------------------------------
-	void UpdateClientRespawnTickets()
-	{
-		Replication.BumpMe()
-	}
-
-	//------------------------------------------------------------------------------------------------
-	int GetRespawnGroupID(int playerID)
-	{
-		int playerEntityRplID = m_aEntitySlots.Get(m_aSlots.Find(playerID));
-		int playerGroupRplID = m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(playerEntityRplID));
-		int GroupRplID = m_aGroupRplIDs.Get(m_aPlayerGroupIDs.Find(playerGroupRplID));
-		int groupID = m_aGroupRplIDs.Find(GroupRplID);
-		
-		return groupID;
+		Replication.BumpMe();
 	}
 	//------------------------------------------------------------------------------------------------
 	void UpdateRespawnTimer()
@@ -521,14 +577,14 @@ class CRF_Gamemode : SCR_BaseGameMode
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void SendRespawnScreen(int playerId)
+	void SendRespawnScreen(int playerId, int groupID)
 	{
-		Rpc(RpcDo_SendRespawnScreen, playerId)	
+		Rpc(RpcDo_SendRespawnScreen, playerId, groupID)	
 	}
 
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void RpcDo_SendRespawnScreen(int playerId)
+	void RpcDo_SendRespawnScreen(int playerId, int groupID)
 	{
 		if(SCR_PlayerController.GetLocalPlayerId() != playerId)
 			return;
@@ -538,21 +594,23 @@ class CRF_Gamemode : SCR_BaseGameMode
 			topMenu.Close();
 
 		GetGame().GetMenuManager().CloseAllMenus();
-		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
+		MenuBase respawnMenu = GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_RespawnMenu);
+		CRF_RespawnMenu respawnMenuUI = CRF_RespawnMenu.Cast(respawnMenu);
+		respawnMenuUI.m_iGroupID = groupID;
 			
 	}
 
 	//------------------------------------------------------------------------------------------------
-	void RespawnPlayerTicket(int playerId)
+	void RespawnPlayerTicket(int playerId, int groupID)
 	{
-		Rpc(RpcDo_RespawnPlayerTicket, playerId)	
+		Rpc(RpcDo_RespawnPlayerTicket, playerId, groupID)	
 	}
 
 	//------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcDo_RespawnPlayerTicket(int playerID)
+	void RpcDo_RespawnPlayerTicket(int playerID, int groupID)
 	{
-		if(!Replication.IsServer())
+		if(RplSession.Mode() != RplMode.Dedicated)
 		{
 			Print("ONLY RUN RespawnSide ON SERVER");
 			return; 
@@ -561,8 +619,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		if(SCR_FactionManager.SGetPlayerFaction(playerID).GetFactionKey() == "SPEC")
 		{	
 			string respawnPrefab = CRF_GamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR");
-			int respawnGroupID = GetRespawnGroupID(playerID);
-			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(respawnGroupID).GetFaction().GetFactionKey();
+			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();
 			string spawnpoint
 			
 			if(respawnPrefab.IsEmpty())
@@ -593,7 +650,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 			
 			Resource resource = Resource.Load(respawnPrefab);
 			SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
-			RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, respawnGroupID);
+			RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, groupID);
 		}
 	}
 	//------------------------------------------------------------------------------------------------	
@@ -727,10 +784,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void OnGamemodeStateChanged()
 	{
-		if(!GetGame().GetPlayerController() || RplSession.Mode() == RplMode.Dedicated)
-			return;
-		
-		if(Replication.IsServer())
+		if(RplSession.Mode() == RplMode.Dedicated)
 		{
 			if (m_OnStateChanged)
 				m_OnStateChanged.Invoke(m_GamemodeState);
@@ -741,8 +795,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 			if(m_GamemodeState == CRF_GamemodeState.AAR)
 				EnterAAR();
 		}
-		
-		OpenMenu();
+		else
+			OpenMenu();
 	}
 	
 	void EnterAAR()
@@ -751,10 +805,13 @@ class CRF_Gamemode : SCR_BaseGameMode
 		GetGame().GetPlayerManager().GetAllPlayers(players);
 		foreach(int player: players)
 		{
+			if(!GetGame().GetPlayerManager().IsPlayerConnected(player))
+				continue;
+			
 			if(GetGame().GetPlayerManager().GetPlayerControlledEntity(player).GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 				continue;
 			
-			SpawnInitialEntity(player);
+			GetGame().GetCallqueue().CallLater(SpawnInitialEntity, 500, false, player);
 		}
 	}
 }

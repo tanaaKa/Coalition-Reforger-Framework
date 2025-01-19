@@ -1,27 +1,27 @@
 $grp PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStartBorderMarker.et" {
  {
-  coords 2035.806 151.75 2038.235
+  coords 2115.202 157.54 1941.914
  }
  {
-  coords 2005.145 155.586 1996.454
+  coords 2060.164 157.15 1936.954
  }
  {
-  coords 1917.753 153.242 1998.079
+  coords 2023.16 154.632 2000.389
  }
  {
-  coords 1898.755 151.254 2037.735
+  coords 2035.543 151.718 2037.908
  }
  {
-  coords 1924.103 148.661 2075.809
+  coords 2054.788 152.573 2073.505
  }
  {
-  coords 1952.371 148.451 2102.168
+  coords 2102.351 153.755 2058.907
  }
  {
-  coords 2017.498 152.397 2082.264
+  coords 2146.142 153.199 2040.846
  }
  {
-  coords 1995.49 148.834 2128.494
+  coords 2144.187 151.288 1980.684
  }
 }
 $grp PS_ManualMarker : "{36BD5DC9A80977F2}PrefabsEditable/Markers/INDFORSafeStartBorderMarker.et" {
@@ -85,179 +85,151 @@ $grp PS_ManualMarker : "{36BD5DC9A80977F2}PrefabsEditable/Markers/INDFORSafeStar
 }
 $grp PS_ManualMarker : "{BE9E1F90BFFBB48A}PrefabsEditable/Markers/GameZoneMarker.et" {
  {
-  coords 2127.39 162.479 1206.903
+  coords 2236.664 161.98 2033.482
   angleY 0
  }
  {
-  coords 2192.039 164.999 1232.897
+  coords 2147.594 153.746 2054.072
   angleY 0
  }
  {
-  coords 2309.537 167.846 1280.299
+  coords 2063.677 155.951 2101.98
   angleY 0
  }
  {
-  coords 2252.385 165.312 1257.39
+  coords 1998.436 149.222 2134.395
   angleY 0
  }
  {
-  coords 2325.509 165.932 1426.816
+  coords 1924.293 153.823 2139.533
   angleY 0
  }
  {
-  coords 2245.205 173.653 1760.859
+  coords 1893.932 161.117 2101.797
   angleY 0
  }
  {
-  coords 2354.197 164.351 1306.429
+  coords 1811.457 147.162 2040.831
   angleY 0
  }
  {
-  coords 2295.431 166.512 1496.873
+  coords 1777.037 149.56 1970.601
   angleY 0
  }
  {
-  coords 2308.994 171.337 1603.375
+  coords 1773.273 155.007 1878.582
   angleY 0
  }
  {
-  coords 2350.215 164.22 1366.688
+  coords 1782.735 161.157 1781.095
   angleY 0
  }
  {
-  coords 2280.727 163.314 2391.821
+  coords 1842.079 162.147 1718.127
   angleY 0
  }
  {
-  coords 2266.205 177.901 1704.396
+  coords 1893.683 155.125 1633.08
   angleY 0
  }
  {
-  coords 2266.055 167.805 1574.679
+  coords 1928.693 153.843 1555.489
   angleY 0
  }
  {
-  coords 2241.769 162.057 1987.189
+  coords 1924.869 145.953 1509.972
   angleY 0
  }
  {
-  coords 2237.657 177.726 1831.858
+  coords 1856.225 154.684 1511.885
   angleY 0
  }
  {
-  coords 2288.885 173.994 1644.495
+  coords 1855.284 153.421 1440.391
   angleY 0
  }
  {
-  coords 2310.46 159.857 2330.956
+  coords 1930.549 151.716 1450.508
   angleY 0
  }
  {
-  coords 2351.751 157.706 2256.832
+  coords 1920.715 141.487 1398.786
   angleY 0
  }
  {
-  coords 2227.363 164.54 1882.489
+  coords 1927.095 139.888 1357.834
   angleY 0
  }
  {
-  coords 2220.173 156.972 2223.763
+  coords 1995.253 146.242 1335.368
   angleY 0
  }
  {
-  coords 1778.531 148.45 2192.121
+  coords 2075.595 162.233 1335.162
   angleY 0
  }
  {
-  coords 2227.742 157.307 2132.144
+  coords 2132.45 162.064 1218.905
   angleY 0
  }
  {
-  coords 1795.124 162.516 1767.742
+  coords 2217.69 166.646 1253.668
   angleY 0
  }
  {
-  coords 1752.814 147.991 2325.577
+  coords 2285.626 166.562 1279.43
   angleY 0
  }
  {
-  coords 1742.802 149.454 2423.263
+  coords 2348.824 164.617 1335.231
   angleY 0
  }
  {
-  coords 1738.766 147.725 2561.933
+  coords 2324.908 165.977 1406.863
   angleY 0
  }
  {
-  coords 1774.631 148.695 1977.554
+  coords 2295.126 167.71 1476.01
   angleY 0
  }
  {
-  coords 1822.643 147.307 2552.631
+  coords 2271.827 167.628 1535.865
   angleY 0
  }
  {
-  coords 1939.659 151.278 2581.934
+  coords 2241.659 168.012 1606.712
   angleY 0
  }
  {
-  coords 1771.977 155.527 1816.275
+  coords 2289.615 174.158 1645.999
   angleY 0
  }
  {
-  coords 2030.432 159.3 2610.673
+  coords 2274.622 178.719 1692.83
   angleY 0
  }
  {
-  coords 2112.208 160.067 2562.21
+  coords 2254.692 174.798 1754.294
   angleY 0
  }
  {
-  coords 1773.754 149.941 1924.385
+  coords 2245.387 180.557 1802.417
   angleY 0
  }
  {
-  coords 2253.827 164.856 2044.406
+  coords 2235.158 170.542 1862.935
   angleY 0
  }
  {
-  coords 2177.764 160.953 2471.293
+  coords 2254.304 170.114 1892.048
   angleY 0
  }
  {
-  coords 1775.734 147.434 2034.767
+  coords 2249.946 167.697 1939.44
   angleY 0
  }
  {
-  coords 1849.15 161.376 1710.923
-  angleY 0
- }
- {
-  coords 1907.626 159.632 1627.875
-  angleY 0
- }
- {
-  coords 1932.779 156.143 1550.157
-  angleY 0
- }
- {
-  coords 2022.091 167.238 1463.203
-  angleY 0
- }
- {
-  coords 1978.016 159.595 1484.511
-  angleY 0
- }
- {
-  coords 2057.991 163.5 1380.231
-  angleY 0
- }
- {
-  coords 1917.421 157.097 1481.093
-  angleY 0
- }
- {
-  coords 2088.806 161.925 1303.337
+  coords 2243.577 163.541 1989.583
   angleY 0
  }
 }

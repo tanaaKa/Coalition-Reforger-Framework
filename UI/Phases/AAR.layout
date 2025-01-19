@@ -4,15 +4,15 @@ FrameWidgetClass {
   OverlayWidgetClass "{631F7C6DE6B5229F}" : "{94CAAE4A601195D3}UI/layouts/ListBox/ListBox.layout" {
    Name "PlayerList"
    Slot FrameWidgetSlot "{62F20566BC4B2A18}" {
-    Anchor 0 0 1 1
-    PositionX 1710.97
-    OffsetLeft 1710.97
-    PositionY 297.148
-    OffsetTop 297.148
-    SizeX -1713.31
-    OffsetRight 2.336
-    SizeY -297.87
-    OffsetBottom 0.722
+    Anchor 1 0 1 1
+    PositionX -209.28
+    OffsetLeft -209.28
+    PositionY 297
+    OffsetTop 297
+    SizeX 207.36
+    OffsetRight 1.92
+    SizeY -337.668
+    OffsetBottom 40.668
    }
    "Z Order" 10
    components {
@@ -60,14 +60,15 @@ FrameWidgetClass {
   TextWidgetClass "{631F7C6DE6B5229E}" {
    Name "PlayerListText"
    Slot FrameWidgetSlot "{630A25D3C2DA91C1}" {
-    PositionX 1711.3
-    OffsetLeft 1711.3
-    PositionY 263.291
-    OffsetTop 263.291
-    SizeX 100
-    OffsetRight -1811.3
-    SizeY 30
-    OffsetBottom -293.291
+    Anchor 1 0 1 1
+    PositionX -209.28
+    OffsetLeft -209.28
+    PositionY 263.52
+    OffsetTop 263.52
+    SizeX 99.84
+    OffsetRight 109.44
+    SizeY -1049.76
+    OffsetBottom 786.24
    }
    "Z Order" 10
    Text "Players"
@@ -141,22 +142,6 @@ FrameWidgetClass {
      Text "CRF S&D98 Stupid name this is | By Salami"
      "Font Size" 100
      "Vertical Alignment" Center
-    }
-    TextWidgetClass "{631F7C6DE6B52295}" {
-     Name "PlayersText"
-     Slot FrameWidgetSlot "{62F20572D860F073}" {
-      Anchor 0 0 1 1
-      PositionX 1804.66
-      OffsetLeft 1804.66
-      PositionY 45.545
-      OffsetTop 45.545
-      SizeX -1787.5
-      OffsetRight -17.157
-      SizeY -30.997
-      OffsetBottom -14.548
-     }
-     "Z Order" 10
-     Text "Players: 84"
     }
     ImageWidgetClass "{631F7C6DE6B5BCED}" {
      Name "HeaderBG"
@@ -296,100 +281,17 @@ FrameWidgetClass {
    }
    "Z Order" 1
   }
-  FrameWidgetClass "{631F7C6DE6B58540}" {
-   Name "TimeWeather"
-   Slot FrameWidgetSlot "{62F012440EE08870}" {
-    Anchor 0 0 1 0
-    PositionX 1288.73
-    OffsetLeft 1288.73
-    PositionY 29.494
-    OffsetTop 29.494
-    SizeX -1384.58
-    OffsetRight 95.847
-    SizeY 93.381
-    OffsetBottom -122.875
-   }
-   "Z Order" 10
-   {
-    ImageWidgetClass "{631F7C6DE6B58541}" {
-     Name "TimeBG"
-     Slot FrameWidgetSlot "{62F01244212F9275}" {
-      Anchor 1 0 1 1
-      PositionX -190.859
-      OffsetLeft -190.859
-      PositionY -0.067
-      OffsetTop -0.067
-      SizeX 171.988
-      OffsetRight 18.87
-      SizeY -63.381
-      OffsetBottom 63.448
-     }
-     Color 0.008 0.012 0.016 1
-    }
-    TextWidgetClass "{631F7C6DE6B58542}" {
-     Name "TimeText"
-     Slot FrameWidgetSlot "{62F0124451778FA1}" {
-      Anchor 1 0 1 1
-      PositionX -189.374
-      OffsetLeft -189.374
-      PositionY 0
-      OffsetTop 0
-      SizeX 167.832
-      OffsetRight 21.542
-      SizeY -63.381
-      OffsetBottom 63.381
-     }
-     Text "Time: 19:27"
-     "Horizontal Alignment" Center
-     "Vertical Alignment" Center
-    }
-    ImageWidgetClass "{631F7C6DE6B58543}" {
-     Name "WeatherBG"
-     Slot FrameWidgetSlot "{62F01244212F9275}" {
-      Anchor 1 0 1 1
-      PositionX -190.859
-      OffsetLeft -190.859
-      PositionY 33.646
-      OffsetTop 33.646
-      SizeX 171.989
-      OffsetRight 18.87
-      SizeY -63.381
-      OffsetBottom 29.735
-     }
-     Color 0.008 0.012 0.016 1
-    }
-    TextWidgetClass "{631F7C6DE6B58544}" {
-     Name "WeatherText"
-     Slot FrameWidgetSlot "{62F0124451778FA1}" {
-      Anchor 1 0 1 1
-      PositionX -188.484
-      OffsetLeft -188.484
-      PositionY 33.551
-      OffsetTop 33.551
-      SizeX 166.509
-      OffsetRight 21.975
-      SizeY -63.381
-      OffsetBottom 29.83
-     }
-     Text "Weather: Rainy"
-     "Min Font Size" 4
-     "Horizontal Alignment" Center
-     "Vertical Alignment" Center
-     Wrap 1
-    }
-   }
-  }
   FrameWidgetClass "{631F7C6DE6B58545}" {
    Name "LeftFaction"
    Slot FrameWidgetSlot "{62F17C16EA2DA637}" {
-    Anchor 0 1 0 1
+    Anchor 0 0 0 1
     PositionX -671
     OffsetLeft -671
-    PositionY -968.3
-    OffsetTop -968.3
+    PositionY 111.7
+    OffsetTop 111.7
     SizeX 1366.6
     OffsetRight -695.6
-    SizeY 969.6
+    SizeY -110.4
     OffsetBottom -1.3
    }
    "Z Order" 10
@@ -397,29 +299,29 @@ FrameWidgetClass {
     ButtonWidgetClass "{6321493FF14CDF6A}" {
      Name "FactionSelector"
      Slot FrameWidgetSlot "{6321493FF14CDFB0}" {
-      Anchor 0 0 1 1
+      Anchor 0 0 0.52 1
       PositionX 0
       OffsetLeft 0
       PositionY 0
       OffsetTop 0
-      SizeX -1266.6
-      OffsetRight 655.696
-      SizeY -939.6
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
       OffsetBottom 0
      }
     }
     FrameWidgetClass "{631F7C45C75A96BB}" {
      Name "MissionDescription"
      Slot FrameWidgetSlot "{62F0124A5876B3A6}" {
-      Anchor 0 0 1 1
-      PositionX 32.534
-      OffsetLeft 30.184
-      PositionY 575.885
-      OffsetTop 575.885
-      SizeX -728.096
-      OffsetRight 696.561
-      SizeY -589.409
-      OffsetBottom 13.524
+      Anchor 0.022 0.594 0.49 0.986
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
      }
      "Z Order" 10
      {
@@ -441,14 +343,15 @@ FrameWidgetClass {
       OverlayWidgetClass "{631F7C45C75A96BC}" : "{94CAAE4A601195D3}UI/layouts/ListBox/ListBox.layout" {
        Name "DescriptionList"
        Slot FrameWidgetSlot "{62F0125F18C6CEA2}" {
-        PositionX 5.735
-        OffsetLeft 5.735
-        PositionY 51.09
-        OffsetTop 51.09
-        SizeX 402.54
-        OffsetRight -408.275
-        SizeY 323.02
-        OffsetBottom -374.11
+        Anchor 0.009 0.134 0.638 0.984
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
        }
        {
         ImageWidgetClass "{5DB6D18100D38307}" {
@@ -460,7 +363,7 @@ FrameWidgetClass {
       ImageWidgetClass "{631F7C45C75A96BE}" {
        Name "MissionHeader"
        Slot FrameWidgetSlot "{62F0124AA12818CD}" {
-        Anchor 0 0 1 1
+        Anchor 0 0 1 0.119
         PositionX 0
         OffsetLeft 0
         PositionY 0
@@ -468,21 +371,22 @@ FrameWidgetClass {
         SizeX 0
         OffsetRight 0
         SizeY 0
-        OffsetBottom 335
+        OffsetBottom 0
        }
        Color 0.017 0.017 0.017 1
       }
       TextWidgetClass "{631F7C45C75A96B1}" {
        Name "MissionText"
        Slot FrameWidgetSlot "{62F01245493B2589}" {
-        Anchor 0 0 1 1
+        Anchor 0 0.013 1 0.119
         PositionX 0
+        OffsetLeft 0
         PositionY 0
-        OffsetTop 5
-        SizeX -320
+        OffsetTop 0
+        SizeX 0
         OffsetRight 0
-        SizeY -550
-        OffsetBottom 335
+        SizeY 0
+        OffsetBottom 0
        }
        Text "Mission Description"
        "Horizontal Alignment" Center
@@ -491,15 +395,15 @@ FrameWidgetClass {
       ButtonWidgetClass "{631F7C45C75AD176}" {
        Name "BackButton"
        Slot FrameWidgetSlot "{62F06D427631DA08}" {
-        Anchor 0 0 1 1
-        PositionX 539.772
-        OffsetLeft 539.772
-        PositionY 46.337
-        OffsetTop 46.337
-        SizeX -542.804
-        OffsetRight 3.032
-        SizeY -325.586
-        OffsetBottom 279.249
+        Anchor 0.844 0.122 0.995 0.265
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
        }
        Color 0.105 0.105 0.105 0
        components {
@@ -518,36 +422,53 @@ FrameWidgetClass {
         }
        }
       }
-      RichTextWidgetClass "{631F7C45C75AD174}" {
-       Name "DescriptionInfo"
-       Slot FrameWidgetSlot "{62F06D4239BB111D}" {
-        Anchor 0 0 1 1
-        PositionX 8.386
-        OffsetLeft 8.386
-        PositionY 49.63
-        OffsetTop 49.63
-        SizeX -16.23
-        OffsetRight 7.844
-        SizeY -68.462
-        OffsetBottom 18.832
+      ScrollLayoutWidgetClass "{64635E2F121541DD}" {
+       Name "ScrollLayout"
+       Slot FrameWidgetSlot "{64635E2E391DE034}" {
+        Anchor 0 0 1 0
+        PositionX 5.706
+        OffsetLeft 5.706
+        PositionY 100.624
+        OffsetTop 100.624
+        SizeX -9.134
+        OffsetRight 3.428
+        SizeY 267.598
+        OffsetBottom -368.222
        }
-       Text ""
-       Wrap 1
+       {
+        VerticalLayoutWidgetClass "{64635E2F121541DC}" {
+         Name "VerticalLayout"
+         Slot AlignableSlot "{64635E2E7C0EFBE9}" {
+          HorizontalAlign 3
+          VerticalAlign 3
+         }
+         {
+          RichTextWidgetClass "{64635E2F121541DB}" {
+           Name "DescriptionInfo"
+           Slot LayoutSlot "{64635E2F121541E1}" {
+            SizeMode Fill
+           }
+           Text ""
+           Wrap 1
+          }
+         }
+        }
+       }
       }
      }
     }
     FrameWidgetClass "{631F7C443423BA7D}" {
      Name "RoleFrame"
      Slot FrameWidgetSlot "{631F7C443423BA5A}" {
-      Anchor 0 0 1 1
-      PositionX 39.314
-      OffsetLeft 39.314
-      PositionY 163.254
-      OffsetTop 163.254
-      SizeX -746.135
-      OffsetRight 706.821
-      SizeY -575.993
-      OffsetBottom 412.739
+      Anchor 0.029 0.168 0.483 0.574
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
      }
      "Z Order" 10
      {
@@ -609,13 +530,13 @@ FrameWidgetClass {
     ImageWidgetClass "{631F7C4A7A083ED7}" {
      Name "Image0"
      Slot FrameWidgetSlot "{631F7C4A7A080B4B}" {
-      Anchor 0 0 1 1
+      Anchor 0 0 0.52 1
       PositionX 0
       OffsetLeft 0
       PositionY 0
       OffsetTop 0
-      SizeX -655.696
-      OffsetRight 655.696
+      SizeX 0
+      OffsetRight 0
       SizeY 0
       OffsetBottom 0
      }
@@ -629,15 +550,15 @@ FrameWidgetClass {
     ImageWidgetClass "{631F7C6DE6B52296}" {
      Name "SlotsBG"
      Slot FrameWidgetSlot "{62F20565AEA4F592}" {
-      Anchor 0 0 1 1
-      PositionX 30.184
-      OffsetLeft 30.184
-      PositionY 135
-      OffsetTop 135
-      SizeX -726.745
-      OffsetRight 696.561
-      SizeY -537.284
-      OffsetBottom 402.284
+      Anchor 0.022 0.139 0.49 0.585
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
      }
      Color 0 0.584 1 0.129
      Size 512 512
@@ -648,42 +569,43 @@ FrameWidgetClass {
     TextWidgetClass "{631F7C6DE6B52297}" {
      Name "Slots"
      Slot FrameWidgetSlot "{62F20565E7929260}" {
-      Anchor 0 0 1 1
-      PositionX 34.683
-      OffsetLeft 34.683
-      PositionY 133.886
-      OffsetTop 133.886
-      SizeX -1256.71
-      OffsetRight 1222.03
-      SizeY -946.148
-      OffsetBottom 812.262
+      Anchor 0.025 0.138 0.106 0.162
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
      }
      Text "Slots"
     }
     FrameWidgetClass "{631F7C6DE6B52294}" {
      Name "Factions"
      Slot FrameWidgetSlot "{62F17C1215514D74}" {
-      Anchor 0 0 1 1
+      Anchor 0 0 0.707 0.14
       PositionX 0
       OffsetLeft 0
-      PositionY -0.061
-      SizeX -400.391
-      OffsetRight 400.391
-      SizeY -839.033
-      OffsetBottom 834
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
      }
      {
       ImageWidgetClass "{631F7C6DE6B6C63D}" {
        Name "BluforBGSelect"
        Slot FrameWidgetSlot "{63161CD792B94113}" {
-        Anchor 0 0 1 1
+        Anchor 0.031 0 0.196 1
         PositionX 0
-        OffsetLeft 30
+        OffsetLeft 0
         PositionY 0
         OffsetTop 0
-        SizeX -866.159
-        OffsetRight 777
-        SizeY -100.509
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
         OffsetBottom 0
        }
        Color 0.016 0.552 0.905 0.129
@@ -691,15 +613,15 @@ FrameWidgetClass {
       FrameWidgetClass "{631F7C6DE6B6C63C}" {
        Name "BluforButton"
        Slot FrameWidgetSlot "{62F205606D5A9D8E}" {
-        Anchor 0 0 1 1
-        PositionX 35
-        OffsetLeft 40
+        Anchor 0.041 0.059 0.185 0.963
+        PositionX 0
+        OffsetLeft 0
         PositionY 0
-        OffsetTop 8
-        SizeX -822
-        OffsetRight 787
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
         SizeY 0
-        OffsetBottom 5
+        OffsetBottom 0
        }
        {
         ImageWidgetClass "{631F7C6DE6B6C63F}" {
@@ -720,15 +642,15 @@ FrameWidgetClass {
         TextWidgetClass "{631F7C6DE6B6C63E}" {
          Name "SlotsBlufor"
          Slot FrameWidgetSlot "{62F20560E86DDE6C}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.815 0.964 0.959
           PositionX 0
-          OffsetLeft 5
-          PositionY 108.635
-          OffsetTop 100
+          OffsetLeft 0
+          PositionY 0
+          OffsetTop 0
           SizeX 0
-          OffsetRight 5
-          SizeY -108.635
-          OffsetBottom 5
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Text "128/128"
          "Horizontal Alignment" Center
@@ -737,15 +659,15 @@ FrameWidgetClass {
         ImageWidgetClass "{631F7C6DE6B6C639}" {
          Name "FlagBlufor"
          Slot FrameWidgetSlot "{62F20560886857F2}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.041 0.964 0.756
           PositionX 0
-          OffsetLeft 5
+          OffsetLeft 0
           PositionY 0
-          OffsetTop 5
-          SizeX -0.847
-          OffsetRight 5
-          SizeY -17.122
-          OffsetBottom 30
+          OffsetTop 0
+          SizeX 0
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Texture "{46FB2FB2C2125A3C}UI/Textures/Flags/US-flag-base-3it.edds"
          Size 800 400
@@ -758,9 +680,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          components {
@@ -781,9 +703,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 0.087 0.087 0.087 0
@@ -797,9 +719,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -811,13 +733,13 @@ FrameWidgetClass {
       ImageWidgetClass "{631F7C6DE6B6C635}" {
        Name "OpforBGSelect"
        Slot FrameWidgetSlot "{63161CD792B94113}" {
-        Anchor 0 0 1 1
-        PositionX 189.976
-        OffsetLeft 189.976
+        Anchor 0.197 0 0.361 1
+        PositionX 0
+        OffsetLeft 0
         PositionY 0
         OffsetTop 0
-        SizeX -807
-        OffsetRight 617.024
+        SizeX 0
+        OffsetRight 0
         SizeY 0
         OffsetBottom 0
        }
@@ -826,15 +748,15 @@ FrameWidgetClass {
       FrameWidgetClass "{631F7C6DE6B6C634}" {
        Name "OpforButton"
        Slot FrameWidgetSlot "{62F205606D5A9D8E}" {
-        Anchor 0 0 1 1
-        PositionX 199.976
-        OffsetLeft 199.976
-        PositionY 5
-        OffsetTop 8
-        SizeX -827
-        OffsetRight 627.024
-        SizeY -10
-        OffsetBottom 5
+        Anchor 0.207 0.059 0.351 0.963
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
        }
        {
         ImageWidgetClass "{631F7C6DE6B6C637}" {
@@ -845,9 +767,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 0.038 0.038 0.038 1
@@ -855,15 +777,15 @@ FrameWidgetClass {
         TextWidgetClass "{631F7C6DE6B6C636}" {
          Name "SlotsOpfor"
          Slot FrameWidgetSlot "{62F20560E86DDE6C}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.815 0.964 0.959
           PositionX 0
-          OffsetLeft 5
-          PositionY 108.635
-          OffsetTop 100
+          OffsetLeft 0
+          PositionY 0
+          OffsetTop 0
           SizeX 0
-          OffsetRight 5
-          SizeY -108.635
-          OffsetBottom 5
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Text "128/128"
          "Horizontal Alignment" Center
@@ -872,15 +794,15 @@ FrameWidgetClass {
         ImageWidgetClass "{631F7C6DE6B64D90}" {
          Name "FlagOpfor"
          Slot FrameWidgetSlot "{62F20560886857F2}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.041 0.964 0.756
           PositionX 0
-          OffsetLeft 5
+          OffsetLeft 0
           PositionY 0
-          OffsetTop 5
-          SizeX -0.847
-          OffsetRight 5
-          SizeY -17.122
-          OffsetBottom 30
+          OffsetTop 0
+          SizeX 0
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Texture "{53395E04A4D442C0}UI/Textures/Flags/flag_cccp_ca.edds"
          Size 256 128
@@ -893,9 +815,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          components {
@@ -916,9 +838,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -932,9 +854,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -946,13 +868,13 @@ FrameWidgetClass {
       ImageWidgetClass "{631F7C6DE6B64D94}" {
        Name "IndforBGSelect"
        Slot FrameWidgetSlot "{63161CD792B94113}" {
-        Anchor 0 0 1 1
-        PositionX 349.996
-        OffsetLeft 349.996
+        Anchor 0.362 0 0.527 1
+        PositionX 0
+        OffsetLeft 0
         PositionY 0
         OffsetTop 0
-        SizeX -807
-        OffsetRight 457.004
+        SizeX 0
+        OffsetRight 0
         SizeY 0
         OffsetBottom 0
        }
@@ -961,15 +883,15 @@ FrameWidgetClass {
       FrameWidgetClass "{631F7C6DE6B64D8B}" {
        Name "IndforButton"
        Slot FrameWidgetSlot "{62F205606D5A9D8E}" {
-        Anchor 0 0 1 1
-        PositionX 359.996
-        OffsetLeft 359.996
-        PositionY 5
-        OffsetTop 8
-        SizeX -827
-        OffsetRight 467.004
-        SizeY -10
-        OffsetBottom 5
+        Anchor 0.373 0.059 0.517 0.963
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
        }
        {
         ImageWidgetClass "{631F7C6DE6B64D8A}" {
@@ -980,9 +902,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 0.038 0.038 0.038 1
@@ -990,15 +912,15 @@ FrameWidgetClass {
         TextWidgetClass "{631F7C6DE6B64D89}" {
          Name "SlotsIndfor"
          Slot FrameWidgetSlot "{62F20560E86DDE6C}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.815 0.964 0.959
           PositionX 0
-          OffsetLeft 5
-          PositionY 108.635
-          OffsetTop 100
+          OffsetLeft 0
+          PositionY 0
+          OffsetTop 0
           SizeX 0
-          OffsetRight 5
-          SizeY -108.635
-          OffsetBottom 5
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Text "128/128"
          "Horizontal Alignment" Center
@@ -1007,15 +929,15 @@ FrameWidgetClass {
         ImageWidgetClass "{631F7C6DE6B64D88}" {
          Name "FlagIndfor"
          Slot FrameWidgetSlot "{62F20560886857F2}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.041 0.964 0.756
           PositionX 0
-          OffsetLeft 5
+          OffsetLeft 0
           PositionY 0
-          OffsetTop 5
-          SizeX -0.847
-          OffsetRight 5
-          SizeY -17.122
-          OffsetBottom 30
+          OffsetTop 0
+          SizeX 0
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Texture "{B784E694BA4A7D40}UI/Textures/Flags/Everon-flag-base-3it.edds"
          Size 800 400
@@ -1028,9 +950,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          components {
@@ -1067,9 +989,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -1081,13 +1003,13 @@ FrameWidgetClass {
       ImageWidgetClass "{631F7C6DE6B64D8C}" {
        Name "CivBGSelect"
        Slot FrameWidgetSlot "{63161CD792B94113}" {
-        Anchor 0 0 1 1
-        PositionX 509.994
-        OffsetLeft 509.994
+        Anchor 0.528 0 0.693 1
+        PositionX 0
+        OffsetLeft 0
         PositionY 0
         OffsetTop 0
-        SizeX -807
-        OffsetRight 297.006
+        SizeX 0
+        OffsetRight 0
         SizeY 0
         OffsetBottom 0
        }
@@ -1096,15 +1018,15 @@ FrameWidgetClass {
       FrameWidgetClass "{631F7C6DE6B64D83}" {
        Name "CivButton"
        Slot FrameWidgetSlot "{62F205606D5A9D8E}" {
-        Anchor 0 0 1 1
-        PositionX 519.994
-        OffsetLeft 519.994
-        PositionY 5
-        OffsetTop 8
-        SizeX -827
-        OffsetRight 307.006
-        SizeY -10
-        OffsetBottom 5
+        Anchor 0.538 0.059 0.682 0.963
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
        }
        {
         ImageWidgetClass "{631F7C6DE6B620C9}" {
@@ -1115,9 +1037,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 0.038 0.038 0.038 1
@@ -1125,15 +1047,15 @@ FrameWidgetClass {
         TextWidgetClass "{631F7C6DE6B620C8}" {
          Name "SlotsCiv"
          Slot FrameWidgetSlot "{62F20560E86DDE6C}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.815 0.964 0.959
           PositionX 0
-          OffsetLeft 5
-          PositionY 108.635
-          OffsetTop 100
+          OffsetLeft 0
+          PositionY 0
+          OffsetTop 0
           SizeX 0
-          OffsetRight 5
-          SizeY -108.635
-          OffsetBottom 5
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Text "128/128"
          "Horizontal Alignment" Center
@@ -1142,15 +1064,15 @@ FrameWidgetClass {
         ImageWidgetClass "{631F7C6DE6B620CB}" {
          Name "FlagCiv"
          Slot FrameWidgetSlot "{62F20560886857F2}" {
-          Anchor 0 0 1 1
+          Anchor 0.036 0.041 0.964 0.756
           PositionX 0
-          OffsetLeft 5
+          OffsetLeft 0
           PositionY 0
-          OffsetTop 5
-          SizeX -0.847
-          OffsetRight 5
-          SizeY -17.122
-          OffsetBottom 30
+          OffsetTop 0
+          SizeX 0
+          OffsetRight 0
+          SizeY 0
+          OffsetBottom 0
          }
          Texture "{76A2D42714BB3806}UI/Textures/Flags/Civilian-flag-base_3it.edds"
          Size 800 400
@@ -1163,9 +1085,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          components {
@@ -1186,9 +1108,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -1202,9 +1124,9 @@ FrameWidgetClass {
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX -37.715
+          SizeX 0
           OffsetRight 0
-          SizeY -108.633
+          SizeY 0
           OffsetBottom 0
          }
          Color 1 1 1 0
@@ -1254,6 +1176,123 @@ FrameWidgetClass {
        }
       }
      }
+    }
+   }
+  }
+  FrameWidgetClass "{6462508724C2092D}" {
+   Name "TimeWeather"
+   Slot FrameWidgetSlot "{62F012440EE08870}" {
+    Anchor 1 0 1 0
+    PositionX -207.274
+    OffsetLeft -207.274
+    PositionY 111.285
+    OffsetTop 111.285
+    SizeX 206.721
+    OffsetRight 0.553
+    SizeY 100.344
+    OffsetBottom -211.629
+   }
+   "Z Order" 10
+   {
+    ImageWidgetClass "{6462508724C2092F}" {
+     Name "PlayersTextBG"
+     Slot FrameWidgetSlot "{62F01244212F9275}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 33
+      OffsetTop 33
+      SizeX 172
+      OffsetRight 18
+      SizeY -131.31
+      OffsetBottom 98
+     }
+     Clipping Ancestor
+     Color 0.008 0.012 0.016 1
+    }
+    TextWidgetClass "{6462508724C243CD}" {
+     Name "PlayersText"
+     Slot FrameWidgetSlot "{62F20572D860F073}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 33.238
+      OffsetTop 33
+      SizeX 172
+      OffsetRight 18
+      SizeY -131.238
+      OffsetBottom 98
+     }
+     Clipping Ancestor
+     Text "Players: 84"
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+    }
+    ImageWidgetClass "{6462508724C243CB}" {
+     Name "TimeBG"
+     Slot FrameWidgetSlot "{62F01244212F9275}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 35.094
+      OffsetTop 35
+      SizeX 172
+      OffsetRight 18
+      SizeY -70.094
+      OffsetBottom 35
+     }
+     Color 0.008 0.012 0.016 1
+    }
+    TextWidgetClass "{6462508724C243CA}" {
+     Name "TimeText"
+     Slot FrameWidgetSlot "{62F0124451778FA1}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 30
+      OffsetTop 35
+      SizeX 172
+      OffsetRight 18
+      SizeY -65.229
+      OffsetBottom 35
+     }
+     Text "Time: 19:27"
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+    }
+    ImageWidgetClass "{6462508724C1D3D3}" {
+     Name "WeatherBG"
+     Slot FrameWidgetSlot "{62F01244212F9275}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 65.888
+      OffsetTop 67.5
+      SizeX 172
+      OffsetRight 18
+      SizeY -65.888
+      OffsetBottom 0
+     }
+     Color 0.008 0.012 0.016 1
+    }
+    TextWidgetClass "{6462508724C1D3D0}" {
+     Name "WeatherText"
+     Slot FrameWidgetSlot "{62F0124451778FA1}" {
+      Anchor 1 0 1 1
+      PositionX -190
+      OffsetLeft -190
+      PositionY 66.862
+      OffsetTop 67.5
+      SizeX 172
+      OffsetRight 18
+      SizeY -66.862
+      OffsetBottom 0
+     }
+     Text "Weather: Rainy"
+     "Min Font Size" 4
+     "Horizontal Alignment" Center
+     "Vertical Alignment" Center
+     Wrap 1
     }
    }
   }

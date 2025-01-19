@@ -1,16 +1,41 @@
 SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base.et" {
  ID "520EC961A090B1EE"
  components {
+  CharacterSoundComponent "{520EA1D2F659CF84}" {
+   Mute 1
+  }
   SCR_CommunicationSoundComponent "{54FD05D0C92D071F}" {
+   Mute 1
    Filenames + {
     "{04548C6D4A936054}Sounds/RadioProtocol/RadioProtocol_Report_2_US.acp"
    }
+   StaminaThreshold 0.0001
+   StaminaThresholdMinimum 0.0001
+  }
+  CRF_PlayableCharacter "{646423C7F8911193}" {
+   m_sName "Spectator"
   }
   FactionAffiliationComponent "{633B2131A597C43C}" {
    "faction affiliation" "US"
   }
+  SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" {
+   "Fall damage min speed" 999
+   "Fall damage max speed" 999
+   CollisionVelocityThreshold 999
+   EnableDamage 0
+   m_bPermitUnconsciousness 0
+  }
   SCR_CharacterPerceivableComponent "{566CCE2397E28600}" {
    Enabled 0
+  }
+  SCR_CharacterStaminaComponent "{520EA1D2F659C824}" {
+   StaminaRegainPerS 1
+   StaminaDrainRun 1
+   StaminaDrainSprint 1
+   BreathNormalFrequency 0.001
+   BreathNormalMagnitude 0.001
+   BreathExhaustedFrequency 0.001
+   BreathExhaustedMagnitude 0.001
   }
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
