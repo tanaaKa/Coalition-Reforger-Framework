@@ -12,6 +12,8 @@ class CRF_RespawnMenu: ChimeraMenuBase
 	
 	int m_iCurrentWaveTimer;
 	
+	int m_iGroupID;
+	
 	void displayTimer()
 	{
 		TextWidget timerWidget = TextWidget.Cast(GetRootWidget().FindAnyWidget("timerCountDown"));
@@ -25,7 +27,7 @@ class CRF_RespawnMenu: ChimeraMenuBase
 		
 		if (m_iCurrentWaveTimer < 0)
 		{
-			SCR_PlayerController.Cast(GetGame().GetPlayerController()).RespawnWithTicket(GetGame().GetPlayerController().GetPlayerId());
+			SCR_PlayerController.Cast(GetGame().GetPlayerController()).RespawnWithTicket(GetGame().GetPlayerController().GetPlayerId(), m_iGroupID);
 			GetGame().GetMenuManager().CloseAllMenus();
 		}
 		
