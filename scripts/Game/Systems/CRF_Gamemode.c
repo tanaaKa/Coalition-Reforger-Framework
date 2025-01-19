@@ -521,7 +521,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 				if (!m_iBLUFORCurrentTickets == 0)
 				{
 					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
-					if (m_iBLUFORCurrentTickets != -1)
+					if (m_iBLUFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 						m_iBLUFORCurrentTickets = m_iBLUFORCurrentTickets - 1;
 				}
 				break;
@@ -530,7 +530,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 				if (!m_iOPFORCurrentTickets == 0)
 				{
 					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
-					if (m_iOPFORCurrentTickets != -1)
+					if (m_iOPFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 						m_iOPFORCurrentTickets = m_iOPFORCurrentTickets - 1;
 				}
 				break;
@@ -539,13 +539,13 @@ class CRF_Gamemode : SCR_BaseGameMode
 				if (!m_iINDFORCurrentTickets == 0)
 				{
 					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
-					if (m_iINDFORCurrentTickets != -1)
+					if (m_iINDFORCurrentTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 						m_iINDFORCurrentTickets = m_iINDFORCurrentTickets - 1;	
 				}
 				break;
 			}
 			case "CIV" : {
-				if (!m_iCIVCurrentTickets == 0)
+				if (!m_iCIVCurrentTickets == 0 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 				{
 					GetGame().GetCallqueue().CallLater(SendRespawnScreen, 250, false, playerID, groupID);
 					if (m_iCIVCurrentTickets != -1)
