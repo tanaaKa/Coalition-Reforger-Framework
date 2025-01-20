@@ -46,13 +46,4 @@ modded class SCR_AIGroup
 	{
 		CRF_Gamemode.GetInstance().AddGroup(this);
 	}
-	
-	override void OnEmpty()
-	{
-		Event_OnEmpty.Invoke(this);
-		
-		//--- Delete after delay, doing it directly in this event would be unsafe
-//		if (m_bDeleteWhenEmpty)
-//			GetGame().GetCallqueue().CallLater(SCR_EntityHelper.DeleteEntityAndChildren, 1, false, this);		
-	}
 }
