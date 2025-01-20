@@ -313,11 +313,33 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	protected void AddGearToEntity(IEntity entity, string role, ResourceName gearScriptResourceName, CRF_GearScriptContainer gearScriptSettings, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
 	{		
 		CRF_GearScriptConfig gearConfig = CRF_GearScriptConfig.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer(gearScriptResourceName).GetResource().ToBaseContainer()));
+		FactionIdentity factionIdentity = FactionIdentity.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer(gearConfig.m_FactionIdentity).GetResource().ToBaseContainer()));
 		
 		EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
         spawnParams.Transform[3] = entity.GetOrigin();
 		
+		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		// FACTION IDENTITY
+		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		
+		if(factionIdentity)
+		{
+			array<ref SoundIdentity> outSoundIdentities = {};
+			array<ref VisualIdentity> outVisualIdentities = {};
+		
+			factionIdentity.GetSoundIdentities(outSoundIdentities);
+			factionIdentity.GetVisualIdentities(outVisualIdentities);
+			
+			SCR_CharacterIdentityComponent characterIdentityComponent = SCR_CharacterIdentityComponent.Cast(entity.FindComponent(SCR_CharacterIdentityComponent));
+			
+			Identity identity = characterIdentityComponent.GetIdentity();
+			
+			identity.SetSoundIdentity(outSoundIdentities.GetRandomElement());
+			identity.SetVisualIdentity(outVisualIdentities.GetRandomElement());
+			characterIdentityComponent.CommitChanges();
+		} else 
+			Print(string.Format("CRF GEAR SCRIPT ERROR: NO FACTION IDENTITY SET: %1", gearScriptResourceName), LogLevel.ERROR);
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// CLOTHING
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

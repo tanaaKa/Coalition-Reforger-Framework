@@ -43,6 +43,9 @@ class CRF_GearScriptConfig
 	[Attribute(uiwidget: "resourcePickerThumbnail", params: "edds")]
 	ResourceName m_FactionIcon;
 	
+	[Attribute("", UIWidgets.ResourceNamePicker, desc: "Gearscript Faction Identity", "conf class=FactionIdentity")]
+	ResourceName m_FactionIdentity;
+	
 	[Attribute()]
 	ref CRF_Weapons m_FactionWeapons;
 	
