@@ -48,11 +48,10 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  m_sFactionOneKey "CIV"
- m_INDFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9AE1C9ED}" {
-  m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
+ m_INDFORGearScriptSettings CRF_GearScriptContainer "{64672AD87A744A21}" {
+  m_rGearScript "{9F4A0C3FCDF3F6DE}Configs/Gearscripts/Standard/80s/CRF_GS_FIA.conf"
  }
  m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{64570ACB9A9C5C52}" {
-  m_rGearScript "{6710BE255A92A2D3}Configs/Gearscripts/Custom/Geek-x/CRF_GS_CIV.conf"
  }
  m_bRespawnEnabled 1
  m_iTimeToRespawn 10
