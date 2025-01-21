@@ -22,7 +22,6 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "OPFOR Assets: Trucks"\
    ""\
    "Time: 07:00"\
-   ""\
    "Weather:Rainy"
   }
   CRF_MissionDescriptor "{64425051F2E00216}" {
