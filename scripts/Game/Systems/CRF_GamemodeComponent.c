@@ -313,7 +313,6 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	protected void AddGearToEntity(IEntity entity, string role, ResourceName gearScriptResourceName, CRF_GearScriptContainer gearScriptSettings, SCR_CharacterInventoryStorageComponent inventory, SCR_InventoryStorageManagerComponent inventoryManager)
 	{		
 		CRF_GearScriptConfig gearConfig = CRF_GearScriptConfig.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer(gearScriptResourceName).GetResource().ToBaseContainer()));
-		FactionIdentity factionIdentity = FactionIdentity.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer(gearConfig.m_FactionIdentity).GetResource().ToBaseContainer()));
 		
 		EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
@@ -323,23 +322,45 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		// FACTION IDENTITY
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
-		if(factionIdentity)
-		{
-			array<ref SoundIdentity> outSoundIdentities = {};
-			array<ref VisualIdentity> outVisualIdentities = {};
+		CRF_CharacterIdentity characterIdentity = null;
 		
-			factionIdentity.GetSoundIdentities(outSoundIdentities);
-			factionIdentity.GetVisualIdentities(outVisualIdentities);
-			
-			SCR_CharacterIdentityComponent characterIdentityComponent = SCR_CharacterIdentityComponent.Cast(entity.FindComponent(SCR_CharacterIdentityComponent));
-			
-			Identity identity = characterIdentityComponent.GetIdentity();
-			
-			identity.SetSoundIdentity(outSoundIdentities.GetRandomElement());
-			identity.SetVisualIdentity(outVisualIdentities.GetRandomElement());
-			characterIdentityComponent.CommitChanges();
-		} else 
+		if(!gearConfig.m_FactionIdentity.IsEmpty())
+		{
+			characterIdentity = CRF_CharacterIdentity.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer(gearConfig.m_FactionIdentity).GetResource().ToBaseContainer()));
+		} else {
 			Print(string.Format("CRF GEAR SCRIPT ERROR: NO FACTION IDENTITY SET: %1", gearScriptResourceName), LogLevel.ERROR);
+			characterIdentity = CRF_CharacterIdentity.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer("{93C4AAA0496F0B42}Configs/Identities/CRF_CharacterIdentity_American.conf").GetResource().ToBaseContainer()));
+		};
+		
+		SCR_CharacterIdentityComponent characterIdentityComponent = SCR_CharacterIdentityComponent.Cast(entity.FindComponent(SCR_CharacterIdentityComponent));
+		
+		if(characterIdentityComponent)
+		{	
+			CRF_Character_Visual_Identity visID = characterIdentity.m_VisualIdentityArray.GetRandomElement();
+			CRF_Character_Sound_Identity sndID = characterIdentity.m_SoundIdentityArray.GetRandomElement();
+			
+			if(!visID.m_Head.IsEmpty() && !visID.m_Body.IsEmpty() && sndID.m_VoiceID != 0)
+			{
+				Identity identity = characterIdentityComponent.GetIdentity();
+				VisualIdentity setVisID = new VisualIdentity;
+				SoundIdentity setSndID = new SoundIdentity;
+				
+				// Visual
+				setVisID.SetHead(visID.m_Head);
+				setVisID.SetBody(visID.m_Body);
+				setVisID.SetMeshConfig(MeshConfig.Cast(BaseContainerTools.CreateInstanceFromContainer(BaseContainerTools.LoadContainer("{C7798D607F176107}Configs/Identities/BaseBodyMeshConfig.conf").GetResource().ToBaseContainer())));
+				
+				// Sound
+				setSndID.SetVoiceID(sndID.m_VoiceID);
+				setSndID.SetPitch(sndID.m_VoicePitch);
+				
+				identity.SetVisualIdentity(setVisID);
+				identity.SetSoundIdentity(setSndID);
+				characterIdentityComponent.SetIdentity(identity);
+			};
+		};
+			
+		
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// CLOTHING
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -398,7 +419,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 				case(isVehSpec) : {UpdateVehicleSpecialtiesCustomGear(gearConfig.m_CustomFactionGear.m_VehicleSpecialtiesCustomGear, role, spawnParams, inventory, inventoryManager);   break;}
 			}
 		} else
-			Print(string.Format("CRF GEAR SCRIPT ERROR: NO CUSTOM GEAR SET: %1", gearScriptResourceName), LogLevel.ERROR);
+			Print(string.Format("CRF GEAR SCRIPT ERROR: NO CUSTOM GEAR SET: %1", gearScriptResourceName), LogLevel.WARNING);
 		
 		//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 		// ITEMS
