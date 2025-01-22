@@ -3,23 +3,12 @@ SCR_AIWorld : "{3D0FE80570D5BFCC}Prefabs/AI/SCR_AIWorld_Anizay.et" {
 }
 CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
-  CRF_GearScriptGamemodeComponent "{628A6713CE1C127B}" {
-   m_BLUFORGearScriptSettings CRF_GearScriptContainer "{629E5222ADE13F54}" {
-    m_rGearScript "{3FCA1378C33401ED}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSUSArmyMC.conf"
-    m_bEnableGIRadios 0
-   }
-   m_INDFORGearScriptSettings CRF_GearScriptContainer "{629E5222AC7F68BE}" {
-    m_rGearScript "{EEF6657C936083FA}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Hidden.conf"
-   }
-   m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{629E5222AC1510B5}" {
-    m_rGearScript "{3168EE67347980DB}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Civ_Unarmed.conf"
-   }
+  SCR_InitWeatherComponent "{64427EEC0AFF43EE}" {
+   m_sInitialStartingWeatherId "Clear"
   }
  }
  coords 7940.861 147.56 3023.676
- m_iFactionOneRatio 2
- m_sFactionOneKey "BLU"
- m_sFactionTwoKey "IND"
+ m_iTimeLimitMinutes 15
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "Blufor is on a goodwill mission to Khas. They hope to distribute the food and medicine in their covered truck to the locals, but some people have other plans. Among the civilians there are hidden insurgents who want to take the supplies for themselves and bury these Americans."\
@@ -47,7 +36,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    }
   }
   CRF_MissionDescriptor "{644250519BE30999}" {
-   m_sTextData "Indfor wins by either eliminating all of blufor, or by stealing their covered truck with a majority of supplies still in it. You don't actively want to hurt the civilians, but there's no rule against it. Your cell leader has an intel folder that is not allowed to be dropped."\
+   m_sTextData "Indfor wins by by stealing their covered truck with a majority of supplies still in it. You don't actively want to hurt the civilians, but there's no rule against it. Your cell leader has an intel folder that is not allowed to be dropped."\
    ""\
    "Don't pull out anything until you're ready, as the civilians want to inform on you! Civilians start with no equipment at all!"
   }
@@ -57,7 +46,15 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Please fill combat slots first, and leave civilian for overflow. "
   }
  }
- m_iTimeLimitMinutes 15
+ m_iFactionOneRatio 3
+ m_sFactionOneKey "BLU"
+ m_sFactionTwoKey "IND"
+ m_INDFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9AE1C9ED}" {
+  m_rGearScript "{EEF6657C936083FA}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Hidden.conf"
+ }
+ m_CIVILIANGearScriptSettings CRF_GearScriptContainer "{64570ACB9A9C5C52}" {
+  m_rGearScript "{3168EE67347980DB}Configs/Gearscripts/Custom/Harry/TerribleTuesday/CRF_GS_Taliban_Civ_Unarmed.conf"
+ }
  {
   SCR_FactionManager "644B3D6241F4342D" {
    ID "632A77473B3CC3A8"
@@ -69,6 +66,9 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        }
        SCR_CallsignInfo "{644B3D6EA2299BC8}" {
         m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{64657C66103482B1}" {
+        m_sCallsign "1-5"
        }
       }
      }
@@ -84,28 +84,27 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        SCR_CallsignInfo "{58B2B630FDD64B51}" {
        }
        SCR_CallsignInfo "{58B2B630FDD64B50}" {
-       }
-       SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
         m_sCallsign "Operator 1"
        }
-       SCR_CallsignInfo "{645349C479DBB7C9}" {
+       SCR_CallsignInfo "{61C8F1ACA9FDB12D}" {
+        m_sCallsign "Operator 2"
        }
-       SCR_CallsignInfo "{644B3D7FFFB1DFA7}" {
+       SCR_CallsignInfo "{645349C479DBB7C9}" {
         m_sCallsign "Operator 3"
        }
-       SCR_CallsignInfo "{644B3D7FFC36B65D}" {
+       SCR_CallsignInfo "{644B3D7FFFB1DFA7}" {
         m_sCallsign "Operator 4"
        }
-       SCR_CallsignInfo "{644B3D7FC2A38E40}" {
+       SCR_CallsignInfo "{644B3D7FFC36B65D}" {
         m_sCallsign "Operator 5"
        }
-       SCR_CallsignInfo "{644B3D7FC702522C}" {
+       SCR_CallsignInfo "{644B3D7FC2A38E40}" {
         m_sCallsign "Operator 6"
        }
-       SCR_CallsignInfo "{644B3D7FCA6B595E}" {
+       SCR_CallsignInfo "{644B3D7FC702522C}" {
         m_sCallsign "Operator 7"
        }
-       SCR_CallsignInfo "{644B3D6EA45A45D3}" {
+       SCR_CallsignInfo "{644B3D7FCA6B595E}" {
         m_sCallsign "Operator 8"
        }
       }
