@@ -56,20 +56,28 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   }
  }
  m_BLUFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B419A7B}" {
-  m_rGearScript "{9F4A0C3FCDF3F6DE}Configs/Gearscripts/Standard/80s/CRF_GS_FIA.conf"
+  m_rGearScript "{2F68FE4489B35DE8}Configs/Gearscripts/Standard/80s/CRF_GS_FIA_TracersOnly.conf"
  }
  m_OPFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B11EAAD}" {
-  m_rGearScript "{EC17EA82C390260C}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSMSV.conf"
+  m_rGearScript "{EFD528B059E0EA4B}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSMSV_TracersOnly.conf"
   m_bEnableGIRadios 0
+ }
+ m_INDFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9AE1C9ED}" {
+  m_rGearScript "{2F68FE4489B35DE8}Configs/Gearscripts/Standard/80s/CRF_GS_FIA_TracersOnly.conf"
  }
  m_bRespawnEnabled 1
  m_bWaveRespawn 1
  m_iTimeToRespawn 120
  m_iOPFORTickets 50
  {
-  SCR_FactionManager {
+  SCR_FactionManager "646D3C6FCEFFF61C" {
    ID "632A77473B3CC3A8"
    Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_aFriendlyFactionsIds {
+      "INDFOR"
+     }
+    }
     SCR_Faction "{628C2D2BFC8C6447}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
       m_aSquadNames {
@@ -98,6 +106,11 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
         m_sCallsign "LOGI"
        }
       }
+     }
+    }
+    SCR_Faction "{628CDE9209CA3FF9}" {
+     m_aFriendlyFactionsIds {
+      "BLUFOR"
      }
     }
    }
