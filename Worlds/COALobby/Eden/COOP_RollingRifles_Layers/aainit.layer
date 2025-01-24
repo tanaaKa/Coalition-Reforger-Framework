@@ -48,17 +48,14 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
     SCR_Faction "{628B22E9B4056C88}" {
      m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
       m_aSquadNames {
-       SCR_CallsignInfo "{6470C41163188A94}" {
-        m_sCallsign "2PLT"
-       }
        SCR_CallsignInfo "{6470C4116DDEA681}" {
-        m_sCallsign "2-1"
+        m_sCallsign "1-4"
        }
        SCR_CallsignInfo "{6470C4116DFAD78E}" {
-        m_sCallsign "2-2"
+        m_sCallsign "1-5"
        }
        SCR_CallsignInfo "{6470C4116E2C6760}" {
-        m_sCallsign "2-3"
+        m_sCallsign "1-6"
        }
        SCR_CallsignInfo "{6470C4116E9FD69F}" {
         m_sCallsign "MEDIC"
