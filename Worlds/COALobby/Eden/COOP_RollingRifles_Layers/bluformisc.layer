@@ -64,7 +64,7 @@ PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.e
 }
 $grp Vehicle : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
  M923A1_transport1 {
-  coords 5017.91 174.63 7058.216
+  coords 5016.146 174.63 7059.048
   angleY 132.023
  }
  M923A1_transport2 {

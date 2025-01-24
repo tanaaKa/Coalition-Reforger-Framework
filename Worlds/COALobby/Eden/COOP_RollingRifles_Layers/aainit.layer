@@ -2,11 +2,29 @@ SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
  coords 5022.863 174.687 7031.885
 }
 CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_iStartingHours 16
+  }
+ }
  coords 4960.511 173.644 7002.302
  m_iTimeLimitMinutes 200
  EnableAIInGameState 1
  m_bDeleteJIPSlots 0
  m_aMissionDescriptors {
+  CRF_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "We have been deployed to the allied town of Montignac and have been tasked to assault Soviet positions in Tyrone, Meaux and St. Phillipe before destroying a motorpool of Soviet vehicles at the airport."\
+   ""\
+   "BLUFOR Composition: US Mechanized Battalion"\
+   "BLUFOR Assets: Transport Trucks, M113s"\
+   ""\
+   "OPFOR Composition: Soviet troops"\
+   "OPFOR Assets: Wheeled Vehicles"\
+   ""\
+   "Time: 16:00"\
+   ""\
+   "Weather: Clear"
+  }
   CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "Capture/Clear the towns of Tyrone, Meaux and St. Phillipe from Soviet forces."\
    ""\
@@ -23,4 +41,41 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_bWaveRespawn 1
  m_iTimeToRespawn 60
  m_iBLUFORTickets 250
+ {
+  SCR_FactionManager "6470C4138D19CFE4" {
+   ID "632A77473B3CC3A8"
+   Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{6470C41163188A94}" {
+        m_sCallsign "2PLT"
+       }
+       SCR_CallsignInfo "{6470C4116DDEA681}" {
+        m_sCallsign "2-1"
+       }
+       SCR_CallsignInfo "{6470C4116DFAD78E}" {
+        m_sCallsign "2-2"
+       }
+       SCR_CallsignInfo "{6470C4116E2C6760}" {
+        m_sCallsign "2-3"
+       }
+       SCR_CallsignInfo "{6470C4116E9FD69F}" {
+        m_sCallsign "MEDIC"
+       }
+       SCR_CallsignInfo "{6470C411694219F6}" {
+        m_sCallsign "LOGI"
+       }
+       SCR_CallsignInfo "{6470C411696DCDD4}" {
+        m_sCallsign "MAT1"
+       }
+       SCR_CallsignInfo "{6470C41169BD4BE7}" {
+        m_sCallsign "MAT2"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
 }
