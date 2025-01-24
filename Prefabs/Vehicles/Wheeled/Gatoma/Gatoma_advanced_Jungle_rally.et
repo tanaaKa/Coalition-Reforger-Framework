@@ -1,0 +1,106 @@
+Vehicle : "{7D3C3A29F3863C9B}Prefabs/Vehicles/Wheeled/Gatoma/Gatoma_advanced_Offroad_Sport.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  BaseLightManagerComponent "{51E210F17D2534F7}" {
+   LightAction {
+    SCR_LightsSearchLightUserAction "{605D5241E4E9F52E}" {
+     m_eLightType SearchLight
+    }
+   }
+  }
+  BaseVehicleNodeComponent "{20FB66C5B2237133}" {
+   components {
+    SCR_CarControllerComponent "{20FB66C5BC92275B}" {
+     Type Manual
+     ThrottleCurve +{
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "Gatoma Offroad Jungle"
+    m_Image "{0181D12D928B8DA4}Assets/Images/gatoffroadsportJUNGLE.edds"
+   }
+  }
+  SCR_WheeledDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fFrontMultiplier 0.1
+   m_fBottomMultiplier 0.1
+  }
+  VehicleWheeledSimulation "{731B26FCA2F19855}" {
+   Simulation Wheeled "{4D8B26DEA5F25978}" {
+    Engine Engine Engine {
+     MaxPower 1095
+     MaxTorque 1195
+     RpmMaxPower 4500
+     RpmMaxTorque 3500
+     Steepness 15
+    }
+    Gearbox Gearbox Gearbox {
+     Forward {
+      3.7 3.1 2.5 2 1.5 1.2 1 0.95 0.85
+     }
+    }
+    Axles {
+     Axle "{4D8B26DF957A8E1C}" {
+      Suspension Suspension "{4D8B26DFF8859A7B}" {
+       SpringRate 50
+      }
+      Wheel Wheel "{4D8B26DFFE211745}" {
+       Radius 0.45
+       BrakeTorque 2000
+      }
+      Tyre Tyre "{605D5241E4E7848A}" {
+       Roughness 0.01
+       LateralFriction 0.9
+      }
+     }
+     Axle "{4D8B26DF8CF2F3D8}" {
+      Suspension Suspension "{4D8B26DF2B10AE05}" {
+       SpringRate 45
+      }
+      Wheel Wheel "{4D8B26DF30A4E4D7}" {
+       Radius 0.45
+       BrakeTorque 2000
+      }
+      Tyre Tyre "{605D5241E4E78480}" {
+       Roughness 0.01
+       LongitudinalFriction 1
+      }
+     }
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Bumper {
+     Offset 0 0 0
+     Prefab "{68BF1E0754FDCF2D}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_Front_bumper_base.et"
+    }
+    SCR_WheelSlotInfo Wheel_L01 {
+     PivotID "v_wheel_l01"
+    }
+    SCR_WheelSlotInfo Wheel_R01 {
+     PivotID "v_wheel_r01"
+    }
+    SCR_WheelSlotInfo Wheel_L02 {
+     PivotID "v_wheel_l02"
+    }
+    SCR_WheelSlotInfo Wheel_R02 {
+     PivotID "v_wheel_r02"
+    }
+    EntitySlotInfo Fenders {
+     Prefab "{CBCCC8AECAA7392F}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_Fenders.et"
+    }
+    RegisteringComponentSlotInfo RoofLights {
+     Prefab "{65602CC7CDE764B4}Prefabs/Vehicles/Wheeled/Gatoma/VehParts/Gatoma_Roof_Lights.et"
+     RegisterActions 1
+     RegisterControllers 1
+     RegisterLights 1
+    }
+   }
+  }
+ }
+ coords 146.332 1 132.183
+ angleY 0
+}
