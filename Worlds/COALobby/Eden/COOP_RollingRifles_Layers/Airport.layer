@@ -1,0 +1,622 @@
+$grp Vehicle : "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et" {
+ UAZ469_uncovered1 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4944.54 28.367 11871.211
+  angleY 98.983
+ }
+ UAZ469_uncovered2 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4945.069 28.382 11874.556
+  angleY 98.983
+ }
+ UAZ469_uncovered3 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4945.607 28.443 11877.966
+  angleY 98.983
+ }
+}
+$grp Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ Ural4320_transport1 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4969.133 28.281 11956.589
+  angleY 178.276
+ }
+ Ural4320_transport2 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA84B129D4CE}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4977.385 28.281 11955.938
+  angleY -122.131
+ }
+}
+Vehicle Ural4320_command1 : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4943.641 28.386 11945.939
+ angleY 90.189
+}
+$grp Vehicle : "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et" {
+ UAZ1 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4942.718 28.513 11859.149
+  angleY 97.173
+ }
+ UAZ2 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4943.201 28.435 11862.989
+  angleY 97.173
+ }
+ UAZ3 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5AD4F813E67ECBD3}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4943.727 28.38 11867.163
+  angleY 97.173
+ }
+}
+Vehicle Ural4320_Arsenal1 : "{32E77EC32ED2B6D1}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_Arsenal.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4979.847 28.281 11945.711
+ angleY -76.559
+}
+Vehicle Ural4320_ammo1 : "{3336BE330C4F355B}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_ammo.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4980.669 28.281 11950.779
+ angleY -79.598
+}
+Vehicle UAZ452_ambulance1 : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA8A557A363F}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4965.064 28.313 11891.052
+ angleY -74.483
+}
+PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ coords 4877.063 28.593 11835.452
+ angleY 0
+ m_MarkerColor 1 0 0 1
+ m_sQuadName "objective-marker"
+ m_sDescription "Destroy Soviet Vehicles"
+ m_aVisibleForFactions {
+  "BLUFOR"
+ }
+}
+Vehicle Ural4320_repair1 : "{A5647958579A4149}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_repair.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4940.904 28.472 11953.121
+ angleY 90.743
+}
+$grp Vehicle : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ BTR1 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA8E08F1AAF4}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4938.076 28.532 11903.292
+ }
+ BTR2 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 100000
+    m_fFuelConsumptionIdle 100000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5628CA8E08F1AAF4}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4934.124 28.521 11933.601
+  angleY 85.516
+ }
+}
+Vehicle Ural4320_transport_covered1 : "{D9B91FAB817A6033}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered.et" {
+ components {
+  SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+   m_bIsLocked 1
+  }
+  SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+   m_fFuelConsumption 100000
+   m_fFuelConsumptionIdle 100000
+  }
+  SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+   FuelNodes {
+    SCR_FuelNode "{5622A70CD4036C5A}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+    SCR_FuelNode "{5628CA84B129D4CE}" {
+     MaxFuel 0
+     m_fInitialFuelTankState 0
+    }
+   }
+  }
+ }
+ coords 4965.665 28.281 11956.52
+ angleY -179.68
+}
+$grp Vehicle : "{DF5CCB7C0FF049F4}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MT_unarmed_transport.et" {
+ Mi8MT_unarmed_transport1 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.886 28.593 11790.616
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport2 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.897 28.593 11812.753
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport3 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.924 28.593 11859.289
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport4 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.912 28.593 11837.151
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport5 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.95 28.593 11905.691
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport6 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.938 28.593 11883.555
+  angleY -89.968
+ }
+ Mi8MT_unarmed_transport7 {
+  components {
+   SCR_BaseLockComponent "{54D6FBC0EA806FE5}" {
+    m_bIsLocked 1
+   }
+   SCR_FuelConsumptionComponent "{5CCCEEA12FE59D93}" {
+    m_fFuelConsumption 10000000
+    m_fFuelConsumptionIdle 10000000
+   }
+   SCR_FuelManagerComponent "{5622A70CD78A9E2C}" {
+    FuelNodes {
+     SCR_FuelNode "{5622A70CD4036C5A}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C416}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+     SCR_FuelNode "{5A7CE769E7A9C414}" {
+      MaxFuel 0
+      m_fInitialFuelTankState 0
+     }
+    }
+   }
+  }
+  coords 4881.964 28.593 11931.113
+  angleY -89.968
+ }
+}

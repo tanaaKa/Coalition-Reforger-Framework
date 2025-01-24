@@ -1,0 +1,10 @@
+PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ coords 4453.842 12.679 10759.594
+ angleY 0
+ m_MarkerColor 1 0 0 1
+ m_sQuadName "objective-marker"
+ m_sDescription "Capture St Phillipe"
+ m_aVisibleForFactions {
+  "BLUFOR"
+ }
+}

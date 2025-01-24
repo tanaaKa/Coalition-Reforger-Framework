@@ -1,0 +1,9 @@
+PS_ManualMarker : "{054125164E41BAB1}PrefabsEditable/Markers/BLUFORSafeStartBorderMarker.et" {
+ ID "612517386F2BD406"
+ coords 9126.018 222.897 1227.345
+ m_MarkerColor 0.11 0.875 0.302 1
+ m_sDescription "Objective Area Border"
+ m_aVisibleForFactions + {
+  "OPFOR"
+ }
+}

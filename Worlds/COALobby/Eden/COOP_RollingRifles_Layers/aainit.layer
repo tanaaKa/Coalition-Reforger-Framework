@@ -1,0 +1,26 @@
+SCR_AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ coords 5022.863 174.687 7031.885
+}
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ coords 4960.511 173.644 7002.302
+ m_iTimeLimitMinutes 200
+ EnableAIInGameState 1
+ m_bDeleteJIPSlots 0
+ m_aMissionDescriptors {
+  CRF_MissionDescriptor "{64425051F2E00216}" {
+   m_sTextData "Capture/Clear the towns of Tyrone, Meaux and St. Phillipe from Soviet forces."\
+   ""\
+   "Destroy Soviet Vehicles at the Airport."
+  }
+  CRF_MissionDescriptor "{6442505149CF6C93}" {
+   m_aFactionKeys {
+    "OPFOR" "INDFOR"
+   }
+  }
+ }
+ m_sFactionOneKey "BLU"
+ m_bRespawnEnabled 1
+ m_bWaveRespawn 1
+ m_iTimeToRespawn 60
+ m_iBLUFORTickets 250
+}

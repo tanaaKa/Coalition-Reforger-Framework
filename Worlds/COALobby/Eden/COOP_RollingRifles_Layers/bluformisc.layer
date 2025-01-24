@@ -1,0 +1,74 @@
+$grp Vehicle : "{00C9BBE426F7D459}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance.et" {
+ M997_maxi_ambulance1 {
+  coords 4985.485 174.624 7100.14
+  angleY 131.536
+ }
+ M997_maxi_ambulance2 {
+  coords 4982.915 174.531 7097.24
+  angleY 131.536
+ }
+}
+$grp Tank : "{0A41E8DF1F680496}Prefabs/Vehicles/Tracked/M113/M113A3_APC.et" {
+ M113A3_APC1 {
+  coords 5032.253 174.688 7059.841
+  angleY 130.837
+ }
+ M113A3_APC2 {
+  coords 5026.161 174.634 7065.105
+  angleY 130.837
+ }
+ M113A3_APC3 {
+  coords 5019.99 174.593 7070.438
+  angleY 130.837
+ }
+ M113A3_APC4 {
+  coords 5013.897 174.676 7075.704
+  angleY 130.837
+ }
+ M113A3_APC5 {
+  coords 5001.449 174.597 7086.459
+  angleY 130.837
+ }
+ M113A3_APC6 {
+  coords 5007.543 174.626 7081.197
+  angleY 130.837
+ }
+}
+$grp Vehicle : "{5674FAEB9AB7BDD0}Prefabs/Vehicles/Wheeled/M998/M998.et" {
+ {
+  coords 4991.608 174.625 7080.642
+  angleY 42.149
+ }
+ {
+  coords 4988.609 174.625 7083.357
+  angleY 42.149
+ }
+ {
+  coords 4985.581 174.625 7086.098
+  angleY 42.149
+ }
+ {
+  coords 4982.363 174.625 7089.01
+  angleY 42.149
+ }
+}
+GenericEntity : "{62865C82AB534D91}Prefabs/Structures/FlagPoles/RespawnPoles/BLUFOR_Respawn.et" {
+ coords 5014.177 174.688 7015.805
+}
+Vehicle M923A1_repair1 : "{A042ACE5C2B13206}Prefabs/Vehicles/Wheeled/M923A1/M923A1_repair.et" {
+ coords 4999.181 174.531 7074.15
+ angleY 131.934
+}
+PS_ManualMarker : "{E256B56F799AEB41}PrefabsEditable/Markers/BLUFORSpawnMarker.et" {
+ coords 5000.964 174.687 7029.629
+}
+$grp Vehicle : "{F1FBD0972FA5FE09}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport.et" {
+ M923A1_transport1 {
+  coords 5017.91 174.63 7058.216
+  angleY 132.023
+ }
+ M923A1_transport2 {
+  coords 5007.839 174.681 7066.246
+  angleY 132.023
+ }
+}

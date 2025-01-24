@@ -1,0 +1,10 @@
+PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ coords 4928.084 36.116 9091.27
+ angleY 0
+ m_MarkerColor 1 0 0 1
+ m_sQuadName "objective-marker"
+ m_sDescription "Capture Tyrone"
+ m_aVisibleForFactions {
+  "BLUFOR"
+ }
+}

@@ -1,0 +1,364 @@
+GenericEntity : "{0958E6B949501D00}Prefabs/Props/Military/Generators/GeneratorPortable_US_01.et" {
+ coords 948.167 39 2631.108
+}
+GenericEntity : "{0B3312C6940005B9}Prefabs/Structures/FlagPoles/RespawnPoles/OPFOR_Respawn.et" {
+ coords 990.299 39 2660.254
+}
+$grp GameEntity : "{0E94F28FD722B1D8}Prefabs/Props/Military/Generators/GeneratorFloodlight_US_01.et" {
+ {
+  coords 927.501 39 2643.449
+  angleY 80.513
+ }
+ {
+  coords 929.086 39 2669
+  angleY 116.121
+ }
+}
+GenericEntity : "{1D8BBCA16BD4FAEC}Prefabs/Props/Industrial/StoveIndustrial_01/StoveIndustrial_01.et" {
+ coords 965.071 39 2651.098
+}
+GenericEntity : "{1F83CE19F6915A98}Prefabs/Props/Military/MilitaryCrates/CrateStack_01/CrateStack_01_NoDecals.et" {
+ coords 961.554 39 2669.548
+}
+$grp GenericEntity : "{2A5CFC83306263A4}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_ENP.et" {
+ {
+  coords 945.204 39 2665.085
+ }
+ {
+  coords 981.321 41.557 2635.498
+ }
+ {
+  coords 947.709 41.533 2642.631
+ }
+}
+GenericEntity : "{2FCB46C395C9CBE7}Prefabs/Props/Airport/GeneratorAirfield_USSR_01/GeneratorAirfield_USSR_01.et" {
+ coords 925.393 39 2656.471
+ angleY 78.514
+}
+$grp GenericEntity : "{35B9DE7639F3355A}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_KAL.et" {
+ {
+  coords 954.342 39 2627.779
+  angleY -4.55
+ }
+ {
+  coords 923.569 41.565 2666.017
+  angleY 168.884
+ }
+}
+GenericEntity : "{36E65E74067C13F1}Prefabs/Props/Industrial/Pallets/MarsBoxContainer_01_dst.et" {
+ coords 955.33 39 2650.741
+}
+$grp GenericEntity : "{41F2EFF5B1118336}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_BaltaShipping.et" {
+ {
+  coords 922.018 39 2665.45
+  angleY -17.996
+ }
+ {
+  coords 964.362 41.533 2639.413
+  angleY -0.2
+ }
+}
+GenericEntity : "{489143AC1973BFC8}Prefabs/Props/Airport/GeneratorAirfield_US_01/GeneratorAirfield_US_01_base.et" {
+ coords 968.193 39 2655.409
+ angleY -98.002
+}
+GenericEntity : "{51D31AB07AE3C1C7}Prefabs/Props/Commercial/CashierShop_01.et" {
+ coords 944.048 40.039 2624.571
+}
+GenericEntity : "{54E3E07AF8CE4DB2}Prefabs/Props/Industrial/PotIndustrialSet_01/PotIndustrialSet_01_Big.et" {
+ coords 946.645 39 2662.033
+}
+$grp GenericEntity : "{560846735799794D}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_Emerald.et" {
+ {
+  coords 970.088 41.56 2677.701
+ }
+ {
+  coords 944.484 44.124 2670.23
+  angleY -12.9
+ }
+}
+GenericEntity : "{5B17515707F080E0}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_Starline.et" {
+ coords 939.052 41.561 2649.759
+}
+GenericEntity : "{5D31850B326BA246}Prefabs/Props/Industrial/AirCompressor_01/AirCompressor_01.et" {
+ coords 964.836 39 2650.293
+}
+GenericEntity : "{613F68B39D0A4A64}Prefabs/Props/Commercial/CoolingBoxShop_01.et" {
+ coords 944.803 39 2622.876
+ angleY 72.349
+}
+$grp GameEntity : "{616F4E93658E5A3A}Prefabs/Props/Military/Generators/GeneratorFloodlight_USSR_01.et" {
+ {
+  coords 963.362 39 2674.429
+  angleY -137.335
+ }
+ {
+  coords 974.229 39 2632.094
+  angleY -19.576
+ }
+}
+GenericEntity : "{62865C82AB534D91}Prefabs/Structures/FlagPoles/RespawnPoles/BLUFOR_Respawn.et" {
+ coords 908.279 39 2638.771
+}
+GenericEntity : "{6BF847A5EB920F8A}Prefabs/Props/Industrial/OvenIndustrial_01/OvenIndustrial_01.et" {
+ coords 964.556 39 2649.823
+}
+GenericEntity : "{6F36C3530B1C3493}Prefabs/Props/Airport/ATCPanel_E_01.et" {
+ coords 937.449 39 2653.904
+ angleY -103.71
+}
+GenericEntity : "{77D49455528ED5E6}Prefabs/Props/Military/MilitaryCrates/ShellContainerstack_01/ShellContainerstack_01_pile_small.et" {
+ coords 934.06 39 2640.158
+ angleY 36.713
+}
+$grp GenericEntity : "{7D52C517720EF2F5}Prefabs/Props/Industrial/BarrelMetal_01_blue.et" {
+ {
+  coords 948.82 39 2657.397
+ }
+ {
+  coords 948.82 39 2658.114
+ }
+}
+$grp GenericEntity : "{811C18BEC8B8B245}Prefabs/Props/Commercial/CabinetCardFile_01/CabinetCardFile_01_green.et" {
+ {
+  coords 936.929 39 2660.955
+ }
+ {
+  coords 936.938 39 2661.606
+ }
+ {
+  coords 936.938 39 2662.238
+ }
+ {
+  coords 936.938 39 2662.866
+ }
+ {
+  coords 937.416 39 2661.606
+ }
+ {
+  coords 937.416 39 2662.238
+ }
+ {
+  coords 937.416 39 2662.866
+ }
+ {
+  coords 937.407 39 2660.955
+ }
+ {
+  coords 936.479 39 2661.606
+ }
+ {
+  coords 936.479 39 2662.238
+ }
+ {
+  coords 936.479 39 2662.866
+ }
+ {
+  coords 936.47 39 2660.955
+ }
+ {
+  coords 936.238 40.678 2662.857
+  angleZ 89.643
+ }
+ {
+  coords 936.511 40.68 2662.593
+  angleX 0.357
+  angleY 90.534
+  angleZ 90.003
+ }
+ {
+  coords 937.159 40.684 2662.23
+  angleX 0.357
+  angleY 90.534
+  angleZ 90.003
+ }
+}
+GenericEntity : "{92BE346D5E0BD792}Prefabs/Props/Military/Fuel/MobileWaterTank_USSR_01_fuel.et" {
+ coords 962.968 39 2661.881
+}
+$grp GenericEntity : "{939E032C3B6E837A}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_Chernarussian.et" {
+ {
+  coords 928.443 39 2621.21
+  angleY -52.761
+ }
+ {
+  coords 962.674 39 2637.685
+  angleY 87.613
+ }
+ {
+  coords 957.428 41.565 2640.332
+  angleY -91.497
+ }
+}
+$grp GenericEntity : "{93B2511EFB2B6A51}Prefabs/Props/Military/MilitaryCrates/CrateStack_01/CrateStack_01_grey.et" {
+ {
+  coords 966.578 39 2667.056
+ }
+ {
+  coords 952.629 39 2624.416
+  angleY -16.257
+ }
+ {
+  coords 947.181 39 2668.211
+  angleY -16.257
+ }
+}
+GenericEntity : "{9F35A268E0DD98A4}Prefabs/Props/Military/Fuel/MobileWaterTank_US_01_fuel.et" {
+ coords 932.306 39 2652.817
+}
+$grp GenericEntity : "{A46F8469F129E154}Prefabs/Props/Military/CargoContainers/CargoContainer_01_military_base.et" {
+ {
+  coords 934.171 39 2632.197
+  angleY -28.323
+ }
+ {
+  coords 935.579 39 2629.57
+  angleY -28.323
+ }
+ {
+  coords 937.773 39 2630.752
+  angleY -28.323
+ }
+ {
+  coords 936.365 39 2633.38
+  angleY -28.323
+ }
+ {
+  coords 937.821 41.565 2631.135
+  angleY -118.013
+ }
+ {
+  coords 935.186 41.565 2629.74
+  angleY -118.013
+ }
+ {
+  coords 936.629 41.565 2633.374
+  angleY -118.013
+ }
+ {
+  coords 933.995 41.565 2631.98
+  angleY -118.013
+ }
+ {
+  coords 950.673 39 2656.041
+  angleY -77.914
+ }
+ {
+  coords 953.587 39 2655.41
+  angleY -77.914
+ }
+ {
+  coords 953.064 39 2652.972
+  angleY -77.914
+ }
+ {
+  coords 950.151 39 2653.603
+  angleY -77.914
+ }
+ {
+  coords 950.848 41.565 2656.238
+  angleY -167.604
+ }
+ {
+  coords 950.203 41.565 2653.329
+  angleY -167.604
+ }
+ {
+  coords 953.326 41.565 2655.695
+  angleY -167.604
+ }
+ {
+  coords 952.68 41.565 2652.783
+  angleY -167.604
+ }
+}
+$grp GenericEntity : "{AA1E1DD1D69055EC}Prefabs/Props/Military/MilitaryCrates/CrateStack_01/CrateStack_01_green.et" {
+ {
+  coords 968.405 39 2663.529
+ }
+ {
+  coords 960.016 41.565 2636.866
+  angleY 88.534
+ }
+ {
+  coords 959.987 41.565 2637.987
+  angleY 88.534
+ }
+ {
+  coords 953.937 41.545 2639.657
+  angleY 88.534
+ }
+ {
+  coords 953.908 41.545 2640.778
+  angleY 88.534
+ }
+ {
+  coords 944.576 41.555 2662.806
+  angleY 77.928
+ }
+ {
+  coords 944.341 41.555 2663.903
+  angleY 77.928
+ }
+}
+GenericEntity : "{B7669B7F8B7923F6}Prefabs/Props/Commercial/ShelfShop_01.et" {
+ coords 944.865 39 2636.672
+ angleY 178.121
+}
+GenericEntity : "{BE7B5BAFE1A16A50}Prefabs/Props/Military/Fortification/BarbedTape_Coil.et" {
+ coords 946.133 0 2645.903
+}
+GenericEntity : "{DB403F1A9E7B0B4F}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_01_40ft_red.et" {
+ coords 959.58 39 2640.306
+ angleY -90.584
+}
+GenericEntity : "{E17324998DE1BB87}Prefabs/Props/Military/MilitaryCrates/ShellContainerstack_01/ShellContainerstack_01_pile_big.et" {
+ coords 936.253 39 2638.328
+ angleY 35.68
+}
+GenericEntity : "{E214337C6E1931C5}Prefabs/Props/Commercial/CounterShop_01.et" {
+ coords 944.108 39 2624.555
+ angleY 68.188
+}
+$grp GenericEntity : "{E24A324BDAA2EEE3}Prefabs/Props/Industrial/BarrelMetal_01_blue_open.et" {
+ {
+  coords 946.247 39 2661.64
+ }
+ {
+  coords 946.928 39 2661.499
+ }
+}
+$grp GenericEntity : "{F2C5628C6D12840C}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_HansaAtlantic.et" {
+ {
+  coords 944.771 39 2671.367
+  angleY -10.202
+ }
+ {
+  coords 981.091 39 2635.478
+ }
+ {
+  coords 947.658 39 2642.415
+ }
+ {
+  coords 939.536 39 2649.076
+ }
+ {
+  coords 961.776 41.532 2639.331
+ }
+}
+GenericEntity : "{FCBEDECB2A39B6BC}Prefabs/Props/Military/Generators/GeneratorPortable_USSR_01.et" {
+ coords 972.997 39 2645.224
+}
+$grp GenericEntity : "{FD016719F98775F9}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_02_20ft_SZD.et" {
+ {
+  coords 970.093 39 2677.76
+ }
+ {
+  coords 925.109 39 2666.322
+  angleY 173.878
+ }
+}
+GenericEntity : "{FF7C0A161F852119}Prefabs/Props/Industrial/CargoContainers/CargoContainer_01/CargoContainer_01_40ft_olive.et" {
+ coords 945.176 41.591 2668.348
+ angleY -12.858
+}

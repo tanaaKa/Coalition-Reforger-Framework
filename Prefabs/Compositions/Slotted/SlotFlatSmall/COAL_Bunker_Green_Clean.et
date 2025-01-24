@@ -1,0 +1,62 @@
+GenericEntity : "{4617082F85CF296E}Prefabs/Compositions/Slotted/SlotFlatSmall/COAL_Bunker_Green_01.et" {
+ ID "5282DCB5DFC8538F"
+ coords 2766.867 204.518 5221.012
+ angleY 120.251
+ {
+  GenericEntity {
+   ID "62B8D48769A8A4CA"
+   coords 2.738 0.007 2.655
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AA7FB4"
+   coords -2.591 -0.002 -3.633
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AA7FBD"
+   coords 2.371 0.007 3.987
+   angleY -177.116
+  }
+  GenericEntity {
+   ID "62B8D48769AA7FC8"
+   coords -2.423 -0.002 -0.543
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AB46E8"
+   coords -2.537 -0.002 -2.977
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AB46EC"
+   coords 2.675 -0.001 -3.412
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AB46EF"
+   coords 2.586 -0.001 -5.329
+   angleY 92.884
+  }
+  GenericEntity {
+   ID "62B8D48769AB5E08"
+   coords -2.234 -0.002 3.062
+   angleY -87.116
+  }
+  GenericEntity {
+   ID "62B8D48769AB5E09"
+   coords -2.494 -0.002 -2.114
+   angleY -87.116
+  }
+  GenericEntity {
+   ID "62B8D48769ABC42F"
+   coords -2.333 -0.002 1.034
+   angleY 92.884
+  }
+  StaticModelEntity : "{91B7A94BC7578C5A}Prefabs/Compositions/Misc/SubCompositions/Sandbag_Bunker_Clean.et" {
+   ID "6468F6A256BC8403"
+   coords 3.388 0.001 -0.407
+   angleY 90.988
+  }
+ }
+}
