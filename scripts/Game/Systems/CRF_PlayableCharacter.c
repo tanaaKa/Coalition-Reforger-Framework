@@ -66,7 +66,10 @@ class CRF_PlayableCharacter : ScriptComponent
 	
 	override void EOnFixedFrame(IEntity owner, float timeSlice)
 	{
-		if(!m_bIsPlayable || !GetGame().InPlayMode())
+		if(!GetGame().InPlayMode())
+			return;
+		
+		if(!m_bIsPlayable && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			return;
 		
 		super.EOnFixedFrame(owner, timeSlice);
