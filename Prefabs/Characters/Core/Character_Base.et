@@ -14,5 +14,8 @@ SCR_ChimeraCharacter {
    StaminaDrainSprint -0.009
    EncumbranceMassMax 170
   }
+  SCR_VoNComponent "{520EA1D2F659C856}" {
+   "Speaking Range" 30
+  }
  }
 }

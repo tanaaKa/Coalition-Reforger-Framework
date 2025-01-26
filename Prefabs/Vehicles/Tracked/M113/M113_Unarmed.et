@@ -1,0 +1,276 @@
+Tank : "{F43F9F04A97FC994}Prefabs/Vehicles/Tracked/M113/M113_base.et" {
+ ID "62A96969CEBF1CD4"
+ components {
+  SCR_BaseCompartmentManagerComponent "{20FB66C5DCB8DF72}" {
+   CompartmentSlots {
+    CargoCompartmentSlot Passenger_L01 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList +{
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList +{
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_L01"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_L01"
+     }
+    }
+    CargoCompartmentSlot Passenger_L02 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_L02"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_L02"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_L02"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_L02"
+     }
+    }
+    CargoCompartmentSlot Passenger_L03 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_L03"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_L03"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_L03"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_L03"
+     }
+    }
+    CargoCompartmentSlot Passenger_L04 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_L04"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_L04"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_L04"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_L04"
+     }
+    }
+    CargoCompartmentSlot Passenger_R01 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_R01"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_R01"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_R01"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_R01"
+     }
+    }
+    CargoCompartmentSlot Passenger_R02 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_R02"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_R02"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_R02"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_R02"
+     }
+    }
+    CargoCompartmentSlot Passenger_R03 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_R03"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_R03"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_R03"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_R03"
+     }
+    }
+    CargoCompartmentSlot Passenger_R04 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "passenger_R04"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "passenger_R04"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "passenger_R04"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "passenger_R04"
+     }
+    }
+    CargoCompartmentSlot Commander_01 : "{54180ECE629BA584}Prefabs/Vehicles/Tracked/M113/Configs/M113CargoCompartment.conf" {
+     CompartmentAction SCR_GetInUserAction "{5086CC2FCCAA457D}" {
+      ParentContextList {
+       "commander_idle"
+      }
+     }
+     SwitchSeatAction SCR_SwitchSeatAction "{509D56665850650D}" {
+      ParentContextList {
+       "commander_idle"
+      }
+     }
+     AdditionalActions {
+      SCR_RemoveCasualtyUserAction "{5D528255CC646B68}" {
+       ParentContextList {
+        "commander_idle"
+       }
+      }
+     }
+     PassengerPositionInfo EntitySlotInfo "{699366C6D607AD06}" {
+      PivotID "commander_idle"
+     }
+    }
+   }
+  }
+  SCR_EditableVehicleComponent "{50DEB7C26B5EB312}" {
+   m_UIInfo SCR_EditableVehicleUIInfo "{5298E609432D192D}" {
+    Name "#M113-EditableEntity_M113_APC_Name"
+    Icon "{95F49CBE9FF7A0CB}UI/Textures/Editor/EditableEntities/Vehicles/EditableEntity_Vehicle_Apc.edds"
+    m_Image "UI/Textures/EditorPreviews/Vehicles/Tracked/M113/M113_APC.edds"
+    m_aAuthoredLabels +{
+    }
+    m_aAutoLabels +{
+    }
+    m_EntityBudgetCost {
+     SCR_EntityBudgetValue "{5EDC86E4AF8908B6}" {
+      m_Value 650
+     }
+     SCR_EntityBudgetValue "{64693ECE3D217B8E}" {
+      m_BudgetType RANK_SERGEANT
+      m_Value 3
+     }
+    }
+    m_aOccupantFillCompartmentTypes {
+     1
+    }
+    m_aCrewEntityBudgetCost {
+     SCR_EntityBudgetValue "{64693ECE3D217B95}" {
+      m_BudgetType AI
+      m_Value 1
+     }
+    }
+   }
+  }
+  VehicleWheeledSimulation "{731B26FCA2F19855}" {
+   Simulation Wheeled "{5E78B2EECD01E204}" {
+    Differentials {
+     Differential Diff_A {
+     }
+    }
+   }
+  }
+  CarProcAnimComponent "{A201E6A6F82F2CDA}" {
+   Parameters {
+    ProcAnimParams "{5E84317B8A2FDDD3}" {
+     SimulationDistance 1000
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Turret {
+     Prefab "{FD080A1AA80B73BC}Prefabs/Vehicles/Tracked/M113/VehParts/Turrets/M113_Turret_unarmed.et"
+     DisablePhysicsInteraction 1
+    }
+    EntitySlotInfo Shadow {
+    }
+    RegisteringComponentSlotInfo TrimVane {
+     MergePhysics 1
+     DisablePhysicsInteraction 1
+    }
+    RegisteringComponentSlotInfo BenchSeats {
+     Prefab "{EC3CF1E8B73F6BD6}Prefabs/Vehicles/Tracked/M113/VehParts/Seats/M113_BenchSeats.et"
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo CommanderSeat {
+     Prefab "{5C9925DD8E5023EC}Prefabs/Vehicles/Tracked/M113/VehParts/Seats/M113_CommanderSeat.et"
+     RegisterDamage 1
+    }
+    RegisteringComponentSlotInfo GunnerSeat {
+     Enabled 0
+     Prefab "{79E6DD177CE29E67}Prefabs/Vehicles/Tracked/M113/VehParts/Seats/M113_GunnerSeat.et"
+     RegisterDamage 1
+    }
+   }
+  }
+ }
+}

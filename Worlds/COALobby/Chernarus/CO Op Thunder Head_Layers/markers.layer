@@ -1,0 +1,184 @@
+GenericEntity : "{0B3312C6940005B9}Prefabs/Structures/FlagPoles/RespawnPoles/OPFOR_Respawn.et" {
+ coords 6218.054 285.131 10199.929
+ angleX -5.356
+}
+PS_ManualMarker : "{10F92A3FD09DA1C5}PrefabsEditable/Markers/OPFORSpawnMarker.et" {
+ coords 6275.213 285.744 10213.816
+ m_sDescription "Spawn"
+ m_bVisibleForEmptyFaction 1
+ m_bShowForAnyFaction 1
+}
+$grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+ {
+  coords 5023.545 171.407 13028.102
+  m_sDescription "OBJ - Supplies"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+ {
+  coords 3445.202 192.86 13010.286
+  m_sDescription "OBJ - Caches"
+  m_aVisibleForFactions {
+   "OPFOR"
+  }
+  m_bVisibleForEmptyFaction 1
+  m_bShowForAnyFaction 1
+ }
+}
+GenericEntity : "{9DDA80554C6BDC17}Prefabs/Compositions/Slotted/SlotFlatMedium/COAL_FieldHospital_M_USSR_01.et" {
+ coords 6217.353 285.272 10198.422
+ angleX -6.242
+}
+$grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
+ {
+  coords 3597.711 220.049 12659.899
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3503.229 218.963 12614.225
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3388.708 212.271 12598.116
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3354.484 225.395 12627.205
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3318.953 222.406 12667.571
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3245.255 206.643 12712.948
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3228.014 201.472 12752.676
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3306.735 218.737 12802.823
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3217.285 202.36 12854.801
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3213.178 202.637 12918.396
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3197.373 203.499 12962.296
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3133.89 203.064 13034.125
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3149.763 213.698 13099.538
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3077.81 208.329 13168.333
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3123.793 207.221 13226.959
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3134.572 209.701 13335.481
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3112.649 215.912 13447.547
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3054.79 229.621 13627.545
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3029.962 239.162 13769.487
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3183.325 230.68 13779.408
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3301.674 238.975 13667.051
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3305.279 217.875 13590.995
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3378.328 216.766 13632.989
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3496.166 229.348 13448.925
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3520.297 213.619 13407.594
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3590.766 207.991 13272.041
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3672.667 204.147 13235.578
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3802.71 200.016 13279.554
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3836.502 210.299 13193.142
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3904.819 184.445 13103.879
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3908.155 187.277 13035.783
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3897.047 190.621 12933.117
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3890.837 193.157 12859.85
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3869.094 198.181 12776.565
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3767.096 202.018 12752.177
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3697.119 202.83 12744.988
+  m_sDescription "Cache Search Area"
+ }
+ {
+  coords 3602.75 203.985 12725.091
+  m_sDescription "Cache Search Area"
+ }
+}
