@@ -180,6 +180,9 @@ $grp GenericEntity : "{6B52C6B5FEC3E369}Prefabs/Destructible/GMFX_Destructible_A
   "	"
  }
 }
+GenericEntity : "{A700AD9077074654}Prefabs/Structures/Military/CamoNets/Soviet/CamoNet_Large_Soviet.et" {
+ coords 1023.288 128.446 6119.486
+}
 $grp GenericEntity : "{EA34AA1A128DDF6E}Prefabs/Props/Military/Arsenal/AmmoBoxes/AmmoBoxCache_CP.et" {
  cache1ars {
   coords 1281.752 299.466 12068.062
