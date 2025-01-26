@@ -66,8 +66,23 @@ class CRF_PlayableCharacter : ScriptComponent
 	
 	override void EOnFixedFrame(IEntity owner, float timeSlice)
 	{
-		if(!m_bIsPlayable || !GetGame().InPlayMode())
+		if(!GetGame().InPlayMode())
 			return;
+		
+		if(!m_bIsPlayable && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			return;
+		
+		#ifdef WORKBENCH
+		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et" && !EntityUtils.IsPlayer(owner))
+		{
+			SCR_EntityHelper.DeleteEntityAndChildren(owner);
+		}
+		#else
+		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et" && !EntityUtils.IsPlayer(owner) && RplSession.Mode() == RplMode.Dedicated)
+		{
+			SCR_EntityHelper.DeleteEntityAndChildren(owner);
+		}
+		#endif
 		
 		super.EOnFixedFrame(owner, timeSlice);
 		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
