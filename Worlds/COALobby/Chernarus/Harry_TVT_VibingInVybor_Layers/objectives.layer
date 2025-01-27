@@ -30,7 +30,7 @@ SCR_BaseTriggerEntity ammoSpawn {
  "		"\
  "		else"\
  "		{"\
- "			GetGame().GetCallqueue().CallLater(spawnAmmo, 1000, false);"\
+ "			GetGame().GetCallqueue().CallLater(spawnAmmo, 1200000, false);"\
  "		}"\
  "		"\
  "		"\
