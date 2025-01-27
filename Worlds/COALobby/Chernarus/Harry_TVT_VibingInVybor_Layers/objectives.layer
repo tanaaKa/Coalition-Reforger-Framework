@@ -1,6 +1,44 @@
 SCR_BaseTriggerEntity ammoSpawn {
  coords 4092.631 324.562 8946.535
  angleY -90.099
+ userScript "	string ammo = \"{92264FF932676C14}Prefabs/Vehicles/Wheeled/M923A1/M923A1_Ammo.et\";"\
+ "	IEntity ammoSpawn;"\
+ "	"\
+ "	"\
+ "	void spawnAmmo()"\
+ "	{"\
+ "		ammoSpawn = GetGame().GetWorld().FindEntityByName(\"ammoSpawn\");"\
+ "		"\
+ "		EntitySpawnParams spawnParams = new EntitySpawnParams();"\
+ "		spawnParams.TransformMode = ETransformMode.WORLD;"\
+ "		"\
+ "		spawnParams.Transform[3] = ammoSpawn.GetOrigin();		"\
+ "		GetGame().SpawnEntityPrefab(Resource.Load(ammo),GetGame().GetWorld(),spawnParams);"\
+ "		"\
+ "		SCR_PopUpNotification.GetInstance().PopupMsg(\"Ammo and AT has made it to the factory.\", 10);"\
+ "	}"\
+ "	"\
+ "	void safeStartCheck()"\
+ "	{"\
+ "		CRF_GamemodeComponent safestart = CRF_GamemodeComponent.GetInstance();"\
+ "		"\
+ "        if(safestart.GetSafestartStatus() || CRF_Gamemode.GetInstance().m_GamemodeState != CRF_GamemodeState.GAME)"\
+ "		{"\
+ "         	GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);"\
+ "			return;"\
+ "		}"\
+ "		"\
+ "		else"\
+ "		{"\
+ "			GetGame().GetCallqueue().CallLater(spawnAmmo, 1000, false);"\
+ "		}"\
+ "		"\
+ "		"\
+ "	}"
+ EOnInit ""\
+ "		super.EOnInit(owner);"\
+ "		GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);"\
+ "	"
 }
 SCR_FactionControlTriggerEntity vyborControl {
  coords 3815.669 311.091 8901.596
@@ -23,82 +61,4 @@ SCR_FactionControlTriggerEntity vyborControl {
  m_sOwnerFactionKey "OPFOR"
  m_iRatioMethod "More than"
  m_fFriendlyRatioLimit 0.9
-}
-Vehicle ammo : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
- components {
-  SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
-   MultiSlots {
-    MultiSlotConfiguration "{64693EEE4E8379DC}" {
-     SlotTemplate InventoryStorageSlot at {
-      Prefab "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
-     }
-     NumSlots 6
-    }
-    MultiSlotConfiguration "{64693EF8034A0FDE}" {
-     SlotTemplate InventoryStorageSlot stanag {
-      Prefab "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et"
-     }
-     NumSlots 30
-    }
-    MultiSlotConfiguration "{64693EF8502FE719}" {
-     SlotTemplate InventoryStorageSlot mmg {
-      Prefab "{AAF51CFA75A9CF8B}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_4AP_1Tracer.et"
-     }
-     NumSlots 4
-    }
-    MultiSlotConfiguration "{64693EF81E99F83A}" {
-     SlotTemplate InventoryStorageSlot lmg {
-      Prefab "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
-     }
-     NumSlots 6
-    }
-    MultiSlotConfiguration "{64693EFC662FCC74}" {
-     SlotTemplate InventoryStorageSlot MAT {
-      Prefab "{C09466E45F95BED6}Prefabs/Weapons/M4_MAAWS/M4_MAAWS.et"
-     }
-     NumSlots 1
-    }
-    MultiSlotConfiguration "{64693EFC46A1C841}" {
-     SlotTemplate InventoryStorageSlot MATammo {
-      Prefab "{C3345F9BD26E57C9}Prefabs/Ammo/HEAT551/Ammo_Rocket_HEAT551.et"
-     }
-     NumSlots 4
-    }
-   }
-  }
- }
- coords 4524.137 339.125 9621.813
- userScript "	bool timer = false;"\
- "	bool safestart = true;"\
- "	"\
- "	void moveTruck()"\
- "	{"\
- "		IEntity targetLocation = GetGame().GetWorld().FindEntityByName(\"ammoSpawn\");"\
- "		vector targetPosition = targetLocation.GetOrigin();"\
- "        	vector targetOrientation = targetLocation.GetYawPitchRoll();"\
- "			"\
- "		this.SetOrigin(targetPosition);"\
- "		this.SetYawPitchRoll(targetOrientation);"\
- "	}"\
- "	"\
- "	void safeStartCheck()"\
- "	{"\
- "		CRF_GamemodeComponent safestart = CRF_GamemodeComponent.GetInstance();"\
- "        if(!safestart.GetSafestartStatus())"\
- "		{"\
- "         	GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);"\
- "			return;"\
- "		}"\
- "		"\
- "		else"\
- "		{"\
- "			GetGame().GetCallqueue().CallLater(moveTruck, 1200000, false);"\
- "		}"\
- "		"\
- "		"\
- "	}"
- EOnInit ""\
- "		super.EOnInit(owner);"\
- "		GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);"\
- "	"
 }

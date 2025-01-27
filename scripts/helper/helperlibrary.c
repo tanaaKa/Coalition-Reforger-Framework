@@ -164,100 +164,54 @@ delete bridge_Control;
 ****************************************************************************************/
 
 //Here is the safestart relevant section isolated
-CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
-safestart.GetSafestartStatus()
+CRF_GamemodeComponent safestart = CRF_GamemodeComponent.GetInstance();
+	if(safestart.GetSafestartStatus())
 
-//Here is the full example
-class bridge_Control_Class: SCR_FactionControlTriggerEntity 
+
+//Here's the example
+class ammoSpawn_Class: SCR_BaseTriggerEntity 
 {
 	// user script
-	bool timer = false;
-	bool safestart = true;
-	string BTR = "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et";
-	string Humvee = "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et";
-	IEntity spawnBTR, spawnHumvee1, spawnHumvee2;
+	string ammo = "{86CE6595CC006129}Prefabs/Vehicles/Wheeled/M923A1/M923A1_ammo_mat_prefab.et";
+	IEntity ammoSpawn;
 	
-	void setTimer()
-	{
-		timer = true;
-	}
 	
-	void setSafeStart()
+	void spawnAmmo()
 	{
-		safestart = false;
+		ammoSpawn = GetGame().GetWorld().FindEntityByName("ammoSpawn");
+		
+		EntitySpawnParams spawnParams = new EntitySpawnParams();
+		spawnParams.TransformMode = ETransformMode.WORLD;
+		
+		spawnParams.Transform[3] = ammoSpawn.GetOrigin();		
+		GetGame().SpawnEntityPrefab(Resource.Load(ammo),GetGame().GetWorld(),spawnParams);
 	}
 	
 	void safeStartCheck()
 	{
-		CRF_SafestartGameModeComponent safestart = CRF_SafestartGameModeComponent.GetInstance();
-        if(safestart.GetSafestartStatus() || !SCR_BaseGameMode.Cast(GetGame().GetGameMode()).IsRunning())
+		CRF_GamemodeComponent safestart = CRF_GamemodeComponent.GetInstance();
+        if(safestart.GetSafestartStatus() || CRF_Gamemode.GetInstance().m_GamemodeState != CRF_GamemodeState.GAME)
 		{
          	GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);
-			return;
-		}
-		
-		if(!m_bResult && timer)
-		{
-			spawnHumvee1 = GetGame().GetWorld().FindEntityByName("spawnHumvee1");
-			spawnHumvee2 = GetGame().GetWorld().FindEntityByName("spawnHumvee2");
-			
-			EntitySpawnParams spawnParams = new EntitySpawnParams();
-  			spawnParams.TransformMode = ETransformMode.WORLD;
-			
-			spawnParams.Transform[3] = spawnHumvee1.GetOrigin();
-			GetGame().SpawnEntityPrefab(Resource.Load(Humvee),GetGame().GetWorld(),spawnParams);
-			spawnParams.Transform[3] = spawnHumvee2.GetOrigin();
-			GetGame().SpawnEntityPrefab(Resource.Load(Humvee),GetGame().GetWorld(),spawnParams);
-			
-			SCR_PopUpNotification.GetInstance().PopupMsg("BLUFOR has defended Checkpoint Alpha", 10);
-			
-			IEntity bridge_Control = GetGame().GetWorld().FindEntityByName("bridge_Control");
-			delete bridge_Control;
 			return;
 		}
 		
 		else
 		{
-			setSafeStart();
-			GetGame().GetCallqueue().CallLater(setTimer, 600000, false);
-         	GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);
-			return;
+			GetGame().GetCallqueue().CallLater(spawnAmmo, 1200000, false);
+			SCR_PopUpNotification.GetInstance().PopupMsg("Ammo and AT has made it to the factory.", 10);
 		}
-
+		
+		
 	}
 
 	override void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
 		GetGame().GetCallqueue().CallLater(safeStartCheck, 30000, false);
-		
-	}
-
-	override void OnQueryFinished(bool bIsEmpty)
-	{
-		super.OnQueryFinished(bIsEmpty);
-		
-		if(m_bResult && !timer)
-		{
-			spawnBTR = GetGame().GetWorld().FindEntityByName("spawnBTR");
-			EntitySpawnParams spawnParams = new EntitySpawnParams();
-			spawnParams.TransformMode = ETransformMode.WORLD;
-			
-			spawnParams.Transform[3] = spawnBTR.GetOrigin();
-			GetGame().SpawnEntityPrefab(Resource.Load(BTR),GetGame().GetWorld(),spawnParams);
-			
-			SCR_PopUpNotification.GetInstance().PopupMsg("OPFOR has taken Checkpoint Alpha in time", 10);
-			
-			IEntity bridge_Control = GetGame().GetWorld().FindEntityByName("bridge_Control");
-			delete bridge_Control;
-			
-		}
-		
 	}
 
 };
-
-
 
 
 

@@ -1,0 +1,40 @@
+Vehicle : "{81FDAD5EB644CC3D}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered.et" {
+ ID "BBCBA43A9778AE21"
+ components {
+  SCR_UniversalInventoryStorageComponent "{5916C580F1DA28BB}" {
+   MultiSlots {
+    MultiSlotConfiguration "{647569B6726F6B97}" {
+     SlotTemplate InventoryStorageSlot primary {
+      Prefab "{7ECA478D7C80ACC0}Prefabs/Weapons/Magazines/Magazine_556x45_STANAG_30rnd_M193_M196_Last_5Tracer.et"
+     }
+     NumSlots 30
+    }
+    MultiSlotConfiguration "{647569B656791CEE}" {
+     SlotTemplate InventoryStorageSlot LMG {
+      Prefab "{06D722FC2666EB83}Prefabs/Weapons/Magazines/Box_556x45_M249_200rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 6
+    }
+    MultiSlotConfiguration "{647569B6B266828B}" {
+     SlotTemplate InventoryStorageSlot MMG {
+      Prefab "{4D2C1E8F3A81F894}Prefabs/Weapons/Magazines/Box_762x51_M60_100rnd_4Ball_1Tracer.et"
+     }
+     NumSlots 6
+    }
+    MultiSlotConfiguration "{647569B69C3C577D}" {
+     SlotTemplate InventoryStorageSlot LAT {
+      Prefab "{9C5C20FB0E01E64F}Prefabs/Weapons/Launchers/M72/Launcher_M72A3.et"
+     }
+     NumSlots 6
+    }
+   }
+  }
+  SlotManagerComponent "{55BCE45E438E4CFF}" {
+   Slots {
+    RegisteringComponentSlotInfo Cargo {
+     Prefab "{F6770A0E1E5E901C}Prefabs/Vehicles/Wheeled/M923A1/M923A1_cargo_canvas_closed.et"
+    }
+   }
+  }
+ }
+}
