@@ -1,0 +1,191 @@
+SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUFOR_Platoon_p.et" {
+ components {
+  AIFormationComponent "{507E9DC12F541FE6}" {
+   DefaultFormation "Line"
+  }
+ }
+ coords 1015.694 182.447 7838.286
+ {
+  SCR_AIGroup : "{D0B17EDF43465305}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_MedicTeam_p.et" {
+   components {
+    AIFormationComponent "{507E9DC12F541FE6}" {
+     DefaultFormation "Line"
+    }
+   }
+   coords 8.661 0.9 12.756
+   {
+    SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+     components {
+      AIFormationComponent "{507E9DC12F541FE6}" {
+       DefaultFormation "Line"
+      }
+     }
+     coords 6.614 0.304 -27.198
+     {
+      SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+       components {
+        AIFormationComponent "{507E9DC12F541FE6}" {
+         DefaultFormation "Line"
+        }
+       }
+       coords 5.811 1.257 0
+       {
+        SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+         components {
+          AIFormationComponent "{507E9DC12F541FE6}" {
+           DefaultFormation "Line"
+          }
+         }
+         coords 7.257 1.005 0
+         {
+          SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+           components {
+            AIFormationComponent "{507E9DC12F541FE6}" {
+             DefaultFormation "Line"
+            }
+           }
+           coords 6.592 1.254 0
+           {
+            SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+             components {
+              AIFormationComponent "{507E9DC12F541FE6}" {
+               DefaultFormation "Line"
+              }
+             }
+             coords -13.307 -3.722 -20.848
+             {
+              SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+               components {
+                AIFormationComponent "{507E9DC12F541FE6}" {
+                 DefaultFormation "Line"
+                }
+               }
+               coords 8.543 1.605 -0.158
+               {
+                SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+                 components {
+                  AIFormationComponent "{507E9DC12F541FE6}" {
+                   DefaultFormation "Line"
+                  }
+                 }
+                 coords 11.322 1.744 -3.389
+                }
+               }
+              }
+             }
+            }
+           }
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
+ components {
+  CRF_VehicleSpawner "{64626B666A3B82E3}" {
+   m_rVehicle "{3277F8B1FA06A2BC}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF.et"
+  }
+ }
+ coords 995.72 179.716 7835.111
+ angleX 1.496
+ angleY 94.648
+ angleZ 5.253
+ {
+  $grp GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{3277F8B1FA06A2BC}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_USAF.et"
+     }
+    }
+    coords -3.572 0.073 2.169
+    angleX 0
+    angleY 0
+    angleZ 0
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et"
+     }
+    }
+    coords 4.031 -0.077 -1.221
+    angleX 0
+    angleY 0
+    angleZ 0
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{4E3A86638BFF9FC6}Prefabs/Vehicles/Wheeled/M998/M997_maxi_ambulance_USAF.et"
+     }
+    }
+    coords 2.888 0.983 15
+    angleX -3.868
+    angleY -119.061
+    angleZ 3.858
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{249A75FB99B24A57}Prefabs/Vehicles/Wheeled/Stryker/M1126/Stryker_APC.et"
+     }
+    }
+    coords 14.591 0.163 9.316
+    angleX -3.738
+    angleY -120.962
+    angleZ 3.984
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et"
+     }
+    }
+    coords 18.893 0.649 5.889
+    angleX -3.738
+    angleY -120.962
+    angleZ 3.984
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{CC55611936C21F25}Prefabs/Vehicles/Wheeled/M998/M1025_USAF.et"
+     }
+    }
+    coords 8.63 -0.077 -3.428
+    angleX 0
+    angleY 0
+    angleZ 0
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{249A75FB99B24A57}Prefabs/Vehicles/Wheeled/Stryker/M1126/Stryker_APC.et"
+     }
+    }
+    coords 9.108 0.614 10.998
+    angleX -3.738
+    angleY -120.962
+    angleZ 3.984
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et"
+     }
+    }
+    coords 22.497 1.094 3.615
+    angleX -7.4
+    angleY -119.896
+    angleZ -0.206
+   }
+  }
+ }
+}
