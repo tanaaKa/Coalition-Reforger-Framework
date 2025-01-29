@@ -62,51 +62,93 @@ $grp Vehicle : "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.
 }
 $grp SCR_AIGroup : "{29CA3A88FC500B66}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevRifleman_p.et" {
  {
-  coords 7507.134 6.228 6720.514
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7503.174 6.219 6724.095
   angleY -143.377
  }
  {
-  coords 7505.473 6.219 6721.751
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7504.327 6.224 6725.47
   angleY -143.377
  }
  {
-  coords 7503.931 6.219 6722.897
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7505.223 6.206 6726.851
   angleY -143.377
  }
  {
-  coords 7502.33 6.204 6724.087
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7506.374 6.184 6728.227
   angleY -143.377
  }
  {
-  coords 7500.937 6.202 6725.121
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7507.218 6.176 6729.537
   angleY -143.377
  }
  {
-  coords 7499.455 6.216 6726.223
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7508.372 6.179 6730.912
   angleY -143.377
  }
  {
-  coords 7497.754 6.199 6727.486
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7510.421 6.168 6733.668
   angleY -143.377
  }
  {
-  coords 7496.404 6.205 6728.492
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7509.267 6.152 6732.293
   angleY -143.377
  }
  {
-  coords 7495.071 6.21 6729.481
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7512.638 6.156 6736.653
   angleY -143.377
  }
  {
-  coords 7493.589 6.273 6730.584
-  angleY -143.377
- }
- {
-  coords 7492.076 6.445 6731.707
-  angleY -143.377
- }
- {
-  coords 7490.417 6.612 6732.939
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7511.487 6.159 6735.278
   angleY -143.377
  }
 }

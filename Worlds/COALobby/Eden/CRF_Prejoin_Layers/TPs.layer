@@ -11,12 +11,14 @@ $grp GenericEntity : "{83618EAF9EFD3E20}Prefabs/Structures/FlagPoles/TeleportPol
      }
      CRF_TeleportPlayerAction "{645A000846476766}" {
       VisibilityRange 5
+      "Sort Priority" 1
      }
      CRF_TeleportPlayerAction "{645A000847BA13D3}" {
       VisibilityRange 5
+      "Sort Priority" 2
      }
      CRF_TeleportPlayerAction "{645A0008470A47AB}" {
-      VisibilityRange 5
+      "Sort Priority" 3
      }
     }
    }
@@ -32,12 +34,14 @@ $grp GenericEntity : "{83618EAF9EFD3E20}Prefabs/Structures/FlagPoles/TeleportPol
      }
      CRF_TeleportPlayerAction "{645A000846476766}" {
       VisibilityRange 5
+      "Sort Priority" 1
      }
      CRF_TeleportPlayerAction "{645A000847BA13D3}" {
       VisibilityRange 5
+      "Sort Priority" 2
      }
      CRF_TeleportPlayerAction "{645A0008470A47AB}" {
-      VisibilityRange 5
+      "Sort Priority" 3
      }
     }
    }
@@ -53,12 +57,14 @@ $grp GenericEntity : "{83618EAF9EFD3E20}Prefabs/Structures/FlagPoles/TeleportPol
      }
      CRF_TeleportPlayerAction "{645A000846476766}" {
       VisibilityRange 5
+      "Sort Priority" 1
      }
      CRF_TeleportPlayerAction "{645A000847BA13D3}" {
       VisibilityRange 5
+      "Sort Priority" 2
      }
      CRF_TeleportPlayerAction "{645A0008470A47AB}" {
-      VisibilityRange 5
+      "Sort Priority" 3
      }
     }
    }
@@ -74,12 +80,14 @@ $grp GenericEntity : "{83618EAF9EFD3E20}Prefabs/Structures/FlagPoles/TeleportPol
      }
      CRF_TeleportPlayerAction "{645A000846476766}" {
       VisibilityRange 5
+      "Sort Priority" 1
      }
      CRF_TeleportPlayerAction "{645A000847BA13D3}" {
       VisibilityRange 5
+      "Sort Priority" 2
      }
      CRF_TeleportPlayerAction "{645A0008470A47AB}" {
-      VisibilityRange 5
+      "Sort Priority" 3
      }
     }
    }
