@@ -84,7 +84,7 @@ $grp SCR_VehicleSpawn {
   firstSpawn 1
  }
  truck3 {
-  coords 4169.558 136.059 6477.229
+  coords 4170.387 136.059 6473.76
   angleY -13.434
   m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
   respawnDelay 10000
@@ -93,6 +93,34 @@ $grp SCR_VehicleSpawn {
  truck4 {
   coords 4173.301 136.062 6461.112
   angleY -13.434
+  m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
+  respawnDelay 10000
+  firstSpawn 1
+ }
+ truck5 {
+  coords 4148.98 135.602 6471.06
+  angleY 56.325
+  m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
+  respawnDelay 10000
+  firstSpawn 1
+ }
+ truck6 {
+  coords 4136.753 135.123 6462.914
+  angleY 56.325
+  m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
+  respawnDelay 10000
+  firstSpawn 1
+ }
+ truck7 {
+  coords 4127.591 134.427 6456.809
+  angleY 56.325
+  m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
+  respawnDelay 10000
+  firstSpawn 1
+ }
+ truck8 {
+  coords 4116.73 133.841 6449.698
+  angleY 56.325
   m_rnPrefab "{543799AC5C52989C}Prefabs/Vehicles/Wheeled/S1203/S1203_transport_beige.et"
   respawnDelay 10000
   firstSpawn 1
