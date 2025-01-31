@@ -194,6 +194,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	protected ref ScriptInvoker m_OnStateChanged;
 	protected ref array<CRF_GamemodeComponent> m_aAdditionalCRFGamemodeComponents = {};
 	protected ref array<IEntity> m_aRespawnPoints = {};
+	protected ref array<IEntity> m_aDeadPlayers = {};
 	
 	static CRF_Gamemode GetInstance()
 	{
@@ -272,6 +273,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		if (m_bRespawnEnabled)
 			CheckTickets(playerId, SCR_GroupsManagerComponent.GetInstance().GetPlayerGroup(playerId).GetGroupID());
 		
+		// Add them to dead player list so we can use in game modes for wave respawn 
 		
 		//Throw em into spectator
 		GetGame().GetCallqueue().CallLater(SetPlayerSpectator, 100, false, playerId, playerEntity);
@@ -611,7 +613,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		{	
 			string respawnPrefab = CRF_GamemodeComponent.GetInstance().ReturnPlayerGearScriptsMapValue(playerID, "GSR");
 			string faction = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).GetFaction().GetFactionKey();
-			string spawnpoint
+			string spawnpoint;
 			
 			if(respawnPrefab.IsEmpty())
 			{
@@ -689,6 +691,29 @@ class CRF_Gamemode : SCR_BaseGameMode
 		{
 			m_iSlotChanges++;
 			Replication.BumpMe();
+		}
+	}
+	
+	// Rush game mode respawn
+	void RushRespawnPlayers()
+	{
+		// Get gamemode and faction managers 
+		CRF_Gamemode gm = CRF_Gamemode.GetInstance();
+		
+		// Get a list of all dead players 
+		array<int> allPlayers = {};
+		GetGame().GetPlayerManager().GetAllPlayers(allPlayers);
+		
+		// foreach dead player, get their information and call the respawn method in the game mode
+		foreach(int player: allPlayers)
+		{
+			if (SCR_FactionManager.SGetPlayerFaction(player).GetFactionKey() == "SPEC")
+			{
+				// TODO: SALAMI FIX THIS PLS
+				IEntity ent = SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(RplComponent.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(player).FindComponent(RplComponent)).Id())))))).GetEntity());
+				string groupId = ent.Get
+				RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, groupID);
+			}
 		}
 	}
 	
