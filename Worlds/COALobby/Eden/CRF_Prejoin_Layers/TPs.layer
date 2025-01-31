@@ -1,0 +1,139 @@
+$grp GenericEntity : "{83618EAF9EFD3E20}Prefabs/Structures/FlagPoles/TeleportPoles/PreJoin_Teleport.et" {
+ Spawn {
+  components {
+   CRF_RespawnPointComponent "{645F590E86479CDD}" {
+    m_sRespawnPointFaction "CIV"
+   }
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+      "Sort Priority" 1
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+      "Sort Priority" 2
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      "Sort Priority" 3
+     }
+    }
+   }
+  }
+  coords 7470.43 7.682 6705.926
+ }
+ VehRange {
+  components {
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+      "Sort Priority" 1
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+      "Sort Priority" 2
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      "Sort Priority" 3
+     }
+    }
+   }
+  }
+  coords 7433.136 9.688 6774
+ }
+ Airfield {
+  components {
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+      "Sort Priority" 1
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+      "Sort Priority" 2
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      "Sort Priority" 3
+     }
+    }
+   }
+  }
+  coords 4911.522 28.594 11829.207
+ }
+ FiringRange {
+  components {
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+      "Sort Priority" 1
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+      "Sort Priority" 2
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      "Sort Priority" 3
+     }
+    }
+   }
+  }
+  coords 7347.836 122.807 5307.333
+ }
+ OPFOR {
+  components {
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      VisibilityRange 5
+     }
+    }
+   }
+  }
+  coords 9410.54 46.423 1647.302
+ }
+ BLUFOR {
+  components {
+   ActionsManagerComponent "{645A0008F3808301}" {
+    additionalActions {
+     CRF_TeleportPlayerAction "{645A0008F88C720A}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000846476766}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A000847BA13D3}" {
+      VisibilityRange 5
+     }
+     CRF_TeleportPlayerAction "{645A0008470A47AB}" {
+      VisibilityRange 5
+     }
+    }
+   }
+  }
+  coords 9953.116 2.532 1555.111
+ }
+}

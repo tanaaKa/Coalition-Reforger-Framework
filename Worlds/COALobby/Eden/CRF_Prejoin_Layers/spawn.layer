@@ -1,0 +1,586 @@
+$grp Vehicle : "{128253A267BE9424}Prefabs/Vehicles/Wheeled/S105/S105_randomized.et" {
+ S105_randomized1 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7402.782 9.688 6732.753
+  angleY 125.667
+ }
+ S105_randomized2 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7400.578 9.688 6729.736
+  angleY 125.667
+ }
+ S105_randomized3 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7398.203 9.688 6726.79
+  angleY 125.667
+ }
+ S105_randomized4 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7396.068 9.688 6723.397
+  angleY 125.667
+ }
+ S105_randomized5 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7393.863 9.688 6720.381
+  angleY 125.667
+ }
+ S105_randomized6 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7391.489 9.688 6717.435
+  angleY 125.667
+ }
+}
+$grp SCR_AIGroup : "{29CA3A88FC500B66}Prefabs/Groups/CIV/Standard/Dev/CRF_CIV_DevRifleman_p.et" {
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7503.174 6.219 6724.095
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7504.327 6.224 6725.47
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7505.223 6.206 6726.851
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7506.374 6.184 6728.227
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7507.218 6.176 6729.537
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7508.372 6.179 6730.912
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7510.421 6.168 6733.668
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7509.267 6.152 6732.293
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7512.638 6.156 6736.653
+  angleY -143.377
+ }
+ {
+  components {
+   AIFormationComponent "{507E9DC12F541FE6}" {
+    DefaultFormation "Row"
+   }
+  }
+  coords 7511.487 6.159 6735.278
+  angleY -143.377
+ }
+}
+$grp Vehicle : "{57A441224AC02CF3}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_Randomized.et" {
+ UAZ469_covered_CIV_Randomized1 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7410.528 9.688 6742.4
+  angleY 127.241
+ }
+ UAZ469_covered_CIV_Randomized2 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7412.883 9.688 6745.497
+  angleY 127.241
+ }
+ UAZ469_covered_CIV_Randomized3 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7415.307 9.688 6748.7
+  angleY 127.241
+ }
+ UAZ469_covered_CIV_Randomized4 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7417.352 9.688 6751.616
+  angleY 127.241
+ }
+ UAZ469_covered_CIV_Randomized5 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7419.707 9.688 6754.713
+  angleY 127.241
+ }
+ UAZ469_covered_CIV_Randomized6 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7422.131 9.688 6757.917
+  angleY 127.241
+ }
+}
+$grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification/CzechHedgehog_01_painted.et" {
+ {
+  coords 7443.993 -0.061 6747.229
+ }
+ {
+  coords 7446.296 0 6750.01
+ }
+ {
+  coords 7448.463 0 6753.37
+ }
+ {
+  coords 7450.217 0 6756.617
+ }
+ {
+  coords 7452.842 0 6764.427
+ }
+ {
+  coords 7451.074 -0.287 6767.441
+ }
+ {
+  coords 7449.288 0 6770.466
+ }
+ {
+  coords 7448.026 0 6772.595
+ }
+ {
+  coords 7445.983 0 6774.699
+ }
+ {
+  coords 7443.956 0 6776.396
+ }
+ {
+  coords 7442.238 0 6777.341
+ }
+ {
+  coords 7439.564 0 6778.251
+ }
+ {
+  coords 7436.94 0 6778.301
+ }
+ {
+  coords 7434.929 0 6778.733
+ }
+ {
+  coords 7432.807 0 6778.207
+ }
+ {
+  coords 7430.331 0 6778.107
+ }
+ {
+  coords 7428.069 0 6777.834
+ }
+ {
+  coords 7425.6 0 6778
+ }
+ {
+  coords 7423.49 1.243 6775.571
+ }
+ {
+  coords 7422.641 0 6778.206
+ }
+ {
+  coords 7421.547 1.243 6773.685
+ }
+ {
+  coords 7424.307 0 6770.215
+ }
+ {
+  coords 7423.26 0 6768.295
+ }
+ {
+  coords 7422.506 0 6766.544
+ }
+ {
+  coords 7405.649 0 6742.464
+ }
+ {
+  coords 7401.356 0 6736.764
+ }
+ {
+  coords 7392.87 0 6691.128
+ }
+ {
+  coords 7396.071 0 6695.277
+ }
+ {
+  coords 7398.139 0 6698.063
+ }
+ {
+  coords 7400.116 0 6701.081
+ }
+ {
+  coords 7401.71 0 6703.083
+ }
+ {
+  coords 7403.435 0 6707.194
+ }
+ {
+  coords 7406.033 0 6711.244
+ }
+ {
+  coords 7411.723 0 6719.457
+ }
+ {
+  coords 7414.402 0 6722.294
+ }
+ {
+  coords 7418.207 0 6727.253
+ }
+ {
+  coords 7423.058 0 6733.91
+ }
+ {
+  coords 7426.532 0 6738.061
+ }
+ {
+  coords 7433.963 0 6748.097
+ }
+ {
+  coords 7437.396 0 6751.045
+ }
+ {
+  coords 7440.879 0 6749.765
+ }
+ {
+  coords 7419.37 0 6789.771
+ }
+ {
+  coords 7417.344 0 6791.156
+ }
+ {
+  coords 7415.022 0 6792.956
+ }
+ {
+  coords 7413.085 0 6794.517
+ }
+ {
+  coords 7418.784 0 6774.124
+ }
+ {
+  coords 7417.279 0 6772.267
+ }
+ {
+  coords 7448.133 -0.167 6758.204
+ }
+ {
+  coords 7448.356 -0.497 6760.918
+ }
+ {
+  coords 7449.789 0 6762.126
+ }
+ {
+  coords 7430.802 0 6743.909
+ }
+ {
+  coords 7428.715 0 6741.359
+ }
+ {
+  coords 7392.96 0 6685.727
+ }
+ {
+  coords 7489.396 0 6769.611
+ }
+ {
+  coords 7491.057 0 6770.793
+ }
+ {
+  coords 7492.84 0 6771.791
+ }
+ {
+  coords 7494.928 0 6773.117
+ }
+ {
+  coords 7496.698 0 6775.394
+ }
+ {
+  coords 7499.868 0 6777.886
+ }
+ {
+  coords 7498.368 0 6777.038
+ }
+ {
+  coords 7500.824 0 6779.957
+ }
+ {
+  coords 7501.799 -0.071 6782.477
+ }
+ {
+  coords 7502.638 0.046 6784.994
+ }
+ {
+  coords 7503.433 -0.056 6787.478
+ }
+ {
+  coords 7503.601 0.017 6789.795
+ }
+ {
+  coords 7488.865 0 6767.911
+ }
+ {
+  coords 7451.344 0 6763.207
+ }
+ {
+  coords 7370.409 0 6722.56
+ }
+ {
+  coords 7369.284 0 6721.154
+ }
+ {
+  coords 7367.831 0 6719.417
+ }
+ {
+  coords 7366.935 0 6718.176
+ }
+ {
+  coords 7366.202 0 6716.83
+ }
+ {
+  coords 7366.202 0 6716.83
+ }
+}
+PS_ManualMarker : "{C113055E29F43DAA}PrefabsEditable/Markers/INDFORSpawnMarker.et" {
+ coords 7470.51 7.672 6706.092
+ angleY 90
+ m_MarkerColor 0.392 0.157 0.624 1
+ m_sDescription "Spawn"
+ m_aVisibleForFactions {
+  "CIV"
+ }
+ m_bVisibleForEmptyFaction 1
+ m_bShowForAnyFaction 1
+}
+$grp Vehicle : "{EEAC3A94929A2B55}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_CIV_randomized.et" {
+ Ural4320_transport_CIV_randomized6 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7431.678 9.686 6765.944
+  angleY -145.63
+ }
+ Ural4320_transport_CIV_randomized9 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7437.218 9.642 6765.088
+  angleY -144.928
+ }
+ Ural4320_transport_CIV_randomized10 {
+  components {
+   SCR_FuelConsumptionComponent "{512CC5B0F07DA8F9}" {
+    m_fFuelConsumption 0
+    m_fFuelConsumptionIdle 0
+   }
+  }
+  coords 7440.908 9.683 6761.73
+  angleY -139.264
+ }
+}
+GenericEntity : "{F4B7F1D4D3ADE456}Prefabs/Structures/Signs/Military/Sign_VehicleRepair_US_01.et" {
+ coords 7442.783 9.356 6759.423
+ angleY 132.012
+}
+$grp GenericEntity : "{F542F974956C255F}Prefabs/Props/Military/Compositions/CIV/ArsenalBox_CIV.et" {
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7442.667 7.875 6715.246
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7447.324 7.875 6717.483
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7453.281 7.875 6720.215
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7459.573 7.875 6722.982
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7449.343 7.875 6713.251
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7444.687 7.875 6711.014
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7455.301 7.875 6715.983
+  angleY 155
+ }
+ {
+  components {
+   SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+    m_eSupportedArsenalItemTypes 654528
+    m_eSupportedArsenalItemModes 130
+    m_eEditableAttributeGroups 12
+    m_eArsenalSaveType SAVING_DISABLED
+   }
+  }
+  coords 7461.592 7.875 6718.75
+  angleY 155
+ }
+}
+GenericEntity : "{F9CB37885DA59BF4}Prefabs/Props/Military/E_SignFlag_COAL_01.et" {
+ coords 7463.61 8.785 6726.082
+ angleY 154.492
+}

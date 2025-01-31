@@ -1,0 +1,34 @@
+StaticModelEntity : "{E27FB14C3073BF80}Prefabs/Compositions/Misc/CustomEntities/DestructionEntities/Sandbag_01_bunker_plastic_CompositionDestruction.et" {
+ ID "5A532DC567D4E321"
+ angleY -98.253
+ {
+  GenericEntity {
+   ID "5A532DCF3ECE3109"
+   coords -0.112 2.824 2.483
+  }
+  GenericEntity {
+   ID "5A532DCF3ECE312F"
+   coords -0.112 2.837 2.483
+  }
+  $grp GenericEntity : "{BBE13893AEA69C0C}Prefabs/Props/Military/Sandbags/Sandbag_01_foundation_plastic.et" {
+   {
+    ID "64437B2121100822"
+    components {
+     Hierarchy "{5A58883F88AF1AEC}" {
+     }
+    }
+    coords -0.127 1.4 1.069
+    angleY -1.948
+   }
+   {
+    ID "64437B212110FE94"
+    components {
+     Hierarchy "{5A58883F88AF1AEC}" {
+     }
+    }
+    coords -0.167 1.4 2.641
+    angleY -1.72
+   }
+  }
+ }
+}
