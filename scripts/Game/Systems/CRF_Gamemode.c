@@ -502,7 +502,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void RespawnPlayerRplIdDelay(int playerID, RplId groupID, IEntity newEntity)
 	{
-		SCR_AIGroup playerGroup = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID);
+		SCR_AIGroup playerGroup = SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(groupID)).GetEntity());
 		SCR_AIGroup aiGroup = SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aGroupRplIDs.Get(m_aActivePlayerGroupsIDs.Find(RplComponent.Cast(playerGroup.FindComponent(RplComponent)).Id())))).GetEntity());
 		aiGroup.AddAIEntityToGroup(newEntity);
 		int index = AddPlayableEntity(newEntity);
