@@ -127,6 +127,9 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		if(RplSession.Mode() == RplMode.Client)
 			return;
 		
+		if(entity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			return;
+		
 		GetGame().GetCallqueue().CallLater(CheckWorldValid, 150, false, entity);
 	}
 	

@@ -39,6 +39,15 @@ class CRF_Gamemode : SCR_BaseGameMode
 	int m_GamemodeState = CRF_GamemodeState.INITIAL;
 	
 	[RplProp()]
+	ref array<string> m_aVONChannels = {"Deafen|", "Global|"};
+	
+	[RplProp()]
+	ref array<int> m_aPlayersRegistedVON = {};
+	
+	[RplProp()]
+	int m_iChannelChanges = 0;
+	
+	[RplProp()]
 	int m_SlottingState = CRF_SlottingState.LEADERSANDMEDICS;
 	
 	//Stores when a player is talking
@@ -348,6 +357,8 @@ class CRF_Gamemode : SCR_BaseGameMode
 			SpawnInitialEntity(playerID);
 			return;
 		}
+		
+		SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(RplComponent.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID).FindComponent(RplComponent)).Id())))))).GetEntity());
 		
 		IEntity oldEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 		RplId oldGroup = RplId.Invalid();
@@ -661,7 +672,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		super.OnPlayerConnected(playerId);
 //		if(m_aSlots.Find(playerId) == -1)
 //			SpawnInitialEntity(playerId);
-		
+
 		if(m_aSlots.Find(playerId) != -1)
 		{
 			m_iSlotChanges++;
@@ -803,6 +814,231 @@ class CRF_Gamemode : SCR_BaseGameMode
 				continue;
 			
 			GetGame().GetCallqueue().CallLater(SpawnInitialEntity, 500, false, player);
+		}
+	}
+	
+	void SetChannel(int index, string inputString, bool channelCreation)
+	{
+		m_aVONChannels.Set(index, inputString);
+		if (!channelCreation)
+		{
+			foreach(string channel: m_aVONChannels)
+			{
+				ref array<string> channelSplit = {};
+				channel.Split("|", channelSplit, true);
+				if (channelSplit.Count() == 1 && m_aVONChannels.Find(channel) > 1)
+					m_aVONChannels.RemoveOrdered(m_aVONChannels.Find(channel));
+			}
+		}
+		Print(m_aVONChannels);
+		m_iChannelChanges++;
+		Replication.BumpMe();
+	}
+	
+	bool IsPlayerInAnyChannel(int playerId, out int channelId)
+	{
+		bool isInChannel = false;
+		channelId = -1;
+		foreach(string channel: m_aVONChannels)
+		{
+			if(isInChannel)
+				break;
+			ref array<string> channelSplit = {};
+			channel.Split("|", channelSplit, true);
+			ref array<string> players = {};
+			if (channelSplit.Count() == 1)
+				continue;
+			channelSplit.Get(1).Split(",", players, true);
+			foreach(string player: players)
+			{
+				if	(player == "")
+					continue;
+				if (player.ToInt() == playerId)
+				{
+					channelId = m_aVONChannels.Find(channel);
+					isInChannel = true;
+					break;
+				}
+			}
+		}
+		return isInChannel;	
+	}
+	
+	void AddPlayerToChannel(int playerId, int channelIndex, bool channelCreation)
+	{
+		int index;
+		if (IsPlayerInAnyChannel(playerId, index))
+			RemovePlayerFromAnyChannel(playerId, channelCreation);
+		ref array<string> channelSplit = {};
+		m_aVONChannels.Get(channelIndex).Split("|", channelSplit, true);
+		ref array<string> players = {};
+		if (channelSplit.Count() > 1)
+			channelSplit.Get(1).Split(",", players, true);
+		players.Insert(playerId.ToString());
+		if (channelSplit.Count() > 1)
+			channelSplit.Set(1, SCR_StringHelper.Join("," , players));
+		else
+			channelSplit.Insert(SCR_StringHelper.Join("," , players));
+		SetChannel(channelIndex, SCR_StringHelper.Join("|", channelSplit), channelCreation);
+	}
+	
+	void RemovePlayerFromAnyChannel(int playerId, bool channelCreation)
+	{
+		int index;
+		if(!IsPlayerInAnyChannel(playerId, index))
+			return;
+		ref array<string> channelSplit = {};
+		m_aVONChannels.Get(index).Split("|", channelSplit, true);
+		ref array<string> players = {};
+		if (channelSplit.Count() > 1)
+			channelSplit.Get(1).Split(",", players, true);
+		players.RemoveOrdered(players.Find(playerId.ToString()));
+		if (channelSplit.Count() > 1)
+			channelSplit.Set(1, SCR_StringHelper.Join("," , players));
+		else
+			channelSplit.Insert(SCR_StringHelper.Join("," , players));
+		SetChannel(index, SCR_StringHelper.Join("|", channelSplit), channelCreation);
+	}
+	
+	bool IsPlayerInChannel(int playerId, int index)
+	{
+		ref array<string> channelSplit = {};
+		m_aVONChannels.Get(index).Split("|", channelSplit, true);
+		ref array<string> players = {};
+		if (channelSplit.Count() == 1)
+			return false;
+		else
+			channelSplit.Get(1).Split(",", players, true);
+		if (players.Contains(playerId.ToString()))
+			return true;
+		else
+			return false;	
+	}
+	
+	int CreateChannel(string name, int playerId)
+	{
+		int index = m_aVONChannels.Insert(name + "|");
+		AddPlayerToChannel(playerId, index, true);
+		m_iChannelChanges++;
+		Replication.BumpMe();
+		return index;
+	}
+	
+	int GetChannel(int playerId)
+	{
+		foreach(string channel: m_aVONChannels)
+		{
+			ref array<string> channelSplit = {};
+			channel.Split("|", channelSplit, true);
+			ref array<string> players = {};
+			if (channelSplit.Count() == 1)
+				continue;
+			else
+				channelSplit.Get(1).Split(",", players, true);
+			if (players.Contains(playerId.ToString()))
+				return m_aVONChannels.Find(channel);
+			else
+				continue;
+		}
+		return 1;
+	}
+	
+	void RequestToJoinChannel(int channel, int requestId)
+	{
+		ref array<int> players = {};
+		GetGame().GetPlayerManager().GetAllPlayers(players);
+		foreach(int player: players)
+		{
+			if (IsPlayerInChannel(player, channel))
+				Rpc(RpcDo_SendRequest, player, requestId, channel);
+		}
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	void RpcDo_SendRequest(int playerId, int requestId, int channel)
+	{
+		if (playerId != SCR_PlayerController.GetLocalPlayerId())
+			return;
+		
+		CRF_SpectatorMenuUI specMenu = CRF_SpectatorMenuUI.Cast(GetGame().GetMenuManager().GetTopMenu());
+		
+		if (!specMenu)
+			return;
+		Widget compWidget = GetGame().GetWorkspace().CreateWidgets("{49490337615BA9B8}UI/Listbox/VONChannelRequestListBox.layout", specMenu.m_wRoot.FindAnyWidget("Requests"));
+		specMenu.m_aRequest.Insert(compWidget);
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(compWidget.FindHandler(CRF_ListBoxElementComponent));
+		comp.m_iPlayerId = requestId;
+		comp.m_iChannelId = channel;
+		comp.GetAccept().m_OnClicked.Insert(Accept);
+		comp.GetDeny().m_OnClicked.Insert(Deny);
+	}
+	
+	void Accept()
+	{
+		if (!WidgetManager.GetWidgetUnderCursor())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent())
+			return;
+		
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
+		SCR_PlayerController.Cast(GetGame().GetPlayerController()).Accept(comp.m_iPlayerId, comp.m_iChannelId);
+	}
+	
+	
+	
+	void Deny()
+	{
+				if (!WidgetManager.GetWidgetUnderCursor())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent())
+			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent())
+			return;
+		
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
+
+		ref array<int> players = {};
+		GetGame().GetPlayerManager().GetAllPlayers(players);
+		foreach(int player: players)
+		{
+			if (IsPlayerInChannel(player, comp.m_iChannelId))
+				Rpc(RpcDo_Deny, player, comp.m_iPlayerId);
+		}
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
+	void RpcDo_Deny(int playerId, int requestId)
+	{
+		if (playerId != SCR_PlayerController.GetLocalPlayerId())
+			return;
+		
+		CRF_SpectatorMenuUI specMenu = CRF_SpectatorMenuUI.Cast(GetGame().GetMenuManager().GetTopMenu());
+		
+		if (!specMenu)
+			return;
+		
+		foreach (Widget request: specMenu.m_aRequest)
+		{
+			CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(request.FindHandler(CRF_ListBoxElementComponent));
+			if (!comp)
+				continue;
+			
+			if (requestId == comp.m_iPlayerId)
+			{
+				request.RemoveFromHierarchy();
+				specMenu.m_aRequest.RemoveOrdered(specMenu.m_aRequest.Find(request));
+				return;			
+			}
 		}
 	}
 }

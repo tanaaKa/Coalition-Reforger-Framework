@@ -1,13 +1,13 @@
 modded class SCR_PlayerController
 {
 	//Stores local camera entity to delete whenever you take over a player
-	protected IEntity m_eCamera;
+	IEntity m_eCamera;
 	//Stores the vector of your last entity you had control over so it can teleport your camera to it
 	protected vector m_vLastEntityTransform[4];
 	
 	protected bool m_bActivated = false;
 	
-	protected bool m_bIsListening = false;
+	bool m_bIsListening = false;
 	int m_iFPS;
 	int m_iAudioSetting;
 	protected bool m_bListeningBuffer = false;
@@ -283,6 +283,17 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().EnterGame(playerID);
 	}
 	
+	void RequestToJoinChannel(int channel, int requestId)
+	{
+		Rpc(RpcDo_RequestToJoinChannel, channel, requestId);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_RequestToJoinChannel(int channel, int requestId)
+	{
+		CRF_Gamemode.GetInstance().RequestToJoinChannel(channel, requestId);
+	}
+	
 	//Whenever player is killed store their location and enter spectator
 	override void OnDestroyed(notnull Instigator killer)
 	{
@@ -306,8 +317,37 @@ modded class SCR_PlayerController
 			return;
 		
 		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{E1FF38EC8894C5F3}Prefabs/Editor/Camera/ManualCameraSpectate.et"), GetGame().GetWorld(), params);
+		CheckVONRegister();
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_SpectatorMenu);
 		GetGame().GetCameraManager().SetCamera(CameraBase.Cast(m_eCamera));
+		
+	}
+	
+	void CheckVONRegister()
+	{
+		Rpc(RpcDo_CheckVONRegister, GetLocalPlayerId());
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_CheckVONRegister(int playerId)
+	{
+		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
+		int channelIndex;
+		if (!gamemode.IsPlayerInAnyChannel(playerId, channelIndex))
+		{
+			gamemode.AddPlayerToChannel(playerId, 1, false);
+		}
+	}
+	
+	void CreateChannel()
+	{
+		Rpc(RpcDo_CreateChannel, SCR_PlayerController.GetLocalPlayerId());
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_CreateChannel(int playerId)
+	{
+		CRF_Gamemode.GetInstance().CreateChannel(GetGame().GetPlayerManager().GetPlayerName(playerId) + "'s Channel", playerId);
 	}
 	
 	//Opens the slotting menu for players in game
@@ -348,5 +388,27 @@ modded class SCR_PlayerController
 	void RpcDo_AdvanceSlottingPhase()
 	{
 		CRF_Gamemode.GetInstance().AdvanceSlottingState();
+	}
+	
+	void JoinChannel(int playerId, int channel)
+	{
+		Rpc(RpcDo_JoinChannel, playerId, channel);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_JoinChannel(int playerId, int channel)
+	{
+		CRF_Gamemode.GetInstance().AddPlayerToChannel(playerId, channel, false);
+	}
+	
+	void Accept(int playerId, int channel)
+	{
+		Rpc(RpcDo_Accept, playerId, channel);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_Accept(int playerId, int channel)
+	{
+		CRF_Gamemode.GetInstance().AddPlayerToChannel(playerId, channel, false); 
 	}
 }

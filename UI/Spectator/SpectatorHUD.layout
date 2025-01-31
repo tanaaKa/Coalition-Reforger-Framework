@@ -1,6 +1,35 @@
 FrameWidgetClass {
  Name "SpectatorMenu"
  {
+  VerticalLayoutWidgetClass "{647EC0B17BD68D22}" {
+   Name "Requests"
+   Slot FrameWidgetSlot "{647EC0B17BD68D05}" {
+    PositionX 1427.71
+    OffsetLeft 1427.71
+    PositionY 755.427
+    OffsetTop 755.427
+    SizeX 482.74
+    OffsetRight -1910.45
+    SizeY 267.611
+    OffsetBottom -1023.04
+   }
+  }
+  ImageWidgetClass "{647E1B31CF26F149}" {
+   Name "Listening"
+   Slot FrameWidgetSlot "{647E1B31CF26F1A2}" {
+    PositionX 1678.48
+    OffsetLeft 1678.48
+    PositionY 79.609
+    OffsetTop 79.609
+    SizeX 150
+    OffsetRight -1828.48
+    SizeY 150
+    OffsetBottom -229.609
+   }
+   "Is Visible" 0
+   Texture "{4AF05B122604E49B}UI/data/ListeningIcon.edds"
+   Size 512 512
+  }
   FrameWidgetClass "{5EE8949BDE5C93EE}" {
    Name "IconsFrame"
    Slot FrameWidgetSlot "{5EE8949BDE5C93C5}" {
@@ -281,6 +310,535 @@ FrameWidgetClass {
      }
      Offset -40 0
      "Line Spacing" 0
+    }
+   }
+  }
+  FrameWidgetClass "{647D656C336F79BC}" {
+   Name "FrameSlots"
+   Slot FrameWidgetSlot "{647D656C336F799E}" {
+    Anchor 0 0 0 0
+    PositionX -180
+    OffsetLeft -180
+    PositionY 261
+    OffsetTop 261
+    SizeX 200
+    OffsetRight -20
+    SizeY 450
+    OffsetBottom -711
+   }
+   {
+    ImageWidgetClass "{647D7DAD3D825970}" {
+     Name "BG"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
+     }
+     Color 0.134 0.134 0.134 1
+     "Transition width" 0.71
+     Progress 0.5
+    }
+    ButtonWidgetClass "{647E03DD96C5DD05}" {
+     Name "SlotSelector"
+     Slot FrameWidgetSlot "{647E03DD96C5DD63}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX -100
+      OffsetRight 0
+      SizeY -420
+      OffsetBottom 0
+     }
+     Color 1 1 1 0
+    }
+    FrameWidgetClass "{647D656FAA7995FA}" {
+     Name "BLUButton"
+     Slot FrameWidgetSlot "{647D656FAA7995C7}" {
+      Anchor 0 0 1 1
+      PositionX 783.3
+      PositionY 178.6
+      SizeX -150
+      OffsetRight 150
+      SizeY -400
+      OffsetBottom 400
+     }
+     "Is Visible" 0
+     {
+      ImageWidgetClass "{647D656FBD995174}" {
+       Name "BG"
+       Slot FrameWidgetSlot "{647D656FBD99516A}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX -100
+        OffsetRight 0
+        SizeY -100
+        OffsetBottom 0
+       }
+       Color 0.016 0.552 0.905 0.6
+      }
+      ImageWidgetClass "{647D656FC098D136}" {
+       Name "BLUFlag"
+       Slot FrameWidgetSlot "{647D656FC098D11E}" {
+        Anchor 0 0 1 1
+        PositionX 5
+        OffsetLeft 5
+        PositionY 5
+        OffsetTop 5
+        SizeX -10
+        OffsetRight 5
+        SizeY -20.6
+        OffsetBottom 15.6
+       }
+      }
+      TextWidgetClass "{647D656FFBF721E6}" {
+       Name "BLURatio"
+       Slot FrameWidgetSlot "{647D656FFBF721DC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 35.783
+        OffsetTop 35.783
+        SizeX 0
+        OffsetRight 0
+        SizeY -36.867
+        OffsetBottom 1.084
+       }
+       Text "45/45"
+       "Font Size" 16
+       "Min Font Size" 1
+       "Horizontal Alignment" Center
+       "Vertical Alignment" Center
+      }
+      ButtonWidgetClass "{647D65610FEC493D}" {
+       Name "BLUSelectButton"
+       Slot FrameWidgetSlot "{62F20561782C33FC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
+       }
+       components {
+        ButtonComponent "{62F205618D08BCB8}" {
+         m_ColorButtonDefault 1 1 1 0
+         m_ColorButtonFocused 1 1 1 0
+         m_ColorButtonPressed 1 1 1 0
+        }
+        SCR_ButtonTextComponent "{62F20561892D8708}" {
+        }
+       }
+      }
+     }
+    }
+    FrameWidgetClass "{647D656C7EE34998}" {
+     Name "OPFButton"
+     Slot FrameWidgetSlot "{647D656FAA7995C7}" {
+      Anchor 0 0 1 1
+      PositionX 783.3
+      OffsetLeft 50
+      PositionY 178.6
+      SizeX -150
+      OffsetRight 100
+      SizeY -400
+      OffsetBottom 400
+     }
+     "Is Visible" 0
+     {
+      ImageWidgetClass "{647D656C7EE34985}" {
+       Name "BG"
+       Slot FrameWidgetSlot "{647D656FBD99516A}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX -100
+        OffsetRight 0
+        SizeY -100
+        OffsetBottom 0
+       }
+       Color 0.855 0.031 0.028 0.6
+      }
+      ImageWidgetClass "{647D656C7EE34986}" {
+       Name "OPFFlag"
+       Slot FrameWidgetSlot "{647D656FC098D11E}" {
+        Anchor 0 0 1 1
+        PositionX 5
+        OffsetLeft 5
+        PositionY 5
+        OffsetTop 5
+        SizeX -10
+        OffsetRight 5
+        SizeY -20.6
+        OffsetBottom 15.6
+       }
+      }
+      TextWidgetClass "{647D656C7EE34984}" {
+       Name "OPFRatio"
+       Slot FrameWidgetSlot "{647D656FFBF721DC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 35.783
+        OffsetTop 35.783
+        SizeX 0
+        OffsetRight 0
+        SizeY -36.867
+        OffsetBottom 1.084
+       }
+       Text "45/45"
+       "Font Size" 16
+       "Min Font Size" 1
+       "Horizontal Alignment" Center
+       "Vertical Alignment" Center
+      }
+      ButtonWidgetClass "{647D65611A1777E4}" {
+       Name "OPFSelectButton"
+       Slot FrameWidgetSlot "{62F20561782C33FC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
+       }
+       components {
+        ButtonComponent "{62F205618D08BCB8}" {
+         m_ColorButtonDefault 1 1 1 0
+         m_ColorButtonFocused 1 1 1 0
+         m_ColorButtonPressed 1 1 1 0
+        }
+        SCR_ButtonTextComponent "{62F20561892D8708}" {
+        }
+       }
+      }
+     }
+    }
+    FrameWidgetClass "{647D656C75855931}" {
+     Name "INDButton"
+     Slot FrameWidgetSlot "{647D656FAA7995C7}" {
+      Anchor 0 0 1 1
+      PositionX 783.3
+      OffsetLeft 100
+      PositionY 178.6
+      SizeX -150
+      OffsetRight 50
+      SizeY -400
+      OffsetBottom 400
+     }
+     "Is Visible" 0
+     {
+      ImageWidgetClass "{647D656C7585593E}" {
+       Name "BG"
+       Slot FrameWidgetSlot "{647D656FBD99516A}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX -100
+        OffsetRight 0
+        SizeY -100
+        OffsetBottom 0
+       }
+       Color 0 0.44 0.078 0.6
+      }
+      ImageWidgetClass "{647D656C7585593F}" {
+       Name "INDFlag"
+       Slot FrameWidgetSlot "{647D656FC098D11E}" {
+        Anchor 0 0 1 1
+        PositionX 5
+        OffsetLeft 5
+        PositionY 5
+        OffsetTop 5
+        SizeX -10
+        OffsetRight 5
+        SizeY -20.6
+        OffsetBottom 15.6
+       }
+      }
+      TextWidgetClass "{647D656C7585593D}" {
+       Name "INDRatio"
+       Slot FrameWidgetSlot "{647D656FFBF721DC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 35.783
+        OffsetTop 35.783
+        SizeX 0
+        OffsetRight 0
+        SizeY -36.867
+        OffsetBottom 1.084
+       }
+       Text "45/45"
+       "Font Size" 16
+       "Min Font Size" 1
+       "Horizontal Alignment" Center
+       "Vertical Alignment" Center
+      }
+      ButtonWidgetClass "{647D656111782AAE}" {
+       Name "INDSelectButton"
+       Slot FrameWidgetSlot "{62F20561782C33FC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
+       }
+       components {
+        ButtonComponent "{62F205618D08BCB8}" {
+         m_ColorButtonDefault 1 1 1 0
+         m_ColorButtonFocused 1 1 1 0
+         m_ColorButtonPressed 1 1 1 0
+        }
+        SCR_ButtonTextComponent "{62F20561892D8708}" {
+        }
+       }
+      }
+     }
+    }
+    FrameWidgetClass "{647D656C7488BC59}" {
+     Name "CIVButton"
+     Slot FrameWidgetSlot "{647D656FAA7995C7}" {
+      Anchor 0 0 1 1
+      PositionX 783.3
+      OffsetLeft 150
+      PositionY 178.6
+      SizeX -150
+      OffsetRight 0
+      SizeY -400
+      OffsetBottom 400
+     }
+     "Is Visible" 0
+     {
+      ImageWidgetClass "{647D656C7488BC46}" {
+       Name "BG"
+       Slot FrameWidgetSlot "{647D656FBD99516A}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX -100
+        OffsetRight 0
+        SizeY -100
+        OffsetBottom 0
+       }
+       Color 0.392 0.156 0.624 0.6
+      }
+      ImageWidgetClass "{647D656C7488BC47}" {
+       Name "CIVFlag"
+       Slot FrameWidgetSlot "{647D656FC098D11E}" {
+        Anchor 0 0 1 1
+        PositionX 5
+        OffsetLeft 5
+        PositionY 5
+        OffsetTop 5
+        SizeX -10
+        OffsetRight 5
+        SizeY -20.6
+        OffsetBottom 15.6
+       }
+      }
+      TextWidgetClass "{647D656C7488BC45}" {
+       Name "CIVRatio"
+       Slot FrameWidgetSlot "{647D656FFBF721DC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 35.783
+        OffsetTop 35.783
+        SizeX 0
+        OffsetRight 0
+        SizeY -36.867
+        OffsetBottom 1.084
+       }
+       Text "45/45"
+       "Font Size" 16
+       "Min Font Size" 1
+       "Horizontal Alignment" Center
+       "Vertical Alignment" Center
+      }
+      ButtonWidgetClass "{647D65611248C8DE}" {
+       Name "CIVSelectButton"
+       Slot FrameWidgetSlot "{62F20561782C33FC}" {
+        Anchor 0 0 1 1
+        PositionX 0
+        OffsetLeft 0
+        PositionY 0
+        OffsetTop 0
+        SizeX 0
+        OffsetRight 0
+        SizeY 0
+        OffsetBottom 0
+       }
+       components {
+        ButtonComponent "{62F205618D08BCB8}" {
+         m_ColorButtonDefault 1 1 1 0
+         m_ColorButtonFocused 1 1 1 0
+         m_ColorButtonPressed 1 1 1 0
+        }
+        SCR_ButtonTextComponent "{62F20561892D8708}" {
+        }
+       }
+      }
+     }
+    }
+    OverlayWidgetClass "{647D656861CE1943}" : "{94CAAE4A601195D3}UI/layouts/ListBox/ListBox.layout" {
+     Name "PlayerSlots"
+     Slot FrameWidgetSlot "{647D656861CE1939}" {
+      Anchor 0 0 1 1
+      PositionX 0.5
+      OffsetLeft 0.5
+      PositionY 268
+      OffsetTop 50
+      SizeX 0
+      OffsetRight 0
+      SizeY 202.4
+      OffsetBottom 0
+     }
+     components {
+      SCR_ListBoxComponent "{566C9415BAA54E1B}" {
+       Enabled 0
+      }
+      CRF_ListboxComponent "{647D65687737A8F1}" {
+      }
+     }
+     {
+      ImageWidgetClass "{5DB6D18100D38307}" {
+       Prefab "{5DB6D18100D38307}"
+       "Is Visible" 0
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{647E22D9C0CCB25C}" {
+   Name "VONSlots"
+   Slot FrameWidgetSlot "{647D656C336F799E}" {
+    Anchor 1 0 1 0
+    PositionX -294.121
+    OffsetLeft -294.121
+    PositionY 261
+    OffsetTop 261
+    SizeX 200
+    OffsetRight 94.121
+    SizeY 450
+    OffsetBottom -711
+   }
+   {
+    ImageWidgetClass "{647E22D9FE2396DB}" {
+     Name "BG"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
+      SizeX 0
+      OffsetRight 0
+      SizeY 0
+      OffsetBottom 0
+     }
+     Color 0.134 0.134 0.134 1
+     "Transition width" 0.71
+     Progress 0.5
+    }
+    ButtonWidgetClass "{647EC0B4E7C39C8F}" {
+     Name "CreateChannel"
+     Slot FrameWidgetSlot "{647EC0B4E7C39CEB}" {
+      Anchor 0 0 1 1
+      PositionX 170
+      OffsetLeft 170
+      PositionY 0
+      OffsetTop 0
+      SizeX -170
+      OffsetRight 0
+      SizeY -420
+      OffsetBottom 420
+     }
+     Color 1 1 1 0
+     components {
+      SCR_ButtonTextComponent "{647EC0B5D00C78E7}" {
+      }
+     }
+     {
+      ImageWidgetClass "{647EC0B4F6BC5B9B}" {
+       Name "Image0"
+       Slot ButtonWidgetSlot "{647EC0B4F6BC5BFD}" {
+        HorizontalAlign 3
+        VerticalAlign 3
+        Padding 5 5 5 5
+       }
+       Texture "{891903C5BA01F743}UI/data/plus.edds"
+       Size 528 528
+       "Transition width" 0.49
+       Progress 0.51
+      }
+     }
+    }
+    PanelWidgetClass "{647EC0B5A19BC79B}" {
+     Name "Panel0"
+     Slot FrameWidgetSlot "{647EC0B5A19BC7F4}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 170
+      PositionY 0
+      OffsetTop 0
+      SizeX -100
+      OffsetRight 0
+      SizeY -420
+      OffsetBottom 420
+     }
+    }
+    OverlayWidgetClass "{647E43660F306C74}" : "{94CAAE4A601195D3}UI/layouts/ListBox/ListBox.layout" {
+     Name "VONChannels"
+     Slot FrameWidgetSlot "{647E43660F306C52}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 30
+      SizeX -168
+      OffsetRight 0
+      SizeY -397
+      OffsetBottom 0
+     }
+     components {
+      SCR_ListBoxComponent "{566C9415BAA54E1B}" {
+       Enabled 0
+      }
+      CRF_ListboxComponent "{647E436DB4EEB762}" {
+      }
+     }
+     {
+      ImageWidgetClass "{5DB6D18100D38307}" {
+       Prefab "{5DB6D18100D38307}"
+       "Is Visible" 0
+      }
+     }
     }
    }
   }
