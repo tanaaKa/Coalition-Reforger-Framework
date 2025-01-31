@@ -20,7 +20,8 @@ SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR
              coords -32.938 0.04 -10.117
              {
               SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
-               coords 329.037 -40.24 -121.491
+               coords 321.07 0.439 -20.712
+               angleX 0.895
               }
              }
             }
