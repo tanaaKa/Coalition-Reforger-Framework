@@ -11,6 +11,13 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  coords 2916.002 1.379 3377.442
  m_iTimeLimitMinutes 80
  m_aMissionDescriptors {
+  CRF_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "New game type: RUSH"\
+   "Attackers must destroy two MCOMs station in linear order from zone 1 to zone 3. Each time both MCOMs in a sector are destroyed, dead players are respawned to reinforce."\
+   ""\
+   "BLUFOR Composition: Infantry"\
+   "OPFOR Composition: Infantry"
+  }
   CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "Defend the MCOMs from destruction in the active sectors."\
    ""\
@@ -18,6 +25,14 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Each zone has two MCOMs."\
    ""\
    "Only one zone is active at a time, starting with zone 1, and ending with zone 3. If a zone's MCOMs are both destroyed, you will be respawned at the furthest point away."
+  }
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTextData "Attack the MCOMs in the sectors in linear order."\
+   ""\
+   "There are three zones."\
+   "Each zone has two MCOMs."\
+   ""\
+   "Only one zone is active at a time, starting with zone 1, and ending with zone 3. If a zone's MCOMs are both destroyed, you will be respawned at your spawn point."
   }
   CRF_MissionDescriptor "{6442505149CF6C93}" {
    m_sTextData "Players respawn once both MCOMs in a sector are destroyed."\
