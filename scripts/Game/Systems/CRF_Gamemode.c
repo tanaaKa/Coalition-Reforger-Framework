@@ -484,6 +484,33 @@ class CRF_Gamemode : SCR_BaseGameMode
 		Rpc(RpcDo_EnterGame, playerID);
 	}
 	
+	void RespawnPlayerRplId(int playerID, string prefab, vector position, RplId groupID)
+	{
+		if(RplSession.Mode() != RplMode.Dedicated)
+		{
+			Print("ONLY RUN RespawnPlayer ON SERVER");
+			return;
+		}
+		EntitySpawnParams spawnParams = new EntitySpawnParams();
+        spawnParams.TransformMode = ETransformMode.WORLD;
+		vector finalSpawnLocation = vector.Zero;
+		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, position, 3);
+        spawnParams.Transform[3] = finalSpawnLocation;
+		IEntity newEntity = GetGame().SpawnEntityPrefab(Resource.Load(prefab),GetGame().GetWorld(),spawnParams);
+		GetGame().GetCallqueue().CallLater(RespawnPlayerRplIdDelay, 100, false, playerID, groupID, newEntity);
+	}
+	
+	void RespawnPlayerRplIdDelay(int playerID, RplId groupID, IEntity newEntity)
+	{
+		SCR_AIGroup playerGroup = SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID);
+		SCR_AIGroup aiGroup = SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aGroupRplIDs.Get(m_aActivePlayerGroupsIDs.Find(RplComponent.Cast(playerGroup.FindComponent(RplComponent)).Id())))).GetEntity());
+		aiGroup.AddAIEntityToGroup(newEntity);
+		int index = AddPlayableEntity(newEntity);
+		SetSlot(m_aSlots.Find(playerID), -2);
+		SetSlot(index, playerID);
+		Rpc(RpcDo_EnterGame, playerID);
+	}
+	
 	//------------------------------------------------------------------------------------------------
 	// Respawn Ticket System
 	//------------------------------------------------------------------------------------------------
@@ -707,12 +734,18 @@ class CRF_Gamemode : SCR_BaseGameMode
 		// foreach dead player, get their information and call the respawn method in the game mode
 		foreach(int player: allPlayers)
 		{
+			if(!m_aSlots.Contains(player))
+				continue;
 			if (SCR_FactionManager.SGetPlayerFaction(player).GetFactionKey() == "SPEC")
 			{
 				// TODO: SALAMI FIX THIS PLS
-				IEntity ent = SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aEntitySlots.Find(RplComponent.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(player).FindComponent(RplComponent)).Id())))))).GetEntity());
-				string groupId = ent.Get
-				RespawnPlayer(playerID, respawnPrefab, finalSpawnLocation, groupID);
+				RplId groupId = m_aActivePlayerGroupsIDs.Get(m_aGroupRplIDs.Find(m_aPlayerGroupIDs.Get(m_aSlots.Find(player))));
+				vector respawnPoint;
+				if (SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(groupId)).GetEntity()).GetFaction().GetFactionKey() == "BLUFOR")
+					respawnPoint = GetGame().GetWorld().FindEntityByName("BLUSPAWN").GetOrigin();
+				else
+					respawnPoint = GetGame().GetWorld().FindEntityByName("OPFSPAWN").GetOrigin();
+				RespawnPlayerRplId(player, m_aSlotPrefabs.Get(m_aSlots.Find(player)), respawnPoint, groupId);
 			}
 		}
 	}
