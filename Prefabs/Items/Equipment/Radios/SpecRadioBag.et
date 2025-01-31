@@ -6,10 +6,10 @@ GenericEntity : "{5879D8E9C56E358E}Prefabs/Items/Equipment/Radios/Radio_Deployab
    "Turned on" 1
    Transceivers {
     RadioTransceiver "{5EA4A89F0D06E18F}" {
-     "Transmitting Range" 100000
-     "Min tunable frequency" 1
+     "Transmitting Range" 1000
+     "Min tunable frequency" 1000
      "Max tunable frequency" 100000
-     "Frequency resolution" 1
+     "Frequency resolution" 1000
     }
    }
   }

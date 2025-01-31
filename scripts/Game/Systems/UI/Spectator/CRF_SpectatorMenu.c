@@ -33,6 +33,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	protected Widget m_wCivButton;
 	protected Widget m_wSlotSelector;
 	protected FrameWidget m_wFrameSlots;
+	protected FrameWidget m_wFrameChannels;
 	protected SCR_PlayerController pc;
 	protected IEntity m_eSpecEntity;
 	protected Animation m_aAnimation;
@@ -86,6 +87,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		m_wCivButton = m_wRoot.FindAnyWidget("CIVSelectButton");
 		m_wFrameSlots = FrameWidget.Cast(m_wRoot.FindAnyWidget("FrameSlots"));
 		m_wSlotSelector = m_wRoot.FindAnyWidget("SlotSelector");
+		m_wFrameChannels = FrameWidget.Cast(m_wRoot.FindAnyWidget("VONSlots"));
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wBluforButton).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionBlufor);
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wOpforButton).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionOpfor);
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wIndforButton).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionIndfor);
@@ -197,6 +199,8 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		WidgetManager.GetMousePos(x, y);
 		float leftSlotX = FrameSlot.GetPosX(m_wFrameSlots);
 		float leftSlotY = FrameSlot.GetPosY(m_wFrameSlots);
+		float leftVONX = FrameSlot.GetPosX(m_wFrameChannels);
+		float leftVONY = FrameSlot.GetPosY(m_wFrameChannels);
 		if (x <= leftSlotX + 200 && y >= leftSlotY - 225 && y <= leftSlotY + 255)
 		{
 			leftSlotX += tDelta * 2400.0;
@@ -211,6 +215,22 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 				leftSlotX = -175;
 			FrameSlot.SetPosX(m_wFrameSlots, leftSlotX);
 		}
+//		if (x >= leftVONX + 1047 && y >= leftVONY - 225 && y <= leftVONY + 255)
+//		{
+//			leftVONX += tDelta * 2400.0;
+//			if (leftVONX > -200)
+//				leftVONX = -200;
+//			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
+//		}
+//		else
+//		{
+//			leftVONX -= tDelta * 2400.0;
+//			if (leftVONX < -20)
+//				leftVONX = -20;
+//			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
+//		}
+		
+		
 		
 		UpdateIcons();
 		if (localSlotChanges != m_Gamemode.m_iSlotChanges)

@@ -4,14 +4,15 @@ FrameWidgetClass {
   VerticalLayoutWidgetClass "{647EC0B17BD68D22}" {
    Name "Requests"
    Slot FrameWidgetSlot "{647EC0B17BD68D05}" {
-    PositionX 1427.71
-    OffsetLeft 1427.71
-    PositionY 755.427
-    OffsetTop 755.427
+    Anchor 1 0.789 1 0.789
+    PositionX -492.29
+    OffsetLeft -492.29
+    PositionY -135.517
+    OffsetTop -135.517
     SizeX 482.74
-    OffsetRight -1910.45
-    SizeY 267.611
-    OffsetBottom -1023.04
+    OffsetRight 9.55
+    SizeY 267.613
+    OffsetBottom -132.096
    }
   }
   ImageWidgetClass "{647E1B31CF26F149}" {
@@ -738,15 +739,15 @@ FrameWidgetClass {
   FrameWidgetClass "{647E22D9C0CCB25C}" {
    Name "VONSlots"
    Slot FrameWidgetSlot "{647D656C336F799E}" {
-    Anchor 1 0 1 0
-    PositionX -294.121
-    OffsetLeft -294.121
-    PositionY 261
-    OffsetTop 261
+    Anchor 1 0.447 1 0.447
+    PositionX -200
+    OffsetLeft -200
+    PositionY -222.187
+    OffsetTop -222.187
     SizeX 200
-    OffsetRight 94.121
+    OffsetRight 0
     SizeY 450
-    OffsetBottom -711
+    OffsetBottom -227.813
    }
    {
     ImageWidgetClass "{647E22D9FE2396DB}" {
