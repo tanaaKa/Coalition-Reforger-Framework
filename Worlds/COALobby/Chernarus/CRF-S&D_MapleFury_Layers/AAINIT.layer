@@ -4,6 +4,8 @@ SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
  components {
   CRF_SearchAndDestroyGameModeComponent "{647F1D65F505226F}" {
+   attackingSide "OPFOR"
+   defendingSide "BLUFOR"
   }
  }
  coords 3252.783 201.152 12908.505
@@ -41,7 +43,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   m_rGearScript "{D7B22F98968C6317}Configs/Gearscripts/Standard/Modern/CRF_GS_RHSATACS.conf"
  }
  {
-  SCR_FactionManager {
+  SCR_FactionManager "647F784542980D2D" {
    ID "632A77473B3CC3A8"
    Factions {
     SCR_Faction "{628B22E9B4056C88}" {
