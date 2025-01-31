@@ -309,12 +309,6 @@ $grp GenericEntity : "{8B9AFAD3A1548FCE}Prefabs/Destructible/AmmoStorage/GMFX_Am
   "			IEntity zoneMarkers = GetGame().GetWorld().FindEntityByName(\"zone3markers\");"\
   "			SCR_EntityHelper.DeleteEntityAndChildren(zoneMarkers);"\
   "			SCR_PopUpNotification.GetInstance().PopupMsg(\"Attacker Victory\", duration: 10);"\
-  "			"\
-  "			//respawn the players"\
-  "			if (RplSession.Mode() == RplMode.Dedicated) {"\
-  "				CRF_Gamemode gm = CRF_Gamemode.GetInstance();"\
-  "				gm.RushRespawnPlayers();"\
-  "			}"\
   "		}"\
   "	"
   {
@@ -363,12 +357,6 @@ $grp GenericEntity : "{8B9AFAD3A1548FCE}Prefabs/Destructible/AmmoStorage/GMFX_Am
   "			IEntity zoneMarkers = GetGame().GetWorld().FindEntityByName(\"zone3markers\");"\
   "			SCR_EntityHelper.DeleteEntityAndChildren(zoneMarkers);"\
   "			SCR_PopUpNotification.GetInstance().PopupMsg(\"Attacker Victory\", duration: 10);"\
-  "			"\
-  "			//respawn the players"\
-  "			if (RplSession.Mode() == RplMode.Dedicated) {"\
-  "				CRF_Gamemode gm = CRF_Gamemode.GetInstance();"\
-  "				gm.RushRespawnPlayers();"\
-  "			}"\
   "		}"\
   "	"
   {
