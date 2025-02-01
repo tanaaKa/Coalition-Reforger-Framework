@@ -44,6 +44,10 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iFactionOneRatio 2
  m_sFactionOneKey "OPF"
  m_sFactionTwoKey "BLU"
+ m_bRespawnEnabled 1
+ m_bDisbleRespawnTimer 1
+ m_iBLUFORTickets -1
+ m_iOPFORTickets 80
  {
   SCR_FactionManager "647F1E723B2DFAED" {
    ID "632A77473B3CC3A8"

@@ -153,7 +153,7 @@ modded class SCR_PlayerController
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
 	void RpcDo_RespawnWithTicket(int playerID, int groupID)
 	{
-		CRF_Gamemode.GetInstance().RespawnPlayerTicket(playerID, groupID);
+		CRF_Gamemode.GetInstance().RespawnPlayerTicket(playerID);
 	}
 	
 	void UpdateCameraPos(vector cameraPos[4])
@@ -253,6 +253,7 @@ modded class SCR_PlayerController
 		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.CRF_SlottingMenu);
 		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.CRF_SpectatorMenu);
 		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.CRF_AARMenu);
+		GetGame().GetMenuManager().CloseMenuByPreset(ChimeraMenuPreset.CRF_RespawnMenu);
 		Rpc(RpcDo_EnterGame, playerID);
 		if(CRF_Gamemode.GetInstance().m_aSlots.Find(playerID) == -1)
 			EnterSpectator();
