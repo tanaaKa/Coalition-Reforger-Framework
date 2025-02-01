@@ -1,0 +1,177 @@
+GenericEntity : "{4CC2C69DE1AEF103}Prefabs/Props/Core/Destructible_Props_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  MeshObject "{5872F0EB7FA40561}" {
+   Object "{3867B82950462875}Assets/Props/Military/InteractionPoints/VehicleService/VehicleService_Barrels_USSR_01.xob"
+  }
+  RigidBody "{5872F0EB7DFB5A9D}" {
+   ModelGeometry 1
+  }
+  SCR_CampaignBuildingProviderComponent "{6447525E56AFDDEF}" {
+   m_sProviderDisplayName "#AR-Campaign_Building_RepairDepot-UC"
+   m_bUserActionActivationOnly 1
+   m_bRegisterAtBase 1
+   m_bObstructViewWhenEnemyInRange 0
+   m_fBuildingRadius 25
+   m_aBudgetsToEvaluate {
+    SCR_CampaignBuildingBudgetToEvaluateData "{6447525E56AFDDD9}" {
+     m_eBudget CAMPAIGN
+    }
+    SCR_CampaignBuildingCooldownWithRankBudgetToEvaluateData "{6447525E56AFDDD4}" {
+     m_eBudget COOLDOWN
+     m_aCustomCooldownData {
+      SCR_CooldownData "{6447525E56AFDDD2}" {
+       m_fDefaultTimeMultiplier 105
+      }
+      SCR_CooldownData "{6447525E56AFDDD0}" {
+       m_eRank CORPORAL
+       m_fDefaultTimeMultiplier 75
+      }
+      SCR_CooldownData "{6447525E56AFDDCE}" {
+       m_eRank SERGEANT
+       m_fDefaultTimeMultiplier 50
+      }
+      SCR_CooldownData "{6447525E56AFDDCC}" {
+       m_eRank LIEUTENANT
+       m_fDefaultTimeMultiplier 30
+      }
+      SCR_CooldownData "{6447525E56AFDDCD}" {
+       m_eRank CAPTAIN
+       m_fDefaultTimeMultiplier 30
+      }
+      SCR_CooldownData "{6447525E56AFDDCA}" {
+       m_eRank MAJOR
+       m_fDefaultTimeMultiplier 5
+      }
+      SCR_CooldownData "{6447525E56AFDDCB}" {
+       m_eRank COLONEL
+      }
+      SCR_CooldownData "{6447525E56AFDDC9}" {
+       m_eRank RENEGADE
+       m_fDefaultTimeMultiplier 1000
+      }
+     }
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDC7}" {
+     m_eBudget RANK_PRIVATE
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDC4}" {
+     m_eBudget RANK_CORPORAL
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDBD}" {
+     m_eBudget RANK_SERGEANT
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDBA}" {
+     m_eBudget RANK_LIEUTENANT
+    }
+    SCR_CampaignBuildingCooldownBudgetToEvaluateData "{6447525E56AFDDB8}" {
+     m_eBudget RANK_CAPTAIN
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDB9}" {
+     m_eBudget RANK_MAJOR
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDB6}" {
+     m_eBudget RANK_COLONEL
+    }
+    SCR_CampaignBuildingRankBudgetToEvaluateData "{6447525E56AFDDB7}" {
+     m_eBudget RANK_GENERAL
+    }
+   }
+   m_aAvailableTraits {
+    50
+   }
+  }
+  SCR_CatalogEntitySpawnerComponent "{6447525E56AFDDB2}" {
+   m_bNeedAllLabels 0
+   m_bSuppliesConsumptionEnabled 1
+   m_bEnableGracePeriod 1
+   m_fGracePeriodTime 60
+   m_fGracePeriodAreaRange 250
+   m_fPostGracePeriodRefundMultiplier 0.25
+  }
+  SCR_DestructionMultiPhaseComponent "{5624A88D86EFE8BA}" {
+   "Additional hit zones" {
+    SCR_HitZone Default {
+     DamageReduction 20
+     DamageThreshold 20
+    }
+   }
+   m_fBaseHealth 3000
+   m_fDamageThresholdMaximum 50000
+   m_DestroySpawnObjects {
+    SCR_DebrisSpawnable "{6447525E56AFDDA9}" {
+     m_ModelPrefabs {
+      "{8CCFCF3FF1FCE17F}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_08.xob" "{8487C1CC5A772E3A}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_01.xob"
+     }
+     m_fMass 50
+     m_fRandomVelocityLinear 2
+     m_eMaterialSoundType METAL_LIGHT
+    }
+    SCR_DebrisSpawnable "{6447525E56AFDDA3}" {
+     m_ModelPrefabs {
+      "{708F865457AA464E}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_11.xob" "{FBC5A7B7055E0E0F}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_09.xob" "{0785EEDCA308A93E}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_10.xob"
+     }
+     m_fMass 20
+     m_fRandomVelocityLinear 1
+     m_eMaterialSoundType METAL_HEAVY
+    }
+    SCR_DebrisSpawnable "{6447525E56AFDD9A}" {
+     m_ModelPrefabs {
+      "{F44A5315C8537B89}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_07.xob" "{83403B9D3CF194F9}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_06.xob" "{1A5E82042116A569}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_05.xob" "{6A9310DDB332F0DA}Assets/Props/Military/InteractionPoints/VehicleService/Dst/VehicleService_Barrels_USSR_01_dst_01_dbr_03.xob"
+     }
+     m_fRandomVelocityLinear 1
+     m_eMaterialSoundType WOOD_PLANK_SMALL
+    }
+    SCR_ParticleSpawnable "{6447525E56AFDD98}" {
+     m_Particle "{66DAEB775AA8CA4C}Particles/Props/Dest_Prop_Metal_Medium.ptc"
+    }
+    SCR_ParticleSpawnable "{6447525E56AFDD8A}" {
+     m_Particle "{63D673751320F318}Particles/Props/Dest_Prop_Wood_Medium.ptc"
+    }
+   }
+   m_eMaterialSoundType BREAK_METAL
+  }
+  SCR_FactionAffiliationComponent "{6447525E56AFDD86}" {
+  }
+  SCR_ResourceComponent "{6447525E56AFDD87}" {
+   m_aConsumers {
+    SCR_ResourceConsumerServicePoint "{5DB899358AF453B9}" : "{9E04136E4EA1D3D4}Configs/Resources/Supplies/Consumers/Consumer_Spawner_Vehicle.conf" {
+    }
+   }
+   m_aGenerators {
+    SCR_ResourceGeneratorServicePoint "{5DB89935F419B998}" : "{850AA9151282BB5C}Configs/Resources/Supplies/Generators/Generator_Spawner_Vehicle.conf" {
+    }
+   }
+  }
+  ActionsManagerComponent "{6447525E56AFDD81}" {
+   ActionContexts {
+    UserActionContext "{6447525E56AFDD7F}" {
+     ContextName "SCR_CatalogSpawnerUserAction"
+     Position PointInfo "{6447525E56AFDD7A}" {
+      Offset 0 1.2 0.25
+     }
+     Radius 0.5
+    }
+   }
+   additionalActions {
+    SCR_CampaignBuildingStartUserAction "{6447525E56AFDD77}" {
+     ParentContextList {
+      "SCR_CatalogSpawnerUserAction"
+     }
+     UIInfo UIInfo "{6447525E56AFDD75}" {
+      Name "#AR-Action_RequestVehicle-UC"
+     }
+     VisibilityRange 10
+     Duration 2
+     m_sActionNameNoSupplies "#AR-Action_RequestVehicle_NoSupplies-UC"
+    }
+   }
+  }
+  RplComponent "{5624A88DC2D9928D}" {
+   Enabled 1
+  }
+  Hierarchy "{6447525E56AFDD71}" {
+   Enabled 1
+  }
+ }
+}

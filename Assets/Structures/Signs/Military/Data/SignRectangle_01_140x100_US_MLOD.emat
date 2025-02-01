@@ -1,0 +1,5 @@
+MatPBRBasic {
+ Color 0.456 0.456 0.456 1
+ MetalnessScale 0
+ BCRMap "{F2B5E966604EBAA8}Assets/Structures/Signs/COALSign.edds"
+}
