@@ -292,11 +292,17 @@ modded class SCR_PlayerController
 				radioEntity = item;
 		}
 		
+		if (!radioEntity)
+			return;
+		
 		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
 		BaseTransceiver tsv = radio.GetTransceiver(0);
 
 		// Set Player's Freq to whatever group they are in
 		SCR_GroupsManagerComponent m_GroupManager = SCR_GroupsManagerComponent.GetInstance();
+		if (!m_GroupManager)
+			return;
+		
 		SCR_AIGroup group = m_GroupManager.GetPlayerGroup(SCR_PlayerController.GetLocalPlayerId());
 		PlayerController pc = GetGame().GetPlayerController();
 		if (pc)
@@ -305,8 +311,6 @@ modded class SCR_PlayerController
 			if (rhc)
 				rhc.SetFrequency(tsv, group.GetRadioFrequency());
 		}
-		
-		Print(group.GetRadioFrequency());
 		
 	}
 	
