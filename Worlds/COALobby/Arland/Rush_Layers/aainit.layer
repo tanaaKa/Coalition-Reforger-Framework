@@ -46,6 +46,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_sFactionTwoKey "BLU"
  m_bRespawnEnabled 1
  m_bDisbleRespawnTimer 1
+ m_iTimeToRespawn 5
  m_iBLUFORTickets -1
  m_iOPFORTickets 80
  {
@@ -57,6 +58,9 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
       m_aSquadNames {
        SCR_CallsignInfo "{647F1E75A5CAC8B8}" {
         m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{648354AF89356C25}" {
+        m_sCallsign "1-5"
        }
       }
      }
