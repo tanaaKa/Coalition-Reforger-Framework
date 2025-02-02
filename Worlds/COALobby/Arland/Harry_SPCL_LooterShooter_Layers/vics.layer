@@ -1,0 +1,23 @@
+$grp SCR_VehicleSpawn {
+ {
+  coords 1193.208 39 2714.653
+  angleY -16.583
+  m_rnPrefab "{F5763805919D0553}Prefabs/Vehicles/Helicopters/AH6M/AH6M_base.et"
+  respawnDelay 10000
+  firstSpawn 420
+ }
+ {
+  coords 1193.09 39 2714.254
+  angleY -16.583
+  m_rnPrefab "{F5763805919D0553}Prefabs/Vehicles/Helicopters/AH6M/AH6M_base.et"
+  respawnDelay 10000
+  firstSpawn 840
+ }
+ {
+  coords 1193.09 39 2714.254
+  angleY -16.583
+  m_rnPrefab "{F5763805919D0553}Prefabs/Vehicles/Helicopters/AH6M/AH6M_base.et"
+  respawnDelay 10000
+  firstSpawn 1260
+ }
+}
