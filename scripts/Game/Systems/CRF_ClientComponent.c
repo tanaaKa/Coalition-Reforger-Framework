@@ -180,7 +180,7 @@ class CRF_ClientComponent: ScriptComponent
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void ReplyAdminMessage(string data)
+	void ReplyAdminMessage(string data, bool logAction)
 	{
 		ref array<string> dataSplit = {};
 		data.Split(" ", dataSplit, false);
@@ -223,61 +223,61 @@ class CRF_ClientComponent: ScriptComponent
 				
 		chatComponent.ShowMessage(string.Format("Message Sent to %2: \"%1\"", toSend, GetGame().GetPlayerManager().GetPlayerName(playerID)));
 		toSend = string.Format("\"%1\"", toSend);
-		Rpc(RpcAsk_ReplyAdminMessage, toSend, playerID);
+		Rpc(RpcAsk_ReplyAdminMessage, toSend, playerID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_ReplyAdminMessage(string data, int playerID)
+	void RpcAsk_ReplyAdminMessage(string data, int playerID, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.ReplyAdminMessage(data, playerID);
+		m_gamemodeComponent.ReplyAdminMessage(data, playerID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Respawn
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void SpawnGroup(int playerID, string prefab, vector spawnLocation, int groupID)
+	void SpawnGroup(int playerID, string prefab, vector spawnLocation, int groupID, bool logAction)
 	{
-		Rpc(RpcAsk_SpawnGroup, playerID, prefab, spawnLocation, groupID);
+		Rpc(RpcAsk_SpawnGroup, playerID, prefab, spawnLocation, groupID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_SpawnGroup(int playerID, string prefab, vector spawnLocation, int groupID)
+	void RpcAsk_SpawnGroup(int playerID, string prefab, vector spawnLocation, int groupID, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.SpawnGroupServer(playerID, prefab, spawnLocation, groupID);
+		m_gamemodeComponent.SpawnGroupServer(playerID, prefab, spawnLocation, groupID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Gear
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void ResetGear(int playerID, string prefab)
+	void ResetGear(int playerID, string prefab, bool logAction)
 	{
-		Rpc(RpcAsk_ResetGear, playerID, prefab);
+		Rpc(RpcAsk_ResetGear, playerID, prefab, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_ResetGear(int playerID, string prefab)
+	void RpcAsk_ResetGear(int playerID, string prefab, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.SetPlayerGear(playerID, prefab);
+		m_gamemodeComponent.SetPlayerGear(playerID, prefab, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void AddItem(int playerID, string prefab)
+	void AddItem(int playerID, string prefab, bool logAction)
 	{
-		Rpc(RpcAsk_AddItem, playerID, prefab);
+		Rpc(RpcAsk_AddItem, playerID, prefab, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_AddItem(int playerID, string prefab)
+	void RpcAsk_AddItem(int playerID, string prefab, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.AddItem(playerID, prefab);
+		m_gamemodeComponent.AddItem(playerID, prefab, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -296,17 +296,17 @@ class CRF_ClientComponent: ScriptComponent
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void TeleportPlayers(int playerID1, int playerID2)
+	void TeleportPlayers(int playerID1, int playerID2, bool logAction)
 	{
-		Rpc(RpcAsk_TeleportPlayers, playerID1, playerID2);
+		Rpc(RpcAsk_TeleportPlayers, playerID1, playerID2, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_TeleportPlayers(int playerID1, int playerID2)
+	void RpcAsk_TeleportPlayers(int playerID1, int playerID2, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.TeleportPlayers(playerID1, playerID2);
+		m_gamemodeComponent.TeleportPlayers(playerID1, playerID2, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -355,30 +355,30 @@ class CRF_ClientComponent: ScriptComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Heal
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void HealPlayer(int playerID)
+	void HealPlayer(int playerID, bool logAction)
 	{
-		Rpc(RpcAsk_HealPlayer, playerID);
+		Rpc(RpcAsk_HealPlayer, playerID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_HealPlayer(int playerID)
+	void RpcAsk_HealPlayer(int playerID, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.HealPlayer(playerID);
+		m_gamemodeComponent.HealPlayer(playerID, logAction);
 	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void HealPlayerVehicle(int playerID)
+	void HealPlayerVehicle(int playerID, bool logAction)
 	{
-		Rpc(RpcAsk_HealPlayerVehicle, playerID);
+		Rpc(RpcAsk_HealPlayerVehicle, playerID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcAsk_HealPlayerVehicle(int playerID)
+	void RpcAsk_HealPlayerVehicle(int playerID, bool logAction)
 	{
 		m_gamemodeComponent = CRF_GamemodeComponent.Cast(GetGame().GetGameMode().FindComponent(CRF_GamemodeComponent));
-		m_gamemodeComponent.HealPlayerVehicle(playerID);
+		m_gamemodeComponent.HealPlayerVehicle(playerID, logAction);
 	}
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Log Admin Action
