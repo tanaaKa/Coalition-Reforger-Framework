@@ -469,7 +469,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
 		vector finalSpawnLocation = vector.Zero;
-		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, position, 3);
+		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, position, 10);
         spawnParams.Transform[3] = finalSpawnLocation;
 		IEntity newEntity = GetGame().SpawnEntityPrefab(Resource.Load(prefab),GetGame().GetWorld(),spawnParams);
 		GetGame().GetCallqueue().CallLater(RespawnPlayerDelay, 100, false, playerID, groupID, newEntity);
@@ -496,7 +496,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		EntitySpawnParams spawnParams = new EntitySpawnParams();
         spawnParams.TransformMode = ETransformMode.WORLD;
 		vector finalSpawnLocation = vector.Zero;
-		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, position, 3);
+		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, position, 10);
         spawnParams.Transform[3] = finalSpawnLocation;
 		IEntity newEntity = GetGame().SpawnEntityPrefab(Resource.Load(prefab),GetGame().GetWorld(),spawnParams);
 		GetGame().GetCallqueue().CallLater(RespawnPlayerRplIdDelay, 100, false, playerID, groupID, newEntity);
@@ -700,7 +700,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 			};
 			
 			Resource resource = Resource.Load(respawnPrefab);
-			SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
+			SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 10);
 			RespawnPlayerRplId(playerID, respawnPrefab, finalSpawnLocation, groupID);
 			m_aDeadPlayers.Remove(m_aDeadPlayers.Find(playerID));
 		}
