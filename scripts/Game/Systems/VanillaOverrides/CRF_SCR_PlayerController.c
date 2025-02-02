@@ -275,6 +275,43 @@ modded class SCR_PlayerController
 			AudioSystem.SetMasterVolume(AudioSystem.SFX, 100);
 		else
 			AudioSystem.SetMasterVolume(AudioSystem.SFX, m_iAudioSetting);
+		
+		GetGame().GetCallqueue().CallLater(SetupRadioFrequency, 1000, false);
+	}
+	
+	void SetupRadioFrequency()
+	{	
+		// Get player's radio
+		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
+		ref array<IEntity> items = {};
+		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
+		IEntity radioEntity;
+		foreach(IEntity item: items)
+		{
+			if(item.FindComponent(BaseRadioComponent))
+				radioEntity = item;
+		}
+		
+		if (!radioEntity)
+			return;
+		
+		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
+		BaseTransceiver tsv = radio.GetTransceiver(0);
+
+		// Set Player's Freq to whatever group they are in
+		SCR_GroupsManagerComponent m_GroupManager = SCR_GroupsManagerComponent.GetInstance();
+		if (!m_GroupManager)
+			return;
+		
+		SCR_AIGroup group = m_GroupManager.GetPlayerGroup(SCR_PlayerController.GetLocalPlayerId());
+		PlayerController pc = GetGame().GetPlayerController();
+		if (pc)
+		{
+			RadioHandlerComponent rhc = RadioHandlerComponent.Cast(pc.FindComponent(RadioHandlerComponent));
+			if (rhc)
+				rhc.SetFrequency(tsv, group.GetRadioFrequency());
+		}
+		
 	}
 	
 	//Communicates to server to enter slot and or get put into a initial entity to spectate
