@@ -17,7 +17,7 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
          coords 37.805 -5.397 2.771
          {
           SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
-           coords -8.117 -3.415 -49.128
+           coords -9.177 -1.175 27.309
           }
          }
         }
