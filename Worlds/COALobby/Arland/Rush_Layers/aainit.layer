@@ -1,0 +1,88 @@
+SCR_AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ coords 2907.058 1.53 3374.521
+}
+CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et" {
+ components {
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_iStartingHours 5
+   m_iStartingMinutes 55
+  }
+ }
+ coords 2916.002 1.379 3377.442
+ m_iTimeLimitMinutes 80
+ m_aMissionDescriptors {
+  CRF_MissionDescriptor "{644250503DF684C0}" {
+   m_sTextData "New game type: RUSH"\
+   "Attackers must destroy two MCOMs station in linear order from zone 1 to zone 3. Each time both MCOMs in a sector are destroyed, dead players are respawned to reinforce."\
+   ""\
+   "BLUFOR Composition: Infantry"\
+   "OPFOR Composition: Infantry"
+  }
+  CRF_MissionDescriptor "{64425051F2E00216}" {
+   m_sTextData "Defend the MCOMs from destruction in the active sectors."\
+   ""\
+   "There are three zones."\
+   "Each zone has two MCOMs."\
+   ""\
+   "Only one zone is active at a time, starting with zone 1, and ending with zone 3. If a zone's MCOMs are both destroyed, you will be respawned at the furthest point away."
+  }
+  CRF_MissionDescriptor "{64425051B9B5AF67}" {
+   m_sTextData "Attack the MCOMs in the sectors in linear order."\
+   ""\
+   "There are three zones."\
+   "Each zone has two MCOMs."\
+   ""\
+   "Only one zone is active at a time, starting with zone 1, and ending with zone 3. If a zone's MCOMs are both destroyed, you will be respawned at your spawn point."
+  }
+  CRF_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData "Players respawn once both MCOMs in a sector are destroyed."\
+   ""\
+   "Do not enter an inactive sector as the attackers."
+   m_bShowForAnyFaction 1
+  }
+ }
+ m_iFactionOneRatio 2
+ m_sFactionOneKey "OPF"
+ m_sFactionTwoKey "BLU"
+ m_bRespawnEnabled 1
+ m_bDisbleRespawnTimer 1
+ m_iBLUFORTickets -1
+ m_iOPFORTickets 80
+ {
+  SCR_FactionManager "647F1E723B2DFAED" {
+   ID "632A77473B3CC3A8"
+   Factions {
+    SCR_Faction "{628B22E9B4056C88}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A6677ADA9E}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{647F1E75A5CAC8B8}" {
+        m_sCallsign "1-4"
+       }
+      }
+     }
+    }
+    SCR_Faction "{628C2D2BFC8C6447}" {
+     m_CallsignInfo SCR_FactionCallsignInfo "{5DA0F2A67DFB8809}" {
+      m_aSquadNames {
+       SCR_CallsignInfo "{647F1E75BC0BB090}" {
+        m_sCallsign "1-4"
+       }
+       SCR_CallsignInfo "{647F1E75BAB27EBD}" {
+        m_sCallsign "WEP A"
+       }
+       SCR_CallsignInfo "{647F1E75B44D98D2}" {
+        m_sCallsign "WEP B"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+GenericEntity OPFSPAWN : "{0B3312C6940005B9}Prefabs/Structures/FlagPoles/RespawnPoles/OPFOR_Respawn.et" {
+ coords 2939.886 1.91 3379.62
+}
+GenericEntity BLUSPAWN : "{62865C82AB534D91}Prefabs/Structures/FlagPoles/RespawnPoles/BLUFOR_Respawn.et" {
+ coords 2220.223 74.193 1112.054
+}

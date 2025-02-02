@@ -12,28 +12,28 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   $grp GenericEntity : "{0B0C600941B2A6A8}Prefabs/Props/Military/Sandbags/Sandbag_01_short_high_plastic.et" {
    {
     ID "62AF22168851545C"
-    coords 0.994 -0.309 -0.491
+    coords 0.994 0 -0.491
     angleY -0.194
    }
    {
     ID "62AF221688517B81"
-    coords -0.943 -0.308 -0.586
+    coords -0.943 0 -0.586
     angleY 1.186
    }
   }
   GenericEntity : "{C1977A326F2AA011}Prefabs/Structures/Signs/Military/SignCheckpoint_01_stop.et" {
    ID "62AF22168852D442"
-   coords -0.688 -0.088 0.192
+   coords -0.688 0.016 0.192
   }
   $grp StaticModelEntity : "{DA1B42FB9AEC02BE}Prefabs/Structures/Military/Fortifications/Dragontooth_01/Dragontooth_01_V3.et" {
    {
     ID "62AF221688517BBC"
-    coords -2.326 -0.309 -0.437
+    coords -2.326 0 -0.437
     angleY -58.609
    }
    {
     ID "62AF22168852D445"
-    coords 2.377 -0.309 -0.494
+    coords 2.377 0 -0.494
     angleY -3.14
    }
   }
