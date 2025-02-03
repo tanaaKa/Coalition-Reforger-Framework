@@ -60,7 +60,8 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
 		GetGame().GetInputManager().AddActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
 		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);	
-		GetGame().GetInputManager().AddActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
+//		 FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI
+//		GetGame().GetInputManager().AddActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
 		InitSlots();
 		if(m_iBluforSlots > 0)
 		{
@@ -281,17 +282,18 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		pc.CreateChannel();
 	}
 	
-	void HideUI()
-	{
-		if (GetGame().GetWorkspace().GetOpacity() == 1)
-		{
-			GetGame().GetWorkspace().SetOpacity(0);
-		}
-		else
-		{
-			GetGame().GetWorkspace().SetOpacity(1);
-		}
-	}
+// FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI
+//	void HideUI()
+//	{
+//		if (GetGame().GetWorkspace().GetOpacity() == 1)
+//		{
+//			GetGame().GetWorkspace().SetOpacity(0);
+//		}
+//		else
+//		{
+//			GetGame().GetWorkspace().SetOpacity(1);
+//		}
+//	}
 	
 	
 	void UpdateChannel()

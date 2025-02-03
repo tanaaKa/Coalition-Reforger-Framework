@@ -283,6 +283,8 @@ modded class SCR_PlayerController
 	{	
 		// Get player's radio
 		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
+		if (entity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			return;
 		ref array<IEntity> items = {};
 		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
 		IEntity radioEntity;

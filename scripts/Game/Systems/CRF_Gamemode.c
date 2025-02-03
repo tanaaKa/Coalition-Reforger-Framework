@@ -1069,8 +1069,10 @@ class CRF_Gamemode : SCR_BaseGameMode
 			return;
 		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent())
 			return;
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().GetParent())
+			return;		
 		
-		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
 		SCR_PlayerController.Cast(GetGame().GetPlayerController()).Accept(comp.m_iPlayerId, comp.m_iChannelId);
 	}
 	
@@ -1078,7 +1080,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 	
 	void Deny()
 	{
-				if (!WidgetManager.GetWidgetUnderCursor())
+		if (!WidgetManager.GetWidgetUnderCursor())
 			return;
 		else if (!WidgetManager.GetWidgetUnderCursor().GetParent())
 			return;
