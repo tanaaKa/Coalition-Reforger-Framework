@@ -135,17 +135,6 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
    {
     components {
      CRF_VehicleSpawner "{64626B666A3B82E3}" {
-      m_rVehicle "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et"
-     }
-    }
-    coords -3.27 -0.762 26.242
-    angleX 3.302
-    angleY -120.398
-    angleZ 0.008
-   }
-   {
-    components {
-     CRF_VehicleSpawner "{64626B666A3B82E3}" {
       m_rVehicle "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et"
      }
     }
@@ -160,7 +149,7 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
       m_rVehicle "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et"
      }
     }
-    coords 1.773 -0.935 23.605
+    coords -2.745 -0.751 24.972
     angleX 3.302
     angleY -120.398
     angleZ 0.008

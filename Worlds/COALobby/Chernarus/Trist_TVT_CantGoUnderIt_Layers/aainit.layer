@@ -12,7 +12,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_iTimeLimitMinutes 60
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "BLUFOR have immoblized an enemy convoy via air; OPFOR forces have hastily pulled important cargo from the convoy and prepare for the coming task-force to destroy the important stationary assets."\
+   m_sTextData "BLUFOR have disabled an enemy convoy via air; OPFOR forces have hastily pulled important cargo from the convoy and prepare for the coming Blu task-force to destroy the immobilized assets."\
    ""\
    "BLUFOR Composition: Mech. Infantry"\
    "BLUFOR Assets: 4x (2 Armed) HMMWV - 2x Unarmed Stryker - 1x Med Vic. - 1x Ural"\
@@ -25,12 +25,14 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "Weather:"
   }
   CRF_MissionDescriptor "{64425051F2E00216}" {
-   m_sTextData "- Navigate towards, search for, and destroy the decoupled OPFOR assets."
+   m_sTextData "- Navigate towards, search for, and destroy the decoupled OPFOR assets as leadership sees fit."\
+   ""
   }
   CRF_MissionDescriptor "{64425051B9B5AF67}" {
-   m_sTextData "- Assess defensive possibilities and deploy remaining convoy assets to defend the important cargo."
+   m_sTextData "- Assess defensive possibilities and deploy remaining convoy assets to defend the important cargo that has been rapidly pulled to safe positions."
   }
   CRF_MissionDescriptor "{6442505149CF6C93}" {
+   m_sTextData ""
   }
  }
  m_iFactionOneRatio 3
