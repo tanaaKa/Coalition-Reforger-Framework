@@ -31,132 +31,146 @@ ButtonWidgetClass {
         HorizontalAlign 0
        }
        {
-        ImageWidgetClass "{647EC0B028F8D8FF}" {
-         Name "Image0"
-         Slot FrameWidgetSlot "{647E4368296252F8}" {
-          Anchor 0 0 1 1
+        FrameWidgetClass "{64853C452196AF45}" {
+         Name "ButtonAnim"
+         Slot FrameWidgetSlot "{64853C452191547E}" {
           PositionX 0
           OffsetLeft 0
           PositionY 0
           OffsetTop 0
-          SizeX 0
-          OffsetRight 0
-          SizeY 0
-          OffsetBottom 0
-         }
-         Color 0.05 0.05 0.05 1
-        }
-        TextWidgetClass "{647EC0B028F8D8E2}" {
-         Name "PlayerName"
-         Slot FrameWidgetSlot "{630A2568FA12B1F6}" {
-          Anchor 0 0 0 0
-          PositionX 2.439
-          OffsetLeft 2.439
-          PositionY 0.004
-          OffsetTop 0.004
-          SizeX 478.319
-          OffsetRight -480.758
-          SizeY 36.366
-          OffsetBottom -36.37
-         }
-         Clipping Ancestor
-         Color 1 1 1 0.843
-         Text "Salami's Requesting To Join"
-         "Min Font Size" 5
-         Wrap 1
-        }
-        ButtonWidgetClass "{647EC0B028F8D8E1}" {
-         Name "Accept"
-         Slot FrameWidgetSlot "{630510543BD8CBB1}" {
-          Anchor 0 0 1 1
-          PositionX 403.224
-          OffsetLeft 403.224
-          PositionY 0
-          OffsetTop 0
-          SizeX -443.224
-          OffsetRight 40
-          SizeY -7.134
-          OffsetBottom 7
-         }
-         Color 1 1 1 0
-         components {
-          ButtonComponent "{647E5AEB00BB8021}" {
-           m_ColorButtonDefault 0 0 0 0
-           m_sSoundClicked ""
-           m_sSoundFocused ""
-           m_sSoundHovered ""
-          }
-          SCR_ButtonTextComponent "{647E5AEB2CA3F4D1}" {
-           m_sSoundHovered ""
-           m_sSoundClicked ""
-           m_BackgroundSelected 0.76 0.392 0.08 0.3
-           m_TextToggled 0.761 0.386 0.078 1
-          }
+          SizeX 480.1
+          OffsetRight -480.1
+          SizeY 37.9
+          OffsetBottom -37.9
          }
          {
-          ImageWidgetClass "{647EC0B052952445}" {
-           Name "Image0"
-           Slot ButtonWidgetSlot "{647EC0B0529524A8}" {
+          ImageWidgetClass "{647EC0B028F8D8FF}" {
+           Name "Image2"
+           Slot FrameWidgetSlot "{647E4368296252F8}" {
+            Anchor 0 0 1 1
+            PositionX 0
+            OffsetLeft 0
+            PositionY 0
+            OffsetTop 0
+            SizeX 0
+            OffsetRight 0
+            SizeY 0
+            OffsetBottom 0
            }
-           Texture "{7DEEE956159B85D2}UI/data/check.edds"
-           Size 528 528
+           Color 0.05 0.05 0.05 1
           }
-         }
-        }
-        ButtonWidgetClass "{647EC0B0BBEAFADB}" {
-         Name "Deny"
-         Slot FrameWidgetSlot "{630510543BD8CBB1}" {
-          Anchor 0 0 1 1
-          PositionX 403.224
-          OffsetLeft 443.224
-          PositionY 0
-          OffsetTop 0
-          SizeX -442.395
-          OffsetRight 0
-          SizeY 0
-          OffsetBottom 7
-         }
-         Color 1 1 1 0
-         components {
-          ButtonComponent "{647E5AEB00BB8021}" {
-           m_ColorButtonDefault 0 0 0 0
-           m_sSoundClicked ""
-           m_sSoundFocused ""
-           m_sSoundHovered ""
-          }
-          SCR_ButtonTextComponent "{647E5AEB2CA3F4D1}" {
-           m_sSoundHovered ""
-           m_sSoundClicked ""
-           m_BackgroundSelected 0.76 0.392 0.08 0.3
-           m_TextToggled 0.761 0.386 0.078 1
-          }
-         }
-         {
-          ImageWidgetClass "{647EC0B0BBEAFADD}" {
-           Name "Image0"
-           Slot ButtonWidgetSlot "{647EC0B0529524A8}" {
+          ProgressBarWidgetClass "{647EC0B1051898A0}" {
+           Name "ProgressBar"
+           Slot FrameWidgetSlot "{647EC0B10518989D}" {
+            Anchor 0 0 1 1
+            PositionX 0
+            OffsetLeft 0
+            PositionY 27.401
+            OffsetTop 27.401
+            SizeX 0
+            OffsetRight 0
+            SizeY -27.815
+            OffsetBottom 0.414
            }
-           Texture "{BA29CA05FF6FE474}UI/data/cross.edds"
-           Size 528 528
+           Maximum 10
+           Current 10
+           "Draw Background" 0
+          }
+          TextWidgetClass "{647EC0B028F8D8E2}" {
+           Name "PlayerName"
+           Slot FrameWidgetSlot "{64853C455F50C453}" {
+            PositionX 0
+            OffsetLeft 0
+            PositionY 0
+            OffsetTop 0
+            SizeX 395.003
+            OffsetRight -395.003
+            SizeY 30
+            OffsetBottom -30
+           }
+           Clipping Ancestor
+           Color 1 1 1 0.843
+           Text "Salami's Requesting To Join"
+           "Min Font Size" 5
+           Wrap 1
+          }
+          ButtonWidgetClass "{647EC0B0BBEAFADB}" {
+           Name "Deny"
+           Slot FrameWidgetSlot "{630510543BD8CBB1}" {
+            Anchor 0 0 1 1
+            PositionX 443.224
+            OffsetLeft 443.224
+            PositionY -0.479
+            OffsetTop -0.479
+            SizeX -443.224
+            OffsetRight 0
+            SizeY -7
+            OffsetBottom 7.479
+           }
+           Color 1 1 1 0
+           components {
+            ButtonComponent "{647E5AEB00BB8021}" {
+             m_ColorButtonDefault 0 0 0 0
+             m_sSoundClicked ""
+             m_sSoundFocused ""
+             m_sSoundHovered ""
+            }
+            SCR_ButtonTextComponent "{647E5AEB2CA3F4D1}" {
+             m_sSoundHovered ""
+             m_sSoundClicked ""
+             m_BackgroundSelected 0.76 0.392 0.08 0.3
+             m_TextToggled 0.761 0.386 0.078 1
+            }
+           }
+           {
+            ImageWidgetClass "{647EC0B0BBEAFADD}" {
+             Name "Image1"
+             Slot ButtonWidgetSlot "{64853C585E07733D}" {
+             }
+             Texture "{BA29CA05FF6FE474}UI/data/cross.edds"
+             Size 528 528
+            }
+           }
+          }
+          ButtonWidgetClass "{647EC0B028F8D8E1}" {
+           Name "Accept"
+           Slot FrameWidgetSlot "{630510543BD8CBB1}" {
+            Anchor 0 0 1 1
+            PositionX 402.707
+            OffsetLeft 402.707
+            PositionY -0.44
+            OffsetTop -0.44
+            SizeX -443.225
+            OffsetRight 40.518
+            SizeY -7
+            OffsetBottom 7.44
+           }
+           Color 1 1 1 0
+           components {
+            ButtonComponent "{647E5AEB00BB8021}" {
+             m_ColorButtonDefault 0 0 0 0
+             m_sSoundClicked ""
+             m_sSoundFocused ""
+             m_sSoundHovered ""
+            }
+            SCR_ButtonTextComponent "{647E5AEB2CA3F4D1}" {
+             m_sSoundHovered ""
+             m_sSoundClicked ""
+             m_BackgroundSelected 0.76 0.392 0.08 0.3
+             m_TextToggled 0.761 0.386 0.078 1
+            }
+           }
+           {
+            ImageWidgetClass "{647EC0B052952445}" {
+             Name "Image0"
+             Slot ButtonWidgetSlot "{64853C585E0773B7}" {
+             }
+             Texture "{7DEEE956159B85D2}UI/data/check.edds"
+             Size 528 528
+            }
+           }
           }
          }
-        }
-        ProgressBarWidgetClass "{647EC0B1051898A0}" {
-         Name "ProgressBar"
-         Slot FrameWidgetSlot "{647EC0B10518989D}" {
-          Anchor 0 0 1 1
-          PositionX 0
-          OffsetLeft 0
-          PositionY 29.511
-          OffsetTop 29.511
-          SizeX 0
-          OffsetRight 0
-          SizeY -27.815
-          OffsetBottom -1.696
-         }
-         Maximum 10
-         Current 10
-         "Draw Background" 0
         }
        }
       }

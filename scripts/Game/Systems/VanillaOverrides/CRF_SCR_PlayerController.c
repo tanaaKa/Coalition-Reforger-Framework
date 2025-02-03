@@ -29,9 +29,9 @@ modded class SCR_PlayerController
 		GetGame().GetInputManager().AddActionListener("CRF_OpenLobby", EActionTrigger.PRESSED, OpenMenu);
 		GetGame().GetInputManager().AddActionListener("CRF_EnterListening", EActionTrigger.PRESSED, Action_SetListening);
 		GetGame().GetInputManager().AddActionListener("CRF_SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		
 		PlayerJoined();
 	}
-	
 	// Toggle Spec NVG
 	void ActivateAction()
 	{
@@ -53,7 +53,7 @@ modded class SCR_PlayerController
 		SCR_ScreenEffectsManager.GetScreenEffectsDisplay().RHS_SetHDR("{765A5E642D09A4B8}Common/Postprocess/HDR_Vanila.emat", false);
 	}
 	
-	override private void OnControlledEntityChanged(IEntity from, IEntity to)
+	override void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
 		if(m_bActivated)
@@ -316,7 +316,7 @@ modded class SCR_PlayerController
 		if(SCR_EditorManagerEntity.GetInstance().IsOpened())
 			return;
 		
-		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{E1FF38EC8894C5F3}Prefabs/Editor/Camera/ManualCameraSpectate.et"), GetGame().GetWorld(), params);
+		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{AB89533BD3719519}Prefabs/Editor/Camera/ManualCameraPhoto.et"), GetGame().GetWorld(), params);
 		CheckVONRegister();
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_SpectatorMenu);
 		GetGame().GetCameraManager().SetCamera(CameraBase.Cast(m_eCamera));

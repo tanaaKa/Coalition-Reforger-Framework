@@ -7,6 +7,7 @@ class CRF_ListBoxElementComponent: SCR_ListBoxElementComponent
 	int m_iPlayerId;
 	int m_iChannelId;
 	CRF_Gamemode m_Gamemode = CRF_Gamemode.GetInstance();	
+	bool m_bDeleteRequest = false;
 	SCR_ButtonTextComponent GetAccept()
 	{
 		return SCR_ButtonTextComponent.Cast(m_wRoot.FindAnyWidget("Accept").FindHandler(SCR_ButtonTextComponent));

@@ -71,35 +71,6 @@ ButtonWidgetClass {
          "Vertical Alignment" Center
          Wrap 1
         }
-        ButtonWidgetClass "{647E4362EEC8DF0F}" {
-         Name "PlayerButton"
-         Slot FrameWidgetSlot "{630510543BD8CBB1}" {
-          Anchor 0 0 1 1
-          PositionX 38.075
-          PositionY 0
-          OffsetTop 0
-          SizeX -38.4
-          OffsetRight 0
-          SizeY 0
-          OffsetBottom 0
-         }
-         "Z Order" 10
-         Color 1 1 1 0.012
-         components {
-          ButtonComponent "{6305105441730952}" {
-           m_ColorButtonDefault 0 0 0 0
-           m_sSoundClicked ""
-           m_sSoundFocused ""
-           m_sSoundHovered ""
-          }
-          SCR_ButtonTextComponent "{630510843AEEE3AD}" {
-           m_sSoundHovered ""
-           m_sSoundClicked ""
-           m_BackgroundSelected 0.76 0.392 0.08 0.3
-           m_TextToggled 0.761 0.386 0.078 1
-          }
-         }
-        }
        }
       }
      }

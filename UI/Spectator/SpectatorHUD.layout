@@ -1,6 +1,58 @@
 FrameWidgetClass {
  Name "SpectatorMenu"
  {
+  FrameWidgetClass "{64841DF9BC770635}" {
+   Name "LogoFrame"
+   Slot FrameWidgetSlot "{64841DF9BC770615}" {
+    Anchor 0.5 1 0.5 1
+    PositionX -100
+    OffsetLeft -100
+    PositionY -176.318
+    OffsetTop -176.318
+    SizeX 200
+    OffsetRight -100
+    SizeY 201.248
+    OffsetBottom -24.93
+   }
+   {
+    TextWidgetClass "{64841DF907816162}" {
+     Name "Text0"
+     Slot FrameWidgetSlot "{64841DF907816149}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft 0
+      PositionY 159.486
+      OffsetTop 159.486
+      SizeX 0
+      OffsetRight 0
+      SizeY -145
+      OffsetBottom -14.486
+     }
+     Color 1 1 1 0.745
+     Text "DISCORD.GG/THE-COALITION"
+     "Font Size" 9
+     "Min Font Size" 9
+     "Horizontal Alignment" Center
+    }
+    ImageWidgetClass "{6483581F5342B000}" {
+     Name "Logo"
+     Slot FrameWidgetSlot "{6483581F5342B042}" {
+      Anchor 0 0 1 1
+      PositionX 30
+      OffsetLeft 30
+      PositionY 26.903
+      OffsetTop 26.903
+      SizeX -60
+      OffsetRight 30
+      SizeY -60.611
+      OffsetBottom 33.708
+     }
+     Color 0.434 0.043 0.043 0.75
+     Texture "{19769D9272BEC68A}UI/data/coalitionlarge.edds"
+     Size 1000 1000
+    }
+   }
+  }
   VerticalLayoutWidgetClass "{647EC0B17BD68D22}" {
    Name "Requests"
    Slot FrameWidgetSlot "{647EC0B17BD68D05}" {
@@ -49,14 +101,14 @@ FrameWidgetClass {
   FrameWidgetClass "{5EB701CD498F59EC}" : "{B7A765172F0BD4D9}UI/layouts/Common/GameVersionWatermark.layout" {
    Name "EarlyAccessRoot"
    Slot FrameWidgetSlot "{5CEE96372B5D270B}" {
-    PositionX 0
-    OffsetLeft 0
-    PositionY 0
-    OffsetTop 0
+    PositionX -25.552
+    OffsetLeft -25.552
+    PositionY 14.219
+    OffsetTop 14.219
     SizeX 0
-    OffsetRight 0
+    OffsetRight 25.552
     SizeY 0
-    OffsetBottom 0
+    OffsetBottom -14.219
    }
    Opacity 1
   }
@@ -318,16 +370,55 @@ FrameWidgetClass {
    Name "FrameSlots"
    Slot FrameWidgetSlot "{647D656C336F799E}" {
     Anchor 0 0 0 0
-    PositionX -180
-    OffsetLeft -180
+    PositionX -200
+    OffsetLeft -200
     PositionY 261
     OffsetTop 261
-    SizeX 200
+    SizeX 220
     OffsetRight -20
     SizeY 450
     OffsetBottom -711
    }
    {
+    ImageWidgetClass "{64853C4C99DB2715}" {
+     Name "SliderBGL"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX 153.057
+      OffsetLeft 153.057
+      PositionY 160
+      OffsetTop 180
+      SizeX -121.847
+      OffsetRight -31.211
+      SizeY -320
+      OffsetBottom 180
+     }
+     Color 0.133 0.133 0.133 0.353
+     Texture "{123C22FEC78BBCF7}UI/data/tab.edds"
+     Size 640 360
+     "Transition width" 0.71
+     Progress 0.5
+    }
+    ImageWidgetClass "{64853C4CB4048D1D}" {
+     Name "ArrowL"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX 185.6
+      OffsetLeft 185.6
+      PositionY 206.409
+      OffsetTop 206.409
+      SizeX -169.788
+      OffsetRight -15.812
+      SizeY -413.809
+      OffsetBottom 207.4
+     }
+     Color 1 1 1 0.353
+     Rotation 270
+     Texture "{D45AE7F19DBF4021}UI/Textures/InventoryIcons/Medical/lines_UI.edds"
+     Size 64 64
+     "Transition width" 0.71
+     Progress 0.5
+    }
     ImageWidgetClass "{647D7DAD3D825970}" {
      Name "BG"
      Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
@@ -337,11 +428,11 @@ FrameWidgetClass {
       PositionY 0
       OffsetTop 0
       SizeX 0
-      OffsetRight 0
+      OffsetRight 20
       SizeY 0
       OffsetBottom 0
      }
-     Color 0.134 0.134 0.134 1
+     Color 0.133 0.133 0.133 1
      "Transition width" 0.71
      Progress 0.5
     }
@@ -364,14 +455,15 @@ FrameWidgetClass {
      Name "BLUButton"
      Slot FrameWidgetSlot "{647D656FAA7995C7}" {
       Anchor 0 0 1 1
-      PositionX 783.3
-      PositionY 178.6
+      PositionX 0
+      OffsetLeft 0
+      PositionY 0
+      OffsetTop 0
       SizeX -150
-      OffsetRight 150
+      OffsetRight 170
       SizeY -400
       OffsetBottom 400
      }
-     "Is Visible" 0
      {
       ImageWidgetClass "{647D656FBD995174}" {
        Name "BG"
@@ -454,11 +546,10 @@ FrameWidgetClass {
       OffsetLeft 50
       PositionY 178.6
       SizeX -150
-      OffsetRight 100
+      OffsetRight 120
       SizeY -400
       OffsetBottom 400
      }
-     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7EE34985}" {
        Name "BG"
@@ -541,11 +632,10 @@ FrameWidgetClass {
       OffsetLeft 100
       PositionY 178.6
       SizeX -150
-      OffsetRight 50
+      OffsetRight 70
       SizeY -400
       OffsetBottom 400
      }
-     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7585593E}" {
        Name "BG"
@@ -628,11 +718,10 @@ FrameWidgetClass {
       OffsetLeft 150
       PositionY 178.6
       SizeX -150
-      OffsetRight 0
+      OffsetRight 20
       SizeY -400
       OffsetBottom 400
      }
-     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7488BC46}" {
        Name "BG"
@@ -716,7 +805,7 @@ FrameWidgetClass {
       PositionY 268
       OffsetTop 50
       SizeX 0
-      OffsetRight 0
+      OffsetRight 20
       SizeY 202.4
       OffsetBottom 0
      }
@@ -739,23 +828,62 @@ FrameWidgetClass {
   FrameWidgetClass "{647E22D9C0CCB25C}" {
    Name "VONSlots"
    Slot FrameWidgetSlot "{647D656C336F799E}" {
-    Anchor 1 0.447 1 0.447
-    PositionX -200
-    OffsetLeft -200
-    PositionY -222.187
-    OffsetTop -222.187
-    SizeX 200
-    OffsetRight 0
+    Anchor 1 0 1 0
+    PositionX -20
+    OffsetLeft -20
+    PositionY 265.6
+    OffsetTop 265.6
+    SizeX 220
+    OffsetRight -200
     SizeY 450
-    OffsetBottom -227.813
+    OffsetBottom -715.6
    }
    {
+    ImageWidgetClass "{64853C4DC8DDBBC6}" {
+     Name "SliderBGR"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX 0
+      OffsetLeft -20
+      PositionY 180
+      OffsetTop 180
+      SizeX -153.057
+      OffsetRight 173
+      SizeY -360
+      OffsetBottom 180
+     }
+     Color 0.133 0.133 0.133 0.353
+     Texture "{123C22FEC78BBCF7}UI/data/tab.edds"
+     Size 640 360
+     "Transition width" 0.71
+     Progress 0.5
+    }
+    ImageWidgetClass "{64853C4DC8DDBA0F}" {
+     Name "ArrowR"
+     Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
+      Anchor 0 0 1 1
+      PositionX -12.823
+      OffsetLeft -12.823
+      PositionY 206.409
+      OffsetTop 206.409
+      SizeX -169.788
+      OffsetRight 182.61
+      SizeY -413.809
+      OffsetBottom 207.4
+     }
+     Color 1 1 1 0.353
+     Rotation 90
+     Texture "{D45AE7F19DBF4021}UI/Textures/InventoryIcons/Medical/lines_UI.edds"
+     Size 64 64
+     "Transition width" 0.71
+     Progress 0.5
+    }
     ImageWidgetClass "{647E22D9FE2396DB}" {
      Name "BG"
      Slot FrameWidgetSlot "{647D7DAD3D82594A}" {
       Anchor 0 0 1 1
       PositionX 0
-      OffsetLeft 0
+      OffsetLeft 20
       PositionY 0
       OffsetTop 0
       SizeX 0
@@ -772,7 +900,7 @@ FrameWidgetClass {
      Slot FrameWidgetSlot "{647EC0B4E7C39CEB}" {
       Anchor 0 0 1 1
       PositionX 170
-      OffsetLeft 170
+      OffsetLeft 190
       PositionY 0
       OffsetTop 0
       SizeX -170
@@ -805,7 +933,7 @@ FrameWidgetClass {
      Slot FrameWidgetSlot "{647EC0B5A19BC7F4}" {
       Anchor 0 0 1 1
       PositionX 0
-      OffsetLeft 170
+      OffsetLeft 190
       PositionY 0
       OffsetTop 0
       SizeX -100
@@ -819,7 +947,7 @@ FrameWidgetClass {
      Slot FrameWidgetSlot "{647E43660F306C52}" {
       Anchor 0 0 1 1
       PositionX 0
-      OffsetLeft 0
+      OffsetLeft 20
       PositionY 0
       OffsetTop 30
       SizeX -168
@@ -838,6 +966,86 @@ FrameWidgetClass {
       ImageWidgetClass "{5DB6D18100D38307}" {
        Prefab "{5DB6D18100D38307}"
        "Is Visible" 0
+      }
+     }
+    }
+   }
+  }
+  FrameWidgetClass "{64841DFA6C3BEF46}" {
+   Name "CompassHiddenFrame"
+   Slot FrameWidgetSlot "{633533821239C89D}" {
+    Anchor 0.5 0 0.5 0
+    PositionX -365.513
+    OffsetLeft -365.513
+    PositionY 12.515
+    OffsetTop 12.515
+    SizeX 740.243
+    OffsetRight -374.73
+    SizeY 30.005
+    OffsetBottom -42.52
+   }
+   {
+    FrameWidgetClass "{64841DFA6C3BEF48}" {
+     Name "CompassFrameMoveable"
+     Slot FrameWidgetSlot "{6335338329D60774}" {
+      Anchor 0 0 1 1
+      PositionX -1102.38
+      OffsetLeft -1102.38
+      PositionY -67.785
+      OffsetTop -67.785
+      SizeX 3840
+      OffsetRight -2737.62
+      SizeY 1058
+      OffsetBottom -990.214
+     }
+     {
+      ImageWidgetClass "{64841DFA6C3BEF49}" {
+       Name "Compass"
+       Slot FrameWidgetSlot "{6335338FD7906532}" {
+        Anchor 0 0 1 1
+        PositionX 1470.35
+        OffsetLeft 1470.35
+        PositionY 0
+        OffsetTop 0
+        SizeX -2697.69
+        OffsetRight 1227.34
+        SizeY 0
+        OffsetBottom 0
+       }
+       Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
+       Size 1920 1080
+      }
+      ImageWidgetClass "{64841DFA6C3BEF4A}" {
+       Name "Compass0"
+       Slot FrameWidgetSlot "{6335338FD7906532}" {
+        Anchor 0 0 1 1
+        PositionX -448.188
+        OffsetLeft -448.188
+        PositionY -0.306
+        OffsetTop -0.306
+        SizeX -2661.9
+        OffsetRight 3110.08
+        SizeY 0
+        OffsetBottom 0.306
+       }
+       Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
+       Size 1920 1080
+      }
+      ImageWidgetClass "{64841DFA6C3BEF4B}" {
+       Name "Compass1"
+       Slot FrameWidgetSlot "{6335338FD7906532}" {
+        Anchor 0 0 1 1
+        PositionX 3350.02
+        OffsetLeft 3350.02
+        PositionY 0.364
+        OffsetTop 0.364
+        SizeX -2661.9
+        OffsetRight -688.115
+        SizeY 0
+        OffsetBottom -0.364
+       }
+       Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
+       Size 1920 1080
       }
      }
     }

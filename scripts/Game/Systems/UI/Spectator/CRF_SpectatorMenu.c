@@ -39,6 +39,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	protected Animation m_aAnimation;
 	protected int m_iLocalChannelUpdates = 0;
 	ref array<Widget> m_aRequest = {};
+	protected bool m_bHideUi = false;
 	
 	override void OnMenuOpen()
 	{
@@ -58,7 +59,8 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("VONDirect", EActionTrigger.UP, Action_VONOff);
 		GetGame().GetInputManager().AddActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
 		GetGame().GetInputManager().AddActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
-		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
+		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);	
+		GetGame().GetInputManager().AddActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
 		InitSlots();
 		if(m_iBluforSlots > 0)
 		{
@@ -95,10 +97,22 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("CreateChannel")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(CreateChannel);
 	}
 	
+	void UpdateCompass()
+	{
+		float yaw = -pc.m_eCamera.GetYawPitchRoll()[0];
+		float yawFloat = -yaw;
+		
+		if (yawFloat < 0) 
+			yawFloat = 360 - Math.AbsFloat(yawFloat);
+		
+		FrameSlot.SetOffsets(FrameWidget.Cast(m_wRoot.FindAnyWidget("CompassFrameMoveable")), -1090 - 1880 * (yawFloat / 360), -63, -2750 + 1880 * (yawFloat / 360), -995);
+	}
 	
 	
 	override void OnMenuUpdate(float tDelta)
 	{
+		UpdateCompass();
+		
 		if(pc.m_bIsListening)
 			m_wRoot.FindAnyWidget("Listening").SetVisible(true);
 		else
@@ -120,8 +134,26 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 				continue;			
 			}
 			
+			if (comp.m_bDeleteRequest)
+			{
+				if (FrameSlot.GetPosX(request.FindAnyWidget("ButtonAnim")) > 500)
+				{
+					request.RemoveFromHierarchy();
+					m_aRequest.RemoveOrdered(m_aRequest.Find(request));
+					continue;
+				}
+				FrameSlot.SetPosX(request.FindAnyWidget("ButtonAnim"), FrameSlot.GetPosX(request.FindAnyWidget("ButtonAnim")) + tDelta * 2000);
+				continue;
+			}
+			else if (FrameSlot.GetPosX(request.FindAnyWidget("ButtonAnim")) > 0)
+			{
+				if (FrameSlot.GetPosX(request.FindAnyWidget("ButtonAnim")) - tDelta * 2000 > 0)
+					FrameSlot.SetPosX(request.FindAnyWidget("ButtonAnim"), FrameSlot.GetPosX(request.FindAnyWidget("ButtonAnim")) - tDelta * 2000);
+				else 
+					FrameSlot.SetPosX(request.FindAnyWidget("ButtonAnim"), 0);
+			}
+			
 			comp.GetProgress().SetCurrent(comp.GetProgress().GetCurrent() - tDelta);
-			Print(comp.GetProgress().GetCurrent());
 			if (comp.GetProgress().GetCurrent() <= 0)
 			{
 				request.RemoveFromHierarchy();
@@ -140,29 +172,11 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 			}
 			else
 			{
-				//From RL
-				int boneHead = m_aAnimation.GetBoneIndex("Head");
-				int boneEyeLeft = m_aAnimation.GetBoneIndex("rightEye");
-				vector mat[4];
-				m_eSpecEntity.GetTransform(mat);
-				vector matHead[4];
-				m_aAnimation.GetBoneMatrix(boneHead, matHead);
-				vector matEyeLeft[4];
-				m_aAnimation.GetBoneMatrix(boneEyeLeft, matEyeLeft);
-				vector matRes[4];
-				Math3D.MatrixMultiply4(mat, matHead, matRes);
-				vector matResEye[4];
-				Math3D.MatrixMultiply4(mat, matEyeLeft, matResEye);
-				vector matScale[3] = { "1 0 0", "0 1 0", "0 0 -1" };
-				vector matRes2[4];
-				Math3D.MatrixMultiply3(matRes, matScale, matRes2);
-				vector angles = Math3D.MatrixToAngles(matRes2);
-				angles[2] = 0.0;
-				angles[1] = angles[1] + 10.0;
-				angles[0] = angles[0] - 5.0;
-				Math3D.AnglesToMatrix(angles, matRes2);
-				matRes2[3] = matResEye[3];
-				pc.m_eCamera.SetTransform(matRes2);
+				SlotManagerComponent slotComp = SlotManagerComponent.Cast(m_eSpecEntity.FindComponent(SlotManagerComponent));
+				EntitySlotInfo camera = slotComp.GetSlotByName("CRF_FPP");
+				vector transform[4];
+				camera.GetTransform(transform);
+				pc.m_eCamera.SetTransform(transform);
 			}
 		}
 		
@@ -197,40 +211,50 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		int x;
 		int y;
 		WidgetManager.GetMousePos(x, y);
+		float sX;
+		float sY;
+		y = GetGame().GetWorkspace().DPIUnscale(y);
+		m_wRoot.GetScreenSize(sX, sY);
 		float leftSlotX = FrameSlot.GetPosX(m_wFrameSlots);
 		float leftSlotY = FrameSlot.GetPosY(m_wFrameSlots);
 		float leftVONX = FrameSlot.GetPosX(m_wFrameChannels);
 		float leftVONY = FrameSlot.GetPosY(m_wFrameChannels);
-		if (x <= leftSlotX + 200 && y >= leftSlotY - 225 && y <= leftSlotY + 255)
+		if (x <= leftSlotX + 220 && y >= leftSlotY && y <= leftSlotY + 450)
 		{
 			leftSlotX += tDelta * 2400.0;
 			if (leftSlotX > 0)
 				leftSlotX = 0;
 			FrameSlot.SetPosX(m_wFrameSlots, leftSlotX);
+			m_wRoot.FindAnyWidget("SliderBGL").SetVisible(false);
+			m_wRoot.FindAnyWidget("ArrowL").SetVisible(false);
 		}
 		else
 		{
 			leftSlotX -= tDelta * 2400.0;
-			if (leftSlotX < -175)
-				leftSlotX = -175;
+			if (leftSlotX < -200)
+				leftSlotX = -200;
 			FrameSlot.SetPosX(m_wFrameSlots, leftSlotX);
+			m_wRoot.FindAnyWidget("SliderBGL").SetVisible(true);
+			m_wRoot.FindAnyWidget("ArrowL").SetVisible(true);
 		}
-//		if (x >= leftVONX + 1047 && y >= leftVONY - 225 && y <= leftVONY + 255)
-//		{
-//			leftVONX += tDelta * 2400.0;
-//			if (leftVONX > -200)
-//				leftVONX = -200;
-//			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
-//		}
-//		else
-//		{
-//			leftVONX -= tDelta * 2400.0;
-//			if (leftVONX < -20)
-//				leftVONX = -20;
-//			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
-//		}
-		
-		
+		if (x >= leftVONX -20 + sX && y >= leftVONY && y <= leftVONY + 450)
+		{
+			leftVONX -= tDelta * 2400.0;
+			if (leftVONX < -220)
+				leftVONX = -220;
+			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
+			m_wRoot.FindAnyWidget("SliderBGR").SetVisible(false);
+			m_wRoot.FindAnyWidget("ArrowR").SetVisible(false);
+		}
+		else
+		{
+			leftVONX += tDelta * 2400.0;
+			if (leftVONX > -20)
+				leftVONX = -20;
+			FrameSlot.SetPosX(m_wFrameChannels, leftVONX);
+			m_wRoot.FindAnyWidget("SliderBGR").SetVisible(true);
+			m_wRoot.FindAnyWidget("ArrowR").SetVisible(true);
+		}
 		
 		UpdateIcons();
 		if (localSlotChanges != m_Gamemode.m_iSlotChanges)
@@ -256,6 +280,19 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		}
 		pc.CreateChannel();
 	}
+	
+	void HideUI()
+	{
+		if (GetGame().GetWorkspace().GetOpacity() == 1)
+		{
+			GetGame().GetWorkspace().SetOpacity(0);
+		}
+		else
+		{
+			GetGame().GetWorkspace().SetOpacity(1);
+		}
+	}
+	
 	
 	void UpdateChannel()
 	{
@@ -291,7 +328,11 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		if (m_Gamemode.GetChannel(SCR_PlayerController.GetLocalPlayerId()) == 0)
 			SetRadioPower(false);
 		else
+		{
 			SetRadioPower(true);
+			SetRadioFreq();
+		}
+		
 	}
 	
 	void JoinChannelDelay()
@@ -568,7 +609,11 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().RemoveActionListener("GadgetMap", EActionTrigger.DOWN, Action_ToggleMap);
 		GetGame().GetInputManager().RemoveActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
 		GetGame().GetInputManager().RemoveActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);
-		
+		GetGame().GetInputManager().RemoveActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
+		if (GetGame().GetWorkspace().GetOpacity() == 0)
+		{
+			GetGame().GetWorkspace().SetOpacity(1);
+		}
 		SCR_NotificationSenderComponent sender = SCR_NotificationSenderComponent.Cast(GetGame().GetGameMode().FindComponent(SCR_NotificationSenderComponent));
 		sender.SetKillFeedTypeNoneLocal();
 	}
@@ -663,9 +708,28 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
 		radio.SetPower(true);
 		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
-		float multiplier = m_Gamemode.GetChannel(SCR_PlayerController.GetLocalPlayerId());
-		transiver.SetFrequency(1000 * multiplier);
 		return transiver;
+	}
+	
+	void SetRadioFreq()
+	{
+		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
+		ref array<IEntity> items = {};
+		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
+		IEntity radioEntity;
+		foreach(IEntity item: items)
+		{
+			if (item.FindComponent(BaseRadioComponent))
+				radioEntity = item;
+		}
+		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
+		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
+		float multiplier = m_Gamemode.GetChannel(SCR_PlayerController.GetLocalPlayerId());
+		RadioHandlerComponent rhc = RadioHandlerComponent.Cast(GetGame().GetPlayerController().FindComponent(RadioHandlerComponent));
+		if (rhc)
+			rhc.SetFrequency(transiver, 1000*multiplier); // Set new frequency
+		else 
+			return;
 	}
 	
 	void SetRadioPower(bool input)

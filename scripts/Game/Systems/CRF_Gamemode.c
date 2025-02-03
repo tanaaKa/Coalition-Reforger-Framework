@@ -888,7 +888,6 @@ class CRF_Gamemode : SCR_BaseGameMode
 					m_aVONChannels.RemoveOrdered(m_aVONChannels.Find(channel));
 			}
 		}
-		Print(m_aVONChannels);
 		m_iChannelChanges++;
 		Replication.BumpMe();
 	}
@@ -1029,6 +1028,7 @@ class CRF_Gamemode : SCR_BaseGameMode
 		comp.m_iChannelId = channel;
 		comp.GetAccept().m_OnClicked.Insert(Accept);
 		comp.GetDeny().m_OnClicked.Insert(Deny);
+		FrameSlot.SetPosX(compWidget.FindAnyWidget("ButtonAnim"), 500);
 	}
 	
 	void Accept()
@@ -1062,8 +1062,9 @@ class CRF_Gamemode : SCR_BaseGameMode
 			return;
 		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent())
 			return;
-		
-		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
+		else if (!WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().GetParent())
+			return;		
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(WidgetManager.GetWidgetUnderCursor().GetParent().GetParent().GetParent().GetParent().GetParent().FindHandler(CRF_ListBoxElementComponent));
 
 		ref array<int> players = {};
 		GetGame().GetPlayerManager().GetAllPlayers(players);
@@ -1093,8 +1094,9 @@ class CRF_Gamemode : SCR_BaseGameMode
 			
 			if (requestId == comp.m_iPlayerId)
 			{
-				request.RemoveFromHierarchy();
-				specMenu.m_aRequest.RemoveOrdered(specMenu.m_aRequest.Find(request));
+				comp.GetAccept().m_OnClicked.Clear();
+				comp.GetDeny().m_OnClicked.Clear();
+				comp.m_bDeleteRequest = true;
 				return;			
 			}
 		}
