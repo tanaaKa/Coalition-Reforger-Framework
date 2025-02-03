@@ -67,24 +67,24 @@ FrameWidgetClass {
      {
       TextWidgetClass "{64513E6BA88819E1}" {
        Name "timerTitle"
-       Slot LayoutSlot {
+       Slot LayoutSlot "{6482C9A2A85AFDA9}" {
         HorizontalAlign 1
         VerticalAlign 1
        }
        "Z Order" 2
-       Text "Respawn in -"
+       Text "Respawn in"
        "Font Size" 100
        "Vertical Alignment" Center
       }
       TextWidgetClass "{64513E6B670CEF98}" {
        Name "timerCountDown"
-       Slot LayoutSlot {
+       Slot LayoutSlot "{6482C9A2A85AFD87}" {
         HorizontalAlign 1
         VerticalAlign 1
         Padding 16 0 0 0
        }
        "Z Order" 2
-       Text "00:00:00"
+       Text "--:--:--"
        "Font Size" 100
        "Vertical Alignment" Center
       }
