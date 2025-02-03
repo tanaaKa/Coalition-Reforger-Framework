@@ -396,7 +396,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	{
 		for(int i = 0; i < m_Gamemode.m_aEntitySlots.Count(); i++)
 		{
-			if(m_Gamemode.m_aSlots.Get(i) == -1 || m_Gamemode.m_aSlots.Get(i) == -2)
+			if(m_Gamemode.m_aSlots.Get(i) == -1 || m_Gamemode.m_aSlots.Get(i) == 0)
 				continue;
 			
 			switch(SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_Gamemode.m_aPlayerGroupIDs.Get(i))).GetEntity()).GetFaction().GetFactionKey())
@@ -549,7 +549,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 					continue;
 				}
 				
-				if (m_Gamemode.m_aSlots.Get(g) == 0 && m_Gamemode.m_aEntityDeathStatus.Get(g) == true)
+				if (m_Gamemode.m_aSlots.Get(g) == 0 || m_Gamemode.m_aEntityDeathStatus.Get(g) == true)
 					continue;
 				
 				int index = m_wPlayerSlots.AddItemSpecSlot(null , m_Gamemode.m_aEntitySlots.Get(g));
