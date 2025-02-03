@@ -29,7 +29,7 @@ class CRF_TeleportPlayerAction : ScriptedUserAction
 		};
 
 		if(!m_sGearscriptToSet.IsEmpty())
-			CRF_GamemodeComponent.GetInstance().SetupAddGearToEntity(SCR_PlayerController.GetLocalControlledEntity(), m_sGearscriptToSet);
+			CRF_ClientComponent.GetInstance().ResetGear(SCR_PlayerController.GetLocalPlayerId(), m_sGearscriptToSet, false);
 	}
 	
 	//------------------------------------------------------------------------------------------------
