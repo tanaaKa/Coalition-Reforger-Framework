@@ -7,23 +7,28 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    attackingSide "BLUFOR"
    defendingSide "OPFOR"
   }
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_iStartingHours 16
+   m_iRangeHoursStart 16
+   m_iRangeHoursEnd 16
+  }
  }
  coords 474.922 171.766 5470.188
  m_iTimeLimitMinutes 60
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "BLUFOR have disabled an enemy convoy via air; OPFOR forces have hastily pulled aside important cargo from the convoy and prepare for the coming BLU task-force to destroy the immobilized assets."\
+   m_sTextData "BLUFOR have disabled an enemy convoy via air outside Krona castle. OPFOR forces have hastily pulled aside important cargo from the convoy and prepare for the coming BLU task-force to destroy the immobilized assets."\
    ""\
-   "BLUFOR Comp: Mech. Inf. / 1x Spclst."\
+   "BLUFOR Comp: Mech. Inf. / 1x Spec. Sqds"\
    "BLUFOR Assets: 4x (2 Armed) HMMWV"\
    "2x Unarmed Stryker"\
    "1x Med Vic. / 3x Ural"\
    ""\
-   "OPFOR Comp: Mech. Inf. / 2x Spclst."\
+   "OPFOR Comp: Mech. Inf. / 2x Spec. Sqds"\
    "OPFOR Assets: 2x BTR / 2x UAZ"\
    " 1x Med Vic. / 2x Ural"\
    ""\
-   "Time:"\
+   "Time: 8:00 AM"\
    "Weather: Clear"
   }
   CRF_MissionDescriptor "{64425051F2E00216}" {
@@ -31,7 +36,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    ""
   }
   CRF_MissionDescriptor "{64425051B9B5AF67}" {
-   m_sTextData "- Assess defensive possibilities and deploy remaining convoy assets to defend the important cargo that has been rapidly pulled to safe positions."
+   m_sTextData "- Assess defensive possibilities and deploy remaining convoy assets to defend the important immobilized cargo."
   }
   CRF_MissionDescriptor "{6442505149CF6C93}" {
    m_sTextData ""

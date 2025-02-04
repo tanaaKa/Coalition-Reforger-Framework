@@ -96,6 +96,10 @@ $grp ParticleEffectEntity {
   EffectPath "{95553AB60791FCD8}Particles/Vehicle/Vehicle_smoke_M998_damaged_black_02.ptc"
  }
 }
+SCR_DestructibleBuildingEntity : "{07452F959762A7C0}Prefabs/Structures/Agriculture/CowShed/CowShed_E_01_short_Base.et" {
+ coords 1829.177 0.645 9089.385
+ angleY -68.749
+}
 GenericEntity : "{0AE066857BE2F66E}Prefabs/Structures/Walls/Brick/BrickWall_02/dst/Brick_wall_02_8m_dst_01.et" {
  coords 1964.772 285.683 9110.704
  angleY 3.588
