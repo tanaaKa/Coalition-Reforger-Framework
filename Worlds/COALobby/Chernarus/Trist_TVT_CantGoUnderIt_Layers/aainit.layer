@@ -18,7 +18,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    "BLUFOR Assets: 4x (2 Armed) HMMWV - 2x Unarmed Stryker - 1x Med Vic. - 1x Ural"\
    ""\
    "OPFOR Composition: Mech. Infantry"\
-   "OPFOR Assets: 1x BTR - 3x UAZ - 1x Med Vic. - 4x Ural"\
+   "OPFOR Assets: 2x BTR - 2x UAZ - 1x Med Vic. - 2x Ural"\
    ""\
    "Time:"\
    ""\
@@ -62,7 +62,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
         m_sCallsign "1-2"
        }
        SCR_CallsignInfo "{647733DC2D77D64E}" {
-        m_sCallsign "1-3"
+        m_sCallsign "1-3 (MMG)"
        }
        SCR_CallsignInfo "{647733DC2DA8C631}" {
         m_sCallsign "1-4"
@@ -72,6 +72,15 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
        }
        SCR_CallsignInfo "{647733DC10151A0E}" {
         m_sCallsign "1-6"
+       }
+       SCR_CallsignInfo "{64872DA882A15199}" {
+        m_sCallsign "1-7"
+       }
+       SCR_CallsignInfo "{64872DA61A431E57}" {
+        m_sCallsign "1-8"
+       }
+       SCR_CallsignInfo "{64872D9F332EE0D3}" {
+        m_sCallsign "1-9"
        }
       }
      }
@@ -92,13 +101,19 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
         m_sCallsign "1-3 (MMG)"
        }
        SCR_CallsignInfo "{647733DC06BA09D5}" {
-        m_sCallsign "1-4"
+        m_sCallsign "1-4 (Sniper)"
        }
        SCR_CallsignInfo "{647733DC06FE49F8}" {
-        m_sCallsign "1-5 (Sniper)"
+        m_sCallsign "1-5"
        }
        SCR_CallsignInfo "{647733DC4982AE4B}" {
-        m_sCallsign "BTR Crew"
+        m_sCallsign "1-6"
+       }
+       SCR_CallsignInfo "{64872D81A64E6C28}" {
+        m_sCallsign "BTR 1"
+       }
+       SCR_CallsignInfo "{64872D9CC526D98A}" {
+        m_sCallsign "BTR 2"
        }
       }
      }

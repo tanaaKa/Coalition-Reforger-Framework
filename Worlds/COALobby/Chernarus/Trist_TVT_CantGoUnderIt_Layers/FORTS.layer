@@ -83,6 +83,10 @@ GenericEntity {
   }
  }
 }
+SCR_DestructibleBuildingEntity : "{034A45B0D41025B9}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01_Corner.et" {
+ coords 1463.548 -0.938 9229.061
+ angleY -29.938
+}
 GenericEntity : "{0AE066857BE2F66E}Prefabs/Structures/Walls/Brick/BrickWall_02/dst/Brick_wall_02_8m_dst_01.et" {
  coords 1964.772 285.683 9110.704
  angleY 3.588
@@ -94,6 +98,12 @@ GenericEntity : "{0BA7560DF9956747}PrefabLibrary/Structures/Addons/Doorstep_02_S
 SCR_DestructibleBuildingEntity : "{12310677867A85D4}Prefabs/Structures/Industrial/Houses/Warehouse_01/Warehouse_01.et" {
  coords 1980.196 -0.002 9003.684
  angleY -165.064
+}
+GenericEntity : "{1236588FCEA4848F}PrefabsEditable/Auto/Compositions/Slotted/SlotRoadMedium/E_Barricade_M_USSR_01.et" {
+ coords 1500.643 299.902 9172.691
+ angleX -6.854
+ angleY 4.425
+ angleZ 9.763
 }
 SCR_DestructibleBuildingEntity : "{184042D4EAE59FF5}Prefabs/Structures/Houses/Village/House_Village_E_1I02/House_Village_E_1I02_ruin.et" {
  coords 1980.922 -0.301 9114.047
@@ -107,6 +117,10 @@ SCR_DestructibleEntity : "{41F8299CD443A595}Prefabs/Structures/Walls/Brick/Brick
  coords 1955.707 0.691 9119.541
  angleY 96.554
 }
+SCR_DestructibleBuildingEntity : "{4ED653FEE1B9D8AB}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_03.et" {
+ coords 1451.623 -6.91 9249.613
+ angleY 62.389
+}
 SCR_DestructibleBuildingEntity : "{4EEE140BBF69CAB3}Prefabs/Structures/Culture/Castle/Castle Wooden Stairs.et" {
  coords 1412.172 -5.567 9284.243
  angleY -37.209
@@ -118,6 +132,12 @@ StaticModelEntity : "{5FB3A1755261CA59}Prefabs/Compositions/Misc/SubCompositions
 SCR_DestructibleEntity : "{612E8B064E5A13C1}Prefabs/Structures/Walls/Brick/BrickWallOld_01/BrickWallOld_01_End_white.et" {
  coords 1955.208 0.506 9115.061
  angleY 94.951
+}
+SCR_DestructibleBuildingEntity : "{6E10F2B9F8C8BB2C}Prefabs/Structures/Cultural/Castles/Castle_01_OuterWall_01_Round.et" {
+ coords 1338.062 -0.029 9223.886
+ angleX 0.353
+ angleY -4.972
+ angleZ -12.217
 }
 SCR_DestructibleEntity : "{87A7314956146FFC}Prefabs/Structures/Walls/Brick/BrickWallOld_01/BrickWallOld_01_white_4m_A.et" {
  coords 1954.908 0.376 9111.541
@@ -148,6 +168,22 @@ SCR_DestructibleBuildingEntity : "{A809E681B08C2DA3}Prefabs/Structures/Houses/Vi
 SCR_DestructibleBuildingEntity : "{B24F05AE1E7FBBF9}PrefabLibrary/Structures/Houses/House_Wooden_E_1I03.et" {
  coords 1940.726 0.301 9159.192
  angleY -12.138
+}
+GenericEntity : "{B26712B1722C8A09}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Barricade_Logs_03.et" {
+ coords 1512.406 298.231 9176.906
+ angleX -2.922
+ angleY 142.28
+ angleZ -5.295
+}
+GenericEntity : "{B95DE10716B00052}PrefabsEditable/Auto/Compositions/Misc/SubCompositions/E_Barricade_Logs_01.et" {
+ coords 1393.09 289.109 9182.313
+ angleX -11.055
+ angleY 164.927
+ angleZ 15.964
+}
+SCR_DestructibleBuildingEntity : "{DECF116069DCCC2B}Prefabs/Structures/Cultural/Castles/Castle_01_Tower.et" {
+ coords 1456.978 -7.392 9224.668
+ angleY 62.273
 }
 SCR_DestructibleBuildingEntity : "{FD91510268A541A7}PrefabLibrary/Structures/Houses/House_Wooden_E_1I01/House_Wooden_E_1I01_panels.et" {
  coords 1938.887 1.175 9005.821

@@ -12,7 +12,7 @@ SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR
      DefaultFormation "Line"
     }
    }
-   coords 13.505 0 -8.031
+   coords 13.505 0 -8.03
    {
     SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
      components {
@@ -38,29 +38,52 @@ SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR
          }
          coords -24.693 0 10.89
          {
-          SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+          SCR_AIGroup : "{F1CCAEAE38D65D9E}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_SniperTeam_p.et" {
            components {
             AIFormationComponent "{507E9DC12F541FE6}" {
              DefaultFormation "Line"
             }
            }
-           coords 23.206 0 1.86
+           coords -9.132 0 -15.87
+           m_aUnitPrefabSlots {
+            "{9CB623C7B62F4955}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_SL_P.et" "{FC0904D71EF8DB6A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Rifleman_P.et" "{C7C9C22599C40225}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Spotter_P.et" "{C3569C12A6509E8A}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_Sniper_P.et"
+           }
            {
-            SCR_AIGroup : "{F1CCAEAE38D65D9E}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_SniperTeam_p.et" {
+            SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
              components {
               AIFormationComponent "{507E9DC12F541FE6}" {
                DefaultFormation "Line"
               }
              }
-             coords -32.339 0 -17.73
+             coords 32.338 0 17.73
              {
-              SCR_AIGroup : "{803383BB28D07BB9}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_2manVehicleCrew_p.et" {
+              SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
                components {
                 AIFormationComponent "{507E9DC12F541FE6}" {
                  DefaultFormation "Line"
                 }
                }
-               coords -2.676 0 -30.69
+               coords -5.858 0 -15.652
+               {
+                SCR_AIGroup : "{803383BB28D07BB9}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_2manVehicleCrew_p.et" {
+                 components {
+                  AIFormationComponent "{507E9DC12F541FE6}" {
+                   DefaultFormation "Line"
+                  }
+                 }
+                 coords -29.156 0 -32.769
+                 {
+                  SCR_AIGroup : "{803383BB28D07BB9}Prefabs/Groups/OPFOR/Standard/Vehicle/CRF_OPFOR_2manVehicleCrew_p.et" {
+                   components {
+                    AIFormationComponent "{507E9DC12F541FE6}" {
+                     DefaultFormation "Line"
+                    }
+                   }
+                   coords 7.826 0 -0.665
+                  }
+                 }
+                }
+               }
               }
              }
             }
@@ -124,17 +147,6 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
    {
     components {
      CRF_VehicleSpawner "{64626B666A3B82E3}" {
-      m_rVehicle "{E1A99B5F2DC9B38A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo.et"
-     }
-    }
-    coords -10.321 0.007 8.37
-    angleX -1.899
-    angleY 4.539
-    angleZ 2.702
-   }
-   {
-    components {
-     CRF_VehicleSpawner "{64626B666A3B82E3}" {
       m_rVehicle "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et"
      }
     }
@@ -146,17 +158,6 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
    {
     components {
      CRF_VehicleSpawner "{64626B666A3B82E3}" {
-      m_rVehicle "{2B15F98903994DA3}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_camo1.et"
-     }
-    }
-    coords -2.745 -0.751 24.972
-    angleX 3.302
-    angleY -120.398
-    angleZ 0.008
-   }
-   {
-    components {
-     CRF_VehicleSpawner "{64626B666A3B82E3}" {
       m_rVehicle "{E1A99B5F2DC9B38A}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_Camo.et"
      }
     }
@@ -164,6 +165,17 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
     angleX -1.687
     angleY 0.152
     angleZ 2.839
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{447CFE8D73F95C3E}Prefabs/Vehicles/Wheeled/BTR70/BTR70_AFRF.et"
+     }
+    }
+    coords -19.2 0.204 17.069
+    angleX -3.523
+    angleY 1.166
+    angleZ 5.589
    }
   }
  }

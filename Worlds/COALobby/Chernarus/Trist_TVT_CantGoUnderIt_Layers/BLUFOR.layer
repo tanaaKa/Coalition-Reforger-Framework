@@ -30,13 +30,9 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
        }
        coords 0.848 1.257 -5.329
        {
-        SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
-         components {
-          AIFormationComponent "{507E9DC12F541FE6}" {
-           DefaultFormation "Line"
-          }
-         }
-         coords 0.376 1.005 -5.923
+        SCR_AIGroup : "{2F07AC5EE3DE3921}Prefabs/Groups/BLUFOR/Standard/Support/CRF_BLUFOR_MMGTeam_p.et" {
+         coords -26.022 -4.273 -18.763
+         angleY 9.879
          {
           SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
            components {
@@ -44,7 +40,8 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
              DefaultFormation "Line"
             }
            }
-           coords 0.379 1.254 -4.87
+           coords 51.544 0 17.156
+           angleY -9.879
            {
             SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
              components {
@@ -52,7 +49,7 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                DefaultFormation "Line"
               }
              }
-             coords 3.692 -3.722 -9.283
+             coords -27.326 5.278 4.783
              {
               SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
                components {
@@ -60,8 +57,7 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                  DefaultFormation "Line"
                 }
                }
-               coords -3.656 2.327 -4.335
-               angleY 9.879
+               coords 0.379 1.254 -4.87
                {
                 SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
                  components {
@@ -69,7 +65,28 @@ SCR_AIGroup : "{3D4D53B053964445}Prefabs/Groups/BLUFOR/Standard/Command/CRF_BLUF
                    DefaultFormation "Line"
                   }
                  }
-                 coords -1.667 -0.145 -6.2
+                 coords 3.692 -3.722 -9.283
+                 {
+                  SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+                   components {
+                    AIFormationComponent "{507E9DC12F541FE6}" {
+                     DefaultFormation "Line"
+                    }
+                   }
+                   coords -3.656 2.327 -4.335
+                   angleY 9.879
+                   {
+                    SCR_AIGroup : "{9C45BAF40F909576}Prefabs/Groups/BLUFOR/Standard/Infantry/CRF_BLUFOR_RifleSquad_p.et" {
+                     components {
+                      AIFormationComponent "{507E9DC12F541FE6}" {
+                       DefaultFormation "Line"
+                      }
+                     }
+                     coords -1.667 -5.137 -6.2
+                    }
+                   }
+                  }
+                 }
                 }
                }
               }
@@ -186,6 +203,17 @@ GenericEntity : "{8B3E3492620C745C}PrefabsEditable/CRF_VehicleSpawner.et" {
     angleX -7.4
     angleY -119.896
     angleZ -0.206
+   }
+   {
+    components {
+     CRF_VehicleSpawner "{64626B666A3B82E3}" {
+      m_rVehicle "{2CCD539A7AB35B2F}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_camo1.et"
+     }
+    }
+    coords 16.096 0.681 -5.117
+    angleX -5.576
+    angleY -3.521
+    angleZ -1.176
    }
   }
  }
