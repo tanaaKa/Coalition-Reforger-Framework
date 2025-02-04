@@ -7,22 +7,29 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    attackingSide "BLUFOR"
    defendingSide "OPFOR"
   }
+  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
+   m_iStartingHours 6
+   m_iRangeHoursStart 6
+   m_iRangeHoursEnd 6
+  }
  }
  coords 474.922 171.766 5470.188
  m_iTimeLimitMinutes 60
  m_aMissionDescriptors {
   CRF_MissionDescriptor "{644250503DF684C0}" {
-   m_sTextData "BLUFOR have disabled an enemy convoy via air; OPFOR forces have hastily pulled important cargo from the convoy and prepare for the coming Blu task-force to destroy the immobilized assets."\
+   m_sTextData "BLUFOR have disabled an enemy convoy via air; OPFOR forces have hastily pulled aside important cargo from the convoy and prepare for the coming BLU task-force to destroy the immobilized assets."\
    ""\
-   "BLUFOR Composition: Mech. Infantry"\
-   "BLUFOR Assets: 4x (2 Armed) HMMWV - 2x Unarmed Stryker - 1x Med Vic. - 1x Ural"\
+   "BLUFOR Comp: Mech. Inf. / 1x Spclst."\
+   "BLUFOR Assets: 4x (2 Armed) HMMWV"\
+   "2x Unarmed Stryker"\
+   "1x Med Vic. / 3x Ural"\
    ""\
-   "OPFOR Composition: Mech. Infantry"\
-   "OPFOR Assets: 2x BTR - 2x UAZ - 1x Med Vic. - 2x Ural"\
+   "OPFOR Comp: Mech. Inf. / 2x Spclst."\
+   "OPFOR Assets: 2x BTR / 2x UAZ"\
+   " 1x Med Vic. / 2x Ural"\
    ""\
    "Time:"\
-   ""\
-   "Weather:"
+   "Weather: Clear"
   }
   CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "- Navigate towards, search for, and destroy the decoupled OPFOR assets as leadership sees fit."\
