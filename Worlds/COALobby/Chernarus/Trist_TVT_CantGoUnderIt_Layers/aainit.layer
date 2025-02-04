@@ -7,11 +7,6 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
    attackingSide "BLUFOR"
    defendingSide "OPFOR"
   }
-  SCR_TimeAndWeatherHandlerComponent "{64427EEC304DD9A0}" {
-   m_iStartingHours 6
-   m_iRangeHoursStart 6
-   m_iRangeHoursEnd 6
-  }
  }
  coords 474.922 171.766 5470.188
  m_iTimeLimitMinutes 60

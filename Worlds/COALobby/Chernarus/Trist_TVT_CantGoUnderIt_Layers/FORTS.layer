@@ -89,7 +89,10 @@ $grp ParticleEffectEntity {
   EffectPath "{C287BBD5AC3197AC}Particles/Vehicle/Vehicle_smoke_Ural_damaged_black_01.ptc"
  }
  {
-  coords 1526.068 297.484 9152.516
+  coords 1532.343 297.524 9154.752
+  angleX 1.944
+  angleY 45.811
+  angleZ -1.72
   EffectPath "{95553AB60791FCD8}Particles/Vehicle/Vehicle_smoke_M998_damaged_black_02.ptc"
  }
 }
@@ -134,9 +137,10 @@ SCR_DestructibleBuildingEntity : "{4EEE140BBF69CAB3}Prefabs/Structures/Culture/C
  angleY -36.016
 }
 GenericEntity : "{506B08364BB4FFA2}PrefabsEditable/Auto/Props/Wrecks/E_Ural4320_wreck.et" {
- coords 1527.25 296.932 9151.064
- angleX -3.329
- angleY -25.6
+ coords 1532.149 296.959 9152.893
+ angleX -2.316
+ angleY 20.358
+ angleZ -2.392
 }
 StaticModelEntity : "{5FB3A1755261CA59}Prefabs/Compositions/Misc/SubCompositions/Fortifications/Sandbag_Bunker_Camouflaged_US_01.et" {
  coords 2001.08 282.219 9133.923
