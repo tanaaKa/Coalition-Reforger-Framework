@@ -6,7 +6,7 @@ class CRF_PlayableCharacter : ScriptComponent
 {
 	[Attribute()]
 	protected string m_sName;
-	[Attribute()]
+	[Attribute("0")]
 	protected bool m_bIsPlayable;
 	[Attribute()]
 	protected bool m_bIsLeaderOrMedic;
@@ -15,6 +15,7 @@ class CRF_PlayableCharacter : ScriptComponent
 	
 	protected bool m_bIsSpectator = false;
 	protected SCR_PlayerController m_PlayerController;
+	protected bool m_bInitTime = false;
 	
 	protected float m_bTimeSliceLimit = 0;
 	
@@ -38,60 +39,68 @@ class CRF_PlayableCharacter : ScriptComponent
 		return m_bIsSpecialty;
 	}
 	
+	void SetInitTime()
+	{
+		m_bInitTime = true;
+	}
+	
 	override void OnPostInit(IEntity owner)
 	{
 		super.EOnInit(owner);
 		
-		if(!GetGame().InPlayMode())
+		if (!GetGame().InPlayMode())
 			return;
 		
-		if(CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			m_bIsPlayable = false;
+		
+		GetGame().GetCallqueue().CallLater(SetInitTime, 5000, false);
 
-		if(m_bIsPlayable)
+		if (m_bIsPlayable)
 		{
 			GetGame().GetCallqueue().CallLater(SetInitialEntity, 500, false, owner);
 			GetGame().GetCallqueue().CallLater(DisableAI, 0, false, owner);
-		} else {
-			return;
 		}
 		
 		m_PlayerController = SCR_PlayerController.Cast(GetGame().GetPlayerController());
 		
-		SetEventMask(owner, EntityEvent.FIXEDFRAME);
+		if (owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			m_bIsSpectator = true;	
 		
-		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
-			m_bIsSpectator = true;		
+		SetEventMask(owner, EntityEvent.FIXEDFRAME);	
 	}
 	
 	override void EOnFixedFrame(IEntity owner, float timeSlice)
 	{
-		if(!GetGame().InPlayMode())
+		super.EOnFixedFrame(owner, timeslice);
+		
+		if (!owner)
 			return;
 		
-		if(!m_bIsPlayable && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+		if (!GetGame().InPlayMode())
 			return;
 		
+		if (!m_bIsPlayable && !m_bIsSpectator)
+			return;
+
 		#ifdef WORKBENCH
-		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et" && !EntityUtils.IsPlayer(owner))
+		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && m_bInitTime)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
 		#else
-		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et" && !EntityUtils.IsPlayer(owner) && RplSession.Mode() == RplMode.Dedicated)
+		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && RplSession.Mode() == RplMode.Dedicated && m_bInitTime)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
 		#endif
-		
-		super.EOnFixedFrame(owner, timeSlice);
-		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+		if (m_bIsSpectator && !SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
 		{
-			owner.GetPhysics().EnableGravity(false);
 			owner.SetOrigin("0 10000 0");
 			Physics physics = owner.GetPhysics();
 			if (physics)
 			{
+				owner.GetPhysics().EnableGravity(false);
 				physics.SetVelocity("0 0 0");
 				physics.SetAngularVelocity("0 0 0");
 				physics.SetMass(0);
@@ -99,38 +108,38 @@ class CRF_PlayableCharacter : ScriptComponent
 				physics.SetActive(ActiveState.INACTIVE);
 			}
 		}	
-		if(SCR_PlayerController.GetLocalControlledEntity() != owner)
+		if (SCR_PlayerController.GetLocalControlledEntity() != owner)
 			return;
 		
-		if(!m_bIsSpectator)
+		if (!m_bIsSpectator)
 			return;
 		
-		if(!SCR_ChimeraCharacter.Cast(owner).m_bIsListening && owner.GetOrigin() != "0 10000 0")
+		if (!SCR_ChimeraCharacter.Cast(owner).m_bIsListening && owner.GetOrigin() != "0 10000 0")
 		{
 			vector debugVector[4];
 			debugVector[3] = "0 10000 0";
 			m_PlayerController.UpdateCameraPos(debugVector);
 		}
 		
-		if(!SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
-			return;
+		if (SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
+		{	
+			vector cameraPos[4];
+			GetGame().GetCameraManager().CurrentCamera().GetWorldCameraTransform(cameraPos);
 		
-		vector cameraPos[4];
-		GetGame().GetCameraManager().CurrentCamera().GetWorldCameraTransform(cameraPos);
-		
-		m_PlayerController.UpdateCameraPos(cameraPos);
+			m_PlayerController.UpdateCameraPos(cameraPos);
+		}
 	}
 	
 	void DisableAI(IEntity owner)
 	{
-		if(AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent())
+		if (AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent())
 			AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent().DeactivateAI();
 		GetGame().GetCallqueue().CallLater(DisableAIWrap, 0, false, owner)
 	}
 	
 	void DisableAIWrap(IEntity owner)
 	{
-		if(AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent())
+		if (AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent())
 			AIControlComponent.Cast(owner.FindComponent(AIControlComponent)).GetAIAgent().DeactivateAI();
 	}
 	
@@ -139,19 +148,19 @@ class CRF_PlayableCharacter : ScriptComponent
 		//Logs entity on server and disables AI
 		#ifdef WORKBENCH
 		SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
-		if(playableGroup)
+		if (playableGroup)
 			CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
 		#else
-		if(RplSession.Mode() == RplMode.Dedicated)
+		if (RplSession.Mode() == RplMode.Dedicated)
 		{
 			SCR_AIGroup playableGroup = SCR_AIGroup.Cast(ChimeraAIControlComponent.Cast(owner.FindComponent(ChimeraAIControlComponent)).GetControlAIAgent().GetParentGroup());
-			if(playableGroup)
+			if (playableGroup)
 				CRF_Gamemode.GetInstance().AddPlayableEntity(owner);
 		}
 		#endif
 			
 		//Sets location and all the physics BS on all machines
-		if(owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+		if (owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 		{
 			owner.GetPhysics().EnableGravity(false);
 			owner.SetOrigin("0 10000 0");

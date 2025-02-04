@@ -18,7 +18,6 @@ class CRF_RespawnMenu: ChimeraMenuBase
 	{
 		TextWidget timerWidget = TextWidget.Cast(GetRootWidget().FindAnyWidget("timerCountDown"));
 		timerWidget.SetText(SCR_FormatHelper.FormatTime(m_iCurrentWaveTimer));
-	
 	}
 	
 	void UpdateTimer()
@@ -26,18 +25,16 @@ class CRF_RespawnMenu: ChimeraMenuBase
 		m_iCurrentWaveTimer = m_iCurrentWaveTimer - 1;
 		
 		if (m_iCurrentWaveTimer < 0)
-		{
 			SCR_PlayerController.Cast(GetGame().GetPlayerController()).RespawnWithTicket(GetGame().GetPlayerController().GetPlayerId(), m_iGroupID);
-			GetGame().GetMenuManager().CloseAllMenus();
-		}
 		
 		displayTimer(); 
 	}
 	
 	override void OnMenuOpen()
 	{
-		GetGame().GetCallqueue().CallLater(UpdateTimer, 1000, true);
-		
+		if (!CRF_Gamemode.GetInstance().m_bDisbleRespawnTimer)
+			GetGame().GetCallqueue().CallLater(UpdateTimer, 1000, true);
+
 		m_iCurrentWaveTimer = CRF_Gamemode.GetInstance().m_iRespawnWaveCurrentTime;
 
 		//Loads the map

@@ -1027,7 +1027,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		if(!SCR_Global.IsAdmin())
 			return;
 		
-		CRF_ClientComponent.GetInstance().ReplyAdminMessage(data);
+		CRF_ClientComponent.GetInstance().ReplyAdminMessage(data, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1053,15 +1053,18 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void ReplyAdminMessage(string data, int playerID)
+	void ReplyAdminMessage(string data, int playerID, bool logAction)
 	{
-		Rpc(RpcAsk_ReplyAdminMessage, data, playerID);
+		Rpc(RpcAsk_ReplyAdminMessage, data, playerID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void RpcAsk_ReplyAdminMessage(string data, int playerID)
+	void RpcAsk_ReplyAdminMessage(string data, int playerID, bool logAction)
 	{
+		if (logAction)
+			LogAdminAction(string.Format("Reply to %1: %2", GetGame().GetPlayerManager().GetPlayerName(playerID), data), playerID, false);
+
 		if(GetGame().GetPlayerController().GetPlayerId() != playerID)
 			return;
 		
@@ -1073,21 +1076,19 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			return;
 		
 		chatComponent.ShowMessage(string.Format("Admin: %1", data));
-
-		LogAdminAction(string.Format("Reply to %1: %2", GetGame().GetPlayerManager().GetPlayerName(playerID), data), playerID, false);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Respawn
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void SpawnGroupServer(int playerId, string prefab, vector spawnLocation, int groupID)
+	void SpawnGroupServer(int playerId, string prefab, vector spawnLocation, int groupID, bool logAction)
 	{
-		Rpc(Respawn, playerId, prefab, spawnLocation, groupID);
+		Rpc(Respawn, playerId, prefab, spawnLocation, groupID, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void Respawn(int playerId, string prefab, vector spawnLocation, int groupID)
+	void Respawn(int playerId, string prefab, vector spawnLocation, int groupID, bool logAction)
 	{
 //		Rpc(RpcAsk_CloseMap, playerId);
 
@@ -1109,7 +1110,9 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
 
 		CRF_Gamemode.GetInstance().RespawnPlayer(playerId, prefab, finalSpawnLocation, groupID);
-		LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).m_faction), playerId, true);
+		
+		if (logAction)
+			LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).m_faction), playerId, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1122,18 +1125,19 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Gear
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void SetPlayerGear(int playerID, string prefab)
+	void SetPlayerGear(int playerID, string prefab, bool logAction)
 	{	
 		IEntity entity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 
 		GetGame().GetCallqueue().CallLater(SetupAddGearToEntity, m_RNG.RandInt(250, 1000), false, entity, entity.GetPrefabData().GetPrefabName());
 		SetPlayerGearScriptsMapValue(prefab, playerID, "GSR"); // GSR = Gear Script Resource
 		
-		LogAdminAction(string.Format("%1's gear was set to %2", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
+		if (logAction)
+			LogAdminAction(string.Format("%1's gear was set to %2", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void AddItem(int playerID, string prefab)
+	void AddItem(int playerID, string prefab, bool logAction)
 	{
 		if(playerID == 0 || prefab.IsEmpty())
 			return;
@@ -1147,20 +1151,21 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		if(!entityInventoryManager.TryInsertItem(resourceSpawned))
 			delete resourceSpawned;
 		
-		LogAdminAction(string.Format("%2 was added to %1's inventory", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
+		if (logAction)
+			LogAdminAction(string.Format("%2 was added to %1's inventory", GetGame().GetPlayerManager().GetPlayerName(playerID), prefab.Substring(prefab.LastIndexOf("/") + 1, prefab.LastIndexOf(".") - prefab.LastIndexOf("/") - 1)), playerID, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Teleport
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void TeleportPlayers(int playerID1, int playerID2)
+	void TeleportPlayers(int playerID1, int playerID2, bool logAction)
 	{
-		Rpc(Rpc_TeleportPlayers, playerID1, playerID2);
+		Rpc(Rpc_TeleportPlayers, playerID1, playerID2, logAction);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	[RplRpc(RplChannel.Reliable, RplRcver.Broadcast)]
-	void Rpc_TeleportPlayers(int playerID1, int playerID2)
+	void Rpc_TeleportPlayers(int playerID1, int playerID2, bool logAction)
 	{
 		if(SCR_PlayerController.GetLocalPlayerId() != playerID1)
 			return;
@@ -1174,7 +1179,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	
 		SCR_Global.TeleportPlayer(playerID1, teleportLocation);
 		
-		LogAdminAction(string.Format("%1 was teleported to %2", GetGame().GetPlayerManager().GetPlayerName(playerID1), GetGame().GetPlayerManager().GetPlayerName(playerID2)), playerID1, true);
+		if (logAction)
+			LogAdminAction(string.Format("%1 was teleported to %2", GetGame().GetPlayerManager().GetPlayerName(playerID1), GetGame().GetPlayerManager().GetPlayerName(playerID2)), playerID1, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1245,7 +1251,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	// Heal
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void HealPlayer(int playerID)
+	void HealPlayer(int playerID, bool logAction)
 	{
 		IEntity PlayerEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 			
@@ -1256,11 +1262,12 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		damageComponent.FullHeal();
 		damageComponent.SetHealthScaled(1);
 		
-		LogAdminAction(string.Format("%1's was healed", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
+		if (logAction)
+			LogAdminAction(string.Format("%1's was healed", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
 	}
 	
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void HealPlayerVehicle(int playerID)
+	void HealPlayerVehicle(int playerID, bool logAction)
 	{
 		IEntity PlayerEntity = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID);
 		
@@ -1275,7 +1282,8 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		damageComponent.FullHeal();
 		damageComponent.SetHealthScaled(1);
 		
-		LogAdminAction(string.Format("%1's vehicle was repaired", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
+		if (logAction)
+			LogAdminAction(string.Format("%1's vehicle was repaired", GetGame().GetPlayerManager().GetPlayerName(playerID)), playerID, true);
 	}
 
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

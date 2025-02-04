@@ -12,47 +12,47 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
   $grp StaticModelEntity : "{18822FB3F0D2ED00}Prefabs/Structures/Walls/BarbedWire/BarbedTape_01/BarbedTape_01_Long.et" {
    {
     ID "62B00A0FD1C416B9"
-    coords 1.591 -1.28 0.415
+    coords 1.591 0 0.415
     angleY -92.214
    }
    {
     ID "62B00A0FD1C416BA"
-    coords -1.616 -1.28 0.29
+    coords -1.616 0 0.29
     angleY -92.214
    }
   }
   $grp StaticModelEntity : "{A46D45922F8CAD6C}Prefabs/Props/Military/Fortification/CzechHedgehog_01_painted.et" {
    {
     ID "62B00A0FD1C416BC"
-    coords 3.597 -1.28 0.479
+    coords 3.597 0 0.479
     angleY 29.497
    }
    {
     ID "62B00A0FD1C4B689"
-    coords -0.179 -1.28 1.974
+    coords -0.179 0 1.974
     angleY -49.353
    }
    {
     ID "62B00A0FD1C4B696"
-    coords -4.06 -1.28 0.889
+    coords -4.06 0 0.889
     angleY -66.529
    }
   }
   $grp GenericEntity : "{B547CF929FCC6BB7}Prefabs/Props/Military/Sandbags/Sandbag_01_end_high_burlap.et" {
    {
     ID "62B00A0FD1C4B693"
-    coords -2.676 -1.28 -0.43
+    coords -2.676 0 -0.43
     angleY -177.658
    }
    {
     ID "62B00A0FD1C4B695"
-    coords 2.596 -1.28 -0.394
+    coords 2.596 0 -0.394
     angleY 2.906
    }
   }
   GenericEntity : "{BE16EE8FAA315FE2}Prefabs/Props/Military/Sandbags/Sandbag_01_long_high_burlap.et" {
    ID "62B00A0FD1C4807C"
-   coords -0.091 -1.28 -0.42
+   coords -0.091 0 -0.42
   }
  }
 }
