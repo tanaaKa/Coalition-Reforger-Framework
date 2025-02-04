@@ -97,7 +97,7 @@ $grp ParticleEffectEntity {
  }
 }
 SCR_DestructibleBuildingEntity : "{07452F959762A7C0}Prefabs/Structures/Agriculture/CowShed/CowShed_E_01_short_Base.et" {
- coords 1829.177 0.645 9089.385
+ coords 1829.177 0.894 9089.385
  angleY -68.749
 }
 GenericEntity : "{0AE066857BE2F66E}Prefabs/Structures/Walls/Brick/BrickWall_02/dst/Brick_wall_02_8m_dst_01.et" {
@@ -180,10 +180,6 @@ SCR_DestructibleBuildingEntity : "{A67AB8173DD14448}PrefabLibrary/Structures/Rui
  angleX -1.698
  angleY 1.813
  angleZ -0.167
-}
-SCR_DestructibleBuildingEntity : "{A809E681B08C2DA3}Prefabs/Structures/Houses/Village/Single Floor Buildings/House A Red and Green.et" {
- coords 2008.381 0.684 8991.236
- angleY 17.149
 }
 GenericEntity : "{ACA1BADA1C09110A}PrefabsEditable/Auto/Props/Wrecks/E_BMP1_wreck.et" {
  coords 1515.162 297.204 9137.771
