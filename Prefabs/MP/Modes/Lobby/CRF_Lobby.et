@@ -319,15 +319,15 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
     }
     SCR_Faction "{61500924662B6062}" {
      FactionKey "SPEC"
-     FactionColor 0.392 0.157 0.624 1
+     FactionColor 1 0.491 0.076 1
      UIInfo SCR_FactionUIInfo "{615009275A4B9FE7}" {
       Name "BLUFOR"
       m_sNameUpper "BLUFOR"
      }
      m_iOrder 3
-     m_OutlineFactionColor 0.045 0 0.084 1
-     m_NotificationFactionColor 0.517 0.204 0.823 1
-     m_NotificationTextFactionColor 0.392 0.157 0.624 1
+     m_OutlineFactionColor 0.116 0.056 0 1
+     m_NotificationFactionColor 1 0.491 0.076 1
+     m_NotificationTextFactionColor 1 0.491 0.076 1
      m_bIsPlayable 0
      m_bShowInWelcomeScreenIfNonPlayable 0
      m_bIsMilitary 0
