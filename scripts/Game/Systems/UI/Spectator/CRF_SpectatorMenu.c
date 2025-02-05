@@ -61,7 +61,7 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		GetGame().GetInputManager().AddActionListener("ManualCameraTeleport", EActionTrigger.DOWN, Action_ManualCameraTeleport);
 		GetGame().GetInputManager().AddActionListener("ShowScoreboard", EActionTrigger.DOWN, OnShowPlayerList);	
 //		 FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI
-//		GetGame().GetInputManager().AddActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
+		GetGame().GetInputManager().AddActionListener("EditorToggleUI", EActionTrigger.DOWN, HideUI);
 		InitSlots();
 		if(m_iBluforSlots > 0)
 		{
@@ -97,6 +97,8 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wCivButton).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(SelectFactionCiv);	
 		SCR_ButtonTextComponent.Cast(ButtonWidget.Cast(m_wRoot.FindAnyWidget("CreateChannel")).FindHandler(SCR_ButtonTextComponent)).m_OnClicked.Insert(CreateChannel);
 	}
+	
+	
 	
 	void UpdateCompass()
 	{
@@ -282,18 +284,21 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		pc.CreateChannel();
 	}
 	
-// FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI FUCK BI
-//	void HideUI()
-//	{
-//		if (GetGame().GetWorkspace().GetOpacity() == 1)
-//		{
-//			GetGame().GetWorkspace().SetOpacity(0);
-//		}
-//		else
-//		{
-//			GetGame().GetWorkspace().SetOpacity(1);
-//		}
-//	}
+	void HideUI()
+	{
+		if (m_wRoot.IsVisible())
+		{
+			m_wRoot.SetVisible(false);
+			SCR_HUDManagerComponent hudManager = SCR_HUDManagerComponent.Cast(pc.GetHUDManagerComponent());
+			hudManager.GetHUDRootWidget().SetVisible(false);
+		}
+		else
+		{
+			m_wRoot.SetVisible(true);
+			SCR_HUDManagerComponent hudManager = SCR_HUDManagerComponent.Cast(pc.GetHUDManagerComponent());
+			hudManager.GetHUDRootWidget().SetVisible(true);
+		}
+	}
 	
 	
 	void UpdateChannel()

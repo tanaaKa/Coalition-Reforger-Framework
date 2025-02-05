@@ -28,13 +28,6 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  EnableAIInGameState 1
  m_sFactionOneKey "BLU"
  m_sFactionTwoKey "OPF"
- {
-  SCR_EditorSettingsEntity {
-   ID "632771FB44BBD90B"
-   m_bOverrideBaseModes 1
-   m_BaseModes PHOTO
-  }
- }
 }
 SCR_AIGroup : "{2A01769C204DED43}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_AATeam_p.et" {
  coords 2967.981 30.665 2617.584

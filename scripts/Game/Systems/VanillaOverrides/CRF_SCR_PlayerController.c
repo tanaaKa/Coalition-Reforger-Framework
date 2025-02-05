@@ -355,12 +355,10 @@ modded class SCR_PlayerController
 		
 		if(SCR_EditorManagerEntity.GetInstance().IsOpened())
 			return;
-		
-		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{AB89533BD3719519}Prefabs/Editor/Camera/ManualCameraPhoto.et"), GetGame().GetWorld(), params);
+		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{E1FF38EC8894C5F3}Prefabs/Editor/Camera/ManualCameraSpectate.et"), GetGame().GetWorld(), params);
 		CheckVONRegister();
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_SpectatorMenu);
 		GetGame().GetCameraManager().SetCamera(CameraBase.Cast(m_eCamera));
-		
 	}
 	
 	void CheckVONRegister()

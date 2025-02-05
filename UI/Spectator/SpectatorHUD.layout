@@ -1,5 +1,6 @@
 FrameWidgetClass {
  Name "SpectatorMenu"
+ "Z Order" 10
  {
   FrameWidgetClass "{64841DF9BC770635}" {
    Name "LogoFrame"
@@ -464,6 +465,7 @@ FrameWidgetClass {
       SizeY -400
       OffsetBottom 400
      }
+     "Is Visible" 0
      {
       ImageWidgetClass "{647D656FBD995174}" {
        Name "BG"
@@ -550,6 +552,7 @@ FrameWidgetClass {
       SizeY -400
       OffsetBottom 400
      }
+     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7EE34985}" {
        Name "BG"
@@ -636,6 +639,7 @@ FrameWidgetClass {
       SizeY -400
       OffsetBottom 400
      }
+     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7585593E}" {
        Name "BG"
@@ -722,6 +726,7 @@ FrameWidgetClass {
       SizeY -400
       OffsetBottom 400
      }
+     "Is Visible" 0
      {
       ImageWidgetClass "{647D656C7488BC46}" {
        Name "BG"
