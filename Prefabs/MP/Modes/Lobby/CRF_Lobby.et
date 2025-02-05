@@ -323,7 +323,7 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      UIInfo SCR_FactionUIInfo "{615009275A4B9FE7}" {
       Name "Spectator"
       Icon "{CCF597A247ACFD7F}UI/Textures/Flags/CIV-flag-base.edds"
-      m_sNameUpper "BLUFOR"
+      m_sNameUpper "SPECTATOR"
      }
      m_iOrder 3
      m_OutlineFactionColor 0.045 0 0.084 1
