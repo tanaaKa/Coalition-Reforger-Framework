@@ -27,6 +27,7 @@
  * Action on Vehicle Destruction
  * Setting an objective complete
  * Randomizing Spawns
+ * Rush objective destructor
 ****************************************************************************************/
 
 
@@ -498,6 +499,45 @@ class weaponSpawnTrigger_Class: SCR_BaseTriggerEntity
 		
 		GetGame().GetCallqueue().CallLater(SpawnThings, 100, false);
 
+	}
+
+};
+
+/****************************************************************************************
+ * --------------Rush objective destructor--------------
+ * A new implementation of the rush gamemode, this is the destructor for the generator
+ * objective. It sends a message about the objective, finds the generator near it and 
+ * destroys it, removes the appropriate area markers, and then if both objectives in 
+ * the zone are destroyed respawns players at their flag.
+****************************************************************************************/
+class z1s1_Class: GenericEntity 
+{
+	void ~z1s1_Class()
+	{
+		SCR_PopUpNotification.GetInstance().PopupMsg("Alpha MCOM destroyed", duration: 10);
+		
+		// TODO: Get the parent and delete everything
+		// Delete actual mcom/generator
+		IEntity mcom = GetGame().GetWorld().FindEntityByName("z1s1gen");
+		delete mcom;
+		// Delete markers
+		IEntity mcomMarker = GetGame().GetWorld().FindEntityByName("alphamarker");
+		delete mcomMarker;
+		
+		// Check if both sites are destroyed, if so, delete the zone marker line
+		IEntity sisterMcom = GetGame().GetWorld().FindEntityByName("z1s2gen");
+		
+		if (!sisterMcom) {
+			IEntity zoneMarkers = GetGame().GetWorld().FindEntityByName("zone1markers");
+			SCR_EntityHelper.DeleteEntityAndChildren(zoneMarkers);
+			SCR_PopUpNotification.GetInstance().PopupMsg("Zone 2 is now unlocked", duration: 10);
+			
+			//respawn the players
+			if (RplSession.Mode() == RplMode.Dedicated) {
+				CRF_Gamemode gm = CRF_Gamemode.GetInstance();
+				gm.RushRespawnPlayers();
+			}
+		}
 	}
 
 };
