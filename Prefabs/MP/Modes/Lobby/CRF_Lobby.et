@@ -321,7 +321,8 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      FactionKey "SPEC"
      FactionColor 0.392 0.157 0.624 1
      UIInfo SCR_FactionUIInfo "{615009275A4B9FE7}" {
-      Name "BLUFOR"
+      Name "Spectator"
+      Icon "{CCF597A247ACFD7F}UI/Textures/Flags/CIV-flag-base.edds"
       m_sNameUpper "BLUFOR"
      }
      m_iOrder 3
