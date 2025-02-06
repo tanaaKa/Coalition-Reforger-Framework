@@ -54,7 +54,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			m_bIsPlayable = false;
 		
-		GetGame().GetCallqueue().CallLater(SetInitTime, 5000, false);
+		GetGame().GetCallqueue().CallLater(SetInitTime, 10000, false);
 
 		if (m_bIsPlayable)
 		{
@@ -70,9 +70,9 @@ class CRF_PlayableCharacter : ScriptComponent
 		SetEventMask(owner, EntityEvent.FIXEDFRAME);	
 	}
 	
-	override void EOnFixedFrame(IEntity owner, float timeSlice)
+	override void EOnPostFixedFrame(IEntity owner, float timeSlice)
 	{
-		super.EOnFixedFrame(owner, timeslice);
+		super.EOnPostFixedFrame(owner, timeslice);
 		
 		if (!owner)
 			return;
@@ -82,7 +82,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		
 		if (!m_bIsPlayable && !m_bIsSpectator)
 			return;
-
+		
 		#ifdef WORKBENCH
 		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && m_bInitTime)
 		{
@@ -94,6 +94,7 @@ class CRF_PlayableCharacter : ScriptComponent
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
 		#endif
+		
 		if (m_bIsSpectator && !SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
 		{
 			owner.SetOrigin("0 10000 0");
@@ -108,6 +109,7 @@ class CRF_PlayableCharacter : ScriptComponent
 				physics.SetActive(ActiveState.INACTIVE);
 			}
 		}	
+		
 		if (SCR_PlayerController.GetLocalControlledEntity() != owner)
 			return;
 		
