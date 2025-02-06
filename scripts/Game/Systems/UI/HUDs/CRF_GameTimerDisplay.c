@@ -100,13 +100,13 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 			m_wTicketOneBackground.SetVisible(true);
 		}
 		
-		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().m_bRespawnEnabled && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 		{
 			SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
 				if (!factionManager)
 					return;
-			
-			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()) && CRF_Gamemode.GetInstance().m_bRespawnEnabled)
+						
+			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()))
 			{
 				string faction = SCR_FactionManager.SGetLocalPlayerFaction().GetFactionKey();
 				
@@ -255,7 +255,9 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		} else {
 			m_wTimer.SetOpacity(1);
 			m_wBackground.SetOpacity(1);
-			if (CRF_Gamemode.GetInstance().m_bRespawnEnabled)
+			
+			// Check if any of the teams has tickets no point showing if no one has tickets
+			if (CRF_Gamemode.GetInstance().m_iBLUFORTickets > -1 || CRF_Gamemode.GetInstance().m_iOPFORTickets > -1 || CRF_Gamemode.GetInstance().m_iINDFORTickets > -1 || CRF_Gamemode.GetInstance().m_iCIVTickets> -1)
 			{
 				m_wTicketOneImage.SetOpacity(1);
 				m_wTicketOneText.SetOpacity(1);
