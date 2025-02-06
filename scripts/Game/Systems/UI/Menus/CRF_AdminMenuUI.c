@@ -665,6 +665,9 @@ class CRF_AdminMenu: ChimeraMenuBase
 			if(factionTag.IsEmpty())
 				continue;
 			
+			if (group.GetFaction().GetFactionKey() == "SPEC")
+				continue;
+			
 			m_list2.AddItem(string.Format("%1 | %2", factionTag , group.GetCustomNameWithOriginal()));
 			m_groupIDList.Insert(group.GetGroupID());
 		}
