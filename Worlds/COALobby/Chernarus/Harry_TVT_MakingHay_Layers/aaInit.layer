@@ -42,8 +42,7 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
  m_OPFORGearScriptSettings CRF_GearScriptContainer "{64570ACB9B11EAAD}" {
   m_rGearScript "{31798400ADCA306B}Configs/Gearscripts/Custom/Harry/VibingInVybor/CRF_GS_USSR80s_RPK.conf"
  }
- m_bRespawnEnabled 1
- m_bDisbleRespawnTimer 1
+ m_iTimeToRespawn 0
  m_iBLUFORTickets 40
  m_iOPFORTickets -1
  {
