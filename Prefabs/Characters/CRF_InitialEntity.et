@@ -16,7 +16,7 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
    m_sName "Spectator"
   }
   FactionAffiliationComponent "{633B2131A597C43C}" {
-   "faction affiliation" "US"
+   "faction affiliation" "SPEC"
   }
   SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" {
    "Fall damage min speed" 999
