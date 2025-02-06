@@ -5,15 +5,15 @@ FrameWidgetClass {
   FrameWidgetClass "{64841DF9BC770635}" {
    Name "LogoFrame"
    Slot FrameWidgetSlot "{64841DF9BC770615}" {
-    Anchor 0.5 1 0.5 1
-    PositionX -100
-    OffsetLeft -100
-    PositionY -176.318
-    OffsetTop -176.318
-    SizeX 200
-    OffsetRight -100
+    Anchor 0.971 0.999 0.971 0.999
+    PositionX -100.627
+    OffsetLeft -100.627
+    PositionY -168.243
+    OffsetTop -168.243
+    SizeX 199.999
+    OffsetRight -99.372
     SizeY 201.248
-    OffsetBottom -24.93
+    OffsetBottom -33.005
    }
    {
     TextWidgetClass "{64841DF907816162}" {
@@ -98,20 +98,6 @@ FrameWidgetClass {
     OffsetBottom 0
    }
    Clipping True
-  }
-  FrameWidgetClass "{5EB701CD498F59EC}" : "{B7A765172F0BD4D9}UI/layouts/Common/GameVersionWatermark.layout" {
-   Name "EarlyAccessRoot"
-   Slot FrameWidgetSlot "{5CEE96372B5D270B}" {
-    PositionX -25.552
-    OffsetLeft -25.552
-    PositionY 14.219
-    OffsetTop 14.219
-    SizeX 0
-    OffsetRight 25.552
-    SizeY 0
-    OffsetBottom -14.219
-   }
-   Opacity 1
   }
   FrameWidgetClass "{63224AF6A2160646}" : "{D89BBA18F99053D6}UI/layouts/HUD/Chat/ChatHud.layout" {
    Name "ChatHud"
@@ -433,7 +419,8 @@ FrameWidgetClass {
       SizeY 0
       OffsetBottom 0
      }
-     Color 0.133 0.133 0.133 1
+     Opacity 0.2
+     Color 0.047 0.047 0.047 1
      "Transition width" 0.71
      Progress 0.5
     }
@@ -896,7 +883,8 @@ FrameWidgetClass {
       SizeY 0
       OffsetBottom 0
      }
-     Color 0.134 0.134 0.134 1
+     Opacity 0.2
+     Color 0.046 0.046 0.046 1
      "Transition width" 0.71
      Progress 0.5
     }
@@ -1017,12 +1005,8 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom 0
        }
-       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
-       "Shadow Offset" 0 0
-       "Shadow Size Increase" 0.1 0.1
-       "Shadow Color" 0.095 0 0 1
       }
       ImageWidgetClass "{64841DFA6C3BEF4A}" {
        Name "Compass0"
@@ -1037,11 +1021,8 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom 0.306
        }
-       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
-       "Shadow Size Increase" 0.1 0.1
-       "Shadow Color" 0.095 0 0 1
       }
       ImageWidgetClass "{64841DFA6C3BEF4B}" {
        Name "Compass1"
@@ -1056,11 +1037,8 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom -0.364
        }
-       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
-       "Shadow Size Increase" 0.1 0.1
-       "Shadow Color" 0.095 0 0 1
       }
      }
     }
