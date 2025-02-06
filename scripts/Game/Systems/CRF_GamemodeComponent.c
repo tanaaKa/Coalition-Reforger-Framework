@@ -1069,7 +1069,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		vector finalSpawnLocation = vector.Zero;
 		SCR_WorldTools.FindEmptyTerrainPosition(finalSpawnLocation, spawnLocation, 3);
 
-		CRF_Gamemode.GetInstance().RespawnPlayer(playerId, prefab, finalSpawnLocation, groupID);
+		CRF_Gamemode.GetInstance().RespawnPlayer(playerId);
 		
 		if (logAction)
 			LogAdminAction(string.Format("%1 was respawned to %2", GetGame().GetPlayerManager().GetPlayerName(playerId), SCR_GroupsManagerComponent.GetInstance().FindGroup(groupID).m_faction), playerId, true);
