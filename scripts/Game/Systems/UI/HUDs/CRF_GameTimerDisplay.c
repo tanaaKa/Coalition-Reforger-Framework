@@ -100,13 +100,13 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 			m_wTicketOneBackground.SetVisible(true);
 		}
 		
-		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().m_bRespawnEnabled && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
 		{
 			SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
 				if (!factionManager)
 					return;
-			
-			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()) && CRF_Gamemode.GetInstance().m_bRespawnEnabled)
+						
+			if (!SCR_Global.IsAdmin(SCR_PlayerController.GetLocalPlayerId()))
 			{
 				string faction = SCR_FactionManager.SGetLocalPlayerFaction().GetFactionKey();
 				
@@ -120,69 +120,68 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 					switch(faction)
 					{			
 						case "BLUFOR"	:	{
-							if (CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets == -1)
+							if (CRF_Gamemode.GetInstance().m_iBLUFORTickets == -1)
 								m_wTicketOneNumber.SetText("INF");
 							else
-								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString());
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORTickets.ToString());
 							break;
 						}
 						case "OPFOR"	:	{
-							if (CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets == -1)
+							if (CRF_Gamemode.GetInstance().m_iOPFORTickets == -1)
 								m_wTicketOneNumber.SetText("INF");
 							else		
-								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString());
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORTickets.ToString());
 							break;
 						}
 						case "INDFOR"	:	{
-							if (CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets == -1)
+							if (CRF_Gamemode.GetInstance().m_iINDFORTickets == -1)
 								m_wTicketOneNumber.SetText("INF");
 							else
-								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORTickets.ToString());
 	
 							break;
 						}
 						case "CIV"	:	{
-							if (CRF_Gamemode.GetInstance().m_iCIVCurrentTickets == -1)
+							if (CRF_Gamemode.GetInstance().m_iCIVTickets == -1)
 								m_wTicketOneNumber.SetText("INF");
 							else
-								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString());
+								m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVTickets.ToString());
 							break;
 						}
 					}
 				}
-			}else{
+			} else {
 				m_wTicketOneText.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
 				m_wTicketOneNumber.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
 				m_wTicketOneImage.SetColor(factionManager.GetFactionByKey("BLUFOR").GetFactionColor());
-				if (CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets == -1)
+				if (CRF_Gamemode.GetInstance().m_iBLUFORTickets == -1)
 					m_wTicketOneNumber.SetText("INF");
 				else
-					m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORCurrentTickets.ToString());
+					m_wTicketOneNumber.SetText(CRF_Gamemode.GetInstance().m_iBLUFORTickets.ToString());
 				
 				m_wTicketTwoText.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
 				m_wTicketTwoNumber.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
 				m_wTicketTwoImage.SetColor(factionManager.GetFactionByKey("OPFOR").GetFactionColor());
-				if (CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets == -1)
+				if (CRF_Gamemode.GetInstance().m_iOPFORTickets == -1)
 					m_wTicketTwoNumber.SetText("INF");
 				else
-					m_wTicketTwoNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORCurrentTickets.ToString());
+					m_wTicketTwoNumber.SetText(CRF_Gamemode.GetInstance().m_iOPFORTickets.ToString());
 				
 				m_wTicketThreeText.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
 				m_wTicketThreeNumber.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
 				m_wTicketThreeImage.SetColor(factionManager.GetFactionByKey("INDFOR").GetFactionColor());
-				m_wTicketThreeNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
-				if (CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets == -1)
+				if (CRF_Gamemode.GetInstance().m_iINDFORTickets == -1)
 					m_wTicketThreeNumber.SetText("INF");
 				else
-					m_wTicketThreeNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORCurrentTickets.ToString());
+					m_wTicketThreeNumber.SetText(CRF_Gamemode.GetInstance().m_iINDFORTickets.ToString());
 				
 				m_wTicketFourText.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
 				m_wTicketFourNumber.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
 				m_wTicketFourImage.SetColor(factionManager.GetFactionByKey("CIV").GetFactionColor());
-				if (CRF_Gamemode.GetInstance().m_iCIVCurrentTickets == -1)
+				if (CRF_Gamemode.GetInstance().m_iCIVTickets == -1)
 					m_wTicketFourNumber.SetText("INF");
 				else
-					m_wTicketFourNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVCurrentTickets.ToString());
+					m_wTicketFourNumber.SetText(CRF_Gamemode.GetInstance().m_iCIVTickets.ToString());
 			}
 		}
 		
@@ -256,7 +255,9 @@ class CRF_GameTimerDisplay : SCR_InfoDisplay
 		} else {
 			m_wTimer.SetOpacity(1);
 			m_wBackground.SetOpacity(1);
-			if (CRF_Gamemode.GetInstance().m_bRespawnEnabled)
+			
+			// Check if any of the teams has tickets no point showing if no one has tickets
+			if (CRF_Gamemode.GetInstance().m_iBLUFORTickets > -1 || CRF_Gamemode.GetInstance().m_iOPFORTickets > -1 || CRF_Gamemode.GetInstance().m_iINDFORTickets > -1 || CRF_Gamemode.GetInstance().m_iCIVTickets> -1)
 			{
 				m_wTicketOneImage.SetOpacity(1);
 				m_wTicketOneText.SetOpacity(1);
