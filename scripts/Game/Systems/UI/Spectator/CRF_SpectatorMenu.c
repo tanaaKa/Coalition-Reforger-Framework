@@ -116,11 +116,6 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 	{
 		UpdateCompass();
 		
-		if(pc.m_bIsListening)
-			m_wRoot.FindAnyWidget("Listening").SetVisible(true);
-		else
-			m_wRoot.FindAnyWidget("Listening").SetVisible(false);
-		
 		if (m_MapEntity)
 			GetGame().GetInputManager().ActivateContext("MapContext");
 		

@@ -6,11 +6,8 @@ modded class SCR_PlayerController
 	protected vector m_vLastEntityTransform[4];
 	
 	protected bool m_bActivated = false;
-	
-	bool m_bIsListening = false;
 	int m_iFPS;
 	int m_iAudioSetting;
-	protected bool m_bListeningBuffer = false;
 
 	//Adds action lisener to open menu in game
 	override protected void UpdateLocalPlayerController()
@@ -27,7 +24,6 @@ modded class SCR_PlayerController
 			return;
 
 		GetGame().GetInputManager().AddActionListener("CRF_OpenLobby", EActionTrigger.PRESSED, OpenMenu);
-		GetGame().GetInputManager().AddActionListener("CRF_EnterListening", EActionTrigger.PRESSED, Action_SetListening);
 		GetGame().GetInputManager().AddActionListener("CRF_SpecNVG", EActionTrigger.DOWN, ActivateAction);
 		
 		PlayerJoined();
@@ -98,39 +94,6 @@ modded class SCR_PlayerController
 	void RpcDo_SetIntialEntity(int playerID)
 	{
 		CRF_Gamemode.GetInstance().SpawnInitialEntity(playerID);
-	}
-	
-	void Action_SetListening()
-	{
-		if(m_bListeningBuffer)
-			return;
-		
-		m_bListeningBuffer = true;
-		GetGame().GetCallqueue().CallLater(ListeningBuffer, 1000, false);
-		SCR_VONController vonController = SCR_VONController.Cast(GetGame().GetPlayerController().FindComponent(SCR_VONController));
-		vonController.PublicResetVON();
-		m_bIsListening = !m_bIsListening;
-		SetListening(m_bIsListening);
-		if(m_bIsListening)
-			vonController.SetVONDisabled(true);
-		else
-			vonController.SetVONDisabled(false);
-	}
-	
-	void ListeningBuffer()
-	{
-		m_bListeningBuffer = false;
-	}
-	
-	void SetListening(bool input)
-	{
-		Rpc(RpcDo_SetListening, SCR_PlayerController.GetLocalPlayerId(), input);
-	}
-	
-	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcDo_SetListening(int playerID, bool input)
-	{
-		SCR_ChimeraCharacter.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID)).SetListening(input);
 	}
 	
 	void Respawn(int playerID, string prefab, vector position, int groupID)
@@ -350,8 +313,6 @@ modded class SCR_PlayerController
 			params.Transform[3] = m_vLastEntityTransform[3];
 		else
 			params.Transform[3] = CRF_Gamemode.GetInstance().m_vGenericSpawn[3];
-		
-		m_bIsListening = false;
 		
 		if(SCR_EditorManagerEntity.GetInstance().IsOpened())
 			return;

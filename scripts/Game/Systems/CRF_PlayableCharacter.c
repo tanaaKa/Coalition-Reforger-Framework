@@ -95,12 +95,16 @@ class CRF_PlayableCharacter : ScriptComponent
 		}
 		#endif
 		
-		if (m_bIsSpectator && !SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
-		{
-			owner.SetOrigin("0 10000 0");
+		if (m_bIsSpectator)	{
+			if (m_PlayerController.GetLocalControlledEntity() == owner)	{
+				if (m_PlayerController.m_eCamera) {
+					owner.SetOrigin(m_PlayerController.m_eCamera.GetOrigin());
+				}
+			}
+			else
+				owner.SetOrigin("0 10000 0");
 			Physics physics = owner.GetPhysics();
-			if (physics)
-			{
+			if (physics)	{
 				owner.GetPhysics().EnableGravity(false);
 				physics.SetVelocity("0 0 0");
 				physics.SetAngularVelocity("0 0 0");
@@ -108,27 +112,6 @@ class CRF_PlayableCharacter : ScriptComponent
 				physics.SetDamping(1, 1);
 				physics.SetActive(ActiveState.INACTIVE);
 			}
-		}	
-		
-		if (SCR_PlayerController.GetLocalControlledEntity() != owner)
-			return;
-		
-		if (!m_bIsSpectator)
-			return;
-		
-		if (!SCR_ChimeraCharacter.Cast(owner).m_bIsListening && owner.GetOrigin() != "0 10000 0")
-		{
-			vector debugVector[4];
-			debugVector[3] = "0 10000 0";
-			m_PlayerController.UpdateCameraPos(debugVector);
-		}
-		
-		if (SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
-		{	
-			vector cameraPos[4];
-			GetGame().GetCameraManager().CurrentCamera().GetWorldCameraTransform(cameraPos);
-		
-			m_PlayerController.UpdateCameraPos(cameraPos);
 		}
 	}
 	

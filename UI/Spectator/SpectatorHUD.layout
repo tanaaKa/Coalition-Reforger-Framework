@@ -68,22 +68,6 @@ FrameWidgetClass {
     OffsetBottom -132.096
    }
   }
-  ImageWidgetClass "{647E1B31CF26F149}" {
-   Name "Listening"
-   Slot FrameWidgetSlot "{647E1B31CF26F1A2}" {
-    PositionX 1678.48
-    OffsetLeft 1678.48
-    PositionY 79.609
-    OffsetTop 79.609
-    SizeX 150
-    OffsetRight -1828.48
-    SizeY 150
-    OffsetBottom -229.609
-   }
-   "Is Visible" 0
-   Texture "{4AF05B122604E49B}UI/data/ListeningIcon.edds"
-   Size 512 512
-  }
   FrameWidgetClass "{5EE8949BDE5C93EE}" {
    Name "IconsFrame"
    Slot FrameWidgetSlot "{5EE8949BDE5C93C5}" {
