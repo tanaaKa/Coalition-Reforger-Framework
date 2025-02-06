@@ -67,7 +67,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		if (owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			m_bIsSpectator = true;	
 		
-		SetEventMask(owner, EntityEvent.FIXEDFRAME);	
+		SetEventMask(owner, EntityEvent.POSTFIXEDFRAME);
 	}
 	
 	override void EOnPostFixedFrame(IEntity owner, float timeSlice)
