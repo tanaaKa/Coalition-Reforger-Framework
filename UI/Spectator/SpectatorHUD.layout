@@ -1005,8 +1005,12 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom 0
        }
+       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
+       "Shadow Offset" 0 0
+       "Shadow Size Increase" 0.1 0.1
+       "Shadow Color" 0.095 0 0 1
       }
       ImageWidgetClass "{64841DFA6C3BEF4A}" {
        Name "Compass0"
@@ -1021,8 +1025,11 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom 0.306
        }
+       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
+       "Shadow Size Increase" 0.1 0.1
+       "Shadow Color" 0.095 0 0 1
       }
       ImageWidgetClass "{64841DFA6C3BEF4B}" {
        Name "Compass1"
@@ -1037,8 +1044,11 @@ FrameWidgetClass {
         SizeY 0
         OffsetBottom -0.364
        }
+       Opacity 0.5
        Texture "{AAC9CD790A7F63FA}UI/data/compass.edds"
        Size 1920 1080
+       "Shadow Size Increase" 0.1 0.1
+       "Shadow Color" 0.095 0 0 1
       }
      }
     }
