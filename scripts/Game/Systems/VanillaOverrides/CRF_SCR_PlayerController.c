@@ -119,23 +119,20 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().RespawnPlayer(playerID);
 	}
 	
-	void UpdateCameraPos(vector cameraPos[4])
+	void UpdateEntityPos(vector cameraPos[4])
 	{
 		//Rpc(RpcDo_UpdateCameraPos, entityID, cameraPos);
 		IEntity player = GetGame().GetPlayerController().GetControlledEntity();
-		vector transform[4];
-		player.GetWorldTransform(transform);
-		transform[3] = cameraPos[3];
 		
 		//~ Align to terrain if not a character
 		if (!ChimeraCharacter.Cast(player))
-			SCR_TerrainHelper.OrientToTerrain(transform);
+			SCR_TerrainHelper.OrientToTerrain(cameraPos);
 
 		BaseGameEntity baseGameEntity = BaseGameEntity.Cast(player);
 		if (baseGameEntity)
-			baseGameEntity.Teleport(transform);
+			baseGameEntity.Teleport(cameraPos);
 		else
-			player.SetWorldTransform(transform);
+			player.SetWorldTransform(cameraPos);
 
 		Physics phys = player.GetPhysics();
 		if (phys)

@@ -328,38 +328,39 @@ CRF_Gamemode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      "Identity of soldiers" FactionIdentity "{570D128F4022EF5A}" {
       VisualIdentityArray {
        VisualIdentity "{570CE64C784286B5}" {
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570CFDC06CAAD480}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570CFDC05A2BFCE8}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570CE64C790A3C7D}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570CFDC037CCBCD3}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570CFDC1C8B17A43}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{570EDB838B8AC563}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{588508C19AA51746}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
        VisualIdentity "{588508C199AD5966}" {
-        Head ""
+        Head "{2FC2A1CE68435471}Prefabs/Characters/Heads/Head_Invisible.et"
         Body "{E25DCEC549E17067}Prefabs/Characters/Basebody/CharacterBasebody_Invisible.et"
        }
       }

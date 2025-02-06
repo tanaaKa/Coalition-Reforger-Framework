@@ -194,8 +194,11 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 			}
 			
 			IEntity entity = RplComponent.Cast(Replication.FindItem(entityID)).GetEntity();
+			if (SCR_PlayerController.GetLocalControlledEntity() == entity)
+				continue;
 			if (m_aEntityIcons.Find(entityID) != -1)
 				continue;
+			
 			
 			Widget spectatorIconWidget = GetGame().GetWorkspace().CreateWidgets("{68625BAD23CEE68F}UI/Spectator/SpectatorLabelIconCharacter.layout", FrameWidget.Cast(GetRootWidget().FindAnyWidget("IconsFrame")));
 			CRF_SpectatorLabelIconCharacter spectatorIcon = CRF_SpectatorLabelIconCharacter.Cast(spectatorIconWidget.FindHandler(CRF_SpectatorLabelIconCharacter));
