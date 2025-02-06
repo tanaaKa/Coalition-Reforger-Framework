@@ -166,16 +166,16 @@ class CRF_Gamemode : SCR_BaseGameMode
 	[Attribute("300", UIWidgets.EditBox, "Time To Respawn in Seconds", category: "CRF Gamemode Respawn")]
 	int m_iTimeToRespawn;
 	
-	[Attribute("blutickets", UIWidgets.EditBox, "Amount of BLUFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
+	[Attribute("-1", UIWidgets.EditBox, "Amount of BLUFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
 	int m_iBLUFORTickets;
 	
-	[Attribute("opftickets", UIWidgets.EditBox, "Amount of OPFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
+	[Attribute("-1", UIWidgets.EditBox, "Amount of OPFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
 	int m_iOPFORTickets;
 	
-	[Attribute("indtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
+	[Attribute("-1", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
 	int m_iINDFORTickets;
 	
-	[Attribute("civtickets", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
+	[Attribute("-1", UIWidgets.EditBox, "Amount of INDFOR Tickets. 0 = disabled/-1 = unlimited", category: "CRF Gamemode Respawn"), RplProp()]
 	int m_iCIVTickets;
 	
 	[RplProp(onRplName: "UpdateRespawnTimer")]
@@ -500,22 +500,22 @@ class CRF_Gamemode : SCR_BaseGameMode
 		switch (faction)
 		{
 			case "BLUFOR" : {
-				if (m_iBLUFORTickets > 0) 
+				if (m_iBLUFORTickets > 0 || m_iBLUFORTickets == -1) 
 					result = true;
 				break;
 			};
 			case "OPFOR" : {
-				if (m_iOPFORTickets > 0)
+				if (m_iOPFORTickets > 0 || m_iOPFORTickets == -1)
 					result = true;
 				break;
 			}
 			case "INDFOR" : {
-				if (m_iINDFORTickets > 0)
+				if (m_iINDFORTickets > 0 || m_iINDFORTickets == -1)
 					result = true;
 				break;
 			}
 			case "CIV" : {
-				if (m_iCIVTickets > 0)
+				if (m_iCIVTickets > 0 || m_iCIVTickets == -1)
 					result = true;
 				break;
 			}
@@ -529,36 +529,24 @@ class CRF_Gamemode : SCR_BaseGameMode
 		switch (faction)
 		{
 			case "BLUFOR" : {
-				if (m_iBLUFORTickets > 0)
-				{
-					if (m_iBLUFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
-						m_iBLUFORTickets = m_iBLUFORTickets - 1;
-				}
-				break;
+				if (m_iBLUFORTickets > 0 && m_iBLUFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+					m_iBLUFORTickets = m_iBLUFORTickets - 1;
+					break;
 			}
 			case "OPFOR" : {
-				if (m_iOPFORTickets > 0)
-				{
-					if (m_iOPFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
-						m_iOPFORTickets = m_iOPFORTickets - 1;
-				}
-				break;
+				if (m_iOPFORTickets > 0 && m_iOPFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+					m_iOPFORTickets = m_iOPFORTickets - 1;
+					break;
 			}
 			case "INDFOR" : {
-				if (m_iINDFORTickets > 0)
-				{
-					if (m_iINDFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
-						m_iINDFORTickets = m_iINDFORTickets - 1;	
-				}
-				break;
+				if (m_iINDFORTickets > 0 && m_iINDFORTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+					m_iINDFORTickets = m_iINDFORTickets - 1;	
+					break;
 			}
 			case "CIV" : {
-				if (m_iCIVTickets > 0)
-				{			
-					if (m_iCIVTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
-						m_iCIVTickets = m_iCIVTickets - 1;
-				}
-				break;
+				if (m_iCIVTickets > 0 && m_iCIVTickets != -1 && !CRF_GamemodeComponent.GetInstance().GetSafestartStatus())
+					m_iCIVTickets = m_iCIVTickets - 1;
+					break;
 			}
 		}
 		Replication.BumpMe();
@@ -625,9 +613,10 @@ class CRF_Gamemode : SCR_BaseGameMode
 				continue;
 			
 			// If tickets are enabled by MM
-			SubtractTicket(playerFactionKey);
-			
-			RespawnPlayer(player);
+			if (TicketsRemaining(faction)) { // Always true if tickets > 0 or tickets == -1
+				RespawnPlayer(player);
+				SubtractTicket(faction); // only subtract if tickets > 0
+			}
 		}
 	}
 	
@@ -739,25 +728,10 @@ class CRF_Gamemode : SCR_BaseGameMode
 	// Rush game mode respawn - no tickets
 	void RushRespawnPlayers()
 	{
-		// Get gamemode and faction managers 
-		CRF_Gamemode gm = CRF_Gamemode.GetInstance();
-		
-		// Get a list of all dead players 
-		array<int> allPlayers = {};
-		GetGame().GetPlayerManager().GetAllPlayers(allPlayers);
-		
-		// foreach dead player, get their information and call the respawn method in the game mode
-		foreach(int player: allPlayers)
-		{
-			// Dont respawn players that JIP'd
-			if(!m_aSlots.Contains(player))
-				continue;
-			
-			if (SCR_FactionManager.SGetPlayerFaction(player).GetFactionKey() == "SPEC")
-			{
-				RespawnPlayer(player);
-			}
-		}
+		// Stubbed for old mission support 
+		RespawnSide("BLUFOR");
+		RespawnSide("INDFOR");
+		RespawnSide("OPFOR");
 	}
 	
 	//Sets if the player is talking for UI purposes
