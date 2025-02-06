@@ -54,7 +54,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		if (CRF_Gamemode.GetInstance().m_GamemodeState == CRF_GamemodeState.GAME && CRF_Gamemode.GetInstance().EnableAIInGameState && owner.GetPrefabData().GetPrefabName() != "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			m_bIsPlayable = false;
 		
-		GetGame().GetCallqueue().CallLater(SetInitTime, 10000, false);
+		GetGame().GetCallqueue().CallLater(SetInitTime, 5000, false);
 
 		if (m_bIsPlayable)
 		{
