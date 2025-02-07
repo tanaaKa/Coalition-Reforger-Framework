@@ -77,7 +77,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			}
 		}
 		
-		if (m_fDistanceToIcon > 30)
+		if (m_fDistanceToIcon > 50)
 		{
 			m_wOverlayCircle.SetVisible(false);
 			m_wSpectatorLabelIcon.SetVisible(false);
