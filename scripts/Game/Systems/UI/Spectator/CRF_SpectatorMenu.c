@@ -714,7 +714,6 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
 		float multiplier = m_Gamemode.GetChannel(SCR_PlayerController.GetLocalPlayerId());
 		RadioHandlerComponent rhc = RadioHandlerComponent.Cast(GetGame().GetPlayerController().FindComponent(RadioHandlerComponent));
-		Print(multiplier);
 		if (rhc)
 			rhc.SetFrequency(transiver, 1000*multiplier); // Set new frequency
 		return transiver;
