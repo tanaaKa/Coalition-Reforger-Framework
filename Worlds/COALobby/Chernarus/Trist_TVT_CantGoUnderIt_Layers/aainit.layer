@@ -25,17 +25,16 @@ CRF_Gamemode CRF_Lobby1 : "{6A996BBFCEB37E78}Prefabs/MP/Modes/Lobby/CRF_Lobby.et
   CRF_MissionDescriptor "{644250503DF684C0}" {
    m_sTextData "BLUFOR have disabled an enemy convoy via air outside Krona castle. OPFOR forces have hastily pulled aside important cargo from the convoy and prepare for the coming BLU task-force to destroy the immobilized assets."\
    ""\
-   "BLUFOR Comp: Mech. Inf. / 1x Spec. Sqds"\
-   "BLUFOR Assets: 4x (2 Armed) HMMWV"\
-   "2x Unarmed Stryker"\
-   "1x Med Vic. / 3x Ural"\
+   "BLUFOR Comp: Mech. Inf. Company"\
+   "BLUFOR Assets: 2x Armed HMMWV"\
+   "1x Med Vic. / 6x Ural"\
    ""\
-   "OPFOR Comp: Mech. Inf. / 2x Spec. Sqds"\
-   "OPFOR Assets: 2x BTR / 2x UAZ"\
+   "OPFOR Comp: Mech. Inf. Platoon"\
+   "OPFOR Assets: 2x BTR "\
    " 1x Med Vic. / 2x Ural"\
    ""\
-   "Time: 4:00 PM"\
-   "Weather: Clear"
+   "Time: 7:00 AM"\
+   "Weather: Overcast"
   }
   CRF_MissionDescriptor "{64425051F2E00216}" {
    m_sTextData "- Navigate towards, search for, and destroy the decoupled OPFOR assets as leadership sees fit."\
