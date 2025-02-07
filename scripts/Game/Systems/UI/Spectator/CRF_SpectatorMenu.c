@@ -335,7 +335,6 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		else
 		{
 			SetRadioPower(true);
-			SetRadioFreq();
 		}
 		
 	}
@@ -713,28 +712,12 @@ class CRF_SpectatorMenuUI: ChimeraMenuBase
 		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
 		radio.SetPower(true);
 		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
-		return transiver;
-	}
-	
-	void SetRadioFreq()
-	{
-		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
-		ref array<IEntity> items = {};
-		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
-		IEntity radioEntity;
-		foreach(IEntity item: items)
-		{
-			if (item.FindComponent(BaseRadioComponent))
-				radioEntity = item;
-		}
-		BaseRadioComponent radio = BaseRadioComponent.Cast(radioEntity.FindComponent(BaseRadioComponent));
-		RadioTransceiver transiver = RadioTransceiver.Cast(radio.GetTransceiver(0));
 		float multiplier = m_Gamemode.GetChannel(SCR_PlayerController.GetLocalPlayerId());
 		RadioHandlerComponent rhc = RadioHandlerComponent.Cast(GetGame().GetPlayerController().FindComponent(RadioHandlerComponent));
+		Print(multiplier);
 		if (rhc)
 			rhc.SetFrequency(transiver, 1000*multiplier); // Set new frequency
-		else 
-			return;
+		return transiver;
 	}
 	
 	void SetRadioPower(bool input)
