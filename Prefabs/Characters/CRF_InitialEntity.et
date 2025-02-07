@@ -18,6 +18,9 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
   FactionAffiliationComponent "{633B2131A597C43C}" {
    "faction affiliation" "SPEC"
   }
+  MeshObject "{520EA1D2F659C81F}" {
+   PixelSizeScale 0
+  }
   SCR_CharacterDamageManagerComponent "{55872AD7B4E959F2}" {
    "Fall damage min speed" 999
    "Fall damage max speed" 999
@@ -49,6 +52,9 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
     }
    }
   }
+  SCR_VoNComponent "{520EA1D2F659C856}" {
+   "Speaking Range" 0
+  }
   CharacterWeaponSlotComponent "{520EA1D2F659CFAB}" {
    WeaponSlotIndex 0
   }
@@ -74,4 +80,5 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
    }
   }
  }
+ Flags 0
 }

@@ -1,6 +1,51 @@
 class CRF_ListboxComponent: SCR_ListBoxComponent
 {
-	CRF_Gamemode m_Gamemode;
+	CRF_Gamemode m_Gamemode;	
+	int AddItemSpecSlot(Managed data = null, RplId entityID = RplId.Invalid())
+	{	
+		CRF_ListBoxElementComponent comp;
+		
+		int id = _AddItemSpecSlot(data, comp, entityID);
+		
+		return id;
+	}
+	
+	protected int _AddItemSpecSlot(Managed data, out CRF_ListBoxElementComponent compOut, RplId entityID = RplId.Invalid())
+	{
+		Widget newWidget = GetGame().GetWorkspace().CreateWidgets("{2FCF236EEB073259}UI/Listbox/SpecPlayerSlotListboxElementNonAdmin.layout", m_wList);
+		
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(newWidget.FindHandler(CRF_ListBoxElementComponent));
+		m_Gamemode = CRF_Gamemode.GetInstance();
+		
+		comp.SetToggleable(true);
+		comp.SetData(data);
+		comp.SetRoleImage(m_Gamemode.m_aSlotIcons.Get(m_Gamemode.m_aEntitySlots.Find(entityID)), "roleimage");
+		comp.SetRoleColor(SCR_AIGroup.Cast(RplComponent.Cast(Replication.FindItem(m_Gamemode.m_aPlayerGroupIDs.Get(m_Gamemode.m_aEntitySlots.Find(entityID)))).GetEntity()).GetFaction().GetFactionColor());
+		comp.entityID = entityID;
+		
+		// Pushback to internal arrays
+		int id = m_aElementComponents.Insert(comp);
+		
+		// Setup event handlers
+		comp.m_OnClicked.Insert(OnItemClick);
+		
+		// Set up explicit navigation rules for elements. Otherwise we can't navigate
+		// Through separators when we are at the edge of scrolling if there is an element
+		// directly above/below the list box which intercepts focus
+		string widgetName = this.GetUniqueWidgetName();
+		newWidget.SetName(widgetName);
+		if (m_aElementComponents.Count() > 1)
+		{
+			Widget prevWidget = m_aElementComponents[m_aElementComponents.Count() - 2].GetRootWidget();
+			prevWidget.SetNavigation(WidgetNavigationDirection.DOWN, WidgetNavigationRuleType.EXPLICIT, newWidget.GetName());
+			newWidget.SetNavigation(WidgetNavigationDirection.UP, WidgetNavigationRuleType.EXPLICIT, prevWidget.GetName());
+		}
+		
+		compOut = comp;
+		
+		return id;
+	}
+	
 	int AddItemSlot(Managed data = null, RplId entityID = RplId.Invalid(), ResourceName overrideLayout = "")
 	{	
 		CRF_ListBoxElementComponent comp;
@@ -52,6 +97,92 @@ class CRF_ListboxComponent: SCR_ListBoxComponent
 		comp.entityID = entityID;
 		
 		// Pushback to internal arrays
+		int id = m_aElementComponents.Insert(comp);
+		
+		// Setup event handlers
+		comp.m_OnClicked.Insert(OnItemClick);
+		
+		// Set up explicit navigation rules for elements. Otherwise we can't navigate
+		// Through separators when we are at the edge of scrolling if there is an element
+		// directly above/below the list box which intercepts focus
+		string widgetName = this.GetUniqueWidgetName();
+		newWidget.SetName(widgetName);
+		if (m_aElementComponents.Count() > 1)
+		{
+			Widget prevWidget = m_aElementComponents[m_aElementComponents.Count() - 2].GetRootWidget();
+			prevWidget.SetNavigation(WidgetNavigationDirection.DOWN, WidgetNavigationRuleType.EXPLICIT, newWidget.GetName());
+			newWidget.SetNavigation(WidgetNavigationDirection.UP, WidgetNavigationRuleType.EXPLICIT, prevWidget.GetName());
+		}
+		
+		compOut = comp;
+		
+		return id;
+	}
+	
+	int AddItemSpecGroup(Managed data = null, SCR_AIGroup group = null, ResourceName groupIcon = "")
+	{	
+		CRF_ListBoxElementComponent comp;
+		
+		int id = _AddItemSpecGroup(data, comp, group, groupIcon);
+		
+		return id;
+	}
+	
+	protected int _AddItemSpecGroup(Managed data, out CRF_ListBoxElementComponent compOut, SCR_AIGroup group = null, ResourceName groupIcon = "")
+	{
+		Widget newWidget = GetGame().GetWorkspace().CreateWidgets("{8C5AB6540BD27A7D}UI/Listbox/SpecGroupListBoxElementNonAdmin.layout", m_wList);
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(newWidget.FindHandler(CRF_ListBoxElementComponent));
+
+		comp.SetGroupName(group.GetCustomNameWithOriginal());
+		comp.SetToggleable(true);
+		comp.SetData(data);
+		comp.group = group;
+		if(groupIcon)
+			comp.SetRoleImage(groupIcon, "groupIcon");
+		
+				// Pushback to internal arrays
+		int id = m_aElementComponents.Insert(comp);
+		
+		// Setup event handlers
+		comp.m_OnClicked.Insert(OnItemClick);
+		
+		// Set up explicit navigation rules for elements. Otherwise we can't navigate
+		// Through separators when we are at the edge of scrolling if there is an element
+		// directly above/below the list box which intercepts focus
+		string widgetName = this.GetUniqueWidgetName();
+		newWidget.SetName(widgetName);
+		if (m_aElementComponents.Count() > 1)
+		{
+			Widget prevWidget = m_aElementComponents[m_aElementComponents.Count() - 2].GetRootWidget();
+			prevWidget.SetNavigation(WidgetNavigationDirection.DOWN, WidgetNavigationRuleType.EXPLICIT, newWidget.GetName());
+			newWidget.SetNavigation(WidgetNavigationDirection.UP, WidgetNavigationRuleType.EXPLICIT, prevWidget.GetName());
+		}
+		
+		compOut = comp;
+		
+		return id;
+	}
+	
+	int AddItemChannel(Managed data = null, string channelName = "")
+	{	
+		CRF_ListBoxElementComponent comp;
+		
+		int id = _AddItemChannel(data, comp, channelName);
+		
+		return id;
+	}
+	
+	
+	protected int _AddItemChannel(Managed data, out CRF_ListBoxElementComponent compOut, string channelName)
+	{
+		Widget newWidget = GetGame().GetWorkspace().CreateWidgets("{72CE576C888BC27A}UI/Listbox/VONChannelListBox.layout", m_wList);
+		CRF_ListBoxElementComponent comp = CRF_ListBoxElementComponent.Cast(newWidget.FindHandler(CRF_ListBoxElementComponent));
+
+		comp.SetPlayerText(channelName);
+		comp.SetToggleable(true);
+		comp.SetData(data);
+		
+				// Pushback to internal arrays
 		int id = m_aElementComponents.Insert(comp);
 		
 		// Setup event handlers

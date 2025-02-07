@@ -67,12 +67,12 @@ class CRF_PlayableCharacter : ScriptComponent
 		if (owner.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
 			m_bIsSpectator = true;	
 		
-		SetEventMask(owner, EntityEvent.FIXEDFRAME);	
+		SetEventMask(owner, EntityEvent.POSTFIXEDFRAME);
 	}
 	
-	override void EOnFixedFrame(IEntity owner, float timeSlice)
+	override void EOnPostFixedFrame(IEntity owner, float timeSlice)
 	{
-		super.EOnFixedFrame(owner, timeslice);
+		super.EOnPostFixedFrame(owner, timeslice);
 		
 		if (!owner)
 			return;
@@ -82,7 +82,7 @@ class CRF_PlayableCharacter : ScriptComponent
 		
 		if (!m_bIsPlayable && !m_bIsSpectator)
 			return;
-
+		
 		#ifdef WORKBENCH
 		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && m_bInitTime)
 		{
@@ -94,40 +94,33 @@ class CRF_PlayableCharacter : ScriptComponent
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
 		#endif
-		if (m_bIsSpectator && !SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
-		{
-			owner.SetOrigin("0 10000 0");
+		
+		if (m_bIsSpectator)	{
+			if (m_PlayerController.GetLocalControlledEntity() == owner)	{
+				if (m_PlayerController.m_eCamera) {
+					vector mat[4];
+					m_PlayerController.m_eCamera.GetTransform(mat);
+					mat[3][1] = mat[3][1] - 1.5;
+					m_PlayerController.UpdateEntityPos(mat);
+				}
+				else {
+					vector mat[4];
+					mat[3][1] = 10000;
+					m_PlayerController.UpdateEntityPos(mat);
+				}
+			}
 			Physics physics = owner.GetPhysics();
-			if (physics)
-			{
-				owner.GetPhysics().EnableGravity(false);
+			if (physics) {
+				physics.SetInteractionLayer(EPhysicsLayerDefs.CharNoCollide);
+				physics.EnableGravity(false);
 				physics.SetVelocity("0 0 0");
 				physics.SetAngularVelocity("0 0 0");
 				physics.SetMass(0);
 				physics.SetDamping(1, 1);
 				physics.SetActive(ActiveState.INACTIVE);
 			}
-		}	
-		if (SCR_PlayerController.GetLocalControlledEntity() != owner)
-			return;
-		
-		if (!m_bIsSpectator)
-			return;
-		
-		if (!SCR_ChimeraCharacter.Cast(owner).m_bIsListening && owner.GetOrigin() != "0 10000 0")
-		{
-			vector debugVector[4];
-			debugVector[3] = "0 10000 0";
-			m_PlayerController.UpdateCameraPos(debugVector);
 		}
 		
-		if (SCR_ChimeraCharacter.Cast(owner).m_bIsListening)
-		{	
-			vector cameraPos[4];
-			GetGame().GetCameraManager().CurrentCamera().GetWorldCameraTransform(cameraPos);
-		
-			m_PlayerController.UpdateCameraPos(cameraPos);
-		}
 	}
 	
 	void DisableAI(IEntity owner)

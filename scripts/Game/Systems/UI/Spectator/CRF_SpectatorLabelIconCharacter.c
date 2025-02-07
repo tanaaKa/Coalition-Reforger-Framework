@@ -17,7 +17,6 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 	
 	protected ref Color m_cDeadColor = Color.Gray;
 	
-	
 	protected float m_fClickIgnoreTime;
 	
 	override void HandlerAttached(Widget w)
@@ -30,6 +29,11 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 		m_Gamemode = CRF_Gamemode.GetInstance();
 		
 		super.HandlerAttached(w);
+	}
+	
+	SCR_ButtonTextComponent GetButton()
+	{
+		return SCR_ButtonTextComponent.Cast(m_wRoot.FindAnyWidget("LabelButton").FindHandler(SCR_ButtonTextComponent));
 	}
 	
 	override void SetEntity(IEntity entity, string boneName)

@@ -1,16 +1,13 @@
 modded class SCR_PlayerController
 {
 	//Stores local camera entity to delete whenever you take over a player
-	protected IEntity m_eCamera;
+	IEntity m_eCamera;
 	//Stores the vector of your last entity you had control over so it can teleport your camera to it
 	protected vector m_vLastEntityTransform[4];
 	
 	protected bool m_bActivated = false;
-	
-	protected bool m_bIsListening = false;
 	int m_iFPS;
 	int m_iAudioSetting;
-	protected bool m_bListeningBuffer = false;
 
 	//Adds action lisener to open menu in game
 	override protected void UpdateLocalPlayerController()
@@ -27,11 +24,10 @@ modded class SCR_PlayerController
 			return;
 
 		GetGame().GetInputManager().AddActionListener("CRF_OpenLobby", EActionTrigger.PRESSED, OpenMenu);
-		GetGame().GetInputManager().AddActionListener("CRF_EnterListening", EActionTrigger.PRESSED, Action_SetListening);
 		GetGame().GetInputManager().AddActionListener("CRF_SpecNVG", EActionTrigger.DOWN, ActivateAction);
+		
 		PlayerJoined();
 	}
-	
 	// Toggle Spec NVG
 	void ActivateAction()
 	{
@@ -53,7 +49,7 @@ modded class SCR_PlayerController
 		SCR_ScreenEffectsManager.GetScreenEffectsDisplay().RHS_SetHDR("{765A5E642D09A4B8}Common/Postprocess/HDR_Vanila.emat", false);
 	}
 	
-	override private void OnControlledEntityChanged(IEntity from, IEntity to)
+	override void OnControlledEntityChanged(IEntity from, IEntity to)
 	{
 		GetGame().GetInputManager().RemoveActionListener("SpecNVG", EActionTrigger.DOWN, ActivateAction);
 		if(m_bActivated)
@@ -100,39 +96,6 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().SpawnInitialEntity(playerID);
 	}
 	
-	void Action_SetListening()
-	{
-		if(m_bListeningBuffer)
-			return;
-		
-		m_bListeningBuffer = true;
-		GetGame().GetCallqueue().CallLater(ListeningBuffer, 1000, false);
-		SCR_VONController vonController = SCR_VONController.Cast(GetGame().GetPlayerController().FindComponent(SCR_VONController));
-		vonController.PublicResetVON();
-		m_bIsListening = !m_bIsListening;
-		SetListening(m_bIsListening);
-		if(m_bIsListening)
-			vonController.SetVONDisabled(true);
-		else
-			vonController.SetVONDisabled(false);
-	}
-	
-	void ListeningBuffer()
-	{
-		m_bListeningBuffer = false;
-	}
-	
-	void SetListening(bool input)
-	{
-		Rpc(RpcDo_SetListening, SCR_PlayerController.GetLocalPlayerId(), input);
-	}
-	
-	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
-	void RpcDo_SetListening(int playerID, bool input)
-	{
-		SCR_ChimeraCharacter.Cast(GetGame().GetPlayerManager().GetPlayerControlledEntity(playerID)).SetListening(input);
-	}
-	
 	void Respawn(int playerID, string prefab, vector position, int groupID)
 	{
 		Rpc(RpcDo_Respawn, playerID, prefab, position, groupID);
@@ -156,23 +119,20 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().RespawnPlayer(playerID);
 	}
 	
-	void UpdateCameraPos(vector cameraPos[4])
+	void UpdateEntityPos(vector cameraPos[4])
 	{
 		//Rpc(RpcDo_UpdateCameraPos, entityID, cameraPos);
 		IEntity player = GetGame().GetPlayerController().GetControlledEntity();
-		vector transform[4];
-		player.GetWorldTransform(transform);
-		transform[3] = cameraPos[3];
 		
 		//~ Align to terrain if not a character
 		if (!ChimeraCharacter.Cast(player))
-			SCR_TerrainHelper.OrientToTerrain(transform);
+			SCR_TerrainHelper.OrientToTerrain(cameraPos);
 
 		BaseGameEntity baseGameEntity = BaseGameEntity.Cast(player);
 		if (baseGameEntity)
-			baseGameEntity.Teleport(transform);
+			baseGameEntity.Teleport(cameraPos);
 		else
-			player.SetWorldTransform(transform);
+			player.SetWorldTransform(cameraPos);
 
 		Physics phys = player.GetPhysics();
 		if (phys)
@@ -283,6 +243,8 @@ modded class SCR_PlayerController
 	{	
 		// Get player's radio
 		IEntity entity = GetGame().GetPlayerController().GetControlledEntity();
+		if (entity.GetPrefabData().GetPrefabName() == "{59886ECB7BBAF5BC}Prefabs/Characters/CRF_InitialEntity.et")
+			return;
 		ref array<IEntity> items = {};
 		SCR_InventoryStorageManagerComponent.Cast(entity.FindComponent(SCR_InventoryStorageManagerComponent)).GetItems(items);
 		IEntity radioEntity;
@@ -321,6 +283,17 @@ modded class SCR_PlayerController
 		CRF_Gamemode.GetInstance().EnterGame(playerID);
 	}
 	
+	void RequestToJoinChannel(int channel, int requestId)
+	{
+		Rpc(RpcDo_RequestToJoinChannel, channel, requestId);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_RequestToJoinChannel(int channel, int requestId)
+	{
+		CRF_Gamemode.GetInstance().RequestToJoinChannel(channel, requestId);
+	}
+	
 	//Whenever player is killed store their location and enter spectator
 	override void OnDestroyed(notnull Instigator killer)
 	{
@@ -338,14 +311,39 @@ modded class SCR_PlayerController
 		else
 			params.Transform[3] = CRF_Gamemode.GetInstance().m_vGenericSpawn[3];
 		
-		m_bIsListening = false;
-		
 		if(SCR_EditorManagerEntity.GetInstance().IsOpened())
 			return;
-		
 		m_eCamera = GetGame().SpawnEntityPrefab(Resource.Load("{E1FF38EC8894C5F3}Prefabs/Editor/Camera/ManualCameraSpectate.et"), GetGame().GetWorld(), params);
+		CheckVONRegister();
 		GetGame().GetMenuManager().OpenMenu(ChimeraMenuPreset.CRF_SpectatorMenu);
 		GetGame().GetCameraManager().SetCamera(CameraBase.Cast(m_eCamera));
+	}
+	
+	void CheckVONRegister()
+	{
+		Rpc(RpcDo_CheckVONRegister, GetLocalPlayerId());
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_CheckVONRegister(int playerId)
+	{
+		CRF_Gamemode gamemode = CRF_Gamemode.GetInstance();
+		int channelIndex;
+		if (!gamemode.IsPlayerInAnyChannel(playerId, channelIndex))
+		{
+			gamemode.AddPlayerToChannel(playerId, 1, false);
+		}
+	}
+	
+	void CreateChannel()
+	{
+		Rpc(RpcDo_CreateChannel, SCR_PlayerController.GetLocalPlayerId());
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_CreateChannel(int playerId)
+	{
+		CRF_Gamemode.GetInstance().CreateChannel(GetGame().GetPlayerManager().GetPlayerName(playerId) + "'s Channel", playerId);
 	}
 	
 	//Opens the slotting menu for players in game
@@ -386,5 +384,27 @@ modded class SCR_PlayerController
 	void RpcDo_AdvanceSlottingPhase()
 	{
 		CRF_Gamemode.GetInstance().AdvanceSlottingState();
+	}
+	
+	void JoinChannel(int playerId, int channel)
+	{
+		Rpc(RpcDo_JoinChannel, playerId, channel);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_JoinChannel(int playerId, int channel)
+	{
+		CRF_Gamemode.GetInstance().AddPlayerToChannel(playerId, channel, false);
+	}
+	
+	void Accept(int playerId, int channel)
+	{
+		Rpc(RpcDo_Accept, playerId, channel);
+	}
+	
+	[RplRpc(RplChannel.Reliable, RplRcver.Server)]
+	void RpcDo_Accept(int playerId, int channel)
+	{
+		CRF_Gamemode.GetInstance().AddPlayerToChannel(playerId, channel, false); 
 	}
 }
