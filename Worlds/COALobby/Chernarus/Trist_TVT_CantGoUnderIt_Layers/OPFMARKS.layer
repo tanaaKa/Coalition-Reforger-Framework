@@ -1,41 +1,43 @@
-$grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
+PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
+ coords 2787.175 264.793 9723.895
  {
-  coords 2787.175 264.793 9723.895
- }
- {
-  coords 2567.512 264.793 9871.613
- }
- {
-  coords 2333.237 264.793 9857.579
- }
- {
-  coords 2102.267 264.793 9831.459
- }
- {
-  coords 1862.641 264.793 9726.254
- }
- {
-  coords 1770.72 264.793 9494.222
- }
- {
-  coords 1765.941 264.793 9254.328
- }
- {
-  coords 1870.507 264.793 9002.307
- }
- {
-  coords 2100.264 264.793 8801.794
- }
- {
-  coords 2352.13 264.793 8837.183
- }
- {
-  coords 2580.537 264.793 8993.435
- }
- {
-  coords 2757.013 264.793 9224.368
- }
- {
-  coords 2839.144 264.793 9547.818
+  $grp PS_ManualMarker : "{AE820D882CD0ACC4}PrefabsEditable/Markers/OPFORSafeStartBorderMarker.et" {
+   {
+    coords -219.663 0 147.719
+   }
+   {
+    coords -453.938 0 133.685
+   }
+   {
+    coords -684.908 0 107.564
+   }
+   {
+    coords -924.534 0 2.359
+   }
+   {
+    coords -1016.455 0 -229.673
+   }
+   {
+    coords -1021.234 0 -469.566
+   }
+   {
+    coords -916.668 0 -721.588
+   }
+   {
+    coords -686.911 0 -922.101
+   }
+   {
+    coords -435.045 0 -886.712
+   }
+   {
+    coords -206.638 0 -730.46
+   }
+   {
+    coords -30.162 0 -499.526
+   }
+   {
+    coords 51.969 0 -176.076
+   }
+  }
  }
 }
