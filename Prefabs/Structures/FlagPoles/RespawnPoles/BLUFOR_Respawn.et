@@ -25,6 +25,25 @@ GenericEntity : "{8364151EF33B3B33}Prefabs/Structures/Core/FlagPole_Base.et" {
    }
    m_eMaterialSoundType BREAK_METAL_POLE
   }
+  SCR_EditableEntityComponent "{648F3AE4214B26AE}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{648F3AE4442CEAB6}" {
+    Name "Blufor Spawn Point"
+    Icon "{302979C3EAF01D2E}UI/Textures/Editor/ContentBrowser/ContentBrowser_Trait_SpawnPoint.edds"
+    m_Image "{2F23E25348144FAE}UI/Textures/FieldManual/MPModes/Conflict/Tiles/respawn_UI.edds"
+    m_sFaction "BLUFOR"
+    m_aAuthoredLabels {
+     1 51870
+    }
+    m_aAutoLabels {
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{648F3AE428576F37}" {
+   }
+   m_bAutoRegister ALWAYS
+   m_fMaxDrawDistance 350
+   m_Flags 5
+  }
   SCR_FlagComponent "{645911BD734B5E5F}" {
    m_sDefaultMaterial "{3918C7E059058554}Prefabs/Structures/FlagPoles/Flags/BLUFOR_Flag.emat"
   }

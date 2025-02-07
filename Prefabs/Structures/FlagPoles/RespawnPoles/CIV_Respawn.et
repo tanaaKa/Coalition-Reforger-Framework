@@ -25,6 +25,24 @@ GenericEntity : "{8364151EF33B3B33}Prefabs/Structures/Core/FlagPole_Base.et" {
    }
    m_eMaterialSoundType BREAK_METAL_POLE
   }
+  SCR_EditableEntityComponent "{648F3AE5D0DBD388}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{648F3AE5DC336674}" {
+    Name "Civ Spawn Point"
+    Icon "{302979C3EAF01D2E}UI/Textures/Editor/ContentBrowser/ContentBrowser_Trait_SpawnPoint.edds"
+    m_Image "{2F23E25348144FAE}UI/Textures/FieldManual/MPModes/Conflict/Tiles/respawn_UI.edds"
+    m_sFaction "CIV"
+    m_aAuthoredLabels {
+     1 51873
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{648F3AE506DB7E63}" {
+   }
+   m_bAutoRegister ALWAYS
+   m_vIconPos 0 0 0
+   m_fMaxDrawDistance 350
+   m_Flags 5
+  }
   SCR_FlagComponent "{645911A168BE4322}" {
    m_sDefaultMaterial "{A9E848D901E17302}Prefabs/Structures/FlagPoles/Flags/CIV_Flag.emat"
   }

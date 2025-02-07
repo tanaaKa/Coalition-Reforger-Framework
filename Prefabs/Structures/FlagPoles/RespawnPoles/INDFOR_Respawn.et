@@ -25,6 +25,22 @@ GenericEntity : "{8364151EF33B3B33}Prefabs/Structures/Core/FlagPole_Base.et" {
    }
    m_eMaterialSoundType BREAK_METAL_POLE
   }
+  SCR_EditableEntityComponent "{648F3AE5ED4054AA}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{648F3AE5EF5A5A78}" {
+    Name "Indfor Spawn Point"
+    Icon "{302979C3EAF01D2E}UI/Textures/Editor/ContentBrowser/ContentBrowser_Trait_SpawnPoint.edds"
+    m_Image "{2F23E25348144FAE}UI/Textures/FieldManual/MPModes/Conflict/Tiles/respawn_UI.edds"
+    m_sFaction "INDFOR"
+    m_aAuthoredLabels {
+     1 51872
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{648F3AE51E4DED1F}" {
+   }
+   m_bAutoRegister ALWAYS
+   m_fMaxDrawDistance 350
+   m_Flags 5
+  }
   SCR_FlagComponent "{645911A16DDD122D}" {
    m_sDefaultMaterial "{83AEA78E1C112F01}Prefabs/Structures/FlagPoles/Flags/INDFOR_Flag.emat"
   }

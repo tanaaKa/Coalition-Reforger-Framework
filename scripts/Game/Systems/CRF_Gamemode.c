@@ -579,6 +579,13 @@ class CRF_Gamemode : SCR_BaseGameMode
 	{
 		m_aRespawnPoints.Insert(respawnPoint);
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	void UnRegisterRespawnPoint(IEntity respawnPoint)
+	{
+		if(m_aRespawnPoints.Find(respawnPoint) != -1)
+			m_aRespawnPoints.Remove(m_aRespawnPoints.Find(respawnPoint));
+	}
 
 	//------------------------------------------------------------------------------------------------
 	void SendRespawnScreen(int playerId)

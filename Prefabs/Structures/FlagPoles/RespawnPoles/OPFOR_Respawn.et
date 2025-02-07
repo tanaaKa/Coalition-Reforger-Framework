@@ -25,6 +25,23 @@ GenericEntity : "{8364151EF33B3B33}Prefabs/Structures/Core/FlagPole_Base.et" {
    }
    m_eMaterialSoundType BREAK_METAL_POLE
   }
+  SCR_EditableEntityComponent "{648F3AE50F1F3B96}" {
+   m_EntityType SYSTEM
+   m_UIInfo SCR_EditableEntityUIInfo "{648F3AE53F8033C8}" {
+    Name "Opfor Spawn Point"
+    Icon "{302979C3EAF01D2E}UI/Textures/Editor/ContentBrowser/ContentBrowser_Trait_SpawnPoint.edds"
+    m_Image "{2F23E25348144FAE}UI/Textures/FieldManual/MPModes/Conflict/Tiles/respawn_UI.edds"
+    m_sFaction "OPFOR"
+    m_aAuthoredLabels {
+     1 51871
+    }
+   }
+   m_EntityInteraction SCR_EditableEntityInteraction "{648F3AE5093DF9AF}" {
+   }
+   m_bAutoRegister ALWAYS
+   m_fMaxDrawDistance 350
+   m_Flags 5
+  }
   SCR_FlagComponent "{645911A160C1D2C7}" {
    m_sDefaultMaterial "{6E9FD76E21FF14D4}Prefabs/Structures/FlagPoles/Flags/OPFOR_Flag.emat"
   }
