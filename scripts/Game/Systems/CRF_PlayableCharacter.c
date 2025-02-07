@@ -74,9 +74,6 @@ class CRF_PlayableCharacter : ScriptComponent
 	{
 		super.EOnPostFixedFrame(owner, timeslice);
 		
-		if (!m_bInitTime)
-			return;
-		
 		if (!owner)
 			return;
 		
@@ -87,12 +84,12 @@ class CRF_PlayableCharacter : ScriptComponent
 			return;
 		
 		#ifdef WORKBENCH
-		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner))
+		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && m_bInitTime)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
 		#else
-		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && RplSession.Mode() == RplMode.Dedicated)
+		if (m_bIsSpectator && !EntityUtils.IsPlayer(owner) && RplSession.Mode() == RplMode.Dedicated && m_bInitTime)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(owner);
 		}
