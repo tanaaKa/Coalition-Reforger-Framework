@@ -27,7 +27,7 @@ FrameWidgetClass {
        Slot OverlayWidgetSlot "{5EE89488FD3D84DE}" {
         Padding 4 4 4 4
        }
-       Text "Label"
+       Text ""
        "Font Size" 32
        "Min Font Size" 32
        "Horizontal Alignment" Center
@@ -49,6 +49,7 @@ FrameWidgetClass {
     SizeY 32
     OffsetBottom -32
    }
+   Clipping Ancestor
    Texture "{F3A9B47F55BE8D2B}UI/data/PS_Atlas_x64.imageset"
    Image "Circle"
    Size 32 32

@@ -43,7 +43,7 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
   SCR_EditableCharacterComponent "{520EA1D2F659C85C}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5298E609432D192D}" {
     Name "#AR-Role_Rifleman"
-    Icon "{A489F552FB7489C3}UI/Textures/Editor/EditableEntities/Characters/EditableEntity_Character_Custom.edds"
+    Icon "{E408E75DA96B93E1}UI/Textures/Map/eye.edds"
     m_sFaction "US"
     m_aAuthoredLabels + {
      2 11
@@ -51,6 +51,8 @@ SCR_ChimeraCharacter : "{37578B1666981FCE}Prefabs/Characters/Core/Character_Base
     m_aAutoLabels {
     }
    }
+   m_bVisible 0
+   m_Flags 2133
   }
   SCR_VoNComponent "{520EA1D2F659C856}" {
    "Speaking Range" 0
