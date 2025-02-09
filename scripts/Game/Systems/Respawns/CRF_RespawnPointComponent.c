@@ -21,6 +21,13 @@ class CRF_RespawnPointComponent: ScriptComponent
 		CRF_Gamemode.GetInstance().RegisterRespawnPoint(owner);
 	};
 	
+	override void OnDelete(IEntity owner)
+	{
+		if (!GetGame().InPlayMode() || RplSession.Mode() != RplMode.Dedicated) return;
+		
+		CRF_Gamemode.GetInstance().UnRegisterRespawnPoint(owner);
+	};
+	
 	void SetRespawnPointPriority(int priority)
 	{
 		m_iRespawnPointPriority = priority;

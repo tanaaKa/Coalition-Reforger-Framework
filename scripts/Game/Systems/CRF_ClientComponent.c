@@ -486,23 +486,11 @@ class CRF_ClientComponent: ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	void Owner_ToggleSideReady(string playerName)
 	{	
-		string setReady = "";
-		
 		SCR_FactionManager factionManager = SCR_FactionManager.Cast(GetGame().GetFactionManager());
 		Faction faction = factionManager.GetPlayerFaction(SCR_PlayerController.GetLocalPlayerId());
-			
-		Color factionColor = faction.GetFactionColor();
-		float rg = Math.Max(factionColor.R(), factionColor.G());
-		float rgb = Math.Max(rg, factionColor.B());
-			
-		switch (true) {
-			case(rgb == factionColor.R()) : {setReady = "Opfor";  break;};
-			case(rgb == factionColor.G()) : {setReady = "Indfor"; break;};
-			case(rgb == factionColor.B()) : {setReady = "Blufor"; break;};
-		};
 		
-		if (setReady == "") return;
-		Rpc(RpcAsk_ToggleSideReady, setReady, playerName, false);
+		if (faction.GetFactionKey() == "") return;
+		Rpc(RpcAsk_ToggleSideReady, faction.GetFactionKey(), playerName, false);
 	}
 	
 	//------------------------------------------------------------------------------------------------

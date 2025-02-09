@@ -52,6 +52,19 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			m_wSpectatorLabelIconCircleSmall.SetColor(faction.GetFactionColor());
 		}
 		
+		if(!m_EditableCharacterComponent.GetVisibleSelf())
+		{
+			m_fMaxIconSize = 24;
+			m_fMinIconOpacity = 1;
+			m_fMaxIconOpacity = 1;
+			m_fMaxIconDistance = 425;
+			m_fMaxLabelDistance = 425;
+			m_wSpectatorLabelText.SetVisible(false);
+			m_wSpectatorLabelIconBackground.SetVisible(false);
+			m_wSpectatorLabelIconCircle.SetVisible(false);
+			m_wSpectatorLabelIconCircleSmall.SetVisible(false);
+		}
+		
 		SCR_UIInfo uiInfo = m_EditableCharacterComponent.GetInfo();
 		m_wSpectatorLabelIcon.LoadImageTexture(0, uiInfo.GetIconPath());
 	}
@@ -77,7 +90,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			}
 		}
 		
-		if (m_fDistanceToIcon > 30)
+		if (m_fDistanceToIcon > m_fMaxLabelDistance)
 		{
 			m_wOverlayCircle.SetVisible(false);
 			m_wSpectatorLabelIcon.SetVisible(false);
@@ -86,7 +99,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			m_wSpectatorLabelIcon.SetVisible(true);
 		}
 		
-		if (!m_bDead)
+		if (!m_bDead && m_EditableCharacterComponent.GetVisibleSelf())
 		{
 			if (!m_bWounded && m_ControllerComponent.IsUnconscious()) {
 				//m_wSpectatorLabelIcon.LoadImageFromSet(0, m_rIconImageSet, "Wounded");

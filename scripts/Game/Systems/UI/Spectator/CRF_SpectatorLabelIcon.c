@@ -17,7 +17,7 @@ class CRF_SpectatorLabelIcon : SCR_ScriptedWidgetComponent
 	protected float m_fMaxIconOpacity = 1;
 	protected float m_fMinIconOpacity = 0.8;
 	
-	protected float m_fMaxLabelDistance = 30.0;
+	protected float m_fMaxLabelDistance = 50.0;
 	protected float m_fMinLabelDistance = 10.0;
 	
 	protected TNodeId w_iBoneIndex;
