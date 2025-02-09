@@ -52,6 +52,19 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			m_wSpectatorLabelIconCircleSmall.SetColor(faction.GetFactionColor());
 		}
 		
+		if(!m_EditableCharacterComponent.GetVisibleSelf())
+		{
+			m_fMaxIconSize = 24;
+			m_fMinIconOpacity = 1;
+			m_fMaxIconOpacity = 1;
+			m_fMaxIconDistance = 425;
+			m_fMaxLabelDistance = 425;
+			m_wSpectatorLabelText.SetVisible(false);
+			m_wSpectatorLabelIconBackground.SetVisible(false);
+			m_wSpectatorLabelIconCircle.SetVisible(false);
+			m_wSpectatorLabelIconCircleSmall.SetVisible(false);
+		}
+		
 		SCR_UIInfo uiInfo = m_EditableCharacterComponent.GetInfo();
 		m_wSpectatorLabelIcon.LoadImageTexture(0, uiInfo.GetIconPath());
 	}
@@ -77,7 +90,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			}
 		}
 		
-		if (m_fDistanceToIcon > 50)
+		if (m_fDistanceToIcon > m_fMaxLabelDistance)
 		{
 			m_wOverlayCircle.SetVisible(false);
 			m_wSpectatorLabelIcon.SetVisible(false);
@@ -86,35 +99,7 @@ class CRF_SpectatorLabelIconCharacter : CRF_SpectatorLabelIcon
 			m_wSpectatorLabelIcon.SetVisible(true);
 		}
 		
-		{
-			if(m_EditableCharacterComponent.GetVisibleSelf())
-			{
-				int playerId = 0;
-				if(m_Gamemode.m_aEntitySlots.Find(RplComponent.Cast(m_eEntity.FindComponent(RplComponent)).Id()) != -1)
-					playerId = m_Gamemode.m_aSlots.Get(m_Gamemode.m_aEntitySlots.Find(RplComponent.Cast(m_eEntity.FindComponent(RplComponent)).Id()));
-				if (playerId > 0)
-						m_wSpectatorLabelText.SetText(playerName);
-				} else 
-				{
-					if (m_Gamemode.m_aEntitySlots.Find(RplComponent.Cast(m_eEntity.FindComponent(RplComponent)).Id()) != -1)
-						m_wSpectatorLabelText.SetText(m_Gamemode.m_aSlotNames.Get(m_Gamemode.m_aEntitySlots.Find(RplComponent.Cast(m_eEntity.FindComponent(RplComponent)).Id())));
-					else 
-						m_wSpectatorLabelText.SetText(m_Gamemode.m_aCharacterNames.Get(m_Gamemode.m_aCharacters.Find(RplComponent.Cast(m_eEntity.FindComponent(RplComponent)).Id())));
-				}
-			} else {
-				m_fMaxIconSize = 32;
-				m_fMinIconOpacity = 0.6;
-				m_fMaxIconOpacity = 0.8;
-				m_fMaxIconDistance = 185;
-				m_fMaxLabelDistance = 185;
-				m_wSpectatorLabelIconBackground.SetVisible(false);
-				m_wSpectatorLabelIconCircle.SetVisible(false);
-				m_wSpectatorLabelIconCircleSmall.SetVisible(false);
-				return;
-			}
-		}
-		
-		if (!m_bDead)
+		if (!m_bDead && m_EditableCharacterComponent.GetVisibleSelf())
 		{
 			if (!m_bWounded && m_ControllerComponent.IsUnconscious()) {
 				//m_wSpectatorLabelIcon.LoadImageFromSet(0, m_rIconImageSet, "Wounded");

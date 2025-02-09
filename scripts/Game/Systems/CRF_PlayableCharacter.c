@@ -111,6 +111,7 @@ class CRF_PlayableCharacter : ScriptComponent
 			}
 			Physics physics = owner.GetPhysics();
 			if (physics) {
+				physics.ChangeSimulationState(SimulationState.NONE);
 				physics.SetInteractionLayer(EPhysicsLayerDefs.CharNoCollide);
 				physics.EnableGravity(false);
 				physics.SetVelocity("0 0 0");
@@ -160,6 +161,7 @@ class CRF_PlayableCharacter : ScriptComponent
 			Physics physics = owner.GetPhysics();
 			if (physics)
 			{
+				physics.ChangeSimulationState(SimulationState.NONE);
 				physics.SetVelocity("0 0 0");
 				physics.SetAngularVelocity("0 0 0");
 				physics.SetMass(0);
