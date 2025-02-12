@@ -1356,22 +1356,18 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 		string indforString = "#Coal_SS_No_Faction";
 
 		foreach(SCR_Faction faction : outArray) {
-			if (faction.GetPlayerCount() == 0 || faction.GetFactionLabel() == EEditableEntityLabel.FACTION_NONE) 
+			if (faction.GetPlayerCount() == 0 || (faction.GetFactionKey() != "BLUFOR" && faction.GetFactionKey() != "OPFOR"&& faction.GetFactionKey() != "INDFOR")) 
 				continue;
 			
 			m_aPlayedFactionsArray.Insert(faction);
 			
-			Color factionColor = faction.GetFactionColor();
-			float rg = Math.Max(factionColor.R(), factionColor.G());
-			float rgb = Math.Max(rg, factionColor.B());
-			
 			switch (true) {
-				case(!m_bBluforReady && rgb == factionColor.B()) : {bluforString = "#Coal_SS_Faction_Not_Ready"; break;};
-				case(m_bBluforReady && rgb == factionColor.B())  : {bluforString = "#Coal_SS_Faction_Ready";     break;};
-				case(!m_bOpforReady && rgb == factionColor.R())  : {opforString = "#Coal_SS_Faction_Not_Ready";  break;};
-				case(m_bOpforReady && rgb == factionColor.R())   : {opforString = "#Coal_SS_Faction_Ready";      break;};
-				case(!m_bIndforReady && rgb == factionColor.G()) : {indforString = "#Coal_SS_Faction_Not_Ready"; break;};
-				case(m_bIndforReady && rgb == factionColor.G())  : {indforString = "#Coal_SS_Faction_Ready";     break;};
+				case(!m_bBluforReady && faction.GetFactionKey() == "BLUFOR") : {bluforString = "#Coal_SS_Faction_Not_Ready"; break;};
+				case(m_bBluforReady && faction.GetFactionKey() == "BLUFOR")  : {bluforString = "#Coal_SS_Faction_Ready";     break;};
+				case(!m_bOpforReady && faction.GetFactionKey() == "OPFOR")  : {opforString = "#Coal_SS_Faction_Not_Ready";  break;};
+				case(m_bOpforReady && faction.GetFactionKey() == "OPFOR")   : {opforString = "#Coal_SS_Faction_Ready";      break;};
+				case(!m_bIndforReady && faction.GetFactionKey() == "INDFOR") : {indforString = "#Coal_SS_Faction_Not_Ready"; break;};
+				case(m_bIndforReady && faction.GetFactionKey() == "INDFOR")  : {indforString = "#Coal_SS_Faction_Ready";     break;};
 			};
 		};
 		
@@ -1391,7 +1387,7 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 	
 	//Call from server
 	//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-	void ToggleSideReady(string setReady, string playerName, bool adminForced) {
+	void ToggleSideReady(FactionKey setReady, string playerName, bool adminForced) {
 		if (!GetSafestartStatus()) return;
 		
 		// If it's an admin-forced action
@@ -1426,19 +1422,19 @@ class CRF_GamemodeComponent: SCR_BaseGameModeComponent
 			
 		switch (setReady)
 		{
-			case("Blufor") : {
+			case("BLUFOR") : {
 				m_bBluforReady = !m_bBluforReady; 
 				if (m_bBluforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Readied_Blufor - %1", playerName);
 				if (!m_bBluforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Unreadied_Blufor - %1", playerName);
 				break;
 			};
-			case("Opfor")  : {
+			case("OPFOR")  : {
 				m_bOpforReady = !m_bOpforReady;
 				if (m_bOpforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Readied_Opfor - %1", playerName);
 				if (!m_bOpforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Unreadied_Opfor - %1", playerName);
 				break;
 			};
-			case("Indfor") : {
+			case("INDFOR") : {
 				m_bIndforReady = !m_bIndforReady; 
 				if (m_bIndforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Readied_Indfor - %1", playerName);
 				if (!m_bIndforReady) m_sMessageContent = string.Format("#Coal_SS_Faction_Unreadied_Indfor - %1", playerName);

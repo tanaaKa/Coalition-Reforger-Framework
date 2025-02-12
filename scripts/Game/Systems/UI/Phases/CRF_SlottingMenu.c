@@ -26,6 +26,11 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 	protected Faction m_fSelectedFaction;
 	protected int m_iSelectedPlayerID = 0;
 	protected int m_LocalSlottingState;
+	
+	ResourceName m_rBluforIcon;
+	ResourceName m_rOpforIcon;
+	ResourceName m_rIndforIcon;
+	ResourceName m_rCivIcon;
 
 	override void OnMenuOpen()
 	{	
@@ -107,7 +112,6 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 		CRF_GamemodeComponent gamemodeComponent = CRF_GamemodeComponent.GetInstance();	
 		ResourceName gearScriptResource;
 		CRF_GearScriptConfig gearConfig;
-		ResourceName icon;
 	
 		if(m_iBluforSlots > 0)
 		{
@@ -120,22 +124,20 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 					if(gearConfig)
 					{
 						if(!gearConfig.m_FactionIcon.IsEmpty())
-							icon = gearConfig.m_FactionIcon;
+							m_rBluforIcon = gearConfig.m_FactionIcon;
 					};
 				};
 			};
 			
-			if(icon.IsEmpty())
-				icon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("BLUFOR")).GetFactionFlag();
+			if(m_rBluforIcon.IsEmpty())
+				m_rBluforIcon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("BLUFOR")).GetFactionFlag();
 			
 			m_wRoot.FindAnyWidget("BluforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("BluforBGSelect").SetVisible(true);
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagBlufor")).LoadImageTexture(0, icon);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagBlufor")).LoadImageTexture(0, m_rBluforIcon);
 			m_wRoot.FindAnyWidget("BluforBGSelect").SetColor(Color.FromRGBA(34, 196, 244, 33));
 		};
-		
-		icon = "";
 		
 		if(m_iOpforSlots > 0)
 		{
@@ -148,22 +150,20 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 					if(gearConfig)
 					{
 						if(!gearConfig.m_FactionIcon.IsEmpty())
-							icon = gearConfig.m_FactionIcon;
+							m_rOpforIcon = gearConfig.m_FactionIcon;
 					};
 				};
 			};
 			
-			if(icon.IsEmpty())
-				icon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("OPFOR")).GetFactionFlag();
+			if(m_rOpforIcon.IsEmpty())
+				m_rOpforIcon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("OPFOR")).GetFactionFlag();
 			
 			m_wRoot.FindAnyWidget("OpforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("OpforBGSelect").SetVisible(true);	
 			
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagOpfor")).LoadImageTexture(0, icon);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagOpfor")).LoadImageTexture(0, m_rOpforIcon);
 			m_wRoot.FindAnyWidget("OpforBGSelect").SetColor(Color.FromRGBA(238, 49, 47, 33));
 		};
-		
-		icon = "";
 		
 		if(m_iIndforSlots > 0)
 		{
@@ -176,22 +176,20 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 					if(gearConfig)
 					{
 						if(!gearConfig.m_FactionIcon.IsEmpty())
-							icon = gearConfig.m_FactionIcon;
+							m_rIndforIcon = gearConfig.m_FactionIcon;
 					};
 				};
 			};
 			
-			if(icon.IsEmpty())
-				icon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("INDFOR")).GetFactionFlag();
+			if(m_rIndforIcon.IsEmpty())
+				m_rIndforIcon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("INDFOR")).GetFactionFlag();
 			
 			m_wRoot.FindAnyWidget("IndforButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("IndforBGSelect").SetVisible(true);	
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagIndfor")).LoadImageTexture(0, icon);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagIndfor")).LoadImageTexture(0, m_rIndforIcon);
 			m_wRoot.FindAnyWidget("IndforBGSelect").SetColor(Color.FromRGBA(0, 177, 79, 33));
 		};
-		
-		icon = "";
 		
 		if(m_iCivSlots > 0)
 		{
@@ -204,18 +202,18 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 					if(gearConfig)
 					{
 						if(!gearConfig.m_FactionIcon.IsEmpty())
-							icon = gearConfig.m_FactionIcon;
+							m_rCivIcon = gearConfig.m_FactionIcon;
 					};
 				};
 			};
 			
-			if(icon.IsEmpty())
-				icon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("CIV")).GetFactionFlag();
+			if(m_rCivIcon.IsEmpty())
+				m_rCivIcon = SCR_Faction.Cast(GetGame().GetFactionManager().GetFactionByKey("CIV")).GetFactionFlag();
 			
 			m_wRoot.FindAnyWidget("CivButton").SetVisible(true);
 			m_wRoot.FindAnyWidget("CivBGSelect").SetVisible(true);	
 				
-			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagCiv")).LoadImageTexture(0, icon);
+			ImageWidget.Cast(m_wRoot.FindAnyWidget("FlagCiv")).LoadImageTexture(0, m_rCivIcon);
 			m_wRoot.FindAnyWidget("CivBGSelect").SetColor(Color.FromRGBA(168, 110, 207, 33));
 		};	
 		
@@ -639,10 +637,10 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			{
 				switch(SCR_FactionManager.SGetPlayerFaction(player).GetFactionKey())
 				{
-					case "BLUFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{E5DECCCA6F4B7417}UI/data/blufor.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "OPFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{0A1F947948102E6A}UI/data/opfor.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "INDFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{2513C1E3711E50BD}UI/data/INDFOR.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "CIV" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{6C40CAD74C2327B0}UI/data/CIV.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "BLUFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rBluforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "OPFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rOpforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "INDFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rIndforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "CIV" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rCivIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
 				}
 			}
 			else
@@ -666,10 +664,10 @@ class CRF_SlottingMenuUI: ChimeraMenuBase
 			{
 				switch(SCR_FactionManager.SGetPlayerFaction(player).GetFactionKey())
 				{
-					case "BLUFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{E5DECCCA6F4B7417}UI/data/blufor.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "OPFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{0A1F947948102E6A}UI/data/opfor.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "INDFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{2513C1E3711E50BD}UI/data/INDFOR.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
-					case "CIV" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), "{6C40CAD74C2327B0}UI/data/CIV.edds", "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "BLUFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rBluforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "OPFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rOpforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "INDFOR" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rIndforIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
+					case "CIV" : {index = m_cPlayerListBoxComponent.AddItemAndIconPlayer(GetGame().GetPlayerManager().GetPlayerName(player), m_rCivIcon, "flag", null,  "{4B1BA5F8E3442E93}UI/Listbox/PlayerListboxElement.layout"); break;}
 				}
 			}
 			else
