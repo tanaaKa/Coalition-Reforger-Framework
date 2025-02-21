@@ -1,0 +1,99 @@
+$grp Vehicle : "{16C1F16C9B053801}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport.et" {
+ Ural4320_transport1 {
+  coords 10170.96 2.484 1467.328
+  angleY 15.764
+ }
+ Ural4320_transport2 {
+  coords 10176.357 2.5 1465.804
+  angleY 15.764
+ }
+ Ural4320_transport3 {
+  coords 10180.542 2.5 1464.623
+  angleY 15.764
+ }
+ Ural4320_transport4 {
+  coords 10184.761 2.5 1463.432
+  angleY 15.764
+ }
+}
+GenericEntity : "{28D63631873AA636}Prefabs/Compositions/Slotted/SlotFlatSmall/MortarPlacement_S_USSR_01.et" {
+ coords 10148.997 2.531 1512.521
+ angleY -76.235
+ {
+  GenericEntity {
+   ID "6186DB2F1DE37192"
+   {
+    GenericEntity {
+     ID "60B8D36A59BEEA13"
+     components {
+      SCR_ResourceComponent "{5E5ABDF371AE8B21}" {
+       m_aContainers {
+        SCR_ResourceContainerVirtual "{64AB3D6457558855}" {
+         m_fResourceValueCurrent 10000
+         m_fResourceValueMax 10000
+        }
+       }
+       m_aDisabledResourceTypes {
+        0
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}
+$grp Vehicle : "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et" {
+ UAZ452_ambulance1 {
+  coords 10177.647 2.531 1502.138
+ }
+ UAZ452_ambulance2 {
+  coords 10174.219 2.531 1502.138
+ }
+}
+SCR_AIGroup : "{6524B6A6C69BD3EE}Prefabs/Groups/OPFOR/Standard/Command/CRF_OPFOR_Platoon_p.et" {
+ coords 10157.483 4.253 1499.431
+ m_aUnitPrefabSlots {
+  "{9613738A003FBAD2}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_PL_P.et" "{7A2D59429430D672}Prefabs/Characters/Factions/OPFOR/CRF_GS_OPFOR_FO_P.et"
+ }
+ {
+  SCR_AIGroup : "{24DA56B34E727840}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_MedicTeam_p.et" {
+   coords 30.958 -4.86 -5.75
+   {
+    SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+     components {
+      AIFormationComponent "{507E9DC12F541FE6}" {
+       DefaultFormation "Row"
+      }
+     }
+     coords -18.227 -0.032 -3.221
+     {
+      SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+       components {
+        AIFormationComponent "{507E9DC12F541FE6}" {
+         DefaultFormation "Row"
+        }
+       }
+       coords 0 0 -5.101
+       {
+        SCR_AIGroup : "{92F50F60726EB86D}Prefabs/Groups/OPFOR/Standard/Infantry/CRF_OPFOR_RifleSquad_p.et" {
+         components {
+          AIFormationComponent "{507E9DC12F541FE6}" {
+           DefaultFormation "Row"
+          }
+         }
+         coords 0 0 -4.956
+         {
+          SCR_AIGroup : "{2598DBB9C3E01AD3}Prefabs/Groups/OPFOR/Standard/Support/CRF_OPFOR_IndirectTeam_p.et" {
+           coords -14.748 -0.04 10.469
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

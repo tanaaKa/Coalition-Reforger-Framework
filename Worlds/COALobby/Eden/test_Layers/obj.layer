@@ -1,0 +1,173 @@
+$grp SCR_FactionControlTriggerEntity {
+ Weradesh {
+  components {
+   RplComponent "{61D2CE5A29C4B4DD}" {
+    Streamable Disabled
+   }
+  }
+  coords 9924.025 11.54 1535.308
+  scale 1.52
+  userScript "    // Static boolean variable to track whether the action has been performed"\
+  "	static bool m_actionPerformed = false;"
+  TriggerShapeType Sphere
+  SphereRadius 105
+  DrawShape 1
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 20
+  OnActivate ""\
+  "        // Check if the action has already been performed"\
+  "        if (!m_actionPerformed)"\
+  "        {"\
+  "            // Perform the action"\
+  "            SCR_PopUpNotification.GetInstance().PopupMsg(\"US Forces have The Harbour\");"\
+  ""\
+  "            // Set the boolean variable to true to prevent further execution"\
+  "            m_actionPerformed = true;"\
+  "        }"\
+  "    "
+  m_sOwnerFactionKey "BLUFOR"
+  m_iRatioMethod "More than"
+  m_fFriendlyRatioLimit 0.9
+  {
+   $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+    {
+     coords 0 0 0
+     angleY 0
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "destroy"
+     m_sDescription "Harbour"
+     m_aVisibleForFactions {
+      "BLUFOR"
+     }
+    }
+    {
+     coords 0 0 0
+     angleY 90.693
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "defend"
+     m_sDescription "Harbour"
+     m_aVisibleForFactions {
+      "OPFOR"
+     }
+    }
+   }
+  }
+ }
+ LowerKandaru {
+  components {
+   RplComponent "{61D2CE5A29C4B4DD}" {
+    Streamable Disabled
+   }
+  }
+  coords 8822.971 95 2766.537
+  scale 1.52
+  userScript "    // Static boolean variable to track whether the action has been performed"\
+  "	static bool m_actionPerformed = false;"
+  TriggerShapeType Sphere
+  SphereRadius 55
+  DrawShape 1
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 20
+  OnActivate ""\
+  "        // Check if the action has already been performed"\
+  "        if (!m_actionPerformed)"\
+  "        {"\
+  "            // Perform the action"\
+  "            SCR_PopUpNotification.GetInstance().PopupMsg(\"US Forces have Seized Durras\", 15);"\
+  ""\
+  "            // Set the boolean variable to true to prevent further execution"\
+  "            m_actionPerformed = true;"\
+  "        }"\
+  "    "
+  m_sOwnerFactionKey "BLUFOR"
+  m_iRatioMethod "More than"
+  m_fFriendlyRatioLimit 0.9
+  {
+   $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+    {
+     coords 0 0 0
+     angleY 0
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "destroy"
+     m_sDescription "Durras"
+     m_aVisibleForFactions {
+      "BLUFOR"
+     }
+    }
+    {
+     coords 0 0 0
+     angleY 89.905
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "defend"
+     m_sDescription "Pier"
+     m_aVisibleForFactions {
+      "Durras"
+     }
+    }
+   }
+  }
+ }
+ UpperKandaru {
+  components {
+   RplComponent "{61D2CE5A29C4B4DD}" {
+    Streamable Disabled
+   }
+  }
+  coords 9258.009 58.084 2071.003
+  scale 1.52
+  userScript "    // Static boolean variable to track whether the action has been performed"\
+  "	static bool m_actionPerformed = false;"
+  TriggerShapeType Sphere
+  SphereRadius 55
+  DrawShape 1
+  TriggerActivationType "First change"
+  PeriodicQueries 1
+  UpdatePeriod 20
+  OnActivate ""\
+  "        // Check if the action has already been performed"\
+  "        if (!m_actionPerformed)"\
+  "        {"\
+  "            // Perform the action"\
+  "            SCR_PopUpNotification.GetInstance().PopupMsg(\"US Forces have Seized Vernon\");"\
+  ""\
+  "            // Set the boolean variable to true to prevent further execution"\
+  "            m_actionPerformed = true;"\
+  "        }"\
+  "    "
+  m_sOwnerFactionKey "BLUFOR"
+  m_iRatioMethod "More than"
+  m_fFriendlyRatioLimit 0.9
+  {
+   $grp PS_ManualMarker : "{7B677FB61E410D0D}PrefabsEditable/Markers/ObjectiveMarker.et" {
+    {
+     coords 0 0 0
+     angleY 0
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "destroy"
+     m_sDescription "Vernon"
+     m_aVisibleForFactions {
+      "BLUFOR"
+     }
+    }
+    {
+     coords 0 0 0
+     angleY 91.123
+     scale 0.658
+     m_MarkerColor 0 0.758 1 1
+     m_sQuadName "defend"
+     m_sDescription "Vernon"
+     m_aVisibleForFactions {
+      "Vernon"
+     }
+    }
+   }
+  }
+ }
+}
