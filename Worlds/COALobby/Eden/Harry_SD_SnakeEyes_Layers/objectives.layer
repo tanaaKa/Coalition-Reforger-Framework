@@ -106,22 +106,22 @@ $grp SCR_BaseTriggerEntity {
      coords 30.201 -38.129 63.014
     }
     BravoCBox1 {
-     coords -20.297 -34.809 -85.753
+     coords -20.739 -34.809 -85.753
     }
     BravoCBox2 {
-     coords -7.723 -35.448 -63.409
+     coords -6.966 -35.448 -63.409
     }
     BravoCBox3 {
-     coords -65.804 -36.164 -37.793
+     coords -66.117 -36.164 -37.793
     }
     BravoCBox4 {
-     coords -38.648 -38.526 8.035
+     coords -38.648 -38.526 7.41
     }
     BravoCBox5 {
-     coords 36.079 -37.843 6.354
+     coords 35.389 -37.843 6.354
     }
     BravoCBox6 {
-     coords 33.631 -38.122 63.396
+     coords 34.39 -38.122 63.396
     }
    }
   }
@@ -222,16 +222,16 @@ $grp SCR_BaseTriggerEntity {
      coords 101.78 -15.863 -203.746
     }
     AlphaCBox1 {
-     coords 614.148 -28.336 640.503
+     coords 613.785 -28.336 640.503
     }
     AlphaCBox2 {
-     coords 584.542 -29.841 454.38
+     coords 584.096 -29.841 454.38
     }
     AlphaCBox3 {
-     coords 250.369 -28.338 219.261
+     coords 249.825 -28.338 219.261
     }
     AlphaCBox4 {
-     coords 104.574 -17.109 -200.969
+     coords 104.218 -17.109 -200.969
     }
    }
   }
